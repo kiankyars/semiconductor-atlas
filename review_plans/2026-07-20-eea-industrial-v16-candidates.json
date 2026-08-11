@@ -1,0 +1,3641 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "a20cb8fd-6579-50dd-a190-e4d3288dc7f2",
+      "facility_inspire_id": "BE.EEA/vl01849940000190.FACILITY",
+      "latest_source_detail_reporting_year": "2016",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "6ef6bd6b7ffb9c589bcb26cf107687d2ae3aabd107b481809893e9e5b5a34e6c",
+      "source_values": {
+        "address": {
+          "building_number": "15",
+          "city": "Oudenaarde",
+          "postal_code": "9700",
+          "street_name": "Westerring"
+        },
+        "country_code": "BE",
+        "facility_name": "ON SEMICONDUCTOR BELGIUM",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ON SEMICONDUCTOR BELGIUM",
+        "parent_site_name": "Site of facility: ON SEMICONDUCTOR BELGIUM",
+        "raw_tabular_point": {
+          "latitude": "50.85874",
+          "longitude": "3.5959516"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "99147e57-f3e3-5b06-9eab-0b3290c4bf82",
+      "facility_inspire_id": "CZ.MZP.Z723/CZ94069119.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "24bc52b1c0625ba24e8b67c3be36d65dff9a02f9745713e865d1d77a7a4ae4db",
+      "source_values": {
+        "address": {
+          "building_number": "2230",
+          "city": "Rožnov pod Radhoštěm",
+          "postal_code": "75661",
+          "street_name": "1. máje"
+        },
+        "country_code": "CZ",
+        "facility_name": "ON SEMICONDUCTOR CZECH REPUBLIC, s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ON SEMICONDUCTOR CZECH REPUBLIC, s.r.o.",
+        "parent_site_name": "002032.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.46269634",
+          "longitude": "18.12017334"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "3a3e7c88-0693-5170-adb9-0686dfb58596",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/1483068481",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "3e3b821ff8683b65901c4332f2d62f5e071f3a04eff50127e6da60f99592703a",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Dresden",
+          "postal_code": "01109",
+          "street_name": "Robert-Bosch-Ring"
+        },
+        "country_code": "DE",
+        "facility_name": "Robert Bosch Semiconductor Manufacturing Dresden GmbH ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Robert Bosch Semiconductor Manufacturing Dresden GmbH",
+        "parent_site_name": "Robert Bosch Semiconductor Manufacturing Dresden GmbH ",
+        "raw_tabular_point": {
+          "latitude": "51.12897",
+          "longitude": "13.74218"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "a2367b9a-42b6-5b40-805b-6507c51caf21",
+      "facility_inspire_id": "FR.CAED/5175.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "be2f8e61486e1b6c8565e2f230a875c3efdf982a5f0a3ff8f37352aa72f18203",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "CROLLES",
+          "postal_code": "38920",
+          "street_name": "850 Rue Jean Monnet"
+        },
+        "country_code": "FR",
+        "facility_name": "STMICROELECTRONICS FRANCE",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "STMICROELECTRONICS FRANCE SAS",
+        "parent_site_name": "STMICROELECTRONICS FRANCE",
+        "raw_tabular_point": {
+          "latitude": "45.2671",
+          "longitude": "5.88449"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "a136e244-4e80-584b-9e63-663f682cd95d",
+      "facility_inspire_id": "FR.CAED/7394.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "53fe1a4eefe0226e476e6289be3357767f082ece429edfdf65a520f69bc1dbf2",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Rousset",
+          "postal_code": "13790",
+          "street_name": "Z.I. Rousset-Peynier 190 avenue Célestin Coq "
+        },
+        "country_code": "FR",
+        "facility_name": "STMICROELECTRONICS SAS",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": null,
+        "parent_site_name": "STMICROELECTRONICS SAS",
+        "raw_tabular_point": {
+          "latitude": "43.47375",
+          "longitude": "5.60514"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "59db9d95-59ce-5374-a3e8-f6d31d0e816d",
+      "facility_inspire_id": "GB.EEA/EW_EA-228.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "31f2cf1b410904701f52f8acecf305753d81a722b916d6a3ae792bef33672e8d",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Wallsend",
+          "postal_code": "NE28 9NZ",
+          "street_name": "Middle Engine Road"
+        },
+        "country_code": "GB",
+        "facility_name": "Atmel North Tyneside Ltd, Silverlink Integrated Circuits",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ATMEL U.K. HOLDINGS LIMITED",
+        "parent_site_name": "Site of facility: Atmel North Tyneside Ltd, Silverlink Integrated Circuits",
+        "raw_tabular_point": {
+          "latitude": "55.018144",
+          "longitude": "-1.50422"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "201e9f72-3113-5d9c-bdc4-b007e03f8ea5",
+      "facility_inspire_id": "GB.EEA/Scotland-179.FACILITY",
+      "latest_source_detail_reporting_year": "2016",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "437e9575aa697e01e633d61f1bc12fa84e83f53e8833fab4eab0fa3e343dbd76",
+      "source_values": {
+        "address": {
+          "building_number": "4",
+          "city": "Hamilton",
+          "postal_code": "G72 0BN",
+          "street_name": "Hamilton International Technology Park, Stanley Boulevard"
+        },
+        "country_code": "GB",
+        "facility_name": "Compound Semiconductor Technologies",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Compound Semiconductor Technologies Global Ltd",
+        "parent_site_name": "Site of facility: Compound Semiconductor Technologies",
+        "raw_tabular_point": {
+          "latitude": "55.778",
+          "longitude": "-4.09342"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "e0730140-b753-5268-93e3-1552400907ce",
+      "facility_inspire_id": "GB.EEA/EW_EA-1482.FACILITY",
+      "latest_source_detail_reporting_year": "2008",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "8df8c8f1f5f02cd507067353cc57b2fc6fb8859118206853452851e93b8b6475",
+      "source_values": {
+        "address": {
+          "building_number": "--",
+          "city": "Cardiff",
+          "postal_code": "CF3 0LW",
+          "street_name": "Cypress Drive, Cardiff"
+        },
+        "country_code": "GB",
+        "facility_name": "IQE Silicon Compounds Limited, St Mellons Silicon Semi-Conductor",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "IQE PLC",
+        "parent_site_name": "Site of facility: IQE Silicon Compounds Limited, St Mellons Silicon Semi-Conductor",
+        "raw_tabular_point": {
+          "latitude": "51.5297",
+          "longitude": "-3.08777"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "bd2e114b-c141-5798-abc8-82f84df3b35f",
+      "facility_inspire_id": "UK.CAED/NRW170252.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "d9fecafdd8d0a6e3590aeff7e22f63230e13d125e4c06d32cd4e6b1ec530226c",
+      "source_values": {
+        "address": {
+          "building_number": "Newport Semiconductor Plant Cardiff Road",
+          "city": "Newport",
+          "postal_code": "NP10 8YJ",
+          "street_name": "Cardiff Road, Newport"
+        },
+        "country_code": "GB",
+        "facility_name": "Newport Semiconductor Plant",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "International Rectifier Newport Limited",
+        "parent_site_name": "Newport Semiconductor Plant",
+        "raw_tabular_point": {
+          "latitude": "51.56581",
+          "longitude": "-3.0227"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "bf13884b-5bb6-5d52-8420-d357bcf3f9d2",
+      "facility_inspire_id": "UK.CAED/EW_EA-3760.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "46a0af32e8692145134ef10fd83c2a83d0c7f67ba67389334d9d1c79f831b920",
+      "source_values": {
+        "address": {
+          "building_number": "Zetex Technology Park",
+          "city": "Oldham",
+          "postal_code": "OL9 9LL",
+          "street_name": "Lansdown Road"
+        },
+        "country_code": "GB",
+        "facility_name": "Semiconductors Chadderton",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Diodes Zetex Semiconductors Ltd",
+        "parent_site_name": "Semiconductors Chadderton",
+        "raw_tabular_point": {
+          "latitude": "53.541564",
+          "longitude": "-2.1378832"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "463cc0f1-bce1-5600-bfe3-af8b46d5a91e",
+      "facility_inspire_id": "UK.CAED/EW_EA-3226.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "8b523e8586d835eed3b5582156aa5d3aada31d536644e3e8e514edf50e4a859b",
+      "source_values": {
+        "address": {
+          "building_number": "N/A",
+          "city": "STOCKPORT",
+          "postal_code": "SK7 5BJ",
+          "street_name": "Bramhall Moor Lane"
+        },
+        "country_code": "GB",
+        "facility_name": "Stockport Semiconductor Plant",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "NXP Semiconductors UK Limited",
+        "parent_site_name": "Stockport Semiconductor Plant",
+        "raw_tabular_point": {
+          "latitude": "53.37662",
+          "longitude": "-2.1423093"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "e9a7fd9e-d933-5039-a790-9dea01dfe086",
+      "facility_inspire_id": "IT.CAED/208642004.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "9047101a4244120bf563cd4b42a4b79fe4dba921b628da12f2710508e1e4a20b",
+      "source_values": {
+        "address": {
+          "building_number": "2",
+          "city": "AGRATE BRIANZA",
+          "postal_code": "20864",
+          "street_name": "Camillo Olivetti"
+        },
+        "country_code": "IT",
+        "facility_name": "STMcroelectronics srl di Agrate Brianza",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "STMcroelectronics srl",
+        "parent_site_name": "ST MICROELECTRONICS srl",
+        "raw_tabular_point": {
+          "latitude": "45.5667",
+          "longitude": "9.333299999999999"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "e60e689b-1ec8-5fa4-9068-3fb0c0548771",
+      "facility_inspire_id": "IT.CAED/951212006.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 1,
+      "source_candidate_sha256": "2e53799af39243f02c01ff025f390b96853379f5f55619e89fc03d755136181b",
+      "source_values": {
+        "address": {
+          "building_number": "50",
+          "city": "CATANIA",
+          "postal_code": "95121",
+          "street_name": "STRADALE PRIMOSOLE"
+        },
+        "country_code": "IT",
+        "facility_name": "Sito di Catania",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ST MICROELECTRONICS SRL",
+        "parent_site_name": "ST MICROELECTRONICS srl",
+        "raw_tabular_point": {
+          "latitude": "37.437222",
+          "longitude": "15.064444"
+        }
+      },
+      "triage_basis": "explicit_name_and_exact_nace_26_11"
+    },
+    {
+      "candidate_id": "db990df9-0d1c-5cbe-84ed-c2fbdeae80f5",
+      "facility_inspire_id": "CH.EEA/383.FACILITY",
+      "latest_source_detail_reporting_year": "2011",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "7f0e46cdea1e41ec3fd87296341189f3ff8b5552f6809a21c3ddc4ae3ac6fe29",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Lenzburg",
+          "postal_code": "5600",
+          "street_name": "Fabrikstrasse 3"
+        },
+        "country_code": "CH",
+        "facility_name": "ABB / Semiconductors",
+        "functions": [
+          {
+            "nace_code": "25.61",
+            "nace_name": "Treatment and coating of metals"
+          }
+        ],
+        "parent_company_name": "ABB",
+        "parent_site_name": "Site of facility: ABB / Semiconductors",
+        "raw_tabular_point": {
+          "latitude": "47.3953040825106",
+          "longitude": "8.16557609462506"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "b60ce2a0-1701-5d0b-be5a-512b8351b9dc",
+      "facility_inspire_id": "CZ.MZP.P325/CZ01152514.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "explicit_facility_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "6bf6d04f5e62f21f407d6db1bcc9f1706fe3111fe8540d468007f262ad5aee72",
+      "source_values": {
+        "address": {
+          "building_number": "1067",
+          "city": "Třemošná",
+          "postal_code": "33011",
+          "street_name": "Plzeňská"
+        },
+        "country_code": "CZ",
+        "facility_name": "Integrated Micro-Electronics Czech Republic s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.12",
+            "nace_name": "Manufacture of loaded electronic boards"
+          }
+        ],
+        "parent_company_name": "Integrated Micro-Electronics Czech Republic s.r.o.",
+        "parent_site_name": "001672.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.8078758305556",
+          "longitude": "13.3914934111111"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "459a936c-5c67-5c29-a53c-cb271607cec2",
+      "facility_inspire_id": "CZ.Z/MZPJKHTGDUR8.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "explicit_facility_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "d1ca13a277bc460d9af423cfdc67814f150d1c6d109f9c8879add8cdb563b8c8",
+      "source_values": {
+        "address": {
+          "building_number": "2230",
+          "city": "Rožnov pod Radhoštěm",
+          "postal_code": "75661",
+          "street_name": "1. máje"
+        },
+        "country_code": "CZ",
+        "facility_name": "Výroba křemíkových desek a čipů",
+        "functions": [
+          {
+            "nace_code": "99.00",
+            "nace_name": "Activities of extraterritorial organisations and bodies"
+          }
+        ],
+        "parent_company_name": "ON SEMICONDUCTOR CZECH REPUBLIC‚ s.r.o.",
+        "parent_site_name": "MZPJKHTGDUR8.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.4620606",
+          "longitude": "18.1223578"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "e3ee93c1-0faf-580a-af4e-c808a948209d",
+      "facility_inspire_id": "UK.CAED/EW_EA-2887.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "e177f4df817c0444e3b5629fd5aa0a89d345ac308639e1a5b84e607386c46ddd",
+      "source_values": {
+        "address": {
+          "building_number": "34",
+          "city": "MILTON KEYNES",
+          "postal_code": "MK15 8HJ",
+          "street_name": "Maryland Road"
+        },
+        "country_code": "GB",
+        "facility_name": "Milton Keynes Semiconductor Manufacturer",
+        "functions": [
+          {
+            "nace_code": "24.45",
+            "nace_name": "Other non-ferrous metal production"
+          }
+        ],
+        "parent_company_name": "Wafer Technology Ltd",
+        "parent_site_name": "Milton Keynes Semiconductor Manufacturer",
+        "raw_tabular_point": {
+          "latitude": "52.06778",
+          "longitude": "-0.73513741"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "320955bb-3508-5aee-b3fc-30cf2fbdb1ee",
+      "facility_inspire_id": "UK.CAED/EW_EA-3373.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "68f110fce2b1c9214b074de1ad222ab73f676676dfa238eb7265583193505574",
+      "source_values": {
+        "address": {
+          "building_number": "X-Fab UK Ltd",
+          "city": "Plymouth",
+          "postal_code": "PL6 7BQ",
+          "street_name": "Tamerton Road"
+        },
+        "country_code": "GB",
+        "facility_name": "Plymouth Semiconductor Foundry",
+        "functions": [
+          {
+            "nace_code": "27.90",
+            "nace_name": "Manufacture of other electrical equipment"
+          }
+        ],
+        "parent_company_name": "Plessey Semiconductors Ltd",
+        "parent_site_name": "Plymouth Semiconductor Foundry",
+        "raw_tabular_point": {
+          "latitude": "50.443547",
+          "longitude": "-4.1103727"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "f21d8fac-bcb7-5be5-a4ce-f08010e2bdf7",
+      "facility_inspire_id": "GB.EEA/EW_EA-2156.FACILITY",
+      "latest_source_detail_reporting_year": "2014",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "a47f5acde3accc33ca8cbea1f5405180bf225e19373e72559a1e2e7b21d24231",
+      "source_values": {
+        "address": {
+          "building_number": "--",
+          "city": "Swansea",
+          "postal_code": "SA7 0AB",
+          "street_name": "Swansea Vale, Swansea"
+        },
+        "country_code": "GB",
+        "facility_name": "Pure Wafer International Ltd, Swansea Silicon Semi-Conductor",
+        "functions": [
+          {
+            "nace_code": "38.32",
+            "nace_name": "Recovery of sorted materials"
+          }
+        ],
+        "parent_company_name": "Pure Wafer Plc",
+        "parent_site_name": "Site of facility: Pure Wafer International Ltd, Swansea Silicon Semi-Conductor",
+        "raw_tabular_point": {
+          "latitude": "51.6714",
+          "longitude": "-3.9052"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "6445ec94-4db9-51ad-800d-b3573a96dc0c",
+      "facility_inspire_id": "UK.CAED/NRW170330.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "13c774e5505d2d6ee33f4a3162bb4e202c3aa02da2143532a4b02c8378bcff33",
+      "source_values": {
+        "address": {
+          "building_number": "St. Mellons Semiconductor Plant",
+          "city": "Cardiff",
+          "postal_code": "CF3 0LW",
+          "street_name": "Cypress Drive, Cardiff"
+        },
+        "country_code": "GB",
+        "facility_name": "St Mellons Semiconductor Plant",
+        "functions": [
+          {
+            "nace_code": "27.90",
+            "nace_name": "Manufacture of other electrical equipment"
+          }
+        ],
+        "parent_company_name": "IQE (Europe) Ltd",
+        "parent_site_name": "St Mellons Semiconductor Plant",
+        "raw_tabular_point": {
+          "latitude": "51.53081",
+          "longitude": "-3.08578"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "301b7769-b0bc-5197-899d-b334e60293d5",
+      "facility_inspire_id": "GB.EEA/EW_EA-2615.FACILITY",
+      "latest_source_detail_reporting_year": "2013",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "5502952e3e1c686faa94f97346e29d3d6f32ac5d4beffbb724d54e1e7750925c",
+      "source_values": {
+        "address": {
+          "building_number": "--",
+          "city": "Newport",
+          "postal_code": "NP10 8UJ",
+          "street_name": "Imperial Park, Newport"
+        },
+        "country_code": "GB",
+        "facility_name": "Surface Technologies Systems Plc , Coedkernew Semi-Conductor Growth Kit Manufacturer",
+        "functions": [],
+        "parent_company_name": "Spp Process Technology Systems Uk Limited",
+        "parent_site_name": "Site of facility: Surface Technologies Systems Plc , Coedkernew Semi-Conductor Growth Kit Manufacturer",
+        "raw_tabular_point": {
+          "latitude": "51.5541",
+          "longitude": "-3.02921"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "a46357cb-a311-52ee-a4e6-477bb0922721",
+      "facility_inspire_id": "GB.EEA/EW_EA-3662.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "ffa222c74f69341ddef8d8330887b7aed5302b8fe4d65b72b35c298c90a900bf",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Swindon",
+          "postal_code": "SN2 2QW",
+          "street_name": "Darby Close"
+        },
+        "country_code": "GB",
+        "facility_name": "Zarlink Semiconductor Ltd, Cheney Manor Semiconductor Foundry",
+        "functions": [
+          {
+            "nace_code": "20.59",
+            "nace_name": "Manufacture of other chemical products n e c"
+          }
+        ],
+        "parent_company_name": "ZARLINK SEMICONDUCTOR HOLDINGS LIMITED",
+        "parent_site_name": "Site of facility: Zarlink Semiconductor Ltd, Cheney Manor Semiconductor Foundry",
+        "raw_tabular_point": {
+          "latitude": "51.57335",
+          "longitude": "-1.808342"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "d67aa2f8-1161-5751-a990-aa820307eb14",
+      "facility_inspire_id": "SE.CAED/10015074.Facility",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "explicit_facility_name_candidate",
+        "explicit_parent_site_name_candidate"
+      ],
+      "review_priority": 2,
+      "source_candidate_sha256": "391965757557ace623c57a0cb0d9a35b8b99c53aec69e210db0c68c49e9a154a",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "NORRKÖPING",
+          "postal_code": "602 38",
+          "street_name": "Ramshällsvägen 15"
+        },
+        "country_code": "SE",
+        "facility_name": "STMicroelectronics Silicon Carbide AB",
+        "functions": [
+          {
+            "nace_code": "20.59",
+            "nace_name": "Manufacture of other chemical products n e c"
+          }
+        ],
+        "parent_company_name": "STMicroelectronics Silicon Carbide AB",
+        "parent_site_name": "STMicroelectronics Silicon Carbide AB - Site",
+        "raw_tabular_point": {
+          "latitude": "58.61711",
+          "longitude": "16.19566"
+        }
+      },
+      "triage_basis": "explicit_name_only"
+    },
+    {
+      "candidate_id": "eab77465-d954-597e-9949-16b99e3a685d",
+      "facility_inspire_id": "AT.CAED/9008390491294.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "272f34ed477dd2f8bb8fcfa0f1cc79c4f0f7bf15535845cb7ad41224e6ed188e",
+      "source_values": {
+        "address": {
+          "building_number": "13",
+          "city": "Hinterberg",
+          "postal_code": "8700",
+          "street_name": "Fabriksgasse"
+        },
+        "country_code": "AT",
+        "facility_name": "Austria Technologie & Systemtechnik AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "AT&S AG",
+        "parent_site_name": "Leoben - Hinterberg",
+        "raw_tabular_point": {
+          "latitude": "47.359722",
+          "longitude": "15.068028"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "cbb40c99-6d02-5998-8cc7-22a22e6ede48",
+      "facility_inspire_id": "AT.CAED/9008390491317.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "1f00a9bd7bdb72842a3cd136ec30de4b0572dac4f530f2707c6de5875748954c",
+      "source_values": {
+        "address": {
+          "building_number": "4",
+          "city": "Fehring",
+          "postal_code": "8350",
+          "street_name": "Industriepark"
+        },
+        "country_code": "AT",
+        "facility_name": "Austria Technologie & Systemtechnik AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "AT&S AG",
+        "parent_site_name": "Fehring",
+        "raw_tabular_point": {
+          "latitude": "46.943",
+          "longitude": "16.00775"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "c14a7ab0-088a-5c7c-908b-cd667151b00a",
+      "facility_inspire_id": "AT.CAED/9008392397730.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "5d5d1f8da85907c757d4fa0272315616c5cc3ab78fbecfe49bd07447ac13acc7",
+      "source_values": {
+        "address": {
+          "building_number": "2",
+          "city": "Villach-Auen",
+          "postal_code": "9500",
+          "street_name": "Siemensstr"
+        },
+        "country_code": "AT",
+        "facility_name": "Infineon Technologies Austria AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Infineon Technologies AG",
+        "parent_site_name": "Villach",
+        "raw_tabular_point": {
+          "latitude": "46.59525",
+          "longitude": "13.858861"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "62a47c9b-cfb4-5663-9326-025a4d572941",
+      "facility_inspire_id": "AT.CAED/9008391860914.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "fadb86dad81e9fbc83529d105ad1d6cc3908bf81ce2f6bb60dfc1821d07fcd87",
+      "source_values": {
+        "address": {
+          "building_number": "30",
+          "city": "Unterpremstätten",
+          "postal_code": "8141",
+          "street_name": "Tobelbaderstraße"
+        },
+        "country_code": "AT",
+        "facility_name": "ams-OSRAM AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ams-OSRAM AG",
+        "parent_site_name": "austriamicrosystems AG",
+        "raw_tabular_point": {
+          "latitude": "46.977278",
+          "longitude": "15.393722"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "f3e2ce01-644e-5ed3-8c9d-012fad4f1048",
+      "facility_inspire_id": "https://data.ied_registry.omgeving.vlaanderen.be/id/productionfacility/BE.VL.000000586.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "bd316260e0b39297738da9187a4c3c6a2ecd7de61c6908f912a9082d94508032",
+      "source_values": {
+        "address": {
+          "building_number": "3",
+          "city": "Dendermonde",
+          "postal_code": "9200",
+          "street_name": "Vosmeer"
+        },
+        "country_code": "BE",
+        "facility_name": "ACB",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "A.C.B. (ADVANCED CIRCUIT BOARDS)",
+        "parent_site_name": "ACB",
+        "raw_tabular_point": {
+          "latitude": "51.03014",
+          "longitude": "4.13511"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "e35be46b-0643-56b2-9190-4a7a53c41090",
+      "facility_inspire_id": "BE.EEA/vl01804073000223.FACILITY",
+      "latest_source_detail_reporting_year": "2012",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "70b8a58cd46e7aba86b71d8386246fb96d7ad70a9d0bf10428c055f2dbd70cbc",
+      "source_values": {
+        "address": {
+          "building_number": "3",
+          "city": "Tessenderlo",
+          "postal_code": "3980",
+          "street_name": "Essenschotstraat,INDUSTRIEPARK"
+        },
+        "country_code": "BE",
+        "facility_name": "ELECTRONIC APPARATUS",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ELECTRONIC APPARATUS",
+        "parent_site_name": "Site of facility: ELECTRONIC APPARATUS",
+        "raw_tabular_point": {
+          "latitude": "51.066944",
+          "longitude": "5.1400294"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "db84ddab-2035-58a3-8ca9-99247f380744",
+      "facility_inspire_id": "https://data.ied_registry.omgeving.vlaanderen.be/id/productionfacility/BE.VL.000000698.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "ae352f9fcc09925c5e7de1429e870ec65dd9242acc0229cea4f896f2cf270a50",
+      "source_values": {
+        "address": {
+          "building_number": "3",
+          "city": "Evergem",
+          "postal_code": "9940",
+          "street_name": "Noorwegenstraat"
+        },
+        "country_code": "BE",
+        "facility_name": "ROGERS",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ROGERS",
+        "parent_site_name": "Rogers",
+        "raw_tabular_point": {
+          "latitude": "51.13334",
+          "longitude": "3.74192"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "6c48e20d-ddee-55c1-97a1-800aefd7397b",
+      "facility_inspire_id": "BE.EEA/vl00620040000148.FACILITY",
+      "latest_source_detail_reporting_year": "2016",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "6925d24e8ead023ec8783c8555e86e93d4d96705072e16b26c6d0dda3d72d4fd",
+      "source_values": {
+        "address": {
+          "building_number": "14",
+          "city": "Oostkamp",
+          "postal_code": "8020",
+          "street_name": "Siemenslaan"
+        },
+        "country_code": "BE",
+        "facility_name": "TE CONNECTIVITY BELGIUM EC",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "TYCO ELECTRONICS BELGIUM EC",
+        "parent_site_name": "Site of facility: TE CONNECTIVITY BELGIUM EC",
+        "raw_tabular_point": {
+          "latitude": "51.145725",
+          "longitude": "3.23754"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "f3ecf5a5-d7a5-5e04-b051-2f7de257a99f",
+      "facility_inspire_id": "BE.WA/000003488.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "31a9046a30e8dfac95c5bf10a0d72c7de8371bb115b085f64e9d2d298af7390a",
+      "source_values": {
+        "address": {
+          "building_number": "101",
+          "city": "Mont-Sur-Marchienne",
+          "postal_code": "6032",
+          "street_name": "Chapelle Beaussart"
+        },
+        "country_code": "BE",
+        "facility_name": "THALES ALENIA SPACE BELGIUM",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "THALES ALENIA SPACE BELGIUM",
+        "parent_site_name": "THALES ALENIA SPACE BELGIUM",
+        "raw_tabular_point": {
+          "latitude": "50.401848",
+          "longitude": "4.4171834"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "7d8e4bfc-d627-58d0-a930-64db39e097fe",
+      "facility_inspire_id": "CH.EEA/42.FACILITY",
+      "latest_source_detail_reporting_year": "2011",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "7d9305e78217655fcd65f7badc51bf0707746f1b35b88261fb9f89d06a655f23",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Cham",
+          "postal_code": "6330",
+          "street_name": "Riedstrasse 2"
+        },
+        "country_code": "CH",
+        "facility_name": "PPC Electronic AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "PPC Electronic AG",
+        "parent_site_name": "Site of facility: PPC Electronic AG",
+        "raw_tabular_point": {
+          "latitude": "47.1886082756507",
+          "longitude": "8.47583885203883"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "11f6ae38-336d-560a-9794-01fc778c4c49",
+      "facility_inspire_id": "CH.CAED/000000376.Facility",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "60efd466b889b2c3c7aa4444b666baa2b4881b4150bb8bd1cc1790a4b3deda83",
+      "source_values": {
+        "address": {
+          "building_number": "7-9",
+          "city": "Heiden",
+          "postal_code": "9410",
+          "street_name": "Mittelbissaustrasse"
+        },
+        "country_code": "CH",
+        "facility_name": "Varioprint AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Varioprint AG",
+        "parent_site_name": "Varioprint AG",
+        "raw_tabular_point": {
+          "latitude": "47.4392",
+          "longitude": "9.533300000000001"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "34ebe9df-ae0e-5695-811e-d70228f5230e",
+      "facility_inspire_id": "CZ.MZP.Z722/CZ0046483E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "92f9bcb919f174675bf7fb347c75f3c7077d2c5a633a8d8571060b33a44790e2",
+      "source_values": {
+        "address": {
+          "building_number": "817",
+          "city": "Buchlovice",
+          "postal_code": "68708",
+          "street_name": "Hradišťská"
+        },
+        "country_code": "CZ",
+        "facility_name": "BD SENSORS s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "BD SENSORS s.r.o.",
+        "parent_site_name": "001937.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.077886666666",
+          "longitude": "17.354396388888"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "8d71eb13-ee38-59df-afb2-0adf68cc8551",
+      "facility_inspire_id": "CZ.MZP.H521/CZ0050118E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "f4f9c078f2dc13a9c86779ea69597ca7c0427461f17b2d4debba15e2df0b2091",
+      "source_values": {
+        "address": {
+          "building_number": "1144",
+          "city": "Hradec Králové",
+          "postal_code": "50003",
+          "street_name": "Okružní"
+        },
+        "country_code": "CZ",
+        "facility_name": "ELCERAM a.s.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ELCERAM a.s.",
+        "parent_site_name": "001091.SITE",
+        "raw_tabular_point": {
+          "latitude": "50.2135611111111",
+          "longitude": "15.8468827777778"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "519f45b0-d803-5fbd-bc27-8f3f7a7ef2dd",
+      "facility_inspire_id": "CZ.MZP.B641/CZ0168464E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "623fcd8b148a8fcba2040ffe49c89efc4c525246125e10fb2e43e7ee04184c8f",
+      "source_values": {
+        "address": {
+          "building_number": "2503",
+          "city": "Boskovice",
+          "postal_code": "68001",
+          "street_name": "Průmyslová"
+        },
+        "country_code": "CZ",
+        "facility_name": "Gatema PCB a.s.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Gatema PCB a.s.",
+        "parent_site_name": "000767.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.496472222",
+          "longitude": "16.641555555"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "c33672d4-7379-54d2-9a84-3aa3128d6e78",
+      "facility_inspire_id": "CZ.MZP.B645/CZ0119161E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "afea9b3553f53dc41cf66cdd8a8e1bc78ce0fe09d1411dcbb8900a3d2466004c",
+      "source_values": {
+        "address": {
+          "building_number": "1613",
+          "city": "Bzenec",
+          "postal_code": "69681",
+          "street_name": "Spojovací"
+        },
+        "country_code": "CZ",
+        "facility_name": "KYOCERA AVX Components  s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "KYOCERA  AVX Components s.r.o.",
+        "parent_site_name": "001042.SITE",
+        "raw_tabular_point": {
+          "latitude": "48.9766725",
+          "longitude": "17.256413889"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "01e2e603-7934-540a-988b-746042959257",
+      "facility_inspire_id": "CZ.MZP.E534/CZ01136201.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "4a22ddd41e9ad1923e16facce0530241eea79a222ca7f64dd9399352cfa8c6f7",
+      "source_values": {
+        "address": {
+          "building_number": "328",
+          "city": "Lanškroun",
+          "postal_code": "56301",
+          "street_name": "Dvořákova"
+        },
+        "country_code": "CZ",
+        "facility_name": "KYOCERA AVX Components s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "KYOCERA  AVX Components s.r.o.",
+        "parent_site_name": "002011.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.91058002",
+          "longitude": "16.60061128"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "c389adbc-6ec5-5f56-a1a8-6e10b0c2d443",
+      "facility_inspire_id": "CZ.MZP.Z722/CZ01142856.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "7aabd039437f1e9556379546b4e6589180a4f4e74c2138cdc3d239dc35018b5f",
+      "source_values": {
+        "address": {
+          "building_number": "303",
+          "city": "Uherské Hradiště",
+          "postal_code": "68601",
+          "street_name": "Za Olšávkou"
+        },
+        "country_code": "CZ",
+        "facility_name": "KYOCERA AVX Components s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "KYOCERA  AVX Components s.r.o.",
+        "parent_site_name": "001970.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.05368483",
+          "longitude": "17.46754129"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "fbcae996-40a7-50cf-a7f3-b640ff8142e6",
+      "facility_inspire_id": "CZ.EEA/CZ53817852.FACILITY",
+      "latest_source_detail_reporting_year": "2009",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "06f7387110548f4584f0dcb8e689b53f8000d0a173ccbbbed0e02597756a9b3d",
+      "source_values": {
+        "address": {
+          "building_number": "194",
+          "city": "Vrchlabí",
+          "postal_code": "54302",
+          "street_name": "Bucharova"
+        },
+        "country_code": "CZ",
+        "facility_name": "OPTREX Czech a.s. Vrchlabí",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "OPTREX Czech a.s.",
+        "parent_site_name": "Site of facility: OPTREX Czech a.s. Vrchlabí",
+        "raw_tabular_point": {
+          "latitude": "50.64148333",
+          "longitude": "15.60725556"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "a5f4339d-d43a-52bc-950f-474cc73ece65",
+      "facility_inspire_id": "CZ.MZP.U422/CZ0030365E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "5fde0ed1de514a2c7ec8a983943a42da4a13852f61a22f1d05da0eb56d69e2bf",
+      "source_values": {
+        "address": {
+          "building_number": "1977",
+          "city": "Kadaň",
+          "postal_code": "43201",
+          "street_name": "Královský Vrch"
+        },
+        "country_code": "CZ",
+        "facility_name": "PFISTERER Czech s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "PFISTERER Czech s.r.o.",
+        "parent_site_name": "001132.SITE",
+        "raw_tabular_point": {
+          "latitude": "50.3948275",
+          "longitude": "13.258796111111"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "41992adf-170b-5132-92b4-833c481f3a19",
+      "facility_inspire_id": "CZ.MZP.E534/CZ0023903E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "b603d4b57f8b4d8bcd6336698d37ff81dd9ed0230c3c78bc2a818f69dc039de6",
+      "source_values": {
+        "address": {
+          "building_number": "997",
+          "city": "Lanškroun",
+          "postal_code": "56301",
+          "street_name": "Dvořákova"
+        },
+        "country_code": "CZ",
+        "facility_name": "SCHOTT  CR, s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "SCHOTT CR, s.r.o.",
+        "parent_site_name": "002011.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.9118175",
+          "longitude": "16.5980375"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "ce6100e0-ae68-526c-b4a2-ede321c743ae",
+      "facility_inspire_id": "CZ.MZP.L512/CZ0207133E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "80f7c592fba8c0e450950380c85dded2b54889e54d96261987a3e7eed324b3f9",
+      "source_values": {
+        "address": {
+          "building_number": "190",
+          "city": "Malá Skála",
+          "postal_code": "46822",
+          "street_name": "N/A"
+        },
+        "country_code": "CZ",
+        "facility_name": "SCHURTER, společnost s ručením omezeným",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "SCHURTER, společnost s ručením omezeným",
+        "parent_site_name": "000170.SITE",
+        "raw_tabular_point": {
+          "latitude": "50.6454",
+          "longitude": "15.206188889"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "1d6a7b5d-bca5-5228-9995-775479d16266",
+      "facility_inspire_id": "CZ.MZP.K413/CZ0258365E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "527d9de19933e405b1afeb16b7faf13f3d877ec85ff24025388bf3351421f0c0",
+      "source_values": {
+        "address": {
+          "building_number": "392",
+          "city": "Dolní Rychnov",
+          "postal_code": "35604",
+          "street_name": "Bergmannova"
+        },
+        "country_code": "CZ",
+        "facility_name": "VISHAY ELECTRONIC spol. s r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "VISHAY ELECTRONIC spol. s r.o.",
+        "parent_site_name": "001798.SITE",
+        "raw_tabular_point": {
+          "latitude": "50.159822222",
+          "longitude": "12.632772223"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "109b5a1a-bccc-5c83-8509-6415d050e0b7",
+      "facility_inspire_id": "CZ.MZP.C316/CZ01101650.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "70f54e5bf3375c4c9b13765b7cdffaaad40821e579f0800185aceebf9b0585e9",
+      "source_values": {
+        "address": {
+          "building_number": "1231",
+          "city": "Blatná",
+          "postal_code": "38801",
+          "street_name": "Riegrova"
+        },
+        "country_code": "CZ",
+        "facility_name": "Závod Blatná ESTA B1",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "VISHAY ELECTRONIC spol. s r.o.",
+        "parent_site_name": "001803.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.43227973",
+          "longitude": "13.87200208"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "8e611ec1-cd8f-5640-af33-cc4409584fc2",
+      "facility_inspire_id": "CZ.MZP.C316/CZ77447352.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "e4585b9dd3062f8ea4fce85992cc062e09220087dc270b30f8002a4ea1911dde",
+      "source_values": {
+        "address": {
+          "building_number": "1243",
+          "city": "Blatná",
+          "postal_code": "38801",
+          "street_name": "Paštická"
+        },
+        "country_code": "CZ",
+        "facility_name": "Závod Blatná ESTA B2",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "VISHAY ELECTRONIC spol. s r.o.",
+        "parent_site_name": "001802.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.43202938",
+          "longitude": "13.88675759"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "8df3da28-408a-5779-9aec-b0f89d8116ff",
+      "facility_inspire_id": "CZ.MZP.B647/CZ0220063E.FACILITY",
+      "latest_source_detail_reporting_year": "2023",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "54d99fdefbb91777f7ab59fb8a8bfd77e1f929551aa6ce649f83bb1baba10392",
+      "source_values": {
+        "address": {
+          "building_number": "100",
+          "city": "Běhařovice",
+          "postal_code": "67139",
+          "street_name": "N/A"
+        },
+        "country_code": "CZ",
+        "facility_name": "ismet transformátory, s.r.o.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ismet transformátory s.r.o.",
+        "parent_site_name": "000689.SITE",
+        "raw_tabular_point": {
+          "latitude": "49.001267",
+          "longitude": "16.07215"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "fcfff9a6-a113-5a3f-b83a-a7973faec26d",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.by.inspire.pf.ied/S01331",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "22eb6ecbcc9bd9935011c676167a724129b29ad84c904961b2110d39a2cd6c59",
+      "source_values": {
+        "address": {
+          "building_number": "16",
+          "city": "Röthenbach a.d.Pegnitz",
+          "postal_code": "90552",
+          "street_name": "Fischbachstr."
+        },
+        "country_code": "DE",
+        "facility_name": "Diehl Defence GmbH & Co. KG, Werk Röthenbach a.d.Pegnitz",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Diehl Defence GmbH & Co. KG",
+        "parent_site_name": "Diehl Defence GmbH & Co. KG, Werk Röthenbach a.d.Pegnitz",
+        "raw_tabular_point": {
+          "latitude": "49.4730788388672",
+          "longitude": "11.2308950592923"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "993bf761-a6b2-5f1f-959e-949056ff9b1b",
+      "facility_inspire_id": "DE.EEA/14-50-51020609226.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "bf12ef97d4da41421d53a12fd17439e1ebb9fddab42a397f640d1dad34400ec0",
+      "source_values": {
+        "address": {
+          "building_number": "216",
+          "city": "Dresden",
+          "postal_code": "01169",
+          "street_name": "Kesselsdorfer Str."
+        },
+        "country_code": "DE",
+        "facility_name": "FUBA PRINTED CIRCUITS GmbH",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "FUBA PRINTED CIRCUITS GmbH",
+        "parent_site_name": "Site of facility: FUBA PRINTED CIRCUITS GmbH",
+        "raw_tabular_point": {
+          "latitude": "51.0417764984237",
+          "longitude": "13.6573830748453"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "81a6d801-7eca-5435-a767-91179fcaff09",
+      "facility_inspire_id": "DE.EEA/14-71-51020609226.FACILITY",
+      "latest_source_detail_reporting_year": "2008",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "358cab893526eb2039877cc24c47707fec57ff455b0e3a0538320c689c6df28d",
+      "source_values": {
+        "address": {
+          "building_number": "216",
+          "city": "Dresden",
+          "postal_code": "01169",
+          "street_name": "Kesselsdorfer Str."
+        },
+        "country_code": "DE",
+        "facility_name": "FUBA PRINTED CIRCUITS GmbH",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "FUBA PRINTED CIRCUITS GmbH",
+        "parent_site_name": "Site of facility: FUBA PRINTED CIRCUITS GmbH",
+        "raw_tabular_point": {
+          "latitude": "51.0417738285841",
+          "longitude": "13.6573327669101"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "998611d9-9e62-5c55-8f16-36cc2e96065b",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/70019045",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "941b21d60d42c7a88df4ca889b545e8a489c26490ff1dab72d81ba60caf5eb4f",
+      "source_values": {
+        "address": {
+          "building_number": "101",
+          "city": "Dresden",
+          "postal_code": "01109",
+          "street_name": "Wilschdorfer Landstraße"
+        },
+        "country_code": "DE",
+        "facility_name": "GLOBALFOUNDRIES Dresden Module One LLC & Co. KG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "GLOBALFOUNDRIES Dresden Module One LLC & Co. KG",
+        "parent_site_name": "GLOBALFOUNDRIES Dresden Module One LLC & Co. KG ",
+        "raw_tabular_point": {
+          "latitude": "51.12452",
+          "longitude": "13.71688"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "449fc48d-d27f-558c-8939-c8586417a770",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/70019039",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "e241ba4caeb4888d698c7c306ae14f1b579fe85330fdb2a57fff84bda64fe075",
+      "source_values": {
+        "address": {
+          "building_number": "101",
+          "city": "Dresden",
+          "postal_code": "01109",
+          "street_name": "Wilschdorfer Landstr."
+        },
+        "country_code": "DE",
+        "facility_name": "GLOBALFOUNDRIES Dresden Module Two LLC & Co. KG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "GLOBALFOUNDRIES Dresden Module Two LLC & Co. KG",
+        "parent_site_name": "GLOBALFOUNDRIES Dresden Module Two LLC & Co. KG ",
+        "raw_tabular_point": {
+          "latitude": "51.12696",
+          "longitude": "13.71669"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "528ad4e1-33d2-581b-92e5-ab686b6d1096",
+      "facility_inspire_id": "DE.EEA/06-08-8783144.FACILITY",
+      "latest_source_detail_reporting_year": "2013",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "2b7ccc72c20e75a40622b3edf1e1d1a545a1cd6d1db9462e466cdbe47c67c5e7",
+      "source_values": {
+        "address": {
+          "building_number": "6",
+          "city": "Schömberg",
+          "postal_code": "75328",
+          "street_name": "Gewerbestr."
+        },
+        "country_code": "DE",
+        "facility_name": "Greule GmbH",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Greule GmbH",
+        "parent_site_name": "Site of facility: Greule GmbH",
+        "raw_tabular_point": {
+          "latitude": "48.8077783786879",
+          "longitude": "8.64075541005276"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "05dc8613-9710-55d7-9d1e-dc184ad9b97f",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.by.inspire.pf.ied/S00514",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "e31c01d3fc7e485c0a6d4e8520dc00ed9bfba5b8adea6730b2a014214d89a90f",
+      "source_values": {
+        "address": {
+          "building_number": "2",
+          "city": "Regensburg",
+          "postal_code": "93049",
+          "street_name": "Wernerwerkstr."
+        },
+        "country_code": "DE",
+        "facility_name": "Infineon Technologies AG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Infineon Technologies AG",
+        "parent_site_name": "Infineon Technologies AG",
+        "raw_tabular_point": {
+          "latitude": "49.0212495988674",
+          "longitude": "12.0559628822497"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "ca04b41d-4ebc-547b-b14a-618d67e2e33d",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/70015932",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "11d628c96fa7c257d36661aca013852731d4adc57152bd55f538fffb7658c8aa",
+      "source_values": {
+        "address": {
+          "building_number": "180",
+          "city": "Dresden",
+          "postal_code": "01099",
+          "street_name": "Königsbrücker Str."
+        },
+        "country_code": "DE",
+        "facility_name": "Infineon Technologies Dresden GmbH & Co. KG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Infineon Technologies Dresden GmbH & Co. KG",
+        "parent_site_name": "Infineon Technologies Dresden GmbH & Co. KG ",
+        "raw_tabular_point": {
+          "latitude": "51.10384",
+          "longitude": "13.777"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "34f8e77b-8273-5d81-86f5-3a2b976da407",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/63016751",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "4bd906a8e6cf0379d4f1cad7bac9faf6c85abf4dda0e5c808793480ad91cd712",
+      "source_values": {
+        "address": {
+          "building_number": "3-5",
+          "city": "Gornsdorf",
+          "postal_code": "09390",
+          "street_name": "Auerbacher Straße"
+        },
+        "country_code": "DE",
+        "facility_name": "KSG GmbH ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "KSG GmbH",
+        "parent_site_name": "KSG GmbH ",
+        "raw_tabular_point": {
+          "latitude": "50.69936",
+          "longitude": "12.88388"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "d527628a-d4ae-5374-a8d2-3c93bc499f79",
+      "facility_inspire_id": "DE.EEA/06-09-261-4037-0001.FACILITY",
+      "latest_source_detail_reporting_year": "2008",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "ab11aac55e885b77bb546cb18c82441d739d154c7d7936a83b05b029f4f5d73e",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Landshut",
+          "postal_code": "84034",
+          "street_name": "Jenaer Straße"
+        },
+        "country_code": "DE",
+        "facility_name": "Landshut Silicon Foundry GmbH",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Landshut Silicon Foundry GmbH",
+        "parent_site_name": "Site of facility: Landshut Silicon Foundry GmbH",
+        "raw_tabular_point": {
+          "latitude": "48.543178690439",
+          "longitude": "12.1126314401566"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "d948fa05-eae3-51e8-a2d8-30b6ffb2f2cd",
+      "facility_inspire_id": "DE.EEA/06-08-14007217.FACILITY",
+      "latest_source_detail_reporting_year": "2012",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "6efd1821a557f8abe8d5ddb8ae2956426c2e1249c7da43218a4d25d92f54fe6f",
+      "source_values": {
+        "address": {
+          "building_number": "110",
+          "city": "Böblingen",
+          "postal_code": "71034",
+          "street_name": "Herrenberger Str."
+        },
+        "country_code": "DE",
+        "facility_name": "Multek Europe Multilayer Technology",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Multek Europe Multilayer Technology",
+        "parent_site_name": "Site of facility: Multek Europe Multilayer Technology",
+        "raw_tabular_point": {
+          "latitude": "48.6802615009989",
+          "longitude": "8.99089792173095"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "d9079eb7-d54f-5ac0-9b60-510e79cc2095",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.bw.lubw.inspire.pf/pf-450-6762115-00000000",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "c47aa3658384ffc22b4672543553e9ac45159047b9136ee8a9e91bfb988c0b3e",
+      "source_values": {
+        "address": {
+          "building_number": "73",
+          "city": "Bad Wildbad im Schwarzwald",
+          "postal_code": "75323",
+          "street_name": "Langwiesenweg"
+        },
+        "country_code": "DE",
+        "facility_name": "Polytron-Print GmbH ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Polytron-Print GmbH",
+        "parent_site_name": "Polytron-Print GmbH ",
+        "raw_tabular_point": {
+          "latitude": "48.76474",
+          "longitude": "8.55902"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "7f5ddd69-f884-5f50-86dd-ad498fc33afe",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.by.inspire.pf.ied/S00080",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "d21d836b24b278a3e67fefa24b6608b1e418debbc37c80901eef78bc2bff1156",
+      "source_values": {
+        "address": {
+          "building_number": "13",
+          "city": "München",
+          "postal_code": "81671",
+          "street_name": "Anzinger Straße"
+        },
+        "country_code": "DE",
+        "facility_name": "RF360 Europe GmbH",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "RF360 Europe GmbH",
+        "parent_site_name": "RF360 Europe GmbH",
+        "raw_tabular_point": {
+          "latitude": "48.1216950385071",
+          "longitude": "11.608337655513"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "49998d14-8957-58a5-954b-6792d3825d8c",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.by.inspire.pf.ied/S00267",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "e01e73e629ddc16ec263153f5a889c3ea59db24f31edf9d530fc5b90a2e1bd0e",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Fridolfing",
+          "postal_code": "83413",
+          "street_name": "Hauptstr."
+        },
+        "country_code": "DE",
+        "facility_name": "Rosenberger Hochfrequenztechnik GmbH & Co. KG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Rosenberger Hochfrequenztechnik GmbH & Co. KG",
+        "parent_site_name": "Rosenberger Hochfrequenztechnik GmbH & Co. KG",
+        "raw_tabular_point": {
+          "latitude": "48.008526141665",
+          "longitude": "12.8050082033234"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "13e642ba-72c1-5c96-b640-3bce6b9867a0",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.bw.lubw.inspire.pf/pf-450-7444761-00000000",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "759c74c8fd8dcd05b6ee1b805d6287b4e9ae628d6ea83705bdaf684d9926f7be",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Kenzingen",
+          "postal_code": "79341",
+          "street_name": "Carl-Benz-Str."
+        },
+        "country_code": "DE",
+        "facility_name": "Schaltungsdruck Storz GmbH + Co. KG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Schaltungsdruck Storz GmbH + Co. KG",
+        "parent_site_name": "Schaltungsdruck Storz GmbH + Co. KG ",
+        "raw_tabular_point": {
+          "latitude": "48.19944",
+          "longitude": "7.76195"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "d86c12d0-a382-534a-9dff-3000b7889a51",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.bw.lubw.inspire.pf/pf-450-4978803-00000000",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "391f6a546f6fd5d5a9754072a0c7a1f89c64cc9f6688a85acf21e1ede5c4153c",
+      "source_values": {
+        "address": {
+          "building_number": "10",
+          "city": "Schramberg",
+          "postal_code": "78713",
+          "street_name": "Einsteinstraße"
+        },
+        "country_code": "DE",
+        "facility_name": "Schweizer Electronic AG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Schweizer Electronic AG",
+        "parent_site_name": "Schweizer Electronic AG ",
+        "raw_tabular_point": {
+          "latitude": "48.23103",
+          "longitude": "8.42489"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "087e7985-7b45-5d50-a232-fdf2b4609d93",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.nw.inspire.pf.bube-eureg/arb-2017-766020-700-0071872",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "edd77ff0a32b853fdafe839b1e2e03757b392f133e47302c7299d62461765240",
+      "source_values": {
+        "address": {
+          "building_number": "16",
+          "city": "Detmold",
+          "postal_code": "32758",
+          "street_name": "Klingenbergstr."
+        },
+        "country_code": "DE",
+        "facility_name": "Weidmüller Interface GmbH & Co.KG",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Weidmüller Interface GmbH & Co.KG",
+        "parent_site_name": "Weidmüller Interface GmbH & Co.KG",
+        "raw_tabular_point": {
+          "latitude": "51.94817",
+          "longitude": "8.85459"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "41f3cbc5-3efb-53d4-82e1-d4f7d076e1a9",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.bw.lubw.inspire.pf/pf-450-7095643-00000000",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "a6d002cec60484c188d88a4d1166d2d8f3e539c520dbc0334375c276945f1019",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Schopfheim",
+          "postal_code": "79650",
+          "street_name": "An der Wiese"
+        },
+        "country_code": "DE",
+        "facility_name": "Würth Elektronik GmbH & Co. KG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Würth Elektronik GmbH & Co. KG",
+        "parent_site_name": "Würth Elektronik GmbH & Co. KG ",
+        "raw_tabular_point": {
+          "latitude": "47.65072",
+          "longitude": "7.80099"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "c36566c1-60b5-5fe5-b6c2-280bef593fe4",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.bw.lubw.inspire.pf/pf-450-7708181-00000000",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "799f9ce72891307e7b006d1e4fb8f35c15f85de763483c3b4d73148189f8f074",
+      "source_values": {
+        "address": {
+          "building_number": "21",
+          "city": "Niedernhall",
+          "postal_code": "74676",
+          "street_name": "Salzstr."
+        },
+        "country_code": "DE",
+        "facility_name": "Würth Elektronik GmbH & Co. KG ",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Würth Elektronik GmbH & Co. KG",
+        "parent_site_name": "Würth Elektronik GmbH & Co. KG ",
+        "raw_tabular_point": {
+          "latitude": "49.30343",
+          "longitude": "9.620850000000001"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "1becff5f-0ca1-575d-9ce4-61281e47458e",
+      "facility_inspire_id": "https://registry.gdi-de.org/id/de.by.inspire.pf.ied/S00516",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "8d4631671c0f3db11bfba66d7d094e1d98ba8cc1757433be3ca943bd5094874d",
+      "source_values": {
+        "address": {
+          "building_number": "4",
+          "city": "Regensburg",
+          "postal_code": "93055",
+          "street_name": "Leibnizstr."
+        },
+        "country_code": "DE",
+        "facility_name": "ams-OSRAM International GmbH",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ams-OSRAM International GmbH",
+        "parent_site_name": "ams-OSRAM International GmbH",
+        "raw_tabular_point": {
+          "latitude": "48.9971590173672",
+          "longitude": "12.1599136409895"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "ccab2d90-624c-5e60-8c8c-f09bd16a8be8",
+      "facility_inspire_id": "DK.EEA/1383.FACILITY",
+      "latest_source_detail_reporting_year": "2010",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "7f81a3b644adaf7de78cb394211966a89cfac6f74baedd079d6a4ba437f0db8a",
+      "source_values": {
+        "address": {
+          "building_number": "2",
+          "city": "Karlslunde",
+          "postal_code": "2690",
+          "street_name": "Skruegangen "
+        },
+        "country_code": "DK",
+        "facility_name": "DNP Denmark A/S",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "DNP Denmark A/S",
+        "parent_site_name": "Site of facility: DNP Denmark A/S",
+        "raw_tabular_point": {
+          "latitude": "55.574487585993",
+          "longitude": "12.244252826551"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "02304548-0a5e-5b16-9d36-12db770621dd",
+      "facility_inspire_id": "DK.EEA/955.FACILITY",
+      "latest_source_detail_reporting_year": "2008",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "c102d68eb80d3f6d82531377392f4d5fb5b74fe7fb43a7f9c6c82902fde24c63",
+      "source_values": {
+        "address": {
+          "building_number": "128",
+          "city": "Horsens",
+          "postal_code": "8700",
+          "street_name": "Egebjergvej "
+        },
+        "country_code": "DK",
+        "facility_name": "GPV Chemitalic A/S",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "GPV PCB DIVISIONEN A/S",
+        "parent_site_name": "Site of facility: GPV Chemitalic A/S",
+        "raw_tabular_point": {
+          "latitude": "55.897703256417",
+          "longitude": "9.841094462184911"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "68b4d13e-f9e3-5801-b744-fe5fc2545570",
+      "facility_inspire_id": "EE.KAUR.TTR/205.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "1db90379d272e2bd929202bbd76b0aafd1e1396272df102c7e7a6bec98611a11",
+      "source_values": {
+        "address": {
+          "building_number": "40",
+          "city": "Pärnu linn",
+          "postal_code": "80010",
+          "street_name": "Vana-Sauga"
+        },
+        "country_code": "EE",
+        "facility_name": "Scanfil OÜ, Pärnu elektroonikatehas",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Scanfil OÜ",
+        "parent_site_name": "Pärnu elektroonikatehas",
+        "raw_tabular_point": {
+          "latitude": "58.3950427566",
+          "longitude": "24.467384771"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "6b46a67e-8e3c-5c30-92dd-1e3b9f8492cd",
+      "facility_inspire_id": "ES.EEA/6512.FACILITY",
+      "latest_source_detail_reporting_year": "2009",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "00403dacb4beb29fcf36b58481e622fccb5f8fd78cdf59195d76bcd11c344a9c",
+      "source_values": {
+        "address": {
+          "building_number": "S/N",
+          "city": "TRES CANTOS",
+          "postal_code": "28760",
+          "street_name": "POLIGONO INDUSTRIAL ZONA OESTE SN"
+        },
+        "country_code": "ES",
+        "facility_name": "BP SOLAR ESPAÑA FABRICA DE CELULAS FOTOVOLTAICAS",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "BP SOLAR ESPAÑA",
+        "parent_site_name": "Site of facility: BP SOLAR ESPAÑA FABRICA DE CELULAS FOTOVOLTAICAS",
+        "raw_tabular_point": {
+          "latitude": "40.599275",
+          "longitude": "-3.711752"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "84905641-2d31-5693-a9f0-ca60cba27ff1",
+      "facility_inspire_id": "FI.EEA/21529.FACILITY",
+      "latest_source_detail_reporting_year": "2015",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "009cd37d22e315f01410c1a564b8732f36a6acf677c844bca746421aacaba025",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "TEUVA",
+          "postal_code": "64700",
+          "street_name": "Mäki-Mikkiläntie 3"
+        },
+        "country_code": "FI",
+        "facility_name": "Aspocomp Oulu Oy",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Aspocomp Oulu Oy",
+        "parent_site_name": "Site of facility: Aspocomp Oulu Oy",
+        "raw_tabular_point": {
+          "latitude": "62.496",
+          "longitude": "21.7465"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "ed2b5aaf-7dcd-5591-ada9-3f6b8429474a",
+      "facility_inspire_id": "FI.EEA/52876.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "71d7aaa60df99a616b83499cc2a26ec72f90f195f297beaf81f996b9f265dfde",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "SALO",
+          "postal_code": "24100",
+          "street_name": "Örninkatu 15"
+        },
+        "country_code": "FI",
+        "facility_name": "Aspocomp Oy, Salon tehdas",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Aspocomp Oy, Salon tehdas",
+        "parent_site_name": "Site of facility: Aspocomp Oy, Salon tehdas",
+        "raw_tabular_point": {
+          "latitude": "60.388821",
+          "longitude": "23.113789"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "66f20321-0135-5191-92db-fafe3874e26f",
+      "facility_inspire_id": "FI.EEA/12829.FACILITY",
+      "latest_source_detail_reporting_year": "2010",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "dc733d092d83203ae66e8959646ef62bd695811b748d36915a940c58845e0afb",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "VANTAA",
+          "postal_code": "01730",
+          "street_name": "Kisällintie 12"
+        },
+        "country_code": "FI",
+        "facility_name": "Scanfil EMS Oy, Vantaa",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Scanfil EMS Oy, Vantaa",
+        "parent_site_name": "Site of facility: Scanfil EMS Oy, Vantaa",
+        "raw_tabular_point": {
+          "latitude": "60.308298",
+          "longitude": "24.854328"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "d08f794b-2312-563d-b5f3-10632d7c8aac",
+      "facility_inspire_id": "FI.EEA/19988.FACILITY",
+      "latest_source_detail_reporting_year": "2009",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "22b75ad3a6b6b8f9641df5699378b0498217ace26f0904d14e5fe46fbeb7c358",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "VALTIMO",
+          "postal_code": "75700",
+          "street_name": "Teollisuuspolku 1"
+        },
+        "country_code": "FI",
+        "facility_name": "Valtimo Components Oyj, Pintakäsittelylaitos",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Valtimo Components Oyj, Pintakäsittelylaitos",
+        "parent_site_name": "Site of facility: Valtimo Components Oyj, Pintakäsittelylaitos",
+        "raw_tabular_point": {
+          "latitude": "63.688578",
+          "longitude": "28.796419"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "825c81fc-b014-576f-bc2e-427ad87f7164",
+      "facility_inspire_id": "FR.CAED/6012.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "ce5894ac50785a1b9ec2be312664aba415e2c22c7b74f219dd11c09cee4083b1",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "ENNERY",
+          "postal_code": "57365",
+          "street_name": "Rue Charles Picard, ZI Les Jonquières"
+        },
+        "country_code": "FR",
+        "facility_name": "CIMULEC S A",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "CIMULEC SA",
+        "parent_site_name": "CIMULEC S A",
+        "raw_tabular_point": {
+          "latitude": "49.21732",
+          "longitude": "6.20889"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "28d4e041-8e6d-5a51-9eea-00cacc875adb",
+      "facility_inspire_id": "FR.EEA/055.00127.FACILITY",
+      "latest_source_detail_reporting_year": "2009",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "a55d625a8a5ee4a59b17262b491a68b25d308bc93eb04c93f9d5b48123def84b",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "LANNION",
+          "postal_code": "22307",
+          "street_name": "Avenue Pierre Marzin"
+        },
+        "country_code": "FR",
+        "facility_name": "ELCI",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ELCI",
+        "parent_site_name": "Site of facility: ELCI",
+        "raw_tabular_point": {
+          "latitude": "48.74",
+          "longitude": "-3.46"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "9c40c084-c579-5a78-a9e0-ce0f55598157",
+      "facility_inspire_id": "FR.CAED/12682.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "c6f48102d88a9d32417f36c5fa4fa3133faae6d1af75bc3186e0d6a0aa07258e",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "BELLEGARDE",
+          "postal_code": "45270",
+          "street_name": "ZI"
+        },
+        "country_code": "FR",
+        "facility_name": "ELVIA PRINTED CIRCUIT BOARDS",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ELVIA PCB",
+        "parent_site_name": "ELVIA PRINTED CIRCUIT BOARDS",
+        "raw_tabular_point": {
+          "latitude": "47.99103",
+          "longitude": "2.45348"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "f08ddf22-f5de-5088-8437-d7f550217e4e",
+      "facility_inspire_id": "FR.CAED/8294.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "8fce79ce310f6e35ae486bcdc65c56eba0817a4f0a9e0443949e89bd744f2aec",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "MANTES LA JOLIE",
+          "postal_code": "78200",
+          "street_name": "37, CHEMIN DES CLOSEAUX"
+        },
+        "country_code": "FR",
+        "facility_name": "LINXENS FRANCE",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "LINXENS FRANCE",
+        "parent_site_name": "LINXENS FRANCE",
+        "raw_tabular_point": {
+          "latitude": "48.99204",
+          "longitude": "1.6836"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "aae786c2-c0f4-5f12-9f58-1728145f6bb8",
+      "facility_inspire_id": "FR.EEA/062.00223.FACILITY",
+      "latest_source_detail_reporting_year": "2014",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "f0fdfd89ce244ab1dddf8626dbb4ff871bf2989bfeeffbc0c87901e8e3e52fb5",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "GORCY",
+          "postal_code": "54730",
+          "street_name": "ZI le Roitelet"
+        },
+        "country_code": "FR",
+        "facility_name": "LORRAINE CIRCUIT",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "LORRAINE CIRCUIT",
+        "parent_site_name": "Site of facility: LORRAINE CIRCUIT",
+        "raw_tabular_point": {
+          "latitude": "49.53",
+          "longitude": "5.68"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "9ec81824-c15d-533a-b629-075d985e73f0",
+      "facility_inspire_id": "FR.EEA/065.04022.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "fa145b7abfb73234c86c80204a7d8c65b96d572ef013a012c10de0eac00f4c42",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "EVRY",
+          "postal_code": "91005",
+          "street_name": "1, avenue du Bois de lEpine"
+        },
+        "country_code": "FR",
+        "facility_name": "NICOSOFRA",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "NICOSOFRA",
+        "parent_site_name": "Site of facility: NICOSOFRA",
+        "raw_tabular_point": {
+          "latitude": "48.62",
+          "longitude": "2.44"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "52caa403-adab-5dc3-ae60-1bc0659659b6",
+      "facility_inspire_id": "FR.CAED/9529.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "b77c84126fd4e672005691ef4665690a7af23020b04d3ad7dfb27ecd0a3e7cdc",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "ANDLAU",
+          "postal_code": "67140",
+          "street_name": "7 route d'Eichhoffen, CS  40017 Andlau"
+        },
+        "country_code": "FR",
+        "facility_name": "STOCKO CONTACT",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "STOCKO CONTACT EURL",
+        "parent_site_name": "STOCKO CONTACT",
+        "raw_tabular_point": {
+          "latitude": "48.386",
+          "longitude": "7.42843"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "6f25c6c1-e21f-5423-af02-89ce3a614813",
+      "facility_inspire_id": "FR.EEA/052.01056.FACILITY",
+      "latest_source_detail_reporting_year": "2014",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "cd8bbc21e2f8f1c948ee542004bbb09b4a18d3509babd5a70680427b32d6cf97",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "PESSAC",
+          "postal_code": "33600",
+          "street_name": "ZI BERSOL 1, Voie Romaine"
+        },
+        "country_code": "FR",
+        "facility_name": "TEMEX CERAMICS",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "TEMEX CERAMICS",
+        "parent_site_name": "Site of facility: TEMEX CERAMICS",
+        "raw_tabular_point": {
+          "latitude": "44.79",
+          "longitude": "-0.67"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "a856b01c-93e1-51c9-ae7c-71481a7f7edf",
+      "facility_inspire_id": "FR.CAED/8344.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "ea12fbb8b953b43bd735e29a2eee82bc25ae6931cb7ea3877957c86547f0a9a7",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "CORBEIL ESSONNES",
+          "postal_code": "91100",
+          "street_name": "224,  bd John Kennedy"
+        },
+        "country_code": "FR",
+        "facility_name": "X-FAB FRANCE",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "X-FAB FRANCE",
+        "parent_site_name": "X-FAB FRANCE",
+        "raw_tabular_point": {
+          "latitude": "48.57325",
+          "longitude": "2.47751"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "20992f7d-2966-55c4-b9be-ca5616809e49",
+      "facility_inspire_id": "GB.EEA/Scotland-211.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "e2a4125b86cee977bbdd419d0054aa94ebcebb55e8f19ea0e73bc312a48f367a",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Linthouse",
+          "postal_code": "G51 4BZ",
+          "street_name": "Linthouse Road"
+        },
+        "country_code": "GB",
+        "facility_name": "Boron Phosphide Coating Facility, Glasgow",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Thales  Optronics Ltd",
+        "parent_site_name": "Site of facility: Boron Phosphide Coating Facility, Glasgow",
+        "raw_tabular_point": {
+          "latitude": "55.866459",
+          "longitude": "-4.335823"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "c01c2eab-471f-5760-85ff-fcace4910db7",
+      "facility_inspire_id": "UK.SEPA/200000179.Facility",
+      "latest_source_detail_reporting_year": "2018",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "d2f8bcee9b5bcd9e11d99ffe7df6417d3afd496085defe6908b987d949f75861",
+      "source_values": {
+        "address": {
+          "building_number": "4",
+          "city": "Blantyre, South Lanarkshire",
+          "postal_code": "G72 0BN",
+          "street_name": "Stanley Boulevard, Hamilton Technology Park"
+        },
+        "country_code": "GB",
+        "facility_name": "CST Global",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Compound SemiconductorTechnologies Global Ltd",
+        "parent_site_name": "CST Global, 4 Stanley Boulevard, Hamilton Tec",
+        "raw_tabular_point": {
+          "latitude": "55.77796",
+          "longitude": "-4.09342"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "bda1e224-44ec-56e8-9ba6-93c6d8866ebf",
+      "facility_inspire_id": "UK.SEPA/200001584.Facility",
+      "latest_source_detail_reporting_year": "2018",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "d9e0edd77dc3f73c359f9f8862dd06f3527b386a2cadceb51c990b530d22fdfc",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Glenrothes, Fife",
+          "postal_code": "KY7 4NT",
+          "street_name": "Newark Road North, Eastfield Industrial Estate"
+        },
+        "country_code": "GB",
+        "facility_name": "Compugraphics Ltd, Glenrothes",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Compugraphics International Limited",
+        "parent_site_name": "Compugraphics Ltd, Glenrothes",
+        "raw_tabular_point": {
+          "latitude": "56.18646",
+          "longitude": "-3.14297"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "e7358431-5606-5261-8647-aacf9679d6e8",
+      "facility_inspire_id": "GB.EEA/E344_501.FACILITY",
+      "latest_source_detail_reporting_year": "2012",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "8aab5a6c77f1dae77aa5f74cc2f7acbc5c94cf73ae988b31a2f21f97bce818d8",
+      "source_values": {
+        "address": {
+          "building_number": "--",
+          "city": "Weymouth",
+          "postal_code": "DT4 9TE",
+          "street_name": "20, Cumberland Drive, Granby Ind Estate,"
+        },
+        "country_code": "GB",
+        "facility_name": "Kemet Electronics Ltd",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Kemet",
+        "parent_site_name": "Site of facility: Kemet Electronics Ltd",
+        "raw_tabular_point": {
+          "latitude": "50.61396",
+          "longitude": "-2.486593"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "241ad8a2-513a-509c-a93c-1f5e5b9fdff3",
+      "facility_inspire_id": "UK.SEPA/200000201.Facility",
+      "latest_source_detail_reporting_year": "2018",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "846536f0457de5cd5864c67038d1371b6d35e492817809ccb5e4fbbfd16aa67f",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Greenock",
+          "postal_code": "PA16 0EQ",
+          "street_name": "Larkfield Industrial Estate, Earnhill Road"
+        },
+        "country_code": "GB",
+        "facility_name": "Larkfield Electronics Works",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Diodes Semiconductors GB Limited",
+        "parent_site_name": "Larkfield Electronics Works",
+        "raw_tabular_point": {
+          "latitude": "55.9438",
+          "longitude": "-4.83438"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "04f94cca-3f9a-548f-8ee3-b576c83cb81f",
+      "facility_inspire_id": "UK.CAED/EW_EA-252.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "2edd370faed3d06f127b83a462e3d5770d96e3e88ceb368f2c49b189b4ee9369",
+      "source_values": {
+        "address": {
+          "building_number": "Leonardo Southampton Site",
+          "city": "Southampton",
+          "postal_code": "SO15 0LG",
+          "street_name": "First Avenue"
+        },
+        "country_code": "GB",
+        "facility_name": "Leonardo Southampton Site",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Leonardo MW Ltd",
+        "parent_site_name": "Leonardo Southampton Site",
+        "raw_tabular_point": {
+          "latitude": "50.918107",
+          "longitude": "-1.4630676"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "23332aeb-950b-55c8-af76-552ead0cbceb",
+      "facility_inspire_id": "UK.CAED/EW_EA-397.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "36c990f97118ae7fd579bb906a75a2d9bbb65dfede2a35673517285f8327a110",
+      "source_values": {
+        "address": {
+          "building_number": "N/A",
+          "city": "Bedford",
+          "postal_code": "MK41 7BJ",
+          "street_name": "Manton Lane"
+        },
+        "country_code": "GB",
+        "facility_name": "Manton Lane Installation EPR/BW1602IA",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Bourns Limited",
+        "parent_site_name": "Manton Lane Installation EPR/BW1602IA",
+        "raw_tabular_point": {
+          "latitude": "52.151006",
+          "longitude": "-0.47407019"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "b5de88ff-a0ff-5ce8-86fb-587374be5c06",
+      "facility_inspire_id": "UK.CAED/EW_EA-388.FACILITY",
+      "latest_source_detail_reporting_year": "2019",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "5180be9dd687bf45118e2321cd88111a5c451100a7bda75bed8cbbc5ee4e3e30",
+      "source_values": {
+        "address": {
+          "building_number": "Oclaro Technology plc",
+          "city": "TOWCESTER",
+          "postal_code": "NN12 8EQ",
+          "street_name": "N/A"
+        },
+        "country_code": "GB",
+        "facility_name": "Oclaro Technology Plc",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Oclaro Technology plc",
+        "parent_site_name": "Oclaro Technology Plc",
+        "raw_tabular_point": {
+          "latitude": "52.153453",
+          "longitude": "-1.0498956"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "be563488-214f-597e-a64f-3019e7ce6236",
+      "facility_inspire_id": "UK.SEPA/200000033.Facility",
+      "latest_source_detail_reporting_year": "2018",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "4c8b3dca67495b5bbb86a140ce1d472c347bc199f1f46a60ff2fca9e18ac3102",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Glenrothes",
+          "postal_code": "KY7 5PY",
+          "street_name": "Queensway Industrial Estate"
+        },
+        "country_code": "GB",
+        "facility_name": "Raytheon Chemical Plant",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Raytheon Systems Limited",
+        "parent_site_name": "Raytheon Chemical Plant",
+        "raw_tabular_point": {
+          "latitude": "56.19831",
+          "longitude": "-3.17004"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "f74b7a81-fee6-53e6-893c-4f8c27c0fb91",
+      "facility_inspire_id": "UK.SEPA/200000439.Facility",
+      "latest_source_detail_reporting_year": "2018",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "0bfefa838a50b56fdc5840cfe63683e5d37546d5072e8c30f4476ee55abe68ae",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Glenrothes",
+          "postal_code": "KY7 4NS",
+          "street_name": "Newark Road South, Eastfield Industrial Estate"
+        },
+        "country_code": "GB",
+        "facility_name": "Semefab Ltd",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Semefab (Scotland) Limited",
+        "parent_site_name": "Semefab Ltd",
+        "raw_tabular_point": {
+          "latitude": "56.1861",
+          "longitude": "-3.14143"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "36df25a3-d0da-506f-b2fa-a14419d3d045",
+      "facility_inspire_id": "UK.SEPA/200000047.Facility",
+      "latest_source_detail_reporting_year": "2018",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "6fab8e7046ec25eaa0571f25660ab811ce63087253b9fdf3cf56abb373e1bc62",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Livingston",
+          "postal_code": "EH54 7DA",
+          "street_name": "Wilson Road, Eliburn"
+        },
+        "country_code": "GB",
+        "facility_name": "Shin-Etsu Handotai Europe",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Shin-Etsu Handotai Europe Limited",
+        "parent_site_name": "Shin-Etsu Handotai Europe",
+        "raw_tabular_point": {
+          "latitude": "55.88861",
+          "longitude": "-3.56312"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "3f024ab0-44b2-592d-829c-6d0ce3c186aa",
+      "facility_inspire_id": "HR.CAED/000000062.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "d0bb756c177a7ee05f87875900521622ea66903def51f63da138132e70946d1b",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Kutina",
+          "postal_code": "44320",
+          "street_name": "Slavonska"
+        },
+        "country_code": "HR",
+        "facility_name": "SELK proizvodnja na lokaciji Slavonska 1",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "SELK d.d.",
+        "parent_site_name": "SELK proizvodnja na lokaciji Slavonska 1; SELK d.d.",
+        "raw_tabular_point": {
+          "latitude": "45.47458",
+          "longitude": "16.78148"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "bf64373b-54e1-5b61-a05d-9a6a9ac4c3b8",
+      "facility_inspire_id": "IE.CAED/P0224.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "654f4f5f7a97da708e3f29e45a97e58d622da8300ea94fd1577ae75e19c10fbb",
+      "source_values": {
+        "address": {
+          "building_number": "Raheen",
+          "city": "Limerick",
+          "postal_code": "V94 RT99",
+          "street_name": "Raheen Ind. Estate"
+        },
+        "country_code": "IE",
+        "facility_name": "ANALOG DEVICES INTERNATIONAL UNLIMITED COMPANY",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Analog Devices International Unlimited Company",
+        "parent_site_name": "ANALOG DEVICES INTERNATIONAL UNLIMITED COMPANY",
+        "raw_tabular_point": {
+          "latitude": "52.626984",
+          "longitude": "-8.658916"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "77b114de-2615-5e92-8812-029298353d97",
+      "facility_inspire_id": "IE.CAED/P0288.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "62a3ce651ec99fc762188e51f424c016d08549d18cf14cd856ba0131d187736e",
+      "source_values": {
+        "address": {
+          "building_number": "Shannon",
+          "city": "Clare",
+          "postal_code": null,
+          "street_name": "Shannon Industrial Estate"
+        },
+        "country_code": "IE",
+        "facility_name": "Allied Metal Recycling (Ireland) Limited",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Allied Metal Recycling (Ireland) Limited",
+        "parent_site_name": "Allied Metal Recycling (Ireland) Limited",
+        "raw_tabular_point": {
+          "latitude": "52.708998",
+          "longitude": "-8.891669"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "9c8eec31-1a93-58fb-ae3a-b55d9645e695",
+      "facility_inspire_id": "IE.CAED/P0428.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "e9542ce87ff75f99a0721cd75658508032f0bf358c6d0d6849066483e152d3de",
+      "source_values": {
+        "address": {
+          "building_number": "Listowel",
+          "city": "Kerry",
+          "postal_code": null,
+          "street_name": "Clieveragh"
+        },
+        "country_code": "IE",
+        "facility_name": "Celtic Circuits Limited",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Celtic Circuits Limited",
+        "parent_site_name": "Celtic Circuits Limited",
+        "raw_tabular_point": {
+          "latitude": "52.45651909",
+          "longitude": "-9.488157230000001"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "70837de4-e0a8-5a4d-9055-341a58cc6333",
+      "facility_inspire_id": "IE.CAED/P0207.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "754f63b653f4a5a33f9722c3bfa635eea7eb7aae8e4cd3c66a823058d1facd6c",
+      "source_values": {
+        "address": {
+          "building_number": "Leixlip",
+          "city": "Kildare",
+          "postal_code": "W23 CX68",
+          "street_name": "Collinstown Industrial Park"
+        },
+        "country_code": "IE",
+        "facility_name": "Intel Ireland Limited",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Intel Ireland Limited",
+        "parent_site_name": "Intel Ireland Limited",
+        "raw_tabular_point": {
+          "latitude": "53.375146",
+          "longitude": "-6.513515"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "4db0132b-6154-5b27-9196-78ab1e7d1043",
+      "facility_inspire_id": "IE.CAED/P0255.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "edbd1bdce3794f3abdeeaa1c797d7ccc7691e0f62eb4992494b165ad0771e67e",
+      "source_values": {
+        "address": {
+          "building_number": "Killarney Road",
+          "city": "Cork",
+          "postal_code": null,
+          "street_name": "Gurteenroe"
+        },
+        "country_code": "IE",
+        "facility_name": "Ship Company Limited",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Ship Company Limited",
+        "parent_site_name": "Ship Company Limited",
+        "raw_tabular_point": {
+          "latitude": "51.907571",
+          "longitude": "-8.98086"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "b13abe46-8cd8-53b4-bb13-13d2bd753306",
+      "facility_inspire_id": "IT.CAED/161532002.FACILITY",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "0a54d7939bdce7ca0f211355a7a10357ce219e0bc4a7bb71d6e34c1936ec433e",
+      "source_values": {
+        "address": {
+          "building_number": "1",
+          "city": "Modena ",
+          "postal_code": "41122",
+          "street_name": "Via  Gandhi"
+        },
+        "country_code": "IT",
+        "facility_name": "CISTELAIER SPA - SITO DI GENOVA",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "CISTELAIER SPA",
+        "parent_site_name": "Cistelaier S.p.A.",
+        "raw_tabular_point": {
+          "latitude": "44.4286",
+          "longitude": "8.8569"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "8fa2a22c-a4b5-5ccf-ba77-2bbce9fe1197",
+      "facility_inspire_id": "IT.EEA/2007002035.FACILITY",
+      "latest_source_detail_reporting_year": "2010",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "709f337ab0e097afb0e6e5728cd92412ca01a646743b92d9215c1b06e6375110",
+      "source_values": {
+        "address": {
+          "building_number": "73A",
+          "city": "MONTECCHIO MAGGIORE",
+          "postal_code": "36075",
+          "street_name": "VLE Europa"
+        },
+        "country_code": "IT",
+        "facility_name": "EnerSys SRL",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ENERSYS SRL",
+        "parent_site_name": "Site of facility: EnerSys SRL",
+        "raw_tabular_point": {
+          "latitude": "45.504444",
+          "longitude": "11.412778"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "1fe16c09-a11f-524a-b3ec-dcd8a508cbb0",
+      "facility_inspire_id": "IT.EEA/2007001063.FACILITY",
+      "latest_source_detail_reporting_year": "2013",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "a630ac1da94a7d4a5dabdf5c72bf642842808e2609a9c0f193931dba968e4260",
+      "source_values": {
+        "address": {
+          "building_number": "2",
+          "city": "AGRATE BRIANZA",
+          "postal_code": "20864",
+          "street_name": "VIA CAMILLO OLIVETTI"
+        },
+        "country_code": "IT",
+        "facility_name": "Stabilimento di Agrate (ex Micron, che nei primi 5 mesi del 2013 ha gestito il complesso)",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "ST Microelectronics",
+        "parent_site_name": "Site of facility: Stabilimento di Agrate (ex Micron, che nei primi 5 mesi del 2013 ha gestito il complesso)",
+        "raw_tabular_point": {
+          "latitude": "45.566667",
+          "longitude": "9.333333"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "f3d03714-71f4-5511-99ca-100e70dcbb78",
+      "facility_inspire_id": "PT.EEA/100002963.FACILITY",
+      "latest_source_detail_reporting_year": "2007",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "ef7500b465d5e9b6b3b6abf6fe947f00c4b9f208b93cf5ee89ba59ccefa643d1",
+      "source_values": {
+        "address": {
+          "building_number": "..",
+          "city": "Moreira",
+          "postal_code": "4475-132",
+          "street_name": "\nZona Industrial da Maia, Sector VII, Rua C, Lote 134\n"
+        },
+        "country_code": "PT",
+        "facility_name": "STONE - Circuitos Impressos, Lda.",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "STONE - Circuitos Impressos, Lda.",
+        "parent_site_name": "Site of facility: STONE - Circuitos Impressos, Lda.",
+        "raw_tabular_point": {
+          "latitude": "41.2542181985",
+          "longitude": "-8.63450678111"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "5a479d4a-8af9-5d1f-a066-f2743e495ec3",
+      "facility_inspire_id": "SE.CAED/10040351.Facility",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "a7809c03cae0f51a037f4aadee5c11ab4a0643e51ff890ed69f004bc0223055e",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "Stockholm",
+          "postal_code": "114 28",
+          "street_name": "Brinellvägen 32"
+        },
+        "country_code": "SE",
+        "facility_name": "Exeger Operations AB",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "Exeger Operations AB",
+        "parent_site_name": "Exeger Operations AB - Site",
+        "raw_tabular_point": {
+          "latitude": "59.40364",
+          "longitude": "17.95927"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    },
+    {
+      "candidate_id": "b0e54b76-066f-5539-8114-303e9e56c641",
+      "facility_inspire_id": "SE.CAED/10013962.Facility",
+      "latest_source_detail_reporting_year": "2024",
+      "reason_kinds": [
+        "electronic_components_nace_26_11_candidate"
+      ],
+      "review_priority": 3,
+      "source_candidate_sha256": "19cca05fc2acd6499f8ce0cdcf5aab2a6b5ba43a587231586a2a49033dc67521",
+      "source_values": {
+        "address": {
+          "building_number": null,
+          "city": "VÄLLINGBY",
+          "postal_code": "162 12",
+          "street_name": "Krossgatan 38, Vällingby"
+        },
+        "country_code": "SE",
+        "facility_name": "MULTI CAD AB",
+        "functions": [
+          {
+            "nace_code": "26.11",
+            "nace_name": "Manufacture of electronic components"
+          }
+        ],
+        "parent_company_name": "MULTI CAD AB",
+        "parent_site_name": "MULTI CAD AB - Site",
+        "raw_tabular_point": {
+          "latitude": "59.37182",
+          "longitude": "17.85443"
+        }
+      },
+      "triage_basis": "exact_nace_26_11_only"
+    }
+  ],
+  "filter_version": "eea-industrial-semiconductor-candidates-v1",
+  "format": "semiconductor-atlas-eea-industrial-review-queue-v1",
+  "generated_at": "2026-07-20T17:05:51Z",
+  "knowledge_cutoff_at": "2026-07-20T17:05:51Z",
+  "review_policy": {
+    "candidate_membership_is_classification": false,
+    "decision_scope": "whether_the_reported_source_facility_is_within_the_atlas_semiconductor_facility_or_materials_scope",
+    "external_evidence_required_for": [
+      "accept_in_scope",
+      "reject_out_of_scope"
+    ],
+    "forbidden_inferences": [
+      "capacity_or_output",
+      "current_operation_or_utilization",
+      "facility_identity_merge",
+      "owner_or_operator_relationship",
+      "process_node_product_or_wafer_size",
+      "production_ramp_or_timing",
+      "site_geometry_or_surveyed_coordinates"
+    ],
+    "policy_version": "eea-industrial-facility-scope-review-v1",
+    "queue_priority_is_outcome": false,
+    "review_knowledge_cutoff_may_advance": true,
+    "review_outcomes": [
+      "accept_in_scope",
+      "defer",
+      "reject_out_of_scope"
+    ],
+    "triage_priorities": [
+      {
+        "basis": "explicit_name_and_exact_nace_26_11",
+        "priority": 1
+      },
+      {
+        "basis": "explicit_name_only",
+        "priority": 2
+      },
+      {
+        "basis": "exact_nace_26_11_only",
+        "priority": 3
+      }
+    ]
+  },
+  "snapshot_accepted_at": "2026-07-20T16:42:04Z",
+  "snapshot_manifest_sha256": "3fe6f2d54a04265e7a5d07b31cf4fc87c25147b2c31e66073ff05d8b9c7f132c",
+  "source_candidate_count": 108,
+  "source_candidate_sha256": "1ecb3aa2f1339739c2b889f5bd2831e7868402da116e39c7ac36e1eb649456a7"
+}

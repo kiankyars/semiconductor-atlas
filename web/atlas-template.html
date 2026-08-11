@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Semiconductor Atlas</title>
+  <style>
+    :root { color-scheme: light dark; font: 15px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --bg: Canvas; --fg: CanvasText; --muted: color-mix(in srgb, CanvasText 58%, Canvas); --line: color-mix(in srgb, CanvasText 18%, Canvas); --accent: AccentColor; --candidate: #c58b18; --construction: #287db5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--fg); background: var(--bg); }
+    main { max-width: 1500px; margin: auto; padding: 1rem; }
+    header, .controls { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; }
+    header { justify-content: space-between; margin-bottom: .8rem; }
+    h1, h2, p { margin: 0; } h1 { font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 550; } h2 { font-size: 1rem; }
+    .muted { color: var(--muted); }
+    label { display: grid; gap: .25rem; color: var(--muted); font-size: .8rem; }
+    input, select { min-height: 2.35rem; border: 1px solid var(--line); border-radius: .4rem; background: var(--bg); color: var(--fg); padding: .45rem .6rem; font: inherit; }
+    input { min-width: min(25rem, 80vw); }
+    .controls { margin-bottom: .75rem; }
+    #count { margin-left: auto; padding-bottom: .5rem; font-variant-numeric: tabular-nums; }
+    .layout { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(17rem, .85fr); gap: 1rem; }
+    .map-card, .panel { border: 1px solid var(--line); border-radius: .55rem; overflow: hidden; }
+    #world { width: 100%; height: auto; min-height: 330px; display: block; background: color-mix(in srgb, Canvas 96%, AccentColor); }
+    .graticule { stroke: var(--line); stroke-width: .7; vector-effect: non-scaling-stroke; }
+    .equator { stroke-width: 1.15; }
+    .point { fill: var(--candidate); stroke: var(--bg); stroke-width: 1.5; cursor: pointer; vector-effect: non-scaling-stroke; }
+    .point.construction { fill: var(--construction); }
+    .point:hover, .point:focus { stroke: var(--fg); stroke-width: 2.5; outline: none; }
+    .map-note { padding: .55rem .7rem; border-top: 1px solid var(--line); font-size: .78rem; color: var(--muted); }
+    .panel { max-height: 650px; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+    .panel h2 { padding: .7rem; border-bottom: 1px solid var(--line); }
+    #list { overflow: auto; margin: 0; padding: 0; list-style: none; }
+    #list button { width: 100%; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--fg); text-align: left; padding: .65rem .7rem; cursor: pointer; }
+    #list button:hover, #list button:focus { background: color-mix(in srgb, AccentColor 10%, Canvas); }
+    .item-meta { display: block; color: var(--muted); font-size: .75rem; margin-top: .15rem; }
+    #detail { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .9rem; }
+    .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .8rem; margin-top: .7rem; }
+    .detail-block { min-width: 0; }
+    .detail-block h3 { margin: 0 0 .25rem; font-size: .78rem; color: var(--muted); font-weight: 500; }
+    .detail-block p, .detail-block li { overflow-wrap: anywhere; }
+    .detail-block ul { margin: 0; padding-left: 1.1rem; }
+    a { color: inherit; text-underline-offset: .15em; }
+    footer { margin-top: 1rem; font-size: .75rem; color: var(--muted); display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; }
+    @media (max-width: 850px) { .layout { grid-template-columns: 1fr; } .panel { max-height: 360px; } #count { width: 100%; margin-left: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <header><h1>Semiconductor Atlas</h1><p id="cutoff" class="muted"></p></header>
+  <section class="controls" aria-label="Atlas filters">
+    <label>Search<input id="search" type="search" placeholder="Company, site, source, technology"></label>
+    <label>Entity<select id="kind"><option value="all">All</option></select></label>
+    <label>Activity<select id="activity"><option value="all">All</option></select></label>
+    <p id="count" class="muted" aria-live="polite"></p>
+  </section>
+  <section class="layout">
+    <div class="map-card">
+      <svg id="world" viewBox="0 0 1000 500" role="img" aria-labelledby="map-title map-description">
+        <title id="map-title">Global semiconductor facility evidence</title>
+        <desc id="map-description">Candidate and project locations plotted on a longitude-latitude grid.</desc>
+      </svg>
+      <p class="map-note">Equirectangular evidence view. A point is a sourced location, not proof of operational or qualified capacity. Unmapped records remain in the list.</p>
+    </div>
+    <aside class="panel"><h2>Records</h2><ul id="list"></ul></aside>
+  </section>
+  <section id="detail"><p class="muted">Select a record to inspect claims and evidence.</p></section>
+  <footer><span id="attribution"></span><span>No external map tiles or scripts are loaded.</span></footer>
+</main>
+<script id="atlas-data" type="application/json">__SEMICONDUCTOR_ATLAS_DATA__</script>
+<script>
+  const atlas = JSON.parse(document.getElementById("atlas-data").textContent);
+  const svg = document.getElementById("world"), list = document.getElementById("list"), detail = document.getElementById("detail");
+  const search = document.getElementById("search"), kind = document.getElementById("kind"), activity = document.getElementById("activity"), count = document.getElementById("count");
+  const NS = "http://www.w3.org/2000/svg";
+  const human = value => String(value || "unknown").replaceAll("_", " ").replace(/\b\w/g, x => x.toUpperCase());
+  const scalarText = props => Object.values(props.scalar_fields || {}).flat().map(x => String(x.value ?? "")).join(" ");
+  function coordinates(geometry) {
+    if (!geometry) return null;
+    if (geometry.type === "Point") {
+      const point = geometry.coordinates;
+      return Array.isArray(point) && point.length >= 2 && Number.isFinite(point[0]) && Number.isFinite(point[1]) ? point : null;
+    }
+    const points = [];
+    (function visit(value) { if (Array.isArray(value) && value.length >= 2 && Number.isFinite(value[0]) && Number.isFinite(value[1])) points.push(value); else if (Array.isArray(value)) value.forEach(visit); })(geometry.coordinates);
+    if (!points.length) return null;
+    return [(Math.min(...points.map(p => p[0])) + Math.max(...points.map(p => p[0]))) / 2, (Math.min(...points.map(p => p[1])) + Math.max(...points.map(p => p[1]))) / 2];
+  }
+  const items = atlas.features.map(feature => {
+    const p = feature.properties || {}, acts = (p.capabilities || []).filter(x => x.capability_type === "facility_activity").map(x => String(x.value));
+    return { feature, p, point: coordinates(feature.geometry), activities: acts, haystack: [p.name, p.entity_kind, scalarText(p), acts.join(" "), ...(p.source_urls || [])].join(" ").toLowerCase() };
+  });
+  function addOption(select, value) { const option = document.createElement("option"); option.value = value; option.textContent = human(value); select.append(option); }
+  [...new Set(items.map(x => x.p.entity_kind))].filter(Boolean).sort().forEach(x => addOption(kind, x));
+  [...new Set(items.flatMap(x => x.activities))].sort().forEach(x => addOption(activity, x));
+  document.getElementById("cutoff").textContent = `World state ${atlas.atlas_as_of || "unknown"} · knowledge ${atlas.atlas_recorded_at || "unknown"}`;
+  document.getElementById("attribution").textContent = (atlas.attribution || []).join(" · ") || "Attribution is retained per evidence record";
+  for (let lon = -180; lon <= 180; lon += 30) { const line = document.createElementNS(NS, "line"); line.setAttribute("x1", (lon + 180) / 360 * 1000); line.setAttribute("x2", (lon + 180) / 360 * 1000); line.setAttribute("y1", 0); line.setAttribute("y2", 500); line.setAttribute("class", "graticule"); svg.append(line); }
+  for (let lat = -90; lat <= 90; lat += 30) { const line = document.createElementNS(NS, "line"); const y = (90 - lat) / 180 * 500; line.setAttribute("x1", 0); line.setAttribute("x2", 1000); line.setAttribute("y1", y); line.setAttribute("y2", y); line.setAttribute("class", `graticule${lat === 0 ? " equator" : ""}`); svg.append(line); }
+  const pointLayer = document.createElementNS(NS, "g"); svg.append(pointLayer);
+  function matches(item) { const q = search.value.trim().toLowerCase(); return (!q || item.haystack.includes(q)) && (kind.value === "all" || item.p.entity_kind === kind.value) && (activity.value === "all" || item.activities.includes(activity.value)); }
+  function textNode(tag, text) { const node = document.createElement(tag); node.textContent = text; return node; }
+  function show(item) {
+    detail.replaceChildren(); detail.append(textNode("h2", item.p.name || item.p.stable_key));
+    const intro = textNode("p", `${human(item.p.entity_kind)} · ${item.point ? `${item.point[1].toFixed(4)}, ${item.point[0].toFixed(4)}` : "location not yet resolved"}`); intro.className = "muted"; detail.append(intro);
+    const grid = document.createElement("div"); grid.className = "detail-grid";
+    const blocks = [
+      ["Capabilities", (item.p.capabilities || []).map(x => `${human(x.capability_type)}: ${x.value}${x.unit ? ` ${x.unit}` : ""} · ${Math.round(x.confidence * 100)}%`)],
+      ["Capacity by basis", (item.p.capacities || []).map(x => `${human(x.metric)} · ${human(x.basis)}: ${x.low} / ${x.base} / ${x.high} ${x.unit}`)],
+      ["Milestones", (item.p.milestones || []).map(x => `${human(x.milestone_type)} · ${human(x.status)}: ${x.date_low} / ${x.date_base} / ${x.date_high}`)],
+      ["Sources", item.p.source_urls || []]
+    ];
+    for (const [label, values] of blocks) { const block = document.createElement("div"); block.className = "detail-block"; block.append(textNode("h3", label)); if (!values.length) block.append(textNode("p", "Not reported")); else { const ul = document.createElement("ul"); for (const value of values) { const li = document.createElement("li"); if (label === "Sources") { const a = document.createElement("a"); a.href = value; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = value; li.append(a); } else li.textContent = value; ul.append(li); } block.append(ul); } grid.append(block); }
+    detail.append(grid);
+  }
+  function render() {
+    const visible = items.filter(matches); pointLayer.replaceChildren(); list.replaceChildren();
+    for (const item of visible) {
+      if (item.point) { const [lon, lat] = item.point, circle = document.createElementNS(NS, "circle"); circle.setAttribute("cx", (lon + 180) / 360 * 1000); circle.setAttribute("cy", (90 - lat) / 180 * 500); circle.setAttribute("r", 5); circle.setAttribute("tabindex", 0); circle.setAttribute("aria-label", item.p.name || item.p.stable_key); circle.setAttribute("class", `point${scalarText(item.p).includes("under_construction") ? " construction" : ""}`); circle.addEventListener("click", () => show(item)); circle.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") show(item); }); pointLayer.append(circle); }
+      const li = document.createElement("li"), button = document.createElement("button"); button.type = "button"; button.append(textNode("span", item.p.name || item.p.stable_key)); const meta = textNode("span", `${human(item.p.entity_kind)} · ${item.point ? "mapped" : "unmapped"} · ${item.p.claim_count || 0} claims`); meta.className = "item-meta"; button.append(meta); button.addEventListener("click", () => show(item)); li.append(button); list.append(li);
+    }
+    count.textContent = `${visible.length} records · ${visible.filter(x => x.point).length} mapped`;
+  }
+  [search, kind, activity].forEach(control => control.addEventListener(control === search ? "input" : "change", render)); render();
+</script>
+</body>
+</html>

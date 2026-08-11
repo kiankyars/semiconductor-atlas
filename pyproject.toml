@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semiconductor-atlas"
+version = "0.1.0"
+description = "A provenance-first claim store for semiconductor facilities"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+semiconductor-atlas = "semiconductor_atlas.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semiconductor_atlas*"]
+
+[tool.setuptools.package-data]
+semiconductor_atlas = ["migrations/*.sql"]

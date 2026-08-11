@@ -1,0 +1,443 @@
+# Semiconductor Atlas
+
+Semiconductor Atlas is an evidence-first registry for semiconductor organizations, sites,
+facilities, production units, and projects. It stores each published field as an atomic,
+bitemporal claim linked directly to archived evidence or to an explicit derivation chain.
+
+Version 0.1 is a bounded, reproducible seed. It is **not** a global facility census, proof that an
+announced project is operating, a comparison with commercial databases, a calibrated forecast, or
+investment advice. Unknown values remain unknown.
+
+## Capacity contract
+
+Every capacity claim uses exactly one basis:
+
+1. `announced`
+2. `physical_construction`
+3. `tool_installed`
+4. `qualified`
+5. `economically_usable`
+
+The bases are never collapsed. Measured output is a separate observation metric, not a sixth basis.
+
+## Current open-source seed
+
+`source_snapshots/2026-07-17-open-seed` contains 33 content-hashed inputs retrieved at
+`2026-07-18T01:54:47Z`: four NIST CHIPS awards index pages, 28 NIST project detail pages, and one
+bounded OpenStreetMap Overpass result.
+
+NIST records preserve the government's award disclosures, qualifiers, scope, and stated project
+details. They do not establish physical progress beyond what the source says. OpenStreetMap records
+are candidate leads only; the importer does not promote them to operating facilities or capacity.
+OSM-derived releases retain ODbL attribution.
+
+NIST site allocations, single-project totals, and repeated multi-site program totals use distinct
+monetary predicates. Shared totals are emitted once on durable award-program entities. Do not sum
+program totals with site allocations, and do not treat repeated raw source statements as a
+reconciled fact.
+
+### EPA FRS candidate contract
+
+The EPA Facility Registry Service adapter uses the official monthly National Single File archive
+and admits only rows with exact NAICS `334413` or exact SIC `3674`. Broader adjacent material,
+printed-circuit assembly, and electronic-component codes are excluded. Matching rows are U.S.
+registry candidate leads only: they do not establish semiconductor activity, operation, lifecycle
+state, or capacity, and there is no global recall denominator. Registry absence, reassignment, or a
+Registry ID merge is not evidence of closure, cancellation, or inactivity.
+The classification claim has confidence `1.0` only because exact filter membership is deterministic;
+it is not a probability that the row represents an operating semiconductor facility.
+
+FRS latitude and longitude remain raw NAD83 source scalars. They are not GeoJSON geometry, and the
+adapter performs no CRS transform or FRS geometry import. The official monthly download URL is
+mutable and does not publish a content checksum. Each snapshot copies the exact ZIP to
+`raw/sha256/<archive-sha256>.zip`, records its archive and CSV digests, and regenerates the selected
+39-field rows from that retained object during verification. The manifest also records retrieval
+metadata, the official data-as-of source, filter version, and full-row denominator. Public releases
+use the required EPA credit, make no warranty, and do not use the EPA seal or logo.
+
+### EEA Industrial Reporting candidate contract
+
+The accepted EEA edition-16 adapter scans all 99,275 production facilities reported in the pinned
+2.03 GB relational package. Exact raw NACE `26.11` or bounded explicit facility/site name terms
+produce 108 manual-review leads. That reported population is not a European industrial or
+semiconductor census, and filter membership does not establish semiconductor activity, operation,
+facility type, output, or capacity. Exact INSPIRE IDs remain case-sensitive; historical case and
+whitespace drift is audited but never repaired.
+
+The immutable snapshot is
+`source_snapshots/2026-07-20-eea-industrial-v16-semiconductor-candidates`. It retains the raw ACCDB,
+all pinned extraction evidence, independent identical extraction metadata, official metadata and
+catalogue responses, and the replayed derivative. Confidential fields fail closed and unnecessary
+free text is omitted. Raw coordinate scalars remain non-geometry values until correspondence with
+the EPSG:4326 spatial companion is verified. The source publishes no production-volume rows in v16,
+so the adapter emits no capacity evidence.
+
+The retained review queue binds all 108 leads to the exact snapshot and candidate hashes. Its three
+priorities order work; they are not classifications or decisions. A complete review must decide
+every candidate as `accept_in_scope`, `defer`, or `reject_out_of_scope`. Accept and reject decisions
+require external HTTPS evidence acquired no later than the declared review cutoff. The importer
+creates source-native facilities and a narrow scalar claim set only for accepted candidates. It
+does not promote review outcomes, coordinates, status, ownership, output, or capacity. No v16
+candidate review has been accepted or imported yet.
+
+### Taiwan MOENV candidate contract
+
+The first accepted non-U.S. facility source is Taiwan Ministry of Environment dataset `EMS_S_01`.
+The adapter scans the retained full national JSON package and locally admits only exact industry
+codes `2611`, `2612`, or `2613` under group `261`, with the exact official Chinese label. It keeps
+all 724 case-sensitive source control numbers and all 798 distinct source variants from the pinned
+2026-07-20 package. Repeated identical payloads collapse; conflicting variants remain parallel
+source statements.
+
+These are environmental-registry facility candidates, not a complete Taiwan semiconductor census.
+The five control flags establish only environmental-regulation membership, never operation,
+production, ownership, lifecycle, capacity, or technology. The 618 valid invariant WGS84 pairs may
+be released as source-reported facility points, not parcel or building boundaries. Business and
+factory-registration identifiers are resolution evidence only; this import creates no organization
+assignment. A complete later same-filter snapshot may close a prior source-assertion interval, but
+absence cannot assert real-world closure or inactivity.
+
+The immutable snapshot is
+`source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor`. It retains the official ZIP at a
+content-addressed path, validates the publisher MD5, regenerates the exact-code JSONL, records the
+sanitized POST request and separate publisher/retrieval clocks, and carries the required Taiwan Open
+Government Data License 1.0 attribution.
+
+### Taiwan registered-factory identity contract
+
+The independent national registered-factory publication is scanned in full and filtered only on the
+exact line-delimited principal-product token `261半導體`. Its accepted snapshot contains 553
+source-native registered-factory facilities and omits the source responsible-person field from its
+privacy-minimized derivative, database records, claims, and release. The raw publisher value
+`生產中` remains an administrative registration status only; it establishes neither physical
+operation nor output, ownership, lifecycle, capacity, utilization, or yield.
+
+Schema version 4 supports same-kind facility identity as well as organization identity. A strict
+candidate artifact bound 143 MOENV records to exact official factory-registration evidence: 129
+numbers were already exact and 14 used only the documented legacy-certificate normalization. Manual
+review accepted 142 matches and deferred `J5904800` because its legacy number and civic address point
+to succession while the names and UBNs conflict. Every evidence value retains its own exact source
+record. Later stale evidence can only retract or identically reaffirm an existing assignment; it can
+never create a relationship from stale bytes.
+
+The accepted schema-v4 database is
+`artifacts/2026-07-20-open-seed-taiwan-factory-identity.sqlite` (SHA-256
+`8bcd2e840281f6646a967e3ef9ae6de798028e9245af9cc4fba9df6ffac99011`). The deterministic release is
+`releases/2026-07-20-open-seed-taiwan-factory-identity` and its final manifest SHA-256 is
+`bbf652a306f92e94a459bc2e16eb95b3e6039e2bcbf08756866141e1bb05a694`.
+
+### Taiwan MOF organization evidence boundary
+
+The pinned Ministry of Finance `BGMOPEN1` snapshot looks up an exact 466-UBN allowlist re-derived
+from the two accepted Taiwan facility snapshots. It scans all 1,709,795 current business rows and
+retains 390 exact active tax-registration matches while recording 76 misses. A tax registration may
+be a company, branch, sole proprietorship, or other tax unit; it is not automatically a legal parent,
+owner, facility operator, or proof of activity. The immutable snapshot is
+`source_snapshots/2026-07-20-taiwan-mof-bgmopen1-semiconductor-organizations`, with manifest SHA-256
+`c14892bffca9deccf5a5720aab19b03daa7b8aa14fc49d77f9d6cc1dac1541ce`.
+
+The accepted source-native import created 390 tax-unit organizations and 3,241 directly evidenced
+claims. Its database is `artifacts/2026-07-20-open-seed-taiwan-mof-organizations.sqlite` (SHA-256
+`bcb39fb04a927484c1e74417f0952370bc7f8db5577bc463bf7dd46f6a9ecab9`), and its byte-reproducible
+release is `releases/2026-07-20-open-seed-taiwan-mof-organizations`, with manifest SHA-256
+`caf69a04edcd1a314d458d0844f123ed8d8319cb9e7c28308807b6bb82b02c29`.
+
+### Taiwan facility-to-tax-unit reference boundary
+
+A separate complete review bound the exact MOENV, registered-factory, and MOF ingestion runs and
+evaluated 944 same-time exact-UBN candidates. All 944 were accepted only as
+`registered_tax_unit_reference` claims, covering 935 facility subjects and all 390 imported tax
+units. Nine facility subjects retain two conflicting current source references; neither value was
+silently selected. These relationships assert no facility or legal-person identity, ownership,
+parentage, operator, activity, lifecycle, output, or capacity.
+
+The accepted database is
+`artifacts/2026-07-20-open-seed-taiwan-tax-relationships.sqlite` (SHA-256
+`c6083299cae65a96890dff831ca201566de82dae7532ca555c65391f7ee21ca9`). The deterministic 24-managed-file
+release is `releases/2026-07-20-open-seed-taiwan-tax-relationships`; its manifest SHA-256 is
+`6d7bca2cd392d1372774ae227ae9cd6e3a665454e2c25084b357c9b58691f4ce`.
+`reviewed_relationship_runs.jsonl` exports the exact candidate and review hashes, selected source
+bindings, every decision, and created, reaffirmed, and superseded claim lineage. See
+`docs/taiwan_mof_relationship_gate_2026-07-20.md`.
+
+### Organization identity boundary
+
+Schema version 3 introduced an append-only organization-resolution ledger and an explicit ledger of every
+source document used by an ingestion run, including inputs that produce zero rows. Resolution runs
+are sealed before a reviewer can record `match`, `reject`, or `defer`; only a reviewed `match` may
+create a bitemporal source-to-canonical organization assignment. Names and fuzzy scores create
+candidates only.
+
+The GLEIF Level 1 acquisition utility archives exact API responses for a strict sorted LEI
+allowlist, requires one Golden Copy publication, and regenerates a deterministic link-free
+derivative during offline verification. Allowlist membership is not an organization assignment or a
+review decision. A separately reviewed manifest binds each accepted record to its snapshot,
+candidate target, source-backed target evidence, outcome, reviewer, and review time. Acceptance
+re-verifies both artifacts before committing.
+
+The accepted pilot is deliberately one record: TSMC Arizona Corporation, LEI
+`2549005GOBWLCSY63Q97`, from Golden Copy `2026-07-19T16:00:00Z`. Its 21 GLEIF claims remain on the
+source-native organization `gleif:lei:2549005GOBWLCSY63Q97`; one reviewed assignment connects that
+record to the existing NIST organization without merging entities. Legal and headquarters
+addresses are organization attributes, not facility coordinates. LEI registration status does not
+prove facility ownership, operation, or production. The accepted database and schema-v3 release are
+`artifacts/2026-07-19-open-seed-gleif-pilot.sqlite` and
+`releases/2026-07-19-open-seed-gleif-pilot`.
+
+## Install
+
+Python 3.11 or newer is required. The package has no runtime dependencies.
+
+```sh
+python -m pip install -e .
+```
+
+## Reproduce the seed
+
+Ingestion is offline and deterministic. It verifies every archived input against the snapshot
+manifest before parsing it. A bounded NIST scope is accepted as complete only when its declared
+index/detail counts match the archived inputs and those detail inputs exactly cover the CHIPS
+Program Office links in the archived index pages. The CLI then retires claims from earlier NIST
+snapshots that disappear, while their history and evidence remain exportable. Undeclared, partial,
+and low-level imports default to incremental mode; absence is never treated as a retraction unless
+`snapshot_is_complete=True` is explicit.
+
+```sh
+semiconductor-atlas ingest-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-17-open-seed \
+  --as-of 2026-07-17
+
+semiconductor-atlas ingest-frs-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-19-epa-frs-semiconductor-candidates \
+  --as-of 2026-07-01 \
+  --accepted-at 2026-07-20T03:08:57Z
+
+semiconductor-atlas ingest-gleif-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-19-gleif-level-1-tsmc-arizona \
+  --review-plan review_plans/2026-07-19-gleif-tsmc-arizona.json \
+  --accepted-at 2026-07-20T06:38:00Z
+
+semiconductor-atlas ingest-moenv-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor \
+  --accepted-at 2026-07-20T07:30:00Z
+
+semiconductor-atlas ingest-taiwan-factory-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-20-taiwan-ida-registered-factories-semiconductor \
+  --accepted-at 2026-07-20T08:30:00Z
+
+python -m semiconductor_atlas.taiwan_facility_identity propose \
+  --database atlas.sqlite \
+  --moenv-snapshot source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor \
+  --factory-snapshot source_snapshots/2026-07-20-taiwan-ida-registered-factories-semiconductor \
+  --moenv-ingestion-run-id 9be1e187-f5f7-5dbf-b8cd-3ed839f9182f \
+  --factory-ingestion-run-id ceab537a-1ac8-5a38-82e9-6ac6b50b6e29 \
+  --knowledge-cutoff-at 2026-07-20T08:31:00Z \
+  --output review_plans/2026-07-20-taiwan-moenv-factory-candidates.json
+
+python -m semiconductor_atlas.taiwan_facility_identity accept \
+  --database atlas.sqlite \
+  --moenv-snapshot source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor \
+  --factory-snapshot source_snapshots/2026-07-20-taiwan-ida-registered-factories-semiconductor \
+  --candidates review_plans/2026-07-20-taiwan-moenv-factory-candidates.json \
+  --review review_plans/2026-07-20-taiwan-moenv-factory-review.json \
+  --accepted-at 2026-07-20T09:09:00Z
+
+semiconductor-atlas ingest-taiwan-mof-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-20-taiwan-mof-bgmopen1-semiconductor-organizations \
+  --moenv-snapshot source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor \
+  --factory-snapshot source_snapshots/2026-07-20-taiwan-ida-registered-factories-semiconductor \
+  --accepted-at 2026-07-20T09:44:32Z
+
+python -m semiconductor_atlas.taiwan_tax_relationship propose \
+  --database atlas.sqlite \
+  --moenv-snapshot source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor \
+  --factory-snapshot source_snapshots/2026-07-20-taiwan-ida-registered-factories-semiconductor \
+  --mof-snapshot source_snapshots/2026-07-20-taiwan-mof-bgmopen1-semiconductor-organizations \
+  --moenv-ingestion-run-id 9be1e187-f5f7-5dbf-b8cd-3ed839f9182f \
+  --factory-ingestion-run-id ceab537a-1ac8-5a38-82e9-6ac6b50b6e29 \
+  --mof-ingestion-run-id 9171c9df-7772-5d25-a9c7-bb869570dad6 \
+  --knowledge-cutoff-at 2026-07-20T09:44:33Z \
+  --output review_plans/2026-07-20-taiwan-facility-tax-unit-candidates.json
+
+python -m semiconductor_atlas.taiwan_tax_relationship accept \
+  --database atlas.sqlite \
+  --moenv-snapshot source_snapshots/2026-07-20-taiwan-moenv-ems-s-01-semiconductor \
+  --factory-snapshot source_snapshots/2026-07-20-taiwan-ida-registered-factories-semiconductor \
+  --mof-snapshot source_snapshots/2026-07-20-taiwan-mof-bgmopen1-semiconductor-organizations \
+  --candidates review_plans/2026-07-20-taiwan-facility-tax-unit-candidates.json \
+  --review review_plans/2026-07-20-taiwan-facility-tax-unit-review.json \
+  --accepted-at 2026-07-20T09:54:43Z
+
+semiconductor-atlas validate --database atlas.sqlite
+
+semiconductor-atlas summary \
+  --database atlas.sqlite \
+  --as-of 2026-07-20 \
+  --recorded-at 2026-07-20T09:54:46Z
+```
+
+To acquire a new bounded snapshot, run the source-specific fetcher separately. The NIST/OSM fetcher
+writes archived source files plus their byte counts, URLs, retrieval time, and SHA-256 hashes.
+
+```sh
+python scripts/fetch_open_sources.py \
+  --output-dir source_snapshots/YYYY-MM-DD-open-seed \
+  --include-nist-details
+```
+
+The fetchers stage complete acquisitions before atomically installing them and never overwrite an
+existing snapshot directory. The EPA FRS fetcher scans the full raw archive, retains a byte copy, and
+writes a deterministic candidate derivative:
+
+```sh
+python scripts/fetch_epa_frs.py \
+  --output-dir source_snapshots/YYYY-MM-DD-epa-frs-semiconductor-candidates \
+  --data-as-of YYYY-MM-DD
+```
+
+The EEA utility packages already acquired exact official bytes and pinned extractor outputs; it
+never accepts or retains access credentials. Verification rehashes the complete 2.03 GB source and
+all extraction evidence, then replays the candidate derivative without network access:
+
+```sh
+python scripts/fetch_eea_industrial.py \
+  --verify-only source_snapshots/2026-07-20-eea-industrial-v16-semiconductor-candidates
+
+python -m semiconductor_atlas.eea_industrial_review propose \
+  --snapshot source_snapshots/2026-07-20-eea-industrial-v16-semiconductor-candidates \
+  --generated-at 2026-07-20T17:05:51Z \
+  --knowledge-cutoff-at 2026-07-20T17:05:51Z \
+  --output /tmp/eea-industrial-v16-candidates.rebuilt.json
+
+cmp review_plans/2026-07-20-eea-industrial-v16-candidates.json \
+  /tmp/eea-industrial-v16-candidates.rebuilt.json
+```
+
+After a complete evidence-backed review exists, validate and import that exact ledger. These
+commands are intentionally not runnable against the repository today because no accepted review
+artifact is present:
+
+```sh
+python -m semiconductor_atlas.eea_industrial_review validate-review \
+  --candidates review_plans/2026-07-20-eea-industrial-v16-candidates.json \
+  --review review_plans/2026-07-20-eea-industrial-v16-review.json
+
+semiconductor-atlas ingest-eea-industrial-snapshot \
+  --database atlas.sqlite \
+  --snapshot source_snapshots/2026-07-20-eea-industrial-v16-semiconductor-candidates \
+  --candidate-queue review_plans/2026-07-20-eea-industrial-v16-candidates.json \
+  --review review_plans/2026-07-20-eea-industrial-v16-review.json \
+  --accepted-at YYYY-MM-DDTHH:MM:SSZ
+```
+
+The bounded GLEIF fetcher accepts one checksum-valid uppercase LEI per line in canonical sorted
+order. It spaces request starts by at least 1.1 seconds, retries a Golden Copy rotation as a whole,
+and can replay a retained snapshot without network access:
+
+```sh
+python scripts/fetch_gleif.py \
+  --allowlist declared-leis.txt \
+  --output-dir source_snapshots/YYYY-MM-DD-gleif-level-1
+
+python scripts/fetch_gleif.py \
+  --verify-only source_snapshots/YYYY-MM-DD-gleif-level-1
+```
+
+The MOENV fetcher POSTs the fixed `EMS_S_01` full-package request, streams it into a private
+temporary file, and passes the bytes to the atomic snapshot creator. Read the displayed update time
+from the official dataset page, convert it to canonical UTC, and supply it explicitly rather than
+guessing from the retrieval clock. Verification is fully offline:
+
+```sh
+python scripts/fetch_moenv.py \
+  --output-dir source_snapshots/YYYY-MM-DD-taiwan-moenv-ems-s-01-semiconductor \
+  --dataset-updated-at YYYY-MM-DDTHH:MM:SSZ
+
+python scripts/fetch_moenv.py \
+  --verify-only source_snapshots/YYYY-MM-DD-taiwan-moenv-ems-s-01-semiconductor
+```
+
+The Taiwan factory and MOF fetchers use fixed official URLs, verified TLS, bounded streaming,
+descriptor-based mutation checks, source-aware allowlist replay, and atomic no-replace installation:
+
+```sh
+python scripts/fetch_taiwan_factory.py \
+  --output-dir source_snapshots/YYYY-MM-DD-taiwan-ida-registered-factories-semiconductor
+
+python scripts/fetch_taiwan_factory.py \
+  --verify-only source_snapshots/YYYY-MM-DD-taiwan-ida-registered-factories-semiconductor
+
+python scripts/fetch_taiwan_mof.py \
+  --output-dir source_snapshots/YYYY-MM-DD-taiwan-mof-bgmopen1-semiconductor-organizations \
+  --moenv-snapshot source_snapshots/YYYY-MM-DD-taiwan-moenv-ems-s-01-semiconductor \
+  --factory-snapshot source_snapshots/YYYY-MM-DD-taiwan-ida-registered-factories-semiconductor
+
+python scripts/fetch_taiwan_mof.py \
+  --verify-only source_snapshots/YYYY-MM-DD-taiwan-mof-bgmopen1-semiconductor-organizations
+```
+
+Snapshot verification streams the retained archive hash, checks the source-specific ZIP and member
+structure, and regenerates the derivative. `--accepted-at` pins the database knowledge clock for deterministic
+builds. Use `--accept-now` for a live refresh after verification. A repeated row with the same
+semantic fields creates a new source observation without creating duplicate claim versions.
+Reprocessing the same acquired archive under a later importer reuses its immutable source document,
+records a distinct processing run, and preserves unchanged claims. Processing-run provenance carries
+the filter, derivative digest, retention decision, rights review, and source-snapshot manifest digest.
+
+## Release and interface
+
+Create a deterministic release for explicit world-state and knowledge cutoffs:
+
+```sh
+semiconductor-atlas release \
+  --database atlas.sqlite \
+  --output releases/2026-07-20-open-seed-taiwan-tax-relationships \
+  --as-of 2026-07-20 \
+  --recorded-at 2026-07-20T09:54:46Z \
+  --forecast-start 2026-07-01
+```
+
+The bundle includes entity, claim, source-observation, identity, and reviewed-relationship lineage
+JSONL; evidence and capacity CSV; GeoJSON; source metadata; attribution; summary; and content hashes.
+Its 20-quarter baseline forecast is deterministic and
+parameter-fingerprinted, but every coefficient and ramp curve is labelled `assumption_not_fact`.
+It has not been calibrated or backtested and is not approved for investment use.
+The CLI builds from a private SQLite backup, so forecasts, alerts, claims, source inputs, and coverage
+share one database snapshot without holding a long read lock on the live store.
+
+Generate the standalone, dependency-free interface from the release GeoJSON:
+
+```sh
+python web/generate_atlas.py \
+  releases/2026-07-20-open-seed-taiwan-tax-relationships/atlas.geojson \
+  releases/2026-07-20-open-seed-taiwan-tax-relationships/atlas.html
+```
+
+The generator embeds the data in one HTML file and adds its hash to an existing release manifest.
+
+## Tests
+
+```sh
+python -m unittest discover -s tests -v
+python -m unittest discover -s web/tests -v
+```
+
+The normative contract and limitations are in `docs/data_contract.md` and `docs/methodology.md`.
+Source rights and activation rules are in `docs/source_registry.md`; future work is gated in
+`docs/roadmap.md`. The installed FRS rebuild and release evidence is recorded in
+`docs/epa_frs_refresh_audit_2026-07-19.md`; the reviewed GLEIF pilot is recorded in
+`docs/gleif_pilot_audit_2026-07-19.md`; and the Taiwan MOENV source decision is recorded in
+`docs/non_us_source_gate_2026-07-20.md`, with installed acceptance evidence in
+`docs/taiwan_moenv_acceptance_audit_2026-07-20.md`. The registered-factory source, reviewed
+same-kind assignments, and organization boundary are audited in
+`docs/taiwan_factory_identity_gate_2026-07-20.md`. The MOF acquisition/import evidence and reviewed
+facility-to-tax-unit relationship gate are recorded in
+`docs/taiwan_mof_snapshot_audit_2026-07-20.md` and
+`docs/taiwan_mof_relationship_gate_2026-07-20.md`. The EEA candidate-source acceptance is audited
+in `docs/eea_industrial_v16_acceptance_audit_2026-07-20.md`.

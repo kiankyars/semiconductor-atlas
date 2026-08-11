@@ -1,0 +1,22 @@
+{
+  "format": "semiconductor-atlas-gleif-review-v1",
+  "reviewed_by": "codex-agent:019f72de-95de-7b71-adc8-916cbca38f0b",
+  "reviewed_at": "2026-07-20T06:37:55Z",
+  "snapshot_manifest_sha256": "fe82dd00b8ad02006f923b259c2b9d9d3b955fd9b20e5bb01a8601c123ed76d8",
+  "golden_copy_publish_date": "2026-07-19T16:00:00Z",
+  "decisions": [
+    {
+      "lei": "2549005GOBWLCSY63Q97",
+      "target_entity_id": "eeff04d3-9316-5301-ad39-33cf34bd335d",
+      "target_entity_stable_key": "nist:organization:67a26426-8db0-5be0-9dcd-d9b2e3e3a21b",
+      "target_evidence_claim_version_ids": [
+        "d5f20e95-293d-5700-8013-c5f6735ec50a"
+      ],
+      "outcome": "match",
+      "reason": "Exact legal-name match to the NIST CHIPS recipient evidence for the separate TSMC Arizona legal entity; no parent or facility-ownership inference.",
+      "score": 1.0,
+      "candidate_rank": 1,
+      "assignment_valid_from": "2026-07-19"
+    }
+  ]
+}

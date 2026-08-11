@@ -1,0 +1,62 @@
+{
+  "version": 0.6,
+  "elements": [
+    {
+      "type": "node",
+      "id": 101,
+      "lat": 32.1,
+      "lon": -111.9,
+      "timestamp": "2026-07-01T00:00:00Z",
+      "tags": {
+        "name": "Explicit Fab",
+        "industrial": "integrated_circuit"
+      }
+    },
+    {
+      "type": "way",
+      "id": 202,
+      "geometry": [
+        {"lat": 43.0, "lon": -84.0},
+        {"lat": 43.0, "lon": -83.9},
+        {"lat": 43.1, "lon": -83.9},
+        {"lat": 43.0, "lon": -84.0}
+      ],
+      "tags": {
+        "name": "Wafer Materials Expansion",
+        "man_made": "works",
+        "product": "silicon_wafers",
+        "construction:industrial": "semiconductor"
+      }
+    },
+    {
+      "type": "node",
+      "id": 303,
+      "lat": 1.0,
+      "lon": 2.0,
+      "tags": {
+        "name": "Semiconductor Campus",
+        "product": "electronics"
+      }
+    },
+    {
+      "type": "node",
+      "id": 404,
+      "lat": 3.0,
+      "lon": 4.0,
+      "tags": {
+        "product": "integrated_circuits"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 505,
+      "bounds": {"minlat": 35.0, "minlon": 139.0, "maxlat": 35.1, "maxlon": 139.1},
+      "tags": {
+        "name": "Mask Works",
+        "man_made": "works",
+        "product": "photomasks"
+      }
+    }
+  ]
+}
+

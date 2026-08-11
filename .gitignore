@@ -1,0 +1,20 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Generated or source-controlled-by-policy data stays local.
+artifacts/
+releases/
+source_cache/
+source_snapshots/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
