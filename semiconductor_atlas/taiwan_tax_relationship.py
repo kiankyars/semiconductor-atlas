@@ -106,7 +106,7 @@ REVIEW_SOURCE_FAMILY_KEY = "semiconductor-atlas-reviewed-relationships"
 REVIEW_SOURCE_KEY = (
     "semiconductor-atlas-reviewed-relationships:taiwan-tax-unit"
 )
-REVIEW_SOURCE_URL = "https://github.com/kiankyars/semiconductors"
+REVIEW_SOURCE_URL = "https://github.com/kiankyars/semiconductor-atlas"
 
 TAIWAN_TAX_RELATIONSHIP_MIN_SCHEMA_VERSION = 4
 TAIWAN_TAX_RELATIONSHIP_MAX_CANDIDATES = 20_000
