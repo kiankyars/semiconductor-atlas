@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "semiconductor-atlas"
 version = "0.1.0"
 description = "A provenance-first claim store for semiconductor facilities"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 

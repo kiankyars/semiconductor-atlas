@@ -184,12 +184,25 @@ prove facility ownership, operation, or production. The accepted database and sc
 `artifacts/2026-07-19-open-seed-gleif-pilot.sqlite` and
 `releases/2026-07-19-open-seed-gleif-pilot`.
 
-## Install
+## Use from a source checkout
 
 Python 3.11 or newer is required. The package has no runtime dependencies.
 
 ```sh
 python -m pip install -e .
+```
+
+The reproduction and acquisition commands below assume a complete source checkout. The Python
+distribution installs the `semiconductor_atlas` package, its database migrations, and the
+`semiconductor-atlas` command. It does not install the repository's acquisition scripts, web
+generator, documentation, review plans, or ignored local data. Use the source checkout when working
+with `scripts/`, `web/`, `docs/`, `review_plans/`, `source_snapshots/`, `artifacts/`, or `releases/`.
+
+Build a source distribution and wheel from a clean checkout with:
+
+```sh
+python -m pip install build
+python -m build
 ```
 
 ## Reproduce the seed
@@ -427,6 +440,9 @@ The generator embeds the data in one HTML file and adds its hash to an existing 
 python -m unittest discover -s tests -v
 python -m unittest discover -s web/tests -v
 ```
+
+The clean-clone CI workflow runs both suites on Python 3.11, checks Python syntax, and builds the
+source distribution and wheel. It intentionally does not require ignored local data.
 
 The normative contract and limitations are in `docs/data_contract.md` and `docs/methodology.md`.
 Source rights and activation rules are in `docs/source_registry.md`; future work is gated in
