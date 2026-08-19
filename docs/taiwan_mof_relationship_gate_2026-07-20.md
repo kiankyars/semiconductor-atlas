@@ -33,10 +33,13 @@ facility.
 
 ## Complete review
 
-The review artifact is `review_plans/2026-07-20-taiwan-facility-tax-unit-review.json`, SHA-256
-`b3e2de1f9fd44f7a93dcb2ac3b5d2a2e6d6bcb03d5b16727b1fb69838d134865`. Reviewer
-`codex-agent:019f72de-95de-7b71-adc8-916cbca38f0b` completed it at
-`2026-07-20T09:50:01Z`. All 944 candidates were marked `match`; none was rejected or deferred.
+The tracked public review artifact is
+`review_plans/2026-07-20-taiwan-facility-tax-unit-review.json`, SHA-256
+`baa276e614b3a08d20e176c7b079256ed0c2cca9c210bfa68fd4523e28d9abce`. Only the private reviewer
+task suffix was removed; retained local acceptance artifacts bind the historical SHA-256
+`b3e2de1f9fd44f7a93dcb2ac3b5d2a2e6d6bcb03d5b16727b1fb69838d134865`. Reviewer role
+`codex-agent` completed the review at `2026-07-20T09:50:01Z`. All 944 candidates were marked `match`;
+none was rejected or deferred.
 
 The recorded reasons distinguish 798 exact single-facility-source agreements, 128 concordant
 two-source agreements, and 18 conflicting-reference cases explicitly preserved without resolution.

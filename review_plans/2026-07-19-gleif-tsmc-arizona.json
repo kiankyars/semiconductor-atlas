@@ -1,6 +1,6 @@
 {
   "format": "semiconductor-atlas-gleif-review-v1",
-  "reviewed_by": "codex-agent:019f72de-95de-7b71-adc8-916cbca38f0b",
+  "reviewed_by": "codex-agent",
   "reviewed_at": "2026-07-20T06:37:55Z",
   "snapshot_manifest_sha256": "fe82dd00b8ad02006f923b259c2b9d9d3b955fd9b20e5bb01a8601c123ed76d8",
   "golden_copy_publish_date": "2026-07-19T16:00:00Z",

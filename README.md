@@ -192,11 +192,12 @@ Python 3.11 or newer is required. The package has no runtime dependencies.
 python -m pip install -e .
 ```
 
-The reproduction and acquisition commands below assume a complete source checkout. The Python
-distribution installs the `semiconductor_atlas` package, its database migrations, and the
+The Python distribution installs the `semiconductor_atlas` package, its database migrations, and the
 `semiconductor-atlas` command. It does not install the repository's acquisition scripts, web
-generator, documentation, review plans, or ignored local data. Use the source checkout when working
-with `scripts/`, `web/`, `docs/`, `review_plans/`, `source_snapshots/`, `artifacts/`, or `releases/`.
+generator, documentation, review plans, or ignored local data. Use a source checkout when working
+with `scripts/`, `web/`, `docs/`, or `review_plans/`. Historical `source_snapshots/`, `artifacts/`,
+and `releases/` are local-only payloads documented in [Local data](LOCAL_DATA.md); they are not in a
+clean clone or a Python distribution.
 
 Build a source distribution and wheel from a clean checkout with:
 
@@ -205,7 +206,13 @@ python -m pip install build
 python -m build
 ```
 
-## Reproduce the seed
+## Reproduce the retained seed (local-only)
+
+The exact historical replay below requires the ignored snapshots listed in
+[Local data](LOCAL_DATA.md) and is not runnable from a clean clone. The public acquisition routes in
+[the source registry](docs/source_registry.md), together with the fetcher examples in the next
+section, can create new dated snapshots from currently available public sources. They do not promise
+byte-identical recovery of a historical publisher payload.
 
 Ingestion is offline and deterministic. It verifies every archived input against the snapshot
 manifest before parsing it. A bounded NIST scope is accepted as complete only when its declared
@@ -295,6 +302,8 @@ semiconductor-atlas summary \
   --recorded-at 2026-07-20T09:54:46Z
 ```
 
+## Acquire new public snapshots
+
 To acquire a new bounded snapshot, run the source-specific fetcher separately. The NIST/OSM fetcher
 writes archived source files plus their byte counts, URLs, retrieval time, and SHA-256 hashes.
 
@@ -315,8 +324,10 @@ python scripts/fetch_epa_frs.py \
 ```
 
 The EEA utility packages already acquired exact official bytes and pinned extractor outputs; it
-never accepts or retains access credentials. Verification rehashes the complete 2.03 GB source and
-all extraction evidence, then replays the candidate derivative without network access:
+never accepts or retains access credentials. The verification/replay example below is local-only and
+requires the ignored v16 snapshot described in [Local data](LOCAL_DATA.md). It rehashes the complete
+2.03 GB source and all extraction evidence, then replays the candidate derivative without network
+access:
 
 ```sh
 python scripts/fetch_eea_industrial.py \
