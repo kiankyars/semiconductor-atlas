@@ -106,9 +106,11 @@ Facility identity uses the schema-v4 same-kind resolution ledger:
 
 The accepted candidate artifact is
 `review_plans/2026-07-20-taiwan-moenv-factory-candidates.json` (SHA-256
-`1c296635a4a968c35c2b1430fdc39ca0db49be427e4206b14e982807c095ab48`). The complete review artifact
-is `review_plans/2026-07-20-taiwan-moenv-factory-review.json` (SHA-256
-`d7b2082576b254c1c22805abd1f54bfe633627504049cb5a2963f8191062d0e0`). Resolution run
+`1c296635a4a968c35c2b1430fdc39ca0db49be427e4206b14e982807c095ab48`). The tracked public review
+artifact is `review_plans/2026-07-20-taiwan-moenv-factory-review.json` (SHA-256
+`7e7849f21c6fbb4100b171f072fbc282ed284a4a4f1825f9aa237442944da404`). Only the private reviewer
+task suffix was removed; retained local acceptance artifacts bind the historical SHA-256
+`d7b2082576b254c1c22805abd1f54bfe633627504049cb5a2963f8191062d0e0`. Resolution run
 `079334bc-a264-55fa-bfec-7211ac1d9a99` recorded 142 matches and one defer; exact replay wrote zero
 rows and preserved database SHA-256
 `8bcd2e840281f6646a967e3ef9ae6de798028e9245af9cc4fba9df6ffac99011`.
