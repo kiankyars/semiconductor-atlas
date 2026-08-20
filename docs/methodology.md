@@ -25,6 +25,76 @@ A missing signal is not negative evidence unless the relevant source, geography,
 were actually checked. Source checkpoints therefore record query scope, cursor, run, result count,
 and last successful check.
 
+## AI-critical v1 deterministic cohort
+
+AI-Critical Manufacturing Baseline v1 is a separately bounded release surface, not a claim of
+complete company or global coverage. Its pinned input contains exactly one row for each of TSMC,
+Samsung, Intel, Micron, SK hynix, Amkor, and ASE, in that order. Admissible capability categories
+are only `leading_edge_logic`, `hbm_fabrication`, `hbm_packaging`, `advanced_packaging`, and
+`advanced_test`. Every source must be official primary evidence published on or after 2024-01-01;
+publication, retrieval, acquisition, and rights-review clocks remain distinct and validated.
+
+Leading-edge logic selection is evidence-explicit and deterministic. An official source must
+characterize the same bounded facility or project as leading-edge, most-advanced logic, or
+equivalent source language. A nominal node, marketing label, or analyst convention does not qualify
+a row by itself, and v1 defines no hidden numeric node threshold. This rule intentionally permits
+source-native terminology while preventing a future process-node change from silently altering the
+cohort.
+
+Location evidence is scoped as tightly as capability evidence. NIST award pages can describe more
+than one city or facility under one company or award. A v1 row may use only the location-specific
+subsection whose locator and excerpt identify that row's city and project scope. Shared publisher,
+source ID, recipient, or program identity is not a join key across site subsections. This guard
+prevents, for example, Taylor capability from contaminating an Austin location or vice versa.
+Coordinates remain null unless a cited source supports a facility-safe point; city-level text is
+not geocoded into invented facility geometry.
+
+Identity scopes are explicit: `named_facility`, `campus_scope`, or `project_site_scope`. A campus
+statement is not allocated to one building, and an aggregate project is not split into unnamed
+fabs or lines. Lifecycle and capability readiness remain separate. Announcements, construction,
+groundbreaking, cleanroom opening, equipment installation, production, and customer qualification
+are not interchangeable states. Canonical display names, normalized geography labels and country
+codes, lifecycle summaries, and mapped lifecycle stages are `reconciled_fact` claims rather than
+being presented as verbatim source statements.
+
+For every v1 row, yield, utilization, and qualification remain `unknown` unless directly supported;
+the current cohort supports none of them. Capacity must use exactly one of `announced`,
+`physical_construction`, `tool_installed`, `qualified`, or `economically_usable`. Each basis without
+a direct numeric claim is explicitly unknown, not zero. A lifecycle statement about installed tools
+does not supply a `tool_installed` capacity amount. Differently scoped or unitized values remain
+separate, and an announced future rate never becomes operating, qualified, or economically usable
+capacity.
+
+Each published claim resolves to a precise evidence fragment, and each fragment resolves to a
+source URL, publisher, publication precision, retrieval and acquisition clocks, archived-byte hash,
+locator, excerpt, attribution, and rights decision. Source bytes classified for metadata-and-excerpt
+release remain local and are not redistributed in the public bundle. The release can expose only
+the recorded metadata, hashes, locators, bounded excerpts, and derived records allowed by that
+decision. During the local release gate, ordered excerpt segments from HTML and JSON are resolved
+against normalized text from the verified archive bytes. ASE PDF excerpts carry an explicit dated
+manual visual-review record because column-aware PDF extraction is not treated as authoritative.
+The immutable fragment hash binds that verification record as well as the source-record hash,
+locator, role, and excerpt.
+
+Numeric capacity additionally requires an exact reviewed assertion embedded in the supporting
+fragment. That hash-bound assertion repeats the metric, one of the five bases, unit, numeric range,
+period, scope, input/output basis, quantity semantics, and technology scope. The loader rejects a
+capacity row unless every field matches one linked assertion, and checks the assertion's number,
+monthly-versus-quarter language, period label, and basis wording against the verified excerpt. A
+monthly source statement therefore cannot be relabeled as a quarterly total for the consumer
+export.
+
+The fixed v1 numeric-claim grammar admits only the cohort's directly supported `announced` basis.
+The other four bases remain present in every facility's five-basis unknown contract and in release
+coverage, but a later release must add a separately reviewed and tested evidence grammar before it
+can publish a numeric claim on any of them. This deliberate gate prevents lifecycle language such
+as construction or equipment installation from being reused as numeric capacity support.
+
+The smaller Supply Intelligence outputs are separately versioned handoff schemas. The capacity
+projection admits only source-stated exact calendar-quarter totals; the facility projection keeps
+identity scope and explicit unknowns. This release does not claim that the existing sibling Supply
+Intelligence legacy adapter can ingest either schema directly.
+
 ## Units of analysis
 
 Stable entity identifiers survive name, owner, geometry, and status changes. The registry keeps

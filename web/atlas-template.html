@@ -87,8 +87,8 @@
     return [(Math.min(...points.map(p => p[0])) + Math.max(...points.map(p => p[0]))) / 2, (Math.min(...points.map(p => p[1])) + Math.max(...points.map(p => p[1]))) / 2];
   }
   const items = atlas.features.map(feature => {
-    const p = feature.properties || {}, acts = (p.capabilities || []).filter(x => x.capability_type === "facility_activity").map(x => String(x.value));
-    return { feature, p, point: coordinates(feature.geometry), activities: acts, haystack: [p.name, p.entity_kind, scalarText(p), acts.join(" "), ...(p.source_urls || [])].join(" ").toLowerCase() };
+    const p = feature.properties || {}, caps = p.capabilities || [], acts = caps.filter(x => x.capability_type === "facility_activity").map(x => String(x.value));
+    return { feature, p, point: coordinates(feature.geometry), activities: acts, haystack: [p.name, p.company, p.entity_kind, p.identity_scope, p.lifecycle_state, p.lifecycle_statement, scalarText(p), acts.join(" "), caps.map(x => `${x.technology || ""} ${x.readiness || ""}`).join(" "), ...(p.source_urls || [])].join(" ").toLowerCase() };
   });
   function addOption(select, value) { const option = document.createElement("option"); option.value = value; option.textContent = human(value); select.append(option); }
   [...new Set(items.map(x => x.p.entity_kind))].filter(Boolean).sort().forEach(x => addOption(kind, x));
@@ -100,16 +100,55 @@
   const pointLayer = document.createElementNS(NS, "g"); svg.append(pointLayer);
   function matches(item) { const q = search.value.trim().toLowerCase(); return (!q || item.haystack.includes(q)) && (kind.value === "all" || item.p.entity_kind === kind.value) && (activity.value === "all" || item.activities.includes(activity.value)); }
   function textNode(tag, text) { const node = document.createElement(tag); node.textContent = text; return node; }
+  function capabilityText(x) {
+    if (Object.prototype.hasOwnProperty.call(x, "confidence")) {
+      return `${human(x.capability_type)}: ${x.value}${x.unit ? ` ${x.unit}` : ""} · ${Math.round(x.confidence * 100)}%`;
+    }
+    const base = `${human(x.value || x.capability_type)}${x.technology ? ` · ${x.technology}` : ""}`;
+    return `${base}${x.readiness ? ` · readiness ${human(x.readiness)}` : ""}${x.valid_from ? ` · valid from ${x.valid_from}` : ""}`;
+  }
+  function capacityText(x) {
+    const period = x.period_start || x.period_end ? `${x.period_start || "unknown"} to ${x.period_end || "unknown"}` : "applicability period unknown";
+    const scope = x.scope_kind ? ` · scope ${human(x.scope_kind)}` : "";
+    const basis = x.input_output_basis ? ` · basis ${human(x.input_output_basis)}` : "";
+    const technology = (x.technology_scope || []).length ? ` · technology ${(x.technology_scope || []).map(human).join(", ")}` : "";
+    return `${human(x.metric)} · ${human(x.basis)}: ${x.low} / ${x.base} / ${x.high} ${x.unit} · ${period}${scope}${basis}${technology}${x.notes ? ` · ${x.notes}` : ""}`;
+  }
   function show(item) {
     detail.replaceChildren(); detail.append(textNode("h2", item.p.name || item.p.stable_key));
-    const intro = textNode("p", `${human(item.p.entity_kind)} · ${item.point ? `${item.point[1].toFixed(4)}, ${item.point[0].toFixed(4)}` : "location not yet resolved"}`); intro.className = "muted"; detail.append(intro);
+    const place = [item.p.city, item.p.admin1, item.p.country].filter(Boolean).join(", ");
+    const introParts = [human(item.p.entity_kind)];
+    if (item.p.identity_scope) introParts.push(`identity scope ${human(item.p.identity_scope)}`);
+    if (place) introParts.push(place);
+    introParts.push(item.point ? `${item.point[1].toFixed(4)}, ${item.point[0].toFixed(4)}` : item.p.identity_scope || place ? "facility point unresolved" : "location not yet resolved");
+    const intro = textNode("p", introParts.join(" · ")); intro.className = "muted"; detail.append(intro);
     const grid = document.createElement("div"); grid.className = "detail-grid";
-    const blocks = [
-      ["Capabilities", (item.p.capabilities || []).map(x => `${human(x.capability_type)}: ${x.value}${x.unit ? ` ${x.unit}` : ""} · ${Math.round(x.confidence * 100)}%`)],
-      ["Capacity by basis", (item.p.capacities || []).map(x => `${human(x.metric)} · ${human(x.basis)}: ${x.low} / ${x.base} / ${x.high} ${x.unit}`)],
+    const scopeLifecycle = [];
+    if (item.p.company) scopeLifecycle.push(`Company ${item.p.company}`);
+    if (item.p.lifecycle_state) scopeLifecycle.push(`Lifecycle ${human(item.p.lifecycle_state)}${item.p.lifecycle_as_of ? ` as of ${item.p.lifecycle_as_of}` : ""}`);
+    if (item.p.lifecycle_statement) scopeLifecycle.push(item.p.lifecycle_statement);
+    const blocks = [];
+    if (scopeLifecycle.length) blocks.push(["Scope and lifecycle", scopeLifecycle]);
+    blocks.push(
+      ["Capabilities", (item.p.capabilities || []).map(capabilityText)],
+      ["Capacity by basis", (item.p.capacities || []).map(capacityText)]
+    );
+    const unknowns = item.p.unknowns;
+    if (unknowns && typeof unknowns === "object") {
+      const unknownValues = [];
+      if (Object.prototype.hasOwnProperty.call(unknowns, "yield")) unknownValues.push(`Yield: ${unknowns.yield || "unknown"}`);
+      if (Object.prototype.hasOwnProperty.call(unknowns, "utilization")) unknownValues.push(`Utilization: ${unknowns.utilization || "unknown"}`);
+      if (Object.prototype.hasOwnProperty.call(unknowns, "qualification")) unknownValues.push(`Qualification: ${unknowns.qualification || "unknown"}`);
+      if (Object.prototype.hasOwnProperty.call(unknowns, "capacity_bases")) {
+        const capacityUnknowns = Array.isArray(unknowns.capacity_bases) ? unknowns.capacity_bases : [];
+        unknownValues.push(`Capacity bases: ${capacityUnknowns.length ? capacityUnknowns.map(human).join(", ") : "none"}`);
+      }
+      if (unknownValues.length) blocks.push(["Explicit unknowns", unknownValues]);
+    }
+    blocks.push(
       ["Milestones", (item.p.milestones || []).map(x => `${human(x.milestone_type)} · ${human(x.status)}: ${x.date_low} / ${x.date_base} / ${x.date_high}`)],
       ["Sources", item.p.source_urls || []]
-    ];
+    );
     for (const [label, values] of blocks) { const block = document.createElement("div"); block.className = "detail-block"; block.append(textNode("h3", label)); if (!values.length) block.append(textNode("p", "Not reported")); else { const ul = document.createElement("ul"); for (const value of values) { const li = document.createElement("li"); if (label === "Sources") { const a = document.createElement("a"); a.href = value; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = value; li.append(a); } else li.textContent = value; ul.append(li); } block.append(ul); } grid.append(block); }
     detail.append(grid);
   }
