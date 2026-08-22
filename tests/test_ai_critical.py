@@ -70,6 +70,16 @@ class AICriticalBaselineTests(unittest.TestCase):
     def tearDown(self) -> None:
         self.temporary_directory.cleanup()
 
+    def _production_source_paths(self, repository_root: Path) -> list[Path]:
+        input_path = (
+            repository_root / "baselines" / "ai_critical_manufacturing_v1.json"
+        )
+        payload = json.loads(input_path.read_text(encoding="utf-8"))
+        return [
+            repository_root / source["archive_path"]
+            for source in payload["sources"]
+        ]
+
     def _source(self) -> dict[str, object]:
         return {
             "source_id": "official-fixture",
@@ -1794,6 +1804,7 @@ class AICriticalBaselineTests(unittest.TestCase):
         baseline = load_baseline(
             repository_root / "baselines" / "ai_critical_manufacturing_v1.json",
             repository_root,
+            verify_source_bytes=False,
         )
         materialized = materialize_baseline(baseline)
         self.assertEqual(
@@ -1987,6 +1998,14 @@ class AICriticalBaselineTests(unittest.TestCase):
 
     def test_checked_in_production_cohort_builds_end_to_end(self) -> None:
         repository_root = Path(__file__).resolve().parents[1]
+        source_paths = self._production_source_paths(repository_root)
+        if source_paths and not any(
+            path.exists() or path.is_symlink() for path in source_paths
+        ):
+            self.skipTest(
+                "requires ignored local source payload; all archived source files "
+                "are unavailable"
+            )
         with tempfile.TemporaryDirectory() as temporary:
             parent = Path(temporary).resolve()
             output = parent / "production-release"
