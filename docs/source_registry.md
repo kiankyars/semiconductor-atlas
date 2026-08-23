@@ -15,6 +15,30 @@ policies must be rechecked before an adapter is enabled and at each material sou
 Publicly viewable does not mean licensed for bulk collection, model training, or redistribution.
 Unknown terms are recorded as unknown, never guessed.
 
+## AI-critical v1 curated-source boundary
+
+Review date: 2026-08-20.
+
+The v1 cohort pins nine official documents and twelve precise evidence fragments. This is a curated
+release input, not a general authorization to crawl the publishers. Exact archived bytes are kept
+locally for integrity and replay, while the public release carries source metadata, hashes, precise
+locators, bounded excerpts, attribution, fragment-verification method and clock, and the
+per-document redistribution decision. HTML and JSON excerpt segments are resolved against
+normalized text from the locally verified bytes; ASE PDF excerpts require dated manual visual
+review. It does not
+package `source_snapshots/` payloads.
+
+| Pinned source family | v1 use | Rights and scope rule |
+| --- | --- | --- |
+| NIST CHIPS award pages for TSMC Arizona, Samsung Texas, and Amkor Peoria | Location-specific project, technology, lifecycle, and announced future-throughput statements | Treat NIST text as credited U.S. government public information while preserving exceptions for embedded or third-party material. V1 conservatively releases metadata and bounded excerpts, not archived pages. A multi-site page must be cited at the same named site subsection as the row; never carry an Austin statement into Taylor, or one project's location into another. |
+| Intel and SK hynix official newsroom records and the ASE Kaohsiung sustainability report | Named-facility or campus identity, lifecycle, HBM, leading-edge logic, advanced-packaging, and test evidence | Publisher copyright applies and no blanket redistribution license is inferred. Retain exact bytes locally; publish metadata, hashes, attribution, locators, and short excerpts only. ASE campus evidence remains campus-scoped and cannot be allocated to a plant without separate evidence. |
+| Micron Form 10-Q and TSMC Form 20-F via SEC EDGAR | HBM-packaging project and named-facility operating evidence | Public EDGAR access does not make all issuer-authored filing content public domain. Follow SEC fair-access and attribution guidance, retain the recorded underlying-rights decision, and do not treat filing availability as permission to redistribute unrelated exhibits or a full local archive. |
+
+For `leading_edge_logic`, the official source must explicitly characterize the same facility or
+project as leading-edge, most-advanced logic, or equivalent. V1 does not infer eligibility from a
+numeric node. All nine records retain publication precision and a 2024-or-later date; a retrieval or
+archive timestamp cannot substitute for publication evidence.
+
 ## Official and open first-wave candidates
 
 | Source | Intended use | Access and rights status | Adapter status and rule |

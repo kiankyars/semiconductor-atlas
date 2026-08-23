@@ -414,6 +414,59 @@ Reprocessing the same acquired archive under a later importer reuses its immutab
 records a distinct processing run, and preserves unchanged claims. Processing-run provenance carries
 the filter, derivative digest, retention decision, rights review, and source-snapshot manifest digest.
 
+## AI-Critical Manufacturing Baseline v1
+
+The pinned v1 cohort is exactly seven rows, one for each required company, in this order:
+`tsmc:fab21-arizona`, `samsung:taylor-leading-edge-project`, `intel:fab52-chandler`,
+`micron:singapore-hbm-packaging-project`, `sk-hynix:m15x-cheongju`,
+`amkor:peoria-advanced-packaging-project`, and `ase:kaohsiung-site`. It includes only
+`leading_edge_logic`, `hbm_fabrication`, `hbm_packaging`, `advanced_packaging`, and
+`advanced_test`, using official source documents published in 2024 or later.
+
+`leading_edge_logic` is an explicit-source classification. The cited official source must describe
+the same facility or project scope as leading-edge, most-advanced logic, or equivalent source
+language. A process-node number alone is never an implicit eligibility threshold. For NIST
+multi-location project pages, the locator and excerpt must name the same site as the row; a company,
+award, or source-page match cannot carry geography or capability from one site subsection to
+another.
+
+Yield, utilization, and qualification are `unknown` for every v1 row. Each unsupported capacity
+basis is also `unknown`, not zero. The only numeric capacity claims are Amkor's two approximate
+future Peoria project rates, both on the `announced` basis; their different units must not be added.
+Lifecycle evidence such as groundbreaking or equipment installation does not create a numeric
+capacity claim. Each numeric capacity row must exactly match a reviewed, evidence-fragment-bound
+assertion covering its metric, basis, unit, range, period, scope, quantity semantics, and technology
+scope; the loader also checks those numeric and time semantics against the verified excerpt.
+The fixed v1 loader admits numeric claims only on the directly supported `announced` basis; all
+other bases remain in the five-basis schema and are explicitly unknown.
+
+Build the release into new, non-existing sibling paths:
+
+```sh
+python3 scripts/build_ai_critical_release.py \
+  --input baselines/ai_critical_manufacturing_v1.json \
+  --source-root . \
+  --output releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3 \
+  --archive releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3.tar.gz
+```
+
+The builder verifies the pinned input, archived source bytes, implementation files, and map
+template; stages the bundle; generates the standalone map; validates the release; and only then
+installs the output directory and optional deterministic archive. It refuses an existing output or
+archive. The managed bundle contains `facilities.csv`, `claims.jsonl`, `evidence.jsonl`,
+`capacity.csv`, `atlas.geojson`, `atlas.html`, `source_inputs.json`, `producing_run.json`,
+`source_ingestion_runs.json`, `coverage.json`, the zero-row eligible-capacity
+`supply_intelligence.jsonl`, `supply_intelligence_contract.json`, the seven-row
+`supply_intelligence_facilities.jsonl`, `METHODOLOGY.md`, `ATTRIBUTION.md`, `cohort.json`,
+`README.md`, `atlas-template.html`, the three pinned `BUILD_*.py` producer modules, and
+`manifest.json`. The manifest binds every managed file by byte count and SHA-256. Archived
+publisher bytes remain in ignored local `source_snapshots/`
+storage and are not copied into the public bundle; reuse remains subject to each source's recorded
+rights decision.
+
+The achieved row-level coverage and unresolved evidence are recorded in
+`docs/ai_critical_baseline_v1_gap_matrix.md`.
+
 ## Release and interface
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:

@@ -16,6 +16,8 @@ from typing import Any
 TEMPLATE_PATH = Path(__file__).with_name("atlas-template.html")
 PLACEHOLDER = "__SEMICONDUCTOR_ATLAS_DATA__"
 RELEASE_FORMAT = "semiconductor-atlas-release-v1"
+AI_CRITICAL_RELEASE_FORMAT = "semiconductor-atlas-ai-critical-release-v1"
+SUPPORTED_RELEASE_FORMATS = frozenset({RELEASE_FORMAT, AI_CRITICAL_RELEASE_FORMAT})
 STAGE_OWNER_SUFFIX = ".owner"
 TRANSACTION_FORMAT = "semiconductor-atlas-web-transaction-v1"
 
@@ -82,7 +84,7 @@ def _verified_release_manifest(source: Path, output: Path) -> tuple[Path, dict[s
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
         raise ValueError("release manifest is missing or unreadable") from error
     files = manifest.get("files")
-    if manifest.get("format") != RELEASE_FORMAT or not isinstance(files, dict):
+    if manifest.get("format") not in SUPPORTED_RELEASE_FORMATS or not isinstance(files, dict):
         raise ValueError("release manifest has an unsupported format")
     source_metadata = files.get(source.name)
     if not isinstance(source_metadata, dict):
@@ -116,6 +118,24 @@ def _verified_release_manifest(source: Path, output: Path) -> tuple[Path, dict[s
     elif output.exists() or output.is_symlink():
         raise ValueError("refusing to overwrite an unmanaged HTML file")
     return manifest_path, manifest
+
+
+def _release_format_hint(release_directory: Path) -> str | None:
+    """Read a format hint without recovering or otherwise mutating the release."""
+    manifest_path = release_directory / "manifest.json"
+    if manifest_path.is_symlink() or not manifest_path.is_file():
+        return None
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return None
+    release_format = manifest.get("format")
+    return release_format if isinstance(release_format, str) else None
+
+
+def _validate_release_output_name(release_format: object, output: Path) -> None:
+    if release_format == AI_CRITICAL_RELEASE_FORMAT and output.name != "atlas.html":
+        raise ValueError("AI-critical release output must be named atlas.html")
 
 
 def _manifest_bytes(manifest: dict[str, Any]) -> bytes:
@@ -209,7 +229,7 @@ def _verify_managed_bundle(release_directory: Path) -> None:
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
         raise ValueError("release manifest is missing or unreadable") from error
     files = manifest.get("files")
-    if manifest.get("format") != RELEASE_FORMAT or not isinstance(files, dict):
+    if manifest.get("format") not in SUPPORTED_RELEASE_FORMATS or not isinstance(files, dict):
         raise ValueError("release manifest has an unsupported format")
     for name, metadata in files.items():
         if (
@@ -446,9 +466,27 @@ def _install_updated_bundle(
 
 def generate(input_path: str | Path, output_path: str | Path) -> None:
     source, output = _validate_output_path(input_path, output_path)
+    _validate_release_output_name(_release_format_hint(source.parent), output)
     _recover_interrupted_install(source.parent)
     manifest_path, manifest = _verified_release_manifest(source, output)
-    rendered = render(load_geojson(source), TEMPLATE_PATH.read_text(encoding="utf-8"))
+    _validate_release_output_name(manifest.get("format"), output)
+    template_path = TEMPLATE_PATH
+    if manifest.get("format") == AI_CRITICAL_RELEASE_FORMAT:
+        template_path = source.parent / "atlas-template.html"
+        template_metadata = manifest["files"].get(template_path.name)
+        if template_path.is_symlink() or not template_path.is_file():
+            raise ValueError("AI-critical release template is missing or unsafe")
+        template_raw = template_path.read_bytes()
+        if (
+            not isinstance(template_metadata, dict)
+            or template_metadata.get("bytes") != len(template_raw)
+            or template_metadata.get("sha256")
+            != hashlib.sha256(template_raw).hexdigest()
+            or manifest.get("atlas_template_sha256")
+            != hashlib.sha256(template_raw).hexdigest()
+        ):
+            raise ValueError("AI-critical release template is not pinned by the manifest")
+    rendered = render(load_geojson(source), template_path.read_text(encoding="utf-8"))
     raw = rendered.encode("utf-8")
     manifest["files"][output.name] = {
         "bytes": len(raw),

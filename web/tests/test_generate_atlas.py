@@ -66,7 +66,25 @@ class GenerateAtlasTests(unittest.TestCase):
         document = {
             "type": "FeatureCollection",
             "atlas_as_of": "2026-07-17",
-            "features": [{"type": "Feature", "id": "one", "geometry": None, "properties": {"name": "One"}}],
+            "features": [
+                {
+                    "type": "Feature",
+                    "id": "one",
+                    "geometry": None,
+                    "properties": {
+                        "name": "One",
+                        "capabilities": [
+                            {
+                                "capability_type": "cleanroom_area",
+                                "value": 123,
+                                "unit": "m2",
+                                "confidence": 0.91,
+                                "valid_from": "2026-01-01",
+                            }
+                        ],
+                    },
+                }
+            ],
         }
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -81,11 +99,63 @@ class GenerateAtlasTests(unittest.TestCase):
             rendered = output.read_text(encoding="utf-8")
             self.assertIn("Semiconductor Atlas", rendered)
             self.assertIn('"id":"one"', rendered)
+            self.assertIn(
+                'Object.prototype.hasOwnProperty.call(x, "confidence")',
+                rendered,
+            )
+            self.assertIn(
+                '${x.unit ? ` ${x.unit}` : ""} · ${Math.round(x.confidence * 100)}%',
+                rendered,
+            )
+            self.assertIn(
+                'if (scopeLifecycle.length) blocks.push(["Scope and lifecycle", scopeLifecycle])',
+                rendered,
+            )
+            self.assertIn(
+                'if (unknownValues.length) blocks.push(["Explicit unknowns", unknownValues])',
+                rendered,
+            )
             manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
             self.assertIn("atlas.html", manifest["files"])
             self.assertEqual(
                 "standalone_atlas_html",
                 manifest["files"]["atlas.html"]["role"],
+            )
+
+    def test_ai_critical_rejects_noncanonical_output_before_recovery_or_mutation(self) -> None:
+        document = {"type": "FeatureCollection", "features": []}
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "atlas.geojson"
+            source.write_text(json.dumps(document), encoding="utf-8")
+            release_template = root / "atlas-template.html"
+            release_template.write_bytes(MODULE.TEMPLATE_PATH.read_bytes())
+            manifest = self._release_manifest(
+                source,
+                **{
+                    release_template.name: {
+                        "bytes": release_template.stat().st_size,
+                        "sha256": hashlib.sha256(release_template.read_bytes()).hexdigest(),
+                    }
+                },
+            )
+            template_digest = hashlib.sha256(release_template.read_bytes()).hexdigest()
+            manifest["format"] = MODULE.AI_CRITICAL_RELEASE_FORMAT
+            manifest["atlas_template_sha256"] = template_digest
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            before = {path.name: path.read_bytes() for path in root.iterdir()}
+            output = root / "map.html"
+
+            with mock.patch.object(MODULE, "_recover_interrupted_install") as recover:
+                with self.assertRaisesRegex(ValueError, "must be named atlas.html"):
+                    MODULE.generate(source, output)
+
+            recover.assert_not_called()
+            self.assertFalse(output.exists())
+            self.assertEqual(
+                before,
+                {path.name: path.read_bytes() for path in root.iterdir()},
             )
 
     def test_rejects_non_feature_collection(self) -> None:

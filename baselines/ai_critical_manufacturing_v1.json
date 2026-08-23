@@ -1,0 +1,1227 @@
+{
+  "as_of": "2026-08-20",
+  "atlas_generator_sha256": "86e7218ee74016222c71a63e69dc23ec74d774a0e421e389c58bbe7c3645eb24",
+  "atlas_template_sha256": "672df7a3bc13e82ac94eca7da819cdf77926b7d59fdf441b514624e178112ae6",
+  "builder_script_sha256": "94ee0ebe5f8d33a61bdc23620c8a51de9ab5cea76a44964866a63d228044474a",
+  "code_sha256": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969",
+  "companies": [
+    "TSMC",
+    "Samsung",
+    "Intel",
+    "Micron",
+    "SK hynix",
+    "Amkor",
+    "ASE"
+  ],
+  "evidence": [
+    {
+      "capacity_assertions": [
+        {
+          "base": 14500,
+          "basis": "announced",
+          "high": 14500,
+          "input_output_basis": "source_stated_throughput",
+          "low": 14500,
+          "metric": "wafers_throughput",
+          "period_end": null,
+          "period_start": null,
+          "quantity_semantics": "monthly_rate",
+          "scope_kind": "project_addition",
+          "technology_scope": [
+            "advanced_packaging",
+            "advanced_test"
+          ],
+          "unit": "wafers/month"
+        },
+        {
+          "base": 3700000,
+          "basis": "announced",
+          "high": 3700000,
+          "input_output_basis": "source_stated_throughput",
+          "low": 3700000,
+          "metric": "units_throughput",
+          "period_end": null,
+          "period_start": null,
+          "quantity_semantics": "monthly_rate",
+          "scope_kind": "project_addition",
+          "technology_scope": [
+            "advanced_packaging",
+            "advanced_test"
+          ],
+          "unit": "units/month"
+        }
+      ],
+      "evidence_id": "amkor-peoria-capacity",
+      "excerpt": "The U.S. Department of Commerce awarded Amkor Technology Arizona, Inc., a subsidiary of Amkor Technology, Inc., up to $407 million in direct funding to support the construction of a new advanced packaging and test facility. Upon completion, the facility is expected to produce approximately 14,500 wafers per month and 3,700,000 units per month processed through its assembly and test equipment in Peoria, Arizona.",
+      "fragment_sha256": "ed20288cb00588feba70795f68c5d72068986964dc535d62caf86ef92448dc07",
+      "locator": "Project Summary paragraph beginning “The U.S. Department of Commerce awarded Amkor Technology Arizona”; archived HTML line 810.",
+      "role": "support",
+      "source_id": "nist-amkor-peoria",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "amkor-peoria-technology",
+      "excerpt": "Project Type Construction of a new manufacturing facility for advanced production lines to interconnect, protect and test integrated circuits Technologies 2.5D technology and other next generation technologies",
+      "fragment_sha256": "bc669f174caeb65be4a7623c95f2b1fb6c402b532c84d3d9b63e582af4e13a0f",
+      "locator": "Project Statistics: Peoria, Arizona, Project Type and Technologies rows; archived HTML line 810.",
+      "role": "support",
+      "source_id": "nist-amkor-peoria",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "ase-kaohsiung-capability",
+      "excerpt": "We continue to maintain a leading position in high-end packaging and production processes. ... We are dedicated to delivering one-stop, comprehensive packaging and testing solutions for our customers. ... ASEKH is leading the industry with the introduction of Fan-out Chip on Substrate (FOCoS), 2.5D packaging technology, and Co-Packaged Optics (CPO).",
+      "fragment_sha256": "7acea665713b7fc2eb34b5b39c9bb498162a66c11fdf56ff6ee731c35bf0c6c3",
+      "locator": "PDF page 7 (printed page 5), “Product Technology and Innovation” and “High-speed networking, efficient cloud computing, and AI computing.”",
+      "role": "support",
+      "source_id": "ase-kaohsiung-2024-report",
+      "verification": {
+        "method": "manual_pdf_visual_review_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "ase-kaohsiung-identity",
+      "excerpt": "As ASE’s largest operating location and manufacturing site, we continuously refine our process technologies ... The Kaohsiung Site is situated in the Kaohsiung Nanzih Technology Industrial Park, Taiwan. We have 18 plants in the First Park, 6 plants in the Second Park, and Plant K27 in the Dashe Park.",
+      "fragment_sha256": "c425fee4c45c10b8e4496b1db0f52ceb4942bb8f636ae074544b02389e6da223",
+      "locator": "PDF pages 3 and 5 (printed pages 1 and 3), “About the Report” and “Overview of ASEKH.”",
+      "role": "support",
+      "source_id": "ase-kaohsiung-2024-report",
+      "verification": {
+        "method": "manual_pdf_visual_review_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "intel-fab52-18a-production",
+      "excerpt": "Arizona’s Fab 52 is fully operational and set to reach high-volume production using Intel 18A later this year ... Both Panther Lake and Clearwater Forest, as well as multiple generations of products built on Intel 18A, are being manufactured at Fab 52, Intel’s new, state-of-the-art factory in Chandler, Arizona ...",
+      "fragment_sha256": "6858b61f70b08052932a0786aed3b875a1813808a77b5dde81e8efb548578c58",
+      "locator": "News release summary and opening paragraphs under the Chandler, Arizona dateline; archived HTML lines 617-634.",
+      "role": "support",
+      "source_id": "intel-fab52-2025",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "micron-singapore-hbm-groundbreaking",
+      "excerpt": "In January 2025, we broke ground on an HBM advanced packaging facility in Singapore to meaningfully expand our total advanced packaging capacity beginning in calendar 2027.",
+      "fragment_sha256": "5c1c2f55582e5f5fde1407e16e04cd3dbf42b7a58d56320b5badaca79858edc6",
+      "locator": "Item 2, Management’s Discussion and Analysis, “Liquidity and Capital Resources,” printed page 35.",
+      "role": "support",
+      "source_id": "micron-2025-q3-10q",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "samsung-taylor-leading-edge",
+      "excerpt": "Taylor, Texas: Construct a comprehensive advanced manufacturing ecosystem that includes both high volume leading-edge logic manufacturing and dedicated space for R&D ... This ecosystem would include two leading-edge logic foundry fabs focused on mass production of 2nm process technologies and an R&D fab ...",
+      "fragment_sha256": "bfbdabefd28f7fb166046a0b768534bde8e05039a4e06a0b74799f09bebdc0c9",
+      "locator": "Economic and National Security Impact, Taylor, Texas bullet; archived HTML line 812.",
+      "role": "support",
+      "source_id": "nist-samsung-texas",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "sk-m15x-hbm-scope",
+      "excerpt": "SK hynix Inc. ... plans to expand production capacity of the next-generation DRAM including HBM ... the company will build the M15X fab in Cheongju, North Chungcheong Province, for a new DRAM production base ... Being located near the M15, which has been expanding TSV ... capabilities, the M15X is the best conditioned for optimization of HBM production.",
+      "fragment_sha256": "3bedce1c7c2d8b35031cb2847a324125b7db245b0b3a105fa0e340f2a8158df2",
+      "locator": "Official API record content.rendered, opening project paragraphs and paragraph beginning “The company plans to produce new DRAM from the M15X.”",
+      "role": "support",
+      "source_id": "sk-hynix-m15x-2024",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "sk-m15x-tools-installing",
+      "excerpt": "SK hynix plans to expand its production capacity through M15X, where equipment installation has recently begun after the early opening of a new cleanroom, and to accelerate the migration to advanced process technologies.",
+      "fragment_sha256": "aac90be92727044350a67ac621a1141610c944d898568516c3446cccdf627985",
+      "locator": "Official API record content.rendered, paragraph beginning “In order to address higher-than-expected customer demand.”",
+      "role": "support",
+      "source_id": "sk-hynix-q3-2025",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "tsmc-fab21-hvm",
+      "excerpt": "In November 2020, we established TSMC Arizona (of which the manufacturing entity is Fab 21), a wholly-owned subsidiary that is expected to be primarily engaged in the manufacture and sale of integrated circuits. TSMC Arizona plans to build and operate multiple advanced semiconductor manufacturing facilities in Phoenix, Arizona. Our first facility successfully entered high volume production at the end of 2024.",
+      "fragment_sha256": "fe13eba53732c83d1c605d605c83a8d573e4e363387826dbbd780f48d7caf5b5",
+      "locator": "Item 4, “TSMC Arizona” subsection, printed pages 25-26.",
+      "role": "support",
+      "source_id": "tsmc-2025-20f",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "tsmc-fab21-leading-edge",
+      "excerpt": "This funding will support TSMC’s investment of more than $65 billion in three greenfield leading-edge fabs in Phoenix, Arizona, which will manufacture the world’s most advanced semiconductors. ... Construction of three greenfield leading-edge fabs ... Fab 1: 4nm and 5nm FinFET process technologies",
+      "fragment_sha256": "d6f1ec56413f3e09f8b633e5ed5ca9ecebb9c1adc27f9a6023744260e715f443",
+      "locator": "Project Summary and Facility Summary table; archived HTML line 798.",
+      "role": "support",
+      "source_id": "nist-tsmc-arizona",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    },
+    {
+      "evidence_id": "tsmc-fab21-operating-table",
+      "excerpt": "The following table lists our wafer fabs and those of our subsidiaries in operation as of February 28, 2026, together with the year of commencement of commercial production, wafer size and the most advanced technology for volume production: ... 21 2024 12-inch 5 ... Fab 21 is located in Arizona, U.S. ... In nanometers, as of 2025 year-end.",
+      "fragment_sha256": "c20ae29aba1bae02b77a91c770301ce11cbbda8f7454eee5f069c3b7171a172e",
+      "locator": "Item 4, operating wafer-fabs table and notes, printed page 16.",
+      "role": "support",
+      "source_id": "tsmc-2025-20f",
+      "verification": {
+        "method": "normalized_text_segments_v1",
+        "result": "matched_archived_source",
+        "reviewed_at": "2026-08-20T17:10:13.021436Z",
+        "reviewer": "local:ai-critical-v1-review"
+      }
+    }
+  ],
+  "facilities": [
+    {
+      "capabilities": [
+        {
+          "category": "leading_edge_logic",
+          "claim_kind": "reconciled_fact",
+          "evidence_ids": [
+            "tsmc-fab21-hvm",
+            "tsmc-fab21-leading-edge",
+            "tsmc-fab21-operating-table"
+          ],
+          "method": "cross_source_named_facility_scope_review_v1",
+          "readiness": "production",
+          "technology": "Fab 21 / first TSMC Arizona fab; 4nm-5nm leading-edge project scope and 5nm most-advanced volume technology",
+          "valid_from": "2025-12-31"
+        }
+      ],
+      "capacities": [],
+      "company": "TSMC",
+      "facility_key": "tsmc:fab21-arizona",
+      "geography": {
+        "admin1": "Arizona",
+        "city": "Phoenix",
+        "country": "United States",
+        "country_code": "US",
+        "evidence_ids": [
+          "tsmc-fab21-hvm",
+          "tsmc-fab21-leading-edge",
+          "tsmc-fab21-operating-table"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2026-02-28"
+      },
+      "identity_evidence_ids": [
+        "tsmc-fab21-hvm",
+        "tsmc-fab21-operating-table"
+      ],
+      "identity_scope": "named_facility",
+      "identity_valid_from": "2026-02-28",
+      "lifecycle": {
+        "as_of": "2026-02-28",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "tsmc-fab21-hvm",
+          "tsmc-fab21-operating-table"
+        ],
+        "method": "operating_table_hvm_reconciliation_v1",
+        "state": "complete",
+        "statement": "TSMC identifies Fab 21 as its Arizona manufacturing entity, reports that the first Arizona facility entered high-volume production at the end of 2024, and lists Fab 21 among fabs in operation as of February 28, 2026."
+      },
+      "name": "TSMC Fab 21 (first Arizona fab)",
+      "scope_categories": [
+        "leading_edge_logic"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "announced",
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "category": "leading_edge_logic",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "samsung-taylor-leading-edge"
+          ],
+          "method": "official_project_scope_capture_v1",
+          "readiness": "planned",
+          "technology": "Two planned leading-edge logic foundry fabs focused on 2nm process technologies",
+          "valid_from": "2024-07-24"
+        }
+      ],
+      "capacities": [],
+      "company": "Samsung",
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "geography": {
+        "admin1": "Texas",
+        "city": "Taylor",
+        "country": "United States",
+        "country_code": "US",
+        "evidence_ids": [
+          "samsung-taylor-leading-edge"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2024-07-24"
+      },
+      "identity_evidence_ids": [
+        "samsung-taylor-leading-edge"
+      ],
+      "identity_scope": "project_site_scope",
+      "identity_valid_from": "2024-07-24",
+      "lifecycle": {
+        "as_of": "2024-07-24",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "samsung-taylor-leading-edge"
+        ],
+        "method": "project_announcement_lifecycle_mapping_v1",
+        "state": "announced",
+        "statement": "Taylor, Texas: Construct a comprehensive advanced manufacturing ecosystem that includes both high volume leading-edge logic manufacturing and two leading-edge logic foundry fabs focused on mass production of 2nm process technologies."
+      },
+      "name": "Samsung Taylor leading-edge logic project (two-fab aggregate)",
+      "scope_categories": [
+        "leading_edge_logic"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "announced",
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "category": "leading_edge_logic",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "intel-fab52-18a-production"
+          ],
+          "method": "official_named_facility_capability_capture_v1",
+          "readiness": "production",
+          "technology": "Intel 18A leading-edge process; Panther Lake and Clearwater Forest manufacturing",
+          "valid_from": "2025-10-09"
+        }
+      ],
+      "capacities": [],
+      "company": "Intel",
+      "facility_key": "intel:fab52-chandler",
+      "geography": {
+        "admin1": "Arizona",
+        "city": "Chandler",
+        "country": "United States",
+        "country_code": "US",
+        "evidence_ids": [
+          "intel-fab52-18a-production"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2025-10-09"
+      },
+      "identity_evidence_ids": [
+        "intel-fab52-18a-production"
+      ],
+      "identity_scope": "named_facility",
+      "identity_valid_from": "2025-10-09",
+      "lifecycle": {
+        "as_of": "2025-10-09",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "intel-fab52-18a-production"
+        ],
+        "method": "operational_before_hvm_lifecycle_mapping_v1",
+        "state": "ramping",
+        "statement": "Arizona’s Fab 52 is fully operational and set to reach high-volume production using Intel 18A later this year; Intel also states that Intel 18A products are being manufactured there."
+      },
+      "name": "Intel Fab 52",
+      "scope_categories": [
+        "leading_edge_logic"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "announced",
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "category": "advanced_packaging",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "micron-singapore-hbm-groundbreaking"
+          ],
+          "method": "official_project_scope_capture_v1",
+          "readiness": "planned",
+          "technology": "HBM advanced packaging facility",
+          "valid_from": "2025-06-26"
+        },
+        {
+          "category": "hbm_packaging",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "micron-singapore-hbm-groundbreaking"
+          ],
+          "method": "official_project_scope_capture_v1",
+          "readiness": "planned",
+          "technology": "HBM advanced packaging facility",
+          "valid_from": "2025-06-26"
+        }
+      ],
+      "capacities": [],
+      "company": "Micron",
+      "facility_key": "micron:singapore-hbm-packaging-project",
+      "geography": {
+        "admin1": "Singapore",
+        "city": "Singapore",
+        "country": "Singapore",
+        "country_code": "SG",
+        "evidence_ids": [
+          "micron-singapore-hbm-groundbreaking"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2025-06-26"
+      },
+      "identity_evidence_ids": [
+        "micron-singapore-hbm-groundbreaking"
+      ],
+      "identity_scope": "project_site_scope",
+      "identity_valid_from": "2025-06-26",
+      "lifecycle": {
+        "as_of": "2025-06-26",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "micron-singapore-hbm-groundbreaking"
+        ],
+        "method": "groundbreaking_site_preparation_mapping_v1",
+        "state": "site_preparation",
+        "statement": "In January 2025, Micron broke ground on an HBM advanced packaging facility in Singapore intended to expand total advanced packaging capacity beginning in calendar 2027."
+      },
+      "name": "Micron Singapore HBM advanced packaging facility project",
+      "scope_categories": [
+        "advanced_packaging",
+        "hbm_packaging"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "announced",
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "category": "hbm_fabrication",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "sk-m15x-hbm-scope",
+            "sk-m15x-tools-installing"
+          ],
+          "method": "official_named_facility_capability_capture_v1",
+          "readiness": "planned",
+          "technology": "Next-generation DRAM including HBM; M15X described as optimized for HBM production",
+          "valid_from": "2024-04-24"
+        }
+      ],
+      "capacities": [],
+      "company": "SK hynix",
+      "facility_key": "sk-hynix:m15x-cheongju",
+      "geography": {
+        "admin1": "North Chungcheong Province",
+        "city": "Cheongju",
+        "country": "South Korea",
+        "country_code": "KR",
+        "evidence_ids": [
+          "sk-m15x-hbm-scope"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2024-04-24"
+      },
+      "identity_evidence_ids": [
+        "sk-m15x-hbm-scope"
+      ],
+      "identity_scope": "named_facility",
+      "identity_valid_from": "2024-04-24",
+      "lifecycle": {
+        "as_of": "2025-10-29",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "sk-m15x-tools-installing"
+        ],
+        "method": "cleanroom_equipment_installation_lifecycle_mapping_v1",
+        "state": "tools_installing",
+        "statement": "Equipment installation has recently begun at M15X after the early opening of a new cleanroom."
+      },
+      "name": "SK hynix M15X",
+      "scope_categories": [
+        "hbm_fabrication"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "announced",
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "category": "advanced_packaging",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "amkor-peoria-capacity",
+            "amkor-peoria-technology"
+          ],
+          "method": "official_project_scope_capture_v1",
+          "readiness": "planned",
+          "technology": "2.5D and other next-generation advanced packaging production lines",
+          "valid_from": "2024-07-24"
+        },
+        {
+          "category": "advanced_test",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "amkor-peoria-capacity",
+            "amkor-peoria-technology"
+          ],
+          "method": "official_project_scope_capture_v1",
+          "readiness": "planned",
+          "technology": "Planned integrated-circuit test and assembly equipment",
+          "valid_from": "2024-07-24"
+        }
+      ],
+      "capacities": [
+        {
+          "base": 3700000,
+          "basis": "announced",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "amkor-peoria-capacity"
+          ],
+          "high": 3700000,
+          "input_output_basis": "source_stated_throughput",
+          "low": 3700000,
+          "method": "official_announced_throughput_capture_v1",
+          "metric": "units_throughput",
+          "notes": "Approximate future monthly rate stated to apply upon completion; not observed, installed, qualified, or economically usable capacity. Applicability period is not stated.",
+          "period_end": null,
+          "period_start": null,
+          "quantity_semantics": "monthly_rate",
+          "scope_kind": "project_addition",
+          "technology_scope": [
+            "advanced_packaging",
+            "advanced_test"
+          ],
+          "unit": "units/month",
+          "valid_from": "2024-07-24"
+        },
+        {
+          "base": 14500,
+          "basis": "announced",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "amkor-peoria-capacity"
+          ],
+          "high": 14500,
+          "input_output_basis": "source_stated_throughput",
+          "low": 14500,
+          "method": "official_announced_throughput_capture_v1",
+          "metric": "wafers_throughput",
+          "notes": "Approximate future monthly rate stated to apply upon completion; not observed, installed, qualified, or economically usable capacity. Applicability period is not stated.",
+          "period_end": null,
+          "period_start": null,
+          "quantity_semantics": "monthly_rate",
+          "scope_kind": "project_addition",
+          "technology_scope": [
+            "advanced_packaging",
+            "advanced_test"
+          ],
+          "unit": "wafers/month",
+          "valid_from": "2024-07-24"
+        }
+      ],
+      "company": "Amkor",
+      "facility_key": "amkor:peoria-advanced-packaging-project",
+      "geography": {
+        "admin1": "Arizona",
+        "city": "Peoria",
+        "country": "United States",
+        "country_code": "US",
+        "evidence_ids": [
+          "amkor-peoria-capacity"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2024-07-24"
+      },
+      "identity_evidence_ids": [
+        "amkor-peoria-capacity"
+      ],
+      "identity_scope": "project_site_scope",
+      "identity_valid_from": "2024-07-24",
+      "lifecycle": {
+        "as_of": "2024-07-24",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "amkor-peoria-capacity"
+        ],
+        "method": "project_announcement_lifecycle_mapping_v1",
+        "state": "announced",
+        "statement": "The U.S. Department of Commerce awarded funding to support construction of a new advanced packaging and test facility in Peoria; the stated throughput applies upon completion."
+      },
+      "name": "Amkor Peoria advanced packaging and test project",
+      "scope_categories": [
+        "advanced_packaging",
+        "advanced_test"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    },
+    {
+      "capabilities": [
+        {
+          "category": "advanced_packaging",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "ase-kaohsiung-capability",
+            "ase-kaohsiung-identity"
+          ],
+          "method": "official_campus_scope_capability_capture_v1",
+          "readiness": "production",
+          "technology": "FOCoS, 2.5D packaging, CPO, and high-end packaging processes at Kaohsiung Site aggregate scope",
+          "valid_from": "2025-08-01"
+        },
+        {
+          "category": "advanced_test",
+          "claim_kind": "source_statement",
+          "evidence_ids": [
+            "ase-kaohsiung-capability",
+            "ase-kaohsiung-identity"
+          ],
+          "method": "official_campus_scope_capability_capture_v1",
+          "readiness": "production",
+          "technology": "One-stop comprehensive packaging and testing solutions at Kaohsiung Site aggregate scope",
+          "valid_from": "2025-08-01"
+        }
+      ],
+      "capacities": [],
+      "company": "ASE",
+      "facility_key": "ase:kaohsiung-site",
+      "geography": {
+        "admin1": "Kaohsiung",
+        "city": "Kaohsiung",
+        "country": "Taiwan",
+        "country_code": "TW",
+        "evidence_ids": [
+          "ase-kaohsiung-identity"
+        ],
+        "geometry_scope": "unresolved",
+        "latitude": null,
+        "longitude": null,
+        "precision_m": null,
+        "valid_from": "2025-08-01"
+      },
+      "identity_evidence_ids": [
+        "ase-kaohsiung-identity"
+      ],
+      "identity_scope": "campus_scope",
+      "identity_valid_from": "2025-08-01",
+      "lifecycle": {
+        "as_of": "2025-08-01",
+        "claim_kind": "reconciled_fact",
+        "evidence_ids": [
+          "ase-kaohsiung-identity"
+        ],
+        "method": "operating_manufacturing_site_lifecycle_mapping_v1",
+        "state": "complete",
+        "statement": "ASE describes Kaohsiung as its largest operating location and manufacturing site and identifies the Kaohsiung Site as a multi-plant campus in the Kaohsiung Nanzih Technology Industrial Park."
+      },
+      "name": "ASE Kaohsiung Site aggregate",
+      "scope_categories": [
+        "advanced_packaging",
+        "advanced_test"
+      ],
+      "unknowns": {
+        "capacity_bases": [
+          "announced",
+          "economically_usable",
+          "physical_construction",
+          "qualified",
+          "tool_installed"
+        ],
+        "qualification": "unknown",
+        "utilization": "unknown",
+        "yield": "unknown"
+      }
+    }
+  ],
+  "format": "semiconductor-atlas-ai-critical-input-v1",
+  "ingestion_runs": [
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.651696Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "2fadee016e0e41b430b025ca9a9dc2714a17176950e695f2f7a60b0bf5ba6706",
+          "document_role": "primary",
+          "source_id": "ase-kaohsiung-2024-report"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:ase-kaohsiung-2024-report:20260820",
+      "source_id": "ase-kaohsiung-2024-report",
+      "started_at": "2026-08-20T17:06:35.637663Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.652162Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "34ee72e3963401437475f540b27391342ccea007820ab430759b9dbe2003f9bf",
+          "document_role": "primary",
+          "source_id": "intel-fab52-2025"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:intel-fab52-2025:20260820",
+      "source_id": "intel-fab52-2025",
+      "started_at": "2026-08-20T17:06:35.651787Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.653049Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "02b4b4b45ab88e5516a499162ba1d330e7efb8d3328f31f270f9f9f2a1c27d56",
+          "document_role": "primary",
+          "source_id": "micron-2025-q3-10q"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:micron-2025-q3-10q:20260820",
+      "source_id": "micron-2025-q3-10q",
+      "started_at": "2026-08-20T17:06:35.652195Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.653356Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "dc29e77054171acd3da6d8324801319ecbf9bd8b52b80521ee93dc931ff4e8ec",
+          "document_role": "primary",
+          "source_id": "nist-amkor-peoria"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:nist-amkor-peoria:20260820",
+      "source_id": "nist-amkor-peoria",
+      "started_at": "2026-08-20T17:06:35.653090Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.653559Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "82817d6f4956e93537008d461e91be4e370324a856a43ccf8532ccdd18618009",
+          "document_role": "primary",
+          "source_id": "nist-samsung-texas"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:nist-samsung-texas:20260820",
+      "source_id": "nist-samsung-texas",
+      "started_at": "2026-08-20T17:06:35.653387Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.653796Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+          "document_role": "primary",
+          "source_id": "nist-tsmc-arizona"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:nist-tsmc-arizona:20260820",
+      "source_id": "nist-tsmc-arizona",
+      "started_at": "2026-08-20T17:06:35.653586Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.653951Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "ad8409e282e3cb9baab72d4a14adf8c2bc2563327a19edaf320fd95f10208fc8",
+          "document_role": "primary",
+          "source_id": "sk-hynix-m15x-2024"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:sk-hynix-m15x-2024:20260820",
+      "source_id": "sk-hynix-m15x-2024",
+      "started_at": "2026-08-20T17:06:35.653821Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.654157Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "6e78cc9df9141c78afed65fb9ccaf1b9fecc6e1a2dd966005d66a6f407c9b3ba",
+          "document_role": "primary",
+          "source_id": "sk-hynix-q3-2025"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:sk-hynix-q3-2025:20260820",
+      "source_id": "sk-hynix-q3-2025",
+      "started_at": "2026-08-20T17:06:35.653981Z"
+    },
+    {
+      "code_version": "official-primary-exact-byte-capture-v1",
+      "configuration": {
+        "method": "official_primary_exact_byte_local_replay",
+        "selection_version": "ai-critical-cohort-selection-v1",
+        "source_count": 1
+      },
+      "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+      "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+      "finished_at": "2026-08-20T17:06:35.658211Z",
+      "format": "semiconductor-atlas-source-ingestion-run-v1",
+      "inputs": [
+        {
+          "content_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+          "document_role": "primary",
+          "source_id": "tsmc-2025-20f"
+        }
+      ],
+      "outcome": "succeeded",
+      "run_id": "ingest:tsmc-2025-20f:20260820",
+      "source_id": "tsmc-2025-20f",
+      "started_at": "2026-08-20T17:06:35.654184Z"
+    }
+  ],
+  "recorded_at": "2026-08-20T17:48:42.113878Z",
+  "release_id": "2026-08-20-ai-critical-manufacturing-baseline-v1-r3",
+  "selection_version": "ai-critical-cohort-selection-v1",
+  "sources": [
+    {
+      "acquired_at": "2026-08-20T16:11:52Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/ase-kaohsiung-2024-sustainability-report.pdf",
+      "bytes": 36565893,
+      "content_sha256": "2fadee016e0e41b430b025ca9a9dc2714a17176950e695f2f7a60b0bf5ba6706",
+      "ingestion_run_id": "ingest:ase-kaohsiung-2024-report:20260820",
+      "language": "en",
+      "media_type": "application/pdf",
+      "published_at": "2025-08-01",
+      "published_at_basis": "The report states that the Chinese and English versions were issued in August 2025; stored as the canonical month start.",
+      "published_at_precision": "month",
+      "publisher": "ASE Kaohsiung Site",
+      "retrieved_at": "2026-08-20T16:11:52Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: ASE Kaohsiung Site, 2024 ASE Kaohsiung Sustainability Report.",
+        "license": "Copyright; no redistribution license identified.",
+        "license_url": "https://ase.aseglobal.com/about-ase/contact/",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "company-report",
+      "source_id": "ase-kaohsiung-2024-report",
+      "source_type": "official_primary",
+      "title": "2024 ASE Kaohsiung Sustainability Report",
+      "url": "https://ase.aseglobal.com/public/downloads/en/2024-asekh-csr-report-en.pdf"
+    },
+    {
+      "acquired_at": "2026-08-20T16:11:52Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/intel-fab-52-18a-newsroom.html",
+      "bytes": 227995,
+      "content_sha256": "34ee72e3963401437475f540b27391342ccea007820ab430759b9dbe2003f9bf",
+      "ingestion_run_id": "ingest:intel-fab52-2025:20260820",
+      "language": "en",
+      "media_type": "text/html",
+      "published_at": "2025-10-09",
+      "published_at_basis": "Publisher article date and embedded datePublished metadata.",
+      "published_at_precision": "day",
+      "publisher": "Intel Corporation",
+      "retrieved_at": "2026-08-20T16:11:52Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: Intel Corporation, Intel Newsroom.",
+        "license": "Intel copyright; no redistribution license identified.",
+        "license_url": "https://www.intel.com/content/www/us/en/legal/terms-of-use.html",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "company-newsroom",
+      "source_id": "intel-fab52-2025",
+      "source_type": "official_primary",
+      "title": "Intel Unveils Panther Lake Architecture: First AI PC Platform Built on 18A",
+      "url": "https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a"
+    },
+    {
+      "acquired_at": "2026-08-20T16:12:40Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/micron-2025-q3-form-10q.html",
+      "bytes": 1656066,
+      "content_sha256": "02b4b4b45ab88e5516a499162ba1d330e7efb8d3328f31f270f9f9f2a1c27d56",
+      "ingestion_run_id": "ingest:micron-2025-q3-10q:20260820",
+      "language": "en",
+      "media_type": "text/html",
+      "published_at": "2025-06-26",
+      "published_at_basis": "SEC EDGAR filing date for accession 0000723125-25-000021.",
+      "published_at_precision": "day",
+      "publisher": "Micron Technology, Inc.",
+      "retrieved_at": "2026-08-20T16:12:40Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: Micron Technology, Inc., Form 10-Q for the quarter ended May 29, 2025, via SEC EDGAR.",
+        "license": "SEC EDGAR public filing content; reuse subject to SEC attribution guidance and underlying rights.",
+        "license_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "redistribution": "licensed_redistribution",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "sec-edgar-filing",
+      "source_id": "micron-2025-q3-10q",
+      "source_type": "official_primary",
+      "title": "Micron Technology, Inc. Form 10-Q for the quarter ended May 29, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm"
+    },
+    {
+      "acquired_at": "2026-07-18T01:54:47Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-amkor-technology-inc-arizona-peoria.html",
+      "bytes": 101137,
+      "content_sha256": "dc29e77054171acd3da6d8324801319ecbf9bd8b52b80521ee93dc931ff4e8ec",
+      "ingestion_run_id": "ingest:nist-amkor-peoria:20260820",
+      "language": "en",
+      "media_type": "text/html",
+      "published_at": "2024-07-24",
+      "published_at_basis": "NIST article:published_time in publisher-local time.",
+      "published_at_precision": "day",
+      "publisher": "National Institute of Standards and Technology",
+      "retrieved_at": "2026-07-18T01:54:47Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: National Institute of Standards and Technology, CHIPS for America.",
+        "license": "U.S. government public information; embedded third-party materials may be separately protected.",
+        "license_url": "https://www.nist.gov/oam/copyrights",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "nist-chips-award",
+      "source_id": "nist-amkor-peoria",
+      "source_type": "official_primary",
+      "title": "Amkor Technology, Inc. (Arizona)",
+      "url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria"
+    },
+    {
+      "acquired_at": "2026-07-18T01:54:47Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-samsung-electronics-texas-austin.html",
+      "bytes": 69970,
+      "content_sha256": "82817d6f4956e93537008d461e91be4e370324a856a43ccf8532ccdd18618009",
+      "ingestion_run_id": "ingest:nist-samsung-texas:20260820",
+      "language": "en",
+      "media_type": "text/html",
+      "published_at": "2024-07-24",
+      "published_at_basis": "NIST article:published_time in publisher-local time.",
+      "published_at_precision": "day",
+      "publisher": "National Institute of Standards and Technology",
+      "retrieved_at": "2026-07-18T01:54:47Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: National Institute of Standards and Technology, CHIPS for America.",
+        "license": "U.S. government public information; embedded third-party materials may be separately protected.",
+        "license_url": "https://www.nist.gov/oam/copyrights",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "nist-chips-award",
+      "source_id": "nist-samsung-texas",
+      "source_type": "official_primary",
+      "title": "Samsung Electronics (Texas)",
+      "url": "https://www.nist.gov/chips/samsung-electronics-texas-austin"
+    },
+    {
+      "acquired_at": "2026-07-18T01:54:47Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-tsmc-arizona-phoenix.html",
+      "bytes": 98048,
+      "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+      "ingestion_run_id": "ingest:nist-tsmc-arizona:20260820",
+      "language": "en",
+      "media_type": "text/html",
+      "published_at": "2024-07-24",
+      "published_at_basis": "NIST article:published_time in publisher-local time.",
+      "published_at_precision": "day",
+      "publisher": "National Institute of Standards and Technology",
+      "retrieved_at": "2026-07-18T01:54:47Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: National Institute of Standards and Technology, CHIPS for America.",
+        "license": "U.S. government public information; embedded third-party materials may be separately protected.",
+        "license_url": "https://www.nist.gov/oam/copyrights",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "nist-chips-award",
+      "source_id": "nist-tsmc-arizona",
+      "source_type": "official_primary",
+      "title": "TSMC Arizona",
+      "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix"
+    },
+    {
+      "acquired_at": "2026-08-20T16:11:52Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/sk-hynix-m15x-2024.json",
+      "bytes": 9529,
+      "content_sha256": "ad8409e282e3cb9baab72d4a14adf8c2bc2563327a19edaf320fd95f10208fc8",
+      "ingestion_run_id": "ingest:sk-hynix-m15x-2024:20260820",
+      "language": "en",
+      "media_type": "application/json",
+      "published_at": "2024-04-24",
+      "published_at_basis": "Publisher API record date field.",
+      "published_at_precision": "day",
+      "publisher": "SK hynix Inc.",
+      "retrieved_at": "2026-08-20T16:11:52Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: SK hynix Inc., SK hynix Newsroom.",
+        "license": "SK hynix copyright; newsroom terms restrict reproduction and redistribution.",
+        "license_url": "https://news.skhynix.com/terms-of-use/",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "company-newsroom",
+      "source_id": "sk-hynix-m15x-2024",
+      "source_type": "official_primary",
+      "title": "SK hynix to Produce DRAM From M15X in Cheongju",
+      "url": "https://news.skhynix.com/en/wp-json/wp/v2/posts/2059"
+    },
+    {
+      "acquired_at": "2026-08-20T16:11:52Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/sk-hynix-q3-2025.json",
+      "bytes": 14057,
+      "content_sha256": "6e78cc9df9141c78afed65fb9ccaf1b9fecc6e1a2dd966005d66a6f407c9b3ba",
+      "ingestion_run_id": "ingest:sk-hynix-q3-2025:20260820",
+      "language": "en",
+      "media_type": "application/json",
+      "published_at": "2025-10-29",
+      "published_at_basis": "Publisher API record date field.",
+      "published_at_precision": "day",
+      "publisher": "SK hynix Inc.",
+      "retrieved_at": "2026-08-20T16:11:52Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: SK hynix Inc., SK hynix Newsroom.",
+        "license": "SK hynix copyright; newsroom terms restrict reproduction and redistribution.",
+        "license_url": "https://news.skhynix.com/terms-of-use/",
+        "redistribution": "metadata_and_excerpt_only",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "company-newsroom",
+      "source_id": "sk-hynix-q3-2025",
+      "source_type": "official_primary",
+      "title": "SK hynix Announces 3Q25 Financial Results",
+      "url": "https://news.skhynix.com/en/wp-json/wp/v2/posts/1035"
+    },
+    {
+      "acquired_at": "2026-08-20T16:11:52Z",
+      "adapter_version": "official-primary-exact-byte-capture-v1",
+      "archive_path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/tsmc-2025-form-20f.html",
+      "bytes": 10355816,
+      "content_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+      "ingestion_run_id": "ingest:tsmc-2025-20f:20260820",
+      "language": "en",
+      "media_type": "text/html",
+      "published_at": "2026-04-16",
+      "published_at_basis": "SEC EDGAR filing date for accession 0001628280-26-025362.",
+      "published_at_precision": "day",
+      "publisher": "Taiwan Semiconductor Manufacturing Company Limited",
+      "retrieved_at": "2026-08-20T16:11:52Z",
+      "rights": {
+        "access": "public",
+        "attribution": "Source: Taiwan Semiconductor Manufacturing Company Limited, 2025 Form 20-F, via SEC EDGAR.",
+        "license": "SEC EDGAR public filing content; reuse subject to SEC attribution guidance and underlying rights.",
+        "license_url": "https://www.sec.gov/about/webmaster-frequently-asked-questions",
+        "redistribution": "licensed_redistribution",
+        "reviewed_at": "2026-08-20"
+      },
+      "source_family": "sec-edgar-filing",
+      "source_id": "tsmc-2025-20f",
+      "source_type": "official_primary",
+      "title": "TSMC 2025 Form 20-F",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm"
+    }
+  ]
+}
