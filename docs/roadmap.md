@@ -295,6 +295,14 @@ blind historical evaluation gate. An [ASE/BIP access check](../review_plans/2026
 also retained a rejection page despite HTTP 200, leaving ASE monitoring disabled rather than
 treating transport success as access approval.
 
+The [subsequent gap review](monitoring_gap_review_2026-09-07.md) checked separate ASE
+municipal and M15X labor-office leads. It distinguishes a missing robots file from
+access rejection and successful robots access from unresolved document reuse
+rights. Neither source is enabled. The three unsupported existing detector routes
+contain historical or undated assertions, not three additional calendar schedules;
+their interpretation requires separate source-native assertion work, not invented
+dates or changes to the registered study.
+
 Add:
 
 - open optical and radar change proposals;

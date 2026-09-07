@@ -75,6 +75,13 @@ and no alternate access route was used to bypass that denial. A web-read K18B gr
 does not replace the complete Kaohsiung campus aggregate's lifecycle. ASE remains unmonitored;
 failed access is not evidence that no construction occurred.
 
+The [later municipal ASE review](../review_plans/2026-09-07-ase-kcg-acquisition-deferred.json)
+identifies a separate city-authored K18B lead. Its robots endpoint returned HTTP 404
+HTML, not the BIP rejection response. The current pinned collector has no reviewed
+missing-robots representation, and source-specific rights remain unresolved. No
+article was captured or collector enabled. K18B, Dashe K28 and Nanzih Third Park
+remain distinct source-native projects, not replacements for the campus aggregate.
+
 The [September 7 Micron review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
 does not approve durable acquisition from Micron's investor-relations site. Its linked
 [terms](https://www.micron.com/legal/terms-of-use) establish a temporary personal-viewing license,
@@ -141,6 +148,16 @@ Their M15X investment and schedule language does not by itself prove a realized 
 and company-wide HBM shipments cannot be allocated to M15X. No new raw documents were archived or
 facility claims accepted in this discovery pass. Use an independently approved disclosure source
 or obtain permission before acquiring evidence for a successor.
+
+The [later M15X labor-office review](../review_plans/2026-09-07-m15x-moel-acquisition-deferred.json)
+found an independently authored, unit-specific government construction-safety
+report dated March 19, 2025. Direct robots access passed, but the
+[Cheongju office copyright policy](https://www.moel.go.kr/local/cheongju/site/copyright/copyrightList.do)
+requires checking document-specific KOGL marking or obtaining prior consultation.
+Neither clearance is verified for the [selected report](https://www.moel.go.kr/local/cheongju/news/reportexplan/view.do?bbs_seq=20250301293).
+Only policy responses were archived; the report and attachments were not retained.
+Government-hosted syndicated journalism does not supply independent provenance or
+override third-party rights. See the [combined gap review](monitoring_gap_review_2026-09-07.md).
 
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |
