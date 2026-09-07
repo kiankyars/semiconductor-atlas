@@ -715,6 +715,13 @@ The separate [realized-event workflow](docs/realized_milestones.md) now retains 
 with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a
 canonical core claim, an HVM alias, independent physical corroboration or a scored forecast pair.
 
+The [complete operating-fab cohort](docs/tsmc_operating_fab_realizations_2026-09-07.md) now
+retains all 16 source-native rows from the same issuer table: 15 additional reported commencement
+years and the unchanged Fab 21 observation. Its [review and replay workflow](docs/realized_fab_cohort.md)
+preserves the original admission, complete row inventory and explicit operating-only selection
+bias. This is a retrospective evidence cohort, not a historical project census or a forecast result;
+the published seven-company baseline and frozen core remain unchanged.
+
 Generate the standalone, dependency-free interface from the release GeoJSON:
 
 ```sh

@@ -358,6 +358,14 @@ source-native facility and exact event while the frozen core's completed-event p
 remains unresolved. This adds one retrospective source report, zero canonical core claims and
 zero pre-outcome forecast pairs. It is not independent corroboration or a passed forecasting gate.
 
+The later [complete operating-fab cohort](tsmc_operating_fab_realizations_2026-09-07.md) retains
+all 16 data rows of that same issuer table: 15 newly accepted source-reported commencement years
+and Fab 21 carried forward at its original admission clock. This reduces within-table selection
+but preserves the operating-table's survivor bias; failed and otherwise unlisted projects are
+not enumerated. It adds no canonical core claims, pre-outcome forecast pairs or calibration.
+Core integration requires deliberate runtime isolation before changing pinned producers;
+the realization roster still needs broader project/event and non-survivor coverage.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,
