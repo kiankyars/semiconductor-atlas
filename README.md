@@ -466,6 +466,9 @@ rights decision.
 
 The achieved row-level coverage and unresolved evidence are recorded in
 `docs/ai_critical_baseline_v1_gap_matrix.md`.
+The [public-release handoff audit](docs/supply_intelligence_handoff_audit_2026-09-07.md)
+verifies the published r3 asset and distinguishes consumer compatibility from the still-missing
+evidence for quarterly Blackwell supply estimates.
 
 ### Cross-vintage change ledger
 
