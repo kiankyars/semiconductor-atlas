@@ -102,14 +102,19 @@ The EEA v16 European candidate gate is now accepted. Its pinned 2.03 GB Access d
 The extraction is complete only within that reported population: it is not a European industrial or
 semiconductor census, and no European semiconductor-recall denominator is available. A hash-bound
 108-item adjudication queue and fail-closed source-native importer are implemented. Queue priority
-does not decide scope; no candidate has been adjudicated or imported. The
+does not decide scope. The
 [full-population research pass](../review_plans/2026-09-07-eea-industrial-v16-scope-research-v2.json)
 now documents all 108 candidates, with 38 proposed inclusions, 23 provisional exclusions and 47
 evidence/scope deferrals. This closes the unresearched-queue gap, not final scope adjudication:
 historical address/process bridges, chip-embedding/materials boundaries and layout-sensitive PDF
-checks remain. The next EEA gate is a separately approved complete review and isolated import
-rehearsal. The importer currently permits one immutable review per database; changed decisions
-require explicit refresh semantics, not a second pilot import. Tabular-spatial correspondence must
+checks remain. A subsequent [complete bounded admission](eea_scope_admission_2026-09-07.md)
+accepted 15 source records and deferred 93, with no final exclusions. Its isolated schema-5 database
+adds 132 exact EEA scalar statements, preserves every parent row and passes write-denied exact
+replay. Effective dates and uncalibrated confidence remain null; the original research and frozen
+parent remain unchanged. This is exposed collaborative scope review, not blind adjudication,
+canonical identity or operating capacity. The importer currently permits one immutable review per
+database; later decisions require append-only scope-revision and consumer semantics, not a second
+pilot import. The 93 evidence/scope holds remain unresolved. Tabular-spatial correspondence must
 be verified separately before emitting geometry. Wider GLEIF activation still requires a manually
 reviewed allowlist and pinned bulk or delta acquisition at one Golden Copy publication.
 

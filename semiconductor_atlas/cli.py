@@ -600,7 +600,10 @@ def _ingest_eea_industrial_snapshot(args: argparse.Namespace) -> dict[str, objec
     snapshot = verify_eea_industrial_snapshot(args.snapshot)
     queue = read_eea_industrial_review_queue_file(args.candidate_queue)
     review = read_eea_industrial_review_file(args.review, queue=queue)
-    connection, installed = initialize(args.database)
+    if args.database.is_symlink() or not args.database.is_file():
+        raise ValueError("EEA admission requires an existing regular working database")
+    connection = connect(args.database)
+    installed: list[int] = []
     try:
         connection.execute("BEGIN IMMEDIATE")
         try:
@@ -621,7 +624,10 @@ def _ingest_eea_industrial_snapshot(args: argparse.Namespace) -> dict[str, objec
             connection.commit()
         return {
             "accepted_at": imported.accepted_at,
-            "acceptance_timestamp_basis": "explicit_operator_supplied",
+            "acceptance_timestamp_basis": json.loads(connection.execute(
+                "SELECT parameters_json FROM ingestion_runs WHERE id = ?",
+                (imported.ingestion_run_id,),
+            ).fetchone()[0])["acceptance_timestamp_basis"],
             "candidate_queue": str((queue.path or args.candidate_queue).resolve()),
             "candidate_queue_sha256": queue.raw_sha256,
             "database": str(args.database.resolve()),
@@ -994,11 +1000,16 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_eea.add_argument("--snapshot", required=True, type=Path)
     ingest_eea.add_argument("--candidate-queue", required=True, type=Path)
     ingest_eea.add_argument("--review", required=True, type=Path)
-    ingest_eea.add_argument(
+    eea_clock = ingest_eea.add_mutually_exclusive_group(required=True)
+    eea_clock.add_argument(
         "--accepted-at",
-        required=True,
         type=_timestamp,
-        help="explicit database acceptance timestamp for deterministic rebuilds",
+        help="original acceptance timestamp for exact replay only",
+    )
+    eea_clock.add_argument(
+        "--accept-now",
+        action="store_true",
+        help="sample actual admission after transaction-bound input validation",
     )
     ingest_eea.set_defaults(handler=_ingest_eea_industrial_snapshot)
 

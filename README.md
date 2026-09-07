@@ -77,8 +77,11 @@ priorities order work; they are not classifications or decisions. A complete rev
 every candidate as `accept_in_scope`, `defer`, or `reject_out_of_scope`. Accept and reject decisions
 require external HTTPS evidence acquired no later than the declared review cutoff. The importer
 creates source-native facilities and a narrow scalar claim set only for accepted candidates. It
-does not promote review outcomes, coordinates, status, ownership, output, or capacity. No v16
-candidate review has been accepted or imported yet.
+does not promote review outcomes, coordinates, status, ownership, output, or capacity. The
+[September 7 bounded admission](docs/eea_scope_admission_2026-09-07.md) now records 15 in-scope
+decisions and 93 deferrals, with no final exclusions. Its isolated schema-5 database contains
+15 source-local facility records and 132 exact EEA scalar statements; the frozen parent is unchanged.
+Claim-effective dates and uncalibrated confidence remain null, not the publication date or `1.0`.
 
 The [September 7 full-population scope research](review_plans/2026-09-07-eea-industrial-v16-scope-research-v2.json)
 records research for all 108 candidates: 38 proposed in-scope, 23 proposed out-of-scope, and 47
@@ -90,9 +93,10 @@ operating-capacity evidence. Ordinary PCB, connector and passive-component exclu
 provisional process-specific judgments; chip embedding, packaging and dedicated IC substrates
 need separate treatment. External bodies were web-read, not exact-byte archived; failed/search-only
 leads and pending PDF layout checks remain explicit. Neither research format is importable as an
-adjudication ledger. Finish the intended semantic/layout review before admission: v1 allows only
-one immutable review per database, including an all-defer or partly accepted review, so a pilot
-admission would prevent later revised decisions under this importer version.
+adjudication ledger. The separate complete admission review preserves all decisive layout/site/scope
+holds as deferrals. Both importer versions allow only one immutable review per database, including
+an all-defer or partly accepted review. Differing later decisions require explicit append-only
+scope-revision semantics; a second pilot import is not a supported refresh.
 
 ### Taiwan MOENV candidate contract
 
@@ -357,22 +361,25 @@ cmp review_plans/2026-07-20-eea-industrial-v16-candidates.json \
   /tmp/eea-industrial-v16-candidates.rebuilt.json
 ```
 
-After a complete evidence-backed review exists, validate and import that exact ledger. These
-commands are intentionally not runnable against the repository today because no accepted review
-artifact is present:
+Validate the complete review and replay the retained local admission with its original clock. The
+database and snapshot are ignored local artifacts, not included in a clean clone:
 
 ```sh
 python -m semiconductor_atlas.eea_industrial_review validate-review \
   --candidates review_plans/2026-07-20-eea-industrial-v16-candidates.json \
-  --review review_plans/2026-07-20-eea-industrial-v16-review.json
+  --review review_plans/2026-09-07-eea-industrial-v16-scope-admission-v2.json
 
 semiconductor-atlas ingest-eea-industrial-snapshot \
-  --database atlas.sqlite \
+  --database artifacts/2026-09-07-eea-reviewed-source-statements-v2-corrected.sqlite \
   --snapshot source_snapshots/2026-07-20-eea-industrial-v16-semiconductor-candidates \
   --candidate-queue review_plans/2026-07-20-eea-industrial-v16-candidates.json \
-  --review review_plans/2026-07-20-eea-industrial-v16-review.json \
-  --accepted-at YYYY-MM-DDTHH:MM:SSZ
+  --review review_plans/2026-09-07-eea-industrial-v16-scope-admission-v2.json \
+  --accepted-at 2026-09-07T18:00:52.627180Z
 ```
+
+For a new admission to a separately prepared existing schema-5 database, use `--accept-now` instead
+of `--accepted-at`. The latter is replay-only, not permission to backdate a fresh import. The EEA
+command does not initialize or migrate databases, and changed reviews fail closed.
 
 The bounded GLEIF fetcher accepts one checksum-valid uppercase LEI per line in canonical sorted
 order. It spaces request starts by at least 1.1 seconds, retries a Golden Copy rotation as a whole,
