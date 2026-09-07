@@ -73,7 +73,10 @@ Eligible documents receive one of four comparison statuses:
 - `first_observation_requires_review`: no prior eligible observation exists; or
 - `visible_text_changed_requires_review`: visible text differs from the prior observation.
 
-The latter two are review candidates, not accepted updates. Document comparison uses visible text;
+The latter two are review candidates, not accepted updates. An unchanged subsequent check does
+not resolve an earlier candidate. `attention_required=false`
+describes only this run and must not be interpreted as an empty reviewer backlog.
+Document comparison uses visible text;
 linked attachments, hyperlink-only changes, images, script-only data, and structured metadata need
 separate adapters or review. Even unchanged text can contain stale claims. No status supports
 facility closure, cancellation, capacity loss, or any other inference from absence.
