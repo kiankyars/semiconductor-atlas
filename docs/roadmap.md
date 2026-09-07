@@ -334,6 +334,13 @@ and retraction behavior.
 
 ## Phase 4: facility-level forecasts
 
+The [September 7 readiness audit](forecast_readiness_2026-09-07.md) identifies the next evidence
+gate: independently reviewed realization records paired to cutoff-safe forecast vintages. The
+current working database has expected targets and announced capacity, but no completed production
+milestones or non-announced numeric capacity. Existing ramp outputs remain unfitted assumption
+scenarios; their deterministic tests are not calibration evidence. Retrospectively collected
+guidance must not be backdated into an earlier system prediction.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,
