@@ -1,0 +1,80 @@
+{
+  "format": "semiconductor-atlas-alert-evaluation-pilot-v1",
+  "study_id": "amkor-retrospective-admission-diagnostic-2026-09-07-v1",
+  "verified_at": "2026-09-07T07:15:18.586904Z",
+  "design": "retrospective_diagnostic_not_preregistered",
+  "blinding": "not_blinded",
+  "independence_verified": false,
+  "truth_inventory_complete": false,
+  "window": {
+    "start": "2026-09-07T00:00:00Z",
+    "end": "2026-09-07T06:40:00Z",
+    "semantics": "start_inclusive_end_exclusive",
+    "selection": "all_cohort_episodes_first_admitted_in_window",
+    "frozen_at": "2026-09-07T07:13:51.012159Z"
+  },
+  "artifacts": [
+    {
+      "role": "frozen_predictions_and_embedded_history",
+      "path": "artifacts/2026-09-07-amkor-alert-evaluation-v1-frozen.json",
+      "bytes": 2120225,
+      "sha256": "9ede3f6e32699e03d01e17cc97dc9f66a410a300876b506806b0556525cf2c94"
+    },
+    {
+      "role": "evidence_linked_retrospective_labels",
+      "path": "review_plans/2026-09-07-amkor-alert-evaluation-v1-labels.json",
+      "bytes": 2996,
+      "sha256": "68c8bb729e0b3b2e6c286ef7da1227a73127377e6cd400a8707be33cd5a1c775"
+    },
+    {
+      "role": "deterministic_diagnostic_report",
+      "path": "artifacts/2026-09-07-amkor-alert-evaluation-v1-report.json",
+      "bytes": 30292,
+      "sha256": "4f69a71d691e8b7093eb35e94e5b1ae6ef46ea5502d89a5f5ff8981c84402676"
+    }
+  ],
+  "evaluator_sha256": "d583da7cbc6656eec3dab185a13f00df987cc5a5770f48e87cdf912f9745896b",
+  "source_history": {
+    "path": "artifacts/2026-09-07-ai-critical-alert-review-events-v1.json",
+    "sha256": "e0ef579f0ba6b972031bf58415dca0f242b74d68016a8ca2a96bdddd6bd09e60",
+    "event_count": 2,
+    "packet_count": 1,
+    "head_event_id": "11c402b5e2a0e51dd4b8e907e87dc773669c2d567d49b8a408ad421371a90f80",
+    "live_queue_export_unchanged": true
+  },
+  "result": {
+    "cohort_facilities": 7,
+    "admitted_episodes": 1,
+    "supported_episodes": 1,
+    "false_positive_episodes": 0,
+    "unresolved_episodes": 0,
+    "unlabelled_episodes": 0,
+    "prior_window_truth_events": 1,
+    "mature_in_window_truth_events": 0,
+    "source_to_admission_seconds": 28987857.225248,
+    "source_to_admission_days": 335.50760677370374,
+    "met_retrospectively_selected_24_hour_deadline": false,
+    "timely_event_recall": null,
+    "retractions_observed": 0,
+    "queue_status_at_cutoff": "acknowledged"
+  },
+  "verification": {
+    "exact_report_replay_from_moved_inputs": true,
+    "replay_inputs": "Frozen file, exact labels and relative supporting review copied to a private temporary directory; original artifact/review/release/source paths denied through the evaluator read helper; network socket connections denied. Installed pinned code and baseline assets remained available.",
+    "original_and_successor_source_bytes_reverified": true,
+    "original_r3_archive_sha256": "fa3db457bd4734511dee267c13d8b2404b2f25a7b2d12f85bbf4c6f4aad542f4",
+    "core_tests_passed": 748,
+    "web_tests_passed": 12,
+    "new_evaluator_tests": 36
+  },
+  "limitations": [
+    "One already known and non-independently adjudicated case cannot establish population accuracy, false-positive rate, confidence calibration or early detection.",
+    "The source publication clock was checked against retained publisher metadata, not a contemporaneously observed 2025 capture.",
+    "No complete event search was performed, and six facilities have no admitted episode or truth label in this diagnostic.",
+    "The 24-hour deadline and study window were selected after seeing the case; they are not preregistered targets.",
+    "Score replay requires the frozen file, exact labels, referenced review files and pinned installed code; the report alone is not a standalone replay package.",
+    "No canonical claim, source-review queue, alert-review queue, schedule, source permission or delivery status was changed. No new release was published."
+  ],
+  "phase3_gate_passed": false,
+  "delivery_eligible": false
+}

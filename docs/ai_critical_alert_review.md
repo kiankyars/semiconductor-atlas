@@ -114,4 +114,7 @@ messages, claim comprehensive monitoring, accept manufacturing claims, infer los
 rows, or repair canonical data. Confidence remains unknown. Duplicate handling is not a calibrated
 time-based hysteresis policy. Blind historical evaluation still needs independently adjudicated
 outcomes, a defined source/coverage denominator, precision and false-positive burden, detection lag,
-and retraction behavior. Forecast and supply-demand scenario gates remain separate.
+and retraction behavior. The [frozen retrospective diagnostic evaluator](alert_evaluation.md)
+now consumes portable ledger exports without changing the queue. It exposes missing labels,
+backfills and conditional metrics, but does not establish blind performance or delivery readiness.
+Forecast and supply-demand scenario gates remain separate.

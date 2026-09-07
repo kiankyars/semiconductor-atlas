@@ -68,6 +68,13 @@ a general publisher crawler or certify complete update coverage.
 
 ## Official sources requiring adapter-specific review
 
+The [September 7 ASE/BIP access review](../review_plans/2026-09-07-ase-bip-acquisition-blocked.json)
+retains a failed direct access check, not an approved collector. The BIP robots URL returned
+HTTP 200 with a 229-byte `Request Rejected` HTML page. No publisher document was then fetched,
+and no alternate access route was used to bypass that denial. A web-read K18B groundbreaking lead
+does not replace the complete Kaohsiung campus aggregate's lifecycle. ASE remains unmonitored;
+failed access is not evidence that no construction occurred.
+
 The [September 7 Micron review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
 does not approve durable acquisition from Micron's investor-relations site. Its linked
 [terms](https://www.micron.com/legal/terms-of-use) establish a temporary personal-viewing license,

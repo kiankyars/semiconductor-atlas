@@ -195,6 +195,16 @@ calibration are still unproven. The [Micron acquisition review](../review_plans/
 found no sufficient retention permission for the selected issuer route and did not enable a
 collector or revise the baseline. The full seven-facility coverage denominator is unchanged.
 
+The [frozen diagnostic evaluator](alert_evaluation.md) retains the complete admitted-episode
+population and evidence-linked outcome labels for offline replay. It measures conditional
+precision, unresolved-label bounds, source-to-admission lag, duplicate matches and recorded
+retractions. Earlier source events may support new backfills but do not count as in-window recall;
+missing labels do not become verified misses. Window and deadline selection are retrospective,
+independence is unverified and the truth inventory can be incomplete. This does not complete the
+blind historical evaluation gate. An [ASE/BIP access check](../review_plans/2026-09-07-ase-bip-acquisition-blocked.json)
+also retained a rejection page despite HTTP 200, leaving ASE monitoring disabled rather than
+treating transport success as access approval.
+
 Add:
 
 - open optical and radar change proposals;

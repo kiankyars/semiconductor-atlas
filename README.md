@@ -504,7 +504,10 @@ claims, evidence, provenance, exports, hashes, and clocks remain exact. The reta
 Alert proposals have unknown confidence and are not delivery-eligible. The separate
 [review ledger](docs/ai_critical_alert_review.md) adds acknowledgment and retraction; calibrated
 hysteresis and blind historical detection-performance evaluation remain open. This does not
-complete roadmap Phase 3. The comparison writes a new bundle and optional deterministic archive;
+complete roadmap Phase 3. The [frozen diagnostic evaluator](docs/alert_evaluation.md) measures
+evidence-linked retrospective labels, preserves unresolved outcomes and separates backfills from
+in-window detections. It cannot certify blind performance or enable delivery.
+The comparison writes a new bundle and optional deterministic archive;
 it does not modify either input release, including the retained `r3` bundle. Output paths are preflighted outside
 both inputs. The bundle and archive are separate no-replace publications, so a late archive failure
 can leave the already validated bundle in place.
