@@ -50,6 +50,19 @@ third-party material; it does not resolve acquisition rights by changing hosts.
 
 ## Next gates
 
+A subsequent [Micron SEC research decision](../review_plans/2026-09-07-micron-sec-q3-2026-acquisition-deferred.json)
+identifies a distinct Form 10-Q filed June 25, 2026. Its
+[Singapore investment bullet](https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm)
+states a first-half-2027 HBM packaging expansion target, compared with calendar 2027 in the
+hash-reverified older filing. This is narrower source guidance, not a demonstrated acceleration,
+attained production or capacity quantity. Both filings predate the baseline cutoff; the first
+publication of the narrower wording is unestablished. The neighboring NAND project is separate.
+
+The direct SEC robots probe returned HTTP 403 and an HTML access-rejection page. Only that
+policy response was retained; no subsequent policy, filing or index request or workaround was
+attempted. Web-readable policy and filing content do not establish exact-byte collector access.
+The newer filing remains an unaccepted research lead, outside the source queue and frozen study.
+
 The present scheduled coverage remains seven exact documents across five cohort
 scopes; SK hynix and ASE remain unmonitored. A source-specific rights decision and
 compatible acquisition protocol must precede a new collection plan. Any expansion
