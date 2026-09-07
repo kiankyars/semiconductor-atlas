@@ -616,6 +616,12 @@ supported-route comparison before a cutoff, including unadmitted revisions and r
 Post-freeze source-statement labels measure conditional support and admission coverage; they do
 not establish realized production, publisher recall, independent evaluation or calibrated forecasts.
 
+The [retained source-observation inventory](docs/curated_observation_population.md) moves the
+denominator before claim acceptance: every captured document check, unimported capture and durable
+polling intent in its declared inputs remains visible. The actual frozen sample has 22 checks,
+including unchanged and policy-blocked observations; collector classifications are not semantic
+revision labels or proof of complete publisher coverage.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

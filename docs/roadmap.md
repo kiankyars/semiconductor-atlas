@@ -231,6 +231,13 @@ conditional proposal support from admission coverage and production realization.
 adjudicated outcomes, blind detection evaluation and calibrated forecasting remain open; the
 new workflow alone does not meet those gates.
 
+The additive [source-observation inventory](curated_observation_population.md) moves selection
+upstream of accepted claims. It retains all source-queue packets, declared capture roots, durable
+poll intents and original predecessor ledgers, including failed/uncomparable cases. Its actual
+22-check retrospective population contains repeated unchanged observations but no semantic target
+revision labels. Historical replay preserves the old population after later captures and queue
+events are added. This is not a publisher-complete truth inventory or the blind evaluation gate.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,
