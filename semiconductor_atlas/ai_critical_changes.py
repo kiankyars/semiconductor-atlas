@@ -1752,7 +1752,7 @@ def write_deterministic_change_archive(
             status_after_hash = os.fstat(raw_stream.fileno())
             if (status_after_hash.st_dev, status_after_hash.st_ino) != stage_identity:
                 raise OSError("change archive stage identity changed while hashing")
-        if _pretty_bytes(validate_change_bundle(output)) != manifest_raw:
+        if _pretty_bytes(validate_change_bundle(output, *protected_directories)) != manifest_raw:
             raise ValueError("change bundle changed during archive creation")
         _check_path_identity(
             output,

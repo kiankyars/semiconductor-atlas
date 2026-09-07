@@ -1449,6 +1449,26 @@ class AICriticalChangeDetectionTests(unittest.TestCase):
                 )
             self.assertFalse(archive.exists())
 
+    def test_archive_rechecks_sources_after_tar_generation(self) -> None:
+        prior, current = self._release_pair()
+        bundle = self.root / "source-race-bundle"
+        archive = self.root / "source-race.tar.gz"
+        write_change_bundle(prior, current, bundle)
+        actual_hash = change_module._hash_stream
+
+        def hash_then_mutate(stream: object) -> tuple[int, str]:
+            result = actual_hash(stream)
+            evidence = prior / "evidence.jsonl"
+            evidence.write_bytes(evidence.read_bytes() + b"\n")
+            return result
+
+        with patch.object(change_module, "_hash_stream", side_effect=hash_then_mutate):
+            with self.assertRaises((ValueError, OSError)):
+                write_deterministic_change_archive(
+                    bundle, archive, protected_directories=(prior, current)
+                )
+        self.assertFalse(archive.exists())
+
     def test_change_bundle_validation_rejects_tampering_extra_symlink_and_missing(
         self,
     ) -> None:
