@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import sqlite3
+import stat
 import tempfile
 from contextlib import contextmanager
 from pathlib import Path
@@ -44,6 +45,46 @@ def _sha(path: Path) -> str:
 def _state(path: Path) -> tuple:
     stat = path.stat(follow_symlinks=False)
     return stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns, _sha(path)
+
+
+def _verify_directory(path: Path, descriptor: int) -> None:
+    _, current = _open_real_directory_fd(path, "EEA publication parent", create=False)
+    try:
+        expected, actual = os.fstat(descriptor), os.fstat(current)
+        if (expected.st_dev, expected.st_ino) != (actual.st_dev, actual.st_ino):
+            raise ValueError("EEA publication parent directory changed")
+    finally:
+        os.close(current)
+
+
+def _publish(staged: Path, output: Path, descriptor: int) -> None:
+    _verify_directory(output.parent, descriptor)
+    _, stage_fd = _open_real_directory_fd(staged.parent, "EEA publication staging", create=False)
+    linked = False
+    try:
+        expected = os.stat(staged.name, dir_fd=stage_fd, follow_symlinks=False)
+        if not stat.S_ISREG(expected.st_mode):
+            raise ValueError("EEA publication staging must be a regular non-symlink file")
+        os.link(staged.name, output.name, src_dir_fd=stage_fd,
+                dst_dir_fd=descriptor, follow_symlinks=False)
+        linked = True
+        _verify_directory(output.parent, descriptor)
+        actual = os.stat(output.name, dir_fd=descriptor, follow_symlinks=False)
+        if (expected.st_dev, expected.st_ino) != (actual.st_dev, actual.st_ino):
+            raise ValueError("EEA published file differs from the verified staging file")
+        os.fsync(descriptor)
+    except BaseException:
+        if linked:
+            try:
+                actual = os.stat(output.name, dir_fd=descriptor, follow_symlinks=False)
+                if (expected.st_dev, expected.st_ino) == (actual.st_dev, actual.st_ino):
+                    os.unlink(output.name, dir_fd=descriptor)
+                    os.fsync(descriptor)
+            except FileNotFoundError:
+                pass
+        raise
+    finally:
+        os.close(stage_fd)
 
 
 @contextmanager
@@ -136,6 +177,8 @@ def restore_history(parent_database, *, history_file, output_database) -> dict:
     parent, packet = _file(parent_database), _file(history_file)
     states = {parent: _state(parent), packet: _state(packet)}
     raw = packet.read_bytes()
+    if len(raw) != states[packet][2] or scope._hash(raw) != states[packet][-1]:
+        raise ValueError("EEA history consumed bytes differ from the checked packet")
     artifact = _strict_json(raw, "EEA scope history")
     fields = {"format", "recorded_at", "parent", "candidate_queue_utf8",
               "candidate_queue_sha256", "scope_report", "tables", "tables_sha256", "restoration_only"}
@@ -168,6 +211,7 @@ def restore_history(parent_database, *, history_file, output_database) -> dict:
                         or any(not isinstance(row, list) or len(row) != len(actual) for row in entry["rows"])):
                     raise ValueError("EEA history table columns or rows differ")
             with tempfile.TemporaryDirectory(prefix=".eea-restore-", dir=output.parent) as stage:
+                _verify_directory(output.parent, parent_fd)
                 staged = Path(stage) / "restored.sqlite"
                 base.execute("VACUUM INTO ?", (str(staged),))
                 with _connection(staged, write=True) as db:
@@ -193,8 +237,7 @@ def restore_history(parent_database, *, history_file, output_database) -> dict:
                         raise ValueError("EEA restoration input changed before publication")
                 with staged.open("rb") as handle:
                     os.fsync(handle.fileno())
-                os.link(staged, output.name, dst_dir_fd=parent_fd)
-                os.fsync(parent_fd)
+                _publish(staged, output, parent_fd)
         return {"database": str(output), "head_run_id": report["head_run_id"],
                 "restored_runs": len(report["history"]), "historical_restoration": True,
                 "parent_sha256": states[parent][-1], "history_sha256": scope._hash(raw)}
@@ -212,13 +255,13 @@ def write_history(database, *, parent_database, candidate_queue, recorded_at: st
         if output.exists() or output.is_symlink():
             raise ValueError("EEA export output already exists")
         with tempfile.TemporaryDirectory(prefix=".eea-export-", dir=output.parent) as stage:
+            _verify_directory(output.parent, descriptor)
             staged = Path(stage) / "history.json"
             with staged.open("xb") as handle:
                 handle.write(raw)
                 handle.flush()
                 os.fsync(handle.fileno())
-            os.link(staged, output.name, dst_dir_fd=descriptor)
-            os.fsync(descriptor)
+            _publish(staged, output, descriptor)
         return {"path": str(output), "sha256": scope._hash(raw), "bytes": len(raw),
                 "head_run_id": artifact["scope_report"]["head_run_id"],
                 "recorded_at": recorded_at, "parent_sha256": artifact["parent"]["sha256"]}

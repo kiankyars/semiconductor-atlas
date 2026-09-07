@@ -13,7 +13,7 @@ from .database import schema_version
 from .eea_industrial_review import parse_eea_industrial_review_bytes
 from .models import (
     ClaimKind, ClaimVersion, Entity, EntityKind, IngestionRun, IngestionRunDocument,
-    IngestionStatus, SourceRecord,
+    IngestionStatus, Source, SourceDocument, SourceFamily, SourceRecord,
 )
 from .repository import insert_claim, stable_id, validate_database
 from .service import source_claim_records
@@ -72,6 +72,71 @@ def _documents(parameters: dict) -> tuple[str, str]:
     )
 
 
+def _verify_source_metadata(connection, parameters: dict) -> None:
+    snapshot = _snapshot_metadata(parameters)
+    accepted_at = parameters["accepted_at"]
+    family_id = stable_id("source-family", seed.SOURCE_FAMILY_KEY)
+    source_id = stable_id("source", seed.SOURCE_KEY)
+    raw_document, document = _documents(parameters)
+    clocks = {}
+    for table, identifier in (("source_families", family_id), ("sources", source_id)):
+        clock = seed._existing_created_at(connection, table, identifier, accepted_at)
+        seed._canonical_timestamp(clock, "EEA source creation")
+        if seed._clock(clock) > seed._clock(accepted_at):
+            raise ValueError("EEA source metadata was created after genesis")
+        clocks[table] = clock
+    expected = (
+        SourceFamily(family_id, seed.SOURCE_FAMILY_KEY, seed.SOURCE_FAMILY_NAME,
+            clocks["source_families"], description=(
+                "Official European industrial-reporting records retained as "
+                "source-native facility evidence after explicit scope review.")),
+        Source(source_id, family_id, seed.SOURCE_KEY, seed.SOURCE_NAME,
+            seed.SOURCE_PUBLISHER, seed.EEA_DATASET_URL, clocks["sources"],
+            license=seed.EEA_LICENSE),
+        SourceDocument(raw_document, source_id, seed.EEA_RAW_URL,
+            "EEA Industrial Reporting v16 official Access database", snapshot.retrieved_at,
+            snapshot.raw_sha256, published_at=seed.EEA_PUBLICATION_DATE,
+            media_type="application/msaccess", license=seed.EEA_LICENSE, metadata={
+                "artifact_kind": "retained_official_relational_source",
+                "attribution": seed.EEA_ATTRIBUTION, "dataset_id": seed.EEA_DATASET_ID,
+                "edition": seed.EEA_EDITION, "retention_path": seed.EEA_RAW_PATH,
+                "snapshot_manifest_sha256": snapshot.manifest_sha256}),
+        SourceDocument(document, source_id, seed.EEA_DOI_URL,
+            "EEA Industrial Reporting v16 semiconductor candidate derivative", snapshot.accepted_at,
+            snapshot.candidate_sha256, published_at=seed.EEA_PUBLICATION_DATE,
+            media_type="application/x-ndjson", license=seed.EEA_LICENSE, metadata={
+                "artifact_kind": "deterministic_privacy_minimized_candidate_derivative",
+                "attribution": seed.EEA_ATTRIBUTION, "dataset_id": seed.EEA_DATASET_ID,
+                "edition": seed.EEA_EDITION, "filter_version": seed.EEA_FILTER_VERSION,
+                "record_count": snapshot.candidate_count,
+                "retention_path": seed.EEA_CANDIDATE_FILENAME,
+                "snapshot_manifest_sha256": snapshot.manifest_sha256,
+                "upstream_document_id": raw_document}),
+    )
+    for value in expected:
+        seed._persist(connection, value, replayed=True)
+
+
+def _verify_scalar(connection, claim_id: str, value) -> None:
+    if value.scalar_type != seed.ScalarType.TEXT:
+        raise ValueError("EEA scope materialization requires an exact text scalar")
+    row = connection.execute("SELECT * FROM scalar_values WHERE claim_version_id = ?",
+                             (claim_id,)).fetchone()
+    expected = {"claim_version_id": claim_id, "value_kind": "scalar",
+                "scalar_type": "text", "text_value": value.value,
+                "number_value": None, "integer_value": None, "boolean_value": None,
+                "unit": value.unit}
+    if row is None or dict(row) != expected:
+        raise ValueError("EEA materialization differs from its exact scalar payload")
+    registry = connection.execute("SELECT * FROM claim_values WHERE claim_version_id = ?",
+                                  (claim_id,)).fetchone()
+    if registry is None or dict(registry) != {"claim_version_id": claim_id, "value_kind": "scalar"}:
+        raise ValueError("EEA materialization differs from its scalar registry")
+    if connection.execute("SELECT superseded_at FROM claim_versions WHERE id = ?",
+                          (claim_id,)).fetchone()[0] is not None:
+        raise ValueError("EEA scope history cannot supersede retained source statements")
+
+
 def _materialization(connection, run: dict, candidates: dict, queue, *, write: bool) -> dict:
     """Create or verify only a candidate's first admission; never reinsert reused facts."""
     parameters = json.loads(run["parameters_json"])
@@ -100,6 +165,9 @@ def _materialization(connection, run: dict, candidates: dict, queue, *, write: b
             series_id, _ = seed._ensure_series(connection, entity_id=entity_id,
                 entity_key=key, predicate=spec.predicate, dimension=spec.dimension,
                 created_at=accepted_at, replayed=not write)
+            if connection.execute("SELECT created_at FROM claim_series WHERE id = ?",
+                                  (series_id,)).fetchone()[0] != accepted_at:
+                raise ValueError("EEA source series creation differs from first admission")
             claim_id = stable_id("claim-version", run["code_version"], series_id,
                                  record_id, seed.EEA_PUBLICATION_DATE)
             if not write and connection.execute(
@@ -110,6 +178,7 @@ def _materialization(connection, run: dict, candidates: dict, queue, *, write: b
                 spec.method, 1.0 if is_legacy else None, created_by_run_id=run["id"],
                 notes=spec.notes if is_legacy else spec.notes + _UNKNOWN_NOTES),
                 spec.value, evidence=spec.evidence)
+            _verify_scalar(connection, claim_id, spec.value)
             candidate_claims.append(claim_id)
         identities.append(entity_id)
         records.append(record_id)
@@ -164,6 +233,7 @@ def _history(connection, queue) -> tuple[list[dict], dict]:
                     or base_snapshot["candidate_count"] != queue.source_candidate_count
                     or base_snapshot["accepted_at"] != queue.snapshot_accepted_at):
                 raise ValueError("EEA genesis snapshot does not match the exact candidate queue")
+            _verify_source_metadata(connection, parameters)
         elif parameters["snapshot"] != base_snapshot:
             raise ValueError("scope revision cannot change the EEA snapshot")
         expected_parameters = seed._run_parameters(snapshot=_snapshot_metadata(parameters),

@@ -90,12 +90,44 @@ INSERT/UPDATE/DELETE operations with those operations denied, and left the worki
 unchanged. `completed_at` retains the explicit prewrite validation/admission meaning used by the v2
 importer; it is not a post-commit wall-clock completion timestamp.
 
-The final suites passed 1,249 core and 12 web tests. New tests cover all four transition types,
+The initial implementation at `1a39816` passed 1,249 core and 12 web tests. Its tests cover all four transition types,
 all-deferred and legacy genesis, microsecond cutoffs, old-event replay under SQLite write denial,
 stale heads, clock failures, rollback after writes, caller-owned transactions, extra lineage,
 portable reconstruction, continuation after restoration, tampered predecessor bindings and CLI
 no-overwrite behavior. The real restored history reproduced an identical portable export and
 identical scoped views just before/at both the genesis and revision admission clocks.
+
+## Independent integrity follow-up
+
+An adversarial audit found gaps not covered by the initial suite. The scoped verifier now compares
+the complete stored scalar payload and registry with each source-derived value, checks exact series
+creation clocks, and rejects source-claim supersession. Comparing only a stored value fingerprint
+was insufficient: a corrupted typed value could previously pass read-only history validation and
+exact replay. A future supersession could also leak into an old-cutoff portable row graph even
+when the scoped report masked that timestamp.
+
+Genesis verification reconstructs the producer-defined source family, source and both document
+rows, including URLs, publisher, rights metadata and retained-source bindings. Recomputing a
+portable packet's table hash and mirrored report does not authorize altered deterministic source
+metadata. This verifies producer consistency, not the authenticity of arbitrary external review
+statements. Pre-existing source/family creation clocks remain subject to the original importer
+semantics and the exact parent binding.
+
+Restoration binds the actual consumed JSON buffer to the checked file length and hash before
+parsing. Export and restoration reconcile the destination pathname with its pinned directory
+descriptor after staging and around no-replace publication. A replaced parent directory fails;
+if a replacement is detected immediately after linking, only the newly linked, inode-matched
+output is removed. An existing target is never overwritten or removed.
+
+The retained real two-run history passed the strengthened verifier with SQLite writes denied and
+zero write attempts. Its existing 1,595,997-byte packet remains byte-identical with SHA-256
+`574a4cc57407d3b41a651c213893019ed4bc17b2c498dbfc782015a901b29aa5`.
+A fresh temporary restoration reproduced that same packet. No retained database, historical
+review, packet, original importer, database schema or frozen detector-study dependency changed.
+Thirteen additional regression tests cover the five audit findings, both documents' metadata,
+pre/post-link directory replacement, no-overwrite and valid legacy/pre-existing source clocks.
+Ten negative test methods fail against the original `1a39816` modules; all 45 combined integrity,
+revision and original-importer tests pass with the fixes.
 
 ## CLI
 
