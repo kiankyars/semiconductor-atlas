@@ -647,6 +647,52 @@ def _ingest_eea_industrial_snapshot(args: argparse.Namespace) -> dict[str, objec
         connection.close()
 
 
+def _eea_scope_connection(path: Path, *, write: bool = False):
+    if path.is_symlink() or not path.is_file():
+        raise ValueError("EEA scope requires an existing regular working database")
+    connection = sqlite3.connect(path.absolute().as_uri() + ("?mode=rw" if write else "?mode=ro"), uri=True)
+    connection.row_factory = sqlite3.Row
+    connection.execute("PRAGMA foreign_keys = ON")
+    connection.execute("PRAGMA busy_timeout = 5000")
+    return connection
+
+
+def _accept_eea_scope_revision(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_revisions import accept_revision
+
+    connection = _eea_scope_connection(args.database, write=True)
+    try:
+        return accept_revision(connection, snapshot=args.snapshot, candidate_queue=args.candidate_queue,
+            review=args.review, expected_predecessor_run_id=args.expected_predecessor_run_id,
+            accepted_at=args.accepted_at)
+    finally:
+        connection.close()
+
+
+def _eea_scope_report(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_revisions import scope_records
+
+    connection = _eea_scope_connection(args.database)
+    try:
+        return scope_records(connection, candidate_queue=args.candidate_queue, recorded_at=args.recorded_at)
+    finally:
+        connection.close()
+
+
+def _export_eea_scope_history(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_history import write_history
+
+    return write_history(args.database, parent_database=args.parent_database,
+        candidate_queue=args.candidate_queue, recorded_at=args.recorded_at, output_file=args.output)
+
+
+def _restore_eea_scope_history(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_history import restore_history
+
+    return restore_history(args.parent_database, history_file=args.history,
+                           output_database=args.output_database)
+
+
 def _ingest_moenv_snapshot(args: argparse.Namespace) -> dict[str, object]:
     snapshot = verify_moenv_snapshot(args.snapshot)
     connection, installed = initialize(args.database)
@@ -1012,6 +1058,42 @@ def build_parser() -> argparse.ArgumentParser:
         help="sample actual admission after transaction-bound input validation",
     )
     ingest_eea.set_defaults(handler=_ingest_eea_industrial_snapshot)
+
+    revise_eea = subparsers.add_parser("accept-eea-scope-revision",
+        help="append an evidence-bound EEA scope review while preserving source history")
+    revise_eea.add_argument("--database", required=True, type=Path)
+    revise_eea.add_argument("--snapshot", required=True, type=Path)
+    revise_eea.add_argument("--candidate-queue", required=True, type=Path)
+    revise_eea.add_argument("--review", required=True, type=Path)
+    revise_eea.add_argument("--expected-predecessor-run-id", required=True)
+    revision_clock = revise_eea.add_mutually_exclusive_group(required=True)
+    revision_clock.add_argument("--accept-now", action="store_true")
+    revision_clock.add_argument("--accepted-at", type=_timestamp,
+        help="original revision clock for exact replay only")
+    revise_eea.set_defaults(handler=_accept_eea_scope_revision)
+
+    scope_eea = subparsers.add_parser("eea-scope-report",
+        help="export reviewed EEA scope and retained source statements at a knowledge cutoff")
+    scope_eea.add_argument("--database", required=True, type=Path)
+    scope_eea.add_argument("--candidate-queue", required=True, type=Path)
+    scope_eea.add_argument("--recorded-at", required=True, type=_timestamp)
+    scope_eea.set_defaults(handler=_eea_scope_report)
+
+    export_eea = subparsers.add_parser("export-eea-scope-history",
+        help="export cutoff-safe EEA source and review history bound to an exact pre-EEA parent")
+    export_eea.add_argument("--database", required=True, type=Path)
+    export_eea.add_argument("--parent-database", required=True, type=Path)
+    export_eea.add_argument("--candidate-queue", required=True, type=Path)
+    export_eea.add_argument("--recorded-at", required=True, type=_timestamp)
+    export_eea.add_argument("--output", required=True, type=Path)
+    export_eea.set_defaults(handler=_export_eea_scope_history)
+
+    restore_eea = subparsers.add_parser("restore-eea-scope-history",
+        help="restore original EEA history into a new derivative of its verified parent")
+    restore_eea.add_argument("--parent-database", required=True, type=Path)
+    restore_eea.add_argument("--history", required=True, type=Path)
+    restore_eea.add_argument("--output-database", required=True, type=Path)
+    restore_eea.set_defaults(handler=_restore_eea_scope_history)
 
     ingest_moenv = subparsers.add_parser(
         "ingest-moenv-snapshot",

@@ -94,9 +94,11 @@ provisional process-specific judgments; chip embedding, packaging and dedicated 
 need separate treatment. External bodies were web-read, not exact-byte archived; failed/search-only
 leads and pending PDF layout checks remain explicit. Neither research format is importable as an
 adjudication ledger. The separate complete admission review preserves all decisive layout/site/scope
-holds as deferrals. Both importer versions allow only one immutable review per database, including
-an all-defer or partly accepted review. Differing later decisions require explicit append-only
-scope-revision semantics; a second pilot import is not a supported refresh.
+holds as deferrals. The original v1/v2 importer still allows one immutable review per database.
+The separate [append-only scope-revision workflow](docs/eea_scope_revisions.md) now supports later
+complete decisions, preserves original source statements, and provides cutoff-scoped export and
+parent-bound restoration. The real Newport evidence correction added review history without new
+claims. Different source editions, canonical identity and the 93 evidence/scope holds remain open.
 
 ### Taiwan MOENV candidate contract
 

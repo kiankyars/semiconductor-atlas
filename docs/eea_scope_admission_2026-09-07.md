@@ -135,3 +135,12 @@ The 93 deferred records still need their documented evidence or scope decisions;
 correspondence and canonical identity remain separate gates. This admission does not establish
 current production, qualified capacity, detection accuracy, forecast calibration or a compatible
 Supply Intelligence handoff. The prospective detector study remains frozen and unmodified.
+
+### Subsequent revision workflow
+
+The [append-only scope-revision workflow](eea_scope_revisions.md) now supplies the same-snapshot
+revision and scoped-consumer semantics described above. It applies the Newport evidence correction
+on a derivative of the first rehearsal while preserving both original databases. The producer hashes
+in this admission audit identify the code at commit `434bed9`; later CLI additions do not rewrite
+this historical admission record. Different source editions and the remaining manufacturing,
+identity, geography, evaluation and downstream-integration gates remain open.

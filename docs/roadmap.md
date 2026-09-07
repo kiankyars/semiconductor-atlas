@@ -112,9 +112,12 @@ accepted 15 source records and deferred 93, with no final exclusions. Its isolat
 adds 132 exact EEA scalar statements, preserves every parent row and passes write-denied exact
 replay. Effective dates and uncalibrated confidence remain null; the original research and frozen
 parent remain unchanged. This is exposed collaborative scope review, not blind adjudication,
-canonical identity or operating capacity. The importer currently permits one immutable review per
-database; later decisions require append-only scope-revision and consumer semantics, not a second
-pilot import. The 93 evidence/scope holds remain unresolved. Tabular-spatial correspondence must
+canonical identity or operating capacity. The subsequent [scope-revision workflow](eea_scope_revisions.md)
+adds immutable predecessor-bound reviews, reuse of original materializations, cutoff-aware source
+exports and parent-bound restoration without schema changes. The real Newport evidence correction
+created zero claims, retained the original cutoff view and restored from an identical portable
+export. The legacy v1/v2 entry point remains single-review; source-edition refresh is not implemented.
+The 93 evidence/scope holds remain unresolved. Tabular-spatial correspondence must
 be verified separately before emitting geometry. Wider GLEIF activation still requires a manually
 reviewed allowlist and pinned bulk or delta acquisition at one Golden Copy publication.
 
