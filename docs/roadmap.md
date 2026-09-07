@@ -171,9 +171,9 @@ not acquire linked documents or accept claims. The subsequent [discovery queue a
 add URL dispositions, admission-time history, recoverable imports and publisher-scoped cadence.
 The existing daily task now includes this manually tested job; actual scheduler execution remains
 unobserved. The live queue retains 64 URLs, including 14 routed leads and two deferrals, through
-an unchanged second packet and exact export/restore. Handoffs to independently approved linked
-document acquisition, wider approved coverage, complete collection-chain
-accounting beyond these bounded indexes, and historical detection-performance evaluation remain open.
+an unchanged second packet and exact export/restore. At that stage, handoffs to independently
+approved linked-document acquisition remained open alongside wider approved coverage, complete
+collection-chain accounting and historical detection-performance evaluation.
 
 The [Intel Chandler expansion](intel_chandler_monitoring.md) adds one exact municipal page naming
 Fab 52, bringing monitoring to six documents across four of seven cohort scopes. Its undated
@@ -194,6 +194,23 @@ cadence. The 16-event queue restores at every event cutoff and historical v1/v2/
 byte-identical. The existing daily task now uses the tested v4 config. This exact-URL monitoring
 does not establish discovery of later Micron announcements, current project status, scheduler
 uptime or an evaluated detection service; the issuer-site restriction remains unchanged.
+
+The [discovery-to-source handoff verifier](discovery_handoff.md) now connects one observed URL to
+independent exact-document approval, retained acquisition and explicit source-text review. The real
+Samsung Taylor pilot found duplicate substantive text on the already monitored Austin page. Both
+versions were reviewed without a baseline revision; CMS page metadata is not treated as claim-level
+dating or manufacturing progress. The new URL remains a one-off capture, so coverage stays at seven
+scheduled documents across five scopes. The 19-event source queue and five-event discovery queue
+restore at every event cutoff, and historical v1/v2/v3/v4 coverage remains byte-identical. Local
+handoff replay requires the original capture paths and is explicitly retrospective. This advances
+evidence routing, not source-to-claim acceptance, incremental detection or forecast calibration.
+
+The remaining TSMC text review contains a [substantive second-fab target-change lead](../review_plans/2026-09-07-tsmc-fab2-target-review-lead.json):
+NIST's planned production start moved from 2028 to the second half of 2027 relative to the retained
+July 18 page. Its first publication date is not established by CMS metadata. The queue remains open
+because the change belongs to a separately identified Fab 2 project/production unit, not the
+baseline's first-fab lifecycle. The next claim gate must retain this useful broader-scope evidence
+without silently narrowing it to the existing facility key or promoting a target into production.
 
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative

@@ -95,7 +95,15 @@ The 64 candidates and both deferrals survived unchanged; no new review signal wa
 API and exact-CLI repeats made no requests. The four-event/two-packet queue restored identically at
 every event cutoff. `review_plans/2026-09-07-discovery-poll-pilot.json` binds the retained evidence.
 
-The acquired-source queue remains separate with its earlier pending work. The four unmonitored
-facility scopes remain gaps. URL-to-reviewed-document handoffs, genuinely incremental evidence,
-complete collection accounting beyond the current indexes, manufacturing alert lifecycle,
-historical detection evaluation, and calibrated forecasts still require work.
+The acquired-source queue remained separate with its earlier pending work. Four facility scopes
+were unmonitored at that pilot's cutoff. Subsequent Intel and Micron expansions leave two scopes
+unmonitored; the original pilot counts are not rewritten.
+
+The [subsequent Samsung handoff](discovery_handoff.md) connects one URL to separately reviewed
+exact-document acquisition and a source-text disposition with offline verification. Its dedicated
+Taylor page repeats the monitored Austin page's substantive narrative, so it is not an additional
+recurring check or independent corroboration. Both observed versions were dismissed without a
+baseline revision. The discovery queue now retains five events and 13 routed open leads, while
+the source queue has one pending TSMC text review. This bounded local handoff does not complete
+incremental evidence discovery, source-to-claim acceptance, full collection accounting, historical
+detection evaluation or calibrated forecasts.

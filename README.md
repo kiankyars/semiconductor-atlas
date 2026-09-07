@@ -573,7 +573,22 @@ documents across five of seven scopes, using one Singapore government speech abo
 production or capacity observation. Its first text version was reviewed without changing the
 baseline. The daily task now uses v4; prior plans and due times are unchanged. SK hynix M15X and
 ASE Kaohsiung remain unmonitored. The 16-event queue restores at every event cutoff, and historical
-v1/v2/v3 coverage reports remain byte-identical. Two earlier NIST text-review items remain pending.
+v1/v2/v3 coverage reports remain byte-identical. Two earlier NIST text-review items remained pending
+at that pilot's cutoff.
+
+The [discovery-to-source handoff](docs/discovery_handoff.md) now verifies an observed URL through
+separate exact-document access approval, retained acquisition and explicit text review. One manual
+Samsung Taylor capture repeated the monitored Austin page's project narrative; both versions were
+reviewed without a baseline revision. CMS page dates are retained separately from claim dates and
+physical milestones. The duplicate URL was not added to the recurring catalog. The source queue
+now has one pending TSMC text review, and historical v1/v2/v3/v4 coverage reports replay exactly.
+The handoff's local historical projection is retrospective and depends on original capture packets;
+it is not a portable source archive, claim acceptance or evaluated early detection.
+
+The still-pending TSMC review has a [retained Fab 2 target-change lead](review_plans/2026-09-07-tsmc-fab2-target-review-lead.json):
+NIST's second-fab planned production start changed from 2028 to the second half of 2027 relative
+to the July 18 archive. This requires a separate project-scope review; it is neither an attained
+milestone nor a revision to the baseline's first-fab operating state.
 
 The [AI-critical alert-review ledger](docs/ai_critical_alert_review.md) now connects retained
 comparisons and both underlying releases to append-only proposal review. Imports require a

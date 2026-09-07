@@ -110,7 +110,15 @@ the linked documents, the older search-based archive, issuer sites, images or at
 index pages remain local. A matched company name is not a matched baseline facility, and a completed
 current page chain is not complete publisher history. The [subsequent discovery queue and runner](discovery_review_and_poll.md)
 now connect this exact bounded collector to the existing daily task after manual verification;
-no linked-document or issuer-site acquisition has been enabled.
+that index approval does not authorize linked-document or issuer-site acquisition.
+
+The separate [Samsung Taylor access review](../review_plans/2026-09-07-samsung-taylor-discovery-acquisition.json)
+approved one exact government landing-page capture for local text review under the retained NIST
+policies. The [verified handoff](discovery_handoff.md) preserves this approval separately from index
+discovery. Its project narrative repeats the already monitored Austin page, so the Taylor URL was
+not added to the recurring catalog. Raw bodies remain local; Samsung-credited images, attachments,
+linked pages and model training are excluded. Neither this review nor duplicate government text
+enables the restricted Samsung issuer collector or establishes attained Taylor manufacturing progress.
 
 September 7, 2026 discovery review: Samsung's [June 10 issuer article](https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/)
 is a Taylor construction lead, not accepted baseline evidence. Its [US Austin website terms](https://semiconductor.samsung.com/legal/)
