@@ -138,6 +138,14 @@ to manifest-bound prose rendering within the installed structured schema.
 This foundation does not complete Phase 3. It has no alert acknowledgement, retraction, hysteresis,
 or blind historical replay, and therefore has not met the exit gate below.
 
+The first substantive local successor comparison is the September 7, 2026 Amkor review. It links
+captured issuer evidence to a reviewed two-phase project scope and an earlier groundbreaking,
+preserves unresolved applicability of old throughput claims, and generates one lifecycle proposal.
+A checked 11-attempt ledger makes successes and failures visible by company, country and source
+family. It covers three selected documents, not a complete publisher search; the six other cohort
+members were not refreshed. Acquisition still uses bounded manual commands, so repeatable scheduled
+collection, complete coverage accounting, and historical detection-performance evaluation remain open.
+
 Add:
 
 - open optical and radar change proposals;

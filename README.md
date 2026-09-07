@@ -510,6 +510,15 @@ can leave the already validated bundle in place.
 
 ## Release and interface
 
+### Reviewed Amkor update
+
+The [September 7 Amkor review](docs/amkor_peoria_successor_review_2026-09-07.md) exercises the
+complete local evidence-to-change loop: three exact document checks, a reviewed successor input,
+reproducible release, and one lifecycle review proposal. It preserves four failed acquisition
+attempts and explicitly leaves the other six companies unrefreshed. Old NIST throughput figures
+remain historical assertions with unresolved applicability to the expanded project; their omission
+is not capacity loss. This is late ingestion of earlier evidence, not proven early detection.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

@@ -41,6 +41,14 @@ archive timestamp cannot substitute for publication evidence.
 
 ## Official and open first-wave candidates
 
+The September 7, 2026 [Amkor successor review](amkor_peoria_successor_review_2026-09-07.md)
+adds exactly two individually selected Amkor Company News documents under the same local-byte,
+metadata-and-short-excerpt boundary. Current robots and website terms checks are retained in the
+source packet. The NIST award page was rechecked as review context; its old rates remain visible,
+but their applicability to the expanded project is unresolved. Failed IR and municipal access
+checks are retained, and those document bodies were not acquired. This review does not authorize
+a general publisher crawler or certify complete update coverage.
+
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |
 | [Taiwan MOENV EMS_S_01](https://data.moenv.gov.tw/dataset/detail/EMS_S_01) | Taiwan source-native facility identities, exact semiconductor industry classes, full addresses, environmental-registry fields, and WGS84 point candidates | **Reviewed and accepted 2026-07-20.** The official catalogue assigns [Taiwan Open Government Data License 1.0](https://data.gov.tw/license), which permits reuse and derivatives with explicit attribution. The dataset is published by the Resource Circulation Administration and declares daily refresh. | **First non-U.S. facility adapter accepted.** The retained full package is filtered locally to exact `industryid` `2611`, `2612`, or `2613` after `industrygroup=261`; its publisher checksum and every distinct same-`emsno` variant replay offline. Environmental-control flags mean registry inclusion only, never operating status. Valid WGS84 coordinates are source points, not site boundaries. Business and factory-registration identifiers remain resolution evidence, not automatic organization or facility merges. The accepted 2026-07-20 snapshot contains 724 source-native facility identities and 798 distinct variants. |
