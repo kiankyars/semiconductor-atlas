@@ -68,6 +68,13 @@ a general publisher crawler or certify complete update coverage.
 
 ## Official sources requiring adapter-specific review
 
+The [September 7 Micron review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
+does not approve durable acquisition from Micron's investor-relations site. Its linked
+[terms](https://www.micron.com/legal/terms-of-use) establish a temporary personal-viewing license,
+not permission for the required persistent archive. No raw response was retained in the repository,
+collector enabled, or baseline claim revised. The article's new NAND fab must remain distinct from
+the Singapore HBM packaging project. The next acquisition needs separately reviewed rights.
+
 The [September 7 NIST expansion review](../review_plans/2026-09-07-nist-source-expansion.json)
 approves exact repeatable checks of the government TSMC Phoenix and Samsung Texas award pages
 under retained, hash-bound NIST access and rights policies. It does not authorize their issuer

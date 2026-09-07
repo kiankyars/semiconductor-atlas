@@ -135,8 +135,9 @@ The retained `r2` to `r3` replay produces 75 reaffirmed series and no proposals,
 release-local claim IDs do not create false changes. Historical compatibility is currently bounded
 to manifest-bound prose rendering within the installed structured schema.
 
-This foundation does not complete Phase 3. It has no alert acknowledgement, retraction, hysteresis,
-or blind historical replay, and therefore has not met the exit gate below.
+The comparison alone does not complete Phase 3. The subsequent proposal-review ledger described
+below adds acknowledgment and retraction, but delivery hysteresis and blind historical
+detection-performance evaluation remain open, so the exit gate below has not been met.
 
 The first substantive local successor comparison is the September 7, 2026 Amkor review. It links
 captured issuer evidence to a reviewed two-phase project scope and an earlier groundbreaking,
@@ -182,6 +183,17 @@ existing plan due times. The 14-event review queue restores at every event cutof
 coverage reports remain byte-identical. The existing daily task now uses the manually tested v3
 config; actual scheduler execution remains unobserved. Micron Singapore, SK hynix M15X and ASE
 Kaohsiung are the three remaining unmonitored cohort scopes.
+
+The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
+and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
+evidence and supporting review bytes in a portable append-only history, with acknowledgment,
+resolution, retraction and reopening. Actual admission clocks prevent retrospective events from
+appearing as earlier detections. This is proposal review, not canonical claim acceptance or
+automated delivery. The first real case is the Amkor retrospective lifecycle change; detection
+precision, time-based hysteresis, independently adjudicated historical outcomes and forecast
+calibration are still unproven. The [Micron acquisition review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
+found no sufficient retention permission for the selected issuer route and did not enable a
+collector or revise the baseline. The full seven-facility coverage denominator is unchanged.
 
 Add:
 

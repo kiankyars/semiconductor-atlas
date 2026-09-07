@@ -501,10 +501,11 @@ rendering differences are tolerated only for release `README.md` and `METHODOLOG
 claims, evidence, provenance, exports, hashes, and clocks remain exact. The retained local `r2` to
 `r3` comparison therefore resolves to 75 reaffirmed series and zero alert proposals.
 
-Alert proposals have unknown confidence and are not delivery-eligible. This layer has no alert
-acknowledgement, retraction, hysteresis, or blind historical replay yet, so it does not complete
-roadmap Phase 3. The comparison writes a new bundle and optional deterministic archive; it does not
-modify either input release, including the retained `r3` bundle. Output paths are preflighted outside
+Alert proposals have unknown confidence and are not delivery-eligible. The separate
+[review ledger](docs/ai_critical_alert_review.md) adds acknowledgment and retraction; calibrated
+hysteresis and blind historical detection-performance evaluation remain open. This does not
+complete roadmap Phase 3. The comparison writes a new bundle and optional deterministic archive;
+it does not modify either input release, including the retained `r3` bundle. Output paths are preflighted outside
 both inputs. The bundle and archive are separate no-replace publications, so a late archive failure
 can leave the already validated bundle in place.
 
@@ -563,6 +564,14 @@ opening/production statement was reviewed without changing the manufacturing bas
 attainment or usable capacity is inferred. The daily task uses the versioned v3 catalog/config,
 preserving prior plans and due times. Micron Singapore, SK hynix M15X and ASE Kaohsiung remain
 unmonitored. The 14-event queue and historical v1/v2 reports replay exactly.
+
+The [AI-critical alert-review ledger](docs/ai_critical_alert_review.md) now connects retained
+comparisons and both underlying releases to append-only proposal review. Imports require a
+manifest-bound review record; portable exports retain derivative evidence and supporting reviews.
+Acknowledgment, resolution, retraction and reopening preserve admission-time history without
+changing canonical facts or enabling delivery. The Amkor pilot is retrospective, not a measured
+early-detection success. The [Micron acquisition review](review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
+leaves its collector disabled pending rights sufficient for durable retention.
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 

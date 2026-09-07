@@ -141,10 +141,12 @@ the relevant source, geography or entity scope, time window, query, and complete
 release. Neither a complete comparison run nor two valid release manifests provide that evidence.
 
 Generated alert proposals retain unknown confidence and are not eligible for delivery. They are
-investigation prompts, not reconciled facts or production alerts. The current layer has no alert
-acknowledgement or retraction workflow, no hysteresis, and no blind historical replay measuring
-precision, false-positive burden, detection lag, or retraction behavior. It therefore establishes a
-deterministic Phase 3 input surface without satisfying the Phase 3 exit gate.
+investigation prompts, not reconciled facts or production alerts. The separate
+[alert-review ledger](ai_critical_alert_review.md) retains comparisons, both releases and admission
+reviews, adding acknowledgment, resolution, retraction, reopening and knowledge-time replay.
+Its reviewer decisions do not revise canonical facts or enable delivery. Time-based hysteresis and
+blind historical evaluation of precision, false-positive burden, detection lag and retraction
+behavior remain open. The Phase 3 exit gate is not satisfied.
 
 ## Units of analysis
 
