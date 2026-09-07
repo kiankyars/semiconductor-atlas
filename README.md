@@ -551,8 +551,11 @@ news and awards page chains, retaining exact responses and pagination accounting
 observed 64 document links across six index pages, with 14 company-name matches for review; it
 fetched no linked documents and accepted no claims. The inventory retains earlier links through
 later failures or rolling-window disappearance, and a restored packet reproduced its bytes exactly.
-Discovery is not yet connected to the daily task or a URL-admission review queue. This is current
-index coverage, not complete publisher history or additional refreshed facilities.
+The subsequent [discovery queue and runner](docs/discovery_review_and_poll.md) retain URL review
+dispositions, admission-time replay and crash recovery; the existing daily task now runs both
+collectors sequentially. Its manual pilot preserved all 64 URLs and two explicit deferrals through
+an unchanged repeat. Actual scheduler execution remains unobserved. This is current index coverage,
+not complete publisher history or additional refreshed facilities.
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 

@@ -166,9 +166,13 @@ text is not automatically attributed to an individual fab. The daily task uses t
 The [NIST index discovery collector](nist_discovery.md) now retains the observed current news and
 awards page chains independently of facility-scoped checks. One manual eight-request pilot retained
 64 links (14 company-name matches), and a restored packet reproduced its inventory exactly. It did
-not acquire linked documents or accept claims. New-URL reviewer admission, scheduled discovery,
-the other four scopes, wider approved coverage, complete collection-chain accounting beyond these
-bounded indexes, and historical detection-performance evaluation remain open.
+not acquire linked documents or accept claims. The subsequent [discovery queue and poll runner](discovery_review_and_poll.md)
+add URL dispositions, admission-time history, recoverable imports and publisher-scoped cadence.
+The existing daily task now includes this manually tested job; actual scheduler execution remains
+unobserved. The live queue retains 64 URLs, including 14 routed leads and two deferrals, through
+an unchanged second packet and exact export/restore. Handoffs to independently approved linked
+document acquisition, the other four scopes, wider approved coverage, complete collection-chain
+accounting beyond these bounded indexes, and historical detection-performance evaluation remain open.
 
 Add:
 

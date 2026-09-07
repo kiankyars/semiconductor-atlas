@@ -1,0 +1,118 @@
+{
+  "format": "semiconductor-atlas-discovery-poll-pilot-v1",
+  "config": {
+    "path": "acquisition_plans/nist_discovery_poll_v1.json",
+    "sha256": "eb2a935fd0bdcc9f970cb02d38cfd1638b62900a41cd4aa9f4250b4f1f4a3ba0"
+  },
+  "triage": {
+    "path": "review_plans/2026-09-07-discovered-url-triage.json",
+    "sha256": "1aa67712c915ea660a5b0d9f9f16f5bd591776a86288c3339e8fe61f44e98143",
+    "decisions": 2,
+    "disposition": "deferred; still open, no acquisition permission"
+  },
+  "queue": {
+    "path": "artifacts/2026-09-07-nist-discovery-review.sqlite",
+    "head_event_id": "ba65d921974306e3d80218ff8a1e950a9b60acd8effd8714d89f6c720e903e14",
+    "event_count": 4,
+    "run_count": 2,
+    "candidate_count": 64,
+    "pending_count": 14,
+    "unrouted_pending_count": 50,
+    "recheck_count": 0
+  },
+  "events": {
+    "path": "artifacts/2026-09-07-nist-discovery-events-v1.json",
+    "bytes": 165871,
+    "sha256": "45488bbcbea51d3e1d3bf84ecf433d0cca60533a9ace37e0408782fe4ad949cd",
+    "restored_event_stream_identical": true,
+    "restored_full_report_identical": true,
+    "identical_historical_cutoffs": 4,
+    "verification_scope": "Restored a new temporary database while retaining original immutable packet locations. An event export alone is not a raw evidence backup."
+  },
+  "capture": {
+    "path": "source_snapshots/discovery-poll-v1/95f01ba56f964ec29f07d4a0821af390",
+    "manifest_sha256": "7e672b685420574f615cfc8469bc7828f1e17c3cf2013677cf1991d9c061484c",
+    "request_count": 8,
+    "response_bytes": 733814,
+    "minimum_request_gap_seconds": 1.011283,
+    "new_unique_urls": 0,
+    "new_metadata_versions": 0
+  },
+  "invocations": [
+    {
+      "path": "artifacts/discovery-poll-v1/95f01ba56f964ec29f07d4a0821af390",
+      "finished_sha256": "7c56024372f41c66aa7cf7a60df389bcb2f0d838137889fbecece06ca3666bba",
+      "started_at": "2026-09-07T05:38:56.863313Z",
+      "finished_at": "2026-09-07T05:39:06.520098Z",
+      "status": "captured_imported",
+      "reportable_change": false,
+      "runner_sha256": "ced0d28930f1c3ffac2a994c155ef5c44585509a3995ae814d61360e45fa9d69"
+    },
+    {
+      "path": "artifacts/discovery-poll-v1/dcaf47d1c5fa4596ba2d82e2848b4a66",
+      "finished_sha256": "6f0fafc96c1ced4bbc89e34d08d5cf4768d778a009825079f5a013131dd1083f",
+      "started_at": "2026-09-07T05:39:35.126286Z",
+      "finished_at": "2026-09-07T05:39:35.542779Z",
+      "status": "not_due",
+      "reportable_change": false,
+      "runner_sha256": "ced0d28930f1c3ffac2a994c155ef5c44585509a3995ae814d61360e45fa9d69"
+    },
+    {
+      "path": "artifacts/discovery-poll-v1/14427edcee924219845dd8f008be4503",
+      "finished_sha256": "51ebcd7f828597c6331b27dfcec9ffe06823a3a0a6d1cd5998e04c46ea09cc94",
+      "started_at": "2026-09-07T05:40:28.135300Z",
+      "finished_at": "2026-09-07T05:40:28.553082Z",
+      "status": "not_due",
+      "reportable_change": false,
+      "runner_sha256": "ced0d28930f1c3ffac2a994c155ef5c44585509a3995ae814d61360e45fa9d69"
+    },
+    {
+      "path": "artifacts/discovery-poll-v1/bb01b9238f614d8993d1d428f20af1ac",
+      "finished_sha256": "fe0d415c2c2d858f81e71f9e159adf6f2d282d52b7e07e94ce4b4323cddf548c",
+      "started_at": "2026-09-07T05:42:44.578089Z",
+      "finished_at": "2026-09-07T05:42:44.995777Z",
+      "status": "not_due",
+      "reportable_change": false,
+      "runner_sha256": "068034a3ccebfc75ebca33ecbc2fcd8a901c8f67ee31cbd919db150b9ee967ef"
+    }
+  ],
+  "runner_sha256": "068034a3ccebfc75ebca33ecbc2fcd8a901c8f67ee31cbd919db150b9ee967ef",
+  "queue_code_sha256": "f0a75717dc7788ba8254f4d6ab54a11e89b93eb02256a697326d026639808246",
+  "iteration_note": "The first three invocations used the recorded earlier runner hash. A later fix reports recovery of an already-committed interrupted import once; it does not change acquisition or index extraction. Regression tests cover that recovery branch. The fourth ordinary exact-CLI invocation used the final runner hash, made no requests and remained quiet.",
+  "curated_job_manual_sequence": {
+    "api_invocation": "artifacts/curated-poll-v1/7874412dbaad4c0e9c0b07c3c8f6d153",
+    "exact_cli_invocation": "artifacts/curated-poll-v1/92260e90c9774797a92686ff516a5f5a",
+    "all_plans_not_due": true,
+    "requests": 0,
+    "reportable_change": false,
+    "queue_head_unchanged": "7a473e9b641b01fd99ffcdc26fc46d95642fa1d2102bc407225151a0e44656a9",
+    "inter_command_pause_seconds": 1
+  },
+  "automation": {
+    "id": "semiconductor-atlas-source-checks",
+    "kind": "heartbeat",
+    "status": "ACTIVE",
+    "updated_at": 1788759710014,
+    "schedule": "Existing daily 08:00 local schedule preserved",
+    "exact_prompt_readback_verified": true,
+    "commands_tested_manually_before_update": true,
+    "actual_scheduler_triggered_run_observed": false,
+    "documentation": "https://learn.chatgpt.com/docs/automations"
+  },
+  "validation": {
+    "core_tests": 682,
+    "web_tests": 12,
+    "compilation_passed": true,
+    "diff_check_passed": true,
+    "legacy_coverage_replayed_byte_identical": true
+  },
+  "limits": {
+    "claims_accepted": 0,
+    "linked_document_acquisitions": 0,
+    "publisher_complete": false,
+    "facility_coverage_complete": false,
+    "continuous_operation_proven": false,
+    "manufacturing_alert_delivery": false
+  },
+  "next_due_at": "2026-09-08T04:39:06.312020Z"
+}

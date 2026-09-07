@@ -78,9 +78,10 @@ overwrite an existing output. Capture and verify exit 2 for a valid retained pac
 attention; invalid inputs or incomplete packets exit 1. A successful inventory command does not mean
 its latest capture was healthy: inspect `latest_capture_attention_required` and the capture statuses.
 
-The existing daily curated-document task does not run this collector. Scheduling, recoverable
-inventory admission, reviewer decisions on newly discovered URLs, subsequent approved document
-acquisition, and evaluated manufacturing alerts remain separate work.
+The [subsequent discovery queue and runner](discovery_review_and_poll.md) add recoverable admission
+and URL dispositions without changing this capture/inventory contract. The existing daily task now
+runs both jobs sequentially after manual testing. Actual scheduler-triggered execution, subsequent
+independently approved document acquisition and evaluated manufacturing alerts remain unproven.
 
 ## Verified manual pilot
 

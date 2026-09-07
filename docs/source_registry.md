@@ -83,7 +83,9 @@ same-root sequential pagination after both policy checks pass. The [discovery pi
 retained 64 links across six pages, including 14 company-name matches. This does not grant access to
 the linked documents, the older search-based archive, issuer sites, images or attachments. Raw
 index pages remain local. A matched company name is not a matched baseline facility, and a completed
-current page chain is not complete publisher history. The daily task does not yet run this collector.
+current page chain is not complete publisher history. The [subsequent discovery queue and runner](discovery_review_and_poll.md)
+now connect this exact bounded collector to the existing daily task after manual verification;
+no linked-document or issuer-site acquisition has been enabled.
 
 September 7, 2026 discovery review: Samsung's [June 10 issuer article](https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/)
 is a Taylor construction lead, not accepted baseline evidence. Its [US Austin website terms](https://semiconductor.samsung.com/legal/)

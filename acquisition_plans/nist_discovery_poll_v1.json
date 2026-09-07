@@ -1,0 +1,13 @@
+{
+  "format": "semiconductor-atlas-discovery-poll-config-v1",
+  "recorded_at": "2026-09-07T05:37:02Z",
+  "plan": {
+    "path": "acquisition_plans/nist_index_discovery_v1.json",
+    "sha256": "d082d843bfae3e43417dd698f0f02cccd9a5015d3169efbe85ab4fe9c6393300"
+  },
+  "queue_path": "artifacts/2026-09-07-nist-discovery-review.sqlite",
+  "capture_root": "source_snapshots/discovery-poll-v1",
+  "state_root": "artifacts/discovery-poll-v1",
+  "interval_seconds": 82800,
+  "notes": "One NIST publisher discovery job in the existing daily 08:00 local task, after the separate curated-document job and at least a one-second pause. Publisher-scoped 23-hour cadence includes failed attempts and survives plan revisions. Reconcile completed packets before acquisition; never overwrite partial evidence, automatically resolve review, follow discovered URLs, change permissions or renew the reviewed plan. This local workspace and app must be available."
+}
