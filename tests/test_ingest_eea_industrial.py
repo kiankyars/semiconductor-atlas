@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import contextlib
+import base64
 import hashlib
 import io
 import json
+import sqlite3
 import tempfile
 import unittest
+import zlib
 from dataclasses import replace
 from pathlib import Path
 from types import SimpleNamespace
@@ -31,7 +34,7 @@ from semiconductor_atlas.ingest_eea_industrial import (
     ENTITY_KEY_PREFIX,
     accept_eea_industrial_review,
 )
-from semiconductor_atlas.repository import validate_database
+from semiconductor_atlas.repository import current_claims, known_source_claims, validate_database
 
 
 RETRIEVED_AT = "2026-07-20T10:37:16Z"
@@ -41,6 +44,96 @@ QUEUE_CUTOFF_AT = "2026-07-20T17:00:00Z"
 REVIEW_CUTOFF_AT = "2026-07-20T18:00:00Z"
 REVIEWED_AT = "2026-07-20T18:30:00Z"
 ACCEPTED_AT = "2026-07-20T19:00:00Z"
+STARTED_AT = "2026-07-20T18:59:58Z"
+VERIFIED_AT = "2026-07-20T19:00:02Z"
+
+# Synthetic semantic rows captured from the unchanged v1 importer before v2.
+# Retaining the old output tests legacy replay independently of the new writer.
+LEGACY_V1_SQL = (
+    "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"
+    "4P//AZnn5fM="
+)
 
 
 def _canonical(value: object) -> bytes:
@@ -340,14 +433,18 @@ class EEAIndustrialImportTests(unittest.TestCase):
         snapshot=None,
         queue=None,
         review=None,
-        accepted_at: str = ACCEPTED_AT,
+        accepted_at: str | None = None,
         verifier=None,
+        clocks=None,
     ):
         selected_snapshot = snapshot or self.snapshot
         selected_verifier = verifier or (lambda _root: selected_snapshot)
         with mock.patch(
             "semiconductor_atlas.ingest_eea_industrial.verify_eea_industrial_snapshot",
             side_effect=selected_verifier,
+        ), mock.patch(
+            "semiconductor_atlas.ingest_eea_industrial._now",
+            side_effect=clocks or [STARTED_AT, ACCEPTED_AT, VERIFIED_AT],
         ):
             return accept_eea_industrial_review(
                 self.connection,
@@ -412,7 +509,7 @@ class EEAIndustrialImportTests(unittest.TestCase):
             predicates,
         )
         claim_shapes = {
-            (row["claim_kind"], row["value_kind"], float(row["confidence"]))
+            (row["claim_kind"], row["value_kind"], row["confidence"])
             for row in self.connection.execute(
                 """
                 SELECT versions.claim_kind, series.value_kind, versions.confidence
@@ -421,9 +518,9 @@ class EEAIndustrialImportTests(unittest.TestCase):
                 """
             )
         }
-        self.assertEqual({("source_statement", "scalar", 1.0)}, claim_shapes)
+        self.assertEqual({("source_statement", "scalar", None)}, claim_shapes)
         self.assertEqual(
-            {"2026-02-20"},
+            {None},
             {
                 row[0]
                 for row in self.connection.execute(
@@ -710,6 +807,10 @@ class EEAIndustrialImportTests(unittest.TestCase):
                 "semiconductor_atlas.ingest_eea_industrial.verify_eea_industrial_snapshot",
                 return_value=self.snapshot,
             ),
+            mock.patch(
+                "semiconductor_atlas.ingest_eea_industrial._now",
+                side_effect=[STARTED_AT, ACCEPTED_AT, VERIFIED_AT],
+            ),
             contextlib.redirect_stdout(output),
         ):
             code = main(
@@ -723,14 +824,13 @@ class EEAIndustrialImportTests(unittest.TestCase):
                     str(queue_path),
                     "--review",
                     str(review_path),
-                    "--accepted-at",
-                    ACCEPTED_AT,
+                    "--accept-now",
                 ]
             )
 
         self.assertEqual(0, code)
         result = json.loads(output.getvalue())
-        self.assertEqual(4, result["schema_version"])
+        self.assertEqual(5, result["schema_version"])
         self.assertEqual(self.queue.raw_sha256, result["candidate_queue_sha256"])
         self.assertEqual(self.review.raw_sha256, result["review_sha256"])
         self.assertEqual(
@@ -740,6 +840,175 @@ class EEAIndustrialImportTests(unittest.TestCase):
         self.assertEqual(1, result["eea_industrial"]["entities_created"])
         self.assertEqual(9, result["eea_industrial"]["claims_created"])
         self.connection, _ = initialize(self.root / "atlas.sqlite")
+        self.assertEqual([], validate_database(self.connection))
+
+
+    def test_v2_claims_are_unknown_effective_and_visible_only_at_actual_admission(self):
+        result = self._import()
+        for world_time in ("2000-01-01", "2026-02-20", "2030-01-01"):
+            self.assertEqual([], current_claims(
+                self.connection, as_of=world_time, recorded_at=VERIFIED_AT))
+        self.assertEqual([], known_source_claims(
+            self.connection, recorded_at="2026-07-20T18:59:59.999999Z"))
+        claims = known_source_claims(self.connection, recorded_at=result.accepted_at)
+        self.assertEqual(9, len(claims))
+        self.assertTrue(all(row["valid_from"] is None and row["valid_to"] is None
+                            and row["confidence"] is None for row in claims))
+        run = self.connection.execute("SELECT * FROM ingestion_runs").fetchone()
+        self.assertEqual(STARTED_AT, run["started_at"])
+        self.assertEqual(ACCEPTED_AT, run["completed_at"])
+        self.assertNotEqual("2026-07-20T19:00:01Z", run["completed_at"])
+        self.assertTrue(run["code_version"].endswith("-v2"))
+        parameters = json.loads(run["parameters_json"])
+        self.assertEqual("unknown_claim_effective_time", parameters["source_valid_from_basis"])
+        self.assertFalse(parameters["import_policy"]["claim_confidence_calibrated"])
+        self.assertEqual({"2026-02-20"}, {row[0] for row in self.connection.execute(
+            "SELECT published_at FROM source_documents")})
+
+    def test_v2_exact_replay_denies_all_database_writes(self):
+        first = self._import()
+        before = "\n".join(self.connection.iterdump())
+        changes = self.connection.total_changes
+        self.connection.set_authorizer(lambda action, *_:
+            sqlite3.SQLITE_DENY if action in (sqlite3.SQLITE_INSERT, sqlite3.SQLITE_UPDATE,
+                                              sqlite3.SQLITE_DELETE) else sqlite3.SQLITE_OK)
+        try:
+            replay = self._import(accepted_at=first.accepted_at)
+        finally:
+            self.connection.set_authorizer(None)
+        self.assertTrue(replay.replayed_existing_run)
+        self.assertEqual(changes, self.connection.total_changes)
+        self.assertEqual(before, "\n".join(self.connection.iterdump()))
+
+    def test_original_v1_exact_replay_preserves_every_row_and_denies_writes(self):
+        self._seed_legacy_v1()
+        before = "\n".join(self.connection.iterdump())
+        changes = self.connection.total_changes
+        self.connection.set_authorizer(lambda action, *_:
+            sqlite3.SQLITE_DENY if action in (sqlite3.SQLITE_INSERT, sqlite3.SQLITE_UPDATE,
+                                              sqlite3.SQLITE_DELETE) else sqlite3.SQLITE_OK)
+        try:
+            replay = self._import(accepted_at=ACCEPTED_AT)
+        finally:
+            self.connection.set_authorizer(None)
+        self.assertTrue(replay.replayed_existing_run)
+        self.assertEqual(0, replay.claims_created)
+        self.assertEqual(changes, self.connection.total_changes)
+        self.assertEqual(before, "\n".join(self.connection.iterdump()))
+        self.assertEqual({("2026-02-20", 1.0)}, {tuple(row) for row in
+            self.connection.execute("SELECT valid_from, confidence FROM claim_versions")})
+        run = self.connection.execute("SELECT * FROM ingestion_runs").fetchone()
+        self.assertTrue(run["code_version"].endswith("-v1"))
+        self.assertEqual("2026-07-20T19:00:01Z", run["completed_at"])
+        with self.assertRaisesRegex(ValueError, "different review"):
+            self._import(review=_review(self.queue, reviewed_by="another-reviewer"))
+        self.assertEqual(before, "\n".join(self.connection.iterdump()))
+
+    def test_new_admission_cannot_use_operator_supplied_or_future_clock(self):
+        for timestamp in (ACCEPTED_AT, "2099-01-01T00:00:00Z"):
+            with self.subTest(timestamp=timestamp), self.assertRaisesRegex(ValueError, "replay-only"):
+                self._import(accepted_at=timestamp)
+        self.assertEqual(0, self.connection.execute("SELECT COUNT(*) FROM ingestion_runs").fetchone()[0])
+
+    def test_bad_actual_clocks_and_future_review_roll_back(self):
+        cases = [
+            [STARTED_AT, STARTED_AT],
+            [STARTED_AT, "2026-07-20T18:59:57Z"],
+            [STARTED_AT, "2026-07-20T19:00:00+00:00"],
+            ["2026-07-20T17:00:00Z", "2026-07-20T17:01:00Z"],
+            [STARTED_AT, ACCEPTED_AT, "2026-07-20T18:59:59Z"],
+        ]
+        before = "\n".join(self.connection.iterdump())
+        for clocks in cases:
+            with self.subTest(clocks=clocks), self.assertRaises(ValueError):
+                self._import(clocks=clocks)
+            self.assertEqual(before, "\n".join(self.connection.iterdump()))
+
+    def test_final_input_drift_after_rows_written_rolls_back(self):
+        changed = replace(self.snapshot, manifest_sha256="e" * 64)
+        reads = iter((self.snapshot, self.snapshot, changed))
+        before = "\n".join(self.connection.iterdump())
+        with self.assertRaisesRegex(ValueError, "changed during"):
+            self._import(verifier=lambda _root: next(reads))
+        self.assertEqual(before, "\n".join(self.connection.iterdump()))
+
+    def test_new_admission_requires_schema5_without_migration(self):
+        legacy_connection, _ = initialize(self.root / "schema4.sqlite", target_version=4)
+        current = self.connection
+        self.connection = legacy_connection
+        try:
+            before = "\n".join(legacy_connection.iterdump())
+            with self.assertRaisesRegex(ValueError, "schema-5"):
+                self._import()
+            self.assertEqual(before, "\n".join(legacy_connection.iterdump()))
+        finally:
+            self.connection = current
+            legacy_connection.close()
+
+    def test_mixed_version_runs_are_not_replayed_or_duplicated(self):
+        self._seed_legacy_v1()
+        self.connection.execute("""INSERT INTO ingestion_runs
+            SELECT 'mixed-v2-run', source_id, input_document_id, started_at, completed_at,
+                   status, 'eea-industrial-reviewed-facility-import-v2', parameters_json, error
+            FROM ingestion_runs""")
+        before = "\n".join(self.connection.iterdump())
+        with self.assertRaisesRegex(ValueError, "mixed-version"):
+            self._import()
+        self.assertEqual(before, "\n".join(self.connection.iterdump()))
+
+    def test_exact_replay_rejects_extra_run_document_lineage_without_writes(self):
+        original = self.connection
+        for mode in ("legacy", "v2", "all-deferred"):
+            with self.subTest(mode=mode):
+                self.connection, _ = initialize(self.root / (mode + ".sqlite"))
+                try:
+                    review = self.review
+                    if mode == "legacy":
+                        self._seed_legacy_v1()
+                    else:
+                        if mode == "all-deferred":
+                            review = _review(self.queue, {
+                                row.facility_inspire_id: "defer"
+                                for row in self.queue.candidates
+                            })
+                        self._import(review=review)
+                    replay = self._import(review=review, accepted_at=ACCEPTED_AT)
+                    expected_links = 3 if mode == "all-deferred" else 4
+                    self.assertEqual(expected_links, self.connection.execute(
+                        "SELECT COUNT(*) FROM ingestion_run_documents"
+                    ).fetchone()[0])
+                    self.connection.execute(
+                        "INSERT INTO ingestion_run_documents VALUES (?, ?, ?)",
+                        (replay.ingestion_run_id, replay.candidate_document_id,
+                         "unexpected_extra_role"),
+                    )
+                    self.connection.commit()
+                    self.assertEqual([], validate_database(self.connection))
+                    before = "\n".join(self.connection.iterdump())
+                    changes = self.connection.total_changes
+                    self.connection.set_authorizer(lambda action, *_:
+                        sqlite3.SQLITE_DENY if action in (
+                            sqlite3.SQLITE_INSERT, sqlite3.SQLITE_UPDATE,
+                            sqlite3.SQLITE_DELETE) else sqlite3.SQLITE_OK)
+                    try:
+                        with self.assertRaisesRegex(ValueError, "document lineage"):
+                            self._import(review=review, accepted_at=ACCEPTED_AT)
+                    finally:
+                        self.connection.set_authorizer(None)
+                    self.assertEqual(changes, self.connection.total_changes)
+                    self.assertEqual(before, "\n".join(self.connection.iterdump()))
+                finally:
+                    self.connection.close()
+                    self.connection = original
+
+    def _seed_legacy_v1(self):
+        tables = ["source_families", "sources", "source_documents", "ingestion_runs",
+                  "ingestion_run_documents", "source_records", "entities", "claim_series",
+                  "claim_versions", "claim_values", "scalar_values", "claim_evidence"]
+        statements = zlib.decompress(base64.b64decode(LEGACY_V1_SQL)).decode().splitlines()
+        statements.sort(key=lambda line: tables.index(line.split('"')[1]))
+        self.connection.executescript(
+            "BEGIN;\n" + "\n".join(statements) + "\nCOMMIT;")
         self.assertEqual([], validate_database(self.connection))
 
 

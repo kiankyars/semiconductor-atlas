@@ -1,0 +1,99 @@
+{
+  "format": "semiconductor-atlas-nist-index-discovery-pilot-v1",
+  "plan": {
+    "path": "acquisition_plans/nist_index_discovery_v1.json",
+    "sha256": "d082d843bfae3e43417dd698f0f02cccd9a5015d3169efbe85ab4fe9c6393300"
+  },
+  "review": {
+    "path": "review_plans/2026-09-07-nist-index-discovery.json",
+    "sha256": "6c7b2e018cb347e8a918a09af262672e86313b31d95a88de4272f950fadd0ecd"
+  },
+  "capture": {
+    "path": "source_snapshots/2026-09-07-nist-index-discovery-v1",
+    "manifest_sha256": "5f13fb7383314680e7854c70d23ed10cbf2b7ad13fdae22f5c157bd9dea5b008",
+    "started_at": "2026-09-07T05:14:12.781616Z",
+    "finished_at": "2026-09-07T05:14:22.234813Z",
+    "request_count": 8,
+    "response_bytes": 733814,
+    "minimum_observed_request_gap_seconds": 1.007826,
+    "code_sha256": "d8f4b07ae861509c1a323c11092bbc13b1de9dd3bc91c426247e188bcb46a038",
+    "parser_sha256": "13b04946afe34610a13ea786fad7c1213866b4885cd70888570e94f12d294123"
+  },
+  "inventory": {
+    "path": "artifacts/2026-09-07-nist-discovery-inventory-v1.json",
+    "as_of": "2026-09-07T05:14:22.234813Z",
+    "bytes": 102382,
+    "sha256": "64fe483eb8bfdd4c7cd3e1323a7851df40243c9de4965b8c194fd28006a394ae",
+    "observed_document_count": 64,
+    "company_matched_document_count": 14
+  },
+  "indexes": [
+    {
+      "kind": "news",
+      "page_entry_counts": [
+        10,
+        7
+      ],
+      "entry_count": 17,
+      "page_chain_complete": true
+    },
+    {
+      "kind": "awards",
+      "page_entry_counts": [
+        15,
+        15,
+        15,
+        2
+      ],
+      "entry_count": 47,
+      "page_chain_complete": true
+    }
+  ],
+  "review_leads": [
+    {
+      "url": "https://www.nist.gov/news-events/news/2026/07/trump-administration-secures-additional-100-billion-us-semiconductor",
+      "matched_company": "TSMC",
+      "index_date": "2026-07-16T12:00:00Z",
+      "reason": "News index contains a later TSMC announcement not covered by the current exact project-page monitor. Linked article remains unacquired; index metadata does not establish operating capacity or Fab 21 scope."
+    },
+    {
+      "url": "https://www.nist.gov/chips/samsung-electronics-texas-taylor",
+      "matched_company": "Samsung",
+      "reason": "Directory explicitly lists a Taylor page in addition to the Austin URL used by the existing reviewed monitor. Discovery neither acquires this URL nor establishes a Taylor lifecycle update."
+    }
+  ],
+  "verification": {
+    "offline_capture_replay": true,
+    "restored_packet_inventory_byte_identical": true,
+    "restoration_scope": "Copied the completed packet to a separate temporary directory; validation and canonical inventory matched original bytes without input-directory dependence. Temporary restored copy was discarded after the check.",
+    "legacy_coverage": {
+      "path": "artifacts/2026-09-07-ai-critical-coverage-v1.json",
+      "as_of": "2026-09-07T03:47:33.621918Z",
+      "bytes": 17708,
+      "sha256": "28cb94636f8b69d2c599414626ed50806300aea565da6f549621c235289627f6",
+      "replayed_byte_identical": true
+    },
+    "core_tests": 660,
+    "web_tests": 12,
+    "compilation_passed": true,
+    "diff_check_passed": true,
+    "independent_live_packet_audit": {
+      "method": "Separate HTML/card extraction without calling the discovery parser; compared every URL, news date and pager chain to retained results",
+      "unique_urls": 64,
+      "company_matched_entries": 14,
+      "manifest_payload_count": 22,
+      "manifest_payload_bytes": 879887,
+      "exact_payload_hashes_passed": true
+    }
+  },
+  "limits": {
+    "publisher_complete": false,
+    "facility_coverage_complete": false,
+    "linked_documents_acquired": 0,
+    "claims_accepted": 0,
+    "delivery_eligible": false,
+    "scheduled_discovery_enabled": false,
+    "continuous_operation_proven": false
+  },
+  "scope_note": "One manual pilot covers the observed current index chains, not full NIST history or an atomic publisher snapshot. Company-name matches are leads, not facility matches. All old packets, the canonical review queue, five-URL scheduled task, and published r3 producer/baseline/archive remain unchanged."
+}

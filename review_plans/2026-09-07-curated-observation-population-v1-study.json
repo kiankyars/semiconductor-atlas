@@ -1,0 +1,19 @@
+{
+  "format": "semiconductor-atlas-curated-observation-study-v1",
+  "study_id": "2026-09-07-retained-exact-document-observations-v1",
+  "start": "2026-09-07T00:00:00Z",
+  "end": "2026-09-07T10:00:00Z",
+  "queue_path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+  "retention_roots": [
+    {
+      "capture_root": "source_snapshots/curated-poll-v1",
+      "poll_state_root": "artifacts/curated-poll-v1"
+    }
+  ],
+  "seed_ledgers": [
+    {
+      "path": "source_snapshots/2026-09-07-amkor-peoria-successor/source_checks.json",
+      "sha256": "0fcd3f75c39e5a2233399e6a52df967ba47eec6820d0545f3d5d4acf727c2e61"
+    }
+  ]
+}

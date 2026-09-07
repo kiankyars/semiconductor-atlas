@@ -1,0 +1,19 @@
+{
+  "format": "semiconductor-atlas-prospective-target-study-v1",
+  "study_id": "2026-09-08-through-14-ordinary-source-targets-v1",
+  "start": "2026-09-08T00:00:00Z",
+  "end": "2026-09-15T00:00:00Z",
+  "config": {
+    "path": "acquisition_plans/ai_critical_poll_v4.json",
+    "sha256": "f693b4b13cb68a6718d67a7c31fc660c0c96cbc5dbe616789253ae41d9103156"
+  },
+  "baseline_population": {
+    "path": "artifacts/2026-09-07-curated-observation-population-v1-r3-frozen.json",
+    "sha256": "857d95ff223d83e30666d0ad73481f4901ff84e579ae1cb8da767f63de4a6fd4"
+  },
+  "prediction_root": "artifacts/2026-09-08-prospective-source-targets-v1",
+  "prediction_deadline_seconds": 3600,
+  "target_scope": "source_stated_calendar_manufacturing_targets",
+  "stopping_rule": "fixed_end_no_adaptive_stopping",
+  "prior_exposure": "The developer and reviewing agents have seen retained July and September NIST, Amkor, Chandler and MTI source bytes and September retrospective labels, including TSMC Fab 2's two formulations of the 2028 to second-half-2027 revision. Parser grammars and synthetic tests were developed using those exposed sources. This seven-day future operational window is selected after that development, not an untouched historical holdout. All configured documents are included; four exact-URL routes are implemented and three are unsupported. Predictions are source-target literal-change candidates, not physical manufacturing outcomes. No independent outcome reviewer, externally attested timestamp, publisher-complete denominator or measured detection performance is established. The fixed window is not extended or stopped because of observed results; zero positive changes would not demonstrate recall."
+}

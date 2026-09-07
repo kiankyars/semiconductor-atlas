@@ -1,0 +1,13 @@
+{
+  "format": "semiconductor-atlas-curated-poll-config-v1",
+  "recorded_at": "2026-09-07T04:39:33Z",
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v2.json",
+    "sha256": "eb8d11162caf613efb8e166b1caf3ff0c2799179c8bbe609d3bc026c23323937"
+  },
+  "queue_path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+  "capture_root": "source_snapshots/curated-poll-v1",
+  "state_root": "artifacts/curated-poll-v1",
+  "interval_seconds": 82800,
+  "notes": "Daily 08:00 America/Los_Angeles existing app heartbeat, with a 23-hour per-plan cadence. Extends exact-document monitoring to TSMC and Samsung NIST award pages while retaining Amkor plan, queue, recovery history and cadence. Document scopes are broader than individual facilities and require review. Four cohort facilities remain unmonitored; Samsung and SK hynix newsrooms remain disabled. Source-policy expiry and failures do not establish manufacturing events. The app and this local workspace must remain available. Prior v1 config remains retained for historical replay."
+}

@@ -1,0 +1,314 @@
+{
+  "format": "semiconductor-atlas-amkor-successor-review-v1",
+  "review_id": "amkor-peoria-successor-2026-09-07",
+  "reviewer": "local:amkor-successor-evidence-review-20260907",
+  "reviewed_at": "2026-09-07T02:30:24Z",
+  "status": "accepted_bounded_successor",
+  "knowledge_cutoff": "2026-09-07T02:31:58Z",
+  "acceptance_chronology": "Final r2 knowledge cutoff follows the completed review. The earlier local v1 validation candidate predated the completed review and must not be published.",
+  "prior": {
+    "input_path": "baselines/ai_critical_manufacturing_v1.json",
+    "input_sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+    "release_id": "2026-08-20-ai-critical-manufacturing-baseline-v1-r3",
+    "manifest_sha256": "1a7da06916cc935cb8b9310ae947de491c817b7ddd4abb18472fbc5d749aab45",
+    "preserved_byte_for_byte": true
+  },
+  "successor": {
+    "input_path": "baselines/ai_critical_manufacturing_v1_amkor_2026-09-07.json",
+    "input_sha256": "406bbca7a1c808e455946b1095ad8ed216b18ecd853100f3b578f859004023bd",
+    "release_id": "2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2",
+    "manifest_sha256": "e71158131075f70b299fae78951da4ba2c98473d4c14f791d63bf7ce47aac044",
+    "archive_sha256": "357f1d0122cb5ce7a66af5c0ee15b575dec619a4d2547756d3ea74122293d191",
+    "archive_bytes": 84682,
+    "validation_directory": "releases/2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2"
+  },
+  "source_checks": {
+    "path": "source_snapshots/2026-09-07-amkor-peoria-successor/source_checks.json",
+    "sha256": "0fcd3f75c39e5a2233399e6a52df967ba47eec6820d0545f3d5d4acf727c2e61",
+    "attempt_count": 11,
+    "succeeded": 7,
+    "failed": 4,
+    "successful_document_checks": 3,
+    "coverage_scope": "Three exact source documents and bounded associated access/rights checks. This is not a complete publisher or facility update search.",
+    "absence_inference_allowed": false
+  },
+  "rights_review": {
+    "reviewed_at": "2026-09-07",
+    "decision": "bounded_curated_research_capture_metadata_and_short_excerpts_only",
+    "amkor": {
+      "robots_path": "source_snapshots/2026-09-07-amkor-peoria-successor/access/amkor-robots.txt",
+      "robots_sha256": "d70380c78b1f2e8f0d6709cd1fbebef39e8d3b79309942fbfbc7ce39e4bd95a4",
+      "robots_interpretation": "The general user-agent rule disallows /search/ only; neither requested article nor /legal/ is within that path. No general crawl was performed.",
+      "terms_path": "source_snapshots/2026-09-07-amkor-peoria-successor/access/amkor-legal.html",
+      "terms_sha256": "0c6f32f4f0859d824058c00f0a02e9a15359b976b3d99acddd4f0880e12ceee1",
+      "terms_locator": "Website Disclaimer, archived HTML lines 302-316; Sales Terms and Conditions start at line 324.",
+      "interpretation": "Website disclaimer and trademark notice reviewed; sales clauses apply to seller/buyer transactions. No blanket content reuse license or unrestricted automation authorization is inferred. Publisher copyright retained; local exact bytes support replay, while only metadata, facts, reviewer rationale and minimal attributed excerpts enter the derivative.",
+      "raw_body_redistribution": false,
+      "training_authorization": "not_reviewed_or_granted",
+      "scope": "Two individually selected Company News articles."
+    },
+    "nist": {
+      "terms_url": "https://www.nist.gov/copyrights-disclaimers",
+      "current_terms_sha256": "9f613a7ca33d0a33da4abeb0588f02703a1306ca8d432b09abc3c72d12edc0a0",
+      "legacy_terms_url_status": 404,
+      "interpretation": "Current copyright page permits copying unmarked NIST public information with credit; third-party exceptions preserved. This packet uses metadata and source comparison context only.",
+      "raw_body_redistribution": false
+    }
+  },
+  "evidence_verification": [
+    {
+      "source_id": "amkor-groundbreaking-2025",
+      "path": "documents/amkor-groundbreaking-2025-10-06.html",
+      "published_at": "2025-10-06",
+      "published_timestamp": "2025-10-06T18:24:39+00:00",
+      "excerpt": "groundbreaking of its cutting-edge semiconductor packaging and test facility in Peoria, Arizona. ... cleanroom manufacturing space built in two phases",
+      "excerpt_word_count": 19,
+      "bytes": 57641,
+      "sha256": "d4a24d316d44923b2f4217dbb694f3fe9b2ac467d9c75c6c54cd32bc4994501b",
+      "started_at": "2026-09-07T02:24:26.259263Z",
+      "finished_at": "2026-09-07T02:24:26.261951Z",
+      "verification": "independent HTMLParser ordered visible-text segments and publisher publication metadata matched",
+      "fragment_sha256": "4de5f828e91a1d0231fc539a089adef6c9e9db1fa43aaeb916bd8d2297bcebc7",
+      "byline_matches_publication_metadata": true,
+      "review_method": "Independent stdlib HTMLParser and producer normalized-text matcher; exact archive size and SHA-256 checked."
+    },
+    {
+      "source_id": "amkor-peoria-scope-2026",
+      "path": "documents/amkor-scope-update-2026-05-13.html",
+      "published_at": "2026-05-13",
+      "published_timestamp": "2026-05-13T23:41:56+00:00",
+      "excerpt": "advanced semiconductor packaging and test campus in Peoria, Arizona ... Phase One of the Amkor campus is expected to open in 2028",
+      "excerpt_word_count": 21,
+      "bytes": 57671,
+      "sha256": "03a62bc91974a537b73d8097eb5f462201daec3bdb3c2357ee16d75721ad6bde",
+      "started_at": "2026-09-07T02:24:26.261988Z",
+      "finished_at": "2026-09-07T02:24:26.264118Z",
+      "verification": "independent HTMLParser ordered visible-text segments and publisher publication metadata matched",
+      "fragment_sha256": "4a299f8bf9903eafea13c435d481035e2ddd97cec80603433f617ea6c1f998bb",
+      "byline_matches_publication_metadata": true,
+      "review_method": "Independent stdlib HTMLParser and producer normalized-text matcher; exact archive size and SHA-256 checked."
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "project-continuity",
+      "outcome": "retain_project_key",
+      "subject_stable_key": "amkor:peoria-advanced-packaging-project",
+      "identity_scope": "project_site_scope",
+      "rationale": "The prior row denotes the bounded Amkor Peoria packaging/test project, not a numbered plant or surveyed parcel. The captured issuer articles describe its Peoria packaging/test campus and expansion of the same project. Retaining the project key expresses project-level continuity only; it is not an assertion that the physical site, parcel, phase boundaries, or throughput scope are unchanged.",
+      "supporting_source_ids": [
+        "amkor-groundbreaking-2025",
+        "amkor-peoria-scope-2026"
+      ],
+      "additional_source_locator": "Scope-update article archived HTML line 321 describes plans to enlarge the prior investment; the two-phase scope is in the groundbreaking article line 322."
+    },
+    {
+      "decision_id": "physical-site-continuity",
+      "outcome": "unresolved_not_asserted",
+      "geometry": null,
+      "rationale": "The originally discovered relocation news release and municipality chronology are research leads only. Exact investor-relations bytes were not acquired after access-policy transport failures; the city robots request returned 403. The accepted sources identify Peoria but do not prove a parcel-level relationship. No old/new site geometry, 56-to-104-acre relocation, parcel identity, or geographic-point claim is published.",
+      "deferred_urls": [
+        "https://ir.amkor.com/news-releases/news-release-details/amkor-announces-new-site-us-semiconductor-advanced-packaging-and",
+        "https://www.peoriaed.com/site-selection/featured-projects/amkor-technology"
+      ],
+      "planned_document_attempts": "Not attempted with curl after access-policy checks failed; an earlier research web open of the IR release returned 403. No access control was bypassed."
+    },
+    {
+      "decision_id": "lifecycle",
+      "outcome": "site_preparation",
+      "effective_date": "2025-10-06",
+      "evidence_id": "amkor-peoria-groundbreaking-two-phase",
+      "rationale": "An actual named-project groundbreaking supports site preparation. Later unquantified construction language does not select a more specific civil-works, shell, tools, qualification, or production stage. This is the latest completed physical milestone substantiated in this pass, not a claim that it is the maximum current stage.",
+      "change_time_semantics": "Late-ingested evidence of an earlier milestone; not a September 2026 new groundbreaking or proof of early detection."
+    },
+    {
+      "decision_id": "capability",
+      "outcome": "planned_advanced_packaging_and_advanced_test",
+      "effective_date": "2026-05-13",
+      "rationale": "Issuer describes the planned Peoria packaging/test campus. Readiness stays planned; a site groundbreaking does not install or qualify packaging/test equipment. Original narrower 2.5D technology wording is not transplanted to the expanded project without phase correspondence."
+    },
+    {
+      "decision_id": "historical-announced-rates",
+      "outcome": "current_scope_applicability_unresolved",
+      "historical_claims": [
+        {
+          "claim_id": "6b1b79d6-c649-55cb-98e1-aeb53b4c7b45",
+          "predicate": "capacity.units_throughput",
+          "valid_from": "2024-07-24",
+          "value": {
+            "base": 3700000,
+            "basis": "announced",
+            "high": 3700000,
+            "input_output_basis": "source_stated_throughput",
+            "low": 3700000,
+            "metric": "units_throughput",
+            "period_end": null,
+            "period_start": null,
+            "quantity_semantics": "monthly_rate",
+            "scope_kind": "project_addition",
+            "technology_scope": [
+              "advanced_packaging",
+              "advanced_test"
+            ],
+            "unit": "units/month"
+          },
+          "evidence_links": [
+            {
+              "evidence_id": "amkor-peoria-capacity",
+              "fragment_sha256": "ed20288cb00588feba70795f68c5d72068986964dc535d62caf86ef92448dc07",
+              "role": "support"
+            }
+          ],
+          "disposition": "preserved_in_prior_release_not_carried_into_current_expanded_project_projection",
+          "withdrawn": false,
+          "capacity_loss_claim": false
+        },
+        {
+          "claim_id": "863069c0-678f-5a09-a446-78e55eacf9ea",
+          "predicate": "capacity.wafers_throughput",
+          "valid_from": "2024-07-24",
+          "value": {
+            "base": 14500,
+            "basis": "announced",
+            "high": 14500,
+            "input_output_basis": "source_stated_throughput",
+            "low": 14500,
+            "metric": "wafers_throughput",
+            "period_end": null,
+            "period_start": null,
+            "quantity_semantics": "monthly_rate",
+            "scope_kind": "project_addition",
+            "technology_scope": [
+              "advanced_packaging",
+              "advanced_test"
+            ],
+            "unit": "wafers/month"
+          },
+          "evidence_links": [
+            {
+              "evidence_id": "amkor-peoria-capacity",
+              "fragment_sha256": "ed20288cb00588feba70795f68c5d72068986964dc535d62caf86ef92448dc07",
+              "role": "support"
+            }
+          ],
+          "disposition": "preserved_in_prior_release_not_carried_into_current_expanded_project_projection",
+          "withdrawn": false,
+          "capacity_loss_claim": false
+        }
+      ],
+      "current_nist_check": {
+        "url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria",
+        "archive_path": "source_snapshots/2026-09-07-amkor-peoria-successor/documents/nist-amkor-current.html",
+        "sha256": "6d2e22f6208edb2fb099559b9999e391ef9fe26724e80d9c4b4e67525ba0f642",
+        "retrieved_at": "2026-09-07T02:21:10Z",
+        "both_old_rates_still_present": true,
+        "locator": "Project Summary, archived HTML line 814.",
+        "published_at": "2024-07-24",
+        "page_modified_metadata": "2026-06-03T10:30-04:00"
+      },
+      "rationale": "The live NIST award page still states both old future monthly rates. Neither captured source establishes their application to the issuer's expanded two-phase scope or allocates them to Phase One. Those statements remain valid historical source assertions; this review makes no finding of withdrawal, invalidity, zero capacity, or capacity reduction. Current projection abstains on all five numeric bases."
+    },
+    {
+      "decision_id": "schedule-correspondence",
+      "outcome": "unresolved_not_a_comparable_delay_measurement",
+      "nist_source_statement": "The checked NIST page expects mass production at the end of 2027.",
+      "issuer_source_statement": "The May 2026 issuer article expects Phase One opening during 2028.",
+      "rationale": "The milestone definitions and project/phase scopes have not been reconciled, so this is visible disagreement requiring review rather than a computed schedule delay or a forecast.",
+      "source_locators": [
+        "NIST Project Statistics / Project Timeline, archived HTML line 814.",
+        "Amkor scope-update article, archived HTML line 327."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "company": "TSMC",
+      "facility_key": "tsmc:fab21-arizona",
+      "country_code": "US",
+      "refresh_status": "not_refreshed_in_this_pass",
+      "latest_supported_lifecycle_date": "2026-02-28",
+      "latest_document_check_at": null,
+      "latest_company_article_publication_in_update": null,
+      "original_facility_object_unchanged": true
+    },
+    {
+      "company": "Samsung",
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "country_code": "US",
+      "refresh_status": "not_refreshed_in_this_pass",
+      "latest_supported_lifecycle_date": "2024-07-24",
+      "latest_document_check_at": null,
+      "latest_company_article_publication_in_update": null,
+      "original_facility_object_unchanged": true
+    },
+    {
+      "company": "Intel",
+      "facility_key": "intel:fab52-chandler",
+      "country_code": "US",
+      "refresh_status": "not_refreshed_in_this_pass",
+      "latest_supported_lifecycle_date": "2025-10-09",
+      "latest_document_check_at": null,
+      "latest_company_article_publication_in_update": null,
+      "original_facility_object_unchanged": true
+    },
+    {
+      "company": "Micron",
+      "facility_key": "micron:singapore-hbm-packaging-project",
+      "country_code": "SG",
+      "refresh_status": "not_refreshed_in_this_pass",
+      "latest_supported_lifecycle_date": "2025-06-26",
+      "latest_document_check_at": null,
+      "latest_company_article_publication_in_update": null,
+      "original_facility_object_unchanged": true
+    },
+    {
+      "company": "SK hynix",
+      "facility_key": "sk-hynix:m15x-cheongju",
+      "country_code": "KR",
+      "refresh_status": "not_refreshed_in_this_pass",
+      "latest_supported_lifecycle_date": "2025-10-29",
+      "latest_document_check_at": null,
+      "latest_company_article_publication_in_update": null,
+      "original_facility_object_unchanged": true
+    },
+    {
+      "company": "Amkor",
+      "facility_key": "amkor:peoria-advanced-packaging-project",
+      "country_code": "US",
+      "refresh_status": "bounded_selected_documents_reviewed",
+      "latest_supported_lifecycle_date": "2025-10-06",
+      "latest_document_check_at": "2026-09-07T02:21:10Z",
+      "latest_company_article_publication_in_update": "2026-05-13",
+      "original_facility_object_unchanged": false
+    },
+    {
+      "company": "ASE",
+      "facility_key": "ase:kaohsiung-site",
+      "country_code": "TW",
+      "refresh_status": "not_refreshed_in_this_pass",
+      "latest_supported_lifecycle_date": "2025-08-01",
+      "latest_document_check_at": null,
+      "latest_company_article_publication_in_update": null,
+      "original_facility_object_unchanged": true
+    }
+  ],
+  "verification": {
+    "load_baseline_exact_source_bytes": "passed",
+    "builder_with_standalone_atlas_and_archive": "passed",
+    "independent_rebuild": "21 declared payloads, manifest and archive matched byte-for-byte",
+    "other_six_facility_objects": "exactly unchanged",
+    "carried_sources_evidence_and_runs": "8 source records, 10 evidence records and 8 ingestion runs exactly unchanged",
+    "producer_sha256_preserved": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969",
+    "original_input_sha256_preserved": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958"
+  },
+  "remaining_gaps": [
+    "Exact-byte evidence for physical-site relocation and parcel correspondence.",
+    "Latest actual construction stage after the evidenced groundbreaking.",
+    "Correspondence between NIST award throughput and the expanded project or individual phase.",
+    "Comparable milestone definitions for NIST end-2027 mass production and issuer 2028 Phase One opening.",
+    "Numeric installed, qualified, economically usable or current announced throughput.",
+    "Yield, utilization and qualification for all seven companies.",
+    "A complete publisher/time-window check for Amkor and any new review of the other six companies."
+  ],
+  "publication_status": "local_release_candidate_not_publicly_released"
+}

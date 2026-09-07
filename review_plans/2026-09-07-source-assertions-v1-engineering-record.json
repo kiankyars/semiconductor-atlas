@@ -1,0 +1,67 @@
+{
+  "format": "semiconductor-atlas-source-assertion-engineering-record-v1",
+  "design": "exposed_retrospective_engineering_inventory_not_performance",
+  "evidence_verified_at": "2026-09-07T15:44:06.541445Z",
+  "scope": "Separate source-native assertion extraction from three retained document routes, with every frozen document opportunity retained.",
+  "frozen_population": {
+    "path": "artifacts/2026-09-07-curated-observation-population-v1-r3-frozen.json",
+    "sha256": "857d95ff223d83e30666d0ad73481f4901ff84e579ae1cb8da767f63de4a6fd4"
+  },
+  "report": {
+    "path": "artifacts/2026-09-07-source-assertions-v1-report.json",
+    "bytes": 186348,
+    "sha256": "cf9da33b62232703bc1c58319d7878df7c89a4098ea346701a1f3d51f7545686"
+  },
+  "verification": {
+    "path": "artifacts/2026-09-07-source-assertions-v1-verification.json",
+    "sha256": "217edcd4dfd3b6d09b800c6aec90dfda4688490c4d04c662bd2045b8ed660a06",
+    "verifier_path": "artifacts/2026-09-07-verify-source-assertions-v1.py",
+    "verifier_sha256": "e653963c17f74f8b08c9dc3b5f0abdf6a9c60362c8a47de77247daac21c98af2",
+    "evidence_spans_verified": 139,
+    "independent_process_rebuild_byte_identical": true,
+    "prior_reports_byte_identically_rebuilt": 4,
+    "original_checksum_payloads_passed": 353
+  },
+  "regression_evidence": {
+    "path": "artifacts/2026-09-07-source-assertions-v1-local-tests.json",
+    "sha256": "66a2ac7722a42175ac3e24581d1fb65c083b5c0dacf9c32f467cc43d0aaf5635",
+    "python": "3.14.7",
+    "core_tests": 1223,
+    "web_tests": 12,
+    "new_parser_and_inventory_tests": 57,
+    "syntax_passed": true,
+    "regression_passed": true,
+    "performance_evaluation": false
+  },
+  "counts": {
+    "document_opportunities": 22,
+    "supported_route_opportunities": 7,
+    "unsupported_route_opportunities": 15,
+    "extraction_only_first_observations": 2,
+    "no_candidate_pairs": 5,
+    "distinct_compared_body_pairs": 1,
+    "distinct_source_bodies_extracted": 3,
+    "distinct_source_assertion_formulations": 7,
+    "observed_revision_candidates": 0
+  },
+  "interpretation": "Five identical Amkor pairs are repeated checks of one unchanged body pair, not independent manufacturing events. Chandler and MTI have no predecessor in this census. Two Micron formulations can refer to one ceremony. Editorial literal differences can be candidates without substantive manufacturing change. Source-unparsed remains true even on successful extraction.",
+  "boundaries": {
+    "canonical_identity_verified": false,
+    "manufacturing_claims_accepted": false,
+    "attained_hvm_verified": false,
+    "capacity_inferred": false,
+    "event_dates_inferred": false,
+    "calendar_targets_inferred": false,
+    "whole_document_recall_established": false,
+    "independent_outcome_adjudication": false,
+    "detector_performance_established": false,
+    "forecast_calibration_established": false,
+    "registered_study_changed": false,
+    "collector_or_schedule_changed": false,
+    "new_publisher_documents_acquired": false,
+    "raw_redistribution": false,
+    "public_data_release": false,
+    "delivery_eligible": false
+  },
+  "next_gate": "Complete the separately registered future observation and evaluation workflow; these exposed assertion routes are not retroactively added to that study. Any future integration requires a versioned pre-window protocol and separately reviewed outcomes."
+}

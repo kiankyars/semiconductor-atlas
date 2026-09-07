@@ -4,6 +4,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from tests._legacy_schema_fixture import historical_fixture
 
 from semiconductor_atlas.database import initialize
 from semiconductor_atlas.models import (
@@ -87,7 +88,7 @@ class ReleaseIdentityTests(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary_directory = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary_directory.name)
-        self.connection, _ = initialize(self.root / "atlas.sqlite")
+        self.connection, _ = initialize(self.root / "atlas.sqlite", target_version=4)
 
         self.family_id = stable_id("source-family", "release-identity")
         self.source_id = stable_id("source", "release-identity")
@@ -703,18 +704,9 @@ class ReleaseIdentityTests(unittest.TestCase):
         self.assertEqual("facility_identity", assignment["identity_scope"])
 
     def test_schema_v2_release_keeps_the_legacy_artifact_shape(self) -> None:
-        for table in (
-            "source_entity_assignments",
-            "entity_resolution_decisions",
-            "entity_resolution_candidates",
-            "entity_resolution_run_inputs",
-            "entity_resolution_runs",
-            "organization_identifier_claim_metadata",
-            "organization_name_claim_metadata",
-            "ingestion_run_documents",
-        ):
-            self.connection.execute(f"DROP TABLE {table}")
-        self.connection.execute("DELETE FROM schema_migrations WHERE version IN (3, 4)")
+        legacy = historical_fixture(self.connection, 2)
+        self.connection.close()
+        self.connection = legacy
 
         output = self.root / "schema-v2-release"
         manifest = write_release(

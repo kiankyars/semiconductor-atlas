@@ -91,8 +91,14 @@ def detect_revision_alerts(
         raise ValueError("milestone_shift_days must be positive")
     alerts = []
     for row in _revision_pairs(connection, as_of=as_of, recorded_at=recorded_at):
+        if row["prior_confidence"] is None or row["current_confidence"] is None:
+            continue
         prior = claim_value(connection, row["prior_id"], row["value_kind"])
         current = claim_value(connection, row["current_id"], row["value_kind"])
+        if row["value_kind"] == "milestone" and (
+            prior.get("date_base") is None or current.get("date_base") is None
+        ):
+            continue
         confidence = min(float(row["prior_confidence"]), float(row["current_confidence"]))
         if row["value_kind"] == "capacity":
             prior_base = float(prior["base"])

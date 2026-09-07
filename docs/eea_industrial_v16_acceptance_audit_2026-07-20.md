@@ -163,6 +163,16 @@ does not emit a review classification, geometry, lifecycle or operating status, 
 assignment, ownership relationship, production, or capacity claim. Exact replay is write-free; a
 changed review fails until explicit replacement semantics are versioned.
 
-No v16 review artifact has been accepted, so none of the 108 leads has been adjudicated or imported
-into the canonical database. The remaining gate is evidence-backed candidate review. Geometry is a
-separate gate requiring verified correspondence to the spatial companion.
+At this July 20 gate, no v16 review artifact had been accepted and none of the 108 leads had been
+adjudicated or imported into the canonical database. Geometry remained a separate gate requiring
+verified correspondence to the spatial companion.
+
+### September 7 follow-up
+
+The [complete bounded scope review and isolated admission](eea_scope_admission_2026-09-07.md)
+subsequently accepted 15 source records and deferred 93, with zero final exclusions. The corrected
+v2 importer adds 132 exact EEA scalar statements with null effective dates and confidence. Every
+parent row is preserved, the frozen parent database is unchanged, and write-denied replay leaves
+the admitted derivative byte-identical. This does not establish canonical identity, current
+operation or capacity. The remaining evidence/scope holds, spatial gate and append-only review
+refresh semantics remain open.

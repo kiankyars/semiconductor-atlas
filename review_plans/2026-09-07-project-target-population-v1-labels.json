@@ -1,0 +1,23 @@
+{
+  "format": "semiconductor-atlas-project-target-evaluation-labels-v1",
+  "frozen_sha256": "f8856e3ccfc1ff783d7d258fee230d339838a732d6cad0cd426a33ec00a64ff1",
+  "adjudicator": "Codex root agent; retrospective source-support review",
+  "reviewed_at": "2026-09-07T10:31:13Z",
+  "prior_exposure": "The root reviewer saw the Fab 2 case, implementation, expected classification and queue admission before freezing. A collaborating reviewer previously implemented the importer/producer. This post-freeze excerpt reinspection is neither blind nor independently adjudicated.",
+  "coverage_statement": "Labels cover the sole comparison and sole proposal in the accepted source-native project-target population for the retrospectively selected 09:00-10:00 UTC window. Nine total core ingestion runs were inventoried; one belongs to the supported route. This is not a publisher-complete change inventory, independent no-change sample or realized-production outcome set.",
+  "adjudications": [
+    {
+      "comparison_id": "574fa308-9352-5cf1-939e-9f7a48de055a",
+      "verdict": "supported_revision",
+      "reason": "Both retained NIST narrative and Fab 2 timeline spans support a planned-production target revision from 2028 to the second half of 2027. The disjoint_earlier classification is a source-statement comparison only; no exact physical acceleration or production attainment is established.",
+      "review_sha256": "9632bc2f79adb6172555fba05868ff0e4795ee1ec1a73d0606f2eb0f9d15ae43",
+      "locator": "Source-support finding; Retained evidence and locators; Interpretation limits"
+    }
+  ],
+  "supporting_reviews": [
+    {
+      "path": "2026-09-07-project-target-population-v1-support.md",
+      "sha256": "9632bc2f79adb6172555fba05868ff0e4795ee1ec1a73d0606f2eb0f9d15ae43"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "format": "semiconductor-atlas-curated-review-pilot-v1",
+  "queue_path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+  "restored_queue_path": "artifacts/2026-09-07-amkor-source-review-replayed.sqlite",
+  "event_export_path": "artifacts/2026-09-07-amkor-source-review-events.json",
+  "event_export_sha256": "edbab9cd5541696016b871af8ccbc22f6229f22e2e11eaa8ea4e2d55f32d9297",
+  "event_export_bytes": 18090,
+  "head_event_id": "90abc1e3b3eaed7a82a8f6461c8c60c59493da46b6e5ce065cbd9940014314a5",
+  "event_count": 6,
+  "capture_count": 3,
+  "candidate_count": 3,
+  "pending_before_explicit_review": 3,
+  "pending_after_explicit_review": 0,
+  "recheck_after_explicit_review": 0,
+  "capture_manifest_sha256": [
+    "9f0cfd287496db5186294831a8624d8b967d0358ce206fb7901343434b5da2aa",
+    "70f8626fc9985291e877aeaa3395eee07e73066698f7d8ba6e3c21daa1c1e7f7",
+    "e82ffe8d2f3387e846b7847feda7d8c06e3a539a14b09d4d186356f12288a874"
+  ],
+  "live_integrated_capture": {
+    "path": "source_snapshots/2026-09-07-amkor-repeatable-capture-03",
+    "started_at": "2026-09-07T03:21:47.754133Z",
+    "finished_at": "2026-09-07T03:21:55.682197Z",
+    "network_attempts": 7,
+    "content_review_candidates": 0,
+    "queue_pending_after_import": 3,
+    "result": "Two byte-identical Amkor documents and a NIST document with unchanged visible text. The pre-existing queue backlog was retained."
+  },
+  "disposition_basis": {
+    "review_record": "review_plans/2026-09-07-amkor-peoria-successor.json",
+    "review_record_sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160",
+    "method": "Verified the earlier source-check ledger and exact retained bodies; recomputed visible-text hashes and matched all three admitted candidate versions. Dismissed duplicate text-version review work only, preserving unresolved claim scope and source-rights decisions.",
+    "reviewer": "local:codex-source-version-review",
+    "first_disposition_at": "2026-09-07T03:25:28.604060Z",
+    "last_disposition_at": "2026-09-07T03:25:28.606839Z"
+  },
+  "historical_replay_checks": [
+    {"as_of": "2026-09-07T03:21:34Z", "run_count": 0, "pending_count": 0},
+    {"as_of": "2026-09-07T03:21:35Z", "run_count": 1, "pending_count": 2},
+    {"as_of": "2026-09-07T03:22:00Z", "run_count": 3, "pending_count": 3},
+    {"as_of": "2026-09-07T03:25:28.605000Z", "run_count": 3, "pending_count": 2},
+    {"as_of": "2026-09-07T03:25:29Z", "run_count": 3, "pending_count": 0}
+  ],
+  "identical_event_export_after_restore": true,
+  "identical_reports_after_restore": true,
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "publication_authorized_by_this_review": false,
+  "raw_response_redistribution": false,
+  "coverage_complete": false,
+  "coverage_note": "Three exact Amkor-related URLs only. The other six cohort companies were not refreshed; omitted packets and intermediate source versions remain potentially unknown."
+}

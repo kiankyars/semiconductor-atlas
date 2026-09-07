@@ -1,0 +1,51 @@
+{
+  "format": "semiconductor-atlas-curated-coverage-catalog-v1",
+  "catalog_id": "ai-critical-seven-company-coverage-v1",
+  "recorded_at": "2026-09-07T03:45:43Z",
+  "baseline": {
+    "path": "baselines/ai_critical_manufacturing_v1.json",
+    "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958"
+  },
+  "freshness_seconds": 604800,
+  "notes": "Operational coverage inventory, not a source-access authorization. A seven-day age is an initial local review threshold, not a validated detection cadence, publisher update interval or permission period. Only the pinned Amkor plan has configured exact-document checks. Other facilities remain explicitly unmonitored by this collector. Historical baseline source metadata is not renewed evidence. No publisher-wide completeness, scheduled execution, manufacturing-state update or alert delivery is implied.",
+  "facilities": [
+    {
+      "facility_key": "tsmc:fab21-arizona",
+      "plan": null,
+      "unmonitored_reason": "No reviewed repeatable acquisition plan has been configured for this facility."
+    },
+    {
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "plan": null,
+      "unmonitored_reason": "No reviewed repeatable acquisition plan is configured. Samsung newsroom collection remains disabled under the source registry's recorded access boundary; independently review any alternative official source."
+    },
+    {
+      "facility_key": "intel:fab52-chandler",
+      "plan": null,
+      "unmonitored_reason": "No reviewed repeatable acquisition plan has been configured for this facility."
+    },
+    {
+      "facility_key": "micron:singapore-hbm-packaging-project",
+      "plan": null,
+      "unmonitored_reason": "No reviewed repeatable acquisition plan has been configured for this facility."
+    },
+    {
+      "facility_key": "sk-hynix:m15x-cheongju",
+      "plan": null,
+      "unmonitored_reason": "No reviewed repeatable acquisition plan is configured. SK hynix newsroom collection remains disabled under the source registry's recorded access boundary."
+    },
+    {
+      "facility_key": "amkor:peoria-advanced-packaging-project",
+      "plan": {
+        "path": "acquisition_plans/amkor_peoria_v2.json",
+        "sha256": "15811641832d26e746a945d8fa6f728f7057cda5b5f70780693370df3c4bab7a"
+      },
+      "unmonitored_reason": null
+    },
+    {
+      "facility_key": "ase:kaohsiung-site",
+      "plan": null,
+      "unmonitored_reason": "No reviewed repeatable acquisition plan has been configured for this campus."
+    }
+  ]
+}

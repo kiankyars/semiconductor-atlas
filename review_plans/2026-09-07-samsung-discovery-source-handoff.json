@@ -1,0 +1,51 @@
+{
+  "format": "semiconductor-atlas-discovery-handoff-review-v1",
+  "reviewed_at": "2026-09-07T08:08:33Z",
+  "reviewer": "local:discovery-to-source-lineage-review",
+  "facility_key": "samsung:taylor-leading-edge-project",
+  "source_url": "https://www.nist.gov/chips/samsung-electronics-texas-taylor",
+  "document_scope": "Dedicated Taylor landing URL with a Taylor locality heading, but whole-page content spans the two Taylor logic fabs, a separate Taylor R&D fab and Austin expansion. Only the two Taylor logic fabs correspond to the baseline project aggregate. Award-wide money, employment and timelines are not attributable operating capacity or achieved milestones.",
+  "scope_limitation": "The two Taylor logic fabs remain a project aggregate. The dedicated landing URL retains broader Taylor R&D and Austin context; common publisher content is not independent corroboration. This is one manual acquired-source handoff, not a new recurring document, accepted manufacturing claim, broad publisher search or current-stage reaffirmation.",
+  "outcome": "no_baseline_revision",
+  "rationale": "The separately approved and captured Taylor page repeats the monitored Austin page's substantive project narrative. Its source text was explicitly reviewed and dismissed without a baseline revision. Retained CMS page dates are distinct from claim-effective dates and manufacturing milestones. Discovery, access review, acquisition, source admission, source review and final link review retain their actual knowledge-time order.",
+  "discovery": {
+    "events": {
+      "path": "artifacts/2026-09-07-samsung-handoff-discovery-events-v1.json",
+      "sha256": "e58d0f5f67130b39b4b1f63a8798f2f2f74623471c9811f92b6f1bf6e88d4785"
+    },
+    "candidate_id": "5fe17c112a8053a3c1a35f5b9ab9fea1f1cd9583c295b8d716fa715b40575310",
+    "expected_event_id": "6f13fab1227ef0c61b62b09825bdf6771fc42990ad72120d2e7656b04c14fe07",
+    "run_id": "7e672b685420574f615cfc8469bc7828f1e17c3cf2013677cf1991d9c061484c"
+  },
+  "source": {
+    "events": {
+      "path": "artifacts/2026-09-07-samsung-handoff-source-events-v1.json",
+      "sha256": "bc59f0139e743f80647a7e5517a792f75ffaee353aae8e071acdb4fea797c90c"
+    },
+    "candidate_id": "d7e3fc00d45f37a9775945c8ce108eee6ec3f11e7ddb2296d123f253cb2572c3",
+    "expected_event_id": "c91a3e7d5426d7dfcae93f5d09177005487c1deec97355c9702657e6f60d77b2",
+    "run_id": "77a6bb6a43dd6f23c21f0d049ccbf838315f321e7680661b81401e2f4e93ec21",
+    "document_id": "nist-samsung-taylor-discovered",
+    "plan_sha256": "e668db5331c129f5ed4f3e58d7fe4489169d09fec98598fd256bb3948367fb20",
+    "body_sha256": "28366672cb1999358c08fe1c9005283c5713aa818a1eb27d3a2d7a8a94760a19",
+    "text_sha256": "7ffdb921a4af218b07217b2fa2336f0d244f20decce2d4dc3c151ce9b7f7f7e6"
+  },
+  "access_review": {
+    "path": "review_plans/2026-09-07-samsung-taylor-discovery-acquisition.json",
+    "sha256": "42313074b3b9ef449741e3305fe72b844faf18aba3728bf96d10b069aa28523d"
+  },
+  "source_review": {
+    "path": "review_plans/2026-09-07-samsung-taylor-discovered-text-adjudication.json",
+    "sha256": "cfba44291e2964179d6105dc55bdcdb370973e7e28ccc5e849ef9f7f9d7203c1"
+  },
+  "boundaries": {
+    "claim_acceptance": false,
+    "delivery_eligible": false,
+    "linked_document_acquisition_allowed": false,
+    "raw_redistribution": false,
+    "baseline_modified": false,
+    "absence_inference_allowed": false,
+    "publisher_complete": false,
+    "facility_scope_verified_by_discovery": false
+  }
+}

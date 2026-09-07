@@ -1,0 +1,32 @@
+{
+  "format": "semiconductor-atlas-prospective-target-registration-record-v1",
+  "registration": {
+    "path": "artifacts/2026-09-07-prospective-source-targets-v1-registration.json",
+    "bytes": 94841,
+    "sha256": "d5784e226bc571b5d1943518a654f319ad4e75a6be6e0c23712e59f0241f0ba9"
+  },
+  "acceptance_receipt": {
+    "path": "artifacts/2026-09-07-prospective-source-targets-v1-registration.json.receipt.json",
+    "bytes": 222,
+    "sha256": "49fe881e7ae16797d2f46022cc282689158493cae81860d17a65b30aa57b18a3",
+    "accepted_at": "2026-09-07T13:39:37.081863Z"
+  },
+  "verification": {
+    "path": "artifacts/2026-09-07-prospective-source-targets-v1-verification.json",
+    "sha256": "d0c532bd53980be4b581b18e355040947350563082133e293ec998bdc3825ab4"
+  },
+  "configured_documents": 7,
+  "implemented_parser_routes": 4,
+  "unsupported_documents": 3,
+  "unmonitored_facility_scopes": 2,
+  "future_predictions_at_verification": 0,
+  "prior_retained_source_files_verified": 369,
+  "prior_reports_rebuilt_byte_identically": 4,
+  "external_timestamp_attestation": false,
+  "scheduled_execution_proven": false,
+  "independent_outcomes": false,
+  "detection_performance_established": false,
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "new_public_data_release": false
+}

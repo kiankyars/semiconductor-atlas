@@ -41,6 +41,14 @@ archive timestamp cannot substitute for publication evidence.
 
 ## Official and open first-wave candidates
 
+The September 7, 2026 [Amkor successor review](amkor_peoria_successor_review_2026-09-07.md)
+adds exactly two individually selected Amkor Company News documents under the same local-byte,
+metadata-and-short-excerpt boundary. Current robots and website terms checks are retained in the
+source packet. The NIST award page was rechecked as review context; its old rates remain visible,
+but their applicability to the expanded project is unresolved. Failed IR and municipal access
+checks are retained, and those document bodies were not acquired. This review does not authorize
+a general publisher crawler or certify complete update coverage.
+
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |
 | [Taiwan MOENV EMS_S_01](https://data.moenv.gov.tw/dataset/detail/EMS_S_01) | Taiwan source-native facility identities, exact semiconductor industry classes, full addresses, environmental-registry fields, and WGS84 point candidates | **Reviewed and accepted 2026-07-20.** The official catalogue assigns [Taiwan Open Government Data License 1.0](https://data.gov.tw/license), which permits reuse and derivatives with explicit attribution. The dataset is published by the Resource Circulation Administration and declares daily refresh. | **First non-U.S. facility adapter accepted.** The retained full package is filtered locally to exact `industryid` `2611`, `2612`, or `2613` after `industrygroup=261`; its publisher checksum and every distinct same-`emsno` variant replay offline. Environmental-control flags mean registry inclusion only, never operating status. Valid WGS84 coordinates are source points, not site boundaries. Business and factory-registration identifiers remain resolution evidence, not automatic organization or facility merges. The accepted 2026-07-20 snapshot contains 724 source-native facility identities and 798 distinct variants. |
@@ -49,7 +57,7 @@ archive timestamp cannot substitute for publication evidence.
 | [SEC EDGAR APIs](https://www.sec.gov/search-filings/edgar-application-programming-interfaces) | U.S.-listed company filings, capex, facility plans, risks, subsidies, customers, and suppliers | Official public APIs and archives; [SEC fair-access guidance](https://www.sec.gov/about/developer-resources) currently limits aggregate automated access to 10 requests/second and requires an identified user agent. Individual filing exhibits can contain third-party material, so no blanket content license is inferred. | **First wave.** Use APIs, feeds, and archives rather than scraping search pages. Cache by accession and content hash; quote minimally in public releases. |
 | [CHIPS for America awards](https://www.nist.gov/chips/chips-america-awards) | Official U.S. award recipient, location, amount, expected investment, technology, project, and timeline statements | NIST's [copyright notice](https://www.nist.gov/copyrights-disclaimers) says information presented on its sites is considered public information unless marked otherwise and may be distributed or copied, with credit requested. Linked third-party material and marked exceptions retain their own rights. | **First wave.** Follow the paginated canonical index and exact CHIPS Program Office detail pages. Preserve `proposed` versus `final`, `up to`, and multi-site totals; never invent a per-site allocation or infer construction, completion, or realized capacity. |
 | [EPA Facility Registry Service National Single File](https://www.epa.gov/frs/epa-frs-facilities-state-single-file-csv-download) | U.S. registry candidate identities, raw coordinates, program identifiers, and discovery joins | **Reviewed 2026-07-19.** EPA publishes an [official monthly public archive](https://ordsext.epa.gov/FLA/www3/state_files/national_single.zip). EPA's [data license](https://edg.epa.gov/EPA_Data_License.html) says EPA-produced data is public domain by default and provided without warranty; third-party material, if identified, retains its terms. EPA [seal and logo rules](https://www.epa.gov/aboutepa/using-epa-seal-and-logo) prohibit implying EPA endorsement. | **First wave as a candidate source only.** Filter exact NAICS `334413` or SIC `3674`; exclude adjacent codes. Use source family `epa-frs`, source key `epa-frs-national-single:epa-frs-semiconductor-direct-v1`, and entity prefix `epa:frs:`. Each immutable snapshot stores the raw ZIP at `raw/sha256/<digest>.zip`, rescans it, and verifies the derivative hash. Preserve raw NAD83 scalars without creating GeoJSON geometry or claiming a CRS transform. Rows do not establish activity, operation, lifecycle, capacity, or global coverage; absence, reassignment, or Registry ID merge is not closure. Attribute: `Source: U.S. Environmental Protection Agency, Facility Registry Service (public-domain U.S. Government data; no EPA endorsement)`. Do not use an EPA seal or logo. |
-| [EEA Industrial Emissions Portal dataset](https://industry.eea.europa.eu/industrial-emissions/dataset) | European industrial sites/facilities, releases, transfers, and permit context | **Reviewed and accepted 2026-07-20.** Version 16 is pinned by [DOI 10.2909/657ac3cb-affa-4295-a4a9-27b4f539adab](https://doi.org/10.2909/657ac3cb-affa-4295-a4a9-27b4f539adab), and its metadata assigns CC BY 4.0 to the European Environment Agency. The complete EEA-reported production-facility hierarchy and NACE functions are retained from the 2.03 GB Access database; the convenient CSV bundle is not used as a completeness denominator. | **Candidate adapter, immutable snapshot, review queue, and importer boundary implemented.** The exact v16 extraction covers 99,275 EEA-reported facilities and produces 108 manual-review leads from exact raw NACE `26.11` or bounded explicit facility/site name terms. No candidate review has been accepted or imported. Queue priority is not classification; only evidence-backed `accept_in_scope` decisions can create source-native facility records. Exact INSPIRE identifiers remain case-sensitive; 2,637 non-exact historical detail keys are never repaired. Confidential fields fail closed. Raw point scalars stay in retained records, but the importer emits no geometry, operating-status, ownership, output, or capacity claim. The separate [v16 spatial companion](https://doi.org/10.2909/3bbf28cb-70e8-4073-8fe9-8c1d9c513f52) declares EPSG:4326, but tabular-spatial correspondence is unverified. See `docs/eea_industrial_v16_acceptance_audit_2026-07-20.md`. |
+| [EEA Industrial Emissions Portal dataset](https://industry.eea.europa.eu/industrial-emissions/dataset) | European industrial sites/facilities, releases, transfers, and permit context | **Reviewed and accepted 2026-07-20.** Version 16 is pinned by [DOI 10.2909/657ac3cb-affa-4295-a4a9-27b4f539adab](https://doi.org/10.2909/657ac3cb-affa-4295-a4a9-27b4f539adab), and its metadata assigns CC BY 4.0 to the European Environment Agency. The complete EEA-reported production-facility hierarchy and NACE functions are retained from the 2.03 GB Access database; the convenient CSV bundle is not used as a completeness denominator. | **Bounded source admission implemented.** The exact v16 extraction covers 99,275 EEA-reported facilities and produces 108 manual-review leads from exact raw NACE `26.11` or bounded explicit facility/site name terms. The September 7 complete review accepts 15 records and defers 93, with no final exclusions; an isolated schema-5 database adds 132 exact scalar statements with null effective dates and confidence. Queue priority is not classification. Exact INSPIRE identifiers remain case-sensitive; 2,637 non-exact historical detail keys are never repaired. Confidential fields fail closed. Raw point scalars stay in retained records, but the importer emits no geometry, operating-status, ownership, output, or capacity claim. The separate [v16 spatial companion](https://doi.org/10.2909/3bbf28cb-70e8-4073-8fe9-8c1d9c513f52) declares EPSG:4326, but tabular-spatial correspondence is unverified. See the [original source audit](eea_industrial_v16_acceptance_audit_2026-07-20.md) and [bounded admission audit](eea_scope_admission_2026-09-07.md). |
 | [GLEIF LEI data](https://www.gleif.org/en/lei-data/access-and-use-lei-data) | Legal-entity identifiers, names, jurisdictions, and disclosed accounting parents | **Reviewed 2026-07-19.** GLEIF's [data terms](https://www.gleif.org/en/meta/lei-data-terms-of-use) state that Access Service data is CC0. The official API is based on the current Golden Copy; pinned Golden Copy and delta files are available in JSON and XML. | **One reviewed Level 1 pilot accepted.** The fetcher archives exact API bytes for a strict exact-LEI allowlist, requires one Golden Copy publication, and replays a link-free derivative offline. The importer re-verifies a separate review plan and preserves claims on the GLEIF-native entity; only an explicit reviewed `match` creates an assignment. The accepted scope is one TSMC Arizona LEI, not broad organization or facility coverage. Name or fuzzy search creates candidates only. Registration status is not operating status. Direct and ultimate parents are accounting-consolidation relationships, not facility ownership. See `docs/gleif_adapter_plan.md`. |
 | [OpenStreetMap planet and diffs](https://planet.openstreetmap.org/) | Facility and industrial-land leads, roads, buildings, utilities, and candidate geometry | OSM data is [ODbL 1.0](https://www.openstreetmap.org/copyright) with attribution and share-alike obligations. Public API and [Nominatim](https://operations.osmfoundation.org/policies/nominatim/) services are not bulk-ingestion endpoints. Semiconductor tagging is not a controlled ontology; values such as [`product=*`](https://wiki.openstreetmap.org/wiki/Key:product) are contributor text. | **First wave as a candidate seed only.** Use planet or regional extracts and replication diffs for production; a bounded saved Overpass result is acceptable for a seed fixture. Preserve `© OpenStreetMap contributors`, source object/version, and license. Treat tags as leads, not proof of identity, operation, process, or capacity. |
 | [Wikidata dumps](https://www.wikidata.org/wiki/Wikidata:Data_access) | Organization aliases, identifiers, headquarters, and discovery links | Structured Wikidata content is [CC0](https://www.wikidata.org/wiki/Wikidata:Licensing). | **First wave.** Prefer dumps and bounded SPARQL queries. Retain references where present; Wikidata is a discovery and resolution layer, not ground truth. |
@@ -59,6 +67,97 @@ archive timestamp cannot substitute for publication evidence.
 | [Google Open Buildings](https://sites.research.google/gr/open-buildings/) | Building-footprint context in covered regions | Google offers the dataset under CC BY 4.0 or ODbL 1.0 at the user's choice. | **First wave.** Select and record one license path per release, retain attribution, confidence, and dataset version, and review detections before canonical use. |
 
 ## Official sources requiring adapter-specific review
+
+The [September 7 ASE/BIP access review](../review_plans/2026-09-07-ase-bip-acquisition-blocked.json)
+retains a failed direct access check, not an approved collector. The BIP robots URL returned
+HTTP 200 with a 229-byte `Request Rejected` HTML page. No publisher document was then fetched,
+and no alternate access route was used to bypass that denial. A web-read K18B groundbreaking lead
+does not replace the complete Kaohsiung campus aggregate's lifecycle. ASE remains unmonitored;
+failed access is not evidence that no construction occurred.
+
+The [later municipal ASE review](../review_plans/2026-09-07-ase-kcg-acquisition-deferred.json)
+identifies a separate city-authored K18B lead. Its robots endpoint returned HTTP 404
+HTML, not the BIP rejection response. The current pinned collector has no reviewed
+missing-robots representation, and source-specific rights remain unresolved. No
+article was captured or collector enabled. K18B, Dashe K28 and Nanzih Third Park
+remain distinct source-native projects, not replacements for the campus aggregate.
+
+The [September 7 Micron review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
+does not approve durable acquisition from Micron's investor-relations site. Its linked
+[terms](https://www.micron.com/legal/terms-of-use) establish a temporary personal-viewing license,
+not permission for the required persistent archive. No raw response was retained in the repository,
+collector enabled, or baseline claim revised. The article's new NAND fab must remain distinct from
+the Singapore HBM packaging project. The next acquisition needs separately reviewed rights.
+
+The later [MTI source review](../review_plans/2026-09-07-micron-mti-source-review.json) makes a
+separate bounded internal decision for one publicly accessible, government-authored speech about
+Micron's January 8, 2025 HBM packaging groundbreaking. Retained MTI robots and Terms of Use hashes
+gate every exact-page check; the privacy statement was read as ancillary context. No affirmative
+open license or blanket automation grant was identified. Government of Singapore copyright
+remains in force: raw bodies stay local, and public output is operational metadata and original
+reviewer analysis, not images, attachments or substantial publisher text. This does not approve
+Micron's issuer route, MTI search/sitemap discovery, linked-resource acquisition or model training.
+The [monitoring pilot](micron_mti_monitoring.md) closes one configuration gap without accepting a
+new manufacturing claim or interpreting a site-wide footer as a physical-event date.
+
+The [September 7 NIST expansion review](../review_plans/2026-09-07-nist-source-expansion.json)
+approves exact repeatable checks of the government TSMC Phoenix and Samsung Texas award pages
+under retained, hash-bound NIST access and rights policies. It does not authorize their issuer
+newsrooms. The whole-page scopes include other fabs and, for Samsung, Austin and Taylor R&D;
+these remain source-version review candidates, not automatically attributed facility changes.
+Raw pages stay local, with marked copyrighted and third-party material excluded from this
+publication scope. See [monitoring boundaries](nist_monitoring_expansion.md).
+
+The separate [NIST index review](../review_plans/2026-09-07-nist-index-discovery.json) approves only
+the current [news index](https://www.nist.gov/chips/chips-news-releases),
+[Program Office awards index](https://www.nist.gov/chips/chips-program-office-awards), and bounded
+same-root sequential pagination after both policy checks pass. The [discovery pilot](nist_discovery.md)
+retained 64 links across six pages, including 14 company-name matches. This does not grant access to
+the linked documents, the older search-based archive, issuer sites, images or attachments. Raw
+index pages remain local. A matched company name is not a matched baseline facility, and a completed
+current page chain is not complete publisher history. The [subsequent discovery queue and runner](discovery_review_and_poll.md)
+now connect this exact bounded collector to the existing daily task after manual verification;
+that index approval does not authorize linked-document or issuer-site acquisition.
+
+The separate [Samsung Taylor access review](../review_plans/2026-09-07-samsung-taylor-discovery-acquisition.json)
+approved one exact government landing-page capture for local text review under the retained NIST
+policies. The [verified handoff](discovery_handoff.md) preserves this approval separately from index
+discovery. Its project narrative repeats the already monitored Austin page, so the Taylor URL was
+not added to the recurring catalog. Raw bodies remain local; Samsung-credited images, attachments,
+linked pages and model training are excluded. Neither this review nor duplicate government text
+enables the restricted Samsung issuer collector or establishes attained Taylor manufacturing progress.
+
+September 7, 2026 discovery review: Samsung's [June 10 issuer article](https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/)
+is a Taylor construction lead, not accepted baseline evidence. Its [US Austin website terms](https://semiconductor.samsung.com/legal/)
+limit the stated grant to personal display/use and require prior written consent for other use.
+The `semiconductor.samsung.com` collector remains disabled pending an appropriate rights decision;
+public visibility alone does not activate it. No raw article was retained or cohort claim changed.
+Pursue independently reviewed governmental evidence or permission before this acquisition. Any
+later review must distinguish the first fab and office activity from the baseline's two-fab project
+aggregate; neither office occupancy nor expected opening establishes chip production.
+
+The same discovery pass checked SK hynix's [newsroom terms](https://news.skhynix.com/en/terms-of-use/)
+(page last-modified label March 7, 2025). They expressly restrict automated monitoring and copying,
+with personal/non-commercial exceptions that do not establish this project's publishing rights.
+Do not enable a newsroom collector or treat the earlier v1 excerpt decision as approval for new
+acquisition. Future publication that carries inherited newsroom excerpts needs a renewed
+source-specific rights decision; immutable historical artifacts are not rewritten by this finding.
+The [1Q26](https://news.skhynix.com/en/q1-2026-business-results/) and
+[2Q26](https://news.skhynix.com/en/q2-2026-business-results/) releases remain discovery leads only.
+Their M15X investment and schedule language does not by itself prove a realized production ramp,
+and company-wide HBM shipments cannot be allocated to M15X. No new raw documents were archived or
+facility claims accepted in this discovery pass. Use an independently approved disclosure source
+or obtain permission before acquiring evidence for a successor.
+
+The [later M15X labor-office review](../review_plans/2026-09-07-m15x-moel-acquisition-deferred.json)
+found an independently authored, unit-specific government construction-safety
+report dated March 19, 2025. Direct robots access passed, but the
+[Cheongju office copyright policy](https://www.moel.go.kr/local/cheongju/site/copyright/copyrightList.do)
+requires checking document-specific KOGL marking or obtaining prior consultation.
+Neither clearance is verified for the [selected report](https://www.moel.go.kr/local/cheongju/news/reportexplan/view.do?bbs_seq=20250301293).
+Only policy responses were archived; the report and attachments were not retained.
+Government-hosted syndicated journalism does not supply independent provenance or
+override third-party rights. See the [combined gap review](monitoring_gap_review_2026-09-07.md).
 
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |

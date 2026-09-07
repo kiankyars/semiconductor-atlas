@@ -14,8 +14,9 @@ import itertools
 import json
 import sqlite3
 from contextlib import contextmanager
-from dataclasses import dataclass, replace
-from datetime import UTC, datetime, timedelta
+from dataclasses import asdict, dataclass, replace
+from datetime import UTC, datetime
+from enum import Enum
 from pathlib import Path
 from typing import Any, Iterator, Mapping, Sequence
 
@@ -29,6 +30,7 @@ from .adapters.eea_industrial import (
     EEA_LICENSE,
     EEA_RECORD_TYPE,
 )
+from .database import schema_version
 from .eea_industrial_review import (
     EEAIndustrialReview,
     EEAIndustrialReviewDecision,
@@ -82,7 +84,8 @@ from .repository import (
 )
 
 
-IMPORTER_VERSION = "eea-industrial-reviewed-facility-import-v1"
+LEGACY_IMPORTER_VERSION = "eea-industrial-reviewed-facility-import-v1"
+IMPORTER_VERSION = "eea-industrial-reviewed-facility-import-v2"
 SOURCE_FAMILY_KEY = "eea-industrial-reporting"
 SOURCE_KEY = f"eea-industrial-reporting:{EEA_DATASET_ID}"
 ENTITY_KEY_PREFIX = f"{SOURCE_KEY}:production-facility:"
@@ -180,10 +183,8 @@ def _clock(value: str) -> datetime:
     return datetime.fromisoformat(value[:-1] + "+00:00")
 
 
-def _completed_at(started_at: str) -> str:
-    return (
-        (_clock(started_at) + timedelta(seconds=1)).isoformat().replace("+00:00", "Z")
-    )
+def _now() -> str:
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
 
 
 @contextmanager
@@ -210,6 +211,40 @@ def _existing_created_at(
         f"SELECT created_at FROM {table} WHERE id = ?", (identifier,)
     ).fetchone()
     return str(row["created_at"]) if row is not None else default
+
+
+def _persist(connection: sqlite3.Connection, value: object, *, replayed: bool) -> bool:
+    """Use repository writers only for admission; replay verifies immutable rows."""
+    table, writer = {
+        SourceFamily: ("source_families", add_source_family),
+        Source: ("sources", add_source),
+        SourceDocument: ("source_documents", add_source_document),
+        IngestionRun: ("ingestion_runs", add_ingestion_run),
+        IngestionRunDocument: ("ingestion_run_documents", add_ingestion_run_document),
+        SourceRecord: ("source_records", add_source_record),
+        Entity: ("entities", add_entity),
+        ClaimSeries: ("claim_series", add_claim_series),
+    }[type(value)]
+    if not replayed:
+        return writer(connection, value)
+    expected = {}
+    for field, item in asdict(value).items():
+        if field in {"metadata", "parameters", "payload"}:
+            expected[f"{field}_json"] = _canonical_json(item)
+        else:
+            expected[field] = item.value if isinstance(item, Enum) else item
+    keys = ("ingestion_run_id", "source_document_id", "role") if isinstance(value, IngestionRunDocument) else ("id",)
+    row = connection.execute(
+        f"SELECT * FROM {table} WHERE " + " AND ".join(f"{key} = ?" for key in keys),
+        tuple(expected[key] for key in keys),
+    ).fetchone()
+    if row is None or any(row[key] != item for key, item in expected.items()):
+        raise ValueError(f"EEA replay conflicts with immutable {table} row")
+    if isinstance(value, IngestionRun) and value.input_document_id is not None:
+        _persist(connection, IngestionRunDocument(value.id, value.input_document_id, "primary"), replayed=True)
+    if isinstance(value, SourceRecord):
+        _persist(connection, IngestionRunDocument(value.ingestion_run_id, value.source_document_id, "source_record"), replayed=True)
+    return False
 
 
 def _verified_snapshot(
@@ -499,6 +534,7 @@ def _ensure_series(
     predicate: str,
     dimension: str,
     created_at: str,
+    replayed: bool = False,
 ) -> tuple[str, bool]:
     series_id = stable_id(
         "claim-series",
@@ -511,7 +547,7 @@ def _ensure_series(
     existing_at = _existing_created_at(
         connection, "claim_series", series_id, created_at
     )
-    created = add_claim_series(
+    created = _persist(
         connection,
         ClaimSeries(
             series_id,
@@ -521,6 +557,7 @@ def _ensure_series(
             ValueKind.SCALAR,
             existing_at,
         ),
+        replayed=replayed,
     )
     return series_id, created
 
@@ -549,6 +586,7 @@ def _run_parameters(
     queue: EEAIndustrialReviewQueue,
     review: EEAIndustrialReview,
     accepted_at: str,
+    importer_version: str = IMPORTER_VERSION,
 ) -> dict[str, object]:
     outcome_counts = {
         outcome: sum(decision.outcome == outcome for decision in review.decisions)
@@ -558,8 +596,11 @@ def _run_parameters(
             "reject_out_of_scope",
         )
     }
-    return {
-        "acceptance_timestamp_basis": "explicit_operator_supplied",
+    legacy = importer_version == LEGACY_IMPORTER_VERSION
+    result = {
+        "acceptance_timestamp_basis": (
+            "explicit_operator_supplied" if legacy else "actual_post_validation_clock"
+        ),
         "accepted_at": accepted_at,
         "candidate_queue": {
             "bytes": len(queue.raw_bytes),
@@ -618,9 +659,19 @@ def _run_parameters(
             "raw_sha256": snapshot.raw_sha256,
             "retrieved_at": snapshot.retrieved_at,
         },
-        "source_valid_from_basis": "eea_dataset_publication_date",
-        "workflow": IMPORTER_VERSION,
+        "source_valid_from_basis": (
+            "eea_dataset_publication_date" if legacy else "unknown_claim_effective_time"
+        ),
+        "workflow": importer_version,
     }
+    if not legacy:
+        result["import_policy"].update({
+            "claim_effective_time_known": False,
+            "claim_confidence_calibrated": False,
+            "publication_is_claim_effective_time": False,
+        })
+        result["completion_timestamp_basis"] = "actual_prewrite_validation_completion"
+    return result
 
 
 def _source_candidate_map(
@@ -645,11 +696,29 @@ def _assert_semantic_postconditions(
     connection: sqlite3.Connection,
     *,
     run_id: str,
+    raw_document_id: str,
     candidate_document_id: str,
     expected_entity_ids: Sequence[str],
     expected_record_ids: Sequence[str],
     expected_claim_count: int,
+    importer_version: str = IMPORTER_VERSION,
 ) -> None:
+    expected_documents = {
+        (candidate_document_id, "primary"),
+        (candidate_document_id, "candidate_derivative"),
+        (raw_document_id, "raw_accdb"),
+    }
+    if expected_record_ids:
+        expected_documents.add((candidate_document_id, "source_record"))
+    actual_documents = {
+        (row["source_document_id"], row["role"])
+        for row in connection.execute(
+            "SELECT source_document_id, role FROM ingestion_run_documents "
+            "WHERE ingestion_run_id = ?", (run_id,),
+        )
+    }
+    if actual_documents != expected_documents:
+        raise ValueError("EEA import has unexpected ingestion-run document lineage")
     entity_rows = connection.execute(
         "SELECT id, kind, display_name FROM entities WHERE created_by_run_id = ?",
         (run_id,),
@@ -673,6 +742,7 @@ def _assert_semantic_postconditions(
     claims = connection.execute(
         """
         SELECT versions.id, versions.claim_kind, versions.confidence,
+               versions.valid_from, versions.valid_to,
                series.predicate, series.value_kind,
                entities.stable_key AS entity_stable_key,
                evidence.source_document_id, evidence.source_record_id,
@@ -695,10 +765,13 @@ def _assert_semantic_postconditions(
     if len(claims) != expected_claim_count:
         raise ValueError("EEA import created an unexpected claim count")
     expected_records = set(expected_record_ids)
+    legacy = importer_version == LEGACY_IMPORTER_VERSION
     for row in claims:
         if (
             row["claim_kind"] != ClaimKind.SOURCE_STATEMENT.value
-            or float(row["confidence"]) != 1.0
+            or row["confidence"] != (1.0 if legacy else None)
+            or row["valid_from"] != (EEA_PUBLICATION_DATE if legacy else None)
+            or row["valid_to"] is not None
             or row["value_kind"] != ValueKind.SCALAR.value
             or row["predicate"] not in _ALLOWED_PREDICATES
             or row["source_document_id"] != candidate_document_id
@@ -746,28 +819,31 @@ def accept_eea_industrial_review(
     snapshot: str | Path | VerifiedEEAIndustrialSnapshot,
     candidate_queue: EEAIndustrialReviewQueue | bytes | str | Path,
     review: EEAIndustrialReview | bytes | str | Path,
-    accepted_at: str,
+    accepted_at: str | None = None,
 ) -> EEAIndustrialImportResult:
     """Atomically import only accepted EEA candidates as source-native facts.
 
-    This v1 boundary supports one immutable reviewed import per database. Exact
-    replay is verified and writes zero rows. A changed review fails closed until
-    explicit refresh semantics are implemented in a later importer version.
+    New admissions use schema-5 unknown-effective, uncalibrated source statements.
+    An explicit acceptance timestamp is replay-only. Existing v1 imports retain
+    their original representation and clocks; no new v1 import is permitted.
+    A changed review remains forbidden across both importer versions.
     """
 
+    started = _canonical_timestamp(_now(), "processing clock")
     verified = _verified_snapshot(snapshot)
     queue = _load_queue(candidate_queue)
     _assert_queue_matches_snapshot(verified, queue)
     reviewed = _load_review(review, queue=queue)
-    acceptance = _canonical_timestamp(accepted_at, "accepted_at")
-    for context, cutoff in (
+    requested_acceptance = (
+        _canonical_timestamp(accepted_at, "accepted_at")
+        if accepted_at is not None else None
+    )
+    cutoffs = (
         ("snapshot acceptance", verified.accepted_at),
         ("queue generation", queue.generated_at),
         ("review", reviewed.reviewed_at),
         ("review knowledge cutoff", reviewed.knowledge_cutoff_at),
-    ):
-        if _clock(acceptance) < _clock(cutoff):
-            raise ValueError(f"accepted_at cannot predate {context}")
+    )
 
     sources = _source_candidate_map(verified)
     queue_by_id = {item.candidate_id: item for item in queue.candidates}
@@ -800,33 +876,46 @@ def accept_eea_industrial_review(
         verified.candidate_sha256,
         "candidate-derivative",
     )
-    run_id = stable_id(
-        "ingestion-run",
-        IMPORTER_VERSION,
-        verified.manifest_sha256,
-        queue.raw_sha256,
-        reviewed.raw_sha256,
+    run_ids = {
+        version: stable_id(
+            "ingestion-run", version, verified.manifest_sha256,
+            queue.raw_sha256, reviewed.raw_sha256,
+        ) for version in (LEGACY_IMPORTER_VERSION, IMPORTER_VERSION)
+    }
+    prior_runs = connection.execute(
+        "SELECT * FROM ingestion_runs WHERE source_id = ? AND code_version IN (?, ?)",
+        (source_id, LEGACY_IMPORTER_VERSION, IMPORTER_VERSION),
+    ).fetchall()
+    if len(prior_runs) > 1:
+        raise ValueError("EEA source has conflicting or mixed-version reviewed imports")
+    existing_run = prior_runs[0] if prior_runs else None
+    importer_version = (
+        str(existing_run["code_version"]) if existing_run is not None else IMPORTER_VERSION
     )
-    existing_run = connection.execute(
-        "SELECT started_at FROM ingestion_runs WHERE id = ?", (run_id,)
-    ).fetchone()
+    legacy = importer_version == LEGACY_IMPORTER_VERSION
+    run_id = run_ids[importer_version]
     replayed = existing_run is not None
-    if existing_run is not None and existing_run["started_at"] != acceptance:
-        raise ValueError(
-            "EEA exact replay accepted_at conflicts with the immutable original run"
-        )
-    conflicting_run = connection.execute(
-        """
-        SELECT id FROM ingestion_runs
-        WHERE source_id = ? AND code_version = ? AND id != ?
-        LIMIT 1
-        """,
-        (source_id, IMPORTER_VERSION, run_id),
-    ).fetchone()
-    if conflicting_run is not None:
-        raise ValueError(
-            "EEA importer v1 already accepted a different review in this database"
-        )
+    if existing_run is not None:
+        if existing_run["id"] != run_id:
+            raise ValueError("EEA source already accepted a different review in this database")
+        prior_parameters = json.loads(existing_run["parameters_json"])
+        acceptance = _canonical_timestamp(prior_parameters.get("accepted_at"), "stored accepted_at")
+        if requested_acceptance is not None and requested_acceptance != acceptance:
+            raise ValueError("EEA exact replay accepted_at conflicts with the immutable original run")
+        started = _canonical_timestamp(existing_run["started_at"], "stored started_at")
+        completed = _canonical_timestamp(existing_run["completed_at"], "stored completed_at")
+        if not _clock(started) <= _clock(acceptance) <= _clock(completed):
+            raise ValueError("EEA stored admission clock is outside its processing interval")
+    else:
+        if requested_acceptance is not None:
+            raise ValueError("accepted_at is replay-only; new EEA admissions require the actual clock")
+        if schema_version(connection) < 5:
+            raise ValueError("new EEA source statements require an existing schema-5 database")
+        acceptance = completed = ""
+    if replayed:
+        for context, cutoff in cutoffs:
+            if _clock(acceptance) < _clock(cutoff):
+                raise ValueError(f"accepted_at cannot predate {context}")
 
     documents_created = 0
     records_created = 0
@@ -838,11 +927,32 @@ def accept_eea_industrial_review(
     record_ids: list[str] = []
 
     with _atomic_import(connection):
+        def persist(value: object) -> bool:
+            return _persist(connection, value, replayed=replayed)
+
+        if not replayed:
+            # Validate under the transaction before assigning the admission clock.
+            # Ingestion runs are immutable, so completed_at records this real
+            # validation-completion boundary, not a fabricated later timestamp.
+            issues = validate_database(connection)
+            if issues:
+                raise ValueError("EEA pre-admission database validation: " + "; ".join(issues))
+            _reverify_inputs(verified, queue, reviewed)
+            acceptance = completed = _canonical_timestamp(_now(), "admission clock")
+            if _clock(acceptance) <= _clock(started):
+                raise ValueError("actual admission clock must follow validation start")
+            for context, cutoff in cutoffs:
+                if _clock(acceptance) < _clock(cutoff):
+                    raise ValueError(f"accepted_at cannot predate {context}")
+            if connection.execute(
+                "SELECT 1 FROM ingestion_runs WHERE source_id = ? AND code_version IN (?, ?)",
+                (source_id, LEGACY_IMPORTER_VERSION, IMPORTER_VERSION),
+            ).fetchone() is not None:
+                raise ValueError("EEA review admission changed during validation")
         family_created_at = _existing_created_at(
             connection, "source_families", family_id, acceptance
         )
-        add_source_family(
-            connection,
+        persist(
             SourceFamily(
                 family_id,
                 SOURCE_FAMILY_KEY,
@@ -857,8 +967,7 @@ def accept_eea_industrial_review(
         source_created_at = _existing_created_at(
             connection, "sources", source_id, acceptance
         )
-        add_source(
-            connection,
+        persist(
             Source(
                 source_id,
                 family_id,
@@ -871,8 +980,7 @@ def accept_eea_industrial_review(
             ),
         )
 
-        documents_created += add_source_document(
-            connection,
+        documents_created += persist(
             SourceDocument(
                 raw_document_id,
                 source_id,
@@ -893,8 +1001,7 @@ def accept_eea_industrial_review(
                 },
             ),
         )
-        documents_created += add_source_document(
-            connection,
+        documents_created += persist(
             SourceDocument(
                 candidate_document_id,
                 source_id,
@@ -925,26 +1032,24 @@ def accept_eea_industrial_review(
             queue=queue,
             review=reviewed,
             accepted_at=acceptance,
+            importer_version=importer_version,
         )
-        add_ingestion_run(
-            connection,
+        persist(
             IngestionRun(
                 run_id,
                 source_id,
-                acceptance,
+                started,
                 status=IngestionStatus.SUCCEEDED,
-                completed_at=_completed_at(acceptance),
-                code_version=IMPORTER_VERSION,
+                completed_at=completed,
+                code_version=importer_version,
                 input_document_id=candidate_document_id,
                 parameters=parameters,
             ),
         )
-        add_ingestion_run_document(
-            connection,
+        persist(
             IngestionRunDocument(run_id, raw_document_id, "raw_accdb"),
         )
-        add_ingestion_run_document(
-            connection,
+        persist(
             IngestionRunDocument(run_id, candidate_document_id, "candidate_derivative"),
         )
 
@@ -955,8 +1060,7 @@ def accept_eea_industrial_review(
             entity_id = stable_id("entity", entity_key)
             record_key = entity_key
             record_id = stable_id("source-record", run_id, record_key)
-            records_created += add_source_record(
-                connection,
+            records_created += persist(
                 SourceRecord(
                     record_id,
                     run_id,
@@ -970,8 +1074,7 @@ def accept_eea_industrial_review(
             entity_created_at = _existing_created_at(
                 connection, "entities", entity_id, acceptance
             )
-            entities_created += add_entity(
-                connection,
+            entities_created += persist(
                 Entity(
                     entity_id,
                     EntityKind.FACILITY,
@@ -995,27 +1098,32 @@ def accept_eea_industrial_review(
                     predicate=spec.predicate,
                     dimension=spec.dimension,
                     created_at=acceptance,
+                    replayed=replayed,
                 )
                 series_created += created
                 claim_id = stable_id(
                     "claim-version",
-                    IMPORTER_VERSION,
+                    importer_version,
                     series_id,
                     record_id,
                     EEA_PUBLICATION_DATE,
                 )
+                if replayed and connection.execute(
+                    "SELECT 1 FROM claim_versions WHERE id = ?", (claim_id,)
+                ).fetchone() is None:
+                    raise ValueError("EEA replay is missing an immutable claim")
                 claims_created += insert_claim(
                     connection,
                     ClaimVersion(
                         claim_id,
                         series_id,
-                        valid_from,
+                        valid_from if legacy else None,
                         acceptance,
                         ClaimKind.SOURCE_STATEMENT,
                         spec.method,
-                        1.0,
+                        1.0 if legacy else None,
                         created_by_run_id=run_id,
-                        notes=spec.notes,
+                        notes=(spec.notes if legacy else spec.notes + " Claim-effective time and calibrated claim confidence are unknown; publication is document metadata only."),
                     ),
                     spec.value,
                     evidence=spec.evidence,
@@ -1026,10 +1134,12 @@ def accept_eea_industrial_review(
         _assert_semantic_postconditions(
             connection,
             run_id=run_id,
+            raw_document_id=raw_document_id,
             candidate_document_id=candidate_document_id,
             expected_entity_ids=entity_ids,
             expected_record_ids=record_ids,
             expected_claim_count=expected_claims,
+            importer_version=importer_version,
         )
         issues = validate_database(connection)
         if issues:
@@ -1037,6 +1147,8 @@ def accept_eea_industrial_review(
                 "EEA import left invalid database state: " + "; ".join(issues)
             )
         _reverify_inputs(verified, queue, reviewed)
+        if not replayed and _clock(_canonical_timestamp(_now(), "final verification clock")) < _clock(acceptance):
+            raise ValueError("EEA clock moved backwards during final verification")
 
     if replayed and any(
         (

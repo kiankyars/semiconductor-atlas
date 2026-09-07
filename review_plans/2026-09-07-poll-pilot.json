@@ -1,0 +1,47 @@
+{
+  "format": "semiconductor-atlas-curated-poll-pilot-v1",
+  "configuration_path": "acquisition_plans/ai_critical_poll_v1.json",
+  "configuration_sha256": "7c3ce2afe9f40bcd94073e8bfa76b50dfe74bf93f9ea10f47b6e3de886511d55",
+  "manual_invocations": [
+    {
+      "path": "artifacts/curated-poll-v1/37373565c7384860a3024beb19a26134",
+      "started_at": "2026-09-07T04:05:13.137133Z",
+      "outcome": "not_due",
+      "terminal_receipt_sha256": "864bfd25df04a603e91c035a6ba4399822f5047fd81f621bcaed0f5c34f2690c",
+      "reportable_change": false
+    },
+    {
+      "path": "artifacts/curated-poll-v1/e503ab97b62f4fe69436353b4659ec65",
+      "started_at": "2026-09-07T04:05:24.121196Z",
+      "outcome": "captured_imported",
+      "terminal_receipt_sha256": "914b910e81e5f7f6f1aabae2c0e8f1cfc0755a67d554acd88d75d73f11607a80",
+      "reportable_change": false
+    },
+    {
+      "path": "artifacts/curated-poll-v1/061253de284746bdb8fe27433477decb",
+      "started_at": "2026-09-07T04:06:02.223044Z",
+      "outcome": "not_due",
+      "terminal_receipt_sha256": "7144caa79916aa7c9f86b4a051d7797e090c757c83cd948bad0de985de12c707",
+      "reportable_change": false
+    }
+  ],
+  "live_capture_path": "source_snapshots/curated-poll-v1/e503ab97b62f4fe69436353b4659ec65-5",
+  "live_capture_manifest_sha256": "5c59ffed01efe304a93b468e84791437587d4b8c6b8154a2b52f2e709f5c30c3",
+  "live_capture_started_at": "2026-09-07T04:05:24.647939Z",
+  "live_capture_finished_at": "2026-09-07T04:05:32.114176Z",
+  "live_request_count": 7,
+  "manual_pilot_runner_sha256": "5a371b6561e4ee0f816db44e4387a8e072de96df84e6a03f8b3ffc94b3a90803",
+  "queue_head_after_live_capture": "0396d5932ae9e99a7d16e8adb784347764f00fbe22a25334e2fba17a75b6a109",
+  "queue_export_sha256": "eeaea2dc15cf838d6d1584970de1f417fc8ca081b825ccdce2f313adad32e9ea",
+  "pending_count": 0,
+  "recheck_count": 0,
+  "unmonitored_facility_count": 6,
+  "automation_id": "semiconductor-atlas-source-checks",
+  "automation_status_at_setup": "ACTIVE",
+  "automation_created_at": "2026-09-07T04:06:49.722Z",
+  "schedule": "Daily 08:00 local time; America/Los_Angeles at setup",
+  "scheduler_triggered_execution_observed": false,
+  "continuous_operation_proven": false,
+  "claim_acceptance": false,
+  "delivery_eligible": false
+}

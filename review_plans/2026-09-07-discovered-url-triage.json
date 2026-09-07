@@ -1,0 +1,27 @@
+{
+  "format": "semiconductor-atlas-discovered-url-triage-v1",
+  "reviewed_at": "2026-09-07T05:37:02Z",
+  "reviewer": "local:discovered-document-scope-triage",
+  "index_capture": {
+    "path": "source_snapshots/2026-09-07-nist-index-discovery-v1",
+    "manifest_sha256": "5f13fb7383314680e7854c70d23ed10cbf2b7ad13fdae22f5c157bd9dea5b008"
+  },
+  "decisions": [
+    {
+      "url": "https://www.nist.gov/news-events/news/2026/07/trump-administration-secures-additional-100-billion-us-semiconductor",
+      "action": "defer",
+      "reason": "Official article is company-wide US/Arizona expansion context, not a named Fab 21 update. Defer to a separately specified company/project-aggregate layer; do not change the existing facility lifecycle, capacity, telemetry or geometry. Its explicit July 16, 2026 publication day must remain distinct from the index teaser's noon-UTC timestamp.",
+      "source_read_method": "Read-only official NIST page review; no raw linked document retained or collector plan activated"
+    },
+    {
+      "url": "https://www.nist.gov/chips/samsung-electronics-texas-taylor",
+      "action": "defer",
+      "reason": "Taylor URL still describes Taylor logic/R&D and Austin award context. It could supplement the reviewed Austin URL, but is not independent corroboration and does not establish construction, tools, qualification or production. Defer supplementary acquisition until its incremental monitoring value and exact-source plan are reviewed; preserve the current Taylor announced lifecycle.",
+      "source_read_method": "Read-only official NIST page review; no raw linked document retained or collector plan activated"
+    }
+  ],
+  "claims_accepted": 0,
+  "new_acquisition_plans_approved": 0,
+  "facility_coverage_changed": false,
+  "note": "These are reversible workflow dispositions of discovered URLs, not canonized facts or permission decisions. Other routed and unmatched entries remain retained and unresolved."
+}

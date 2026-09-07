@@ -138,7 +138,7 @@ class ModelTests(unittest.TestCase):
                 date_high="2027-09-01",
             )
 
-    def test_claim_version_requires_valid_time_and_calibrated_confidence(self) -> None:
+    def test_claim_version_validates_known_time_and_confidence(self) -> None:
         ClaimVersion(
             id="claim:1",
             series_id="series:1",

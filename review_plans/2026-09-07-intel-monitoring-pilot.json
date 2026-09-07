@@ -1,0 +1,166 @@
+{
+  "capture": {
+    "copied_packet_replay_equal": true,
+    "managed_file_bytes": 476432,
+    "managed_file_count": 12,
+    "manifest_sha256": "939bca0568716315b745bfa9c49470d1eb9f4ae800e78609f092fc271289d7a9",
+    "minimum_request_gap_seconds": 1.010822,
+    "path": "source_snapshots/curated-poll-v1/f3114953d987434a9b771256004a261e-2",
+    "request_count": 3,
+    "response_bytes": 457184
+  },
+  "historical_reports": {
+    "v1_byte_identical": true,
+    "v1_sha256": "28cb94636f8b69d2c599414626ed50806300aea565da6f549621c235289627f6",
+    "v2_byte_identical": true,
+    "v2_path": "artifacts/curated-poll-v1/92260e90c9774797a92686ff516a5f5a/coverage.json",
+    "v2_sha256": "6bb301f9d390b8f48c8e561ff32399b6c79a8f2cb13b9957f53de7affd174322"
+  },
+  "immutable_baseline_hashes": {
+    "baselines/ai_critical_manufacturing_v1.json": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+    "releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3.tar.gz": "fa3db457bd4734511dee267c13d8b2404b2f25a7b2d12f85bbf4c6f4aad542f4",
+    "semiconductor_atlas/ai_critical.py": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969"
+  },
+  "queue": {
+    "candidate_count": 6,
+    "event_count": 14,
+    "export_bytes": 42190,
+    "export_path": "artifacts/2026-09-07-intel-expanded-review-events-v1.json",
+    "export_sha256": "9c12721b69848522c1f57b8a86e96c18807bafcf1c1d724c6668f2b3ff44a141",
+    "head_event_id": "c9041f076fb7683432d85fec6f209752309e82639a480edd7a1767362312d821",
+    "path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+    "pending_count": 2,
+    "recheck_count": 0,
+    "restored_event_cutoff_count": 14,
+    "restored_export_and_full_verify_equal": true,
+    "verified_capture_count": 10
+  },
+  "verified_at": "2026-09-07T06:10:17.910344Z",
+  "format": "semiconductor-atlas-intel-monitoring-pilot-v1",
+  "recorded_at": "2026-09-07T06:12:30.500804Z",
+  "plan": {
+    "path": "acquisition_plans/intel_fab52_chandler_v1.json",
+    "sha256": "276bf0e4de604a0e91f4f218b960ffff1d9c8b1eb77c63477f22e2dddf902f6f"
+  },
+  "source_review": {
+    "path": "review_plans/2026-09-07-intel-chandler-source-review.json",
+    "sha256": "62ed391baf11ab88279ba165b9dc62be76143ed94260b2194166d46659b17f3f"
+  },
+  "adjudication": {
+    "path": "review_plans/2026-09-07-intel-chandler-text-adjudication.json",
+    "sha256": "bb8efebf5a9bf803f6caa5e6bd77a21b167e6a76a78659973f98f21048072d91"
+  },
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v3.json",
+    "sha256": "3142e4330e41018ad06821ff39b3f74f28d3d7b9acb50d66a40c436185856b48"
+  },
+  "poll_config": {
+    "path": "acquisition_plans/ai_critical_poll_v3.json",
+    "sha256": "3789d10527426e3d08ba6eee05a47966e49c7a5224dcd0cda2959d9224dc566a"
+  },
+  "invocations": [
+    {
+      "path": "artifacts/curated-poll-v1/f3114953d987434a9b771256004a261e",
+      "started_at": "2026-09-07T06:03:03.327001Z",
+      "finished_at": "2026-09-07T06:03:07.472945Z",
+      "finished_sha256": "5ca8865d2faa60d11405519eb742a17c4d2aa358bd67bf1e450b9dd36450e50c",
+      "statuses": [
+        "not_due",
+        "not_due",
+        "captured_imported",
+        "not_due"
+      ],
+      "reportable_change": true,
+      "coverage_sha256": "d9daf55f4f904ee3bbbddead109e2e4b27f459434440f443f9decf30775a026a",
+      "queue_export_sha256": "201dc2152e086378425e40f1e0c38c284fc76fd053b734b2ae150924b9b34c82",
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    },
+    {
+      "path": "artifacts/curated-poll-v1/47c95391c4a044a2a38e3e6407e97ff0",
+      "started_at": "2026-09-07T06:04:08.623886Z",
+      "finished_at": "2026-09-07T06:04:10.303978Z",
+      "finished_sha256": "083baf89fb04e8d06441d7fb213ba61f709b18ccf16b7bba93a723ba240c4de3",
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due"
+      ],
+      "reportable_change": false,
+      "coverage_sha256": "0d346f7c380cc50bf4c5a5dd9053863dda46d1814f6125c8f232690e02297549",
+      "queue_export_sha256": "201dc2152e086378425e40f1e0c38c284fc76fd053b734b2ae150924b9b34c82",
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    },
+    {
+      "path": "artifacts/curated-poll-v1/f6581fcca9884628bdbfa4708bdfe36b",
+      "started_at": "2026-09-07T06:07:46.558844Z",
+      "finished_at": "2026-09-07T06:07:48.271787Z",
+      "finished_sha256": "97d4af399ecc7ce9b44f534834d84aef11a223f49b89120c298dcaab137c5a55",
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due"
+      ],
+      "reportable_change": true,
+      "coverage_sha256": "c9ab6bc43426e3fb92c830b0458ddd2151d388f65ea392a32f13261af23b4e69",
+      "queue_export_sha256": "9c12721b69848522c1f57b8a86e96c18807bafcf1c1d724c6668f2b3ff44a141",
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    },
+    {
+      "path": "artifacts/curated-poll-v1/deb403152bab4f13989629ae2b240ecc",
+      "started_at": "2026-09-07T06:10:40.795037Z",
+      "finished_at": "2026-09-07T06:10:42.469585Z",
+      "finished_sha256": "39d3e47eb73c492cbf2e298a06314c76836c58bd9332c629529e85276c6f0aa7",
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due"
+      ],
+      "reportable_change": false,
+      "coverage_sha256": "681775fe66ec6a25f6e1b05582eeef5c82fa916382d589e2bfdef826551020f3",
+      "queue_export_sha256": "9c12721b69848522c1f57b8a86e96c18807bafcf1c1d724c6668f2b3ff44a141",
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    }
+  ],
+  "coverage_summary": {
+    "cohort_facility_count": 7,
+    "configured_document_count": 6,
+    "configured_facility_count": 4,
+    "expired_plan_count": 0,
+    "fresh_document_count": 6,
+    "never_observed_document_count": 0,
+    "pending_count": 2,
+    "recheck_count": 0,
+    "stale_document_count": 0,
+    "unhealthy_document_count": 0,
+    "unmonitored_facility_count": 3
+  },
+  "discovery_repeat": {
+    "path": "artifacts/discovery-poll-v1/0ddb54a0955744d2b6e21c83e09ffdea",
+    "requests": 0,
+    "status": "not_due",
+    "reportable_change": false
+  },
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "continuous_operation_proven": false,
+  "validation": {
+    "core_tests": 689,
+    "web_tests": 12,
+    "compileall_passed": true,
+    "local_distribution_build_run": false
+  },
+  "automation": {
+    "id": "semiconductor-atlas-source-checks",
+    "name": "Semiconductor Atlas source checks",
+    "status": "ACTIVE",
+    "target_thread_id": "01a03042-7728-74a3-8fcb-a05db52a8b9c",
+    "updated_at_unix_ms": 1788761244528,
+    "schedule": "Daily 08:00 America/Los_Angeles; same task, preserved cadence and discovery job",
+    "prompt_readback_equal": true,
+    "actual_scheduler_trigger_observed": false
+  },
+  "notes": "One exact municipal source closes an Intel monitoring configuration gap, not the manufacturing evidence gaps. The first Intel text version was explicitly reviewed and dismissed without baseline revision; future changed versions remain review work. Three cohort scopes are unmonitored. First live poll used no force; three ordinary repeats made no document or policy requests. The post-adjudication repeat reported that disposition once, then became quiet. The manual two-policy review packet is separate from the three-request collector pilot. Exploratory web research is not claimed as a complete source-check ledger. No raw publisher bodies or new data release are published."
+}

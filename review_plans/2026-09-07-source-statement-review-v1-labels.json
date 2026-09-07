@@ -1,0 +1,1486 @@
+{
+  "adjudications": [
+    {
+      "case_id": "061f7dad9f8f29d7f8f30b0450b7db58f4516781e5f83e4cfbd80c6256ccac1d",
+      "disposition": "no_relevant_scoped_target",
+      "locator": "Amkor groundbreaking article",
+      "reason": "No explicit dated planned construction-completion, opening or production-start target in the inspected main project text on either side. Historical groundbreaking and undated construction language are not no-revision target pairs.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "0ce97b4f12218760da3bac6cf1894376faa48245dfffc8fab4d6f2caa92f6fdb",
+      "disposition": "uncomparable",
+      "locator": "Intel and Micron",
+      "reason": "No retained predecessor for this first observation; do not infer a transition.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "after",
+          "span": {
+            "end": 41373,
+            "locator": "Advanced-packaging expansion",
+            "sha256": "b3443bf74f2e47a618b790041daa0a66643a68f28810032c2c1d1ab0f552a021",
+            "start": 41233
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 51935,
+            "locator": "Undated completion aspiration",
+            "sha256": "08115906dfc3168399d55c39aabdc7bc72130d2b8b31c29c094fac19d0b049a5",
+            "start": 51791
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "1335d8dddc9b48640ed9e93337e7a540e6181eaf3b0642b262fc6ec58c67d0f8",
+      "disposition": "reviewed_targets",
+      "locator": "NIST Amkor",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "formulation": "timeline",
+          "milestone": "planned mass-production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "NIST Peoria project, phase unspecified; not automatically the company article's Phase One opening",
+          "source_native_subject": "Amkor Peoria NIST award project",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "30aa138f18cff32073e0e3d8024605e58cdfcfe8f9912ea59162e324849e37e2",
+      "disposition": "reviewed_targets",
+      "locator": "Amkor company scope-update article",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "formulation": "company narrative",
+          "milestone": "planned opening",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Phase One of the Peoria advanced packaging and test campus, not demonstrated production start",
+          "source_native_subject": "Amkor Peoria campus Phase One",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "38b314d15ba842d44b5e389c1a5fecd31764ef4194e8cd641f35accae8713e0e",
+      "disposition": "no_relevant_scoped_target",
+      "locator": "Amkor groundbreaking article",
+      "reason": "No explicit dated planned construction-completion, opening or production-start target in the inspected main project text on either side. Historical groundbreaking and undated construction language are not no-revision target pairs.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "3c4ca576896d287c2744465859d0bea71a6257768e11309fce45a9b5bfd9d63d",
+      "disposition": "uncomparable",
+      "locator": "Intel and Micron",
+      "reason": "No retained predecessor for this first observation; do not infer a transition.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "after",
+          "span": {
+            "end": 151003,
+            "locator": "Municipal Fab 52 present-tense opening assertion",
+            "sha256": "a1bd0843faf22c91de9726ff9636bd4ba37941b75e0110de2596c51f01a9ca1f",
+            "start": 150910
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "4735acd488fcd5a619834191a0a13173d1f8b98a424fe03eb1dc22ac2a4677ab",
+      "disposition": "uncomparable",
+      "locator": "TSMC",
+      "reason": "No retained predecessor for this first observation; do not infer a transition.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "after",
+          "span": {
+            "end": 83809,
+            "locator": "Economic and National Security Impact: production targets",
+            "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+            "start": 83588
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 88154,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+            "start": 87854
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "58b42bff1dea55f7ed88b1e760551fb639b64614d2fd6a82d1fb474a038882f5",
+      "disposition": "reviewed_targets",
+      "locator": "TSMC",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 83809,
+            "locator": "Economic and National Security Impact: production targets",
+            "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+            "start": 83588
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 88154,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+            "start": 87854
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 83809,
+            "locator": "Economic and National Security Impact: production targets",
+            "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+            "start": 83588
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 88154,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+            "start": 87854
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              }
+            ],
+            "fragment": {
+              "end": 83690,
+              "locator": "narrative: first fab target",
+              "sha256": "16dc63e0661faa2fe197f440a685b0cd9f5881ed83df74f295c72044962d0cfe",
+              "start": 83591
+            },
+            "literal": "by the first half of 2025"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              }
+            ],
+            "fragment": {
+              "end": 83690,
+              "locator": "narrative: first fab target",
+              "sha256": "16dc63e0661faa2fe197f440a685b0cd9f5881ed83df74f295c72044962d0cfe",
+              "start": 83591
+            },
+            "literal": "by the first half of 2025"
+          },
+          "formulation": "narrative",
+          "milestone": "planned high-volume production",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "The source's first Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona first fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              }
+            ],
+            "fragment": {
+              "end": 83762,
+              "locator": "narrative: second fab target",
+              "sha256": "6d09258bc5b76c4aea2b55a2a21bff88ad01f66b9071ef47e673103687dc555a",
+              "start": 83692
+            },
+            "literal": "second half in 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              }
+            ],
+            "fragment": {
+              "end": 83762,
+              "locator": "narrative: second fab target",
+              "sha256": "6d09258bc5b76c4aea2b55a2a21bff88ad01f66b9071ef47e673103687dc555a",
+              "start": 83692
+            },
+            "literal": "second half in 2027"
+          },
+          "formulation": "narrative",
+          "milestone": "planned production",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "The source's second Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona second fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              }
+            ],
+            "fragment": {
+              "end": 83804,
+              "locator": "narrative: third fab target",
+              "sha256": "3c8fdd5d01c470aef3fef1c452d1c35042dbfa0f42fb238cde27de6e868b7a7a",
+              "start": 83763
+            },
+            "literal": "by the end of the decade"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              }
+            ],
+            "fragment": {
+              "end": 83804,
+              "locator": "narrative: third fab target",
+              "sha256": "3c8fdd5d01c470aef3fef1c452d1c35042dbfa0f42fb238cde27de6e868b7a7a",
+              "start": 83763
+            },
+            "literal": "by the end of the decade"
+          },
+          "formulation": "narrative",
+          "milestone": "planned production",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "The source's third Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona third fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              }
+            ],
+            "fragment": {
+              "end": 87978,
+              "locator": "timeline: first fab target",
+              "sha256": "b0f0cd074ea072d2860bf1137616b7fe1479f20b85d883a2bce42c3453835f4e",
+              "start": 87904
+            },
+            "literal": "in first half of 2025"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              }
+            ],
+            "fragment": {
+              "end": 87978,
+              "locator": "timeline: first fab target",
+              "sha256": "b0f0cd074ea072d2860bf1137616b7fe1479f20b85d883a2bce42c3453835f4e",
+              "start": 87904
+            },
+            "literal": "in first half of 2025"
+          },
+          "formulation": "timeline",
+          "milestone": "planned production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "The source's first Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona first fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              }
+            ],
+            "fragment": {
+              "end": 88063,
+              "locator": "timeline: second fab target",
+              "sha256": "2d13ec7ca96ca3501d1f9c77d0044bd2089b1f169e56fe2d58c13a6738caec15",
+              "start": 87988
+            },
+            "literal": "in second half of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              }
+            ],
+            "fragment": {
+              "end": 88063,
+              "locator": "timeline: second fab target",
+              "sha256": "2d13ec7ca96ca3501d1f9c77d0044bd2089b1f169e56fe2d58c13a6738caec15",
+              "start": 87988
+            },
+            "literal": "in second half of 2027"
+          },
+          "formulation": "timeline",
+          "milestone": "planned production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "The source's second Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona second fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              }
+            ],
+            "fragment": {
+              "end": 88144,
+              "locator": "timeline: third fab target",
+              "sha256": "4bbccab0404c157424f757bd49948c001cc619809bae1dbc3b5de88f3c47b10b",
+              "start": 88067
+            },
+            "literal": "by the end of the decade"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              }
+            ],
+            "fragment": {
+              "end": 88144,
+              "locator": "timeline: third fab target",
+              "sha256": "4bbccab0404c157424f757bd49948c001cc619809bae1dbc3b5de88f3c47b10b",
+              "start": 88067
+            },
+            "literal": "by the end of the decade"
+          },
+          "formulation": "timeline",
+          "milestone": "planned production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "The source's third Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona third fab",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "5f5e120212827f33ac344e97f426e123264704c3db1d5a7b1a765e4a99b859b2",
+      "disposition": "uncomparable",
+      "locator": "NIST Amkor",
+      "reason": "Policy-blocked check, attempted=false and no after body. Later successful NIST captures cannot supply this missing after-state.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [],
+      "targets": []
+    },
+    {
+      "case_id": "61974d4bd1ced9e80011296817a65d3cb0add79d4965a9b5e706c504051891da",
+      "disposition": "no_relevant_scoped_target",
+      "locator": "Amkor groundbreaking article",
+      "reason": "No explicit dated planned construction-completion, opening or production-start target in the inspected main project text on either side. Historical groundbreaking and undated construction language are not no-revision target pairs.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "65c267b772eab58d613262035b3b6c0730fac02eac01a24bf1204f9c0950d336",
+      "disposition": "reviewed_targets",
+      "locator": "Samsung",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 82399,
+            "locator": "Economic and National Security Impact: Texas project scope",
+            "sha256": "dc97bca0a8869b9c789ad754900a85507be50b53b4c72cb78edb237de9156214",
+            "start": 81657
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 87345,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "49bfd951f6dacafa92c08c658f01bffcc0fe748374293f54e25d5b2003318864",
+            "start": 87232
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 82399,
+            "locator": "Economic and National Security Impact: Texas project scope",
+            "sha256": "dc97bca0a8869b9c789ad754900a85507be50b53b4c72cb78edb237de9156214",
+            "start": 81657
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 87345,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "49bfd951f6dacafa92c08c658f01bffcc0fe748374293f54e25d5b2003318864",
+            "start": 87232
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 82399,
+                "locator": "Economic and National Security Impact: Texas project scope",
+                "sha256": "dc97bca0a8869b9c789ad754900a85507be50b53b4c72cb78edb237de9156214",
+                "start": 81657
+              },
+              {
+                "end": 87345,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "49bfd951f6dacafa92c08c658f01bffcc0fe748374293f54e25d5b2003318864",
+                "start": 87232
+              }
+            ],
+            "fragment": {
+              "end": 87335,
+              "locator": "All facilities operational deadline",
+              "sha256": "aedebc7284d9dd6c92accc498135af8c96b44c1d327c9241bcf5fe98173a8f7f",
+              "start": 87282
+            },
+            "literal": "by 2030"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 82399,
+                "locator": "Economic and National Security Impact: Texas project scope",
+                "sha256": "dc97bca0a8869b9c789ad754900a85507be50b53b4c72cb78edb237de9156214",
+                "start": 81657
+              },
+              {
+                "end": 87345,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "49bfd951f6dacafa92c08c658f01bffcc0fe748374293f54e25d5b2003318864",
+                "start": 87232
+              }
+            ],
+            "fragment": {
+              "end": 87335,
+              "locator": "All facilities operational deadline",
+              "sha256": "aedebc7284d9dd6c92accc498135af8c96b44c1d327c9241bcf5fe98173a8f7f",
+              "start": 87282
+            },
+            "literal": "by 2030"
+          },
+          "formulation": "timeline",
+          "milestone": "planned operational state",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Two Taylor logic fabs, a separate Taylor R&D fab and Austin expansion; not only the Taylor two-logic-fab aggregate",
+          "source_native_subject": "Samsung Texas award-project all facilities",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "7cd75b1fa2c9fcb15e2877ce142abf1b2087d9ec40a0c0190d27c7bd28299437",
+      "disposition": "reviewed_targets",
+      "locator": "Amkor company scope-update article",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "formulation": "company narrative",
+          "milestone": "planned opening",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Phase One of the Peoria advanced packaging and test campus, not demonstrated production start",
+          "source_native_subject": "Amkor Peoria campus Phase One",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "9496a4d1a887214224081472306a9a376fb5dcb92176249ccd6fd1169e5dad8f",
+      "disposition": "no_relevant_scoped_target",
+      "locator": "Amkor groundbreaking article",
+      "reason": "No explicit dated planned construction-completion, opening or production-start target in the inspected main project text on either side. Historical groundbreaking and undated construction language are not no-revision target pairs.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "9b1d07815811063a52716a586255c6fa0fdbe0774b57e1cb0853d691ccc0e77c",
+      "disposition": "reviewed_targets",
+      "locator": "NIST Amkor",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "formulation": "timeline",
+          "milestone": "planned mass-production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "NIST Peoria project, phase unspecified; not automatically the company article's Phase One opening",
+          "source_native_subject": "Amkor Peoria NIST award project",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "b419df276e08bd53acf94ea252a94fb8ac0209bd2972dad8e35630c03a93d498",
+      "disposition": "uncomparable",
+      "locator": "Samsung",
+      "reason": "No retained predecessor for this first observation; do not infer a transition.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "after",
+          "span": {
+            "end": 82399,
+            "locator": "Economic and National Security Impact: Texas project scope",
+            "sha256": "dc97bca0a8869b9c789ad754900a85507be50b53b4c72cb78edb237de9156214",
+            "start": 81657
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 87345,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "49bfd951f6dacafa92c08c658f01bffcc0fe748374293f54e25d5b2003318864",
+            "start": 87232
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "b4311adf2c4a3fecc8095358a04a42f7230670c4aa1612da8bd09b1235a0629d",
+      "disposition": "reviewed_targets",
+      "locator": "Amkor company scope-update article",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "formulation": "company narrative",
+          "milestone": "planned opening",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Phase One of the Peoria advanced packaging and test campus, not demonstrated production start",
+          "source_native_subject": "Amkor Peoria campus Phase One",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "d576779c2c9b1097013ac1e454a9310426470ac64fab0e451de43d4697952ba3",
+      "disposition": "no_relevant_scoped_target",
+      "locator": "Amkor groundbreaking article",
+      "reason": "No explicit dated planned construction-completion, opening or production-start target in the inspected main project text on either side. Historical groundbreaking and undated construction language are not no-revision target pairs.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 47444,
+            "locator": "Main project text from reported groundbreaking through closing project paragraph",
+            "sha256": "e649f1e2ee68ea7b35abdf34497455d7f43d2b90f0095b5cf1e7650230f5d64f",
+            "start": 44900
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "e1f734c059669adaffe32704c24a917691e47beae15ce9e7dbad74ddc954c253",
+      "disposition": "reviewed_targets",
+      "locator": "NIST Amkor",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "formulation": "timeline",
+          "milestone": "planned mass-production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "NIST Peoria project, phase unspecified; not automatically the company article's Phase One opening",
+          "source_native_subject": "Amkor Peoria NIST award project",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "e9e4ee3b3ba1aa04d11dcf15ea5ce21cc235da109bbac5bb4809ee1fd4b8e295",
+      "disposition": "reviewed_targets",
+      "locator": "Amkor company scope-update article",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "formulation": "company narrative",
+          "milestone": "planned opening",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Phase One of the Peoria advanced packaging and test campus, not demonstrated production start",
+          "source_native_subject": "Amkor Peoria campus Phase One",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "f78d76d0692de1bf37dee12b2ee76ded03fde58911660ebfc4fe820fc1414d86",
+      "disposition": "uncomparable",
+      "locator": "Samsung",
+      "reason": "No retained predecessor for this first observation; do not infer a transition.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "after",
+          "span": {
+            "end": 82399,
+            "locator": "Economic and National Security Impact: Texas project scope",
+            "sha256": "dc97bca0a8869b9c789ad754900a85507be50b53b4c72cb78edb237de9156214",
+            "start": 81657
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 87345,
+            "locator": "Facility Summary: Project Timeline",
+            "sha256": "49bfd951f6dacafa92c08c658f01bffcc0fe748374293f54e25d5b2003318864",
+            "start": 87232
+          }
+        }
+      ],
+      "targets": []
+    },
+    {
+      "case_id": "fd8683f336f5eaacc2a22c906698d2bd1f7bc9357bb9044852910acbcfe316f6",
+      "disposition": "reviewed_targets",
+      "locator": "Amkor company scope-update article",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 44985,
+            "locator": "Peoria advanced packaging and test campus introduction",
+            "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+            "start": 44660
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 46785,
+            "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+            "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+            "start": 46608
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 44985,
+                "locator": "Peoria advanced packaging and test campus introduction",
+                "sha256": "413b5f6ba43647160527ea85476c1623e8136b929eaa3dd728c73579921f030e",
+                "start": 44660
+              },
+              {
+                "end": 46785,
+                "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+                "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+                "start": 46608
+              }
+            ],
+            "fragment": {
+              "end": 46785,
+              "locator": "Supporting the future of U.S. semiconductor manufacturing: Phase One",
+              "sha256": "eedd3523115ed8449dfa3f98d882f4a70cf2dbf48c0722558be519b063e249b8",
+              "start": 46608
+            },
+            "literal": "2028"
+          },
+          "formulation": "company narrative",
+          "milestone": "planned opening",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Phase One of the Peoria advanced packaging and test campus, not demonstrated production start",
+          "source_native_subject": "Amkor Peoria campus Phase One",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "fe301d960640c112a08e7add99eeb46f672769a3cf2bb1a7c2de26f0272bcffa",
+      "disposition": "reviewed_targets",
+      "locator": "NIST Amkor",
+      "reason": "Source-native target formulations retain their stated scope, milestone and literal calendar target within these actual paired versions; physical state remains unverified.",
+      "review_sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 92197,
+            "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+            "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+            "start": 91621
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "formulation": "timeline",
+          "milestone": "planned mass-production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "NIST Peoria project, phase unspecified; not automatically the company article's Phase One opening",
+          "source_native_subject": "Amkor Peoria NIST award project",
+          "verdict": "no_revision"
+        }
+      ]
+    }
+  ],
+  "coverage_statement": "All 22 in-window completed document checks in the exact r3 freeze; no incomplete cases exist in this freeze. Target statements are reviewed within the declared project narrative and timeline regions, not an exhaustive publisher claim inventory.",
+  "format": "semiconductor-atlas-source-statement-labels-v1",
+  "frozen_sha256": "857d95ff223d83e30666d0ad73481f4901ff84e579ae1cb8da767f63de4a6fd4",
+  "prior_exposure": "All reviewers had prior corpus, collection-outcome or implementation exposure; retrospective agent review, neither independent nor blind. Root re-read the retained target and scope passages.",
+  "reviewed_at": "2026-09-07T11:43:01.075781Z",
+  "reviewer": "Codex root reviewer with three previously exposed assisting agents",
+  "supporting_reviews": [
+    {
+      "path": "2026-09-07-source-statement-review-v1-support.md",
+      "sha256": "990b545336a37921a9c0562663f0a38c2bcb89bfcaedb4ae99252e786dbd51e8"
+    }
+  ],
+  "target_scope": "Explicit source-stated calendar targets for construction completion, opening, production start or operational state in reviewed project narrative and timeline sections. Excludes historical attainment, investment, jobs, undated aspirations, technology descriptions and conditional future output rates."
+}

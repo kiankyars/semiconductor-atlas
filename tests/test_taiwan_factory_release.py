@@ -114,7 +114,7 @@ class TaiwanFactoryReleaseTests(unittest.TestCase):
             connection.close()
 
     def test_no_factory_source_retains_schema_v4_baseline_bytes(self) -> None:
-        connection, _ = initialize(":memory:")
+        connection, _ = initialize(":memory:", target_version=4)
         output = self.root / "empty-release"
         try:
             write_release(
