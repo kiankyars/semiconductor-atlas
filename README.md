@@ -611,6 +611,11 @@ Both local proposals are acknowledged, neither is delivery-eligible, and offline
 is explicitly distinct from replaying the original source acceptance. Blind performance evaluation
 and calibrated forecasting remain open.
 
+The [accepted-project population evaluator](docs/project_target_evaluation.md) freezes every
+supported-route comparison before a cutoff, including unadmitted revisions and reaffirmations.
+Post-freeze source-statement labels measure conditional support and admission coverage; they do
+not establish realized production, publisher recall, independent evaluation or calibrated forecasts.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

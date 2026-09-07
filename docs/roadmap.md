@@ -224,8 +224,12 @@ one microsecond before project admission still exposes no project proposal. The 
 accepted source evidence on a coherent read-only core snapshot. Portable packet validation checks
 retained-content consistency, not independent source authenticity or production attainment. Both
 proposals remain non-deliverable, and the original seven-facility evaluator is not used to score
-the unassigned Fab 2 project. A versioned project opportunity denominator, independent outcome
-labels and blind detection evaluation remain open.
+the unassigned Fab 2 project. The additive [accepted-project population evaluator](project_target_evaluation.md)
+defines a complete supported-route core comparison denominator before a cutoff, including
+unadmitted revisions and reaffirmations. Its retrospective source-statement labels separate
+conditional proposal support from admission coverage and production realization. Independently
+adjudicated outcomes, blind detection evaluation and calibrated forecasting remain open; the
+new workflow alone does not meet those gates.
 
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
