@@ -171,8 +171,17 @@ add URL dispositions, admission-time history, recoverable imports and publisher-
 The existing daily task now includes this manually tested job; actual scheduler execution remains
 unobserved. The live queue retains 64 URLs, including 14 routed leads and two deferrals, through
 an unchanged second packet and exact export/restore. Handoffs to independently approved linked
-document acquisition, the other four scopes, wider approved coverage, complete collection-chain
+document acquisition, wider approved coverage, complete collection-chain
 accounting beyond these bounded indexes, and historical detection-performance evaluation remain open.
+
+The [Intel Chandler expansion](intel_chandler_monitoring.md) adds one exact municipal page naming
+Fab 52, bringing monitoring to six documents across four of seven cohort scopes. Its undated
+opening/production statement was reviewed with no baseline revision; HVM attainment and numeric
+capacity remain unsupported. An ordinary live poll made three requests for Intel while preserving
+existing plan due times. The 14-event review queue restores at every event cutoff, and prior v1/v2
+coverage reports remain byte-identical. The existing daily task now uses the manually tested v3
+config; actual scheduler execution remains unobserved. Micron Singapore, SK hynix M15X and ASE
+Kaohsiung are the three remaining unmonitored cohort scopes.
 
 Add:
 

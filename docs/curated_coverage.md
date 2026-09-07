@@ -84,6 +84,11 @@ three configured facility scopes, four unmonitored scopes, and two pending sourc
 items. These broader pages do not refresh the manufacturing baseline or establish project progress.
 The original one-facility pilot and catalog above remain unchanged and replayable.
 
+The later [Intel expansion](intel_chandler_monitoring.md) uses catalog v3 with the unchanged
+scope-bearing report schema. One exact municipal page names Fab 52, giving six documents across
+four configured scopes and three unmonitored scopes. Its undated opening/production text was
+reviewed with no baseline revision. Historical catalogs and report bytes remain intact.
+
 The [polling runner](curated_poll.md) adds retained run outcomes and a daily app schedule. Manual
 execution is validated; the first scheduler-triggered outcome remains to be observed. Approved
 source expansion, new-document discovery, and complete collection-chain accounting remain open.

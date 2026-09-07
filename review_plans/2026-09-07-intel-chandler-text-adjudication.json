@@ -1,0 +1,63 @@
+{
+  "format": "semiconductor-atlas-intel-chandler-text-adjudication-v1",
+  "reviewed_at": "2026-09-07T06:04:30Z",
+  "reviewer": "local:codex-source-version-review",
+  "facility_key": "intel:fab52-chandler",
+  "decision": "dismiss_reviewed_text_version_without_baseline_revision",
+  "candidate_id": "edd192e46f7391209982f820a00cd0b6a583109693a22757765d28d77a4133fb",
+  "expected_event_id": "80090e6a26455952931e616791310312de128eec3a30adea2534f8d8ac6f8dc9",
+  "source_capture": {
+    "path": "source_snapshots/curated-poll-v1/f3114953d987434a9b771256004a261e-2",
+    "manifest_sha256": "939bca0568716315b745bfa9c49470d1eb9f4ae800e78609f092fc271289d7a9",
+    "body_path": "responses/chandler-intel-fab52.body",
+    "body_sha256": "4131f936bf91b28b8dc4527acbda2b5a95fc884916742be84c8b8f649b89c604",
+    "normalization": "html_visible_text_v1",
+    "normalized_sha256": "02319c5f71ee6adcdd5bba0cff99c1ac4e19d56874e2b034eeac1352f84b007b",
+    "retrieved_at": "2026-09-07T06:03:07.268099Z"
+  },
+  "baseline": {
+    "path": "baselines/ai_critical_manufacturing_v1.json",
+    "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+    "facility_lifecycle": "Ramping",
+    "source_id": "intel-fab52-2025",
+    "source_date": "2025-10-09"
+  },
+  "assessment": {
+    "source_assertion": "The city describes the specifically named Fab 52 as opened and producing advanced logic chips.",
+    "publication_date": null,
+    "event_date": null,
+    "baseline_comparison": "The existing October 9 issuer evidence already describes Fab 52 as operational and manufacturing products while targeting later high-volume production. The undated municipal statement does not establish a new dated transition or the attainment of HVM. This is a reviewed no-revision outcome, not independent operational telemetry or a current-state reaffirmation with a new event date.",
+    "scope_exclusions": [
+      "City-wide manufacturing company/employee totals",
+      "Intel two-campus employment",
+      "Intel multi-fab investment and construction program",
+      "Other companies and factories on the same page",
+      "Linked PDFs, articles, logos and images"
+    ],
+    "unknowns_preserved": [
+      "Fab 52 HVM attainment date",
+      "numeric capacity on all five bases",
+      "measured output",
+      "qualification",
+      "yield",
+      "utilization",
+      "facility-safe point geometry"
+    ],
+    "disposition_scope": "Closes review of this exact observed source-text version only. It does not dismiss Intel as a source or suppress review of future changed versions. No claim acceptance, delivery eligibility, absence inference or permission change."
+  },
+  "research_leads_not_acquired": [
+    {
+      "url": "https://www.intc.com/news-events/press-releases/detail/1753/intel-reports-third-quarter-2025-financial-results",
+      "date": "2025-10-23",
+      "note": "Dated issuer unit-specific operating/manufacturing statement identified during primary-source research; no raw capture or issuer collection approval in this change. HVM facility-type wording is not a dated attained milestone."
+    },
+    {
+      "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-26-000011/intc-20251227.htm",
+      "date": null,
+      "note": "2025 reporting-period filing describes node/regional 18A HVM across Oregon and Arizona, not Fab 52 specifically. Do not allocate aggregate HVM to the named facility. Unacquired lead, not an input to the accepted baseline."
+    }
+  ],
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "baseline_modified": false
+}

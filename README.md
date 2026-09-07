@@ -542,7 +542,7 @@ byte-replayable. An empty queue is not complete coverage or accepted manufacturi
 
 The [scheduled polling runner](docs/curated_poll.md) now connects those components with a process
 lock, cadence guard, retained invocation receipts, and completed-packet recovery before refetch.
-A daily 08:00 local app task is enabled for the five reviewed URLs. Manual end-to-end
+A daily 08:00 local app task is enabled for the six reviewed URLs. Manual end-to-end
 capture and not-due repeats passed; scheduler-triggered execution and uninterrupted operation
 are not yet demonstrated. It does not accept claims, publish data, or enable restricted sources.
 
@@ -556,6 +556,13 @@ dispositions, admission-time replay and crash recovery; the existing daily task 
 collectors sequentially. Its manual pilot preserved all 64 URLs and two explicit deferrals through
 an unchanged repeat. Actual scheduler execution remains unobserved. This is current index coverage,
 not complete publisher history or additional refreshed facilities.
+
+The latest [Intel expansion](docs/intel_chandler_monitoring.md) adds a municipal page explicitly
+naming Fab 52, bringing monitoring to six documents across four of seven scopes. Its undated
+opening/production statement was reviewed without changing the manufacturing baseline; no HVM
+attainment or usable capacity is inferred. The daily task uses the versioned v3 catalog/config,
+preserving prior plans and due times. Micron Singapore, SK hynix M15X and ASE Kaohsiung remain
+unmonitored. The 14-event queue and historical v1/v2 reports replay exactly.
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 

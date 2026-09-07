@@ -4,7 +4,7 @@ The app's daily task invokes one recoverable polling command in the existing loc
 
 ```sh
 python3 scripts/poll_curated_sources.py \
-  --config acquisition_plans/ai_critical_poll_v2.json
+  --config acquisition_plans/ai_critical_poll_v3.json
 ```
 
 The enabled task is **Semiconductor Atlas source checks**, scheduled daily at 08:00 local time
@@ -13,10 +13,11 @@ worktree per run. The [official scheduling documentation](https://learn.chatgpt.
 requires the computer and app to remain running for local work. A saved active schedule is not
 proof that a scheduled execution has happened or that the service has uninterrupted uptime.
 
-The current configuration covers five documents across three cohort scopes: two broader NIST
-award pages relevant to TSMC Phoenix and Samsung Taylor, plus the three unchanged Amkor-related
-URLs. Four cohort scopes remain unmonitored. The [NIST expansion](nist_monitoring_expansion.md)
-preserves document-versus-facility scope and does not enable restricted newsroom collection.
+The current configuration covers six documents across four cohort scopes: two broader NIST
+award pages relevant to TSMC Phoenix and Samsung Taylor, three unchanged Amkor-related URLs,
+and the [Chandler municipal page identifying Intel Fab 52](intel_chandler_monitoring.md).
+Micron Singapore, SK hynix M15X and ASE Kaohsiung remain unmonitored. Each page retains its broader
+document-versus-facility scope. No restricted newsroom collection is enabled.
 
 ## Cadence, recovery, and permissions
 
@@ -88,12 +89,16 @@ no semantic change. Their retained coverage reports replay exactly at their resp
 The daily app task was then enabled. The [NIST expansion pilot](../review_plans/2026-09-07-nist-monitoring-pilot.json)
 subsequently captured two new pages, retained two pending review items, and skipped all three
 plans without network requests on its ordinary repeat. Amkor's due time was preserved. The existing
-daily task now points to the v2 config; its identity and schedule are unchanged.
+daily task was updated to the v2 config; its identity and schedule were unchanged.
 The initial expansion exposed a 92-millisecond inter-plan gap. Its receipts are preserved. After
 the pacing fix, one explicitly forced manual repeat made 13 requests with a minimum observed gap
 of 1.003697 seconds, kept both pending items, and produced no new text versions. Its ordinary
 repeat made no requests; the twelve-event queue restored identically.
 An actual scheduler-triggered execution has not yet been observed in this acceptance record.
+The later [Intel pilot](intel_chandler_monitoring.md) adds one reviewed municipal page through
+the v3 config. It made three requests, preserved the existing plans' due times, and verified quiet
+no-network repeats. Its first text version was reviewed without a baseline revision. The daily
+task now uses v3, with the unchanged discovery job following it sequentially.
 The first wake-up may correctly skip because the manual test
 was recent. Review the first scheduled outcomes before making any uptime or detection-lag claim.
 Broader source coverage, new-document discovery, complete collection-chain accounting, evaluated

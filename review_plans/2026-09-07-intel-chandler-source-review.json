@@ -1,0 +1,62 @@
+{
+  "format": "semiconductor-atlas-intel-chandler-source-review-v1",
+  "reviewed_at": "2026-09-07T06:01:00Z",
+  "reviewer": "local:curated-source-scope-and-access-review",
+  "decision": "approve_exact_chandler_document_for_local_source_text_review_only",
+  "facility_key": "intel:fab52-chandler",
+  "policy_capture": {
+    "path": "source_snapshots/2026-09-07-chandler-policy-review-v1",
+    "manifest_sha256": "c4b3432777bdb9b346e14516d66c2f1d196421371ef7ab5aa3a5bde5a510dba7",
+    "note": "Manual two-policy source-check ledger, not a completed curated document capture; exact bodies, receipts, ledger and verification inventory retained."
+  },
+  "policies": [
+    {
+      "url": "https://www.chandleraz.gov/robots.txt",
+      "body_path": "responses/chandler-robots.body",
+      "body_sha256": "82f4b5a406d7fa7aca855963d643ec3dca3de5687ec65049f9e4436a80fdfff5",
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "276df65dc9860bc5e7660783698389e461699cce92c8cbf85292b192c927531d",
+      "review": "Read the retained wildcard-agent rules. Neither the exact advanced-manufacturing path nor the security-and-privacy-notice path is excluded. No search, taxonomy, query-string, account, administrative or other disallowed path is approved. Robots compatibility is not a reuse license."
+    },
+    {
+      "url": "https://www.chandleraz.gov/security-and-privacy-notice",
+      "body_path": "responses/chandler-privacy.body",
+      "body_sha256": "fbc04b250ce2664fae6f4eee58ab1a6af496d6bc7c5eeeb57ed8448f99dae7ec",
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "2ac47266dbbead0801e059509cd8509472b410b7a3b85d1c934d1c0afc091454",
+      "review": "Read the retained security/privacy notice and copyright footer. This is a privacy notice, not an affirmative content-reuse or automation license. It distinguishes publicly accessible publications from resident/account/subscriber publications. Only the exact publicly accessible HTML page is included in this bounded local research check; no account, cookie session, form, analytics script, third-party resource or restricted publication is accessed. City copyright and all-rights-reserved status remain in force. State/local government authorship is not federal public-domain status. No blanket automation or redistribution permission is inferred."
+    }
+  ],
+  "rights": {
+    "license_status": "unknown_no_open_license_identified",
+    "copyright_holder": "City of Chandler, Arizona",
+    "access_class": "public_without_login",
+    "local_use": "Bounded exact-page research observation with local retained bytes for verification; an internal review decision, not publisher-granted permission.",
+    "public_output": "Operational metadata and original reviewer analysis only; no raw HTML, images, attachments or substantial publisher text.",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "document": {
+    "id": "chandler-intel-fab52",
+    "url": "https://www.chandleraz.gov/business/economic-development/key-industries-and-employers/advanced-manufacturing",
+    "scope": "Whole municipal advanced-manufacturing page covering multiple companies and Intel campuses. Only the paragraph explicitly naming Intel Fab 52 at Ocotillo in Chandler is relevant to the baseline unit. Other employers, two-campus employment, multi-fab investment and city-wide totals cannot be allocated to Fab 52.",
+    "publication_date": null,
+    "event_date": null,
+    "date_review": "No precise publication/update or Fab 52 event date established. Retrieval time and the privacy notice's 2018 update date must not supply either clock.",
+    "manufacturing_review": "The unit-specific present-tense opening/production statement is a monitoring lead. It does not establish attainment of a defined high-volume-manufacturing milestone, numeric output or capacity, qualification, yield, utilization or point geometry. The baseline remains unchanged. Whole-page changes, including navigation and unrelated companies, remain text-review candidates until scope is reconciled."
+  },
+  "acquisition_boundary": {
+    "minimum_interval_seconds": 1,
+    "timeout_seconds": 30,
+    "max_response_bytes": 2000000,
+    "redirects": false,
+    "retries": false,
+    "cookies": false,
+    "discovery": false,
+    "linked_resource_acquisition": false,
+    "claim_acceptance": false,
+    "delivery_eligible": false
+  },
+  "validity_note": "Thirty-day internal review deadline. Every recurring check must match both reviewed policy hashes; changed or failed policy checks block document requests. No automatic renewal. A missing or failed page is never negative facility evidence.",
+  "historical_inputs_preserved": true
+}
