@@ -366,6 +366,13 @@ not enumerated. It adds no canonical core claims, pre-outcome forecast pairs or 
 Core integration requires deliberate runtime isolation before changing pinned producers;
 the realization roster still needs broader project/event and non-survivor coverage.
 
+The [frozen source runtime](frozen_runtime.md) now preserves a complete committed code layout
+and verifies five existing historical artifacts in fresh isolated processes. It proves a bounded
+replay path with audited project-module origins, not a hermetic OS or a schedule transition.
+Schema-6 evolution must use a separate working checkout/database while existing scheduled
+execution and schema-5 evidence remain unchanged. Completed milestone core integration and
+pre-outcome forecast/outcome pairing are still open.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,

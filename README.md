@@ -722,6 +722,11 @@ preserves the original admission, complete row inventory and explicit operating-
 bias. This is a retrospective evidence cohort, not a historical project census or a forecast result;
 the published seven-company baseline and frozen core remain unchanged.
 
+The [frozen source runtime](docs/frozen_runtime.md) retains the complete committed package,
+migrations, scripts and required web assets for isolated historical verification. All five
+existing realization/registration/policy/population replay operations pass with their project
+imports bound to that runtime. It does not migrate the core or reroute scheduled execution.
+
 Generate the standalone, dependency-free interface from the release GeoJSON:
 
 ```sh
