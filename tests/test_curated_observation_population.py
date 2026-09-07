@@ -209,6 +209,15 @@ class CuratedObservationPopulationTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 self.verify(changed)
 
+    def test_replay_rejects_freeze_clock_before_retained_later_observation(self):
+        self.fixture.tick()
+        self.fixture.tick("2026-09-07T06:30:00Z")
+        frozen = self.freeze()
+        frozen["started_at"] = "2026-09-07T06:00:00Z"
+        frozen["frozen_at"] = "2026-09-07T06:15:00Z"
+        with self.assertRaisesRegex(ValueError, "after freeze"):
+            self.verify(frozen)
+
     def test_external_replay_allows_later_captures_without_rewriting_old_population(self):
         self.fixture.tick()
         frozen = self.freeze()

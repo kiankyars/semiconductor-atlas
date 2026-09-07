@@ -269,16 +269,7 @@ def _projection(snapshot: dict, study: dict) -> dict:
         "window_basis": "completed_capture_assessment; incomplete_intents_and_invocation_gaps_retained_separately"}
 
 
-def freeze_population(study_path: str | Path, *, reference_root: str | Path) -> dict:
-    root, path = Path(reference_root).resolve(), Path(study_path).absolute()
-    raw = _read(path)
-    study = _study(raw)
-    started = _now()
-    if _instant(study["end"]) > _instant(started):
-        raise ValueError("source observation window must end before freeze starts")
-    codes = _code_hashes()
-    snapshot = _collect(study, root)
-    frozen = _now()
+def _validate_knowledge_clock(snapshot: dict, frozen_at: str) -> None:
     clocks = [row["recorded_at"] for row in snapshot["queue_history"]["events"]]
     clocks += [row["payload"]["finished_at"] for row in snapshot["captures"]]
     clocks += [row["request"]["started_at"] for row in snapshot["poll_invocations"]]
@@ -288,8 +279,20 @@ def freeze_population(study_path: str | Path, *, reference_root: str | Path) -> 
     clocks += [row["intent"]["started_at"] for row in intents]
     clocks += [row["outcome"]["observed_at"] for row in intents if row["outcome"]]
     clocks += [row.get("finished_at") or row["observed_at"] for seed in snapshot["seed_ledgers"] for row in seed["ledger"]["attempts"]]
-    if any(_instant(clock) > _instant(frozen) for clock in clocks):
+    if any(_instant(clock) > _instant(frozen_at) for clock in clocks):
         raise ValueError("retained source population contains knowledge after freeze")
+
+
+def freeze_population(study_path: str | Path, *, reference_root: str | Path) -> dict:
+    root, path = Path(reference_root).resolve(), Path(study_path).absolute()
+    raw = _read(path)
+    study = _study(raw)
+    started = _now()
+    if _instant(study["end"]) > _instant(started):
+        raise ValueError("source observation window must end before freeze starts")
+    codes = _code_hashes()
+    snapshot = _collect(study, root)
+    _validate_knowledge_clock(snapshot, _now())
     result = {"format": FORMAT, "rule_version": RULE_VERSION, "study": blobs._blob(raw),
         "started_at": started, "frozen_at": _now(), "snapshot": snapshot,
         "snapshot_sha256": _hash(snapshot), **_projection(snapshot, study),
@@ -320,6 +323,7 @@ def verify_population_sources(frozen_path: str | Path, *, reference_root: str | 
     if not _instant(study["end"]) <= _instant(frozen["started_at"]) <= _instant(frozen["frozen_at"]) <= _instant(_now()):
         raise ValueError("invalid actual population freeze clocks")
     snapshot = frozen["snapshot"]
+    _validate_knowledge_clock(snapshot, frozen["frozen_at"])
     original_events = snapshot["queue_history"]["events"]
     current_events = queue.export_events(_path(root, study["queue_path"]))["events"]
     if current_events[:len(original_events)] != original_events:
