@@ -158,7 +158,12 @@ expired review windows, and queue backlog. The pilot has three recent Amkor chec
 unmonitored facilities. The [polling runner](curated_poll.md) adds a process lock, independent cadence
 guard, private plan snapshots, invocation receipts, and recovery of completed packets before refetch.
 The daily app schedule is enabled, and a manual live capture plus not-due repeats passed. An actual
-scheduler-triggered outcome remains unobserved. Wider approved coverage, new-document discovery,
+scheduler-triggered outcome remains unobserved. A subsequent [NIST source expansion](nist_monitoring_expansion.md)
+adds two exact project-page checks relevant to TSMC Phoenix and Samsung Taylor, bringing the
+configured denominator to three of seven scopes and five documents. Two first observations remain
+pending review. Scope-bearing report v2 preserves the original v1 reports byte-for-byte; project-wide
+text is not automatically attributed to an individual fab. The daily task uses the expanded config.
+The other four scopes, wider approved coverage, new-document discovery,
 complete collection-chain accounting, and historical detection-performance evaluation remain open.
 
 Add:

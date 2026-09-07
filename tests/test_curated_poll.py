@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import json
 import unittest
 from pathlib import Path
@@ -46,6 +47,47 @@ class CuratedPollTests(unittest.TestCase):
         self.fixture.write_catalog()
         self.config["catalog"]["sha256"] = poll._sha(self.fixture.catalog_path.read_bytes())
         self.write_config()
+
+    def add_tsmc_plan(self, interval: int) -> None:
+        plan = copy.deepcopy(self.capture.plan)
+        plan.update(plan_id="tsmc-fixture", checked_facility_key="tsmc:fab21-arizona",
+                    minimum_interval_seconds=interval)
+        for entry in plan["policies"] + plan["documents"]:
+            entry["company"] = "TSMC"
+        path = self.root / "plans/tsmc.json"
+        path.write_text(json.dumps(plan))
+        self.fixture.catalog["facilities"][0].update(
+            plan={"path": "plans/tsmc.json", "sha256": poll._sha(path.read_bytes())},
+            unmonitored_reason=None)
+        self.repin_plan()
+
+    def test_inter_plan_pacing_honors_both_intervals_and_skips_do_not_sleep(self) -> None:
+        self.capture.plan["minimum_interval_seconds"] = 2
+        self.add_tsmc_plan(7)
+        with patch.object(poll.time, "sleep") as pause:
+            result = self.tick()
+            self.assertEqual([7, 7, 7, 2, 2], [call.args[0] for call in pause.call_args_list])
+            self.assertEqual(["captured_imported"] * 2, [row["status"] for row in result["results"]])
+            pause.reset_mock()
+            skipped = self.tick("2026-09-07T03:30:00Z")
+            self.assertEqual(["not_due"] * 2, [row["status"] for row in skipped["results"]])
+            pause.assert_not_called()
+
+    def test_next_plan_still_waits_after_failed_capture(self) -> None:
+        self.capture.plan["minimum_interval_seconds"] = 7
+        self.add_tsmc_plan(2)
+        original = self.capture.transport
+
+        def fail_first(entry, destination, plan):
+            if entry["company"] == "TSMC":
+                raise ValueError("interrupted request")
+            return original(entry, destination, plan)
+
+        self.capture.transport = fail_first
+        with patch.object(poll.time, "sleep") as pause:
+            result = self.tick()
+        self.assertEqual(["capture_failed", "captured_imported"], [row["status"] for row in result["results"]])
+        self.assertEqual([7, 7, 7], [call.args[0] for call in pause.call_args_list])
 
     def test_capture_then_not_due_then_due_without_skip_postponement(self) -> None:
         first = self.tick()

@@ -533,13 +533,16 @@ against the earlier evidence. Queue disposition does not accept claims or grant 
 
 The [coverage report](docs/curated_coverage.md) binds the full seven-company denominator to an
 explicit monitoring catalog. It distinguishes recent document checks, stale evidence, blocked or
-failed checks, expired review windows, and unresolved review work. The current pilot has three
-recent Amkor document checks and six unmonitored cohort facilities; an empty queue is not complete
-coverage. This read-only report neither schedules collection nor changes source permissions.
+failed checks, expired review windows, and unresolved review work. The initial pilot retains three
+recent Amkor document checks and six unmonitored cohort facilities. The later
+[NIST expansion](docs/nist_monitoring_expansion.md) adds two exact project-page checks for TSMC
+Phoenix and Samsung Taylor: five fresh documents, three configured facility scopes, four remaining
+gaps, and two pending review items. Report v2 exposes the broader document scopes; v1 reports remain
+byte-replayable. An empty queue is not complete coverage or accepted manufacturing evidence.
 
 The [scheduled polling runner](docs/curated_poll.md) now connects those components with a process
 lock, cadence guard, retained invocation receipts, and completed-packet recovery before refetch.
-A daily 08:00 local app task is enabled for the three reviewed Amkor URLs. Manual end-to-end
+A daily 08:00 local app task is enabled for the five reviewed URLs. Manual end-to-end
 capture and not-due repeats passed; scheduler-triggered execution and uninterrupted operation
 are not yet demonstrated. It does not accept claims, publish data, or enable restricted sources.
 

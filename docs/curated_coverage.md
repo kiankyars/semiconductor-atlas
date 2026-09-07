@@ -6,7 +6,7 @@ document-check age separately from acquisition health and review backlog.
 
 ```sh
 python3 scripts/report_curated_coverage.py \
-  --catalog acquisition_plans/ai_critical_coverage_v1.json \
+  --catalog acquisition_plans/ai_critical_coverage_v2.json \
   --database artifacts/2026-09-07-amkor-source-review.sqlite
 ```
 
@@ -20,6 +20,10 @@ The versioned catalog pins the baseline and every configured acquisition plan by
 It must enumerate all baseline facilities in order, with either a pinned plan or a nonempty
 unmonitored reason. The plan must match the facility, company, and geography, and its bound review
 record must match. Missing rows, inconsistent bindings, and changed files fail closed.
+
+Catalog/report schema v2 also displays the scope of every configured document. Broader project
+pages are not automatically facility-specific evidence. Schema v1 remains supported with its
+original output shape for exact historical report replay; use its retained catalog for v1 cutoffs.
 
 The catalog's recording time cannot precede its baseline or plan review. A report cutoff earlier
 than the catalog is rejected: a later monitoring configuration must not leak into a historical
@@ -73,6 +77,12 @@ fixed cutoff `2026-09-07T03:47:33.621918Z`. It verifies three retained queue pac
 There are no pending or recurrence-review items, but report attention remains true because of the
 six monitoring gaps. Samsung and SK hynix newsroom collectors remain disabled as recorded in the
 source registry. The report makes no new rights decision.
+
+The subsequent [NIST expansion](nist_monitoring_expansion.md) adds two exact government award
+pages relevant to TSMC Phoenix and Samsung Taylor. Its v2 report shows five fresh document checks,
+three configured facility scopes, four unmonitored scopes, and two pending source-version review
+items. These broader pages do not refresh the manufacturing baseline or establish project progress.
+The original one-facility pilot and catalog above remain unchanged and replayable.
 
 The [polling runner](curated_poll.md) adds retained run outcomes and a daily app schedule. Manual
 execution is validated; the first scheduler-triggered outcome remains to be observed. Approved

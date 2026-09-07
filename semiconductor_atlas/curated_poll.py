@@ -5,6 +5,7 @@ from __future__ import annotations
 import fcntl
 import os
 import re
+import time
 import uuid
 from contextlib import contextmanager
 from datetime import timedelta
@@ -209,6 +210,7 @@ def poll_once(
         results = []
         problems = [f"{key[0]}:recovery_blocked" for key in blocked]
         (tick / "jobs").mkdir()
+        previous_capture_interval = None
         for index, target in enumerate(bound["catalog"]["targets"]):
             plan, entry = target["plan"], target["entry"]
             if plan is None:
@@ -245,6 +247,9 @@ def poll_once(
                 problems.append(f"{key[0]}:prior_history_requires_review")
                 results.append({**item, "status": "prior_history_requires_review", "error": str(error)})
                 continue
+            if previous_capture_interval is not None:
+                time.sleep(max(previous_capture_interval, plan["minimum_interval_seconds"]))
+            previous_capture_interval = plan["minimum_interval_seconds"]
             job = tick / "jobs" / str(index)
             job.mkdir()
             # Capture consumes these pinned private bytes, never a mutable plan path.

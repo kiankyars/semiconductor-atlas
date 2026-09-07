@@ -68,6 +68,14 @@ a general publisher crawler or certify complete update coverage.
 
 ## Official sources requiring adapter-specific review
 
+The [September 7 NIST expansion review](../review_plans/2026-09-07-nist-source-expansion.json)
+approves exact repeatable checks of the government TSMC Phoenix and Samsung Texas award pages
+under retained, hash-bound NIST access and rights policies. It does not authorize their issuer
+newsrooms. The whole-page scopes include other fabs and, for Samsung, Austin and Taylor R&D;
+these remain source-version review candidates, not automatically attributed facility changes.
+Raw pages stay local, with marked copyrighted and third-party material excluded from this
+publication scope. See [monitoring boundaries](nist_monitoring_expansion.md).
+
 September 7, 2026 discovery review: Samsung's [June 10 issuer article](https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/)
 is a Taylor construction lead, not accepted baseline evidence. Its [US Austin website terms](https://semiconductor.samsung.com/legal/)
 limit the stated grant to personal display/use and require prior written consent for other use.

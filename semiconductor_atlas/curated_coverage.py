@@ -14,6 +14,7 @@ from .source_checks import _read
 
 
 CATALOG_FORMAT = "semiconductor-atlas-curated-coverage-catalog-v1"
+CATALOG_FORMAT_V2 = "semiconductor-atlas-curated-coverage-catalog-v2"
 
 
 def _bound_file(root: Path, binding: dict) -> tuple[Path, bytes]:
@@ -37,7 +38,7 @@ def load_catalog(path: str | Path, *, repository_root: str | Path | None = None)
     catalog = _keys(_strict_json(raw, "coverage catalog"), {
         "format", "catalog_id", "recorded_at", "baseline", "freshness_seconds", "facilities", "notes",
     })
-    if catalog["format"] != CATALOG_FORMAT:
+    if catalog["format"] not in {CATALOG_FORMAT, CATALOG_FORMAT_V2}:
         raise ValueError("unsupported coverage catalog")
     _text(catalog["catalog_id"])
     _text(catalog["notes"])
@@ -86,7 +87,8 @@ def _latest(observations: list[dict], field: str) -> list[dict]:
     return [item for item in timed if _instant(item[field]) == clock]
 
 
-def _document_report(document: dict, runs: list[dict], as_of: str, freshness_seconds: int) -> dict:
+def _document_report(document: dict, runs: list[dict], as_of: str, freshness_seconds: int,
+                     *, include_scope: bool = False) -> dict:
     observations = []
     for run in runs:
         for row in run["documents"]:
@@ -111,6 +113,7 @@ def _document_report(document: dict, runs: list[dict], as_of: str, freshness_sec
         "requires_attention" if any(row["status"] not in ELIGIBLE for row in latest)
         else "conflicting_observations" if conflict else "ok")
     return {"id": document["id"], "url": document["url"], "source_family": document["source_family"],
+            **({"scope": document["scope"]} if include_scope else {}),
             "freshness": freshness, "check_health": health,
             "last_eligible_response_at": last_at, "eligible_age_seconds": age, "next_check_due_at": due,
             "latest_checks": latest, "last_eligible_observations": eligible,
@@ -125,6 +128,7 @@ def coverage_report(
 ) -> dict:
     bound = load_catalog(catalog_path, repository_root=repository_root)
     catalog = bound["catalog"]
+    include_scope = catalog["format"] == CATALOG_FORMAT_V2
     cutoff = _instant(as_of)
     if cutoff < _instant(catalog["recorded_at"]):
         raise ValueError("coverage cutoff predates the catalog; use a catalog known at that time")
@@ -136,7 +140,7 @@ def coverage_report(
         runs = [run for run in queue["runs"] if plan is not None
                 and run["plan_sha256"] == entry["plan"]["sha256"]
                 and run["facility_key"] == facility["facility_key"]]
-        documents = [_document_report(doc, runs, as_of, catalog["freshness_seconds"])
+        documents = [_document_report(doc, runs, as_of, catalog["freshness_seconds"], include_scope=include_scope)
                      for doc in plan["documents"]] if plan else []
         plan_state = "not_configured" if plan is None else (
             "review_expired" if cutoff >= _instant(plan["expires_at"]) else "within_review_window")
@@ -170,7 +174,8 @@ def coverage_report(
                            "unhealthy_document_count": sum(doc["check_health"] != "ok" for doc in selected),
                            "plan_state": plan_state if selected else "not_configured"})
     documents = [doc for facility in facilities for doc in facility["documents"]]
-    return {"format": "semiconductor-atlas-curated-coverage-report-v1", "as_of": as_of,
+    return {"format": "semiconductor-atlas-curated-coverage-report-v2" if include_scope
+            else "semiconductor-atlas-curated-coverage-report-v1", "as_of": as_of,
             "catalog_id": catalog["catalog_id"], "catalog_sha256": bound["catalog_sha256"],
             "catalog_recorded_at": catalog["recorded_at"], "baseline": catalog["baseline"],
             "baseline_source_bytes_verified": False,

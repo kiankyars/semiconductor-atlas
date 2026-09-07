@@ -4,7 +4,7 @@ The app's daily task invokes one recoverable polling command in the existing loc
 
 ```sh
 python3 scripts/poll_curated_sources.py \
-  --config acquisition_plans/ai_critical_poll_v1.json
+  --config acquisition_plans/ai_critical_poll_v2.json
 ```
 
 The enabled task is **Semiconductor Atlas source checks**, scheduled daily at 08:00 local time
@@ -13,8 +13,10 @@ worktree per run. The [official scheduling documentation](https://learn.chatgpt.
 requires the computer and app to remain running for local work. A saved active schedule is not
 proof that a scheduled execution has happened or that the service has uninterrupted uptime.
 
-The current plan covers only the three reviewed Amkor-related URLs. The other six cohort facilities
-remain unmonitored by this collector. No restricted newsroom collector has been enabled.
+The current configuration covers five documents across three cohort scopes: two broader NIST
+award pages relevant to TSMC Phoenix and Samsung Taylor, plus the three unchanged Amkor-related
+URLs. Four cohort scopes remain unmonitored. The [NIST expansion](nist_monitoring_expansion.md)
+preserves document-versus-facility scope and does not enable restricted newsroom collection.
 
 ## Cadence, recovery, and permissions
 
@@ -23,6 +25,9 @@ interval. Its 23-hour guard accommodates dispatch and request-duration variation
 schedule. This guard is independent of the catalog's seven-day source-freshness threshold.
 Completed failed or policy-blocked captures count toward cadence, so an unhealthy source is not
 hammered by immediate retries. Skip times and queue admission times never postpone the next check.
+Between attempted plans, the runner waits for the larger of their configured request intervals,
+including after a failed capture. This extends pacing across plan boundaries; skipped plans do not
+create additional waits.
 
 The runner takes a kernel-backed lock beside the queue before recovery and acquisition. The lock
 file can remain after exit; its presence alone does not indicate a running process. A competing
@@ -70,7 +75,7 @@ partial invocation; do not infer that work stopped from a tool observation timeo
 `reportable_change` compares semantic source versions, freshness/health states, review backlog,
 plan state, and unresolved operation problems. It ignores raw-byte churn, clock-age increments,
 and mere event-ID changes. Thus repeated quiet checks do not generate repetitive notices about
-the unchanged six-company gap. It is an operational notification aid, not a calibrated alert rule.
+unchanged coverage gaps or pending items. It is an operational notification aid, not a calibrated alert rule.
 
 ## Manual acceptance and remaining gate
 
@@ -80,8 +85,16 @@ The live capture made seven requests, retained two unchanged Amkor documents and
 churn, imported its packet, and left zero pending/recheck items. All three invocations reported
 no semantic change. Their retained coverage reports replay exactly at their respective cutoffs.
 
-The daily app task was then enabled. An actual scheduler-triggered execution has not yet been
-observed in this acceptance record. The first wake-up may correctly skip because the manual test
+The daily app task was then enabled. The [NIST expansion pilot](../review_plans/2026-09-07-nist-monitoring-pilot.json)
+subsequently captured two new pages, retained two pending review items, and skipped all three
+plans without network requests on its ordinary repeat. Amkor's due time was preserved. The existing
+daily task now points to the v2 config; its identity and schedule are unchanged.
+The initial expansion exposed a 92-millisecond inter-plan gap. Its receipts are preserved. After
+the pacing fix, one explicitly forced manual repeat made 13 requests with a minimum observed gap
+of 1.003697 seconds, kept both pending items, and produced no new text versions. Its ordinary
+repeat made no requests; the twelve-event queue restored identically.
+An actual scheduler-triggered execution has not yet been observed in this acceptance record.
+The first wake-up may correctly skip because the manual test
 was recent. Review the first scheduled outcomes before making any uptime or detection-lag claim.
 Broader source coverage, new-document discovery, complete collection-chain accounting, evaluated
 manufacturing alerts, and calibrated forecasts remain open.

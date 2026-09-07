@@ -111,5 +111,7 @@ refreshed. A subsequent [durable queue pilot](curated_review.md) preserves revie
 The [coverage report](curated_coverage.md) now exposes configured-document age and failures against
 the full seven-facility cohort, including its six unmonitored facilities. The [polling runner](curated_poll.md)
 adds recovery and cadence guards and has an enabled daily app schedule, with manual acceptance
-completed. First scheduled-run verification, new-document discovery, complete collection-chain
+completed. The later [NIST expansion](nist_monitoring_expansion.md) adds two exact project-page
+checks for TSMC Phoenix and Samsung Taylor while preserving the earlier Amkor-only pilots.
+First scheduled-run verification, new-document discovery, complete collection-chain
 accounting, and blind historical evaluation remain open.
