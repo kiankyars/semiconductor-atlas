@@ -467,6 +467,47 @@ rights decision.
 The achieved row-level coverage and unresolved evidence are recorded in
 `docs/ai_critical_baseline_v1_gap_matrix.md`.
 
+### Cross-vintage change ledger
+
+Compare two independently built AI-critical release directories into new, non-existing output
+paths:
+
+```sh
+python3 scripts/compare_ai_critical_releases.py \
+  --prior releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3 \
+  --current releases/YYYY-MM-DD-ai-critical-manufacturing-baseline-v2 \
+  --output releases/YYYY-MM-DD-ai-critical-manufacturing-changes-v1 \
+  --archive releases/YYYY-MM-DD-ai-critical-manufacturing-changes-v1.tar.gz
+```
+
+The comparison is a deterministic cross-vintage ledger and alert-proposal layer. It pins both input
+release manifests, derives stable semantic series independently of release-local claim IDs, and
+records each series as `reaffirmed`, `revised`, `added`, or `not_carried_forward`. The last status
+means only that a prior series was not carried by the current release. Omission is never negative
+evidence without a durable ledger proving that the relevant source, scope, and interval were checked
+successfully.
+
+Series identity binds the value kind. Capability slices additionally bind category, technology, and
+effective date. Capacity slices additionally bind metric, basis, unit, accounting scope,
+input/output basis, quantity semantics, period, technology scope, and effective date, so unlike
+quantities are never revised across one another. A material capacity proposal fires when the exact
+rational change in any comparable `low`, `base`, or `high` bound is at least 15 percent; it never
+uses ambient decimal precision or non-finite JSON numbers.
+Readiness changes with a later effective date also produce proposals when the two observations
+match unambiguously on entity, category, and technology; both dated evidence lineages are retained.
+
+Structured release payloads must validate under the installed schema. Manifest-bound historical
+rendering differences are tolerated only for release `README.md` and `METHODOLOGY.md`; structured
+claims, evidence, provenance, exports, hashes, and clocks remain exact. The retained local `r2` to
+`r3` comparison therefore resolves to 75 reaffirmed series and zero alert proposals.
+
+Alert proposals have unknown confidence and are not delivery-eligible. This layer has no alert
+acknowledgement, retraction, hysteresis, or blind historical replay yet, so it does not complete
+roadmap Phase 3. The comparison writes a new bundle and optional deterministic archive; it does not
+modify either input release, including the retained `r3` bundle. Output paths are preflighted outside
+both inputs. The bundle and archive are separate no-replace publications, so a late archive failure
+can leave the already validated bundle in place.
+
 ## Release and interface
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:

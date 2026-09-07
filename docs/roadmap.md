@@ -126,6 +126,18 @@ are visible by geography and source family.
 
 ## Phase 3: change detection and alerts
 
+The AI-critical cross-vintage comparison now provides a bounded foundation for this phase. It pins
+both release manifests, derives stable semantic series, records `reaffirmed`, `revised`, `added`,
+and `not_carried_forward` outcomes, and emits deterministic alert proposals. These proposals have
+unknown confidence and are not delivery-eligible. `not_carried_forward` is not negative evidence
+unless a future durable ledger proves a successful check of the relevant source and scope.
+The retained `r2` to `r3` replay produces 75 reaffirmed series and no proposals, demonstrating that
+release-local claim IDs do not create false changes. Historical compatibility is currently bounded
+to manifest-bound prose rendering within the installed structured schema.
+
+This foundation does not complete Phase 3. It has no alert acknowledgement, retraction, hysteresis,
+or blind historical replay, and therefore has not met the exit gate below.
+
 Add:
 
 - open optical and radar change proposals;

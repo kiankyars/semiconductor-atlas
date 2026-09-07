@@ -95,6 +95,57 @@ projection admits only source-stated exact calendar-quarter totals; the facility
 identity scope and explicit unknowns. This release does not claim that the existing sibling Supply
 Intelligence legacy adapter can ingest either schema directly.
 
+### Cross-vintage change semantics
+
+The AI-critical comparison surface is a deterministic ledger across two release vintages, plus a
+bounded alert-proposal layer. Both input manifests are validated and pinned in the comparison
+output. Claims are projected onto stable semantic series instead of being joined by release-local
+claim IDs. Each series comparison records exactly one outcome: `reaffirmed`, `revised`, `added`, or
+`not_carried_forward`.
+
+The series key includes value kind. Capability slices also include category, technology, and
+`valid_from`. Capacity slices also include metric, basis, unit, scope kind, input/output basis,
+quantity semantics, period bounds, technology scope, and `valid_from`. These dimensions prevent a
+quarter, unit, basis, or accounting scope from being treated as a revision of an unlike quantity.
+The material-capacity rule compares `low`, `base`, and `high` independently with exact rational
+arithmetic and proposes review when any comparable bound changes by at least 15 percent.
+When the prior bound is zero, the current bound is the denominator: zero-to-positive is recorded
+as `1/1`, and zero-to-zero as `0/1`. This is an alert-rule convention, not a conventional growth
+rate from zero. Competing claims within an identical semantic slice are rejected for review.
+
+A readiness proposal may link an added capability slice to an earlier observation only when each
+release has exactly one observation for the same entity, category, and technology, the prior
+interval is open, the new effective date is later, and readiness differs. The added row carries
+both evidence lineages and the prior series/date link; the omitted row remains non-negative
+bookkeeping. Ambiguous matches are not paired. Capacity changes across different effective dates
+remain distinct additions/omissions, not quantified revisions.
+
+Standalone bundle validation checks emitted claim types, controlled vocabularies, evidence-link
+roles, and rule recomputation. It does not prove source support without the two bound releases.
+Archive publication requires those exact releases and rejects output paths inside them. Outputs
+use exclusive installation, with byte and identity checks before and after installation. These
+checks detect concurrent changes; they are not isolation from another process with the same user's
+write permissions. Use a workspace without concurrent writers. A late error may leave an output
+or staging entry for inspection, and bundle plus archive creation is not one atomic transaction.
+
+Comparison validation allows manifest-bound historical rendering differences only in the two prose
+files `README.md` and `METHODOLOGY.md`. Every structured payload, producer binding, hash, claim clock,
+and evidence link must still pass the installed schema and exact replay checks. This bounded
+compatibility admits the retained local `r2` and `r3` releases without executing archived producer
+code; it is not a general cross-schema migration mechanism.
+
+`not_carried_forward` is release-diff bookkeeping, not negative real-world evidence. It cannot by
+itself support closure, cancellation, withdrawal, production stop, capacity loss, or retraction. An
+absence-based interpretation remains prohibited until a durable successful source-check ledger binds
+the relevant source, geography or entity scope, time window, query, and completed result to the
+release. Neither a complete comparison run nor two valid release manifests provide that evidence.
+
+Generated alert proposals retain unknown confidence and are not eligible for delivery. They are
+investigation prompts, not reconciled facts or production alerts. The current layer has no alert
+acknowledgement or retraction workflow, no hysteresis, and no blind historical replay measuring
+precision, false-positive burden, detection lag, or retraction behavior. It therefore establishes a
+deterministic Phase 3 input surface without satisfying the Phase 3 exit gate.
+
 ## Units of analysis
 
 Stable entity identifiers survive name, owner, geometry, and status changes. The registry keeps
