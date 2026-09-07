@@ -74,6 +74,7 @@ There are no pending or recurrence-review items, but report attention remains tr
 six monitoring gaps. Samsung and SK hynix newsroom collectors remain disabled as recorded in the
 source registry. The report makes no new rights decision.
 
-The next operational gates are scheduled execution with retained run outcomes, approved expansion
-of source coverage, new-document discovery, and complete collection-chain accounting. Measured
-alert performance and calibrated forecasts remain separate later gates.
+The [polling runner](curated_poll.md) adds retained run outcomes and a daily app schedule. Manual
+execution is validated; the first scheduler-triggered outcome remains to be observed. Approved
+source expansion, new-document discovery, and complete collection-chain accounting remain open.
+Measured alert performance and calibrated forecasts are separate later gates.

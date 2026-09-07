@@ -1,0 +1,13 @@
+{
+  "format": "semiconductor-atlas-curated-poll-config-v1",
+  "recorded_at": "2026-09-07T04:05:11Z",
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v1.json",
+    "sha256": "788f6e93b2e2884d70d05f3e2301d3eafe5309bea06e4468ba77b68a25b1af95"
+  },
+  "queue_path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+  "capture_root": "source_snapshots/curated-poll-v1",
+  "state_root": "artifacts/curated-poll-v1",
+  "interval_seconds": 82800,
+  "notes": "Daily 08:00 America/Los_Angeles app heartbeat, with a 23-hour minimum polling interval to accommodate dispatch and request-duration variation. This is separate from the catalog's seven-day evidence freshness threshold. Failed or policy-blocked completed runs count toward cadence. Recovery and offline reporting may run more often; force is for explicit manual validation only. Exact configured URLs only; no new source permissions, claim acceptance, publication or alert delivery. The app and this local workspace must remain available."
+}

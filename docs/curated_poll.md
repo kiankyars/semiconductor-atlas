@@ -1,0 +1,87 @@
+# Scheduled curated-source checks
+
+The app's daily task invokes one recoverable polling command in the existing local workspace:
+
+```sh
+python3 scripts/poll_curated_sources.py \
+  --config acquisition_plans/ai_critical_poll_v1.json
+```
+
+The enabled task is **Semiconductor Atlas source checks**, scheduled daily at 08:00 local time
+(America/Los_Angeles at setup). It uses this existing task's context and does not create a new
+worktree per run. The [official scheduling documentation](https://learn.chatgpt.com/docs/automations)
+requires the computer and app to remain running for local work. A saved active schedule is not
+proof that a scheduled execution has happened or that the service has uninterrupted uptime.
+
+The current plan covers only the three reviewed Amkor-related URLs. The other six cohort facilities
+remain unmonitored by this collector. No restricted newsroom collector has been enabled.
+
+## Cadence, recovery, and permissions
+
+The configuration binds the exact coverage catalog, queue, capture root, state root, and minimum
+interval. Its 23-hour guard accommodates dispatch and request-duration variation around the daily
+schedule. This guard is independent of the catalog's seven-day source-freshness threshold.
+Completed failed or policy-blocked captures count toward cadence, so an unhealthy source is not
+hammered by immediate retries. Skip times and queue admission times never postpone the next check.
+
+The runner takes a kernel-backed lock beside the queue before recovery and acquisition. The lock
+file can remain after exit; its presence alone does not indicate a running process. A competing
+live lock holder causes a no-work error. This implementation supports macOS and Linux.
+
+Before network work, each invocation retains its configuration/catalog hashes, queue head,
+runner hash, and request clock. Each acquisition retains a separate intent containing the selected
+plan, predecessor-ledger hash, facility, output name, and clock. Capture consumes a private copy
+of the exact pinned plan and review bytes, not a mutable source-plan path. Raw responses stay in
+separate immutable capture directories; runner receipts never alter a capture's manifest.
+
+On the next invocation, completed managed packets are verified and imported before any fetch.
+Recovery is manifest-idempotent even after review expiry or a crash after queue commit but before
+the receipt. A missing manifest is recorded as an interrupted acquisition and retains a cooldown
+from its intent clock. A malformed completed packet or failed recovery blocks new acquisition for
+that facility/plan pending investigation. Partial bytes are preserved, not deleted or silently
+promoted into a completed run.
+
+The prior observation comes from the latest validated packet's `last_successful_checks.json`, with
+`source_checks.json` used only when there is no retained eligible history. Equal-time ambiguous
+packets and histories that omit or contradict known eligible documents require review. Older plan
+versions may be recovered but do not satisfy a newer plan's cadence or coverage.
+
+The collector rechecks access/rights policy hashes and plan expiry before requesting documents.
+The runner cannot renew a plan, follow new URLs, accept manufacturing claims, close review items,
+publish source bodies, or deliver manufacturing alerts. `--force` exists only for an explicit
+manual cadence override; the scheduled prompt forbids it, and it never overrides policy, expiry,
+locking, or recovery gates.
+
+## Inspect a run
+
+Each invocation is retained under `artifacts/curated-poll-v1/<invocation-id>/`:
+
+- `request.json`: start clock and bound inputs;
+- `jobs/<cohort-index>/intent.json` and `outcome.json`: attempted capture and its outcome;
+- private plan/review copies for attempted jobs;
+- `coverage.json`: the complete cohort coverage report at the final knowledge cutoff;
+- `queue-events.json`: queue events through that same cutoff; and
+- `finished.json`: terminal outcomes, recovery, report hashes, and the change indicator.
+
+An invocation without `finished.json` is not a completed tick. Completed packets can still be
+recovered independently. Inspect the actual process handle or kernel lock before interpreting a
+partial invocation; do not infer that work stopped from a tool observation timeout.
+
+`reportable_change` compares semantic source versions, freshness/health states, review backlog,
+plan state, and unresolved operation problems. It ignores raw-byte churn, clock-age increments,
+and mere event-ID changes. Thus repeated quiet checks do not generate repetitive notices about
+the unchanged six-company gap. It is an operational notification aid, not a calibrated alert rule.
+
+## Manual acceptance and remaining gate
+
+The [September 7 pilot](../review_plans/2026-09-07-poll-pilot.json) records three manual invocations:
+an ordinary not-due check, one forced live capture, and an immediate ordinary not-due repeat.
+The live capture made seven requests, retained two unchanged Amkor documents and byte-only NIST
+churn, imported its packet, and left zero pending/recheck items. All three invocations reported
+no semantic change. Their retained coverage reports replay exactly at their respective cutoffs.
+
+The daily app task was then enabled. An actual scheduler-triggered execution has not yet been
+observed in this acceptance record. The first wake-up may correctly skip because the manual test
+was recent. Review the first scheduled outcomes before making any uptime or detection-lag claim.
+Broader source coverage, new-document discovery, complete collection-chain accounting, evaluated
+manufacturing alerts, and calibrated forecasts remain open.

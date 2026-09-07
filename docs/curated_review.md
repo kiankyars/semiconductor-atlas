@@ -131,5 +131,7 @@ not complete monitoring coverage.
 
 Coverage remains incomplete. The queue can flag an unseen version or a return evidenced by its
 known observations; it cannot reconstruct an entirely omitted intermediate A→B→A episode from
-final A→A alone. Scheduled execution, complete collection-chain accounting, broader approved source
-coverage, operational alert delivery, and blind historical detection evaluation remain open.
+final A→A alone. The [polling runner](curated_poll.md) now retains invocation outcomes and recovers
+completed packets before refetch, with a daily app schedule enabled. Actual scheduled execution
+remains to be observed. Complete collection-chain accounting, broader approved source coverage,
+operational alert delivery, and blind historical detection evaluation remain open.

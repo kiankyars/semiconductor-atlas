@@ -332,10 +332,13 @@ def record_decision(
     return next(item for item in after["candidates"] if item["id"] == candidate_id)
 
 
-def export_events(path: str | Path) -> dict:
+def export_events(path: str | Path, *, as_of: str | None = None) -> dict:
     with _connection(path) as connection:
         events = _events(connection)
         _fold(events)
+        if as_of is not None:
+            cutoff = _instant(as_of)
+            events = [event for event in events if _instant(event["recorded_at"]) <= cutoff]
         return {"format": "semiconductor-atlas-curated-review-events-v1", "events": events}
 
 

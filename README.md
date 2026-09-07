@@ -537,6 +537,12 @@ failed checks, expired review windows, and unresolved review work. The current p
 recent Amkor document checks and six unmonitored cohort facilities; an empty queue is not complete
 coverage. This read-only report neither schedules collection nor changes source permissions.
 
+The [scheduled polling runner](docs/curated_poll.md) now connects those components with a process
+lock, cadence guard, retained invocation receipts, and completed-packet recovery before refetch.
+A daily 08:00 local app task is enabled for the three reviewed Amkor URLs. Manual end-to-end
+capture and not-due repeats passed; scheduler-triggered execution and uninterrupted operation
+are not yet demonstrated. It does not accept claims, publish data, or enable restricted sources.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

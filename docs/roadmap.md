@@ -155,8 +155,11 @@ restored to an identical queue history. This is source-text triage, not claim ac
 delivery. The [coverage catalog and report](curated_coverage.md) now retain all seven cohort
 facilities in the denominator and separate configured document age, failed or blocked checks,
 expired review windows, and queue backlog. The pilot has three recent Amkor checks and six
-unmonitored facilities. Scheduled execution, new-document discovery, complete collection-chain
-accounting, and historical detection-performance evaluation remain open.
+unmonitored facilities. The [polling runner](curated_poll.md) adds a process lock, independent cadence
+guard, private plan snapshots, invocation receipts, and recovery of completed packets before refetch.
+The daily app schedule is enabled, and a manual live capture plus not-due repeats passed. An actual
+scheduler-triggered outcome remains unobserved. Wider approved coverage, new-document discovery,
+complete collection-chain accounting, and historical detection-performance evaluation remain open.
 
 Add:
 

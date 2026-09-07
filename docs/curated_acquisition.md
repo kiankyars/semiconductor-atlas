@@ -109,5 +109,7 @@ This proves the bounded acquisition/comparison loop on three documents, not publ
 coverage, detection precision, or continuous operation. The other six cohort companies were not
 refreshed. A subsequent [durable queue pilot](curated_review.md) preserves review work across checks.
 The [coverage report](curated_coverage.md) now exposes configured-document age and failures against
-the full seven-facility cohort, including its six unmonitored facilities. Scheduling, new-document
-discovery, complete collection-chain accounting, and blind historical evaluation remain open.
+the full seven-facility cohort, including its six unmonitored facilities. The [polling runner](curated_poll.md)
+adds recovery and cadence guards and has an enabled daily app schedule, with manual acceptance
+completed. First scheduled-run verification, new-document discovery, complete collection-chain
+accounting, and blind historical evaluation remain open.
