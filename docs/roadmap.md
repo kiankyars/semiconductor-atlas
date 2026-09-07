@@ -216,6 +216,17 @@ revision follows. A populated working-copy upgrade preserves the original 104,28
 lineage. This closes a bounded source-to-claim integration gap, not the blind evaluation, forecast
 or full-coverage gates.
 
+The [unified proposal-review queue](alert_review_v2.md) now connects this accepted source-native
+comparison to the same working review history as the Amkor facility proposal. Version 2 retains the
+original two Amkor events exactly, admits the Fab 2 proposal at `2026-09-07T09:58:41.341424Z`, and
+preserves its subsequent acknowledgment. The real four-event history restores at every cutoff;
+one microsecond before project admission still exposes no project proposal. The builder replays
+accepted source evidence on a coherent read-only core snapshot. Portable packet validation checks
+retained-content consistency, not independent source authenticity or production attainment. Both
+proposals remain non-deliverable, and the original seven-facility evaluator is not used to score
+the unassigned Fab 2 project. A versioned project opportunity denominator, independent outcome
+labels and blind detection evaluation remain open.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,

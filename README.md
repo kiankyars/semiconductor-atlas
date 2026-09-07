@@ -603,6 +603,14 @@ early-detection success. The [Micron acquisition review](review_plans/2026-09-07
 leaves the selected issuer-site route disabled pending rights sufficient for durable retention;
 the separately reviewed government speech does not change that restriction.
 
+The [unified proposal-review queue](docs/alert_review_v2.md) now brings the Amkor facility proposal
+and the separately scoped TSMC Fab 2 target proposal into one version-2 history. A read-only producer
+replays already accepted core evidence from a coherent database snapshot; a separate packet-bound
+review admits the proposal at its actual new clock. The original Amkor events remain unchanged.
+Both local proposals are acknowledged, neither is delivery-eligible, and offline packet consistency
+is explicitly distinct from replaying the original source acceptance. Blind performance evaluation
+and calibrated forecasting remain open.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh
