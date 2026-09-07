@@ -633,6 +633,14 @@ scoring policy before observations, produces source-only review material after c
 retains unresolved labels, abstentions, late and missing outputs in conditional document-triage
 diagnostics. It does not infer reviewer independence, subject-level correctness or physical truth.
 
+The separate [source-assertion inventory](docs/source_assertions.md) extracts bounded ceremony,
+opening, production and undated aspiration wording from the retained Amkor, Chandler and MTI
+documents. It preserves all 22 document opportunities: five unchanged Amkor pairs, two
+extraction-only first observations and 15 checks outside these three routes. Exact evidence and
+source context remain bound; first observations, unsupported wording and editorial revisions
+cannot become manufacturing progress. This is exposed engineering work, not a change to the
+registered study, claim acceptance or measured detection performance.
+
 The separate [source-native statement review](docs/source_statement_review.md) now labels all
 22 frozen checks: eleven target-bearing pairs, five scoped no-target findings and six uncomparable
 checks. Sixteen reviewed target pairs reduce to nine distinct evidence pairs, with no revisions
