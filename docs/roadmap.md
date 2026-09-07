@@ -147,8 +147,13 @@ members were not refreshed. The subsequent [reviewed-URL collector](curated_acqu
 those three document checks repeatable: it binds reviewed policy hashes, retains request receipts,
 replays exact bytes, distinguishes text changes from byte-only churn, and carries the last eligible
 observation through later failures. Its live repeat produced no content-review candidates.
-Scheduled execution, new-document discovery, a durable reviewer work queue, complete coverage
-accounting, and historical detection-performance evaluation remain open.
+The [durable source-version review queue](curated_review.md) now retains pending work across quiet
+and failed checks, admits unseen versions despite an unchanged capture label, surfaces observed
+returns to resolved versions, and preserves reviewer dispositions with knowledge-time replay.
+A live integrated repeat retained three pending items until explicit review; its event export
+restored to an identical queue history. This is source-text triage, not claim acceptance or alert
+delivery. Scheduled execution, new-document discovery, complete coverage accounting, and historical
+detection-performance evaluation remain open.
 
 Add:
 

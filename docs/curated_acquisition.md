@@ -75,7 +75,8 @@ Eligible documents receive one of four comparison statuses:
 
 The latter two are review candidates, not accepted updates. An unchanged subsequent check does
 not resolve an earlier candidate. `attention_required=false`
-describes only this run and must not be interpreted as an empty reviewer backlog.
+describes only this run and must not be interpreted as an empty reviewer backlog. Use the
+[durable review queue](curated_review.md), including `--review-queue` on capture, to retain those items.
 Document comparison uses visible text;
 linked attachments, hyperlink-only changes, images, script-only data, and structured metadata need
 separate adapters or review. Even unchanged text can contain stale claims. No status supports
@@ -106,5 +107,6 @@ Both packets replay offline from their retained bytes.
 
 This proves the bounded acquisition/comparison loop on three documents, not publisher-wide update
 coverage, detection precision, or continuous operation. The other six cohort companies were not
-refreshed. Scheduling, new-document discovery, a durable reviewer work queue, broader coverage-age
-accounting, and blind historical evaluation remain open roadmap work.
+refreshed. A subsequent [durable queue pilot](curated_review.md) preserves review work across checks.
+Scheduling, new-document discovery, broader coverage-age accounting, and blind historical evaluation
+remain open roadmap work.

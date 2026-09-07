@@ -525,6 +525,12 @@ Last-eligible observations survive failed later checks. The first successful rep
 byte-identical Amkor pages and a NIST page with unchanged visible text; it accepted no new claims.
 This is a batch acquisition tool, not a scheduled service or complete publisher search.
 
+The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
+across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
+actions and historical cutoffs replay from an exportable append-only event log. The live pilot
+preserved three pending items through a quiet repeat, then resolved them through recorded review
+against the earlier evidence. Queue disposition does not accept claims or grant publishing rights.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh
