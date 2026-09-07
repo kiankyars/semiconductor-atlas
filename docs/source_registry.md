@@ -68,6 +68,28 @@ a general publisher crawler or certify complete update coverage.
 
 ## Official sources requiring adapter-specific review
 
+September 7, 2026 discovery review: Samsung's [June 10 issuer article](https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/)
+is a Taylor construction lead, not accepted baseline evidence. Its [US Austin website terms](https://semiconductor.samsung.com/legal/)
+limit the stated grant to personal display/use and require prior written consent for other use.
+The `semiconductor.samsung.com` collector remains disabled pending an appropriate rights decision;
+public visibility alone does not activate it. No raw article was retained or cohort claim changed.
+Pursue independently reviewed governmental evidence or permission before this acquisition. Any
+later review must distinguish the first fab and office activity from the baseline's two-fab project
+aggregate; neither office occupancy nor expected opening establishes chip production.
+
+The same discovery pass checked SK hynix's [newsroom terms](https://news.skhynix.com/en/terms-of-use/)
+(page last-modified label March 7, 2025). They expressly restrict automated monitoring and copying,
+with personal/non-commercial exceptions that do not establish this project's publishing rights.
+Do not enable a newsroom collector or treat the earlier v1 excerpt decision as approval for new
+acquisition. Future publication that carries inherited newsroom excerpts needs a renewed
+source-specific rights decision; immutable historical artifacts are not rewritten by this finding.
+The [1Q26](https://news.skhynix.com/en/q1-2026-business-results/) and
+[2Q26](https://news.skhynix.com/en/q2-2026-business-results/) releases remain discovery leads only.
+Their M15X investment and schedule language does not by itself prove a realized production ramp,
+and company-wide HBM shipments cannot be allocated to M15X. No new raw documents were archived or
+facility claims accepted in this discovery pass. Use an independently approved disclosure source
+or obtain permission before acquiring evidence for a successor.
+
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |
 | [Overture Maps](https://docs.overturemaps.org/) | Base geography, buildings, places, and source-linked identifiers | Overture publishes GeoParquet/STAC releases, but attribution and license can vary by theme and contributing source; see its [attribution guidance](https://docs.overturemaps.org/attribution/). | **Evaluation.** Retain record-level source and license metadata. Do not flatten mixed-license data into one assumed license. Mirror releases needed for reproducibility because hosted retention is limited. |

@@ -519,6 +519,12 @@ attempts and explicitly leaves the other six companies unrefreshed. Old NIST thr
 remain historical assertions with unresolved applicability to the expanded project; their omission
 is not capacity loss. This is late ingestion of earlier evidence, not proven early detection.
 
+The [reviewed-URL collector](docs/curated_acquisition.md) now repeats the three selected document
+checks with bound policy gates, retained failure receipts, content comparisons and offline replay.
+Last-eligible observations survive failed later checks. The first successful repeat found two
+byte-identical Amkor pages and a NIST page with unchanged visible text; it accepted no new claims.
+This is a batch acquisition tool, not a scheduled service or complete publisher search.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

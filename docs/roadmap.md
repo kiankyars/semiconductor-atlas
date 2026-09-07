@@ -143,8 +143,12 @@ captured issuer evidence to a reviewed two-phase project scope and an earlier gr
 preserves unresolved applicability of old throughput claims, and generates one lifecycle proposal.
 A checked 11-attempt ledger makes successes and failures visible by company, country and source
 family. It covers three selected documents, not a complete publisher search; the six other cohort
-members were not refreshed. Acquisition still uses bounded manual commands, so repeatable scheduled
-collection, complete coverage accounting, and historical detection-performance evaluation remain open.
+members were not refreshed. The subsequent [reviewed-URL collector](curated_acquisition.md) makes
+those three document checks repeatable: it binds reviewed policy hashes, retains request receipts,
+replays exact bytes, distinguishes text changes from byte-only churn, and carries the last eligible
+observation through later failures. Its live repeat produced no content-review candidates.
+Scheduled execution, new-document discovery, a durable reviewer work queue, complete coverage
+accounting, and historical detection-performance evaluation remain open.
 
 Add:
 
