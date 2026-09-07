@@ -1,0 +1,530 @@
+{
+  "adjudications": [
+    {
+      "case_id": "12299337af4e35a3527d6eccfcf8a6f2d2e25db3ff8295ed00b74b71dd83567a",
+      "disposition": "reviewed_targets",
+      "locator": "Amkor: unchanged phase-unspecified mass-production target",
+      "reason": "Complete reviewed project sections supply these source-native manufacturing-calendar formulations; related financial, environmental and undated statements are outside target scope.",
+      "review_sha256": "648f8385a9ff25f140c21d879f9ad5703e78f5dd1d67dda30dc27bfae6f4be01",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 90187,
+            "locator": "Complete Amkor project section",
+            "sha256": "47763fb043688571f838c9e8797ae8f3b9e76636764a2097532b226770bc416c",
+            "start": 78984
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 92209,
+            "locator": "Complete Amkor project section",
+            "sha256": "47763fb043688571f838c9e8797ae8f3b9e76636764a2097532b226770bc416c",
+            "start": 81006
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 92197,
+                "locator": "Project Statistics: Peoria, Arizona; Summary and Project Timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 91621
+              }
+            ],
+            "fragment": {
+              "end": 92171,
+              "locator": "Mass production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 92119
+            },
+            "literal": "end of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 90175,
+                "locator": "Peoria project statistics, scope and timeline",
+                "sha256": "16f964c043e5af85df7e55f9501b4ab2b56da578254f5e9062b8f335346f9415",
+                "start": 89599
+              }
+            ],
+            "fragment": {
+              "end": 90149,
+              "locator": "Expected mass-production target",
+              "sha256": "e0451c63acb910b80243aea51977281466fb5836f097a5b8ca115525a05e313c",
+              "start": 90097
+            },
+            "literal": "end of 2027"
+          },
+          "formulation": "timeline",
+          "milestone": "planned mass-production start",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "NIST Peoria project, phase unspecified; not automatically the company article's Phase One opening",
+          "source_native_subject": "Amkor Peoria NIST award project",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "1b2f5b52624ac7d4ec8a4ec2ba2ead24fb48337ea0899ee8640af137991870c0",
+      "disposition": "reviewed_targets",
+      "locator": "TSMC: one revised subject, two formulations",
+      "reason": "Complete reviewed project sections supply these source-native manufacturing-calendar formulations; related financial, environmental and undated statements are outside target scope.",
+      "review_sha256": "648f8385a9ff25f140c21d879f9ad5703e78f5dd1d67dda30dc27bfae6f4be01",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 82603,
+            "locator": "Project Summary and Economic/National Security narrative",
+            "sha256": "7cb0727f868ff79617633d1016aec0a6dfafec581102f084edb0979bbaf9a367",
+            "start": 78261
+          }
+        },
+        {
+          "side": "before",
+          "span": {
+            "end": 86103,
+            "locator": "Project Timeline row",
+            "sha256": "7cb61469b6ce9f41830019a7c4db2211928bd5b130023e26c1cb590cbbcad752",
+            "start": 85812
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 84645,
+            "locator": "Project Summary and Economic/National Security narrative",
+            "sha256": "4a1d454aeeaef26fc8e5fee3c185bbbb91898914bcdd7c662877388008fc5c96",
+            "start": 80283
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 88154,
+            "locator": "Project Timeline row",
+            "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+            "start": 87854
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              },
+              {
+                "end": 80980,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 80307
+              }
+            ],
+            "fragment": {
+              "end": 83690,
+              "locator": "narrative: first fab target",
+              "sha256": "16dc63e0661faa2fe197f440a685b0cd9f5881ed83df74f295c72044962d0cfe",
+              "start": 83591
+            },
+            "literal": "by the first half of 2025"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 81768,
+                "locator": "Complete production-target narrative paragraph",
+                "sha256": "02b640979ae2d3b64a79115ad922287d005f6f35fb0ba33b9683fbb451ced2a4",
+                "start": 81566
+              },
+              {
+                "end": 78958,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 78285
+              }
+            ],
+            "fragment": {
+              "end": 81668,
+              "locator": "first fab narrative",
+              "sha256": "16dc63e0661faa2fe197f440a685b0cd9f5881ed83df74f295c72044962d0cfe",
+              "start": 81569
+            },
+            "literal": "by the first half of 2025"
+          },
+          "formulation": "narrative",
+          "milestone": "planned high-volume production",
+          "reason": "This first- or third-fab formulation retains its scoped manufacturing target. Preserve narrative/timeline predicate and deadline distinctions; unchanged source wording does not verify physical attainment.",
+          "scope": "The source's first Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona first fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              },
+              {
+                "end": 80980,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 80307
+              }
+            ],
+            "fragment": {
+              "end": 83762,
+              "locator": "narrative: second fab target",
+              "sha256": "6d09258bc5b76c4aea2b55a2a21bff88ad01f66b9071ef47e673103687dc555a",
+              "start": 83692
+            },
+            "literal": "second half in 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 81768,
+                "locator": "Complete production-target narrative paragraph",
+                "sha256": "02b640979ae2d3b64a79115ad922287d005f6f35fb0ba33b9683fbb451ced2a4",
+                "start": 81566
+              },
+              {
+                "end": 78958,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 78285
+              }
+            ],
+            "fragment": {
+              "end": 81721,
+              "locator": "second fab narrative",
+              "sha256": "e7e4a158214c7569d2bfeb38d64a273835c72e5898a23b5e3ecb7a9cc8192a52",
+              "start": 81670
+            },
+            "literal": "in 2028"
+          },
+          "formulation": "narrative",
+          "milestone": "planned production",
+          "reason": "The same source-native second-fab production target changes from year 2028 to H2 2027 in this formulation. Narrative and timeline corroborate one described target revision, not two independent events or measured physical acceleration.",
+          "scope": "The source's second Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona second fab",
+          "verdict": "revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 83809,
+                "locator": "Economic and National Security Impact: production targets",
+                "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+                "start": 83588
+              },
+              {
+                "end": 80980,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 80307
+              }
+            ],
+            "fragment": {
+              "end": 83804,
+              "locator": "narrative: third fab target",
+              "sha256": "3c8fdd5d01c470aef3fef1c452d1c35042dbfa0f42fb238cde27de6e868b7a7a",
+              "start": 83763
+            },
+            "literal": "by the end of the decade"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 81768,
+                "locator": "Complete production-target narrative paragraph",
+                "sha256": "02b640979ae2d3b64a79115ad922287d005f6f35fb0ba33b9683fbb451ced2a4",
+                "start": 81566
+              },
+              {
+                "end": 78958,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 78285
+              }
+            ],
+            "fragment": {
+              "end": 81763,
+              "locator": "third fab narrative",
+              "sha256": "3c8fdd5d01c470aef3fef1c452d1c35042dbfa0f42fb238cde27de6e868b7a7a",
+              "start": 81722
+            },
+            "literal": "by the end of the decade"
+          },
+          "formulation": "narrative",
+          "milestone": "planned production",
+          "reason": "This first- or third-fab formulation retains its scoped manufacturing target. Preserve narrative/timeline predicate and deadline distinctions; unchanged source wording does not verify physical attainment.",
+          "scope": "The source's third Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona third fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              },
+              {
+                "end": 80980,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 80307
+              }
+            ],
+            "fragment": {
+              "end": 87978,
+              "locator": "timeline: first fab target",
+              "sha256": "b0f0cd074ea072d2860bf1137616b7fe1479f20b85d883a2bce42c3453835f4e",
+              "start": 87904
+            },
+            "literal": "in first half of 2025"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 86103,
+                "locator": "Project Timeline row",
+                "sha256": "7cb61469b6ce9f41830019a7c4db2211928bd5b130023e26c1cb590cbbcad752",
+                "start": 85812
+              },
+              {
+                "end": 78958,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 78285
+              }
+            ],
+            "fragment": {
+              "end": 85936,
+              "locator": "first fab timeline",
+              "sha256": "b0f0cd074ea072d2860bf1137616b7fe1479f20b85d883a2bce42c3453835f4e",
+              "start": 85862
+            },
+            "literal": "in first half of 2025"
+          },
+          "formulation": "timeline",
+          "milestone": "planned production start",
+          "reason": "This first- or third-fab formulation retains its scoped manufacturing target. Preserve narrative/timeline predicate and deadline distinctions; unchanged source wording does not verify physical attainment.",
+          "scope": "The source's first Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona first fab",
+          "verdict": "no_revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              },
+              {
+                "end": 80980,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 80307
+              }
+            ],
+            "fragment": {
+              "end": 88063,
+              "locator": "timeline: second fab target",
+              "sha256": "2d13ec7ca96ca3501d1f9c77d0044bd2089b1f169e56fe2d58c13a6738caec15",
+              "start": 87988
+            },
+            "literal": "in second half of 2027"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 86103,
+                "locator": "Project Timeline row",
+                "sha256": "7cb61469b6ce9f41830019a7c4db2211928bd5b130023e26c1cb590cbbcad752",
+                "start": 85812
+              },
+              {
+                "end": 78958,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 78285
+              }
+            ],
+            "fragment": {
+              "end": 86006,
+              "locator": "second fab timeline",
+              "sha256": "9615aa4b0627488d863a21885eb5afbfcd7b62174eb78571c3998188213d98ac",
+              "start": 85946
+            },
+            "literal": "in 2028"
+          },
+          "formulation": "timeline",
+          "milestone": "planned production start",
+          "reason": "The same source-native second-fab production target changes from year 2028 to H2 2027 in this formulation. Narrative and timeline corroborate one described target revision, not two independent events or measured physical acceleration.",
+          "scope": "The source's second Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona second fab",
+          "verdict": "revision"
+        },
+        {
+          "after": {
+            "context": [
+              {
+                "end": 88154,
+                "locator": "Facility Summary: Project Timeline",
+                "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+                "start": 87854
+              },
+              {
+                "end": 80980,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 80307
+              }
+            ],
+            "fragment": {
+              "end": 88144,
+              "locator": "timeline: third fab target",
+              "sha256": "4bbccab0404c157424f757bd49948c001cc619809bae1dbc3b5de88f3c47b10b",
+              "start": 88067
+            },
+            "literal": "by the end of the decade"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 86103,
+                "locator": "Project Timeline row",
+                "sha256": "7cb61469b6ce9f41830019a7c4db2211928bd5b130023e26c1cb590cbbcad752",
+                "start": 85812
+              },
+              {
+                "end": 78958,
+                "locator": "Three greenfield leading-edge fabs in Phoenix scope",
+                "sha256": "7b9a2292fd7c4f26aeac94fa8e93e999c146bc3b941a6a2e52bc8e1257392773",
+                "start": 78285
+              }
+            ],
+            "fragment": {
+              "end": 86093,
+              "locator": "third fab timeline",
+              "sha256": "4bbccab0404c157424f757bd49948c001cc619809bae1dbc3b5de88f3c47b10b",
+              "start": 86016
+            },
+            "literal": "by the end of the decade"
+          },
+          "formulation": "timeline",
+          "milestone": "planned production start",
+          "reason": "This first- or third-fab formulation retains its scoped manufacturing target. Preserve narrative/timeline predicate and deadline distinctions; unchanged source wording does not verify physical attainment.",
+          "scope": "The source's third Arizona fab, not the complete campus or monitoring scope",
+          "source_native_subject": "TSMC Arizona third fab",
+          "verdict": "no_revision"
+        }
+      ]
+    },
+    {
+      "case_id": "500d6db3156f3576800a2fe140100b034a2a2ff594aec8b085c4b898c26516e7",
+      "disposition": "reviewed_targets",
+      "locator": "Samsung: unchanged award-wide operational deadline",
+      "reason": "Complete reviewed project sections supply these source-native manufacturing-calendar formulations; related financial, environmental and undated statements are outside target scope.",
+      "review_sha256": "648f8385a9ff25f140c21d879f9ad5703e78f5dd1d67dda30dc27bfae6f4be01",
+      "reviewed_regions": [
+        {
+          "side": "before",
+          "span": {
+            "end": 58367,
+            "locator": "Complete Samsung project section",
+            "sha256": "89f8a5b0c7d2153d5055b9bbe113b67edbb941e1e36f866dc9adb40cc492f37f",
+            "start": 51956
+          }
+        },
+        {
+          "side": "after",
+          "span": {
+            "end": 87361,
+            "locator": "Complete Samsung project section",
+            "sha256": "89f8a5b0c7d2153d5055b9bbe113b67edbb941e1e36f866dc9adb40cc492f37f",
+            "start": 80950
+          }
+        }
+      ],
+      "targets": [
+        {
+          "after": {
+            "context": [
+              {
+                "end": 87361,
+                "locator": "Samsung Project Overview, scope and timeline",
+                "sha256": "ce4e585242b53e80d2b6baf4855deb18d34c5f80e2186e5e82c73d5854746240",
+                "start": 85655
+              }
+            ],
+            "fragment": {
+              "end": 87335,
+              "locator": "All facilities operational deadline",
+              "sha256": "aedebc7284d9dd6c92accc498135af8c96b44c1d327c9241bcf5fe98173a8f7f",
+              "start": 87282
+            },
+            "literal": "by 2030"
+          },
+          "before": {
+            "context": [
+              {
+                "end": 58367,
+                "locator": "Samsung Project Overview, scope and timeline",
+                "sha256": "ce4e585242b53e80d2b6baf4855deb18d34c5f80e2186e5e82c73d5854746240",
+                "start": 56661
+              }
+            ],
+            "fragment": {
+              "end": 58341,
+              "locator": "All-facilities operational deadline",
+              "sha256": "aedebc7284d9dd6c92accc498135af8c96b44c1d327c9241bcf5fe98173a8f7f",
+              "start": 58288
+            },
+            "literal": "by 2030"
+          },
+          "formulation": "timeline",
+          "milestone": "planned operational state",
+          "reason": "The inspected actual before/after versions retain this source-stated target and scope; this does not establish physical attainment or future feasibility.",
+          "scope": "Two Taylor logic fabs, a separate Taylor R&D fab and Austin expansion; not only the Taylor two-logic-fab aggregate",
+          "source_native_subject": "Samsung Texas award-project all facilities",
+          "verdict": "no_revision"
+        }
+      ]
+    }
+  ],
+  "coverage_statement": "All three exact NIST award-detail URLs shared by the 28-detail historical manifest and the frozen September window, with every manufacturing-calendar formulation found in the reviewed project sections. Exclusions and unsuccessful checks remain in the selected cohort; no claim of complete publisher or global coverage.",
+  "format": "semiconductor-atlas-source-statement-labels-v1",
+  "frozen_sha256": "62d192522d38cd65f646f21f0ffd0568ef0d4f7a86aafc4d9e30294c6110dd93",
+  "prior_exposure": "The root and assisting reviewers saw these retained sources and related implementations before this retrospective study. The Fab 2 change was already known and accepted elsewhere. This review is neither independent, blind nor preregistered.",
+  "reviewed_at": "2026-09-07T12:23:19.316401Z",
+  "reviewer": "Codex root reviewer with previously exposed TSMC and Amkor/Samsung assisting reviewers",
+  "supporting_reviews": [
+    {
+      "path": "2026-09-07-nist-source-vintage-v1-support.md",
+      "sha256": "648f8385a9ff25f140c21d879f9ad5703e78f5dd1d67dda30dc27bfae6f4be01"
+    }
+  ],
+  "target_scope": "Explicit calendar-dated planned construction completion, opening, production start and operational-state targets in the reviewed NIST project narratives and timeline/overview tables. Excludes historical attainment, investments, jobs, conditional undated output, environmental commitments and buyback restrictions."
+}

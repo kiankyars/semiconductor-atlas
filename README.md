@@ -629,6 +629,16 @@ found in these supplied versions. Source-native scope, literal deadlines and mil
 remain explicit; this exposed retrospective review measures coverage, not alert accuracy or
 physical production. It leaves the frozen collector population and accepted claims unchanged.
 
+The separate [selected source-vintage review](docs/source_vintage_review.md) now compares every
+exact NIST award URL shared by the retained July snapshot and frozen September inventory: three
+URLs, with 25 unmatched historical award pages and 13 outside September checks kept explicit.
+Eight reviewed calendar-target formulations include two changed Fab 2 formulations describing
+one revised subject; the other six formulations are unchanged. The July anchors do not replace
+actual collector predecessors. All 369 retained source bindings verify, and the new report
+rebuilds byte-identically while earlier reports remain unchanged. This is exposed retrospective
+review, not a detector prediction, independent evaluation or proof of physical acceleration.
+The next gate requires prespecified future detector outputs followed by separate adjudication.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

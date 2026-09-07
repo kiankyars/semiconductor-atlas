@@ -243,10 +243,24 @@ checks without selecting only accepted claims or changed HTML. Eleven target-bea
 sixteen formulations over nine distinct evidence pairs; five scoped no-target findings and six
 uncomparable checks remain separate. No target revision is found in these actual paired versions.
 This closes the exposed semantic annotation gap for the declared source sample, not source
-completeness or measured detector performance. The next development evaluation should include
-all three retained July-to-September NIST same-URL pairs, without rewriting these collector
-predecessors or selecting only the known Fab 2 revision. Ordinary due collection should retain
-future unchanged, changed and failed observations; independent unexposed adjudication remains open.
+completeness or measured detector performance.
+
+The additive [selected source-vintage review](source_vintage_review.md) now covers all three
+exact NIST award URLs shared by the July snapshot and September inventory. Twenty-five unmatched
+historical award URLs, thirteen outside September checks and one shared policy-blocked check
+remain explicit. Eight target formulations produce two revised Fab 2 formulations describing
+one subject-level revision and six unchanged formulations across five described subject scopes.
+Original collector predecessors and source statements remain unchanged; this known-positive
+and control comparison is retrospective and exposed, not independent detector evaluation.
+
+The next implementation gate is prospective shadow detection: declare supported URLs, target
+scope, observation window, detector code/configuration and stopping rule before observing the
+window; record every eligible opportunity, quiet result, failure and abstention independently
+of claim acceptance. Seal predictions before separate adjudication, distinguish repeated
+observations from distinct subject-version transitions, and reconcile the complete opportunity
+denominator before scoring. Ordinary due collection must retain future unchanged, changed and
+failed observations without bypassing policy or cadence. Independent unexposed adjudication,
+meaningful positive coverage, measured detector performance and calibrated forecasts remain open.
 
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
