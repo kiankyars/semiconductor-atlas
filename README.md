@@ -703,6 +703,13 @@ It has not been calibrated or backtested and is not approved for investment use.
 The CLI builds from a private SQLite backup, so forecasts, alerts, claims, source inputs, and coverage
 share one database snapshot without holding a long read lock on the live store.
 
+The separate [milestone benchmark](docs/milestone_benchmark.md) and
+[CLI workflow](docs/milestone_benchmark_cli.md) freeze evidence-bound timing scenarios and match
+them to separately reviewed outcomes. They preserve cutoff-safe lineage, project/geography splits
+and unknown or censored cases without writing core claims or embedding publisher bodies. The
+workflow is tested, but no real prediction/outcome study or calibrated forecasting result has been
+produced. See the [implementation review](docs/milestone_benchmark_implementation_review.md).
+
 Generate the standalone, dependency-free interface from the release GeoJSON:
 
 ```sh

@@ -341,6 +341,16 @@ milestones or non-announced numeric capacity. Existing ramp outputs remain unfit
 scenarios; their deterministic tests are not calibration evidence. Retrospectively collected
 guidance must not be backdated into an earlier system prediction.
 
+The additive [milestone-timing benchmark](milestone_benchmark.md) and
+[command-line workflow](milestone_benchmark_cli.md) now implement actual-clock study/vintage
+freezing, cutoff-verified transitive input lineage, held-out project boundaries, complete later
+outcome review and interval-aware timing diagnostics. Outcome artifacts retain source references,
+not publisher bodies; scoring requires the exact local evidence. Synthetic end-to-end tests and
+a read-only real Fab 2 lineage check pass, but no real study, prediction or outcome has been
+registered. This is an unfitted-scenario evaluation foundation, not calibrated forecasts or a
+passed Phase 4 gate. A reviewed multi-project/geography roster, justified predictions, training
+provenance and independently reviewed realization evidence remain necessary.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,
