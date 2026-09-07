@@ -112,6 +112,81 @@ class SourceCheckTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "finishes before"):
             self.verify()
 
+    def test_curated_report_retains_its_existing_facility_scope(self) -> None:
+        report = self.verify()
+        self.assertEqual("semiconductor-atlas-curated-source-check-report-v1", report["format"])
+        self.assertEqual("amkor:peoria", report["checked_facility_key"])
+        self.assertNotIn("checked_source_id", report)
+
+    def test_publisher_report_uses_source_scope_with_same_attempt_accounting(self) -> None:
+        curated = self.verify()
+        self.ledger.update(
+            format="semiconductor-atlas-publisher-source-checks-v1",
+            checked_source_id="nist:chips-public-indexes",
+        )
+        del self.ledger["checked_facility_key"]
+        publisher = self.verify()
+        self.assertEqual("semiconductor-atlas-publisher-source-check-report-v1", publisher["format"])
+        self.assertEqual("nist:chips-public-indexes", publisher["checked_source_id"])
+        self.assertNotIn("checked_facility_key", publisher)
+        for field in ("review_scope_id", "attempt_count", "absence_inference_allowed",
+                      "verification_scope", "groups", "urls"):
+            self.assertEqual(curated[field], publisher[field], field)
+        self.assertNotEqual(curated["ledger_sha256"], publisher["ledger_sha256"])
+
+    def test_publisher_checks_require_source_identity_and_reject_facility_scope(self) -> None:
+        self.ledger.update(
+            format="semiconductor-atlas-publisher-source-checks-v1",
+            checked_source_id="nist:chips-public-indexes",
+        )
+        with self.assertRaisesRegex(ValueError, "facility scope"):
+            self.verify()
+        del self.ledger["checked_facility_key"]
+        for identity in (None, "", " ", 7):
+            with self.subTest(identity=identity):
+                self.ledger["checked_source_id"] = identity
+                with self.assertRaisesRegex(ValueError, "checked_source_id"):
+                    self.verify()
+        del self.ledger["checked_source_id"]
+        with self.assertRaisesRegex(ValueError, "checked_source_id"):
+            self.verify()
+
+    def test_publisher_checks_preserve_failures_without_absence_inference(self) -> None:
+        self.ledger.update(
+            format="semiconductor-atlas-publisher-source-checks-v1",
+            checked_source_id="nist:chips-public-indexes",
+        )
+        del self.ledger["checked_facility_key"]
+        failure = {
+            **self.attempt, "id": "retry", "http_status": 403,
+            "error": "HTTP 403", "outcome": "failed",
+            "started_at": "2026-09-07T03:00:00Z",
+            "finished_at": "2026-09-07T03:00:01Z",
+        }
+        self.ledger["attempts"].append(failure)
+        report = self.verify()
+        self.assertEqual(2, report["attempt_count"])
+        self.assertEqual(1, report["groups"][0]["failed"])
+        self.assertEqual("2026-09-07T02:00:01Z", report["urls"][0]["last_success_at"])
+        self.assertFalse(report["absence_inference_allowed"])
+        self.ledger["absence_inference_allowed"] = True
+        with self.assertRaisesRegex(ValueError, "absence inference"):
+            self.verify()
+        self.ledger["absence_inference_allowed"] = False
+        failure["negative_evidence_eligible"] = True
+        with self.assertRaisesRegex(ValueError, "negative evidence"):
+            self.verify()
+
+    def test_publisher_checks_still_bind_exact_response_bytes(self) -> None:
+        self.ledger.update(
+            format="semiconductor-atlas-publisher-source-checks-v1",
+            checked_source_id="nist:chips-public-indexes",
+        )
+        del self.ledger["checked_facility_key"]
+        (self.root / "response.html").write_bytes(b"changed publisher index")
+        with self.assertRaisesRegex(ValueError, "recorded bytes"):
+            self.verify()
+
 
 if __name__ == "__main__":
     unittest.main()

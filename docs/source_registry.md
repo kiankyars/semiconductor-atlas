@@ -76,6 +76,15 @@ these remain source-version review candidates, not automatically attributed faci
 Raw pages stay local, with marked copyrighted and third-party material excluded from this
 publication scope. See [monitoring boundaries](nist_monitoring_expansion.md).
 
+The separate [NIST index review](../review_plans/2026-09-07-nist-index-discovery.json) approves only
+the current [news index](https://www.nist.gov/chips/chips-news-releases),
+[Program Office awards index](https://www.nist.gov/chips/chips-program-office-awards), and bounded
+same-root sequential pagination after both policy checks pass. The [discovery pilot](nist_discovery.md)
+retained 64 links across six pages, including 14 company-name matches. This does not grant access to
+the linked documents, the older search-based archive, issuer sites, images or attachments. Raw
+index pages remain local. A matched company name is not a matched baseline facility, and a completed
+current page chain is not complete publisher history. The daily task does not yet run this collector.
+
 September 7, 2026 discovery review: Samsung's [June 10 issuer article](https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/)
 is a Taylor construction lead, not accepted baseline evidence. Its [US Austin website terms](https://semiconductor.samsung.com/legal/)
 limit the stated grant to personal display/use and require prior written consent for other use.

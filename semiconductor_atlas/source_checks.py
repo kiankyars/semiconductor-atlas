@@ -16,6 +16,7 @@ from .ai_critical_changes import (
 
 
 FORMAT = "semiconductor-atlas-curated-source-checks-v1"
+SOURCE_FORMAT = "semiconductor-atlas-publisher-source-checks-v1"
 
 
 def _text(value: object, context: str) -> str:
@@ -63,11 +64,14 @@ def validate_source_checks(
     """
     raw = _read(Path(ledger_path))
     ledger = _strict_json(raw, "source checks ledger")
-    if not isinstance(ledger, dict) or ledger.get("format") != FORMAT:
+    if not isinstance(ledger, dict) or ledger.get("format") not in (FORMAT, SOURCE_FORMAT):
         raise ValueError("invalid source checks format")
+    scope_field = "checked_source_id" if ledger["format"] == SOURCE_FORMAT else "checked_facility_key"
+    if scope_field == "checked_source_id" and "checked_facility_key" in ledger:
+        raise ValueError("publisher checks cannot assert a facility scope")
     if ledger.get("absence_inference_allowed") is not False:
         raise ValueError("curated URL checks cannot permit absence inference")
-    for field in ("review_scope_id", "checked_facility_key", "clock_precision"):
+    for field in ("review_scope_id", scope_field, "clock_precision"):
         _text(ledger.get(field), field)
     attempts = ledger.get("attempts")
     if not isinstance(attempts, list) or not attempts:
@@ -153,9 +157,10 @@ def validate_source_checks(
             endpoint["last_failure_at"] = _later(clock, endpoint["last_failure_at"])
             group["last_failed_check_at"] = _later(clock, group["last_failed_check_at"])
     return {
-        "format": "semiconductor-atlas-curated-source-check-report-v1",
+        "format": ("semiconductor-atlas-publisher-source-check-report-v1" if ledger["format"] == SOURCE_FORMAT
+                   else "semiconductor-atlas-curated-source-check-report-v1"),
         "review_scope_id": ledger["review_scope_id"],
-        "checked_facility_key": ledger["checked_facility_key"],
+        scope_field: ledger[scope_field],
         "ledger_sha256": hashlib.sha256(raw).hexdigest(),
         "attempt_count": len(attempts),
         "absence_inference_allowed": False,

@@ -163,8 +163,12 @@ adds two exact project-page checks relevant to TSMC Phoenix and Samsung Taylor, 
 configured denominator to three of seven scopes and five documents. Two first observations remain
 pending review. Scope-bearing report v2 preserves the original v1 reports byte-for-byte; project-wide
 text is not automatically attributed to an individual fab. The daily task uses the expanded config.
-The other four scopes, wider approved coverage, new-document discovery,
-complete collection-chain accounting, and historical detection-performance evaluation remain open.
+The [NIST index discovery collector](nist_discovery.md) now retains the observed current news and
+awards page chains independently of facility-scoped checks. One manual eight-request pilot retained
+64 links (14 company-name matches), and a restored packet reproduced its inventory exactly. It did
+not acquire linked documents or accept claims. New-URL reviewer admission, scheduled discovery,
+the other four scopes, wider approved coverage, complete collection-chain accounting beyond these
+bounded indexes, and historical detection-performance evaluation remain open.
 
 Add:
 
