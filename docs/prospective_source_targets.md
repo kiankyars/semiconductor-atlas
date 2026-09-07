@@ -131,6 +131,12 @@ populations are not no-change labels. Precision, recall, false-positive burden,
 publication-detection lag and forecast calibration remain null. Recording lag
 from assessment is not publication-detection lag.
 
+The separate [outcome-review evaluator](prospective_target_evaluation.md) adds a
+pre-window scoring policy, a source-only review packet after closure and conditional
+document-triage diagnostics from independently entered evidence labels. It does
+not change this registered detector or claim that reviewer independence has been
+verified. No real future labels or scores exist yet.
+
 ## Scheduled operation and preservation
 
 The existing daily 08:00 America/Los_Angeles task remains the collection owner.

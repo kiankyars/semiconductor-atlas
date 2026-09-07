@@ -268,6 +268,12 @@ closing census. All configured documents remain in scope even where parser suppo
 The September 8–15 UTC study is an operational prospective step, not proof of future execution,
 unexposed outcome adjudication, positive-event coverage or measured detection performance.
 
+A separate [source-only review and evaluation layer](prospective_target_evaluation.md) now
+prespecifies document-triage accounting, hides detector outputs from the review artifact and
+joins evidence-bound labels only after packet acceptance. It retains missing/late/abstaining
+positive cases in timely sensitivity and includes late wrong candidates in review burden.
+Actual future adjudication and independently verified detection performance remain open.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,

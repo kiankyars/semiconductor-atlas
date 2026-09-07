@@ -628,6 +628,11 @@ closure. It includes all seven configured documents; four have parser routes and
 The fixed September 8–15 UTC study does not yet supply future outcomes, independently reviewed
 labels, measured detector performance or calibrated forecasts.
 
+The separate [prospective outcome evaluator](docs/prospective_target_evaluation.md) pins its
+scoring policy before observations, produces source-only review material after closure and
+retains unresolved labels, abstentions, late and missing outputs in conditional document-triage
+diagnostics. It does not infer reviewer independence, subject-level correctness or physical truth.
+
 The separate [source-native statement review](docs/source_statement_review.md) now labels all
 22 frozen checks: eleven target-bearing pairs, five scoped no-target findings and six uncomparable
 checks. Sixteen reviewed target pairs reduce to nine distinct evidence pairs, with no revisions
