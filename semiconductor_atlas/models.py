@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import calendar
 import hashlib
 import json
 import re
@@ -381,11 +382,11 @@ class ClaimSeries:
 class ClaimVersion:
     id: str
     series_id: str
-    valid_from: str
+    valid_from: str | None
     recorded_at: str
     claim_kind: ClaimKind
     method: str
-    confidence: float
+    confidence: float | None
     valid_to: str | None = None
     created_by_run_id: str | None = None
     notes: str | None = None
@@ -393,13 +394,18 @@ class ClaimVersion:
     def __post_init__(self) -> None:
         for field_name in ("id", "series_id", "method"):
             _required(getattr(self, field_name), field_name)
-        _iso_date(self.valid_from, "valid_from")
+        if self.valid_from is None:
+            if self.claim_kind is not ClaimKind.SOURCE_STATEMENT or self.valid_to is not None:
+                raise ValueError("unknown effective time requires a source statement with no valid_to")
+        else:
+            _iso_date(self.valid_from, "valid_from")
         if self.valid_to is not None:
             _iso_date(self.valid_to, "valid_to")
             if self.valid_to <= self.valid_from:
                 raise ValueError("valid_to must be later than valid_from")
         object.__setattr__(self, "recorded_at", _iso_timestamp(self.recorded_at, "recorded_at"))
-        _confidence(self.confidence)
+        if self.confidence is not None:
+            _confidence(self.confidence)
         _optional_text(self.created_by_run_id, "created_by_run_id")
         _optional_text(self.notes, "notes")
 
@@ -761,8 +767,10 @@ class MilestoneValue:
     milestone_type: str
     status: MilestoneStatus
     date_low: str
-    date_base: str
+    date_base: str | None
     date_high: str
+    date_precision: str | None = None
+    date_literal: str | None = None
 
     @property
     def kind(self) -> ValueKind:
@@ -770,7 +778,32 @@ class MilestoneValue:
 
     def __post_init__(self) -> None:
         _required(self.milestone_type, "milestone_type")
-        _ordered_dates(self.date_low, self.date_base, self.date_high, "milestone_date")
+        if self.date_precision is None and self.date_literal is None:
+            _ordered_dates(self.date_low, self.date_base, self.date_high, "milestone_date")
+            return
+        if self.date_base is not None or self.status is not MilestoneStatus.EXPECTED:
+            raise ValueError("source target periods require expected status and no midpoint")
+        if not isinstance(self.date_precision, str) or self.date_precision not in {
+            "day", "month", "quarter", "half_year", "year", "range"
+        }:
+            raise ValueError("invalid source target date precision")
+        _required(self.date_literal, "date_literal")
+        _iso_date(self.date_low, "date_low")
+        _iso_date(self.date_high, "date_high")
+        low, high = date.fromisoformat(self.date_low), date.fromisoformat(self.date_high)
+        if low > high:
+            raise ValueError("source target period bounds are reversed")
+        if self.date_precision == "range":
+            return
+        if self.date_precision == "day":
+            valid = low == high
+        else:
+            width = {"month": 1, "quarter": 3, "half_year": 6, "year": 12}[self.date_precision]
+            last_month = low.month + width - 1
+            valid = (low.day == 1 and (low.month - 1) % width == 0 and last_month <= 12
+                     and high == date(low.year, last_month, calendar.monthrange(low.year, last_month)[1]))
+        if not valid:
+            raise ValueError("source target bounds do not match their calendar precision")
 
 
 @dataclass(frozen=True, slots=True)

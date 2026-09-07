@@ -205,12 +205,16 @@ restore at every event cutoff, and historical v1/v2/v3/v4 coverage remains byte-
 handoff replay requires the original capture paths and is explicitly retrospective. This advances
 evidence routing, not source-to-claim acceptance, incremental detection or forecast calibration.
 
-The remaining TSMC text review contains a [substantive second-fab target-change lead](../review_plans/2026-09-07-tsmc-fab2-target-review-lead.json):
-NIST's planned production start moved from 2028 to the second half of 2027 relative to the retained
-July 18 page. Its first publication date is not established by CMS metadata. The queue remains open
-because the change belongs to a separately identified Fab 2 project/production unit, not the
-baseline's first-fab lifecycle. The next claim gate must retain this useful broader-scope evidence
-without silently narrowing it to the existing facility key or promoting a target into production.
+The [source-native project target gate](source_project_targets.md) now accepts the retained TSMC
+Fab 2 target revision as two document-version source statements in the core store, admitted together
+at `2026-09-07T09:28:12.852741Z`. The old source says 2028; the newer source says second half of
+2027. Schema 5 preserves unknown effective dates and confidence, literal calendar precision without
+midpoints, and a separate knowledge-time source-claim export. The source-text queue has handed off
+this version; the project remains unassigned to a canonical facility. Its first publication date
+is not established by CMS metadata, and no attained production, capacity or first-fab baseline
+revision follows. A populated working-copy upgrade preserves the original 104,286 claims and all
+lineage. This closes a bounded source-to-claim integration gap, not the blind evaluation, forecast
+or full-coverage gates.
 
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative

@@ -849,6 +849,17 @@ def _validate(args: argparse.Namespace) -> dict[str, object]:
         connection.close()
 
 
+def _accept_project_targets(args: argparse.Namespace) -> dict[str, object]:
+    from .project_target_review import accept_review
+
+    connection = _existing_database(args.database)
+    try:
+        return accept_review(connection, args.review, reference_root=args.reference_root,
+                             source_queue=args.source_queue)
+    finally:
+        connection.close()
+
+
 def _summary(args: argparse.Namespace) -> dict[str, object]:
     connection = _existing_database(args.database)
     try:
@@ -1098,6 +1109,15 @@ def build_parser() -> argparse.ArgumentParser:
         complete_refresh=True,
         handler=_ingest_taiwan_mof_snapshot,
     )
+
+    project_targets = subparsers.add_parser(
+        "accept-project-targets", help="accept an explicitly reviewed source-native project target pair")
+    project_targets.add_argument("--database", type=Path, required=True,
+                                 help="existing schema-5 working database; no implicit migration")
+    project_targets.add_argument("--review", type=Path, required=True)
+    project_targets.add_argument("--reference-root", type=Path, required=True)
+    project_targets.add_argument("--source-queue", type=Path, required=True)
+    project_targets.set_defaults(handler=_accept_project_targets)
 
     validate = subparsers.add_parser(
         "validate", help="validate integrity and claim lineage"

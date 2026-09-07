@@ -849,7 +849,7 @@ class GLEIFImportTests(unittest.TestCase):
 
         self.assertEqual(0, code)
         result = json.loads(output.getvalue())
-        self.assertEqual(4, result["schema_version"])
+        self.assertEqual(5, result["schema_version"])
         self.assertEqual(3, result["snapshot_inputs_verified"])
         self.assertEqual(
             "2026-07-20T12:01:06Z", result["knowledge_cutoff_at"]

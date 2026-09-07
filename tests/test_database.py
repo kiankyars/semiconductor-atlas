@@ -6,6 +6,7 @@ import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
+from tests._legacy_schema_fixture import historical_fixture
 
 from semiconductor_atlas.database import apply_migrations, initialize, schema_version
 from semiconductor_atlas.models import (
@@ -187,8 +188,8 @@ class DatabaseTests(unittest.TestCase):
         ]
 
     def test_migration_is_versioned_checksummed_and_idempotent(self) -> None:
-        self.assertEqual(self.installed, [1, 2, 3, 4])
-        self.assertEqual(schema_version(self.connection), 4)
+        self.assertEqual(self.installed, [1, 2, 3, 4, 5])
+        self.assertEqual(schema_version(self.connection), 5)
         self.assertEqual(apply_migrations(self.connection), [])
         rows = self.connection.execute(
             "SELECT version, name, length(sha256) FROM schema_migrations ORDER BY version"
@@ -200,6 +201,7 @@ class DatabaseTests(unittest.TestCase):
                 (2, "refresh_indexes", 64),
                 (3, "organization_identity", 64),
                 (4, "same_kind_entity_identity", 64),
+                (5, "source_claim_precision", 64),
             ],
         )
         indexes = {
@@ -212,18 +214,9 @@ class DatabaseTests(unittest.TestCase):
         self.assertIn("claim_versions_replay_by_run_idx", indexes)
 
     def test_validation_supports_a_pre_identity_schema(self) -> None:
-        for table in (
-            "source_entity_assignments",
-            "entity_resolution_decisions",
-            "entity_resolution_candidates",
-            "entity_resolution_run_inputs",
-            "entity_resolution_runs",
-            "organization_identifier_claim_metadata",
-            "organization_name_claim_metadata",
-            "ingestion_run_documents",
-        ):
-            self.connection.execute(f"DROP TABLE {table}")
-        self.connection.execute("DELETE FROM schema_migrations WHERE version IN (3, 4)")
+        legacy = historical_fixture(self.connection, 2)
+        self.connection.close()
+        self.connection = legacy
 
         self.assertEqual(2, schema_version(self.connection))
         self.assertEqual([], validate_database(self.connection))

@@ -585,10 +585,14 @@ now has one pending TSMC text review, and historical v1/v2/v3/v4 coverage report
 The handoff's local historical projection is retrospective and depends on original capture packets;
 it is not a portable source archive, claim acceptance or evaluated early detection.
 
-The still-pending TSMC review has a [retained Fab 2 target-change lead](review_plans/2026-09-07-tsmc-fab2-target-review-lead.json):
-NIST's second-fab planned production start changed from 2028 to the second half of 2027 relative
-to the July 18 archive. This requires a separate project-scope review; it is neither an attained
-milestone nor a revision to the baseline's first-fab operating state.
+The [reviewed source-native project target gate](docs/source_project_targets.md) now admits the
+TSMC Fab 2 target revision into the core claim store: two separately retained NIST document
+statements, 2028 and second half of 2027, on an unassigned source-native project. Schema 5 preserves
+unknown effective dates and confidence, literal calendar precision without an invented midpoint,
+and actual admission clocks. Its knowledge-time export is separate from physical-world claims;
+the first-fab baseline, capacity and attained production remain unchanged. The original schema-4
+database and r3 artifacts are preserved. This is reviewed historical evidence, not early detection,
+a calibrated forecast or a new public release.
 
 The [AI-critical alert-review ledger](docs/ai_critical_alert_review.md) now connects retained
 comparisons and both underlying releases to append-only proposal review. Imports require a
