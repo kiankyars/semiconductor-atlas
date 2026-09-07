@@ -80,14 +80,19 @@ creates source-native facilities and a narrow scalar claim set only for accepted
 does not promote review outcomes, coordinates, status, ownership, output, or capacity. No v16
 candidate review has been accepted or imported yet.
 
-The [September 7 scope-research batch](review_plans/2026-09-07-eea-industrial-v16-scope-research-v1.json)
-records 31 researched candidates: 20 proposed in-scope, four proposed out-of-scope, and seven
-unresolved. It separately lists the other 77 IDs as unreviewed. These are historical facility-scope
-proposals, not accepted claims, new unique fabs, AI-critical additions, or operating-capacity
-evidence. External pages were web-read, not exact-byte archived; layout-sensitive PDF checks remain
-explicit. The partial format cannot be imported as a complete review. Finish the full evidence
-review before admission: v1 allows only one immutable review per database, including an all-defer
-review, so a pilot admission would prevent later revised decisions under this importer version.
+The [September 7 full-population scope research](review_plans/2026-09-07-eea-industrial-v16-scope-research-v2.json)
+records research for all 108 candidates: 38 proposed in-scope, 23 proposed out-of-scope, and 47
+deferred with explicit missing-evidence or scope reasons. The original
+[31-candidate batch](review_plans/2026-09-07-eea-industrial-v16-scope-research-v1.json) and its entries
+remain unchanged. Research completion is not final adjudication: these are historical
+facility-scope proposals, not accepted claims, new unique fabs, AI-critical additions, or
+operating-capacity evidence. Ordinary PCB, connector and passive-component exclusions remain
+provisional process-specific judgments; chip embedding, packaging and dedicated IC substrates
+need separate treatment. External bodies were web-read, not exact-byte archived; failed/search-only
+leads and pending PDF layout checks remain explicit. Neither research format is importable as an
+adjudication ledger. Finish the intended semantic/layout review before admission: v1 allows only
+one immutable review per database, including an all-defer or partly accepted review, so a pilot
+admission would prevent later revised decisions under this importer version.
 
 ### Taiwan MOENV candidate contract
 
