@@ -238,6 +238,16 @@ poll intents and original predecessor ledgers, including failed/uncomparable cas
 revision labels. Historical replay preserves the old population after later captures and queue
 events are added. This is not a publisher-complete truth inventory or the blind evaluation gate.
 
+The separate [source-native statement review](source_statement_review.md) covers all 22 frozen
+checks without selecting only accepted claims or changed HTML. Eleven target-bearing pairs carry
+sixteen formulations over nine distinct evidence pairs; five scoped no-target findings and six
+uncomparable checks remain separate. No target revision is found in these actual paired versions.
+This closes the exposed semantic annotation gap for the declared source sample, not source
+completeness or measured detector performance. The next development evaluation should include
+all three retained July-to-September NIST same-URL pairs, without rewriting these collector
+predecessors or selecting only the known Fab 2 revision. Ordinary due collection should retain
+future unchanged, changed and failed observations; independent unexposed adjudication remains open.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,

@@ -145,8 +145,9 @@ failed/blocked checks, source drift, historical additions, cutoffs, predecessor 
 CLI's read-only/new-only boundary.
 The final local suite passed 989 core and 12 web tests; all 353 checksum-listed payloads passed.
 
-The next evaluation gate is source-native statement review over this frozen source inventory,
-with explicit prior exposure and no-change/uncomparable cases kept separate. Genuine blind
+The additive [source-native statement review](source_statement_review.md) now labels this frozen
+inventory separately, with explicit prior exposure and no-change/uncomparable cases kept apart.
+The immutable inventory itself still has null semantic labels. Genuine blind
 evaluation still requires a prespecified unseen or future cohort and an independent unexposed
 adjudicator. Publication availability, broad recall, realized production, calibrated forecasts
 and alert delivery remain unestablished.

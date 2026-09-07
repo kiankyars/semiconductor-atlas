@@ -622,6 +622,13 @@ polling intent in its declared inputs remains visible. The actual frozen sample 
 including unchanged and policy-blocked observations; collector classifications are not semantic
 revision labels or proof of complete publisher coverage.
 
+The separate [source-native statement review](docs/source_statement_review.md) now labels all
+22 frozen checks: eleven target-bearing pairs, five scoped no-target findings and six uncomparable
+checks. Sixteen reviewed target pairs reduce to nine distinct evidence pairs, with no revisions
+found in these supplied versions. Source-native scope, literal deadlines and milestone distinctions
+remain explicit; this exposed retrospective review measures coverage, not alert accuracy or
+physical production. It leaves the frozen collector population and accepted claims unchanged.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh
