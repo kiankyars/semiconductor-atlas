@@ -1,10 +1,11 @@
 # Intel Fab 52 monitoring
 
 The [versioned Chandler plan](../acquisition_plans/intel_fab52_chandler_v1.json) adds one
-unit-identifying municipal source to the existing monitoring loop. The current catalog has six
-documents across four of seven cohort scopes: TSMC, Samsung, Intel and Amkor. Micron Singapore,
-SK hynix M15X and ASE Kaohsiung remain unmonitored. This changes monitoring coverage, not the
-manufacturing baseline or its original r3 release.
+unit-identifying municipal source to the existing monitoring loop. At this pilot's cutoff, its
+catalog has six documents across four of seven cohort scopes: TSMC, Samsung, Intel and Amkor.
+Micron Singapore, SK hynix M15X and ASE Kaohsiung are unmonitored at that cutoff. The later
+[Micron MTI expansion](micron_mti_monitoring.md) supplies the current v4 configuration. These
+changes affect monitoring coverage, not the manufacturing baseline or its original r3 release.
 
 ## Source and rights boundary
 

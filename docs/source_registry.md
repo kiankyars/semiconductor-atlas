@@ -82,6 +82,17 @@ not permission for the required persistent archive. No raw response was retained
 collector enabled, or baseline claim revised. The article's new NAND fab must remain distinct from
 the Singapore HBM packaging project. The next acquisition needs separately reviewed rights.
 
+The later [MTI source review](../review_plans/2026-09-07-micron-mti-source-review.json) makes a
+separate bounded internal decision for one publicly accessible, government-authored speech about
+Micron's January 8, 2025 HBM packaging groundbreaking. Retained MTI robots and Terms of Use hashes
+gate every exact-page check; the privacy statement was read as ancillary context. No affirmative
+open license or blanket automation grant was identified. Government of Singapore copyright
+remains in force: raw bodies stay local, and public output is operational metadata and original
+reviewer analysis, not images, attachments or substantial publisher text. This does not approve
+Micron's issuer route, MTI search/sitemap discovery, linked-resource acquisition or model training.
+The [monitoring pilot](micron_mti_monitoring.md) closes one configuration gap without accepting a
+new manufacturing claim or interpreting a site-wide footer as a physical-event date.
+
 The [September 7 NIST expansion review](../review_plans/2026-09-07-nist-source-expansion.json)
 approves exact repeatable checks of the government TSMC Phoenix and Samsung Texas award pages
 under retained, hash-bound NIST access and rights policies. It does not authorize their issuer

@@ -1,0 +1,13 @@
+{
+  "format": "semiconductor-atlas-curated-poll-config-v1",
+  "recorded_at": "2026-09-07T07:29:29.853168Z",
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v4.json",
+    "sha256": "a637612b88c3d8042714bdf3c67d065b8dce4e45905c7f4eba98e7cea2790463"
+  },
+  "queue_path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+  "capture_root": "source_snapshots/curated-poll-v1",
+  "state_root": "artifacts/curated-poll-v1",
+  "interval_seconds": 82800,
+  "notes": "Preserves the existing daily 08:00 America/Los_Angeles task's 23-hour per-plan cadence, source-review queue, capture root and recovery state. Adds only the exact reviewed MTI speech for Micron's Singapore HBM packaging project; all four prior plan hashes and due times are retained. Seven documents span five of seven scopes; SK hynix M15X and ASE Kaohsiung remain unmonitored. The historical January 2025 speech is not a current production or capacity assertion, and the January 2026 NAND fab is a separate project. No issuer site, search, sitemap, linked-resource acquisition or raw redistribution is enabled. The app and local workspace must remain available for scheduled operation. Historical configs remain intact."
+}

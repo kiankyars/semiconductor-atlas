@@ -180,9 +180,20 @@ Fab 52, bringing monitoring to six documents across four of seven cohort scopes.
 opening/production statement was reviewed with no baseline revision; HVM attainment and numeric
 capacity remain unsupported. An ordinary live poll made three requests for Intel while preserving
 existing plan due times. The 14-event review queue restores at every event cutoff, and prior v1/v2
-coverage reports remain byte-identical. The existing daily task now uses the manually tested v3
+coverage reports remain byte-identical. The existing daily task was updated to the manually tested v3
 config; actual scheduler execution remains unobserved. Micron Singapore, SK hynix M15X and ASE
-Kaohsiung are the three remaining unmonitored cohort scopes.
+Kaohsiung were the three unmonitored cohort scopes at this step.
+
+The subsequent [Micron MTI expansion](micron_mti_monitoring.md) adds an exact Singapore government
+speech about the January 8, 2025 HBM packaging groundbreaking. The v4 catalog/config now cover
+seven documents across five of seven scopes; SK hynix M15X and ASE Kaohsiung remain unmonitored.
+The older speech was reviewed without a baseline revision. A fresh retrieval, migration notice
+or site-wide footer does not become a new physical milestone, and the separate 2026 NAND project
+is excluded. An ordinary three-request live capture and two no-network repeats preserved prior
+cadence. The 16-event queue restores at every event cutoff and historical v1/v2/v3 coverage remains
+byte-identical. The existing daily task now uses the tested v4 config. This exact-URL monitoring
+does not establish discovery of later Micron announcements, current project status, scheduler
+uptime or an evaluated detection service; the issuer-site restriction remains unchanged.
 
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative

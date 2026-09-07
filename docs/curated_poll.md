@@ -4,7 +4,7 @@ The app's daily task invokes one recoverable polling command in the existing loc
 
 ```sh
 python3 scripts/poll_curated_sources.py \
-  --config acquisition_plans/ai_critical_poll_v3.json
+  --config acquisition_plans/ai_critical_poll_v4.json
 ```
 
 The enabled task is **Semiconductor Atlas source checks**, scheduled daily at 08:00 local time
@@ -13,11 +13,13 @@ worktree per run. The [official scheduling documentation](https://learn.chatgpt.
 requires the computer and app to remain running for local work. A saved active schedule is not
 proof that a scheduled execution has happened or that the service has uninterrupted uptime.
 
-The current configuration covers six documents across four cohort scopes: two broader NIST
+The current configuration covers seven documents across five cohort scopes: two broader NIST
 award pages relevant to TSMC Phoenix and Samsung Taylor, three unchanged Amkor-related URLs,
-and the [Chandler municipal page identifying Intel Fab 52](intel_chandler_monitoring.md).
-Micron Singapore, SK hynix M15X and ASE Kaohsiung remain unmonitored. Each page retains its broader
-document-versus-facility scope. No restricted newsroom collection is enabled.
+the [Chandler municipal page identifying Intel Fab 52](intel_chandler_monitoring.md), and one
+[MTI speech about Micron's Singapore HBM packaging groundbreaking](micron_mti_monitoring.md).
+SK hynix M15X and ASE Kaohsiung remain unmonitored. Each page retains its broader
+document-versus-facility scope. A fresh retrieval of the January 2025 speech is not a current-state
+reaffirmation. No restricted newsroom or Micron investor-relations collection is enabled.
 
 ## Cadence, recovery, and permissions
 
@@ -98,7 +100,13 @@ An actual scheduler-triggered execution has not yet been observed in this accept
 The later [Intel pilot](intel_chandler_monitoring.md) adds one reviewed municipal page through
 the v3 config. It made three requests, preserved the existing plans' due times, and verified quiet
 no-network repeats. Its first text version was reviewed without a baseline revision. The daily
-task now uses v3, with the unchanged discovery job following it sequentially.
+task was updated to v3, with the unchanged discovery job following it sequentially.
+The subsequent [Micron pilot](micron_mti_monitoring.md) uses v4 and adds one exact government
+speech. Its ordinary live run made three requests while skipping the four prior plans. Two
+no-network repeats preserved due times: the first reported the explicit historical-text review
+disposition once, and the second was quiet. The existing daily task now uses v4; the sequential
+discovery job, schedule and notification boundaries are unchanged. This remains manually tested
+configuration, not proof of scheduler execution.
 The first wake-up may correctly skip because the manual test
 was recent. Review the first scheduled outcomes before making any uptime or detection-lag claim.
 Broader source coverage, new-document discovery, complete collection-chain accounting, evaluated

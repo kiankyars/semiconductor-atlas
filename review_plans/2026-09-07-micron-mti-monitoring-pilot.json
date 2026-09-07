@@ -1,0 +1,305 @@
+{
+  "format": "semiconductor-atlas-micron-mti-monitoring-pilot-v1",
+  "recorded_at": "2026-09-07T07:51:01.225734Z",
+  "plan": {
+    "path": "acquisition_plans/micron_singapore_mti_v1.json",
+    "sha256": "0efe6fc33187f693ac00a132e5a74be93168ec0ea4bd5c4e827d2dba0dab98f7",
+    "bytes": 3816
+  },
+  "source_review": {
+    "path": "review_plans/2026-09-07-micron-mti-source-review.json",
+    "sha256": "bb477f9ecab69e7b8099c78f53b3aae824586b4a2bf5429042e69065119824e0",
+    "bytes": 5719
+  },
+  "adjudication": {
+    "path": "review_plans/2026-09-07-micron-mti-text-adjudication.json",
+    "sha256": "3ec4157fa5d5a14b4cbfc66e537638d065385909ab6dfb138e5d8342a0f3f4f6",
+    "bytes": 3619
+  },
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v4.json",
+    "sha256": "a637612b88c3d8042714bdf3c67d065b8dce4e45905c7f4eba98e7cea2790463",
+    "bytes": 2940
+  },
+  "poll_config": {
+    "path": "acquisition_plans/ai_critical_poll_v4.json",
+    "sha256": "f693b4b13cb68a6718d67a7c31fc660c0c96cbc5dbe616789253ae41d9103156",
+    "bytes": 1202
+  },
+  "retained_verification": {
+    "path": "artifacts/2026-09-07-mti-monitoring-verification-v1.json",
+    "sha256": "a68028f7ac57b9d5ce528283804341406f62ba52b633c7089598e3041a6d801d",
+    "bytes": 1711
+  },
+  "capture": {
+    "copied_packet_replay_equal": true,
+    "managed_file_bytes": 831298,
+    "managed_file_count": 12,
+    "manifest_sha256": "b467ad30113c34a7adda79188bd5c79f67842cd9ad7ba1fbf81863c858eb2a1c",
+    "minimum_request_gap_seconds": 1.011004,
+    "path": "source_snapshots/curated-poll-v1/896451f7f5d741e68247482a467559bd-3",
+    "request_count": 3,
+    "response_bytes": 810562
+  },
+  "queue": {
+    "candidate_count": 7,
+    "event_count": 16,
+    "head_event_id": "e6724de4fe6a9a16b0add4055f50c0d44cd8b5b3e3f261cc1baba30ab2968aab",
+    "pending_count": 2,
+    "recheck_count": 0,
+    "run_count": 11,
+    "verified_capture_count": 11,
+    "path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+    "export": {
+      "bytes": 45977,
+      "full_verify_equal": true,
+      "path": "artifacts/2026-09-07-mti-expanded-review-events-v1.json",
+      "restored_event_cutoff_count": 16,
+      "sha256": "3c04582c1d6df77eaaf703d1240ed875442be0e43b3b6a579b619fdc6012bad6"
+    },
+    "replay_boundary": "The event export requires referenced local capture packets; restore is not a self-contained source archive."
+  },
+  "adjudication_binding": {
+    "candidate_id": "7dfbf9e501243f28e091d070b04b8880d05ae07809b24fa64f819a450c1756fd",
+    "source_url": "https://www.mti.gov.sg/newsroom/speech-by-dpm-and-minister-for-trade-and-industry-gan-kim-yong-at-the-groundbreaking-ceremony-of-micron-s-hbm-manufacturing-facility/",
+    "status": "dismissed",
+    "first_seen_at": "2026-09-07T07:30:57.571351Z",
+    "first_admitted_at": "2026-09-07T07:30:57.654759Z",
+    "review_document_at": "2026-09-07T07:34:05Z",
+    "decision_admitted_at": "2026-09-07T07:35:35.340154Z",
+    "expected_event_id": "7b9dc906f03e137ac0b543c4294735422108aac36210af3b7de6393107c39de7",
+    "decision_event_id": "e6724de4fe6a9a16b0add4055f50c0d44cd8b5b3e3f261cc1baba30ab2968aab",
+    "evidence_ref": "review_plans/2026-09-07-micron-mti-text-adjudication.json#sha256=3ec4157fa5d5a14b4cbfc66e537638d065385909ab6dfb138e5d8342a0f3f4f6",
+    "raw_text_capture_plan_and_event_bindings_verified": true
+  },
+  "historical_reports": [
+    {
+      "byte_identical": true,
+      "catalog_version": 1,
+      "path": "artifacts/2026-09-07-ai-critical-coverage-v1.json",
+      "sha256": "28cb94636f8b69d2c599414626ed50806300aea565da6f549621c235289627f6"
+    },
+    {
+      "byte_identical": true,
+      "catalog_version": 2,
+      "path": "artifacts/curated-poll-v1/92260e90c9774797a92686ff516a5f5a/coverage.json",
+      "sha256": "6bb301f9d390b8f48c8e561ff32399b6c79a8f2cb13b9957f53de7affd174322"
+    },
+    {
+      "byte_identical": true,
+      "catalog_version": 3,
+      "path": "artifacts/curated-poll-v1/deb403152bab4f13989629ae2b240ecc/coverage.json",
+      "sha256": "681775fe66ec6a25f6e1b05582eeef5c82fa916382d589e2bfdef826551020f3"
+    }
+  ],
+  "invocations": [
+    {
+      "path": "artifacts/curated-poll-v1/896451f7f5d741e68247482a467559bd",
+      "request": {
+        "path": "artifacts/curated-poll-v1/896451f7f5d741e68247482a467559bd/request.json",
+        "sha256": "635c4c36ee540d5febc69e8bc9b8f3ef56264ae1cd135ea30d199502371b629d",
+        "bytes": 473
+      },
+      "finished": {
+        "path": "artifacts/curated-poll-v1/896451f7f5d741e68247482a467559bd/finished.json",
+        "sha256": "3554b6ff517b106d3e4f24a8433535367ace945485896d520f94b85ad20c62b0",
+        "bytes": 2634
+      },
+      "started_at": "2026-09-07T07:30:52.248219Z",
+      "finished_at": "2026-09-07T07:30:57.674053Z",
+      "requests": 3,
+      "forced": false,
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due",
+        "captured_imported",
+        "not_due"
+      ],
+      "reportable_change": true,
+      "coverage_sha256": "4fa1e66afee2cb81ad0a7f17b5afc1eae8a629b66712da427aceccf98919119e",
+      "queue_export": {
+        "path": "artifacts/curated-poll-v1/896451f7f5d741e68247482a467559bd/queue-events.json",
+        "sha256": "aae6be0a8e057d9bf10cb7c5798f105c77a59d8ca5fca0d332960b9a3b7962f3",
+        "bytes": 44799
+      },
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    },
+    {
+      "path": "artifacts/curated-poll-v1/1769819779e54292b02b3642a04ca98d",
+      "request": {
+        "path": "artifacts/curated-poll-v1/1769819779e54292b02b3642a04ca98d/request.json",
+        "sha256": "7b3fbe78396cb1ff35f6e34999336ad87e5162ec9d6eb1ae45b26b57a1c65a1d",
+        "bytes": 473
+      },
+      "finished": {
+        "path": "artifacts/curated-poll-v1/1769819779e54292b02b3642a04ca98d/finished.json",
+        "sha256": "bae3977818e4c180324e1901f866a7dd8e52b9842749be77fdcda5b578f5c996",
+        "bytes": 2510
+      },
+      "started_at": "2026-09-07T07:36:13.356987Z",
+      "finished_at": "2026-09-07T07:36:15.137715Z",
+      "requests": 0,
+      "forced": false,
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due"
+      ],
+      "reportable_change": true,
+      "coverage_sha256": "a36fe2728d2f48a9beefec2e5e202bf9ad77cb0dc9fe53fc002c10b1f1ee809a",
+      "queue_export": {
+        "path": "artifacts/curated-poll-v1/1769819779e54292b02b3642a04ca98d/queue-events.json",
+        "sha256": "3c04582c1d6df77eaaf703d1240ed875442be0e43b3b6a579b619fdc6012bad6",
+        "bytes": 45977
+      },
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    },
+    {
+      "path": "artifacts/curated-poll-v1/a118775ff9c544e792b0d0a808d59d1e",
+      "request": {
+        "path": "artifacts/curated-poll-v1/a118775ff9c544e792b0d0a808d59d1e/request.json",
+        "sha256": "d4e5e67a71aea6c080d507419f837be3f3ee43f6f2e6ec17ad04910b4b1f27fd",
+        "bytes": 473
+      },
+      "finished": {
+        "path": "artifacts/curated-poll-v1/a118775ff9c544e792b0d0a808d59d1e/finished.json",
+        "sha256": "2455d5095f55f2e8ca0c856cf342a45c78be57c95b7685d05614ca8d3bf8293f",
+        "bytes": 2511
+      },
+      "started_at": "2026-09-07T07:36:16.402931Z",
+      "finished_at": "2026-09-07T07:36:18.186397Z",
+      "requests": 0,
+      "forced": false,
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due",
+        "not_due"
+      ],
+      "reportable_change": false,
+      "coverage_sha256": "7b06d49f1fdd65ad011ab9725739ef49cc29000a1afa5683eba4d839f1495bfa",
+      "queue_export": {
+        "path": "artifacts/curated-poll-v1/a118775ff9c544e792b0d0a808d59d1e/queue-events.json",
+        "sha256": "3c04582c1d6df77eaaf703d1240ed875442be0e43b3b6a579b619fdc6012bad6",
+        "bytes": 45977
+      },
+      "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1"
+    }
+  ],
+  "coverage_summary": {
+    "cohort_facility_count": 7,
+    "configured_document_count": 7,
+    "configured_facility_count": 5,
+    "expired_plan_count": 0,
+    "fresh_document_count": 7,
+    "never_observed_document_count": 0,
+    "pending_count": 2,
+    "recheck_count": 0,
+    "stale_document_count": 0,
+    "unhealthy_document_count": 0,
+    "unmonitored_facility_count": 2
+  },
+  "next_due_by_facility": {
+    "tsmc:fab21-arizona": "2026-09-08T03:48:35.267126Z",
+    "samsung:taylor-leading-edge-project": "2026-09-08T03:48:39.052123Z",
+    "intel:fab52-chandler": "2026-09-08T05:03:07.337908Z",
+    "micron:singapore-hbm-packaging-project": "2026-09-08T06:30:57.606475Z",
+    "amkor:peoria-advanced-packaging-project": "2026-09-08T03:48:47.680556Z"
+  },
+  "prior_plan_due_times_preserved": true,
+  "discovery_repeat": {
+    "path": "artifacts/discovery-poll-v1/f58cdd35bcf54c66a72b35d89f467fb0",
+    "finished": {
+      "path": "artifacts/discovery-poll-v1/f58cdd35bcf54c66a72b35d89f467fb0/finished.json",
+      "sha256": "7c994bc92b4c842e82e81803d2822fb1e98ad394f9deba60a08a22241c9b052a",
+      "bytes": 1297
+    },
+    "started_at": "2026-09-07T07:37:11.041684Z",
+    "finished_at": "2026-09-07T07:37:11.476632Z",
+    "requests": 0,
+    "status": "not_due",
+    "reportable_change": false,
+    "queue_summary": {
+      "candidate_count": 64,
+      "head_event_id": "ba65d921974306e3d80218ff8a1e950a9b60acd8effd8714d89f6c720e903e14",
+      "pending_count": 14,
+      "recheck_count": 0,
+      "run_count": 2,
+      "unrouted_pending_count": 50
+    }
+  },
+  "automation": {
+    "id": "semiconductor-atlas-source-checks",
+    "name": "Semiconductor Atlas source checks",
+    "kind": "heartbeat",
+    "status": "ACTIVE",
+    "target_thread_id": "01a03042-7728-74a3-8fcb-a05db52a8b9c",
+    "created_at_unix_ms": 1788754009722,
+    "updated_at_unix_ms": 1788766652282,
+    "prompt_sha256": "d18dd3865230c4221174fe10f5caf4909ac6884b9a74089db08458869bf25967",
+    "schedule": "Daily 08:00 America/Los_Angeles; existing task and sequential discovery job preserved",
+    "saved_prompt_hash_readback_verified": true,
+    "actual_scheduler_trigger_observed": false
+  },
+  "immutable_artifacts": [
+    {
+      "path": "semiconductor_atlas/ai_critical.py",
+      "sha256": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969",
+      "bytes": 141232
+    },
+    {
+      "path": "baselines/ai_critical_manufacturing_v1.json",
+      "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+      "bytes": 51871
+    },
+    {
+      "path": "releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3.tar.gz",
+      "sha256": "fa3db457bd4734511dee267c13d8b2404b2f25a7b2d12f85bbf4c6f4aad542f4",
+      "bytes": 84065
+    }
+  ],
+  "unchanged_alert_diagnostic": {
+    "frozen": {
+      "path": "artifacts/2026-09-07-amkor-alert-evaluation-v1-frozen.json",
+      "sha256": "9ede3f6e32699e03d01e17cc97dc9f66a410a300876b506806b0556525cf2c94",
+      "bytes": 2120225
+    },
+    "report": {
+      "path": "artifacts/2026-09-07-amkor-alert-evaluation-v1-report.json",
+      "sha256": "4f69a71d691e8b7093eb35e94e5b1ae6ef46ea5502d89a5f5ff8981c84402676",
+      "bytes": 30292
+    },
+    "alert_export": {
+      "path": "artifacts/2026-09-07-ai-critical-alert-review-events-v1.json",
+      "sha256": "e0ef579f0ba6b972031bf58415dca0f242b74d68016a8ca2a96bdddd6bd09e60",
+      "bytes": 1531234
+    },
+    "exact_report_replay_verified": true,
+    "live_alert_queue_export_byte_identical": true
+  },
+  "validation": {
+    "core_tests": 756,
+    "web_tests": 12,
+    "new_micron_tests": 8,
+    "compileall_passed": true,
+    "independent_read_only_scope_and_packet_audit": "No blocking finding; not a legal-permission opinion, independent historical outcome label or scheduler execution test.",
+    "core_runtime_seconds": 74.083,
+    "core_command": "python3 -m unittest discover -s tests -q",
+    "web_command": "python3 -m unittest discover -s web/tests -q"
+  },
+  "claim_acceptance": false,
+  "baseline_modified": false,
+  "delivery_eligible": false,
+  "continuous_operation_proven": false,
+  "limitations": [
+    "Seven exact documents across five scopes are not complete publisher discovery or current manufacturing evidence.",
+    "The January 2025 speech corroborates an already represented event; retrieval and footer dates do not establish a current stage.",
+    "SK hynix M15X and ASE Kaohsiung remain unmonitored; two earlier NIST text-review items remain pending.",
+    "No raw publisher bodies or new data release are published. Issuer restrictions are unchanged.",
+    "Independent detection evaluation, source-to-claim handoffs and calibrated capacity forecasts remain open."
+  ]
+}

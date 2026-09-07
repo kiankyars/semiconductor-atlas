@@ -1,0 +1,58 @@
+{
+  "format": "semiconductor-atlas-micron-mti-text-adjudication-v1",
+  "reviewed_at": "2026-09-07T07:34:05Z",
+  "reviewer": "local:source-version-review",
+  "facility_key": "micron:singapore-hbm-packaging-project",
+  "decision": "dismiss_reviewed_text_version_without_baseline_revision",
+  "candidate_id": "7dfbf9e501243f28e091d070b04b8880d05ae07809b24fa64f819a450c1756fd",
+  "expected_event_id": "7b9dc906f03e137ac0b543c4294735422108aac36210af3b7de6393107c39de7",
+  "source_capture": {
+    "path": "source_snapshots/curated-poll-v1/896451f7f5d741e68247482a467559bd-3",
+    "manifest_sha256": "b467ad30113c34a7adda79188bd5c79f67842cd9ad7ba1fbf81863c858eb2a1c",
+    "body_path": "responses/mti-micron-singapore-hbm-groundbreaking.body",
+    "body_sha256": "36d11fe67bd1e5602553944762a57a2906140aa11fb1bb6dbbc15ce539a1f1d7",
+    "normalization": "html_visible_text_v1",
+    "normalized_sha256": "8cb3acdd6ec596ae49fc25797ba36821d25143d8abcfd409d2e47a681d325074",
+    "retrieved_at": "2026-09-07T07:30:57.571351Z"
+  },
+  "independent_text_check": {
+    "method": "Separate stdlib HTMLParser main-element extraction, excluding script/style/noscript text, with collapsed whitespace; checked displayed date, HBM packaging identity, ceremony wording and exclusion of the site-wide footer.",
+    "main_text_utf8_sha256": "f9b26e7248bddba2ec42171e47af5617459814634485ba371d52436d4273fbcb",
+    "main_text_characters": 6152,
+    "main_text_word_count": 946,
+    "precise_publication_timestamp_metadata_found": false
+  },
+  "baseline": {
+    "path": "baselines/ai_critical_manufacturing_v1.json",
+    "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+    "facility_lifecycle": "site_preparation",
+    "lifecycle_as_of": "2025-06-26",
+    "evidence_id": "micron-singapore-hbm-groundbreaking"
+  },
+  "assessment": {
+    "source_assertion": "The government speech identifies a January 8, 2025 groundbreaking for the Singapore HBM advanced-packaging project and describes future expansion and jobs.",
+    "publication_date": "2025-01-08",
+    "event_date": "2025-01-08",
+    "baseline_comparison": "The baseline's June 26, 2025 evidence already describes the January groundbreaking and later planned capacity expansion. This older speech corroborates project identity and a historical ceremony, not a new post-baseline milestone, current-state reaffirmation, qualification or production. It does not justify revising the current facility lifecycle.",
+    "date_exclusions": "Retrieval time, the migration notice and the September 2026 site-wide footer do not become source publication, update or manufacturing-event dates. No exact publication time is known.",
+    "scope_exclusions": [
+      "The separate January 2026 NAND-wafer-fab groundbreaking",
+      "Existing Singapore NAND production",
+      "Company-wide investment and employment totals",
+      "Job forecasts as numeric chip capacity",
+      "Singapore-wide semiconductor projections",
+      "Linked resources, images and attachments"
+    ],
+    "unknowns_preserved": [
+      "Current attained HBM project stage beyond the baseline evidence",
+      "Numeric capacity on all five bases",
+      "Production and qualification milestones",
+      "Yield and utilization",
+      "Facility-safe point geometry"
+    ],
+    "disposition_scope": "Closes review of this exact observed text version only. Future whole-page text changes remain eligible for review. No claim acceptance, absence inference, delivery eligibility or issuer-site permission change."
+  },
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "baseline_modified": false
+}

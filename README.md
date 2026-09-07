@@ -546,7 +546,7 @@ byte-replayable. An empty queue is not complete coverage or accepted manufacturi
 
 The [scheduled polling runner](docs/curated_poll.md) now connects those components with a process
 lock, cadence guard, retained invocation receipts, and completed-packet recovery before refetch.
-A daily 08:00 local app task is enabled for the six reviewed URLs. Manual end-to-end
+A daily 08:00 local app task is enabled for the seven reviewed URLs. Manual end-to-end
 capture and not-due repeats passed; scheduler-triggered execution and uninterrupted operation
 are not yet demonstrated. It does not accept claims, publish data, or enable restricted sources.
 
@@ -561,12 +561,19 @@ collectors sequentially. Its manual pilot preserved all 64 URLs and two explicit
 an unchanged repeat. Actual scheduler execution remains unobserved. This is current index coverage,
 not complete publisher history or additional refreshed facilities.
 
-The latest [Intel expansion](docs/intel_chandler_monitoring.md) adds a municipal page explicitly
+The [Intel expansion](docs/intel_chandler_monitoring.md) added a municipal page explicitly
 naming Fab 52, bringing monitoring to six documents across four of seven scopes. Its undated
 opening/production statement was reviewed without changing the manufacturing baseline; no HVM
-attainment or usable capacity is inferred. The daily task uses the versioned v3 catalog/config,
-preserving prior plans and due times. Micron Singapore, SK hynix M15X and ASE Kaohsiung remain
-unmonitored. The 14-event queue and historical v1/v2 reports replay exactly.
+attainment or usable capacity is inferred. Its versioned v3 catalog/config preserved prior plans
+and due times. The 14-event queue and historical v1/v2 reports replay exactly.
+
+The subsequent [Micron MTI expansion](docs/micron_mti_monitoring.md) brings monitoring to seven
+documents across five of seven scopes, using one Singapore government speech about the January 8,
+2025 HBM packaging groundbreaking. This is a recent check of an old document, not a current
+production or capacity observation. Its first text version was reviewed without changing the
+baseline. The daily task now uses v4; prior plans and due times are unchanged. SK hynix M15X and
+ASE Kaohsiung remain unmonitored. The 16-event queue restores at every event cutoff, and historical
+v1/v2/v3 coverage reports remain byte-identical. Two earlier NIST text-review items remain pending.
 
 The [AI-critical alert-review ledger](docs/ai_critical_alert_review.md) now connects retained
 comparisons and both underlying releases to append-only proposal review. Imports require a
@@ -574,7 +581,8 @@ manifest-bound review record; portable exports retain derivative evidence and su
 Acknowledgment, resolution, retraction and reopening preserve admission-time history without
 changing canonical facts or enabling delivery. The Amkor pilot is retrospective, not a measured
 early-detection success. The [Micron acquisition review](review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
-leaves its collector disabled pending rights sufficient for durable retention.
+leaves the selected issuer-site route disabled pending rights sufficient for durable retention;
+the separately reviewed government speech does not change that restriction.
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
