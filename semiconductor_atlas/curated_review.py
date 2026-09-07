@@ -360,13 +360,15 @@ def restore_queue(path: str | Path, events_path: str | Path) -> dict:
     return report
 
 
-def verify_queue(path: str | Path) -> dict:
+def verify_queue(path: str | Path, *, as_of: str | None = None) -> dict:
     """Verify event replay and every imported packet at its retained location."""
     with _connection(path) as connection:
         events = _events(connection)
-        report = _fold(events)
+        report = _fold(events, as_of=as_of)
+        selected_runs = {run["run_id"] for run in report["runs"]}
         for event in events:
             payload = event["payload"]
-            if payload["kind"] == "capture_imported" and _capture_payload(payload["source_path"]) != payload:
+            if (payload["kind"] == "capture_imported" and payload["run_id"] in selected_runs
+                    and _capture_payload(payload["source_path"]) != payload):
                 raise ValueError("retained capture no longer matches the queue event")
     return {**report, "verified_capture_count": report["run_count"]}

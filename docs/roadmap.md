@@ -152,8 +152,11 @@ and failed checks, admits unseen versions despite an unchanged capture label, su
 returns to resolved versions, and preserves reviewer dispositions with knowledge-time replay.
 A live integrated repeat retained three pending items until explicit review; its event export
 restored to an identical queue history. This is source-text triage, not claim acceptance or alert
-delivery. Scheduled execution, new-document discovery, complete coverage accounting, and historical
-detection-performance evaluation remain open.
+delivery. The [coverage catalog and report](curated_coverage.md) now retain all seven cohort
+facilities in the denominator and separate configured document age, failed or blocked checks,
+expired review windows, and queue backlog. The pilot has three recent Amkor checks and six
+unmonitored facilities. Scheduled execution, new-document discovery, complete collection-chain
+accounting, and historical detection-performance evaluation remain open.
 
 Add:
 

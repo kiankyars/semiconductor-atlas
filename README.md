@@ -531,6 +531,12 @@ actions and historical cutoffs replay from an exportable append-only event log. 
 preserved three pending items through a quiet repeat, then resolved them through recorded review
 against the earlier evidence. Queue disposition does not accept claims or grant publishing rights.
 
+The [coverage report](docs/curated_coverage.md) binds the full seven-company denominator to an
+explicit monitoring catalog. It distinguishes recent document checks, stale evidence, blocked or
+failed checks, expired review windows, and unresolved review work. The current pilot has three
+recent Amkor document checks and six unmonitored cohort facilities; an empty queue is not complete
+coverage. This read-only report neither schedules collection nor changes source permissions.
+
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
 ```sh

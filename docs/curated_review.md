@@ -125,6 +125,10 @@ Export and restore reproduced the complete event stream and all tested historica
 before admission, after the first admission, after the live repeat, between dispositions, and after
 all dispositions. The backlog was respectively 0, 2, 3, 2, and 0 at those checkpoints.
 
+The [coverage report](curated_coverage.md) adds the explicitly configured cohort denominator,
+document freshness, acquisition health, and plan expiry to the queue backlog. An empty queue is
+not complete monitoring coverage.
+
 Coverage remains incomplete. The queue can flag an unseen version or a return evidenced by its
 known observations; it cannot reconstruct an entirely omitted intermediate A→B→A episode from
 final A→A alone. Scheduled execution, complete collection-chain accounting, broader approved source
