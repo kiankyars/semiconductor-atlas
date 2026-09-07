@@ -710,6 +710,11 @@ and unknown or censored cases without writing core claims or embedding publisher
 workflow is tested, but no real prediction/outcome study or calibrated forecasting result has been
 produced. See the [implementation review](docs/milestone_benchmark_implementation_review.md).
 
+The separate [realized-event workflow](docs/realized_milestones.md) now retains one
+[reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
+with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a
+canonical core claim, an HVM alias, independent physical corroboration or a scored forecast pair.
+
 Generate the standalone, dependency-free interface from the release GeoJSON:
 
 ```sh

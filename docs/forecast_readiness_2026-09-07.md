@@ -44,6 +44,11 @@ identity/event definition and actual outcome-admission clock are still required.
 pre-outcome forecast vintage or forecast score follows from this lead. No new SEC request or raw
 publisher redistribution was performed.
 
+A later same-day [realized-observation admission](fab21_realized_observation_2026-09-07.md)
+retained this exact source-native facility/event/year in a separately versioned sidecar at its
+actual admission clock. The core inventory above remains unchanged. No canonical identity,
+pre-outcome system forecast or score follows from the new source-reported observation.
+
 ## Existing scenario boundary
 
 `forecast.py` computes twenty-quarter scenarios from fixed realization and ramp assumptions.

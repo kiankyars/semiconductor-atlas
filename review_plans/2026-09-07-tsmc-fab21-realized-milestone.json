@@ -1,0 +1,61 @@
+{
+  "format": "semiconductor-atlas-realized-milestone-review-v1",
+  "validation_rule": "tsmc_operating_fab_commercial_production_year_v1",
+  "subject": {
+    "source_native_id": "tsmc-2025-20f:fab:21",
+    "kind": "facility",
+    "label": "Fab 21",
+    "scope": "issuer_operating_fab_table",
+    "canonical_entity_id": null,
+    "location": null
+  },
+  "event": {
+    "event_type": "commercial_production_commencement",
+    "low": "2024-01-01",
+    "base": null,
+    "high": "2024-12-31",
+    "precision": "year",
+    "literal": "2024"
+  },
+  "source": {
+    "source_id": "tsmc-2025-20f",
+    "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+    "content_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+    "bytes": 10355816,
+    "published_at": "2026-04-16",
+    "published_at_precision": "day",
+    "retrieved_at": "2026-08-20T16:11:52Z"
+  },
+  "provenance": {
+    "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+    "reference": "baselines/ai_critical_manufacturing_v1.json"
+  },
+  "evidence": {
+    "intro": {
+      "start": 1122163,
+      "end": 1124646,
+      "sha256": "03fbf164c1bae1ceab2c25f7d34a43dc802352fb1297cb48277908b2ce25a4f8"
+    },
+    "table": {
+      "start": 1124646,
+      "end": 1163160,
+      "sha256": "a863ce92e4a83a05f08cd1e37359b89b9758e2e775dd0f50992f16b0573ddf62"
+    },
+    "header": {
+      "start": 1125000,
+      "end": 1128438,
+      "sha256": "40d90e3d94ef7acfb43d004abff7e651230c9a020915f3b7861a9412a999115c"
+    },
+    "row": {
+      "start": 1156665,
+      "end": 1158829,
+      "sha256": "367dd24cb4809e48fa227e1bb36ec5d72aa63e9d9cec0925ba900de74d0e89d7"
+    }
+  },
+  "review": {
+    "reviewed_by": "local:codex-fab21-source-table-review",
+    "reviewed_at": "2026-09-07T20:03:04Z",
+    "prior_exposure": "The reviewing agent previously inspected this retained filing and the AI-critical baseline, identified this outcome lead, and discussed its feasibility with the implementation team. This is an exposed collaborative source-evidence review, not a blind review, an independent publisher corroboration, or independent verification of physical operations.",
+    "rationale": "The retained operating-fab table uniquely identifies row 21 and pairs its 2024 value with the commercial-production commencement year header. The header and selected row each contain seven cells, including empty spacer columns at zero-based indices 1, 3 and 5; the subject and year occupy indices 0 and 2 without merged-cell inheritance. The table introduction describes the listed facilities as operating as of February 28, 2026; that later table-state cutoff is not the commencement date. The adjacent wafer-size and technology fields do not establish the technology used at commencement or additional milestone dates. Accept only the publisher-reported retrospective event for the table's source-native facility label, with inclusive year bounds and no midpoint. Do not assign a canonical entity, project phase, first-facility alias, NIST Fab 2 identity, confidence, capacity, HVM event, or earlier forecast. The reviewed location note supports Arizona at source level, but location is deliberately not admitted by this table-only rule. Filing publication and retained retrieval are separate from this review and any later actual admission. No prospective performance result or raw publisher-content redistribution follows."
+  }
+}

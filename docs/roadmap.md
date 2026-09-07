@@ -351,6 +351,13 @@ registered. This is an unfitted-scenario evaluation foundation, not calibrated f
 passed Phase 4 gate. A reviewed multi-project/geography roster, justified predictions, training
 provenance and independently reviewed realization evidence remain necessary.
 
+The [first source-reported realized observation](fab21_realized_observation_2026-09-07.md)
+now records Fab 21 commercial-production commencement at year-2024 precision, with no midpoint
+and an actual September 7 admission clock. A separate evidence-bound sidecar preserves the
+source-native facility and exact event while the frozen core's completed-event precision gap
+remains unresolved. This adds one retrospective source report, zero canonical core claims and
+zero pre-outcome forecast pairs. It is not independent corroboration or a passed forecasting gate.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,
