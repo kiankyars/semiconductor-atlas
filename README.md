@@ -622,6 +622,12 @@ polling intent in its declared inputs remains visible. The actual frozen sample 
 including unchanged and policy-blocked observations; collector classifications are not semantic
 revision labels or proof of complete publisher coverage.
 
+The [prospective source-target workflow](docs/prospective_source_targets.md) adds pre-window
+registration, pure target-literal detection, durable shadow predictions and full-population
+closure. It includes all seven configured documents; four have parser routes and three abstain.
+The fixed September 8–15 UTC study does not yet supply future outcomes, independently reviewed
+labels, measured detector performance or calibrated forecasts.
+
 The separate [source-native statement review](docs/source_statement_review.md) now labels all
 22 frozen checks: eleven target-bearing pairs, five scoped no-target findings and six uncomparable
 checks. Sixteen reviewed target pairs reduce to nine distinct evidence pairs, with no revisions

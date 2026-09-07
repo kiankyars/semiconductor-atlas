@@ -262,6 +262,12 @@ denominator before scoring. Ordinary due collection must retain future unchanged
 failed observations without bypassing policy or cadence. Independent unexposed adjudication,
 meaningful positive coverage, measured detector performance and calibrated forecasts remain open.
 
+The [prospective shadow protocol](prospective_source_targets.md) now implements pre-window
+code/population registration, acceptance receipts, ordinary-poll predictions and a fixed-window
+closing census. All configured documents remain in scope even where parser support is absent.
+The September 8–15 UTC study is an operational prospective step, not proof of future execution,
+unexposed outcome adjudication, positive-event coverage or measured detection performance.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,
