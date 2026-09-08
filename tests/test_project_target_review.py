@@ -81,7 +81,7 @@ class ProjectTargetReviewTests(unittest.TestCase):
             "source_review": self.binding(self.text_review_path), "rationale": "Reviewed revision to source-stated period only", "boundaries": copy.deepcopy(targets.BOUNDARIES)}
         self.review_path = self.root / "claim-review.json"
         self.write_review()
-        self.connection, _ = database.initialize(self.root / "core.sqlite")
+        self.connection, _ = database.initialize(self.root / "core.sqlite", target_version=5)
         self.addCleanup(self.connection.close)
 
     def now(self):

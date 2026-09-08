@@ -118,10 +118,11 @@ modes, Git blob identities and decoded bytes directly against the recorded commi
 realization artifacts, source metadata, working database, legacy checksum ledger and frozen
 detector producer manifests remain unchanged.
 
-The completed/year/null-midpoint schema gap is still open. Keep schema-5 evidence databases,
+The later isolated [schema-6 workflow](completed_milestone_core.md) closes the completed/year/
+null-midpoint storage gap and admits the reviewed cohort as source statements. Keep schema-5 evidence databases,
 migrations 1–5, old artifacts and current scheduled execution unchanged. A code bundle alone
 does not reroute an existing schedule: its original script paths still load the original checkout.
 Evolve schema 6 in a separately isolated working checkout/database until the execution-routing
 transition has been explicitly handled. Do not repin an active study to new code, alter its
 window, or backdate historical observations. This runtime removes a replay obstacle; it does not
-complete core integration, add forecast/outcome pairs or satisfy the north-star.
+establish canonical identity, add forecast/outcome pairs or satisfy the north-star.

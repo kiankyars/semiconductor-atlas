@@ -63,7 +63,7 @@ class SourceClaimPrecisionTests(unittest.TestCase):
 
     def migrate(self) -> None:
         self.connection.commit()
-        self.assertEqual([5], apply_migrations(self.connection))
+        self.assertEqual([5], apply_migrations(self.connection, target_version=5))
 
     @staticmethod
     def period(**changes) -> MilestoneValue:
@@ -141,7 +141,7 @@ class SourceClaimPrecisionTests(unittest.TestCase):
 
     def test_invalid_periods_and_unknown_dates_fail_closed(self) -> None:
         for args in (
-            {"date_base": "2027-10-01"}, {"status": MilestoneStatus.COMPLETED},
+            {"date_base": "2027-10-01"}, {"status": MilestoneStatus.STARTED},
             {"date_low": "2027-07-02"}, {"date_high": "2027-12-30"},
             {"date_low": "2027-04-01", "date_high": "2027-09-30"},
             {"date_low": "2028-01-01"}, {"date_precision": "fiscal_year"},
@@ -227,7 +227,7 @@ class SourceClaimPrecisionTests(unittest.TestCase):
                   "organization_name_claim_metadata", "organization_identifier_claim_metadata")
         before = {table: [tuple(row) for row in connection.execute(f"SELECT * FROM {table}")]
                   for table in tables}
-        self.assertEqual([5], apply_migrations(connection))
+        self.assertEqual([5], apply_migrations(connection, target_version=5))
         for table in tables:
             self.assertEqual(before[table], [tuple(row) for row in connection.execute(f"SELECT * FROM {table}")])
         self.assertEqual([], validate_database(connection))

@@ -332,6 +332,13 @@ Separate retained document versions MAY have distinct source-statement series on
 source-native project. Their simultaneous later review MUST preserve one actual admission clock,
 not fabricate a historical acceptance interval between old and new document observations.
 
+From schema 6, completed source-reported milestones MAY also preserve literal calendar precision
+with a null midpoint. Completion applies to the exact named event, not a different milestone or
+the facility's entire lifecycle. Retrospective sidecar admission and new core admission MUST remain
+separate clocks; importing an older report cannot create earlier core knowledge. The bounded
+[completed-cohort importer](completed_milestone_core.md) leaves effective dates, confidence and
+canonical identity unknown and retains complete operating-table selection disclosures.
+
 EPA FRS imports use `source_documents.retrieved_at` for archive acquisition and
 `ingestion_runs.started_at` for database acceptance. New claim `recorded_at` values and prior claim
 `superseded_at` values MUST use the acceptance timestamp. Deterministic builds require an explicit

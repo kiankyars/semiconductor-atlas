@@ -727,6 +727,14 @@ migrations, scripts and required web assets for isolated historical verification
 existing realization/registration/policy/population replay operations pass with their project
 imports bound to that runtime. It does not migrate the core or reroute scheduled execution.
 
+The isolated [schema-6 completed-cohort workflow](docs/completed_milestone_core.md) now supports
+source-native completed milestones with literal year precision and no invented midpoint. Its
+atomic importer verifies the old cohort in the frozen runtime, preserves both sidecar and new
+core-admission clocks, retains deferred rows, and offers write-free exact replay. It adds no
+canonical identity, physical-current claim, capacity or forecast result. The original scheduled
+checkout and schema-5 evidence remain unchanged; this branch must stay isolated until execution
+routing is deliberately transitioned.
+
 Generate the standalone, dependency-free interface from the release GeoJSON:
 
 ```sh

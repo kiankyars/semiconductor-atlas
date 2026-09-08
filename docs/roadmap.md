@@ -336,7 +336,7 @@ and retraction behavior.
 
 The [September 7 readiness audit](forecast_readiness_2026-09-07.md) identifies the next evidence
 gate: independently reviewed realization records paired to cutoff-safe forecast vintages. The
-current working database has expected targets and announced capacity, but no completed production
+schema-5 parent database has expected targets and announced capacity, but no completed production
 milestones or non-announced numeric capacity. Existing ramp outputs remain unfitted assumption
 scenarios; their deterministic tests are not calibration evidence. Retrospectively collected
 guidance must not be backdated into an earlier system prediction.
@@ -370,8 +370,16 @@ The [frozen source runtime](frozen_runtime.md) now preserves a complete committe
 and verifies five existing historical artifacts in fresh isolated processes. It proves a bounded
 replay path with audited project-module origins, not a hermetic OS or a schedule transition.
 Schema-6 evolution must use a separate working checkout/database while existing scheduled
-execution and schema-5 evidence remain unchanged. Completed milestone core integration and
-pre-outcome forecast/outcome pairing are still open.
+execution and schema-5 evidence remain unchanged.
+
+The isolated [September 8 schema-6 admission](completed_milestone_core_2026-09-08.md) now integrates
+all 16 source-reported commencement years as source-native completed milestones. It preserves
+all 104,420 parent claims and adds 16, with null midpoints, confidence and effective dates and an
+actual current core-admission clock. Frozen source verification and write-denied exact core replay
+pass; the original parent and scheduled runtime are unchanged. This closes the bounded precision
+and source-native storage gap, not canonical project/event correspondence, independent realization
+evidence, non-survivor coverage, pre-outcome forecast/outcome pairing or calibration. This branch
+must remain isolated until scheduled execution routing is explicitly transitioned.
 
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter

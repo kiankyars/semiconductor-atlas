@@ -188,8 +188,8 @@ class DatabaseTests(unittest.TestCase):
         ]
 
     def test_migration_is_versioned_checksummed_and_idempotent(self) -> None:
-        self.assertEqual(self.installed, [1, 2, 3, 4, 5])
-        self.assertEqual(schema_version(self.connection), 5)
+        self.assertEqual(self.installed, [1, 2, 3, 4, 5, 6])
+        self.assertEqual(schema_version(self.connection), 6)
         self.assertEqual(apply_migrations(self.connection), [])
         rows = self.connection.execute(
             "SELECT version, name, length(sha256) FROM schema_migrations ORDER BY version"
@@ -202,6 +202,7 @@ class DatabaseTests(unittest.TestCase):
                 (3, "organization_identity", 64),
                 (4, "same_kind_entity_identity", 64),
                 (5, "source_claim_precision", 64),
+                (6, "completed_milestone_precision", 64),
             ],
         )
         indexes = {
