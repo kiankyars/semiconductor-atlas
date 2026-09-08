@@ -381,6 +381,12 @@ and source-native storage gap, not canonical project/event correspondence, indep
 evidence, non-survivor coverage, pre-outcome forecast/outcome pairing or calibration. This branch
 must remain isolated until scheduled execution routing is explicitly transitioned.
 
+The [source-correspondence successor](tsmc_fab_correspondence_2026-09-08.md) adds geographic text
+for all sixteen source-native fabs and two exact commercial-commencement month assertions while
+preserving original years and clocks. It explicitly rejects the Hsinchu Fab 2 / Arizona second-fab
+name collision and keeps all canonical project phases unresolved. These are same-document
+retrospective source assertions, not additional independent outcomes or forecast pairs.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,

@@ -735,6 +735,13 @@ canonical identity, physical-current claim, capacity or forecast result. The ori
 checkout and schema-5 evidence remain unchanged; this branch must stay isolated until execution
 routing is deliberately transitioned.
 
+The [TSMC source-correspondence successor](docs/tsmc_fab_correspondence_2026-09-08.md) adds
+sixteen source-reported location labels and two explicit commercial-commencement months to those
+same source-native fab subjects, preserving the original year assertions and immutable parent.
+Project-phase identities remain unresolved; one issuer document is not independent corroboration.
+Its source-specific workflow reconstructs the exact successor from trusted parent/review/source
+bytes without changing the frozen importer or scheduled execution.
+
 Generate the standalone, dependency-free interface from the release GeoJSON:
 
 ```sh
