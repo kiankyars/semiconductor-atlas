@@ -247,3 +247,38 @@ All 23 imported project modules resolved inside the retained runtime. Receipt
 `64a1d23d24b7e92bf8b00845d9a08b42ac4fe3fd03cde8ed91ad5701288fd891`.
 The earlier K18B and guidance producers also replayed their original outputs after schema-8
 evolution. Those older artifacts remain unchanged and are not repinned to this producer.
+
+## September 8 Tower historical-event producer retention
+
+Committed producer `16dc0f66c84d93d9d3042adc6ca6fbb967d3ee3e` is retained at
+`artifacts/2026-09-08-16dc0f6-frozen-runtime-v1.json`: 4,132,116 bytes, 134 files and
+3,069,571 source bytes. Its exact file SHA-256 is
+`8f24010fa92f61a123c8d7a5891088eb40b5d218bbb6bafc9ceba704781c9dc4`.
+All decoded member bytes, modes and Git blob identities were separately compared with that
+commit. All 93 fingerprints recorded by the admission matched the committed producing checkout.
+
+The `tower-closure-milestones` operation accepts the same literal-digest and absolute-path
+contract as the Villach verifier. It reconstructs the [three-event successor](tower_closure_source_review.md)
+from the original schema-8 parent, separate admission review and complete twenty-file retained
+HTML/policy graph. It performs no migration, acquisition, new admission or forecast operation.
+
+Isolated replay matched all 242,585,600 database bytes. All 23 imported project modules resolved
+inside the retained runtime. Receipt `artifacts/2026-09-08-frozen-tower-closure-replay-v1.json`
+is 5,860 bytes, SHA-256 `768a9c614b72751814b5dcb9a820728f2ebba94c4e8afc32a5b3a9c55487dace`.
+The old Villach and guidance outputs also replayed under their unchanged original producers;
+no historical artifact or scheduled execution was repinned.
+
+```sh
+python3 scripts/replay_frozen_runtime.py \
+  --bundle /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-16dc0f6-frozen-runtime-v1.json \
+  --sha256 8f24010fa92f61a123c8d7a5891088eb40b5d218bbb6bafc9ceba704781c9dc4 \
+  --commit 16dc0f66c84d93d9d3042adc6ca6fbb967d3ee3e \
+  --working-directory /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  tower-closure-milestones \
+  --parent /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-infineon-villach-output-schema8.sqlite \
+  --review /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/review_plans/2026-09-08-tower-closure-admission-v1.json \
+  --reference-root /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  --output /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-tower-closure-milestones-schema8.sqlite \
+  --expected-review-sha256 d4355211ab593216b6fb4012ee83ff28454909c7da5329f2c5047afc6f5db96b \
+  --expected-output-sha256 b2445daa4cc4dfb4ff56617ad2199ed9a7993f950794f5bf45a184b1d0974bea
+```
