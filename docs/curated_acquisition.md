@@ -59,6 +59,11 @@ Raw HTTP bodies stay local. Neither a plan nor a successful run grants redistrib
 unrestricted crawling, or access to subscriber/restricted material. Review metadata and derivative
 facts may be published only within the owning source's documented rights boundary.
 
+The separately versioned [ASE K18B workflow](ase_k18b_acquisition.md) adds plan-v2 support for
+exact identifier query URLs and a hash-bound, TLS-verified direct robots 404. Its HTTP ledger
+still records failure; a separate policy state records reviewed absence. This is not automatic
+error acceptance or a content licence. V1 plans and scheduled producers retain their original rules.
+
 ## Results and limitations
 
 Transport success, content eligibility, and review acceptance are separate. Empty, wrong-media,

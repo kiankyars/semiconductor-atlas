@@ -555,6 +555,10 @@ Last-eligible observations survive failed later checks. The first successful rep
 byte-identical Amkor pages and a NIST page with unchanged visible text; it accepted no new claims.
 This is a batch acquisition tool, not a scheduled service or complete publisher search.
 
+The isolated [ASE K18B municipal acquisition](docs/ase_k18b_acquisition.md) adds two verified
+observations and a source-text handoff using explicit reviewed-missing-robots semantics. It does
+not change the campus baseline, admit production claims or reroute scheduled execution.
+
 The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
 across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
 actions and historical cutoffs replay from an exportable append-only event log. The live pilot

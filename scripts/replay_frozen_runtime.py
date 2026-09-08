@@ -30,8 +30,13 @@ OPERATIONS = {
     "target-population": ("scripts/evaluate_project_targets.py", "verify", ("frozen",)),
     "guidance-interval": ("scripts/guidance_interval_baseline.py", "verify",
                           ("database", "vintage", "trusted-vintage-sha256")),
+    "tsmc-source-quantities": ("scripts/admit_tsmc_source_quantities.py", "verify",
+                              ("parent", "review", "source-body", "output",
+                               "expected-review-sha256", "expected-output-sha256")),
 }
-DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256")}
+DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
+                 ("tsmc-source-quantities", "expected-review-sha256"),
+                 ("tsmc-source-quantities", "expected-output-sha256")}
 MAX_OUTPUT = 1_000_000
 _LOADED_PRODUCER = runtime.digest(Path(__file__).read_bytes())
 

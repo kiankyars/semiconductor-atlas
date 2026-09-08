@@ -1,0 +1,62 @@
+{
+  "format": "semiconductor-atlas-ase-k18b-source-text-adjudication-v1",
+  "reviewed_at": "2026-09-08T21:00:27Z",
+  "reviewer": "Codex primary reviewer; exposed to this article before exact capture, not blind or independent adjudication",
+  "decision": "handoff_reviewed_text_for_separate_core_claim_admission",
+  "candidate_id": "d475a8b0af9765f6811776fc60d1e3b0b04ed9ab7907ac99e1b4576ff77400ef",
+  "expected_event_id": "ad2c656d6f850c8ccaa98b149efeb64b36cd6fb6412eedd1326d30c2773746ec",
+  "source_url": "https://invest.kcg.gov.tw/News_Content.aspx?n=8CE973AC5F6EE514&s=BA84DF962F234D8E&sms=D7173346CB507235",
+  "access_review": {
+    "path": "review_plans/2026-09-08-ase-k18b-kcg-source-review.json",
+    "sha256": "7e1a8a71e9a863b0249b832ffba2cece482a1e032f7605400a4ab0e782c7067c"
+  },
+  "source_capture": {
+    "path": "artifacts/2026-09-08-ase-k18b-kcg-capture-v1",
+    "manifest_sha256": "5f1ffe2c3a6c7b4364f51f996cb17cf2ccfd3403166d7ddf5a3eed5a290e61b4",
+    "body_path": "responses/kcg-ase-k18b-groundbreaking.body",
+    "body_sha256": "34c23c7e387e8f7e3b25b99939839b84cb68bbf52399f7763a003202a0234380",
+    "body_bytes": 106582,
+    "normalized_sha256": "1a55dd9b6693efa98b7702232206392e3c1222a4d87470a20e43a8d2dfa744e9",
+    "retrieved_at": "2026-09-08T20:58:37.042730Z",
+    "queue_admitted_at": "2026-09-08T20:58:37.103830Z"
+  },
+  "evidence_spans": {
+    "complete_opening_paragraph": {
+      "start": 80706,
+      "end": 81290,
+      "sha256": "9e6e9a07473c5ebdf2447192267f44bb4e3b0a29647db207e09f9f50a90fc571"
+    },
+    "publication_date": {
+      "start": 83405,
+      "end": 83449,
+      "sha256": "59b4ec720e56d77cb2848f211b764d26bff91c87c4a6964b5de30a07af0dfcd9"
+    },
+    "cms_update_and_publisher": {
+      "start": 80548,
+      "end": 80651,
+      "sha256": "5322af8770c5072b62626c147fd9724a63cd8733876c3b9340f43467c3a4c227"
+    }
+  },
+  "review_method": "Complete retained visible article, navigation and footer reviewed; first paragraph verified as a complete visible HTML block. All locators are end-exclusive zero-based UTF-8 byte spans. No linked images, attachments or third-party resources were fetched.",
+  "assessment": {
+    "identity": "K18B is one source-native building project; canonical facility assignment is unresolved. Do not attach these events to the full Kaohsiung campus, Dashe K28 or Nanzih Third Park.",
+    "historical_event": "Groundbreaking ceremony reported for the third day of the article's publication month. ROC 114-10-03 converts to 2025-10-03; this date binding is explicit reviewer derivation, not an independently dated observation.",
+    "future_event": "Building completion targeted for Q1 2028: 2028-01-01 through 2028-03-31, inclusive, with no midpoint. It is not a production, HVM, qualification or usable-capacity target.",
+    "other_dates": "The ROC 115-08-14 14:25 CMS update and September site footer are not event dates; the CMS timezone and first publication of this target remain unknown.",
+    "revision": "First exact retained observation, not a demonstrated target revision, new physical event or early-detection result.",
+    "next_gate": "Separately admit narrowly typed source-native historical groundbreaking and expected building-completion claims at the actual future admission clock, with null confidence and physical effective dates. Do not weaken the existing NIST production-target importer to accept this distinct event contract."
+  },
+  "boundaries": {
+    "core_claim_acceptance": false,
+    "baseline_modified": false,
+    "current_stage_reaffirmed": false,
+    "canonical_assignment": false,
+    "capacity_or_utilization_inferred": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "delivery_eligible": false,
+    "raw_redistribution": false,
+    "model_training": false,
+    "scheduled_study_modified": false
+  }
+}

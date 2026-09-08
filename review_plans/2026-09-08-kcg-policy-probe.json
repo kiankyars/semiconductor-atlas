@@ -1,0 +1,44 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Review the exact municipal K18B route's access, security and privacy responses. No article, attachment, image, linked resource or search endpoint is requested. Stop after robots unless it is the previously reviewed, TLS-verified direct 404 body.",
+  "user_agent": "SemiconductorAtlas/0.1 (+https://github.com/kiankyars/semiconductor-atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 2000000,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "expected_robots_body_sha256": "eab09f82e87641fb3e8c72b6c9e061f11684c7d8345925aad1fd7de4c05f87ab",
+  "entries": [
+    {
+      "id": "kcg-invest-robots",
+      "url": "https://invest.kcg.gov.tw/robots.txt",
+      "purpose": "access_policy",
+      "company": "ASE",
+      "country_code": "TW",
+      "source_family": "municipal-government-news",
+      "scope": "Exact same-origin robots probe; only the reviewed direct 404 is an absent policy, never a licence or a fabricated Allow rule.",
+      "media_types": ["text/html", "text/plain"]
+    },
+    {
+      "id": "kcg-invest-security",
+      "url": "https://invest.kcg.gov.tw/cp.aspx?n=1C95EBE0D0D6C22C",
+      "purpose": "rights_policy",
+      "company": "ASE",
+      "country_code": "TW",
+      "source_family": "municipal-government-news",
+      "scope": "Read the site's linked security policy for an exact-page local research review, not an assumed content licence.",
+      "media_types": ["text/html"]
+    },
+    {
+      "id": "kcg-invest-privacy",
+      "url": "https://invest.kcg.gov.tw/cp.aspx?n=F415DE5DE54E5358",
+      "purpose": "rights_policy",
+      "company": "ASE",
+      "country_code": "TW",
+      "source_family": "municipal-government-news",
+      "scope": "Read the linked privacy policy; no user information is submitted, cookies retained or scripts executed.",
+      "media_types": ["text/html"]
+    }
+  ]
+}

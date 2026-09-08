@@ -140,6 +140,12 @@ are visible by geography and source family.
 
 ## Phase 3: change detection and alerts
 
+The isolated [September 8 ASE K18B acquisition](ase_k18b_acquisition.md) removes one source-access
+representation gap using separately versioned reviewed-404 and exact-query rules. Two real captures
+and a durable text-review handoff are verified. Core admission of the historical groundbreaking
+and expected building-completion period is next; canonical identity, production readiness,
+scheduled coverage and calibrated forecasts do not follow from a successful capture.
+
 The AI-critical cross-vintage comparison now provides a bounded foundation for this phase. It pins
 both release manifests, derives stable semantic series, records `reaffirmed`, `revised`, `added`,
 and `not_carried_forward` outcomes, and emits deterministic alert proposals. These proposals have

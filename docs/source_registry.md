@@ -91,6 +91,12 @@ missing-robots representation, and source-specific rights remain unresolved. No
 article was captured or collector enabled. K18B, Dashe K28 and Nanzih Third Park
 remain distinct source-native projects, not replacements for the campus aggregate.
 
+The isolated [September 8 K18B follow-up](ase_k18b_acquisition.md) subsequently completes a narrow
+internal local-research review and introduces explicit plan-v2 missing-robots semantics. Two exact
+article captures and a source-text handoff now replay; source-specific copyright and non-publication
+boundaries remain. This does not amend the older denial/defer records, enable the registered
+scheduled collector, accept core claims or add the municipal project to the campus baseline.
+
 The [September 7 Micron review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
 does not approve durable acquisition from Micron's investor-relations site. Its linked
 [terms](https://www.micron.com/legal/terms-of-use) establish a temporary personal-viewing license,

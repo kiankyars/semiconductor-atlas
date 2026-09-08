@@ -38,6 +38,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "semiconductor_atlas/adapters/__init__.py": "",
                       "scripts/record_realized_fab_cohort.py": PROBE,
                       "scripts/guidance_interval_baseline.py": PROBE,
+                      "scripts/admit_tsmc_source_quantities.py": PROBE,
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -125,6 +126,20 @@ class FrozenRuntimeTests(unittest.TestCase):
             "--trusted-vintage-sha256", "a" * 64])
         self.assertFalse(result["network_acquisition_requested"])
         self.assertFalse(result["core_migration_requested"])
+
+    def test_quantity_replay_is_verify_only_and_keeps_both_hashes_literal(self):
+        inputs = {key: self.root / key for key in ("parent", "review", "source-body", "output")}
+        inputs.update({"expected-review-sha256": "a" * 64, "expected-output-sha256": "b" * 64})
+        result = self.replay(operation="tsmc-source-quantities", inputs=inputs)
+        expected = ["verify"]
+        for key, value in inputs.items(): expected += ["--" + key, str(value)]
+        self.assertEqual(result["operation_receipt"]["arguments"], expected)
+        for key in ("expected-review-sha256", "expected-output-sha256"):
+            for invalid in (None, "A" * 64, Path("a" * 64), "--admit"):
+                with self.subTest(key=key, invalid=invalid), self.assertRaises(ValueError):
+                    self.replay(operation="tsmc-source-quantities", inputs={**inputs, key: invalid})
+        with self.assertRaises(ValueError):
+            self.replay(operation="tsmc-source-quantities admit", inputs=inputs)
 
     def test_guidance_replay_rejects_missing_malformed_or_option_like_digest_before_execution(self):
         inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",

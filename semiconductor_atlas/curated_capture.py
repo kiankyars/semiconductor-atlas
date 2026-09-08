@@ -20,8 +20,11 @@ from .source_checks import FORMAT as CHECK_FORMAT, _https, _read, validate_sourc
 
 
 PLAN_FORMAT = "semiconductor-atlas-curated-acquisition-plan-v1"
+PLAN_FORMAT_V2 = "semiconductor-atlas-curated-acquisition-plan-v2"
 RUN_FORMAT = "semiconductor-atlas-curated-acquisition-run-v2"
+RUN_FORMAT_V3 = "semiconductor-atlas-curated-acquisition-run-v3"
 RULE_VERSION = "fixed-url-review-candidates-v1"
+RULE_VERSION_V2 = "fixed-url-reviewed-policy-response-v2"
 
 
 def _now() -> str:
@@ -59,6 +62,8 @@ class _Links(HTMLParser):
 
 
 def normalized_bytes(raw: bytes, normalization: str) -> bytes:
+    if normalization == "reviewed_robots_404_body_v1":
+        return raw
     text = raw.decode("utf-8", errors="strict")
     if normalization == "robots_text_v1":
         return (text.replace("\r\n", "\n").replace("\r", "\n").rstrip("\n") + "\n").encode("utf-8")
@@ -94,7 +99,7 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
         "expires_at", "decision", "user_agent", "minimum_interval_seconds", "timeout_seconds",
         "max_response_bytes", "policies", "documents", "notes", "review_record",
     })
-    if plan["format"] != PLAN_FORMAT or plan["decision"] != "approved_exact_urls":
+    if plan["format"] not in {PLAN_FORMAT, PLAN_FORMAT_V2} or plan["decision"] != "approved_exact_urls":
         raise ValueError("plan must approve only exact reviewed URLs")
     for key in ("plan_id", "review_scope_id", "checked_facility_key", "notes", "user_agent"):
         _text(plan[key])
@@ -123,8 +128,16 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
                 raise ValueError("invalid entry id")
             url = _https(entry["url"], "plan URL")
             parsed = urlsplit(url)
-            if parsed.query or parsed.fragment or parsed.port not in {None, 443} or parsed.hostname in {"localhost", "localhost.localdomain"}:
+            if parsed.fragment or parsed.port not in {None, 443} or parsed.hostname in {"localhost", "localhost.localdomain"}:
                 raise ValueError("plan URL must be a canonical public document URL")
+            if parsed.query:
+                pairs = parsed.query.split("&")
+                if (plan["format"] != PLAN_FORMAT_V2
+                        or any(not re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]*=[A-Za-z0-9_-]+", pair) for pair in pairs)
+                        or len({pair.split("=", 1)[0] for pair in pairs}) != len(pairs)):
+                    raise ValueError("query URLs require v2 exact, unique identifier parameters")
+            if any(character.isspace() or ord(character) < 32 for character in url):
+                raise ValueError("plan URL cannot contain whitespace or controls")
             if entry["id"] in ids or url in urls:
                 raise ValueError("duplicate plan entry id or URL")
             ids.add(entry["id"]); urls.add(url)
@@ -138,11 +151,13 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
                 if entry["purpose"] not in {"access_policy", "rights_policy"}:
                     raise ValueError("invalid policy purpose")
                 expected_normalizations = {"robots_text_v1"} if entry["purpose"] == "access_policy" else {"html_policy_v1", "html_policy_v2"}
+                if plan["format"] == PLAN_FORMAT_V2 and entry["purpose"] == "access_policy":
+                    expected_normalizations.add("reviewed_robots_404_body_v1")
                 if entry["normalization"] not in expected_normalizations:
                     raise ValueError("policy normalization does not match purpose")
                 if not isinstance(entry["normalized_sha256"], str) or not re.fullmatch(r"[0-9a-f]{64}", entry["normalized_sha256"]):
                     raise ValueError("invalid policy hash")
-                if entry["purpose"] == "access_policy" and parsed.path != "/robots.txt":
+                if entry["purpose"] == "access_policy" and (parsed.path != "/robots.txt" or parsed.query):
                     raise ValueError("access policy must be origin robots.txt")
             else:
                 if entry["purpose"] != "source_document":
@@ -230,7 +245,17 @@ def _attempt(entry: dict, root: Path, plan: dict, transport: Callable) -> dict:
 
 
 def _content_error(entry: dict, attempt: dict, root: Path, plan: dict) -> str | None:
-    if attempt["outcome"] != "succeeded":
+    reviewed_missing = (plan["format"] == PLAN_FORMAT_V2
+                        and entry["purpose"] == "access_policy"
+                        and entry.get("normalization") == "reviewed_robots_404_body_v1")
+    if reviewed_missing:
+        if (type(attempt["http_status"]) is not int or attempt["http_status"] != 404
+                or type(attempt["curl_exit_code"]) is not int or attempt["curl_exit_code"] != 0
+                or attempt["outcome"] != "failed"
+                or type(attempt.get("tls_verification_result")) is not int
+                or attempt["tls_verification_result"] != 0):
+            return "reviewed_robots_404_response_mismatch"
+    elif attempt["outcome"] != "succeeded":
         return "failed_check"
     if attempt["final_url"] != entry["url"] or attempt["redirect_count"] != 0:
         return "unapproved_redirect"
@@ -308,7 +333,14 @@ def derive_results(plan: dict, ledger: dict, root: Path, prior_ledger: dict | No
                     reason = "policy_changed_requires_review"
             except UnicodeError:
                 reason = "unsupported_encoding"
-        policy_results.append({"id": policy["id"], "accepted": reason is None, "reason": reason, "normalized_sha256": digest})
+        result = {"id": policy["id"], "accepted": reason is None, "reason": reason, "normalized_sha256": digest}
+        if plan["format"] == PLAN_FORMAT_V2:
+            result["http_status"] = attempt["http_status"]
+            result["policy_state"] = (
+                "requires_review" if reason else
+                "reviewed_missing_robots_404" if policy["normalization"] == "reviewed_robots_404_body_v1"
+                else "reviewed_policy_body_matched")
+        policy_results.append(result)
     accepted = {row["id"] for row in policy_results if row["accepted"]}
     previous = _previous_documents(plan, prior_ledger, root)
     documents = []
@@ -361,7 +393,8 @@ def derive_results(plan: dict, ledger: dict, root: Path, prior_ledger: dict | No
                     result["status"] = "unsupported_encoding"
         documents.append(result)
     return {
-        "format": "semiconductor-atlas-curated-acquisition-results-v1", "rule_version": RULE_VERSION,
+        "format": "semiconductor-atlas-curated-acquisition-results-v1",
+        "rule_version": RULE_VERSION_V2 if plan["format"] == PLAN_FORMAT_V2 else RULE_VERSION,
         "policies": policy_results, "documents": documents,
         "review_required_count": sum(row["review_required"] for row in documents),
         "attention_required": any(not row["accepted"] for row in policy_results) or any(row["status"] not in {"unchanged", "raw_bytes_only"} for row in documents),
@@ -391,7 +424,9 @@ def validate_capture(root_value: str | Path) -> dict:
         "format", "plan_sha256", "started_at", "finished_at", "prior_ledger_sha256",
         "capture_code_sha256", "source_checks_code_sha256", "raw_redistribution", "claim_acceptance",
     })
-    if run.get("format") not in {RUN_FORMAT, "semiconductor-atlas-curated-acquisition-run-v1"} or run.get("plan_sha256") != _sha(plan_raw):
+    allowed_runs = ({RUN_FORMAT_V3} if plan["format"] == PLAN_FORMAT_V2
+                    else {RUN_FORMAT, "semiconductor-atlas-curated-acquisition-run-v1"})
+    if run.get("format") not in allowed_runs or run.get("plan_sha256") != _sha(plan_raw):
         raise ValueError("invalid acquisition run or plan binding")
     if run["raw_redistribution"] is not False or run["claim_acceptance"] is not False:
         raise ValueError("capture cannot grant redistribution or accept claims")
@@ -427,7 +462,7 @@ def validate_capture(root_value: str | Path) -> dict:
         raise ValueError("acquisition results do not replay exactly")
     expected_paths = {"plan.json", "review.json", "run.json", "source_checks.json", "results.json"}
     history = _last_successful_checks(plan, ledger, root, prior)
-    if history and run["format"] == RUN_FORMAT:
+    if history and run["format"] in {RUN_FORMAT, RUN_FORMAT_V3}:
         expected_paths.add("last_successful_checks.json")
         if _read(root / "last_successful_checks.json") != _pretty_bytes(history):
             raise ValueError("last successful checks do not replay exactly")
@@ -523,7 +558,8 @@ def capture_sources(
     if history:
         _write(root / "last_successful_checks.json", _pretty_bytes(history))
     _write(root / "run.json", _pretty_bytes({
-        "format": RUN_FORMAT, "plan_sha256": _sha(raw), "started_at": started, "finished_at": _now(),
+        "format": RUN_FORMAT_V3 if plan["format"] == PLAN_FORMAT_V2 else RUN_FORMAT,
+        "plan_sha256": _sha(raw), "started_at": started, "finished_at": _now(),
         "prior_ledger_sha256": _sha(prior_raw) if prior_raw is not None else None,
         "capture_code_sha256": _sha(Path(__file__).read_bytes()),
         "source_checks_code_sha256": _sha(Path(__file__).with_name("source_checks.py").read_bytes()),

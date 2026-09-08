@@ -47,6 +47,7 @@ future interpreter upgrade needs an explicit compatibility review, not an ignore
 | `target-policy` | `evaluate_prospective_source_targets.py verify-policy` | Registered policy, code and inputs |
 | `target-population` | `evaluate_project_targets.py verify` | Retained census consistency; not independent live-core/source authentication |
 | `guidance-interval` | `guidance_interval_baseline.py verify` | Re-execute the frozen comparator using its original database, evidence and trusted vintage hash |
+| `tsmc-source-quantities` | `admit_tsmc_source_quantities.py verify` | Reconstruct the entire existing quantity successor from its original parent, review and source bytes |
 
 There is no arbitrary script/command route, acquisition, admission, study advancement, scoring or
 migration operation. Optional `--receipt` saves only a new local verification receipt. Each
@@ -172,7 +173,30 @@ commit and matched. Twenty runtime tests pass, including four new tests for lite
 handling, malformed/missing inputs, the verify-only CLI and replay after current-code changes.
 These tests and the real replay establish producer isolation, not forecasting performance.
 
-The September 8 full regression run completed 1,523 core tests in 241.024 seconds: 1,522 passed
+That September 8 regression run completed 1,523 core tests in 241.024 seconds: 1,522 passed
 and one expected optional-payload test skipped. All 12 web tests and Python syntax checks passed.
 The parent checksum ledger, baseline, analytics producer and schema-5 database hashes, plus the
 child schema-6 database and frozen forecast hashes, remained unchanged.
+
+## September 8 source-quantity producer retention
+
+The committed schema-7 producer `1944fcc73ff882d20cdee9d340cf1a598bef76e8` was retained before
+evolving acquisition code. Its runtime is `artifacts/2026-09-08-1944fcc-frozen-runtime-v1.json`,
+4,012,151 bytes, SHA-256 `71a8fbf7f773274d2818ea5cb59ceab525dc6a4e4013a19994312e51a3f86b14`.
+All 127 members (2,981,143 source bytes) were separately compared with their committed Git blobs.
+
+The added `tsmc-source-quantities` operation permits only `verify`. It requires absolute `parent`,
+`review`, `source-body` and `output` paths; **output is an existing trusted successor to read, not
+a new write destination**. Both `expected-review-sha256` and `expected-output-sha256` are mandatory
+literal lowercase digests. No admission or migration command is exposed. Reconstruction applies
+the historical migration in private memory, never to the input database.
+
+Real isolated replay reproduced all 241,917,952 schema-7 database bytes and the four source quantities
+after current acquisition code changed. All 19 loaded project modules resolved inside retained
+code. Receipt `artifacts/2026-09-08-frozen-source-quantity-replay-v1.json` is 7,463 bytes, SHA-256
+`68b72ebbbb30f7dd281d5c8a8fa1e5787376218d3fa1d4cef1ddfc90058d0147`.
+The current evolved package is not substituted for that historical producer.
+
+The subsequent full regression run completed 1,550 core tests in 241.484 seconds: 1,549 passed
+and one expected optional-payload test skipped. All 12 web tests, Python syntax checks and both
+package builds passed. Twenty-one runtime tests include the new verify-only quantity operation.
