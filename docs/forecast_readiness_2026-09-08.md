@@ -22,8 +22,8 @@ retained-source screen, not a fresh exhaustive publisher search or independent b
 | Candidate | Exact event and retained source wording | Prospective treatment |
 | --- | --- | --- |
 | TSMC Arizona Fab 2 | Production start; second half of 2027 | Future source interval, with null midpoint; earlier 2028 statement stays historical context |
-| Hemlock new facility | Production start; 2028 | Future source year; new literal-source admission needed instead of the legacy midpoint |
-| SK hynix Indiana | Mass production; second half of 2028 | Future source interval; needs its distinct event contract and literal-source admission |
+| Hemlock new facility | Production start; 2028 | Future source year; follow-up found an accepted literal scalar, so no new admission is needed for the comparator |
+| SK hynix Indiana | Mass production; second half of 2028 | Future source interval; follow-up uses an accepted scalar under the comparator's distinct event contract |
 | Amkor Peoria | Mass production; end of 2027 | Abstain on vague bounds and unresolved correspondence to the newer Phase One opening scope |
 | Infinera San Jose | Production; summer 2026 | Abstain: no defensible wholly future literal interval; no attainment/nonoccurrence inference |
 | Infinera Bethlehem | Production; summer 2026 | Same abstention; related to San Jose under the shared award |
@@ -111,12 +111,16 @@ schema-5 database, baseline input and checksum ledger remain unchanged. New anal
 
 ## Next forecasting gate
 
-The next substantive product is an executed, replayable, **unfitted source-guidance interval
-baseline**, followed by separately reviewed later outcomes. It must preserve three supported
-future intervals, three explicit abstentions and the screened-out aggregate's record; accept
-`mass_production` distinctly; keep null midpoints; and prespecify grouped evaluation and missing
-outcome handling. Existing v1 point predictions and opaque unexecuted model bytes do not meet
-that contract without an explicit new version.
+The subsequent [executed source-guidance interval comparator](guidance_interval_baseline.md)
+now preserves three supported future intervals, three explicit abstentions and the screened-out
+aggregate, with exact replay, distinct `mass_production`, null midpoints and prespecified complete
+outcome review. Its separate input map corrects the original screen's scalar-admission assumption
+and old/new TSMC source binding without rewriting the screen bytes. This is a new interval-only
+contract, not a changed v1 point-prediction study or an opaque unexecuted model artifact.
+
+The next evidence gates are broader prospective project coverage and separately reviewed later
+realizations. The current comparator has no real outcomes or measured predictive performance;
+retained guidance must not be treated as a fresh publisher check or the evaluation target.
 
 This comparator is necessary for evaluating a later predictive model, not a substitute for one.
 A complete north-star still requires broader non-survivor/project/geography coverage, measured

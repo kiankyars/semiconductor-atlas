@@ -1,0 +1,221 @@
+{
+  "format": "semiconductor-atlas-guidance-interval-inputs-v1",
+  "screen_sha256": "9027e8fca50996d156c8f93c9055e15c5b8d03f0fc0c21dd4928399cfbd7e339",
+  "database_sha256": "d31fd0597ddf188f76c44d2758f46f95d00f0a22169c1360b34b7c390aaeaeeb",
+  "reviewer": "local:codex-guidance-interval-input-review",
+  "reviewed_at": "2026-09-08T19:27:51.870731Z",
+  "prior_exposure": "The reviewer previously inspected these retained source pages, accepted core claims and roster screen, and discussed them with the root agent. This is an exposed collaborative source-input review, not blind adjudication, independent publisher corroboration or independently attested timing. The reviewer reread the exact source bodies with the source-target detector's complete-document parser and checked typed claim hashes, source-record payload hashes and source bindings without database writes or network acquisition.",
+  "corrections": [
+    "Hemlock and SK hynix already have accepted literal timeline.source_text and timeline.scope_text scalar claims. A comparator can read those existing source statements directly; no additional scalar admission is required, and neither the legacy generated milestone midpoint nor its confidence supplies a source assertion.",
+    "The roster screen's legacy TSMC aggregate case shares the coarse source label tsmc with the newer reviewed Fab 2 case. Its actual accepted scalar evidence instead binds the older retained NIST body with SHA-256 0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c. This input map preserves the old body and original aggregate document identity rather than substituting the newer body.",
+    "The reviewed Fab 2 entity has no timeline scalar claims. Its two accepted document-version milestone statements are retained together as inputs, and the later-retained document is selected explicitly. No scalar is borrowed from the separate aggregate project and the older statement is not counted as another project or independent confirmation.",
+    "The TSMC page has one complete Project Timeline table row containing all three fab clauses, not a separate DOM row for Fab 2. Its exact complete row is retained as timeline context; only the explicitly named Fab 2 clause can support the reviewed Fab 2 input. The full table supplies the named Phoenix geography and multi-fab scope.",
+    "Legacy scalar effective dates and confidence values are importer conventions, not publisher-established manufacturing event dates, probability calibration or current source freshness. The accepted scalar wording and its original metadata remain unchanged.",
+    "All seven screened projects remain represented. Vague timing, unsupported phase correspondence, aggregate scope and past targets are not repaired through date invention, event aliases, new claims, new outcomes or partition assignments. This plan supplies source inputs and exact visible-node evidence only, not predictions."
+  ],
+  "cases": [
+    {
+      "case_id": "amkor-peoria",
+      "input_claims": [
+        {
+          "claim_id": "0a544c3c-f0d3-5c25-be45-51382cd9bf8c",
+          "value_sha256": "82a6d7a89dea23e23c946c2218d278640bc63a6f2a3b9c231220782b2547ccbd"
+        },
+        {
+          "claim_id": "1ad08b01-2d3f-5657-bd93-3cede951de00",
+          "value_sha256": "c7ddbf5933d5647a5b5412be5705c0468de8065f0f057e89c9499ba651a53415"
+        }
+      ],
+      "timeline_claim_id": "1ad08b01-2d3f-5657-bd93-3cede951de00",
+      "scope_claim_id": "0a544c3c-f0d3-5c25-be45-51382cd9bf8c",
+      "selected_document_id": "d3cc5fb6-6bd0-55fb-b11a-0973a4a2d896",
+      "document_sha256": "dc29e77054171acd3da6d8324801319ecbf9bd8b52b80521ee93dc931ff4e8ec",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-amkor-technology-inc-arizona-peoria.html",
+      "timeline_span": {
+        "start": 90047,
+        "end": 90159,
+        "sha256": "026788b6cd3b4960ed190127c569ce85481b3e06dede5fbb876aa297f451db8b"
+      },
+      "scope_span": {
+        "start": 89269,
+        "end": 90175,
+        "sha256": "19ed7eb1cea28ec7b2b6261435be682f9bd6fc0480d7568b680a79a110763c04"
+      },
+      "selection_reason": "Retain the accepted phase-unspecified Peoria packaging/test project's literal mass-production wording and local table scope as evidence for the abstention. End-of-year wording does not supply an exact month or quarter. Do not substitute the separately reviewed issuer Phase One opening target or infer that its scope is identical."
+    },
+    {
+      "case_id": "hemlock-new-facility",
+      "input_claims": [
+        {
+          "claim_id": "3e7de618-7814-5818-a32c-02d70ee74514",
+          "value_sha256": "f4172198b2c04089f7a2c903198ca23a0f96d8efe4dd49450cfb7f47d9940105"
+        },
+        {
+          "claim_id": "71934f63-1035-5727-8281-dd0083bc7352",
+          "value_sha256": "3c24d9010ec0046d145c8a29756f21071bfd98c4840060fadc348b2dc586bed5"
+        }
+      ],
+      "timeline_claim_id": "71934f63-1035-5727-8281-dd0083bc7352",
+      "scope_claim_id": "3e7de618-7814-5818-a32c-02d70ee74514",
+      "selected_document_id": "b762c782-3e2d-5305-8199-8f6bfe0a2975",
+      "document_sha256": "99ece2fc05c3cb0ae71c3b829ac8d484302662f32446f93d08d48c02e59136bb",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-hemlock-semiconductor-michigan-hemlock.html",
+      "timeline_span": {
+        "start": 61817,
+        "end": 61906,
+        "sha256": "76370a07c25ffcd39c0fcaaaa69970846038f6c3e707a87998dc70c770cfa06b"
+      },
+      "scope_span": {
+        "start": 61082,
+        "end": 61922,
+        "sha256": "330864e9ac4bae6ac8da75a70a97bb5a9a0d6c43be2e4dfbcc594f2df80016c3"
+      },
+      "selection_reason": "Use the accepted literal production timeline and its same-project local statistics scope directly. The complete table names Hemlock, Michigan and describes one new manufacturing facility on the existing campus dedicated to hyper-pure semiconductor-grade polysilicon. The timing concerns that new facility, not the commencement of the entire operating campus. Do not import the generated legacy milestone midpoint or its confidence into a source interval."
+    },
+    {
+      "case_id": "infinera-california",
+      "input_claims": [
+        {
+          "claim_id": "21df8fb6-6e5e-5c6a-85da-268facbc0d86",
+          "value_sha256": "fcd0d8ebacba445f124eb48995271b8ddbd7a56ff381b7da1364ecaa435ce5be"
+        },
+        {
+          "claim_id": "c3862659-abc2-5775-9145-fddac603cc41",
+          "value_sha256": "8fce609741892227956a98faab647b794d70a38e909c74106278b29fcacffc7b"
+        }
+      ],
+      "timeline_claim_id": "21df8fb6-6e5e-5c6a-85da-268facbc0d86",
+      "scope_claim_id": "c3862659-abc2-5775-9145-fddac603cc41",
+      "selected_document_id": "d216e249-e028-5202-b02d-f513fd1d2dff",
+      "document_sha256": "68c92c8def306183ac90ccd93189d5f79fb2c4038365a127bb19dee339a886e7",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-infinera-california-san-jose.html",
+      "timeline_span": {
+        "start": 88515,
+        "end": 88654,
+        "sha256": "4d99f4898e719afd4414e90c96b317d1f41dc9870ece3d80635b80eb712128c5"
+      },
+      "scope_span": {
+        "start": 87569,
+        "end": 88670,
+        "sha256": "000e16b0e47ed7e4210e261cd21784305dc31bf7555d1f12ea683cf123f6e862"
+      },
+      "selection_reason": "Retain the literal summer-period wording and the local San Jose statistics table describing fab/foundry construction and modernization. The shared award overview covers another site, so it is not used to allocate this local timeline. The vague period is not converted to the generated legacy calendar bounds or to attainment, nonoccurrence or a wholly future forecast. Preserve linkage to the related Pennsylvania project."
+    },
+    {
+      "case_id": "infinera-pennsylvania",
+      "input_claims": [
+        {
+          "claim_id": "114f5820-7319-5d5b-9801-8fdf73f417fe",
+          "value_sha256": "fcd0d8ebacba445f124eb48995271b8ddbd7a56ff381b7da1364ecaa435ce5be"
+        },
+        {
+          "claim_id": "1bc59229-10af-5315-af35-4f053d3294e7",
+          "value_sha256": "014e578f1b50a5ac60ba1000102eb030be4c7ca6b6c378a84733545a136497b8"
+        }
+      ],
+      "timeline_claim_id": "114f5820-7319-5d5b-9801-8fdf73f417fe",
+      "scope_claim_id": "1bc59229-10af-5315-af35-4f053d3294e7",
+      "selected_document_id": "621a1d84-9d6f-5415-93b0-10cbfd31ffdd",
+      "document_sha256": "c50556e869f664a4b7882c5e2aa26b24941739bf8b839bad9688a75a41f77026",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-infinera-pennsylvania-bethlehem.html",
+      "timeline_span": {
+        "start": 61129,
+        "end": 61268,
+        "sha256": "4d99f4898e719afd4414e90c96b317d1f41dc9870ece3d80635b80eb712128c5"
+      },
+      "scope_span": {
+        "start": 60200,
+        "end": 61284,
+        "sha256": "5d9abdaa4cab0d3e3050e7a5624c3a21c03ddef70b4a2ebc390ed424fd3afa5e"
+      },
+      "selection_reason": "Retain the literal summer-period wording and the local Bethlehem statistics table describing a new advanced test and packaging facility. Use neither the two-site overview nor identical timing wording to merge this source-native project with San Jose. The period remains vague and supplies no event outcome or nonoccurrence assertion; the related projects are not independent geography holdouts."
+    },
+    {
+      "case_id": "sk-hynix-indiana",
+      "input_claims": [
+        {
+          "claim_id": "832db425-a020-540f-a8a3-7bc5e1044bba",
+          "value_sha256": "e98891c4b6fe3e0038d98eab34b582142fbcadff1da5e167961bb095befa07d1"
+        },
+        {
+          "claim_id": "b431c36c-45e7-5b88-9b58-29c3483b9b47",
+          "value_sha256": "831f298e232232b721e3857f9cf9e418f82102f80246b0c8a8cf1a0ea98650ad"
+        }
+      ],
+      "timeline_claim_id": "832db425-a020-540f-a8a3-7bc5e1044bba",
+      "scope_claim_id": "b431c36c-45e7-5b88-9b58-29c3483b9b47",
+      "selected_document_id": "8b15719c-6244-5a8a-aee7-524fffca3b3b",
+      "document_sha256": "778b7e27346659d8ef03fd07b84afbb962507610eecf3bc2f794cab0001749e9",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-sk-hynix-indiana-west-lafayette.html",
+      "timeline_span": {
+        "start": 90896,
+        "end": 91035,
+        "sha256": "b104e87d1983f410d2afc5faada91de711cc1036a71d8a82803452b0f7cca0a9"
+      },
+      "scope_span": {
+        "start": 89158,
+        "end": 91051,
+        "sha256": "9c5d75a2e75b1dcd451d9a051d812fdfa86a83a58a1155170c2e1d90bb17cfca"
+      },
+      "selection_reason": "Use the existing accepted literal mass-production timeline and project-overview scope. The full table explicitly names West Lafayette, Indiana and the HBM back-end line, advanced packaging fabrication and R&D testbed facility. Preserve mass_production as the source event; the legacy production_start predicate does not authorize an alias. No numbered phase, installed capacity, midpoint or probability is supplied by this input selection."
+    },
+    {
+      "case_id": "tsmc-fab2",
+      "input_claims": [
+        {
+          "claim_id": "4870d11d-3555-52f9-bf9a-8d67e200ecff",
+          "value_sha256": "10675b9521ed7a46f83abd0d743b59a82bfb91f0ed0e330c8b8e61d05a727c5b"
+        },
+        {
+          "claim_id": "b350581c-3257-5e6c-aabb-aab20d884e9c",
+          "value_sha256": "399d344f3b2e943a22f5258377a320566a9d41688b99965bf23609aae831393a"
+        }
+      ],
+      "timeline_claim_id": "4870d11d-3555-52f9-bf9a-8d67e200ecff",
+      "scope_claim_id": null,
+      "selected_document_id": "8c6af32d-6d63-556d-912f-4e39455c7be2",
+      "document_sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0/responses/nist-tsmc-arizona.body",
+      "timeline_span": {
+        "start": 87854,
+        "end": 88154,
+        "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094"
+      },
+      "scope_span": {
+        "start": 86055,
+        "end": 88170,
+        "sha256": "9483e8fc5e71671d405c575e53e355d94f035ac92af379614959a1b702cbae38"
+      },
+      "selection_reason": "Both accepted source-native Fab 2 document-version statements remain visible in the selected-input record. Select the statement linked to the later-retained source document rather than averaging or counting the prior document as another project. The complete timeline row names three fabs; interpret only its explicit Fab 2 clause under the existing reviewed subject. The full table names Phoenix, Arizona and distinguishes the three fabs. This does not equate the subject with table Fab 21, the first fab, Hsinchu Fab 2, a canonical facility or an attained event."
+    },
+    {
+      "case_id": "tsmc-legacy-aggregate",
+      "input_claims": [
+        {
+          "claim_id": "2b20c852-260c-51ac-818e-4bb8e99d0b2b",
+          "value_sha256": "8c742f4850c4a885dc417fc82d130a80c23710bf7a963006519e8616a30a5402"
+        },
+        {
+          "claim_id": "f95ac780-6219-5ed3-93d3-2cd60c565dbe",
+          "value_sha256": "88ebe1a9202a45af326923f5b2e812e7b7fa1b2b45bc96df3d37583c11bb095b"
+        }
+      ],
+      "timeline_claim_id": "f95ac780-6219-5ed3-93d3-2cd60c565dbe",
+      "scope_claim_id": "2b20c852-260c-51ac-818e-4bb8e99d0b2b",
+      "selected_document_id": "e54850f0-e411-57e9-8f6e-819385101e86",
+      "document_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+      "local_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-tsmc-arizona-phoenix.html",
+      "timeline_span": {
+        "start": 85812,
+        "end": 86103,
+        "sha256": "7cb61469b6ce9f41830019a7c4db2211928bd5b130023e26c1cb590cbbcad752"
+      },
+      "scope_span": {
+        "start": 84013,
+        "end": 86119,
+        "sha256": "a74e99fe58dd3a3c3ead9215c5db56ec9491f778a971e364cc7f4c76991f34f6"
+      },
+      "selection_reason": "Retain this excluded aggregate case with the exact older source document that supports its accepted scalar timeline and scope. The complete table names Phoenix and three fabs; the scalar timeline contains three distinct fab clauses and cannot allocate the aggregate entity to one phase. Do not substitute the newer reviewed Fab 2 statement, count this aggregate as another Fab 2 project, or treat the legacy first-fab target as a newly prospective prediction."
+    }
+  ]
+}

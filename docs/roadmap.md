@@ -351,6 +351,14 @@ registered. This is an unfitted-scenario evaluation foundation, not calibrated f
 passed Phase 4 gate. A reviewed multi-project/geography roster, justified predictions, training
 provenance and independently reviewed realization evidence remain necessary.
 
+The separate [executed source-guidance interval comparator](guidance_interval_baseline.md) now
+freezes a real September 8 vintage with three literal source intervals, three abstentions and
+one aggregate exclusion. It executes the source-text interpretation, preserves null midpoints
+and the exact mass-production event, and replays all bytes from pinned inputs. Its complete
+quarterly outcome policy retains unknowns, cancellations and explicit nonoccurrence-window misses.
+It is an unfitted comparator with disclosed stale-source ages, no real outcomes and no measured
+predictive improvement; the existing v1 split/point benchmark and scheduled producers are unchanged.
+
 The [first source-reported realized observation](fab21_realized_observation_2026-09-07.md)
 now records Fab 21 commercial-production commencement at year-2024 precision, with no midpoint
 and an actual September 7 admission clock. A separate evidence-bound sidecar preserves the

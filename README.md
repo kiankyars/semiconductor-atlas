@@ -716,6 +716,13 @@ cutoff override and linked-cancellation conflict. Caller-provided `claims=` must
 complete database view at both cutoffs; it cannot replace that view with selected or altered facts.
 These repairs do not turn the experimental scenarios into calibrated forecasts.
 
+The separate [executed source-guidance interval comparator](docs/guidance_interval_baseline.md)
+now retains a real September 8 vintage: three source-derived intervals with null midpoints,
+three abstentions and one aggregate exclusion. Exact re-execution reproduces all frozen bytes.
+It preserves mass production as a distinct event and prespecifies complete quarterly outcome
+review, including explicit nonoccurrence-window misses. This is a comparator for a future model
+to beat, not a fitted forecast, a fresh source search or a measured performance result.
+
 The separate [realized-event workflow](docs/realized_milestones.md) now retains one
 [reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
 with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a
