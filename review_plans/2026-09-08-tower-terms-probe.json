@@ -1,0 +1,26 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Retain the exact main-origin terms for complete local review. The retained robots response permits this path and specifies a ten-second crawl delay. Web-read section 3 explicitly permits unchanged local copies for personal informational noncommercial use with notices retained. No manufacturing document is requested by this probe.",
+  "robots_dependency": {
+    "path": "artifacts/2026-09-08-tower-policy-probe-v1/responses/tower-robots.body",
+    "sha256": "d897f116d0fdeba8aeb5b1190e6312cc0a109458f7bf0faf50d93d1498c41d48"
+  },
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "minimum_interval_seconds": 10,
+  "timeout_seconds": 25,
+  "max_response_bytes": 4000000,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "tower-terms",
+    "url": "https://towersemi.com/about/terms-conditions/",
+    "purpose": "rights_policy",
+    "company": "Tower Semiconductor",
+    "country_code": "IL",
+    "source_family": "tower-issuer",
+    "scope": "Main-origin rights policy only; local review is distinct from publication, redistribution, commercial use, training and automated monitoring.",
+    "media_types": ["text/html"]
+  }
+}

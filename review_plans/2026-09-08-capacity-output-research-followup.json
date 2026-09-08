@@ -1,0 +1,112 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "capacity-output-research-followup-2026-09-08",
+  "reviewer": "Codex primary agent, with government_output_evidence, villach_quantity_schema and north_star_explanation_review research checks",
+  "decision": "retain_unadmitted_leads_and_access_or_semantic_exclusions",
+  "review_method": "Bounded ordinary primary-source web research. Search extraction, opened text and retained exact-byte evidence remain distinct. No numeric lead below received local source acquisition, complete visual verification or core admission in this pass. Restrictions are operational decisions for this workflow, not legal advice or a claim that facts themselves are copyrighted.",
+  "claim_acceptance": false,
+  "collector_enabled": false,
+  "raw_redistribution": false,
+  "leads": [
+    {
+      "key": "amkor-shanghai-c3-bumping",
+      "subject": "Amkor Shanghai, 111 Yinglun Road, C3 campus bumping workshop",
+      "landing": "https://www.pudong.gov.cn/zwgk/14464.gkml_ywl_wsgs_hbspgs/2025/251/345436.html",
+      "publication_date": "2025-09-03",
+      "publication_index": "SY-310115-2025-03832",
+      "document": "https://www.pudong.gov.cn/zwgk/14464.gkml_ywl_wsgs_hbspgs/2025/251/345436/76ab939e5188447f8da44f1c8f5f40f9.pdf",
+      "approval": "https://www.pudong.gov.cn/zwgk/14464.gkml_ywl_wsgs_hbspgs/2025/251/345436/99386a77e62345db9b59cb3782813fce.pdf",
+      "older_landing": "https://www.pudong.gov.cn/zwgk/qt-bsqglj/2023/52/307102.html",
+      "older_document": "https://www.pudong.gov.cn/zwgk/qt-bsqglj/2023/52/307102/27eaa432949b4828876f5e8c3906fd1e.pdf",
+      "evidence": "Indexed 2025 Table 2-10, printed page 44: annual bumping output 372000, 432000 and 363000 wafers for 2022, 2023 and 2024. Design/approved column is 432000/year. The 2023 EIA distinguishes 648000/year approved from 432000/year actually constructed; historical eight-inch phases and partial implementation explain that older difference. Approval is based on an applicant-commissioned report and commitments, not independent production measurement.",
+      "material_conflict": "The 2023 report assigns identical 372000/432000 bumping values to 2020/2021. Two other workshops repeat the same two-year shift. Possible reused or relabeled data, not proven error; never treat this as independent corroboration of the newer years. The newer design-column labeling also needs reconciliation.",
+      "limits": "Output row diameter/equivalence unresolved. Do not infer current mix from older eight-inch approvals, AI/HBM attribution from the project title, front-end wafer production from bumping, or add interrelated workshops.",
+      "access": "Main PDF web retrieval/rendering timed out; older 20772205-byte PDF exceeded reader size. Homepage returned HTTP 412, with no workaround. Robots safe-open error supplied no policy content. Applicable retention permission remains unresolved.",
+      "next_gate": "Resolve permitted capture and complete visual table context, then reconcile the chronology before any numeric admission."
+    },
+    {
+      "key": "qianwan-sic-substrates",
+      "subject": "Zhongdian compound-semiconductor phase-one substrate facility, 68 Yuhai East Road, Qianwan",
+      "document": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3475/site/attach/0/67e272830d694dc6ab8eb2f593e27074.pdf",
+      "evidence": "Indexed printed page 37, Table 3.1-1 distinguishes 2023 actual capacity of 5000 six-inch SiC substrates/year from 6000/year at acceptance. Four-inch N-type implemented capacity is zero. The report followed a September 26, 2024 expert review.",
+      "limits": "Substrates are not fabricated-device wafers or actual annual output. Visually resolve the extracted six-inch material label. Do not combine phase one with an upgrade or separate phase-two construction.",
+      "access": "Full-page web verification timed out; publication landing, rights and robots remain unresolved. No direct capture."
+    },
+    {
+      "key": "basic-guangming-hkex",
+      "document": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0629/2026062900050_c.pdf",
+      "terms": "https://www2.hkexnews.hk/Global/Exchange/Terms-of-Use?sc_lang=en",
+      "evidence": "Earlier application-prospectus search table suggests output 3052 pieces in 2024 and 5943 in 2025, with respective capacity figures 6750 and 8625. That application URL became unavailable; the final prospectus table was not checked.",
+      "limits": "Piece meaning, diameter, capacity definition and footnotes unverified; no wafer normalization.",
+      "access": "HKEX terms prohibit programmatic access and text/data mining without permission. Route stopped; no acquisition, alternate host or user-agent workaround."
+    },
+    {
+      "key": "polar-issuer-and-government",
+      "issuer": "https://polarsemi.com/service/manufacturing/",
+      "issuer_terms": "https://polarsemi.com/terms-conditions/",
+      "government": "https://www.nist.gov/chips/polar-semiconductor-minnesota-bloomington",
+      "senator": "https://www.klobuchar.senate.gov/public/index.cfm/2024/9/klobuchar-announces-major-funding-for-polar-semiconductor-s-bloomington-manufacturing-facility",
+      "evidence": "Undated issuer page: up to 21000 mixed-product eight-inch wafers/month; 2027 full deployment targets 40000 mixed-product or 70000 discrete wafers/month, alternative cases. NIST instead describes roughly 20000 to 40000 wafer starts/month in U.S. capacity, expected within two years. Senator's September 24, 2024 release describes 21000 wafers/month produced in Bloomington.",
+      "limits": "Capacity, production and wafer-start rates are not interchangeable. Do not add alternative product mixes, infer a common reporting period/diameter, allocate U.S. aggregate wording automatically or label expected expansion attained.",
+      "access": "Issuer terms require prior consent for copying; no direct issuer capture. Government-authored sources need their own scope and retention review, not reuse of the issuer grant or a mirror workaround."
+    },
+    {
+      "key": "xfab-sic-installed-versus-run-rate",
+      "landing": "https://www.xfab.com/investors",
+      "terms": "https://www.xfab.com/terms-of-use",
+      "evidence": "Capital Markets Update, December 4, 2024, slide 32: installed SiC capacity 7500 wafer starts/month versus current run rate 2000/month.",
+      "limits": "Texas attribution, exact PDF link, wafer diameter and complete slide context still need verification; do not calculate utilization from unreviewed paired numbers.",
+      "access": "Terms prohibit storing downloaded documentation in a retrieval system. No document acquisition; permission-dependent lead."
+    },
+    {
+      "key": "st-emas-workload-not-wafer-output",
+      "landing": "https://www.st.com/content/st_com/en/about/sustainability/sustainability-reports.html",
+      "document": "https://www.st.com/content/dam/aboutus/sustainability/reports/pdf/st-catania-emas-declaration-2023-it.pdf",
+      "evidence": "Catania printed page 13 defines WO using both 200mm-equivalent area and 20 photolithography levels. Crolles/Agrate use similar normalization.",
+      "limits": "This is area-and-mask-weighted workload, not physical wafer count. No absolute site output series was established. Do not equate WO with the Villach produced-area metric or divide into installed capacity.",
+      "access": "Retention permission unreviewed; no capture."
+    },
+    {
+      "key": "globalwafers-italian-emas",
+      "landing": "https://www.gw-semi.com/environment-safety-health/",
+      "documents": [
+        "https://www.gw-semi.com/wp-content/uploads/2026/06/Dichiarazione-Ambientale-Convalidata.pdf",
+        "https://www.gw-semi.com/wp-content/uploads/2025/08/Merano-2025-Dichiarazione-Ambientale-Convalidata.pdf"
+      ],
+      "evidence": "Official Novara and Merano report links exist, but numeric content and reporting periods were not reviewed.",
+      "limits": "Substrate/monocrystal manufacture is distinct from fabricated-device output.",
+      "access": "Web reader size rejection at 17839288 and 10556650 bytes, not evidence of publisher denial. Rights remain unresolved; no capture."
+    },
+    {
+      "key": "intel-ireland-modules",
+      "landing": "https://www.exploreintel.com/ireland",
+      "document": "https://www.exploreintel.com/assets/documents/ireland/reports/AER%202024.pdf",
+      "evidence": "2024 AER printed page 9 reports Fab34 Module1 production beginning late September 2023 and Module2 construction/tool installation continuing through 2024.",
+      "limits": "Module-specific lifecycle evidence, no numeric output or whole-fab qualification claim. Issuer hosting is not independent corroboration of the earlier EPA-hosted report lead.",
+      "access": "Retention permission and complete visual review remain unresolved; no capture."
+    },
+    {
+      "key": "greenock-historical-installed-capacity",
+      "document": "https://atreg.com/wp-content/uploads/2016/07/TI-Greenock-Scotland-fab-brochure.pdf",
+      "terms": "https://atreg.com/terms-conditions/",
+      "evidence": "Historical TI Greenock sale brochure, printed page 10: installed maximum starts/month by process and diameter; 13333 at 150mm plus 8333 at 200mm. Page 5 separately states four-wall capacity of 23333 200mm-equivalent wafers/month. Page 11 reports yield above 98.5% over a relative three-year period.",
+      "limits": "Marketing disclosure, not independent metrology. Publication date and relative period unestablished; capacity depends on product mix. No mixed-diameter addition to an equivalent count, current-capacity carry-forward, good-die interpretation of undefined yield or physical applicability inferred from upload path. Older than v1's 2024 source cutoff; relevant only to a separately reviewed broad historical cohort.",
+      "access": "Terms grant limited personal downloads but expressly prohibit automated access without written permission. No direct robots, terms or document acquisition."
+    },
+    {
+      "key": "nexperia-policy-screen",
+      "terms": "https://www.nexperia.com/about/terms-and-policies/terms-of-use",
+      "access": "Although limited personal noncommercial reproduction is allowed, automated access/download is expressly prohibited. Stopped before any direct manufacturing-source acquisition."
+    },
+    {
+      "key": "tower-ir-scope",
+      "document": "https://ir.towersemi.com/static-files/0053ec71-c4da-4f88-8faf-be2a5e0d60cb",
+      "terms": "https://towersemi.com/about/terms-conditions/",
+      "evidence": "FY2024 Form20-F identifies Agrate qualification/volume production in Q4 2024, Fab1 cessation in Q1 2025 and a still-unqualified Fab11 corridor. Text distinguishes cleanroom allocation from installed-capacity wording; neither is a numeric wafer allocation.",
+      "limits": "No complete visual PDF review or numeric capacity finding. Root-site terms explicitly enumerate only towersemi.com and jp.towersemi.com.",
+      "access": "IR pages exposed no applicable retention grant in available extraction; IR robots returned a non-retryable URL-safety error, not a verified publisher policy. No PDF capture. A distinct main-domain February 10, 2025 issuer release was independently cleared and captured under its expressly applicable terms; see the separate Tower closure review."
+    }
+  ],
+  "outcome": "No new numeric capacity or output admission. One distinct main-origin Tower release was retained under its own reviewed policy and supplies three closure/discontinuation event candidates. Existing captures, registered forecast studies, core snapshots and scheduled collectors remain unchanged.",
+  "next_action": "Integrate the separately reviewed Tower event candidates without backdating knowledge. Keep numeric-source work focused on permitted actual production and explicitly installed equipment capacity; do not relax semantics or repeat prohibited routes."
+}

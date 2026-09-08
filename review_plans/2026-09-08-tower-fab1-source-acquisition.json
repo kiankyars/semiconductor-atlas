@@ -1,0 +1,50 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "tower-fab1-main-origin-local-review-2026-09-08",
+  "reviewed_at": "2026-09-08T22:48:11Z",
+  "expires_at": "2026-09-09T22:48:11Z",
+  "decision": "approved_exact_url_local_personal_informational_noncommercial_review_only",
+  "purpose": "Retain one issuer-authored main-origin release to review the Fab 1 legacy-flow discontinuation, last wafer output and transfer of strategic flows. This broadens non-survivor evidence; it does not supply an installed-capacity quantity or establish an early-detection result.",
+  "rights_review": "All 21 sections of the retained terms were read. Sections 1 and 3 expressly cover towersemi.com and allow unchanged retained copies for personal informational noncommercial use, with legal notices preserved and no onward transfer. Preserve the original locally and attribute Tower. No raw public release, commercial use, training permission, recurring collector activation or IR-subdomain grant is inferred.",
+  "robots_review": "The exact retained wildcard policy excludes /wp-admin/ but not the terms or selected release path. Its ten-second crawl delay is respected between direct requests. No cookies, credentials, retries, redirects, alternate hosts or query variants are used.",
+  "dependencies": [
+    {
+      "path": "artifacts/2026-09-08-tower-policy-probe-v1/responses/tower-robots.body",
+      "sha256": "d897f116d0fdeba8aeb5b1190e6312cc0a109458f7bf0faf50d93d1498c41d48"
+    },
+    {
+      "path": "artifacts/2026-09-08-tower-policy-probe-v1/source_checks.json",
+      "sha256": "55c6b5fb7ebd50b42c4ed9eabb255f824f0c76774775a2a1b9c6fb6af8f312e8"
+    },
+    {
+      "path": "artifacts/2026-09-08-tower-terms-probe-v1/responses/tower-terms.body",
+      "sha256": "846d5074d4c67e3e2ef62ceb140116fde4008dedbf9f146ebc47ab6fd8223ae3"
+    },
+    {
+      "path": "artifacts/2026-09-08-tower-terms-probe-v1/source_checks.json",
+      "sha256": "47dff0422be68e8ea381761d25c52327a8f607d4bb764f12320d651e46becc80"
+    }
+  ],
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 4000000,
+  "minimum_interval_seconds": 10,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "entries": [
+    {
+      "id": "tower-fy2024-results-fab1",
+      "url": "https://towersemi.com/2025/02/10/02102025/",
+      "purpose": "source_document",
+      "company": "Tower Semiconductor",
+      "country_code": "IL",
+      "source_family": "tower-issuer",
+      "scope": "Source-native Fab 1 and Fab 2 flow-consolidation events, with the original heading and complete paragraph. Facility identities, dates, event meanings and numeric exclusions require post-acquisition review; page dateline is not automatically a facility location.",
+      "media_types": ["text/html"]
+    }
+  ]
+}

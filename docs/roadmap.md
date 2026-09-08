@@ -436,6 +436,13 @@ non-calendar fiscal periods and source-native site accounting scope, preserving 
 parent and actual admission time. It adds no installed capacity, forecast/outcome pairs or
 calibrated performance. The older review and forecast vintages remain unchanged.
 
+The [Tower closure source review](tower_closure_source_review.md) retains one permitted
+main-origin issuer release and three dated source-event candidates spanning Fab1 legacy-flow
+discontinuation, last wafer output and Arai operations cessation. Complete source blocks and
+the policy/capture graph are hash-verified, with distinct quarter, month and year precision.
+Core admission remains pending; no numeric capacity loss, current physical closure, independent
+outcome, representative non-survivor population or forecast score follows from this review.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

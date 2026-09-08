@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Retain Tower's main-origin robots policy before any direct rights-page or manufacturing-source acquisition. The complete web-read main-origin terms explicitly permit unchanged local copies for personal informational noncommercial use. No IR-subdomain policy is inferred and no manufacturing document is requested by this probe.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "tower-robots",
+    "url": "https://towersemi.com/robots.txt",
+    "purpose": "access_policy",
+    "company": "Tower Semiconductor",
+    "country_code": "IL",
+    "source_family": "tower-issuer",
+    "scope": "Main-origin publisher access policy only; no manufacturing claim or IR-subdomain approval.",
+    "media_types": ["text/plain"]
+  }
+}
