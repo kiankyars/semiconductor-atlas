@@ -225,3 +225,24 @@ Their original database/vintage bytes remain unchanged. The new receipts are
 `81db1932b9a59f63a0f59c53134dae5303f525b21a502569b96516c148caa80e`) and
 `artifacts/2026-09-08-post-k18b-guidance-replay-v1.json` (3,450 bytes, SHA-256
 `d2ad2ee41473d059316a2ae8ea78a76a90f9e0497dc80526141fff1dd9c0b72e`).
+
+## September 8 Villach schema-8 producer retention
+
+Committed producer `af5cde6a7c3606f809f7fdb28dd82d339e381529` is retained at
+`artifacts/2026-09-08-af5cde6-frozen-runtime-v1.json`: 4,092,963 bytes, 132 files and
+3,040,645 source bytes. Its exact file SHA-256 is
+`500901b2ab1777ccea06e90d636fea27edd1e736cb09f6ae5d69b58f6892e733`.
+
+The `infineon-villach-output` operation allows only verification, with absolute `parent`, `review`,
+`reference-root` and existing `output` paths plus literal `expected-review-sha256` and
+`expected-output-sha256`. It reconstructs the [complete schema-8 successor](infineon_villach_output_review.md)
+from its schema-7 parent, separate claim review and all 28 retained PDF/visual/acquisition/policy
+inputs. No HTTP request, live queue, new admission, scheduled migration or forecast operation is
+exposed. The original admission clock is read from the independently hash-bound successor.
+
+Isolated replay matched all 242,372,608 database bytes and the five source-native site quantities.
+All 23 imported project modules resolved inside the retained runtime. Receipt
+`artifacts/2026-09-08-frozen-villach-output-replay-v1.json` is 10,579 bytes, SHA-256
+`64a1d23d24b7e92bf8b00845d9a08b42ac4fe3fd03cde8ed91ad5701288fd891`.
+The earlier K18B and guidance producers also replayed their original outputs after schema-8
+evolution. Those older artifacts remain unchanged and are not repinned to this producer.
