@@ -440,8 +440,11 @@ The [Tower closure source review](tower_closure_source_review.md) retains one pe
 main-origin issuer release and three dated source-event candidates spanning Fab1 legacy-flow
 discontinuation, last wafer output and Arai operations cessation. Complete source blocks and
 the policy/capture graph are hash-verified, with distinct quarter, month and year precision.
-Core admission remains pending; no numeric capacity loss, current physical closure, independent
-outcome, representative non-survivor population or forecast score follows from this review.
+The separate schema-8 admission now stores all three at actual database-admission time, with
+both Fab1 events on one unresolved facility and a separate Arai facility. Every inherited row
+and the complete physical-current view remain unchanged; exact successor replay passes. No
+numeric capacity loss, current physical closure, independent outcome, representative non-survivor
+population or forecast score follows from this admission.
 
 ## Phase 5: supply-demand scenarios and investable signals
 

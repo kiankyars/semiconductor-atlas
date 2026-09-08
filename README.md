@@ -570,6 +570,12 @@ unspecified precision remain explicit. All older rows and physical-capacity valu
 wafer counts, installed capacity, yield, utilization and forecast outcomes are not inferred.
 The exact 28-file evidence chain and complete successor replay are verifiable offline.
 
+The isolated [Tower historical-event admission](docs/tower_closure_source_review.md) adds three
+issuer-reported milestones on two source-native facilities: Fab1 legacy-flow discontinuation,
+Fab1 last output and Arai operations cessation. Quarter, month and year precision are retained
+without date midpoints. The schema-8 successor preserves every inherited row and the complete
+physical-current view; no current closure, numeric capacity loss or forecast outcome is inferred.
+
 The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
 across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
 actions and historical cutoffs replay from an exportable append-only event log. The live pilot

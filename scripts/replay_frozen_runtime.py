@@ -39,6 +39,9 @@ OPERATIONS = {
     "infineon-villach-output": ("scripts/admit_infineon_villach_output.py", "verify",
                               ("parent", "review", "reference-root", "output",
                                "expected-review-sha256", "expected-output-sha256")),
+    "tower-closure-milestones": ("scripts/admit_tower_closure_milestones.py", "verify",
+                                ("parent", "review", "reference-root", "output",
+                                 "expected-review-sha256", "expected-output-sha256")),
 }
 DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
                  ("tsmc-source-quantities", "expected-review-sha256"),
@@ -46,7 +49,9 @@ DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
                  ("ase-k18b-milestones", "expected-review-sha256"),
                  ("ase-k18b-milestones", "expected-output-sha256"),
                  ("infineon-villach-output", "expected-review-sha256"),
-                 ("infineon-villach-output", "expected-output-sha256")}
+                 ("infineon-villach-output", "expected-output-sha256"),
+                 ("tower-closure-milestones", "expected-review-sha256"),
+                 ("tower-closure-milestones", "expected-output-sha256")}
 MAX_OUTPUT = 1_000_000
 _LOADED_PRODUCER = runtime.digest(Path(__file__).read_bytes())
 

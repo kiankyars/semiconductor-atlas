@@ -1,0 +1,195 @@
+{
+  "boundaries": {
+    "baseline_modified": false,
+    "canonical_identity_assigned": false,
+    "current_physical_state_inferred": false,
+    "exact_day_or_midpoint_inferred": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "geometry_inferred": false,
+    "historical_system_knowledge_backdated": false,
+    "independent_measurement": false,
+    "location_from_dateline_inferred": false,
+    "model_training": false,
+    "numeric_capacity_loss_inferred": false,
+    "ownership_assigned": false,
+    "raw_redistribution": false,
+    "scheduled_execution_rerouted": false,
+    "source_acquisition": false,
+    "transfer_event_date_assigned": false,
+    "yield_utilization_qualification_inferred": false,
+    "zero_capacity_inferred": false
+  },
+  "decision": "accept_three_historical_source_native_milestone_statements",
+  "format": "semiconductor-atlas-tower-closure-admission-review-v1",
+  "input_files": {
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/dependencies/0-tower-robots.body": {
+      "bytes": 132,
+      "sha256": "d897f116d0fdeba8aeb5b1190e6312cc0a109458f7bf0faf50d93d1498c41d48"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/dependencies/1-source_checks.json": {
+      "bytes": 1256,
+      "sha256": "55c6b5fb7ebd50b42c4ed9eabb255f824f0c76774775a2a1b9c6fb6af8f312e8"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/dependencies/2-tower-terms.body": {
+      "bytes": 185019,
+      "sha256": "846d5074d4c67e3e2ef62ceb140116fde4008dedbf9f146ebc47ab6fd8223ae3"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/dependencies/3-source_checks.json": {
+      "bytes": 1332,
+      "sha256": "47dff0422be68e8ea381761d25c52327a8f607d4bb764f12320d651e46becc80"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/manifest.json": {
+      "bytes": 993,
+      "sha256": "da6420656fca2f5e9643b9f3879c587f7907f218bb0c2d8852ff8f8e4333891b"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/plan.json": {
+      "bytes": 2978,
+      "sha256": "cf395d3342b9b462fc41ab2e4c0fa998c89aa3b54d85f500b2b5839db2d981c5"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/responses/tower-fy2024-results-fab1.body": {
+      "bytes": 185743,
+      "sha256": "7945c366226cf0564916fa2a4f946c663f90900c2a41c4bfaad5c9d7460fe255"
+    },
+    "artifacts/2026-09-08-tower-fab1-source-capture-v1/source_checks.json": {
+      "bytes": 1473,
+      "sha256": "388ed9104132a5ef00e372decd5e8ed0a5b423b1a4122c37e73e002992930acb"
+    },
+    "artifacts/2026-09-08-tower-policy-probe-v1/manifest.json": {
+      "bytes": 395,
+      "sha256": "439abc822a6673ea6f4fe5e6a4f614460c1e720e460665c827f5686e345ebb8b"
+    },
+    "artifacts/2026-09-08-tower-policy-probe-v1/plan.json": {
+      "bytes": 1021,
+      "sha256": "25365b3a707f7a81eca27a039aa5be44a01db13a5211260b2b44087e365783bf"
+    },
+    "artifacts/2026-09-08-tower-policy-probe-v1/responses/tower-robots.body": {
+      "bytes": 132,
+      "sha256": "d897f116d0fdeba8aeb5b1190e6312cc0a109458f7bf0faf50d93d1498c41d48"
+    },
+    "artifacts/2026-09-08-tower-policy-probe-v1/source_checks.json": {
+      "bytes": 1256,
+      "sha256": "55c6b5fb7ebd50b42c4ed9eabb255f824f0c76774775a2a1b9c6fb6af8f312e8"
+    },
+    "artifacts/2026-09-08-tower-terms-probe-v1/manifest.json": {
+      "bytes": 397,
+      "sha256": "d632fc55b39e1486dcefe083b068b32c9e18db083a3540cf31592cea6164f541"
+    },
+    "artifacts/2026-09-08-tower-terms-probe-v1/plan.json": {
+      "bytes": 1320,
+      "sha256": "e16cf0a0697d3fde1ff6cad2a93d62aa405dc5bf10fb170f9581a0138aa72e9b"
+    },
+    "artifacts/2026-09-08-tower-terms-probe-v1/responses/tower-terms.body": {
+      "bytes": 185019,
+      "sha256": "846d5074d4c67e3e2ef62ceb140116fde4008dedbf9f146ebc47ab6fd8223ae3"
+    },
+    "artifacts/2026-09-08-tower-terms-probe-v1/source_checks.json": {
+      "bytes": 1332,
+      "sha256": "47dff0422be68e8ea381761d25c52327a8f607d4bb764f12320d651e46becc80"
+    },
+    "review_plans/2026-09-08-tower-closure-source-review.json": {
+      "bytes": 8037,
+      "sha256": "bba060c31cc740d5abf0ff3a50445275b6d8b374b3a7fc16023a0c65a750237b"
+    },
+    "review_plans/2026-09-08-tower-fab1-source-acquisition.json": {
+      "bytes": 2978,
+      "sha256": "cf395d3342b9b462fc41ab2e4c0fa998c89aa3b54d85f500b2b5839db2d981c5"
+    },
+    "review_plans/2026-09-08-tower-policy-probe.json": {
+      "bytes": 1021,
+      "sha256": "25365b3a707f7a81eca27a039aa5be44a01db13a5211260b2b44087e365783bf"
+    },
+    "review_plans/2026-09-08-tower-terms-probe.json": {
+      "bytes": 1320,
+      "sha256": "e16cf0a0697d3fde1ff6cad2a93d62aa405dc5bf10fb170f9581a0138aa72e9b"
+    }
+  },
+  "interpretation_method": "Retain the original reviewed source-native periods as completed milestone statements, with no point-date midpoint. Map both Fab1 events to one unresolved facility; map Arai separately. Persist two support links and title/dateline context per claim, twelve evidence links total. Validate exact complete HTML blocks and the twenty-file policy/capture graph offline. Publication, retrieval, source review and actual database admission remain distinct clocks. No current-state effective dates, independent realization claim or forecast score.",
+  "parent_database_sha256": "83f24c839dda19f3924a245f10f7bd7bb1ec9439d676fbca558da7cded0c45b6",
+  "prior_exposure": "The reviewer saw search and web-extracted issuer evidence before acquisition. Selection and review are retrospective, neither blind adjudication nor an early-detection test.",
+  "research_review": {
+    "path": "review_plans/2026-09-08-tower-closure-source-review.json",
+    "sha256": "bba060c31cc740d5abf0ff3a50445275b6d8b374b3a7fc16023a0c65a750237b"
+  },
+  "reviewed_at": "2026-09-08T23:14:15.242230Z",
+  "reviewed_by": "Codex primary agent; source interpretation and implementation independently reviewed by a second agent, not blind outcome adjudication",
+  "rights": {
+    "basis": "Retained Tower main-origin terms sections 1 and 3; preserve original materials and notices, attribute Tower and do not transfer raw copies onward.",
+    "commercial_use_authorized": false,
+    "ir_subdomain_retention_authorized": false,
+    "model_training_authorized": false,
+    "raw_redistribution": false,
+    "use": "local_personal_informational_noncommercial_review_only"
+  },
+  "rows": [
+    {
+      "key": "tower-fab1-legacy-flow-discontinuation",
+      "scope_limit": "Legacy-flow discontinuation is distinct from the later last wafer output, facility demolition or loss of all company capacity.",
+      "subject_key": "fab1",
+      "support": [
+        "fab_consolidation_heading",
+        "complete_fab_consolidation_paragraph"
+      ],
+      "value": {
+        "date_base": null,
+        "date_high": "2024-12-31",
+        "date_literal": "fourth quarter of 2024",
+        "date_low": "2024-10-01",
+        "date_precision": "quarter",
+        "milestone_type": "legacy_150mm_flow_discontinuation",
+        "status": "completed"
+      }
+    },
+    {
+      "key": "tower-fab1-last-fab-output",
+      "scope_limit": "Last output has no numeric volume, exact day, restart prohibition or independently established permanent building closure.",
+      "subject_key": "fab1",
+      "support": [
+        "fab_consolidation_heading",
+        "complete_fab_consolidation_paragraph"
+      ],
+      "value": {
+        "date_base": null,
+        "date_high": "2025-01-31",
+        "date_literal": "January 2025",
+        "date_low": "2025-01-01",
+        "date_precision": "month",
+        "milestone_type": "last_fab_output",
+        "status": "completed"
+      }
+    },
+    {
+      "key": "tower-arai-operations-cessation",
+      "scope_limit": "Historical cessation reported in restructuring accounting context; not all Japanese fabs, a current physical state or independently measured capacity loss.",
+      "subject_key": "arai",
+      "support": [
+        "non_gaap_heading",
+        "complete_arai_context_paragraph"
+      ],
+      "value": {
+        "date_base": null,
+        "date_high": "2022-12-31",
+        "date_literal": "during 2022",
+        "date_low": "2022-01-01",
+        "date_precision": "year",
+        "milestone_type": "operations_cessation",
+        "status": "completed"
+      }
+    }
+  ],
+  "selection": "Three explicitly dated discontinuation or cessation events in the selected issuer release. The undated strategic-flow transfer remains supporting context. This is not a complete Tower historical project population or an independently verified closure census.",
+  "subjects": {
+    "arai": {
+      "kind": "facility",
+      "label": "Tower-reported Arai facility (source-native, canonical identity unresolved)",
+      "scope": "The Arai facility named in the issuer restructuring context; not all Japanese operations.",
+      "stable_key": "tower-issuer:arai-source-native-unresolved"
+    },
+    "fab1": {
+      "kind": "facility",
+      "label": "Tower Fab1 (source-native, canonical identity unresolved)",
+      "scope": "Fab1 as named in the issuer release; legacy-flow discontinuation and last output are distinct events on the same facility, not separate facilities.",
+      "stable_key": "tower-issuer:fab1-source-native-unresolved"
+    }
+  }
+}

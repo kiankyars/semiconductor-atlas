@@ -50,6 +50,7 @@ future interpreter upgrade needs an explicit compatibility review, not an ignore
 | `tsmc-source-quantities` | `admit_tsmc_source_quantities.py verify` | Reconstruct the entire existing quantity successor from its original parent, review and source bytes |
 | `ase-k18b-milestones` | `admit_ase_k18b_milestones.py verify` | Reconstruct the entire existing milestone successor from its parent and frozen handoff; no live queue dependency |
 | `infineon-villach-output` | `admit_infineon_villach_output.py verify` | Reconstruct the entire existing schema-8 successor from its parent, explicit admission review and complete retained PDF/policy/visual evidence chain |
+| `tower-closure-milestones` | `admit_tower_closure_milestones.py verify` | Reconstruct the entire existing schema-8 milestone successor from its parent, admission review and complete retained HTML/policy evidence graph |
 
 There is no arbitrary script/command route, acquisition, admission, study advancement, scoring or
 migration operation. Optional `--receipt` saves only a new local verification receipt. Each

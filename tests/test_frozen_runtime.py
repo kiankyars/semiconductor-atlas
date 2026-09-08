@@ -41,6 +41,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/admit_tsmc_source_quantities.py": PROBE,
                       "scripts/admit_ase_k18b_milestones.py": PROBE,
                       "scripts/admit_infineon_villach_output.py": PROBE,
+                      "scripts/admit_tower_closure_milestones.py": PROBE,
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -208,6 +209,22 @@ class FrozenRuntimeTests(unittest.TestCase):
                   "trusted-vintage-sha256": "c" * 64}
         result = self.replay(operation="guidance-interval", inputs=inputs)
         self.assertEqual(result["operation_receipt"]["marker"], "committed")
+
+    def test_tower_replay_keeps_hashes_literal_and_exposes_only_verify(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='tower-closure-milestones', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='tower-closure-milestones', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='tower-closure-milestones admit', inputs=inputs)
 
     def test_interpreter_drift_fails_before_running_any_code(self):
         with mock.patch.object(runtime, "interpreter", return_value={}), mock.patch.object(replay, "_capture") as child:
