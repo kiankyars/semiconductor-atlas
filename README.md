@@ -563,6 +563,13 @@ milestones: a publication-context-dated groundbreaking and a Q1 2028 building-co
 The new schema-7 snapshot preserves every parent row, physical-capacity boundary and forecast
 vintage, and replays completely without depending on the live review queue's later state.
 
+The isolated [Villach source-quantity admission](docs/infineon_villach_output_review.md)
+extends the core to schema 8 and retains all five reviewed fiscal-year produced-wafer-area totals
+for Infineon's source-native Villach site. Units, accounting scope, reporting periods and
+unspecified precision remain explicit. All older rows and physical-capacity values are preserved;
+wafer counts, installed capacity, yield, utilization and forecast outcomes are not inferred.
+The exact 28-file evidence chain and complete successor replay are verifiable offline.
+
 The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
 across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
 actions and historical cutoffs replay from an exportable append-only event log. The live pilot

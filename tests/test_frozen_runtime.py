@@ -40,6 +40,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/guidance_interval_baseline.py": PROBE,
                       "scripts/admit_tsmc_source_quantities.py": PROBE,
                       "scripts/admit_ase_k18b_milestones.py": PROBE,
+                      "scripts/admit_infineon_villach_output.py": PROBE,
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -185,6 +186,20 @@ class FrozenRuntimeTests(unittest.TestCase):
         for extra in ("freeze", "score", "--output", "--evidence-cutoff-at"):
             with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
                 replay.main([*arguments, extra])
+
+    def test_villach_replay_keeps_hashes_literal_and_exposes_only_verify(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='infineon-villach-output', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), self.assertRaises(ValueError):
+                    self.replay(operation='infineon-villach-output', inputs={**inputs, key: bad})
+        with self.assertRaises(ValueError):
+            self.replay(operation='infineon-villach-output admit', inputs=inputs)
 
     def test_guidance_replay_uses_retained_producer_after_current_code_changes(self):
         (self.repository / "scripts/guidance_interval_baseline.py").write_text("raise RuntimeError('new code')\n")

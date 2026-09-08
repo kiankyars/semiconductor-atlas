@@ -11,15 +11,16 @@ import hashlib
 import json
 import re
 from dataclasses import asdict, dataclass
-from datetime import date
+from datetime import date, timedelta
 from decimal import Decimal
 
 from . import models
 
 
-METRICS = {'wafer_capacity', 'wafer_shipments', 'wafer_output', 'capacity_utilization'}
+METRICS = {'wafer_capacity', 'wafer_shipments', 'wafer_output', 'capacity_utilization',
+           'produced_wafer_area'}
 SCOPES = {'company_aggregate': 'organization', 'source_native_facility': 'facility',
-          'source_native_project': 'project'}
+          'source_native_project': 'project', 'source_native_site': 'site'}
 QUALIFIERS = {'as_reported_precision_unspecified', 'approximate', 'greater_than', 'at_least',
               'less_than', 'at_most'}
 
@@ -59,11 +60,14 @@ class SourceQuantityMetadata:
         elif self.period_kind == 'quarter':
             valid = first.month in (1, 4, 7, 10) and first.day == 1 and last == date(
                 first.year, first.month + 2, calendar.monthrange(first.year, first.month + 2)[1])
+        elif self.period_kind == 'fiscal_year':
+            valid = (first.month != 1 and first.day == 1 and first.year < 9999
+                     and last == date(first.year + 1, first.month, 1) - timedelta(days=1))
         else:
             valid = False
         if not valid:
-            raise ValueError('source quantity period must be one complete calendar year or quarter')
-        if self.unit not in {'native_wafers', '12_inch_equivalent_wafers', 'percent'}:
+            raise ValueError('source quantity period must be one complete calendar year, calendar quarter, or non-calendar fiscal year')
+        if self.unit not in {'native_wafers', '12_inch_equivalent_wafers', 'percent', 'square_centimeters'}:
             raise ValueError('unsupported source quantity unit')
         diameter = self.native_wafer_diameter_inches
         if ((self.unit == 'native_wafers' and (type(diameter) is not int or diameter not in (6, 8, 12)))
@@ -71,6 +75,8 @@ class SourceQuantityMetadata:
             raise ValueError('native wafer diameter must match the native-unit contract')
         if (self.metric == 'capacity_utilization') != (self.unit == 'percent'):
             raise ValueError('utilization and wafer quantities have distinct units')
+        if (self.metric == 'produced_wafer_area') != (self.unit == 'square_centimeters'):
+            raise ValueError('produced wafer area and wafer counts have distinct units')
         if type(self.source_unit_scale) is not int or self.source_unit_scale not in (1, 1000, 1000000):
             raise ValueError('unsupported exact source-unit scale')
         if (not isinstance(self.source_number_literal, str)

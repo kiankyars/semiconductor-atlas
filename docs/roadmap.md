@@ -431,9 +431,10 @@ calibration follows. The schema-6 forecast input image and its original producer
 
 The [Villach output source review](infineon_villach_output_review.md) now retains exact issuer
 bytes and visually verifies all five labeled fiscal-year produced-wafer-area totals for one
-site. This closes a bounded acquisition and numeric-source-review gap. Typed area units,
-non-calendar fiscal periods and source-native site accounting scope still need core integration;
-the data adds no installed capacity, forecast/outcome pairs or calibrated performance yet.
+site. Its separate schema-8 admission now stores all five totals with typed area units,
+non-calendar fiscal periods and source-native site accounting scope, preserving the complete
+parent and actual admission time. It adds no installed capacity, forecast/outcome pairs or
+calibrated performance. The older review and forecast vintages remain unchanged.
 
 ## Phase 5: supply-demand scenarios and investable signals
 

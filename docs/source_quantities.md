@@ -1,13 +1,16 @@
 # Qualified source quantities
 
-Schema 7 adds `source_quantity_metadata` to numeric source-statement scalars. This stores
+Schema 7 adds `source_quantity_metadata` to numeric source-statement scalars. Schema 8 extends
+that same contract with produced wafer area, source-native site scope and non-calendar fiscal
+years while preserving old metadata and series identities. This stores
 publisher-reported quantities that cannot truthfully enter the five physical capacity bases.
 It does not introduce a sixth capacity basis or convert shipment observations into production.
 
 ## Numeric and temporal meaning
 
-Every quantity carries its metric, source-native accounting scope, complete calendar year or
-quarter, source period label, unit, native wafer diameter where applicable, exact unit scale,
+Every quantity carries its metric, source-native accounting scope, complete calendar year,
+calendar quarter or explicitly dated non-calendar fiscal year, source period label, unit,
+native wafer diameter where applicable, exact unit scale,
 number literal, numeric qualifier, reported/estimate/guidance classification and source definition.
 Publication and retrieval remain on the linked document; actual admission remains on the claim.
 The quantity's reporting period is not the claim's physical effective interval.
@@ -18,6 +21,11 @@ The scalar number is a **reference number interpreted with its mandatory qualifi
 `as_reported_precision_unspecified` preserves a bare published number without asserting exact
 physical precision. The original number literal and unit scale survive normalization into base
 units. Different native wafer diameters and 12-inch equivalents remain distinct units.
+`produced_wafer_area` uses only `square_centimeters`, with no native-diameter assignment or
+automatic conversion to wafer counts. A non-calendar fiscal year starts on the first day of
+February through December and ends the day before the same month in the next year; irregular
+and 52/53-week accounting periods remain unsupported. `source_native_site` requires a site entity,
+not a facility, project or company aggregate.
 
 The scalar, bulk source and historical query APIs include a `source_quantity` object inside the
 value. A quantity predicate with missing or invalid metadata fails rather than returning an
@@ -137,8 +145,10 @@ Non-announced physical capacity, facility-specific utilization/yield/qualificati
 outcome pairs and calibrated predictive performance remain separate unfinished north-star gates.
 The [Villach output review](infineon_villach_output_review.md) now retains and visually checks
 five site-level fiscal-year produced-wafer-area totals from an issuer environmental statement.
-These are not yet core quantities: schema 7 cannot express their area unit, fiscal periods or
-source-native site scope. Do not coerce them into calendar-year wafer-count capacity.
+The separate [schema-8 admission](infineon_villach_output_review.md#executed-core-admission)
+now stores all five with their area unit, fiscal periods and source-native site scope. They remain
+publisher-reported references, not installed capacity, wafer counts or independently measured
+forecast outcomes. Four original TSMC quantities and all other parent rows are preserved.
 The earlier frozen guidance vintage must still use its
 [original retained producer](frozen_runtime.md#september-8-guidance-producer-retention), not this
 evolved package. Its exact isolated replay passed again after the schema-7 code changes.
