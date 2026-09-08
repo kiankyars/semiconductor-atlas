@@ -50,9 +50,11 @@ or usable-capacity assertions. K18B remains a source-native project, separate fr
 aggregate, K28 and Nanzih Third Park. CMS/footer dates are not physical event dates.
 
 The separate source-review queue has three events, two verified captures and one handed-off
-candidate. It has zero pending text reviews, but **core admission remains unfinished**. Restoring
+candidate. It has zero pending text reviews; this queue disposition alone accepts no core claims. Restoring
 its exported history reproduced all three event cutoffs plus the instant before first admission.
 Nothing becomes system knowledge at the article's older publication date.
+The subsequent [separate core admission](ase_k18b_core_admission.md) now retains the two reviewed
+milestone statements in a new schema-7 snapshot while preserving the source queue and this capture.
 
 Local artifacts under this isolated checkout:
 
@@ -88,8 +90,8 @@ expected optional-payload test skipped. All 12 web tests, syntax checks, `git di
 source/wheel package builds passed. The parent checkout, checksum ledger, baseline, analytics
 producer and schema-5 database remain unchanged; the retained schema-7 database hash also matches.
 
-Next: admit the separately reviewed K18B event types into a new source-native core successor,
-preserving the historical ceremony date and expected building-completion quarter without
-inventing a midpoint, canonical facility identity, physical effective date or calibrated confidence.
-The existing NIST importer deliberately accepts production targets only and must not be loosened
-to relabel this building target. Broader coverage and measured predictive improvement remain open.
+The separately reviewed K18B event types are now admitted in the linked core successor, preserving
+the historical ceremony date and expected building-completion quarter without inventing a midpoint,
+canonical facility identity, physical effective date or calibrated confidence. The NIST importer
+remains production-target-only. Broader physical evidence, monitored refresh and measured predictive
+improvement remain open.

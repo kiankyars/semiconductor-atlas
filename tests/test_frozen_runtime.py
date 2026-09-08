@@ -39,6 +39,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/record_realized_fab_cohort.py": PROBE,
                       "scripts/guidance_interval_baseline.py": PROBE,
                       "scripts/admit_tsmc_source_quantities.py": PROBE,
+                      "scripts/admit_ase_k18b_milestones.py": PROBE,
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -155,6 +156,22 @@ class FrozenRuntimeTests(unittest.TestCase):
             with mock.patch.object(replay, "_capture") as child, self.assertRaises(ValueError):
                 self.replay(operation="guidance-interval", inputs=changed)
             child.assert_not_called()
+
+    def test_k18b_replay_is_verify_only_and_has_no_live_queue_dependency(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='ase-k18b-milestones', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for changed in ({**inputs, 'queue': self.root / 'live.sqlite'},
+                        {**inputs, 'expected-output-sha256': '--admit'},
+                        {**inputs, 'expected-review-sha256': Path('a' * 64)}):
+            with mock.patch.object(replay, '_capture') as child, self.assertRaises(ValueError):
+                self.replay(operation='ase-k18b-milestones', inputs=changed)
+            child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='ase-k18b-milestones admit', inputs=inputs)
 
     def test_guidance_cli_preserves_digest_type_and_disallows_freeze_or_score(self):
         arguments = ["--bundle", str(self.bundle), "--sha256", self.receipt["sha256"], "--commit", self.commit,

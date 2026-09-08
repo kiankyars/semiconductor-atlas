@@ -142,9 +142,12 @@ are visible by geography and source family.
 
 The isolated [September 8 ASE K18B acquisition](ase_k18b_acquisition.md) removes one source-access
 representation gap using separately versioned reviewed-404 and exact-query rules. Two real captures
-and a durable text-review handoff are verified. Core admission of the historical groundbreaking
-and expected building-completion period is next; canonical identity, production readiness,
-scheduled coverage and calibrated forecasts do not follow from a successful capture.
+and a durable text-review handoff are verified. The subsequent [core admission](ase_k18b_core_admission.md)
+now retains the historical groundbreaking and expected building-completion period as two
+source-native milestone statements, with null effective dates, confidence and midpoints. Its
+new schema-7 snapshot preserves every parent row and exactly replays the reviewed handoff without
+requiring the live queue to remain at its old head. Canonical identity, current production
+readiness, scheduled coverage and calibrated forecasts remain separate unresolved gates.
 
 The AI-critical cross-vintage comparison now provides a bounded foundation for this phase. It pins
 both release manifests, derives stable semantic series, records `reaffirmed`, `revised`, `added`,

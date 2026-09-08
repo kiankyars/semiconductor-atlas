@@ -48,6 +48,7 @@ future interpreter upgrade needs an explicit compatibility review, not an ignore
 | `target-population` | `evaluate_project_targets.py verify` | Retained census consistency; not independent live-core/source authentication |
 | `guidance-interval` | `guidance_interval_baseline.py verify` | Re-execute the frozen comparator using its original database, evidence and trusted vintage hash |
 | `tsmc-source-quantities` | `admit_tsmc_source_quantities.py verify` | Reconstruct the entire existing quantity successor from its original parent, review and source bytes |
+| `ase-k18b-milestones` | `admit_ase_k18b_milestones.py verify` | Reconstruct the entire existing milestone successor from its parent and frozen handoff; no live queue dependency |
 
 There is no arbitrary script/command route, acquisition, admission, study advancement, scoring or
 migration operation. Optional `--receipt` saves only a new local verification receipt. Each
@@ -200,3 +201,26 @@ The current evolved package is not substituted for that historical producer.
 The subsequent full regression run completed 1,550 core tests in 241.484 seconds: 1,549 passed
 and one expected optional-payload test skipped. All 12 web tests, Python syntax checks and both
 package builds passed. Twenty-one runtime tests include the new verify-only quantity operation.
+
+## September 8 K18B milestone evolution
+
+Before adding the K18B importer, committed acquisition producer
+`8b13432d6edffee6c1d7c2e73e888e51134cc6fb` was retained at
+`artifacts/2026-09-08-8b13432-frozen-runtime-v1.json`: 4,015,807 bytes, SHA-256
+`b0ab7411a3ff007d1a7daf2420d61baaf02ed9ea11544d350a0bb3a0377cbe61`.
+All 127 members were separately compared to that commit's Git blobs during the K18B core audit.
+
+The added `ase-k18b-milestones` operation accepts absolute `parent`, `review`, `reference-root` and
+`output` paths plus literal `expected-review-sha256` and `expected-output-sha256`. It runs only
+the existing-successor verifier: no queue argument, new admission, migration, acquisition or
+forecast operation is available. Later source-review events therefore cannot prevent historical
+reconstruction from the frozen reviewed history. The [core admission note](ase_k18b_core_admission.md)
+records exact successor hashes and the source-to-core boundaries.
+
+After adding the importer, the original quantity successor again reconstructed with producer
+`1944fcc`, and the earlier guidance comparator again re-executed with producer `0a78d25`.
+Their original database/vintage bytes remain unchanged. The new receipts are
+`artifacts/2026-09-08-post-k18b-source-quantity-replay-v1.json` (7,463 bytes, SHA-256
+`81db1932b9a59f63a0f59c53134dae5303f525b21a502569b96516c148caa80e`) and
+`artifacts/2026-09-08-post-k18b-guidance-replay-v1.json` (3,450 bytes, SHA-256
+`d2ad2ee41473d059316a2ae8ea78a76a90f9e0497dc80526141fff1dd9c0b72e`).

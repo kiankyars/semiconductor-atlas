@@ -558,6 +558,10 @@ This is a batch acquisition tool, not a scheduled service or complete publisher 
 The isolated [ASE K18B municipal acquisition](docs/ase_k18b_acquisition.md) adds two verified
 observations and a source-text handoff using explicit reviewed-missing-robots semantics. It does
 not change the campus baseline, admit production claims or reroute scheduled execution.
+The subsequent [core admission](docs/ase_k18b_core_admission.md) adds exactly two source-native
+milestones: a publication-context-dated groundbreaking and a Q1 2028 building-completion target.
+The new schema-7 snapshot preserves every parent row, physical-capacity boundary and forecast
+vintage, and replays completely without depending on the live review queue's later state.
 
 The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
 across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer

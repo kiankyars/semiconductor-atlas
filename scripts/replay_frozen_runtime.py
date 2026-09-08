@@ -33,10 +33,15 @@ OPERATIONS = {
     "tsmc-source-quantities": ("scripts/admit_tsmc_source_quantities.py", "verify",
                               ("parent", "review", "source-body", "output",
                                "expected-review-sha256", "expected-output-sha256")),
+    "ase-k18b-milestones": ("scripts/admit_ase_k18b_milestones.py", "verify",
+                            ("parent", "review", "reference-root", "output",
+                             "expected-review-sha256", "expected-output-sha256")),
 }
 DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
                  ("tsmc-source-quantities", "expected-review-sha256"),
-                 ("tsmc-source-quantities", "expected-output-sha256")}
+                 ("tsmc-source-quantities", "expected-output-sha256"),
+                 ("ase-k18b-milestones", "expected-review-sha256"),
+                 ("ase-k18b-milestones", "expected-output-sha256")}
 MAX_OUTPUT = 1_000_000
 _LOADED_PRODUCER = runtime.digest(Path(__file__).read_bytes())
 
