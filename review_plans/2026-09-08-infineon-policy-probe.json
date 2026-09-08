@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Inspect and retain Infineon's robots policy before any direct request for issuer terms, environmental reports or production disclosures. No manufacturing document is requested by this plan.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "infineon-robots",
+    "url": "https://www.infineon.com/robots.txt",
+    "purpose": "access_policy",
+    "company": "Infineon",
+    "country_code": "AT",
+    "source_family": "infineon-issuer",
+    "scope": "Publisher access policy only; no semiconductor facility or manufacturing assertion.",
+    "media_types": ["text/plain"]
+  }
+}

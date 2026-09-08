@@ -135,6 +135,10 @@ tables, issuer totals, estimate definitions and guidance markers before any revi
 
 Non-announced physical capacity, facility-specific utilization/yield/qualification, forecast
 outcome pairs and calibrated predictive performance remain separate unfinished north-star gates.
+The [Villach output review](infineon_villach_output_review.md) now retains and visually checks
+five site-level fiscal-year produced-wafer-area totals from an issuer environmental statement.
+These are not yet core quantities: schema 7 cannot express their area unit, fiscal periods or
+source-native site scope. Do not coerce them into calendar-year wafer-count capacity.
 The earlier frozen guidance vintage must still use its
 [original retained producer](frozen_runtime.md#september-8-guidance-producer-retention), not this
 evolved package. Its exact isolated replay passed again after the schema-7 code changes.

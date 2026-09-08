@@ -1,0 +1,130 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "infineon-villach-output-source-review-2026-09-08",
+  "review_completed_at": "2026-09-08T21:50:30Z",
+  "review_clock_precision": "second; actual tool clock after primary visual review",
+  "reviewer": "Codex primary agent; local source bytes and complete selected PDF pages",
+  "decision": "retain_reviewed_site_output_series_for_typed_core_admission",
+  "claim_acceptance": false,
+  "collector_enabled": false,
+  "baseline_modified": false,
+  "registered_study_modified": false,
+  "parent_database": {
+    "path": "artifacts/2026-09-08-ase-k18b-milestones-schema7.sqlite",
+    "bytes": 242032640,
+    "sha256": "ca0d973348301ee5f2d8f7c7e375838f56c224f8f46a1df6351d15ec9b366af3"
+  },
+  "acquisition": {
+    "plan": "review_plans/2026-09-08-infineon-villach-source-acquisition.json",
+    "plan_sha256": "8055d6cfd830ddd80ab2ad049e8d3f76fda59d63a6236ba270f074f30d79333e",
+    "packet": "artifacts/2026-09-08-infineon-villach-source-capture-v1",
+    "manifest_sha256": "098e94943c67e331143a20415290ca57bf5a3d8a58fba850c110b82c5c4f4207",
+    "ledger_sha256": "9ed462b5ba302e9e40a7d2e084757788bc682f9508ec9062ea36608987a2b404",
+    "direct_requests": 4,
+    "request_breakdown": "One robots probe, one terms probe and two document GETs; all succeeded with verified TLS, without redirects, retries, credentials or cookies. Web research observations are separate and not included in this direct-request count.",
+    "rights": "Infineon Terms of Use section 3.2 permits informational non-commercial or personal downloading with originals unchanged, notices preserved and attribution. This packet is retained locally under that limited permission, not approved for commercial use, Atlas release redistribution or model training.",
+    "clock_note": "The acquisition plan's reviewed_at is minute-resolution planning metadata. Actual GET start and finish clocks are retained in the source-check ledgers. Neither is a historical physical effective date."
+  },
+  "source": {
+    "publisher": "Infineon Technologies Austria AG, with Infineon Technologies AG",
+    "url": "https://www.infineon.com/row/public/documents/regions/austria/2025-uwe-de-web.pdf",
+    "retained_path": "artifacts/2026-09-08-infineon-villach-source-capture-v1/responses/infineon-villach-environment-2025.body",
+    "sha256": "1606c4ffdb5f4b9f5118f9f003d423c5715b3fb32a8f20d0c712219d9ecba032",
+    "bytes": 11110904,
+    "pdf_pages": 72,
+    "title": "Aktualisierte Umwelterklärung 2025",
+    "publication_date": null,
+    "publication_note": "The exact publication date has not been established. PDF creation/modification metadata is not substituted for publication. The edition label 2025 is not a January 1 date.",
+    "retrieval_started_at": "2026-09-08T21:45:38.924846Z",
+    "retrieval_finished_at": "2026-09-08T21:45:39.929888Z",
+    "reporting_period_start": "2024-10-01",
+    "reporting_period_end": "2025-09-30",
+    "scope": "Source-native Infineon Villach site; not all Austria operations, an individual building or production line, or the cross-country One Virtual Fab network.",
+    "geography": "Villach, Austria; source-reported address Siemensstraße 2, A-9500 on page 68. No point or boundary geometry inferred."
+  },
+  "visual_review": {
+    "method": "Poppler pdftoppm 26.08.0 rendered the retained unmodified PDF locally; primary agent inspected complete pages, not only extracted text or cropped chart segments.",
+    "pages_one_based": [2, 24, 25, 38, 39, 65, 68],
+    "retained_visual_packet": "artifacts/2026-09-08-infineon-villach-visual-review-v1",
+    "retained_visual_manifest_sha256": "1a2ce0f89b8a65543eb578bbb53d422f992f3a5e0fa5e1de15fe29500d289645",
+    "second_agent_check": "A second agent independently rendered and inspected retained pages 2, 25, 39 and 68, confirmed all five total labels, units and key scope/assurance limits, and verified all three source-check ledgers plus the ten-file capture inventory and four policy dependency copies. This is a second interpretation check, not independent manufacturing evidence or a blind forecasting study.",
+    "page_numbering": "PDF page indices plus one equal printed page numbers for these pages.",
+    "roles": {
+      "2": "Report site scope, exact fiscal-year interval and colored-frame convention for the EMAS portion.",
+      "24": "Villach site heading within the EMAS portion.",
+      "25": "Frontend/backend boundary and separate site fact box.",
+      "38": "Production-area definition, process-layer comparability limitation, and qualitative production-mix context.",
+      "39": "Complete five-year produced-wafer-area chart, all total labels, fiscal-year axis, units and diameter legend; separate test-wafer/reclaim context.",
+      "65": "Glossary explicitly defines Infineon's fiscal year as October 1 through September 30 and distinguishes the cross-site network.",
+      "68": "EMAS validation statement, scope and date; limits on standalone use and distinction from registration."
+    },
+    "text_extraction_limitation": "pdftotext -layout omitted all five numeric chart labels. Visual transcription is the source interpretation; it is not an automated numeric extraction or an independently measured manufacturing series.",
+    "chart_denominator": "All five labeled total bars on page 39, fiscal years 2020/21 through 2024/25. Diameter segments have no numeric labels and are not digitized or assigned counts."
+  },
+  "reviewed_output_series": {
+    "metric": "produced_wafer_area",
+    "scope_kind": "source_native_site",
+    "unit": "square_centimeters",
+    "source_unit_scale": 1000000,
+    "numeric_qualifier": "as_reported_precision_unspecified",
+    "assertion_kind": "reported",
+    "period_kind": "fiscal_year",
+    "period_derivation": "FY2024/25 endpoints are explicitly printed on page 2. Earlier row endpoints apply the October-through-September fiscal convention explicitly defined on page 65 to the chart's original labels; those earlier endpoints are not separately printed dates.",
+    "source_definition": "Publisher's produced wafer surface area across the Villach site's wafer-diameter mix, used as an environmental-indicator denominator; not cleanroom area, wafer starts/counts, process-layer-weighted workload, installed capacity, shipments or qualified good-die output.",
+    "rows": [
+      {"source_period_label": "2020/21", "period_start": "2020-10-01", "period_end": "2021-09-30", "source_number_literal": "462,5", "normalized_number_literal": "462.5", "reference_square_centimeters": 462500000},
+      {"source_period_label": "2021/22", "period_start": "2021-10-01", "period_end": "2022-09-30", "source_number_literal": "488,9", "normalized_number_literal": "488.9", "reference_square_centimeters": 488900000},
+      {"source_period_label": "2022/23", "period_start": "2022-10-01", "period_end": "2023-09-30", "source_number_literal": "517,8", "normalized_number_literal": "517.8", "reference_square_centimeters": 517800000},
+      {"source_period_label": "2023/24", "period_start": "2023-10-01", "period_end": "2024-09-30", "source_number_literal": "524,0", "normalized_number_literal": "524.0", "reference_square_centimeters": 524000000},
+      {"source_period_label": "2024/25", "period_start": "2024-10-01", "period_end": "2025-09-30", "source_number_literal": "505,5", "normalized_number_literal": "505.5", "reference_square_centimeters": 505500000}
+    ],
+    "retrospective_only": true,
+    "physical_capacity_basis": null,
+    "valid_from": null,
+    "valid_to": null,
+    "confidence": null,
+    "comparability_limits": [
+      "Fiscal years must not be relabeled as calendar years or divided into invented quarters.",
+      "The source warns that wafer area omits process-layer counts and is not fully comparable across production mix.",
+      "No unit conversion to native or equivalent wafer counts without a separately justified contract; no native-diameter allocation from bar heights.",
+      "No yield, qualification, utilization or installed-capacity inference from area, chip count, equipment count or environmental intensity.",
+      "The precise treatment of productive, test, filler and reclaimed wafers in the chart's accounting perimeter is not exhaustively established; keep the publisher definition rather than silently labeling sellable output.",
+      "Earlier years are observations retained in one later edition, not source vintages captured in those years or pre-outcome forecasts."
+    ]
+  },
+  "assurance_context": {
+    "organization": "ETA Umweltmanagement GmbH",
+    "validator_id": "AT-V-0001",
+    "statement_date": "2026-03-19",
+    "scope": "Issuer-published validation statement for the marked Villach EMAS portion; page 39 has the corresponding colored frame.",
+    "limits": "This is not a separately acquired validator report, an EMAS-register lookup, a wafer-by-wafer independent audit, a yield certificate or confidence 1.0. The statement itself says it is not equivalent to EMAS registration and is not a standalone basis for public information."
+  },
+  "secondary_issuer_context": {
+    "url": "https://www.infineon.com/regional/austria/press-release/2025/fiscal-year-25",
+    "retained_path": "artifacts/2026-09-08-infineon-villach-source-capture-v1/responses/infineon-villach-fy2025-release.body",
+    "sha256": "b323708eb839e6e02024a8922a250b222be13d2b2b71f1d8a0b44fbc3af70c57",
+    "bytes": 1569037,
+    "publication_date": "2025-12-16",
+    "review": "The press release reports Villach chip production of 8 billion in FY2025 and 7.5 billion in FY2024. PDF page 25 separately gives approximately 8 billion chips and 1.75 million mixed-diameter wafers for FY2024/25. These are separate metrics, not area-to-chip conversion inputs or independent corroboration.",
+    "admission_status": "not_selected_for_numeric_core_admission",
+    "parser_limit": "The existing retained-filing _EvidenceHTML parser rejected this page's prefix nesting. That parser was not relaxed, detached excerpts were not admitted and no parser-verified HTML evidence span is claimed."
+  },
+  "data_contract_gap": {
+    "current_schema_version": 7,
+    "missing_dimensions": ["produced wafer area metric and area unit", "non-calendar fiscal-year period", "source-native site accounting scope"],
+    "required_followup": "Add a versioned, typed representation of these dimensions without changing existing quantity series semantics. Admit all five reviewed totals with source and review hashes into a new successor of the preserved schema-7 image. Preserve original fiscal labels, actual future admission time, reported precision and site scope. Do not force these into existing wafer-count capacity fields.",
+    "producer_retention": "The current committed 1707311 producer already has a verified frozen runtime at artifacts/2026-09-08-1707311-frozen-runtime-v1.json, SHA-256 c0be334c1f245d9f1b1e0fed2fbbea098266803f4cf05eb60acbd2f8e1e80274. No producer source file changes in this review."
+  },
+  "boundaries": {
+    "manufacturing_claims_added": 0,
+    "source_quantity_rows_added": 0,
+    "physical_capacity_claims_added": 0,
+    "canonical_identity_assignments_added": 0,
+    "forecast_pairs_added": 0,
+    "source_documents_archived": 2,
+    "raw_redistribution": false,
+    "model_training": false,
+    "scheduled_execution_rerouted": false,
+    "calibrated_forecast": false
+  }
+}

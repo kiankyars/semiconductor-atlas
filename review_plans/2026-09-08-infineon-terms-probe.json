@@ -1,0 +1,25 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Retain the public issuer terms for complete local review. The prior robots response permits this exact path; the web-read terms explicitly permit informational non-commercial or personal downloading with notices preserved. This probe does not acquire manufacturing documents or accept claims.",
+  "robots_dependency": {
+    "path": "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body",
+    "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+  },
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 4000000,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "infineon-terms",
+    "url": "https://www.infineon.com/legal/usage-terms",
+    "purpose": "rights_policy",
+    "company": "Infineon",
+    "country_code": "AT",
+    "source_family": "infineon-issuer",
+    "scope": "Publisher rights policy only; local informational review, no public distribution or commercial-use approval.",
+    "media_types": ["text/html"]
+  }
+}

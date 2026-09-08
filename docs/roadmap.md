@@ -429,6 +429,12 @@ schema 7. This addresses a numeric source-representation gap, not the Phase 4 fo
 gate: no physical capacity basis, facility allocation, utilization, realized forecast pair or
 calibration follows. The schema-6 forecast input image and its original producer remain retained.
 
+The [Villach output source review](infineon_villach_output_review.md) now retains exact issuer
+bytes and visually verifies all five labeled fiscal-year produced-wafer-area totals for one
+site. This closes a bounded acquisition and numeric-source-review gap. Typed area units,
+non-calendar fiscal periods and source-native site accounting scope still need core integration;
+the data adds no installed capacity, forecast/outcome pairs or calibrated performance yet.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,
