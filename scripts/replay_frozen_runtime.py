@@ -28,7 +28,10 @@ OPERATIONS = {
     "target-policy": ("scripts/evaluate_prospective_source_targets.py", "verify-policy",
                       ("registration", "policy", "reference-root")),
     "target-population": ("scripts/evaluate_project_targets.py", "verify", ("frozen",)),
+    "guidance-interval": ("scripts/guidance_interval_baseline.py", "verify",
+                          ("database", "vintage", "trusted-vintage-sha256")),
 }
+DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256")}
 MAX_OUTPUT = 1_000_000
 _LOADED_PRODUCER = runtime.digest(Path(__file__).read_bytes())
 
@@ -128,6 +131,9 @@ def run_verified(bundle, *, expected_sha256, expected_commit, operation, inputs,
         raise ValueError("replay input fields must exactly match the selected operation")
     arguments = [command]
     for field in fields:
+        if (operation, field) in DIGEST_FIELDS:
+            arguments.extend(["--" + field, runtime._hex(inputs[field], 64)])
+            continue
         path = Path(inputs[field])
         if not path.is_absolute() or ".." in path.parts:
             raise ValueError("replay evidence inputs require explicit absolute paths")
@@ -197,7 +203,8 @@ def main(argv=None):
     for name, (_, _, fields) in OPERATIONS.items():
         command = commands.add_parser(name)
         for field in fields:
-            command.add_argument("--" + field, type=Path, required=True)
+            command.add_argument("--" + field, type=str if (name, field) in DIGEST_FIELDS else Path,
+                                 required=True)
     args = parser.parse_args(argv)
     inputs = {field: getattr(args, field.replace("-", "_")) for field in OPERATIONS[args.operation][2]}
     try:

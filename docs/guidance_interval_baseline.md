@@ -68,6 +68,10 @@ of external CSS or a guarantee that a publisher currently displays the same stat
 
 Source-checkout entry points:
 
+After package or migration changes, use the separately retained
+[September 8 producer runtime](frozen_runtime.md#september-8-guidance-producer-retention) to replay
+this vintage. The current checkout's code must not be substituted for the recorded producer.
+
 ```sh
 python3 scripts/guidance_interval_baseline.py freeze \
   --database artifacts/2026-09-08-tsmc-fab-correspondence-schema6.sqlite \

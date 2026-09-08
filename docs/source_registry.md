@@ -49,6 +49,15 @@ but their applicability to the expanded project is unresolved. Failed IR and mun
 checks are retained, and those document bodies were not acquired. This review does not authorize
 a general publisher crawler or certify complete update coverage.
 
+The [September 8 UMC capacity-source review](../review_plans/2026-09-08-umc-capacity-source-review.json)
+identifies twelve-fab annual and quarterly tables but admits no quantities. An exact retained
+robots response disallows the issuer's `/upload/` report and terms-PDF paths; a separate direct
+SEC policy probe returned an access-rejection page. No manufacturing document was archived by
+this review and neither route is activated. Web-visible tables remain research leads, not
+byte-verified claims. A future admission must preserve estimated capacity versus actual output,
+company versus fab scope, native versus equivalent wafer units, reporting periods and guidance
+markers. Estimated maximum output does not automatically establish a physical capacity basis.
+
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |
 | [Taiwan MOENV EMS_S_01](https://data.moenv.gov.tw/dataset/detail/EMS_S_01) | Taiwan source-native facility identities, exact semiconductor industry classes, full addresses, environmental-registry fields, and WGS84 point candidates | **Reviewed and accepted 2026-07-20.** The official catalogue assigns [Taiwan Open Government Data License 1.0](https://data.gov.tw/license), which permits reuse and derivatives with explicit attribution. The dataset is published by the Resource Circulation Administration and declares daily refresh. | **First non-U.S. facility adapter accepted.** The retained full package is filtered locally to exact `industryid` `2611`, `2612`, or `2613` after `industrygroup=261`; its publisher checksum and every distinct same-`emsno` variant replay offline. Environmental-control flags mean registry inclusion only, never operating status. Valid WGS84 coordinates are source points, not site boundaries. Business and factory-registration identifiers remain resolution evidence, not automatic organization or facility merges. The accepted 2026-07-20 snapshot contains 724 source-native facility identities and 798 distinct variants. |

@@ -723,6 +723,12 @@ It preserves mass production as a distinct event and prespecifies complete quart
 review, including explicit nonoccurrence-window misses. This is a comparator for a future model
 to beat, not a fitted forecast, a fresh source search or a measured performance result.
 
+Its [original producer is now retained for isolated replay](docs/frozen_runtime.md#september-8-guidance-producer-retention),
+so later package and migration changes need not invalidate the old vintage. Separately, the
+[UMC capacity-source review](review_plans/2026-09-08-umc-capacity-source-review.json) identifies
+twelve-fab quantity tables but admits no cells: direct source acquisition is not approved, and
+estimated maximum output must not be relabeled as installed, qualified or usable capacity.
+
 The separate [realized-event workflow](docs/realized_milestones.md) now retains one
 [reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
 with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a

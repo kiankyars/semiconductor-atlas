@@ -37,6 +37,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "semiconductor_atlas/migrations/0001_initial.sql": "-- original SQL\n",
                       "semiconductor_atlas/adapters/__init__.py": "",
                       "scripts/record_realized_fab_cohort.py": PROBE,
+                      "scripts/guidance_interval_baseline.py": PROBE,
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -114,6 +115,52 @@ class FrozenRuntimeTests(unittest.TestCase):
             self.replay(inputs={**self.inputs, "output": self.root / "new.json"})
         with self.assertRaises(ValueError):
             self.replay(inputs={**self.inputs, "cohort": "relative.json"})
+
+    def test_guidance_replay_passes_exact_digest_as_literal_not_path(self):
+        inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
+                  "trusted-vintage-sha256": "a" * 64}
+        result = self.replay(operation="guidance-interval", inputs=inputs)
+        self.assertEqual(result["operation_receipt"]["arguments"], [
+            "verify", "--database", str(inputs["database"]), "--vintage", str(inputs["vintage"]),
+            "--trusted-vintage-sha256", "a" * 64])
+        self.assertFalse(result["network_acquisition_requested"])
+        self.assertFalse(result["core_migration_requested"])
+
+    def test_guidance_replay_rejects_missing_malformed_or_option_like_digest_before_execution(self):
+        inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
+                  "trusted-vintage-sha256": "a" * 64}
+        for digest in (None, True, 64, "A" * 64, "a" * 63, "--output=/tmp/not-allowed", Path("a" * 64)):
+            with self.subTest(digest=digest), mock.patch.object(replay, "_capture") as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation="guidance-interval", inputs={**inputs, "trusted-vintage-sha256": digest})
+                child.assert_not_called()
+        for changed in ({key: value for key, value in inputs.items() if key != "trusted-vintage-sha256"},
+                        {**inputs, "output": self.root / "output.json"},
+                        {**inputs, "database": "relative.sqlite"}):
+            with mock.patch.object(replay, "_capture") as child, self.assertRaises(ValueError):
+                self.replay(operation="guidance-interval", inputs=changed)
+            child.assert_not_called()
+
+    def test_guidance_cli_preserves_digest_type_and_disallows_freeze_or_score(self):
+        arguments = ["--bundle", str(self.bundle), "--sha256", self.receipt["sha256"], "--commit", self.commit,
+                     "--working-directory", str(self.repository), "guidance-interval",
+                     "--database", str(self.root / "db.sqlite"), "--vintage", str(self.root / "vintage.json"),
+                     "--trusted-vintage-sha256", "b" * 64]
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            self.assertEqual(replay.main(arguments), 0)
+        self.assertEqual(json.loads(stdout.getvalue())["operation_receipt"]["arguments"][-1], "b" * 64)
+        for extra in ("freeze", "score", "--output", "--evidence-cutoff-at"):
+            with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                replay.main([*arguments, extra])
+
+    def test_guidance_replay_uses_retained_producer_after_current_code_changes(self):
+        (self.repository / "scripts/guidance_interval_baseline.py").write_text("raise RuntimeError('new code')\n")
+        (self.repository / "semiconductor_atlas/models.py").write_text("raise RuntimeError('new schema')\n")
+        inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
+                  "trusted-vintage-sha256": "c" * 64}
+        result = self.replay(operation="guidance-interval", inputs=inputs)
+        self.assertEqual(result["operation_receipt"]["marker"], "committed")
 
     def test_interpreter_drift_fails_before_running_any_code(self):
         with mock.patch.object(runtime, "interpreter", return_value={}), mock.patch.object(replay, "_capture") as child:

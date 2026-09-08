@@ -46,11 +46,14 @@ future interpreter upgrade needs an explicit compatibility review, not an ignore
 | `target-registration` | `shadow_source_targets.py verify` | Registered code and retained source-input population |
 | `target-policy` | `evaluate_prospective_source_targets.py verify-policy` | Registered policy, code and inputs |
 | `target-population` | `evaluate_project_targets.py verify` | Retained census consistency; not independent live-core/source authentication |
+| `guidance-interval` | `guidance_interval_baseline.py verify` | Re-execute the frozen comparator using its original database, evidence and trusted vintage hash |
 
 There is no arbitrary script/command route, acquisition, admission, study advancement, scoring or
 migration operation. Optional `--receipt` saves only a new local verification receipt. Each
 operation requires its exact named input fields and absolute evidence paths. Evidence remains at
 its original location; `--reference-root` points to the original repository, not the code runtime.
+The guidance operation additionally requires `--trusted-vintage-sha256` as an exact lowercase
+64-character digest, not a path. It exposes only `verify`, never `freeze`, outcome admission or scoring.
 
 Verified source bytes are materialized into a private temporary directory. Python runs with
 `-I -S -B`, a sanitized environment and the retained root explicitly added to its import path.
@@ -126,3 +129,50 @@ Evolve schema 6 in a separately isolated working checkout/database until the exe
 transition has been explicitly handled. Do not repin an active study to new code, alter its
 window, or backdate historical observations. This runtime removes a replay obstacle; it does not
 establish canonical identity, add forecast/outcome pairs or satisfy the north-star.
+
+## September 8 guidance-producer retention
+
+Before further source-quantity model evolution, the isolated successor retained committed producer
+`0a78d259d4134eb47276bc8afecbed05b1f9cd51` in
+`artifacts/2026-09-08-0a78d25-frozen-runtime-v1.json`:
+
+- Whole-file SHA-256: `822159a351602a49f6a46b0a2e9460028e5e4a595dd11e2e729a19721b1b3b4a`.
+- 3,973,073 bundle bytes; 123 files containing 2,952,711 source bytes.
+- No database, source body, review plan or forecast artifact is embedded.
+
+The new allowlisted `guidance-interval` operation replayed the real September 8 vintage in a
+fresh retained-code process. All 871,408 vintage bytes matched its independently retained SHA-256
+`d7d0b539717b3c51799710190e21c40247e8d62b20908d7035992a1ba7de4b00`.
+The audit resolved all 22 imported project modules inside the retained runtime. Counts remain
+seven screened, six retained, three issued, three abstained and one excluded. No facts, new
+prediction vintage or outcome score was created.
+
+Receipt: `artifacts/2026-09-08-frozen-guidance-replay-v1.json`, 3,450 bytes, SHA-256
+`e5b22f292a03972e99edc8159a259e493cf228098c3d1c37298cb49f60a88d30`.
+
+```sh
+python3 scripts/replay_frozen_runtime.py \
+  --bundle /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-0a78d25-frozen-runtime-v1.json \
+  --sha256 822159a351602a49f6a46b0a2e9460028e5e4a595dd11e2e729a19721b1b3b4a \
+  --commit 0a78d259d4134eb47276bc8afecbed05b1f9cd51 \
+  --working-directory /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  guidance-interval \
+  --database /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-tsmc-fab-correspondence-schema6.sqlite \
+  --vintage /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-guidance-interval-baseline-v1.json \
+  --trusted-vintage-sha256 d7d0b539717b3c51799710190e21c40247e8d62b20908d7035992a1ba7de4b00
+```
+
+The original comparator code inventory remains strict, including every package Python/SQL file.
+Evolving that inventory must use this old runtime for the old vintage, not weaken its fingerprint
+check. The current interpreter must still match. The original parent checkout, detector runtime
+and scheduled execution are not repinned by this retention.
+
+All 123 decoded runtime members were independently compared with `git show` at the retained
+commit and matched. Twenty runtime tests pass, including four new tests for literal digest
+handling, malformed/missing inputs, the verify-only CLI and replay after current-code changes.
+These tests and the real replay establish producer isolation, not forecasting performance.
+
+The September 8 full regression run completed 1,523 core tests in 241.024 seconds: 1,522 passed
+and one expected optional-payload test skipped. All 12 web tests and Python syntax checks passed.
+The parent checksum ledger, baseline, analytics producer and schema-5 database hashes, plus the
+child schema-6 database and frozen forecast hashes, remained unchanged.
