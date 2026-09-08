@@ -710,6 +710,12 @@ and unknown or censored cases without writing core claims or embedding publisher
 workflow is tested, but no real prediction/outcome study or calibrated forecasting result has been
 produced. See the [implementation review](docs/milestone_benchmark_implementation_review.md).
 
+The isolated [September 8 readiness review](docs/forecast_readiness_2026-09-08.md) screens all
+eight expected claims on seven projects and repairs the experimental capacity bridge's caller
+cutoff override and linked-cancellation conflict. Caller-provided `claims=` must now match the
+complete database view at both cutoffs; it cannot replace that view with selected or altered facts.
+These repairs do not turn the experimental scenarios into calibrated forecasts.
+
 The separate [realized-event workflow](docs/realized_milestones.md) now retains one
 [reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
 with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a

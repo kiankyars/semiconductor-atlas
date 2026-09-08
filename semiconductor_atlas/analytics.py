@@ -7,6 +7,7 @@ import io
 import json
 import sqlite3
 from collections import defaultdict
+from contextlib import contextmanager
 from dataclasses import asdict, dataclass
 from datetime import date
 from typing import Iterable, Iterator, Sequence, overload
@@ -276,6 +277,16 @@ def _period_exclusion(
     return None
 
 
+@contextmanager
+def _forecast_snapshot(connection: sqlite3.Connection):
+    connection.execute("SAVEPOINT atlas_forecast_read")
+    try:
+        yield
+    finally:
+        connection.execute("ROLLBACK TO SAVEPOINT atlas_forecast_read")
+        connection.execute("RELEASE SAVEPOINT atlas_forecast_read")
+
+
 def forecast_current_capacity(
     connection: sqlite3.Connection,
     *,
@@ -285,13 +296,34 @@ def forecast_current_capacity(
     parameters: ModelParameters = DEFAULT_MODEL_PARAMETERS,
     claims: Sequence[dict[str, object]] | None = None,
 ) -> ForecastSelection:
+    """Forecast the coherent database view at both cutoffs, never caller-supplied facts.
+
+    ``claims`` is an optional complete-view consistency check for callers already
+    exporting that view. Subsets, stale views and altered records are rejected.
+    Source-only views with unknown effective dates are not physical-current views.
+    """
+    with _forecast_snapshot(connection):
+        current = claim_records(connection, as_of=as_of, recorded_at=recorded_at)
+        if claims is not None:
+            supplied = list(claims)
+            if any(not isinstance(claim, dict) or not isinstance(claim.get("id"), str) for claim in supplied):
+                raise ValueError("supplied forecast claims must be complete current-view records")
+            supplied_by_id = {claim["id"]: claim for claim in supplied}
+            if (len(supplied_by_id) != len(supplied)
+                    or supplied_by_id != {claim["id"]: claim for claim in current}):
+                raise ValueError("supplied forecast claims differ from the complete database view at the requested cutoffs")
+        return _forecast_from_current_view(connection, current, forecast_start=forecast_start, parameters=parameters)
+
+
+def _forecast_from_current_view(
+    connection: sqlite3.Connection,
+    current: Sequence[dict[str, object]],
+    *,
+    forecast_start: date,
+    parameters: ModelParameters,
+) -> ForecastSelection:
     by_entity: dict[str, list[dict[str, object]]] = defaultdict(list)
-    claim_view = (
-        list(claims)
-        if claims is not None
-        else claim_records(connection, as_of=as_of, recorded_at=recorded_at)
-    )
-    for claim in claim_view:
+    for claim in current:
         by_entity[str(claim["subject_entity_id"])].append(claim)
     results: list[ForecastResult] = []
     exclusions: list[ForecastExclusion] = []
@@ -311,6 +343,10 @@ def forecast_current_capacity(
             and claim["value"].get("milestone_type") in PRODUCTION_MILESTONES
             and claim["value"].get("status") in ACTIVE_MILESTONE_STATUSES
             and str(claim["id"]) not in milestone_values
+        }
+        cancelled_claims = {
+            str(claim["id"]): claim for claim in claims
+            if str(claim["id"]) in cancelled_milestones
         }
         for claim in claims:
             if claim["value_kind"] != "capacity":
@@ -339,6 +375,17 @@ def forecast_current_capacity(
             selected_pairing: ForecastPairing | None = None
             if basis is not CapacityBasis.ECONOMICALLY_USABLE:
                 unsupported_linked = _linked_milestones(connection, claim, unsupported_milestones)
+                linked = _linked_milestones(connection, claim, milestone_claims)
+                cancelled_linked = _linked_milestones(connection, claim, cancelled_claims)
+                if cancelled_linked:
+                    conflicting = set(linked) | set(unsupported_linked)
+                    exclusions.append(ForecastExclusion(
+                        entity_id, capacity_claim_id,
+                        "conflicting_production_milestone_statuses" if conflicting else "cancelled_production_milestone",
+                        "linked cancellation evidence prevents a defensible production ramp; no physical capacity loss is inferred",
+                        tuple(sorted(set(cancelled_linked) | conflicting)),
+                    ))
+                    continue
                 if unsupported_linked:
                     exclusions.append(ForecastExclusion(
                         entity_id, capacity_claim_id, "unsupported_linked_production_milestone",
@@ -346,7 +393,6 @@ def forecast_current_capacity(
                         tuple(sorted(unsupported_linked)),
                     ))
                     continue
-                linked = _linked_milestones(connection, claim, milestone_claims)
                 linked_ids = tuple(sorted(linked))
                 if len(linked_ids) == 1:
                     milestone = milestone_values[linked_ids[0]]

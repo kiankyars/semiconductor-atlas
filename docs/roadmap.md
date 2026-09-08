@@ -387,6 +387,13 @@ preserving original years and clocks. It explicitly rejects the Hsinchu Fab 2 / 
 name collision and keeps all canonical project phases unresolved. These are same-document
 retrospective source assertions, not additional independent outcomes or forecast pairs.
 
+The [September 8 prospective screen](forecast_readiness_2026-09-08.md) finds three supported
+future source-interval leads, three abstention cases and one aggregate screening exclusion among
+the seven expected-milestone projects. It also closes two isolated experimental-bridge defects:
+caller-supplied claims cannot bypass either cutoff, and linked cancellation evidence cannot be
+ignored in favor of an expected ramp. The next gate is an executed interval comparator with
+explicit event identities and later outcome review, not an invented point-date training cohort.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,

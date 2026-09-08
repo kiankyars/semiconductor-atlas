@@ -1,5 +1,9 @@
 # Forecast-readiness audit, September 7, 2026
 
+The isolated [September 8 follow-up](forecast_readiness_2026-09-08.md) repairs the caller-supplied
+claim-view cutoff bypass and screens the retained planned-project evidence. The inventory and
+reproduction below remain the historical September 7 audit, not current completion claims.
+
 The next forecasting gate is a leakage-safe outcome dataset and frozen forecast vintages, not
 another capacity-ramp formula. This audit is about the retained working evidence, not worldwide
 manufacturing or the absence of physical capacity.

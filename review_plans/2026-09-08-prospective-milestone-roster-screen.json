@@ -1,0 +1,361 @@
+{
+  "format": "semiconductor-atlas-prospective-milestone-roster-screen-v1",
+  "status": "review_screen_not_registered_study_or_forecast",
+  "reviewed_at": "2026-09-08T19:11:01Z",
+  "reviewer": "local:codex-prospective-milestone-source-screen",
+  "prior_exposure": "The root and two collaborating agents inspected these existing artifacts and discussed the candidate set. This is an exposed evidence review, not independent blind adjudication, external timestamp attestation or a held-out evaluation.",
+  "database": {
+    "path": "artifacts/2026-09-08-tsmc-fab-correspondence-schema6.sqlite",
+    "sha256": "d31fd0597ddf188f76c44d2758f46f95d00f0a22169c1360b34b7c390aaeaeeb"
+  },
+  "population": "Every expected milestone claim in the retained database: eight claims on seven source-native project entities. This is not a manufacturing project census. Two source statements concern the same Fab 2 project; six claims are legacy derived estimates.",
+  "source_path_root": "/Users/kian/Developer/semiconductor_atlas",
+  "sources": [
+    {
+      "id": "tsmc",
+      "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0/responses/nist-tsmc-arizona.body",
+      "sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598",
+      "scope_evidence": {
+        "start": 86055,
+        "end": 88170,
+        "sha256": "9483e8fc5e71671d405c575e53e355d94f035ac92af379614959a1b702cbae38"
+      }
+    },
+    {
+      "id": "hemlock",
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-hemlock-semiconductor-michigan-hemlock.html",
+      "sha256": "99ece2fc05c3cb0ae71c3b829ac8d484302662f32446f93d08d48c02e59136bb",
+      "scope_evidence": {
+        "start": 61082,
+        "end": 61922,
+        "sha256": "330864e9ac4bae6ac8da75a70a97bb5a9a0d6c43be2e4dfbcc594f2df80016c3"
+      }
+    },
+    {
+      "id": "amkor",
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-amkor-technology-inc-arizona-peoria.html",
+      "sha256": "dc29e77054171acd3da6d8324801319ecbf9bd8b52b80521ee93dc931ff4e8ec",
+      "scope_evidence": {
+        "start": 89269,
+        "end": 90175,
+        "sha256": "19ed7eb1cea28ec7b2b6261435be682f9bd6fc0480d7568b680a79a110763c04"
+      }
+    },
+    {
+      "id": "sk-hynix",
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-sk-hynix-indiana-west-lafayette.html",
+      "sha256": "778b7e27346659d8ef03fd07b84afbb962507610eecf3bc2f794cab0001749e9",
+      "scope_evidence": {
+        "start": 89158,
+        "end": 91051,
+        "sha256": "9c5d75a2e75b1dcd451d9a051d812fdfa86a83a58a1155170c2e1d90bb17cfca"
+      }
+    },
+    {
+      "id": "infinera-ca",
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-infinera-california-san-jose.html",
+      "sha256": "68c92c8def306183ac90ccd93189d5f79fb2c4038365a127bb19dee339a886e7",
+      "scope_evidence": {
+        "start": 87569,
+        "end": 88670,
+        "sha256": "000e16b0e47ed7e4210e261cd21784305dc31bf7555d1f12ea683cf123f6e862"
+      }
+    },
+    {
+      "id": "infinera-pa",
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-infinera-pennsylvania-bethlehem.html",
+      "sha256": "c50556e869f664a4b7882c5e2aa26b24941739bf8b839bad9688a75a41f77026",
+      "scope_evidence": {
+        "start": 60200,
+        "end": 61284,
+        "sha256": "5d9abdaa4cab0d3e3050e7a5624c3a21c03ddef70b4a2ebc390ed424fd3afa5e"
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "case_id": "tsmc-fab2",
+      "project_entity_id": "8f33e76f-ac2c-5962-a9a2-2cd1bcb55d86",
+      "project_stable_key": "reviewed-project-source:https://www.nist.gov/chips/tsmc-arizona-phoenix:Fab 2",
+      "source": "tsmc",
+      "event_type": "production_start",
+      "geography": "Phoenix, Arizona",
+      "project_group": "tsmc-arizona",
+      "scope": "explicitly named Fab 2 project within the three-fab source page",
+      "disposition": "future_literal_interval",
+      "reviewed_source_period": {
+        "low": "2027-07-01",
+        "base": null,
+        "high": "2027-12-31",
+        "literal": "second half of 2027"
+      },
+      "reason": "The latest reviewed Fab 2 statement is one target, not a second project beside its earlier 2028 statement. Do not join the aggregate Arizona entity, Fab 21 table row or Hsinchu Fab 2.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "4870d11d-3555-52f9-bf9a-8d67e200ecff",
+          "value_sha256": "10675b9521ed7a46f83abd0d743b59a82bfb91f0ed0e330c8b8e61d05a727c5b",
+          "claim_kind": "source_statement",
+          "method": "reviewed-source-native-project-target-v1",
+          "recorded_at": "2026-09-07T09:28:12.852741Z",
+          "valid_from": null,
+          "confidence": null,
+          "predicate": "milestone.production_start",
+          "milestone_type": "production_start",
+          "status": "expected",
+          "date_low": "2027-07-01",
+          "date_base": null,
+          "date_high": "2027-12-31",
+          "date_precision": "half_year",
+          "date_literal": "second half of 2027"
+        },
+        {
+          "claim_id": "b350581c-3257-5e6c-aabb-aab20d884e9c",
+          "value_sha256": "399d344f3b2e943a22f5258377a320566a9d41688b99965bf23609aae831393a",
+          "claim_kind": "source_statement",
+          "method": "reviewed-source-native-project-target-v1",
+          "recorded_at": "2026-09-07T09:28:12.852741Z",
+          "valid_from": null,
+          "confidence": null,
+          "predicate": "milestone.production_start",
+          "milestone_type": "production_start",
+          "status": "expected",
+          "date_low": "2028-01-01",
+          "date_base": null,
+          "date_high": "2028-12-31",
+          "date_precision": "year",
+          "date_literal": "2028"
+        }
+      ],
+      "partition": null
+    },
+    {
+      "case_id": "hemlock-new-facility",
+      "project_entity_id": "35200609-3ec3-5766-8aef-107433b0a75c",
+      "project_stable_key": "nist:project:bbdc1234-326c-53df-8ee6-e6bec233fd9f",
+      "source": "hemlock",
+      "event_type": "production_start",
+      "geography": "Hemlock, Michigan",
+      "project_group": "hemlock-new-facility",
+      "scope": "one new polysilicon facility on the existing campus",
+      "disposition": "future_literal_interval_requires_source_claim_admission",
+      "reviewed_source_period": {
+        "low": "2028-01-01",
+        "base": null,
+        "high": "2028-12-31",
+        "literal": "2028"
+      },
+      "reason": "Source supports the full year only. The existing July 1 midpoint and 0.75 confidence are derived conventions, not publisher assertions or physical truth.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "ce225f21-8a87-56cf-abd7-2683e133d11e",
+          "value_sha256": "da631aa6c4918091a1385877ab7e9266a6af301036617a003333906ac62f8212",
+          "claim_kind": "derived_estimate",
+          "method": "nist_timeline_window_v1",
+          "recorded_at": "2026-07-18T01:54:47Z",
+          "valid_from": "2026-07-17",
+          "confidence": 0.75,
+          "predicate": "milestone.production_start",
+          "milestone_type": "production_start",
+          "status": "expected",
+          "date_low": "2028-01-01",
+          "date_base": "2028-07-01",
+          "date_high": "2028-12-31",
+          "date_precision": null,
+          "date_literal": null
+        }
+      ],
+      "partition": null
+    },
+    {
+      "case_id": "sk-hynix-indiana",
+      "project_entity_id": "93ff4826-772d-5770-8107-03b678da6ba1",
+      "project_stable_key": "nist:project:5bd14e97-967b-58dd-b35a-c70826bb676a",
+      "source": "sk-hynix",
+      "event_type": "mass_production",
+      "geography": "West Lafayette, Indiana",
+      "project_group": "sk-hynix-indiana",
+      "scope": "HBM packaging line and R&D testbed facility; no numbered phase invented",
+      "disposition": "future_literal_interval_requires_distinct_event_contract_and_source_claim_admission",
+      "reviewed_source_period": {
+        "low": "2028-07-01",
+        "base": null,
+        "high": "2028-12-31",
+        "literal": "second half of 2028"
+      },
+      "reason": "The typed event is mass_production despite the legacy production_start predicate. Preserve that distinction; October 1 and 0.75 are not source-supplied.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "0c1da66d-d496-5208-b706-0893771eb676",
+          "value_sha256": "2f3613cc553fc9efd53bb341cc3c13ef4985b0f5f366abe8d6cbb5704119bf76",
+          "claim_kind": "derived_estimate",
+          "method": "nist_timeline_window_v1",
+          "recorded_at": "2026-07-18T01:54:47Z",
+          "valid_from": "2026-07-17",
+          "confidence": 0.75,
+          "predicate": "milestone.production_start",
+          "milestone_type": "mass_production",
+          "status": "expected",
+          "date_low": "2028-07-01",
+          "date_base": "2028-10-01",
+          "date_high": "2028-12-31",
+          "date_precision": null,
+          "date_literal": null
+        }
+      ],
+      "partition": null
+    },
+    {
+      "case_id": "amkor-peoria",
+      "project_entity_id": "996f4ee0-e395-5eb8-ba42-333ef07a9834",
+      "project_stable_key": "nist:project:668c5b7c-b5b3-52be-b590-a78b284d6d51",
+      "source": "amkor",
+      "event_type": "mass_production",
+      "geography": "Peoria, Arizona",
+      "project_group": "amkor-peoria",
+      "scope": "phase-unspecified NIST packaging/test project; newer Phase One correspondence unresolved",
+      "disposition": "abstain_vague_period_and_phase_correspondence",
+      "reviewed_source_period": null,
+      "reason": "End of 2027 does not establish Q4 or December. The reviewed 2026 issuer Phase One opening target is a different event/scope and cannot be substituted or converted to a comparable delay.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "d99a7046-a464-538b-a0ac-90128e27518d",
+          "value_sha256": "101be8a8428d213f067f310f893c2067f4c6e4546a5e083bd6003439b4c2b872",
+          "claim_kind": "derived_estimate",
+          "method": "nist_timeline_window_v1",
+          "recorded_at": "2026-07-18T01:54:47Z",
+          "valid_from": "2026-07-17",
+          "confidence": 0.75,
+          "predicate": "milestone.production_start",
+          "milestone_type": "mass_production",
+          "status": "expected",
+          "date_low": "2027-10-01",
+          "date_base": "2027-12-01",
+          "date_high": "2027-12-31",
+          "date_precision": null,
+          "date_literal": null
+        }
+      ],
+      "partition": null
+    },
+    {
+      "case_id": "infinera-california",
+      "project_entity_id": "8d10b984-5425-509b-92b1-95a2b6c7ae97",
+      "project_stable_key": "nist:project:64419244-3876-5902-940b-a41efd4b4a40",
+      "source": "infinera-ca",
+      "event_type": "production_start",
+      "geography": "San Jose, California",
+      "project_group": "infinera-linked-award",
+      "scope": "site-specific fab and foundry construction/modernization project",
+      "disposition": "abstain_no_defensible_wholly_future_literal_interval",
+      "reviewed_source_period": null,
+      "reason": "Summer 2026 is not a precise calendar interval. The legacy June-August bounds are elapsed, but neither attainment nor nonoccurrence follows. Group with the related Bethlehem project, not an independent geography holdout.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "b1da3ba9-5071-5c04-b014-3a45ee020ad7",
+          "value_sha256": "3e3add3327ca7151b23ffebc6f0958a0614515fe3f2d7b030db1ca17e05417bf",
+          "claim_kind": "derived_estimate",
+          "method": "nist_timeline_window_v1",
+          "recorded_at": "2026-07-18T01:54:47Z",
+          "valid_from": "2026-07-17",
+          "confidence": 0.75,
+          "predicate": "milestone.production_start",
+          "milestone_type": "production_start",
+          "status": "expected",
+          "date_low": "2026-06-01",
+          "date_base": "2026-07-15",
+          "date_high": "2026-08-31",
+          "date_precision": null,
+          "date_literal": null
+        }
+      ],
+      "partition": null
+    },
+    {
+      "case_id": "infinera-pennsylvania",
+      "project_entity_id": "6e9651ba-7c7b-57e0-bb2d-5a1ad6c76432",
+      "project_stable_key": "nist:project:09284cc9-7298-5e83-bd17-e1e7aae084ee",
+      "source": "infinera-pa",
+      "event_type": "production_start",
+      "geography": "Bethlehem, Pennsylvania",
+      "project_group": "infinera-linked-award",
+      "scope": "site-specific advanced test and packaging facility project",
+      "disposition": "abstain_no_defensible_wholly_future_literal_interval",
+      "reviewed_source_period": null,
+      "reason": "Summer 2026 is vague; the expired legacy interval is not outcome evidence. The shared overview spans both sites; use the local statistics and keep this related to San Jose.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "99098405-f482-51c5-8890-6289ce10b6f9",
+          "value_sha256": "3e3add3327ca7151b23ffebc6f0958a0614515fe3f2d7b030db1ca17e05417bf",
+          "claim_kind": "derived_estimate",
+          "method": "nist_timeline_window_v1",
+          "recorded_at": "2026-07-18T01:54:47Z",
+          "valid_from": "2026-07-17",
+          "confidence": 0.75,
+          "predicate": "milestone.production_start",
+          "milestone_type": "production_start",
+          "status": "expected",
+          "date_low": "2026-06-01",
+          "date_base": "2026-07-15",
+          "date_high": "2026-08-31",
+          "date_precision": null,
+          "date_literal": null
+        }
+      ],
+      "partition": null
+    },
+    {
+      "case_id": "tsmc-legacy-aggregate",
+      "project_entity_id": "5fdaf6c0-0f98-5019-858c-c4c17d0c70e2",
+      "project_stable_key": "nist:project:ed47151f-951a-5ce3-a494-31f575b321c4",
+      "source": "tsmc",
+      "event_type": "production_start",
+      "geography": "Phoenix, Arizona",
+      "project_group": "tsmc-arizona",
+      "scope": "legacy aggregate multi-fab project with first-fab schedule extraction",
+      "disposition": "screen_out_unresolved_aggregate_phase_and_past_target",
+      "reviewed_source_period": null,
+      "reason": "An aggregate project carrying an extracted first-fab 2025 estimate is neither a second Fab 2 case nor an eligible newly frozen pre-outcome prediction.",
+      "stored_expected_claims": [
+        {
+          "claim_id": "e78eb135-98b2-5551-a381-1963d000d80d",
+          "value_sha256": "a9c1243f4391e01b2efb2fd55bd649f3c9f0edb8a8c0344adb4f8a0abb6c9008",
+          "claim_kind": "derived_estimate",
+          "method": "nist_timeline_window_v1",
+          "recorded_at": "2026-07-18T01:54:47Z",
+          "valid_from": "2026-07-17",
+          "confidence": 0.75,
+          "predicate": "milestone.production_start",
+          "milestone_type": "production_start",
+          "status": "expected",
+          "date_low": "2025-01-01",
+          "date_base": "2025-04-01",
+          "date_high": "2025-06-30",
+          "date_precision": null,
+          "date_literal": null
+        }
+      ],
+      "partition": null
+    }
+  ],
+  "counts": {
+    "stored_expected_claims": 8,
+    "distinct_projects": 7,
+    "legacy_derived_claims": 6,
+    "reviewed_candidate_cases": 6,
+    "screened_out_aggregate_cases": 1,
+    "future_source_interval_leads": 3,
+    "abstention_cases": 3,
+    "registered_studies": 0,
+    "frozen_forecasts": 0
+  },
+  "boundaries": {
+    "source_periods_admitted_as_core_claims": false,
+    "partitions_assigned": false,
+    "independent_geography_holdout": false,
+    "calibrated_model": false,
+    "observed_outcomes": false,
+    "nonoccurrence_asserted": false,
+    "raw_body_redistribution": false,
+    "source_freshness_beyond_retained_checks_asserted": false
+  }
+}
