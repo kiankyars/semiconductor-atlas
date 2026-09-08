@@ -37,9 +37,9 @@ class CompletedMilestonePrecisionTests(unittest.TestCase):
 
     def migrate(self):
         self.connection.commit()
-        self.assertEqual([6], apply_migrations(self.connection))
+        self.assertEqual([6], apply_migrations(self.connection, target_version=6))
         self.assertEqual(6, schema_version(self.connection))
-        self.assertEqual([], apply_migrations(self.connection))
+        self.assertEqual([], apply_migrations(self.connection, target_version=6))
 
     def rows(self):
         tables = [row[0] for row in self.connection.execute(
@@ -122,7 +122,7 @@ class CompletedMilestonePrecisionTests(unittest.TestCase):
                     before = {name: [tuple(row) for row in connection.execute(f'SELECT * FROM "{name}" ORDER BY rowid')]
                               for name in tables}
                     triggers = dict(connection.execute("SELECT name,sql FROM sqlite_master WHERE type='trigger'"))
-                    self.assertEqual([6], apply_migrations(connection))
+                    self.assertEqual([6], apply_migrations(connection, target_version=6))
                     self.assertEqual(6, schema_version(connection))
                     after = {name: [tuple(row) for row in connection.execute(f'SELECT * FROM "{name}" ORDER BY rowid')]
                              for name in tables}

@@ -414,6 +414,12 @@ input source claim, not the forecast target.
 Exit gate: forecast vintages can be replayed exactly and evaluated against later realized claims
 without look-ahead leakage.
 
+The isolated [September 8 source-quantity admission](source_quantities.md) adds four retained
+TSMC company-level annual references with explicit qualifiers, units, scope and periods to
+schema 7. This addresses a numeric source-representation gap, not the Phase 4 forecasting exit
+gate: no physical capacity basis, facility allocation, utilization, realized forecast pair or
+calibration follows. The schema-6 forecast input image and its original producer remain retained.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

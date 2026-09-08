@@ -121,7 +121,13 @@ def claim_value(connection: sqlite3.Connection, claim_id: str, value_kind: str) 
     ).fetchone()
     if row is None:
         raise ValueError(f"claim {claim_id} lacks a {value_kind} value")
-    return _claim_value_from_row(value_kind, row)
+    result = _claim_value_from_row(value_kind, row)
+    if value_kind == 'scalar':
+        from .source_quantities import metadata_for_claims
+        metadata = metadata_for_claims(connection, [claim_id])
+        if claim_id in metadata:
+            result['source_quantity'] = metadata[claim_id]
+    return result
 
 
 def _hydrate_claim_rows(
@@ -148,6 +154,10 @@ def _hydrate_claim_rows(
         ):
             claim_id = str(value_row["claim_version_id"])
             values[claim_id] = _claim_value_from_row(value_kind, value_row)
+
+    from .source_quantities import metadata_for_claims
+    for claim_id, metadata in metadata_for_claims(connection, selected_ids).items():
+        values[claim_id]['source_quantity'] = metadata
 
     evidence: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for evidence_row in connection.execute(

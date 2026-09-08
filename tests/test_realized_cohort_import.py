@@ -39,7 +39,7 @@ class RealizedCohortImportTests(unittest.TestCase):
         self.options = dict(source_body=self.paths["source-body"], provenance=self.paths["provenance"],
             frozen_runtime_bundle=self.paths["runtime"], expected_runtime_sha256=self.digest("runtime"),
             expected_runtime_commit="a" * 40, expected_cohort_sha256=self.digest("cohort"))
-        self.connection, _ = database.initialize(self.root / "core.sqlite")
+        self.connection, _ = database.initialize(self.root / "core.sqlite", target_version=6)
         self.addCleanup(self.connection.close)
         self.verifier = mock.patch.object(importer.replay, "run_verified", side_effect=self.verify_fixture).start()
         self.addCleanup(mock.patch.stopall)

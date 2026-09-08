@@ -1591,6 +1591,8 @@ def _stored_claim_value(
 
 def validate_database(connection: sqlite3.Connection) -> list[str]:
     errors: list[str] = []
+    from .source_quantities import validate_quantities
+    errors.extend(validate_quantities(connection))
     integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
     if integrity != "ok":
         errors.append(f"integrity_check: {integrity}")

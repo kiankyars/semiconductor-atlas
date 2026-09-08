@@ -57,6 +57,7 @@ def codes():
     root = Path(__file__).parent.parent
     paths = [Path(module.__file__) for module in (database, models, repository, realized_milestones, runtime)]
     paths += [Path(__file__), root / "scripts/enrich_tsmc_fab_correspondence.py"]
+    paths += [Path(__file__).with_name("source_quantities.py")]
     paths += list(Path(database.__file__).with_name("migrations").glob("*.sql"))
     return {str(path.relative_to(root)): runtime.digest(runtime.read(path)) for path in sorted(paths)}
 

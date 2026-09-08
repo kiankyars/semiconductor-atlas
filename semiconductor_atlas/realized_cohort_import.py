@@ -51,6 +51,7 @@ def _json(raw):
 def _disk_codes():
     root = Path(__file__).parent.parent
     paths = {Path(__file__), root / "scripts/import_realized_fab_cohort.py",
+             Path(__file__).with_name("source_quantities.py"),
              *(Path(module.__file__) for module in (database, models, repository, runtime, replay)),
              *Path(database.__file__).with_name("migrations").glob("*.sql")}
     return {path.relative_to(root).as_posix(): _hash(runtime.read(path)) for path in sorted(paths)}
@@ -76,7 +77,8 @@ def _schema(connection):
     if connection.execute("PRAGMA foreign_keys").fetchone()[0] != 1:
         raise ValueError("foreign-key enforcement must be enabled")
     wanted = [(int(path.name[:4]), path.stem[5:], _hash(runtime.read(path)))
-              for path in sorted(Path(database.__file__).with_name("migrations").glob("*.sql"))]
+              for path in sorted(Path(database.__file__).with_name("migrations").glob("*.sql"))
+              if int(path.name[:4]) <= 6]
     actual = [tuple(row) for row in connection.execute("SELECT version,name,sha256 FROM schema_migrations ORDER BY version")]
     if actual != wanted:
         raise ValueError("installed migration identities differ from the loaded schema")

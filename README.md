@@ -729,6 +729,13 @@ so later package and migration changes need not invalidate the old vintage. Sepa
 twelve-fab quantity tables but admits no cells: direct source acquisition is not approved, and
 estimated maximum output must not be relabeled as installed, qualified or usable capacity.
 
+The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
+company-level TSMC capacity/shipment references from the already-retained filing. Reporting
+periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision
+qualifiers remain mandatory. They are source statements, not new physical-capacity claims;
+no per-fab allocation or shipment-based utilization is inferred. The new snapshot replays
+exactly and preserves every inherited row and all physical-current claims.
+
 The separate [realized-event workflow](docs/realized_milestones.md) now retains one
 [reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
 with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a
