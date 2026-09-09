@@ -118,7 +118,7 @@ def _page_claims(connection, identifiers: list[str], recorded_at: str) -> list[d
         """, (json.dumps(identifiers), recorded_at)).fetchall()
     if any(row["id"] is None or row["subject_entity_id"] is None or row["lineage_entity_id"] is None for row in rows):
         raise ValueError("selected event lineage has a missing claim, series or entity")
-    claims = service._hydrate_claim_rows(connection, rows)
+    claims = service._hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
     declared_evidence = {row[0] for row in connection.execute("""
         SELECT id FROM claim_evidence WHERE claim_version_id IN
             (SELECT value FROM json_each(?))

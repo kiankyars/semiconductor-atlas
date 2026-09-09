@@ -162,3 +162,7 @@ assignments. The existing project census uses the former label as an importer-ro
 marker, so a correction must preserve its historical population and cutoff behavior.
 A reviewed, knowledge-time-aware publisher-family correction is the next concrete
 provenance gate; editing old family rows in place would destroy replay fidelity.
+
+This inherited split is now corrected in a separate [schema-12 successor](source_family_assignments.md).
+The selected Bosch schema-11 database and this frozen producer remain unchanged;
+the new assignment applies only from its actual September 9 acceptance clock.

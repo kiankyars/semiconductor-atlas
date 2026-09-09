@@ -84,7 +84,7 @@ def _history(connection, subject: str, as_of: str, recorded_at: str) -> list[dic
         JOIN claim_series s ON s.id=v.series_id
         ORDER BY s.subject_entity_id,s.predicate,s.id,v.valid_from,{clock}(v.recorded_at),v.id
         """, (subject, recorded_at, as_of, recorded_at)).fetchall()
-    return service._hydrate_claim_rows(connection, rows)
+    return service._hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
 
 
 def _check_support(connection, claims: list[dict], cutoff: datetime, entity: dict) -> list[dict]:
@@ -205,6 +205,9 @@ def _check_support(connection, claims: list[dict], cutoff: datetime, entity: dic
 def _public_claim(claim: dict) -> dict:
     result = {key: claim[key] for key in _CLAIM_FIELDS}
     result["evidence"] = [{k: e[k] for k in _EVIDENCE_FIELDS} for e in claim["evidence"]]
+    for public, original in zip(result["evidence"], claim["evidence"]):
+        if "source_family_resolution" in original:
+            public["source_family_resolution"] = dict(original["source_family_resolution"])
     result["value"] = dict(claim["value"])
     if "source_rate" in result["value"]:
         result["value"]["source_rate"] = {
@@ -371,6 +374,14 @@ def markdown_bytes(report: dict) -> bytes:
                     "  - Document ID: " + _text(evidence["source_document_id"]) + "; SHA-256: " + _text(evidence["content_sha256"]),
                     "  - Evidence ID: " + _text(evidence["id"]) + "; source record ID: " + _text(evidence["source_record_id"])
                     + "; record SHA-256: " + _text(evidence["source_record_sha256"])]
+                if "source_family_resolution" in evidence:
+                    resolution = evidence["source_family_resolution"]
+                    lines += ["  - Reviewed publisher grouping; original importer family: "
+                        + _text(resolution["original_source_family"]) + "; assignment: "
+                        + _text(resolution["assignment_id"]) + "; known from: "
+                        + _text(resolution["recorded_at"]) + "; review SHA-256: "
+                        + _text(resolution["review_sha256"])
+                        + ". No independent corroboration is inferred."]
             if not claim["evidence"]:
                 lines += ["No direct evidence links; see the explicit dependency chain."]
             lines += ["", "Dependencies: " + _text(claim["dependencies"]), ""]

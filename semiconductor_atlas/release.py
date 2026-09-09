@@ -35,6 +35,7 @@ from .service import (
     summarize,
     validate_semantics,
 )
+from .source_family_review import apply_resolution, assignment_history, original_family, resolutions
 
 
 FORMAT = "semiconductor-atlas-release-v1"
@@ -324,6 +325,7 @@ def _source_inputs(
                documents.content_sha256, documents.media_type, documents.license,
                documents.metadata_json, sources.stable_key AS source_key,
                sources.publisher, families.stable_key AS source_family,
+               sources.id AS family_source_id,
                accepted.run_id AS accepted_by_run_id,
                accepted.admitted_at AS database_accepted_at,
                accepted.code_version AS acceptance_code_version,
@@ -342,8 +344,10 @@ def _source_inputs(
     ).fetchall()
     inputs: list[dict[str, Any]] = []
     by_document: dict[str, dict[str, Any]] = {}
+    family_mapping = resolutions(connection, recorded_at=recorded_at)
     for row in rows:
         item = dict(row)
+        apply_resolution(item, item.pop("family_source_id"), family_mapping)
         parameters = json.loads(item.pop("acceptance_parameters_json"))
         roles_json = item.pop("document_roles_json")
         processing_run = {
@@ -456,7 +460,8 @@ def _source_observations(
                runs.code_version,
                runs.parameters_json,
                sources.stable_key AS source_key,
-               families.stable_key AS source_family
+               families.stable_key AS source_family,
+               sources.id AS family_source_id
         FROM source_records AS records
         JOIN ingestion_runs AS runs ON runs.id = records.ingestion_run_id
         JOIN source_documents AS documents ON documents.id = records.source_document_id
@@ -471,8 +476,10 @@ def _source_observations(
         (recorded_at,),
     ).fetchall()
     observations = []
+    family_mapping = resolutions(connection, recorded_at=recorded_at)
     for row in rows:
         item = dict(row)
+        apply_resolution(item, item.pop("family_source_id"), family_mapping)
         parameters = json.loads(item.pop("parameters_json"))
         item["acceptance_timestamp_basis"] = parameters.get(
             "acceptance_timestamp_basis", "legacy_retrieval_clock"
@@ -753,6 +760,9 @@ def _evidence_rows(claims: list[dict[str, Any]]) -> list[dict[str, object]]:
                     "license": evidence["license"],
                     "locator": evidence["locator"],
                     "excerpt": evidence["excerpt"],
+                    **({"source_family_resolution_json": json.dumps(evidence["source_family_resolution"],
+                        sort_keys=True, ensure_ascii=False, separators=(",", ":"))}
+                       if "source_family_resolution" in evidence else {}),
                 }
             )
     return sorted(
@@ -806,7 +816,7 @@ def _attributions(inputs: list[dict[str, Any]]) -> list[str]:
         attribution = (
             metadata.get("attribution") if isinstance(metadata, dict) else None
         )
-        source_family = item.get("source_family")
+        source_family = original_family(item)
         if source_family == TAIWAN_MOENV_FAMILY_KEY:
             values.add(MOENV_ATTRIBUTION)
         elif source_family == TAIWAN_FACTORY_FAMILY_KEY:
@@ -986,6 +996,7 @@ def _collect_release_views(
         "geojson": geojson,
         "coverage": coverage,
         "identity": identity,
+        "source_family_assignments": assignment_history(connection, recorded_at=recorded_at),
     }
 
 
@@ -1024,6 +1035,7 @@ def write_release(
     geojson = views["geojson"]
     coverage = views["coverage"]
     identity = views["identity"]
+    family_assignments = views["source_family_assignments"]
     assert isinstance(claims, list)
     assert source_claims is None or isinstance(source_claims, list)
     assert isinstance(claim_history, list)
@@ -1063,7 +1075,7 @@ def write_release(
                 "license",
                 "locator",
                 "excerpt",
-            ),
+            ) + (("source_family_resolution_json",) if any("source_family_resolution_json" in row for row in evidence) else ()),
             evidence,
         ),
         "capacity.csv": _csv_bytes(
@@ -1107,6 +1119,8 @@ def write_release(
         files["reviewed_relationship_runs.jsonl"] = _jsonl_bytes(
             reviewed_relationship_runs
         )
+    if family_assignments:
+        files["source_family_assignments.jsonl"] = _jsonl_bytes(family_assignments)
     extra_names = sorted(extra_files or {})
     extra_text = ""
     if extra_names:
@@ -1151,7 +1165,16 @@ Files: `entities.jsonl`, `claims.jsonl`, `claim_history.jsonl`, `evidence.csv`,
 and `ATTRIBUTION.txt`.
 {extra_text}
 """
-    if any(item.get("source_family") == TAIWAN_MOENV_FAMILY_KEY for item in inputs):
+    if family_assignments:
+        readme += ("\n`source_family_assignments.jsonl` retains reviewed publisher-grouping corrections "
+                   "known at this knowledge cutoff, including exact review JSON bytes and their SHA-256. "
+                   "Evidence, source inputs, source observations and coverage use the reviewed grouping; "
+                   "`source_family_resolution` (JSON, or the optional CSV column with `_json` suffix) "
+                   "preserves the original importer label, assignment ID, acceptance clock and review hash. "
+                   "Original source, family, document and claim rows remain unchanged. This metadata "
+                   "correction neither deduplicates documents nor establishes independent corroboration "
+                   "or a manufacturing event. Earlier knowledge cutoffs retain their original grouping.\n")
+    if any(original_family(item) == TAIWAN_MOENV_FAMILY_KEY for item in inputs):
         readme = readme.replace(
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
             "Taiwan MOENV EMS_S_01 records are source-native environmental-control registry "
@@ -1167,7 +1190,7 @@ and `ATTRIBUTION.txt`.
             "release.\n"
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
         )
-    if any(item.get("source_family") == TAIWAN_FACTORY_FAMILY_KEY for item in inputs):
+    if any(original_family(item) == TAIWAN_FACTORY_FAMILY_KEY for item in inputs):
         readme = readme.replace(
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
             "Taiwan registered-factory records are source-native administrative registry "
@@ -1183,7 +1206,7 @@ and `ATTRIBUTION.txt`.
             "is not duplicated into this release.\n"
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
         )
-    if any(item.get("source_family") == TAIWAN_MOF_FAMILY_KEY for item in inputs):
+    if any(original_family(item) == TAIWAN_MOF_FAMILY_KEY for item in inputs):
         readme = readme.replace(
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
             "Taiwan MOF BGMOPEN1 records are source-native active tax-registration "

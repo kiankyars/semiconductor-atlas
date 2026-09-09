@@ -132,7 +132,7 @@ def apply_migrations(connection: sqlite3.Connection, *, target_version: int | No
             )
             if connection.execute("PRAGMA foreign_key_check").fetchone() is not None:
                 raise RuntimeError(f"migration {version:04d} violates a foreign key")
-            if version in {10, 11}:
+            if version in {10, 11, 12}:
                 # Rebuilding tables does not replay cross-table identity guards.
                 # Validate under the new schema while rollback is still possible.
                 from .repository import validate_database
@@ -141,7 +141,7 @@ def apply_migrations(connection: sqlite3.Connection, *, target_version: int | No
                 if errors:
                     raise sqlite3.IntegrityError(
                         f"migration {version:04d} "
-                        + ("exact knowledge" if version == 10 else "milestone upper bound")
+                        + {10: "exact knowledge", 11: "milestone upper bound", 12: "source family assignment"}[version]
                         + " validation failed: " + "; ".join(errors)
                     )
             connection.commit()

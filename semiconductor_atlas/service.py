@@ -138,6 +138,7 @@ def _hydrate_claim_rows(
     connection: sqlite3.Connection,
     rows: Sequence[sqlite3.Row],
     *,
+    recorded_at: str,
     dependency_map: Mapping[str, list[dict[str, str]]] | None = None,
 ) -> list[dict[str, Any]]:
     if not rows:
@@ -167,6 +168,8 @@ def _hydrate_claim_rows(
         values[claim_id]['source_rate'] = metadata
 
     evidence: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    from .source_family_review import apply_resolution, resolutions
+    family_mapping = resolutions(connection, recorded_at=recorded_at)
     for evidence_row in connection.execute(
         """
         WITH selected(id) AS (SELECT value FROM json_each(?))
@@ -178,7 +181,7 @@ def _hydrate_claim_rows(
                records.observed_at AS source_record_observed_at,
                records.record_sha256 AS source_record_sha256,
                sources.publisher, sources.stable_key AS source_key,
-               families.stable_key AS source_family
+               families.stable_key AS source_family, sources.id AS family_source_id
         FROM claim_evidence AS links
         JOIN source_documents AS documents ON documents.id = links.source_document_id
         LEFT JOIN source_records AS records
@@ -193,6 +196,7 @@ def _hydrate_claim_rows(
         (selected_json,),
     ):
         item = dict(evidence_row)
+        apply_resolution(item, item.pop("family_source_id"), family_mapping)
         claim_id = str(item.pop("claim_version_id"))
         evidence[claim_id].append(item)
 
@@ -253,7 +257,7 @@ def claim_records(
         recorded_at=recorded_at,
         subject_entity_id=subject_entity_id,
     )
-    return _hydrate_claim_rows(connection, rows)
+    return _hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
 
 
 def claim_history_records(
@@ -347,7 +351,7 @@ def claim_history_records(
             row["id"],
         ),
     )
-    return _hydrate_claim_rows(connection, rows, dependency_map=dependencies)
+    return _hydrate_claim_rows(connection, rows, recorded_at=recorded_at, dependency_map=dependencies)
 
 
 def source_claim_records(
@@ -364,7 +368,7 @@ def source_claim_records(
     rows = known_source_claims(
         connection, recorded_at=recorded_at, subject_entity_id=subject_entity_id,
     )
-    return _hydrate_claim_rows(connection, rows)
+    return _hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
 
 
 def _preferred_name(entity: sqlite3.Row, claims: list[dict[str, Any]]) -> str:

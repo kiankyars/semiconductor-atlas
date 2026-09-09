@@ -345,13 +345,21 @@ def _source_family_rows(
     connection: sqlite3.Connection,
     *,
     recorded_at: str,
+    resolve_assignments: bool = True,
 ) -> list[sqlite3.Row]:
     document_runs_sql = _accepted_document_runs_sql(connection)
     clock = knowledge_clock_sql(connection)
     if schema_version(connection) >= 10:
+        from .source_family_review import resolutions
+        mapping = resolutions(connection, recorded_at=recorded_at) if resolve_assignments else {}
+        family_overrides = [{"source_id": source_id, "family_id": value["source_family_id"]}
+                            for source_id, value in mapping.items()]
         return connection.execute(
             f"""
-            WITH document_runs AS (
+            WITH family_overrides AS (
+                SELECT json_extract(value,'$.source_id') source_id,
+                       json_extract(value,'$.family_id') family_id FROM json_each(?)
+            ), document_runs AS (
                 {document_runs_sql}
             ), accepted_documents AS (
                 SELECT DISTINCT document_id,
@@ -370,7 +378,8 @@ def _source_family_rows(
                 FROM accepted_documents
                 JOIN source_documents AS documents ON documents.id = accepted_documents.document_id
                 JOIN sources ON sources.id = documents.source_id
-                JOIN source_families AS families ON families.id = sources.family_id
+                LEFT JOIN family_overrides ON family_overrides.source_id = sources.id
+                JOIN source_families AS families ON families.id = coalesce(family_overrides.family_id, sources.family_id)
             ), ranked AS (
                 SELECT *,
                        ROW_NUMBER() OVER (PARTITION BY family_id
@@ -394,7 +403,7 @@ def _source_family_rows(
             GROUP BY family_id
             ORDER BY source_family
             """,
-            (recorded_at,),
+            (json.dumps(family_overrides), recorded_at),
         ).fetchall()
     return connection.execute(
         f"""
@@ -1122,9 +1131,9 @@ def coverage_report(
                 f"{'s' if gleif_entity_count != 1 else ''}; it is not a global legal-entity "
                 "or facility census, and no Level 2 relationships are ingested."
             )
-    moenv_present = any(
-        family["source_family"] == TAIWAN_MOENV_FAMILY_KEY for family in source_families
-    )
+    original_families = {row["source_family"] for row in _source_family_rows(
+        connection, recorded_at=recorded_at, resolve_assignments=False)}
+    moenv_present = TAIWAN_MOENV_FAMILY_KEY in original_families
     if moenv_present:
         known_gaps.extend(
             (
@@ -1155,10 +1164,7 @@ def coverage_report(
                 "The accepted Taiwan MOENV run contains internally inconsistent audited "
                 "source-summary counts; the recorded values are surfaced without repair."
             )
-    factory_present = any(
-        family["source_family"] == TAIWAN_FACTORY_FAMILY_KEY
-        for family in source_families
-    )
+    factory_present = TAIWAN_FACTORY_FAMILY_KEY in original_families
     if factory_present:
         known_gaps.extend(
             (
@@ -1190,9 +1196,7 @@ def coverage_report(
                 "The accepted Taiwan registered-factory run contains internally inconsistent "
                 "audited source-summary counts; recorded values are surfaced without repair."
             )
-    mof_present = any(
-        family["source_family"] == TAIWAN_MOF_FAMILY_KEY for family in source_families
-    )
+    mof_present = TAIWAN_MOF_FAMILY_KEY in original_families
     if mof_present:
         known_gaps.extend(
             (
@@ -1260,6 +1264,15 @@ def coverage_report(
             "No superiority or parity claim is made without a lawfully licensed, normalized common benchmark."
         ),
     }
+    from .source_family_review import assignment_history
+    family_assignments = assignment_history(connection, recorded_at=recorded_at)
+    if family_assignments:
+        report["source_family_assignments"] = family_assignments
+        report["source_family_interpretation"] = (
+            "Publisher grouping reflects reviewed per-source assignments known at the cutoff. "
+            "Original importer labels and document counts are preserved; grouping is not proof "
+            "of independent corroboration."
+        )
     if moenv_present:
         report["taiwan_moenv_candidate_scope"] = moenv_candidate_scope
     if factory_present:

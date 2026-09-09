@@ -1619,6 +1619,8 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
     errors.extend(validate_quantities(connection))
     from .source_rates import validate_rates
     errors.extend(validate_rates(connection))
+    from .source_family_review import validate_assignments
+    errors.extend(validate_assignments(connection))
     if "date_relation" in {row[1] for row in connection.execute("PRAGMA table_info(milestone_values)")}:
         for row in connection.execute("""
             SELECT v.id FROM claim_versions v JOIN milestone_values m ON m.claim_version_id=v.id

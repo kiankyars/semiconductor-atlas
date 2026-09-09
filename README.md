@@ -18,6 +18,11 @@ bound or exact start. Such source-only milestones are not physical-current state
 or finite forecast outcomes. The retained Bosch Roseville sample-production report
 is the first bounded admission; its original 200 mm first-chip target remains unresolved.
 
+The [schema-12 publisher-grouping ledger](docs/source_family_assignments.md) corrects
+per-source attribution at exact knowledge cutoffs while preserving original importer
+labels, rights rules and claims. Its first reviewed correction joins duplicate NIST
+attribution without counting it as independent evidence or inventing a claim event.
+
 ## Capacity contract
 
 Every capacity claim uses exactly one basis:

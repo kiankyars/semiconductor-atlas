@@ -524,6 +524,13 @@ target remains unresolved; no physical-current state, capacity or scored finite
 timing outcome is inferred. This closes a representation and source-coverage gap,
 not the forecast-calibration gate.
 
+The [reviewed publisher-grouping ledger](source_family_assignments.md) closes the
+inherited NIST importer-family split on a private schema-12 successor. It preserves
+all inherited rows and source bytes, makes historical cutoffs replayable, and
+reduces document-bearing publisher groups from 15 to 14 without removing evidence.
+This improves provenance accounting; it does not establish independent physical
+corroboration, measured alert usefulness or predictive performance.
+
 The [exact-entity evidence dossier](evidence_dossier.md) now makes accepted source
 records inspectable through the installed CLI and a local Markdown viewer, with
 JSON available separately. Source reports, world-current claims, superseded

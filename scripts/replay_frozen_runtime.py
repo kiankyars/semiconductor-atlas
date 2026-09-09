@@ -19,6 +19,9 @@ from scripts import frozen_runtime as runtime
 
 
 OPERATIONS = {
+    "source-family-assignment": ("scripts/admit_source_family.py", "verify",
+                                  ("parent", "review", "output", "reference-root", "expected-parent-sha256",
+                                   "expected-review-sha256", "expected-output-sha256")),
     "realized-milestone": ("scripts/record_realized_milestone.py", "verify",
                            ("observation", "source-body", "provenance")),
     "realized-cohort": ("scripts/record_realized_fab_cohort.py", "verify",
@@ -60,7 +63,10 @@ OPERATIONS = {
                                 ("parent", "review", "reference-root", "output",
                                  "expected-review-sha256", "expected-output-sha256")),
 }
-DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
+DIGEST_FIELDS = {("source-family-assignment", "expected-parent-sha256"),
+                 ("source-family-assignment", "expected-review-sha256"),
+                 ("source-family-assignment", "expected-output-sha256"),
+                 ("guidance-interval", "trusted-vintage-sha256"),
                  ("source-guidance-diagnostic", "review-sha256"),
                  ("source-guidance-diagnostic", "report-sha256"),
                  ("legacy-pmt-outcome-diagnostic", "review-sha256"),

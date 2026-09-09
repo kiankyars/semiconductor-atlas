@@ -137,6 +137,8 @@ def search_evidence(connection: sqlite3.Connection, *, as_of: str, recorded_at: 
         if version < 5:
             raise ValueError("evidence search requires existing schema 5 or later; no migration performed")
         entities = {}
+        from .source_family_review import apply_resolution, resolutions
+        family_mapping = resolutions(connection, recorded_at=recorded_at)
         for row in _rows(connection, as_of=as_of, cutoff=cutoff):
             entity_id = row["id"]
             if entity_id not in entities:
@@ -151,6 +153,7 @@ def search_evidence(connection: sqlite3.Connection, *, as_of: str, recorded_at: 
                         "source_id", "source_key", "source_name", "publisher", "source_family_id",
                         "source_family", "source_family_name")}
                     sources[row["source_id"]].update(document_ids=set(), evidence_roles=set())
+                    apply_resolution(sources[row["source_id"]], row["source_id"], family_mapping)
                 sources[row["source_id"]]["document_ids"].add(row["document_id"])
                 sources[row["source_id"]]["evidence_roles"].add(row["role"])
         matches = []
@@ -162,6 +165,9 @@ def search_evidence(connection: sqlite3.Connection, *, as_of: str, recorded_at: 
             for source in sources:
                 for key in ("source_key", "source_name", "publisher", "source_family", "source_family_name"):
                     fields[f"direct_sources.{source['source_id']}.{key}"] = source[key]
+                for key in ("original_source_family", "original_source_family_name"):
+                    if "source_family_resolution" in source:
+                        fields[f"direct_sources.{source['source_id']}.source_family_resolution.{key}"] = source["source_family_resolution"][key]
             matched = sorted(key for key, value in fields.items()
                              if needle is not None and value is not None and needle in _normalized(value))
             if needle is not None and not matched:
