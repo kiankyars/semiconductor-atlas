@@ -127,6 +127,34 @@ The parent checkout, checksum ledger, baseline, scheduled database and prospecti
 guidance vintage retain their earlier hashes. Nothing was merged into scheduled
 execution, pushed or published.
 
+## Frozen committed replay
+
+Implementation commit `8902f109237fd97bb17201e54940dd4b8678963c` is retained in
+`artifacts/2026-09-09-8902f10-frozen-runtime-v1.json`: 146 source files, 3,243,119
+decoded payload bytes and 4,366,985 bundle bytes; SHA-256
+`98071f89b60a9ec544822d10b0019cc1fd9972b953ab37986178f779ab568d63`.
+The isolated verification reproduced the complete successor; all 25 imported
+project modules resolved inside the retained source runtime. Receipt
+`artifacts/2026-09-09-frozen-new-albany-replay-v1.json` contains 5,053 bytes,
+SHA-256 `cbe4f945a93236cb0ad0f93c2cfefc001762f560e3417d4ea71fe93e7eae7a75`.
+This retains project code, not evidence payloads or a hermetic operating system.
+
+```sh
+atlas_work=/Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution
+python3 "$atlas_work/scripts/replay_frozen_runtime.py" \
+  --bundle "$atlas_work/artifacts/2026-09-09-8902f10-frozen-runtime-v1.json" \
+  --sha256 98071f89b60a9ec544822d10b0019cc1fd9972b953ab37986178f779ab568d63 \
+  --commit 8902f109237fd97bb17201e54940dd4b8678963c \
+  --working-directory "$atlas_work" \
+  new-albany-project-statements \
+  --parent "$atlas_work/artifacts/2026-09-08-polar-production-rate-schema9.sqlite" \
+  --review "$atlas_work/review_plans/2026-09-09-new-albany-project-admission-v1.json" \
+  --reference-root "$atlas_work" \
+  --output "$atlas_work/artifacts/2026-09-09-new-albany-project-statements-schema9.sqlite" \
+  --expected-review-sha256 c94845c31b4f784c11a3ce6b7f8a532faba34327cbde8535b82e0d9470ca0de1 \
+  --expected-output-sha256 0901ee33eeada18c70e949411be3c9582117262ec4e8cfd87638681f25787b5d
+```
+
 ## Validation and remaining work
 
 The final full core run executed 1,869 tests in 261.310 seconds: 1,868 passed and
