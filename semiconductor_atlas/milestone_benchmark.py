@@ -747,12 +747,17 @@ def _assert_parent_path(destination: Path, descriptor: int) -> None:
 
 
 def write_new(path: str | Path, artifact: dict) -> None:
+    write_new_bytes(path, canonical_bytes(artifact))
+
+
+def write_new_bytes(path: str | Path, raw: bytes) -> None:
     """Stage, verify and publish with a no-replace hard link; never delete the target.
 
     Failure after publication can leave a complete target requiring caller verification.
     Cleanup is limited to the staging inode created by this invocation.
     """
-    raw = canonical_bytes(artifact)
+    if not isinstance(raw, bytes):
+        raise ValueError("sidecar content must be bytes")
     destination = Path(path).absolute()
     if ".." in destination.parts:
         raise ValueError("sidecar destination cannot traverse parent components")

@@ -803,6 +803,14 @@ pages share one source family and one unresolved source-native project. Physical
 effective dates and publication dates stay unknown; no cancellation, numeric
 capacity, existing PMT target/outcome change or forecast score is inferred.
 
+The installed [exact-entity evidence dossier](docs/evidence_dossier.md) exposes these
+accepted records as readable local Markdown or JSON. Its explicit world/knowledge
+cutoffs separate source statements, world-current observations and assessments,
+superseded history and transitive dependency context. Event precision, fiscal
+quantity scope, rate denominators and evidence provenance remain intact. This is
+read-only inspection, not a fresh source check, canonical identity assignment,
+physical-state certification or forecast result.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision

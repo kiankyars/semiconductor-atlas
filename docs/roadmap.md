@@ -503,6 +503,15 @@ views. The original undated Ohio PMT case remains unresolved. This broadens sour
 evidence beyond successful production reports, but does not establish a slowdown
 start date, cancellation, representative non-survivor coverage or forecast skill.
 
+The [exact-entity evidence dossier](evidence_dossier.md) now makes accepted source
+records inspectable through the installed CLI and a local Markdown viewer, with
+JSON available separately. Source reports, world-current claims, superseded
+history and dependency-only context are explicitly separated by their temporal
+semantics. Typed fiscal quantities, monthly rates, milestone precision and
+provenance remain visible without source bodies or inferred physical capacity.
+This addresses local evidence usability, not map integration, searchable entity
+discovery, independent event corroboration or any forecasting/evaluation gate.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

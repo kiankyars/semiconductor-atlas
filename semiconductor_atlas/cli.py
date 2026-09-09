@@ -108,6 +108,13 @@ def _result_counts(value: object) -> dict[str, Any]:
     }
 
 
+def _evidence_dossier(args: argparse.Namespace) -> dict:
+    from .evidence_dossier import write_dossier
+
+    return write_dossier(args.database, args.output, subject_entity_id=args.entity_id,
+        as_of=args.as_of, recorded_at=args.recorded_at, output_format=args.format)
+
+
 def _assert_imported_hashes(connection, snapshot, nist, osm) -> None:
     expected_pairs = [
         (item.url, item.sha256)
@@ -1225,6 +1232,17 @@ def build_parser() -> argparse.ArgumentParser:
     summary_parser.add_argument("--as-of", required=True, type=_date)
     summary_parser.add_argument("--recorded-at", required=True, type=_timestamp)
     summary_parser.set_defaults(handler=_summary)
+
+    dossier = subparsers.add_parser(
+        "evidence-dossier", help="write a read-only exact-entity evidence dossier, not a physical-state certification"
+    )
+    dossier.add_argument("--database", required=True, type=Path)
+    dossier.add_argument("--entity-id", required=True)
+    dossier.add_argument("--as-of", required=True, type=_date)
+    dossier.add_argument("--recorded-at", required=True, type=_timestamp)
+    dossier.add_argument("--output", required=True, type=Path)
+    dossier.add_argument("--format", choices=("markdown", "json"), default="markdown")
+    dossier.set_defaults(handler=_evidence_dossier)
 
     release = subparsers.add_parser(
         "release",
