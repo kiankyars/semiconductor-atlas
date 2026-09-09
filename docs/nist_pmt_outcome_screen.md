@@ -120,6 +120,37 @@ python3 scripts/evaluate_source_guidance.py \
 This command requires the report's exact producer, not a future evolved checkout.
 Never repin an old report solely to avoid a producer mismatch.
 
+## Frozen diagnostic replay
+
+The implementation commit is `efe11afb33978554d00b290c3698669c72d3766b`.
+Its 143-file source runtime is retained in
+`artifacts/2026-09-09-efe11af-frozen-runtime-v1.json`: 4,298,928 bundle bytes,
+3,192,739 decoded source bytes, SHA-256
+`13fb69666239ac38b9ae6e5a57ee7768a5e6b6205d74c935cd3950c660b28741`.
+The isolated diagnostic replay matched all 265,115 report bytes and verified
+that all 16 imported project modules resolved inside that runtime. Receipt
+`artifacts/2026-09-09-frozen-pmt-outcome-diagnostic-replay-v1.json` has SHA-256
+`9e46b79c3830f819061bd4313ccb20a0b29f921e00bcac0d85ae787cd186fd31`.
+
+This replay covers the retained diagnostic, not a new allowlisted execution of
+the population wrapper, independent semantic review or a hermetic OS environment.
+The population wrapper's source is also preserved in the bundle; its separate
+receipt was reconstructed under the current producer as documented above.
+
+```sh
+python3 scripts/replay_frozen_runtime.py \
+  --bundle /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-09-efe11af-frozen-runtime-v1.json \
+  --sha256 13fb69666239ac38b9ae6e5a57ee7768a5e6b6205d74c935cd3950c660b28741 \
+  --commit efe11afb33978554d00b290c3698669c72d3766b \
+  --working-directory /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  source-guidance-diagnostic \
+  --review /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/review_plans/2026-09-09-nist-pmt-outcome-diagnostic-review-v1.json \
+  --review-sha256 91ba19f5ce700fed519389b90d2ef04b9036be32d2e15dd52b204347636a8154 \
+  --reference-root /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  --report /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-09-nist-pmt-outcome-diagnostic-v1.json \
+  --report-sha256 a5edc24cc4fb7cd96705575daa57d051047d9c9d132b28c4db0b18ba92e140df
+```
+
 ## Validation
 
 The core run executed 1,803 tests: 1,802 passed and one expected optional-payload
