@@ -1,0 +1,35 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "infineon-dresden-kulim-guidance-outcome-local-review-2026-09-09",
+  "reviewed_at": "2026-09-09T11:19:54Z",
+  "expires_at": "2026-09-10T11:19:54Z",
+  "decision": "approved_exact_urls_local_informational_noncommercial_review_only",
+  "purpose": "Retain seven exact official source URLs for an exposed retrospective screen of new-fab timing statements in Dresden and Kulim. Keep opening, production startup, equipment readiness and first wafers leaving distinct. Acquisition alone accepts no claims or forecast outcomes.",
+  "rights_review": "The main reviewer reread all thirteen sections of the complete retained Infineon Terms of Use and the current web-readable policy. Section 3.2 permits informational noncommercial or personal downloading with originals unchanged, notices retained and Infineon identified. This is bounded local informational research only. No source redistribution, commercial-use approval, model training, endorsement, logo use or third-party market-data license follows. The prospectus is not an investment recommendation; review its own notices before selecting evidence.",
+  "robots_review": "The complete retained wildcard policy was reread. No exclusion matches these seven public www.infineon.com paths. The PDF is under /assets/row/public/, not restricted assets. No credentials, cookies, redirects, retries or alternate route after denial are authorized. Existing policy capture clocks remain explicit; this is not a new scheduled policy approval.",
+  "dependencies": [
+    {"path": "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body", "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"},
+    {"path": "artifacts/2026-09-08-infineon-policy-probe-v1/source_checks.json", "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"},
+    {"path": "artifacts/2026-09-08-infineon-terms-probe-v1/responses/infineon-terms.body", "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"},
+    {"path": "artifacts/2026-09-08-infineon-terms-probe-v1/source_checks.json", "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"}
+  ],
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 40,
+  "max_response_bytes": 10000000,
+  "minimum_interval_seconds": 2,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "entries": [
+    {"id": "dresden-opening-guidance-2025", "url": "https://www.infineon.com/press-release/2025/infxx202502-058", "purpose": "source_document", "company": "Infineon", "country_code": "DE", "source_family": "infineon-issuer", "scope": "Smart Power Fab opening guidance; not production startup or whole-site completion.", "media_types": ["text/html"]},
+    {"id": "dresden-production-guidance-2024", "url": "https://www.infineon.com/press-release/2024/infxx202405-109", "purpose": "source_document", "company": "Infineon", "country_code": "DE", "source_family": "infineon-issuer", "scope": "Smart Power Fab production-start guidance, separately from its opening and existing Dresden lines.", "media_types": ["text/html"]},
+    {"id": "dresden-opening-report-2026", "url": "https://www.infineon.com/press-release/2026/ifxpr202607-117", "purpose": "source_document", "company": "Infineon", "country_code": "DE", "source_family": "infineon-issuer", "scope": "New Smart Power Fab opening report. Dateline is not automatically an exact event day. No capacity, qualification or production-start inference.", "media_types": ["text/html"]},
+    {"id": "kulim-original-guidance-2022", "url": "https://www.infineon.com/press-release/2022/infxx202202-053", "purpose": "source_document", "company": "Infineon", "country_code": "MY", "source_family": "infineon-issuer", "scope": "Kulim third module construction, equipment-readiness and first-wafers-leaving targets. Do not merge these events or infer full ramp.", "media_types": ["text/html"]},
+    {"id": "kulim-production-guidance-2023", "url": "https://www.infineon.com/press-release/2023/infxx202305-099", "purpose": "source_document", "company": "Infineon", "country_code": "MY", "source_family": "infineon-issuer", "scope": "New Kulim plant production-start guidance within an issuer supplier-agreement release. Supplier substrate shipments and issuer group capacity targets are different scopes.", "media_types": ["text/html"]},
+    {"id": "kulim-opening-report-2024", "url": "https://www.infineon.com/press-release/2024/infxx202408-133", "purpose": "source_document", "company": "Infineon", "country_code": "MY", "source_family": "infineon-issuer", "scope": "Kulim phase-one opening and symbolic launch; preserve phase-two expansion and future 200-mm capability qualifiers.", "media_types": ["text/html"]},
+    {"id": "kulim-production-outcome-2025", "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/fixed-income/infineon-dip-update-2025-base-prospectus-final-5-february-2025-v01-00-en-de.pdf", "purpose": "source_document", "company": "Infineon", "country_code": "MY", "source_family": "infineon-issuer", "scope": "Issuer prospectus section 4.4 Kulim 3 startup statement. Inspect complete cover, relevant pages and notices. Do not extract third-party market tables, securities forecasts or inferred capacity.", "media_types": ["application/pdf"]}
+  ]
+}

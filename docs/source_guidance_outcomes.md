@@ -7,6 +7,12 @@ target and a later issuer-reported outcome. This is a descriptive comparison of
 source statements, not a historical Atlas forecast or a passed forecasting gate.
 It adds no core database claims and does not change the existing prospective study.
 
+The separate [Dresden and Kulim timing review](infineon_dresden_kulim_timing.md)
+now retains six additional event-specific cases across two projects. Five targets
+have reviewed calendar bounds, one season remains unresolved, and zero outcomes
+are scored. The opening upper bound, event mismatches and unresolved prospectus
+clearance remain explicit; this does not change the original three-project report.
+
 The September 9, 2026 screen contains three purposively selected candidates:
 
 | Candidate | Reviewed target | Reviewed outcome | Result |

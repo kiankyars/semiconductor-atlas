@@ -572,6 +572,13 @@ independent event adjudication, measured alert utility and calibrated forecasts 
 
 ## Phase 5: supply-demand scenarios and investable signals
 
+The separate [Dresden/Kulim timing screen](infineon_dresden_kulim_timing.md)
+expands the retrospective evidence review to six event-specific cases across two
+projects. It preserves five dated targets, an unresolved season, an opening
+upper bound and an unresolved source-specific rights decision. Zero outcomes are
+scored; this is evidence-gap accounting, not predictive improvement or this phase's
+exit gate. Existing cohorts and the prospective study remain unchanged.
+
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,
 equipment availability, pricing, and utilization. Scenario results estimate capacity, supply,
 pricing, market share, equipment demand, capital intensity, and listed-company earnings effects.
