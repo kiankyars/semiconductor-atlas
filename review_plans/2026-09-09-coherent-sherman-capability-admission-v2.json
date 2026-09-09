@@ -1,0 +1,110 @@
+{
+  "format": "semiconductor-atlas-coherent-sherman-capability-admission-v1",
+  "subject": {
+    "stable_key": "nist:coherent-sherman-2026-existing-inp-facility-source-native",
+    "label": "NIST-reported Coherent Sherman InP facility (canonical identity unresolved)",
+    "kind": "facility",
+    "scope": "Existing Coherent high-volume 150 mm InP semiconductor manufacturing facility in Sherman, Texas, as described by NIST; no building, production-unit or proposed-expansion allocation.",
+    "canonical_entity_id": null
+  },
+  "source": {
+    "id": "nist-coherent-2026-loi",
+    "url": "https://www.nist.gov/news-events/news/2026/06/department-commerces-chips-program-announces-letter-intent-coherent-50",
+    "title": "The Department of Commerce’s CHIPS Program Announces a Letter of Intent with Coherent for up to $50 Million to Expand Indium Phosphide Production",
+    "sha256": "05f30892d499bbb73679f10e24783eeb18e3530b3c0f9e9ba9d4d549ca70958c",
+    "bytes": 87366,
+    "published_at": "2026-06-16",
+    "retrieved_at": "2026-09-09T04:23:23.622514Z"
+  },
+  "rows": [
+    {
+      "key": "material",
+      "capability_type": "material",
+      "value": "indium_phosphide",
+      "unit": null,
+      "qualifier": "NIST-reported existing Sherman facility capability; unknown physical effective date, quantity, qualification and current status; proposed expansion is separate."
+    },
+    {
+      "key": "wafer-size",
+      "capability_type": "wafer_size",
+      "value": 150,
+      "unit": "mm",
+      "qualifier": "NIST-reported existing Sherman facility capability; unknown physical effective date, quantity, qualification and current status; proposed expansion is separate."
+    },
+    {
+      "key": "production-scale",
+      "capability_type": "production_scale",
+      "value": "high_volume",
+      "unit": null,
+      "qualifier": "NIST-reported existing Sherman facility capability; unknown physical effective date, quantity, qualification and current status; proposed expansion is separate."
+    }
+  ],
+  "packet": {
+    "path": "artifacts/2026-09-09-nist-2026-progress-capture-v1",
+    "manifest_sha256": "05a33260bde85bf62efe4c3e8c5bd81430ba3c9c62f140ad718785cc5064579a"
+  },
+  "access_review": {
+    "path": "review_plans/2026-09-09-nist-2026-progress-source-review.json",
+    "sha256": "942abcff0fbffcf74d318d05de6ec8c6bd8539e4ca06479b8ecd9dae065fbbe5"
+  },
+  "boundaries": {
+    "physical_current_state_inferred": false,
+    "physical_effective_date_inferred": false,
+    "hvm_start_date_inferred": false,
+    "expansion_completion_inferred": false,
+    "numeric_capacity_inferred": false,
+    "measured_output_inferred": false,
+    "yield_utilization_qualification_inferred": false,
+    "canonical_identity_assigned": false,
+    "geometry_inferred": false,
+    "ownership_assigned": false,
+    "funding_award_finalized": false,
+    "original_pmt_superseded": false,
+    "independent_physical_corroboration": false,
+    "historical_system_knowledge_backdated": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "original_pmt_target_changed": false,
+    "original_pmt_outcome_changed": false,
+    "alert_generated": false,
+    "baseline_modified": false,
+    "scheduled_execution_changed": false,
+    "raw_redistribution": false,
+    "model_training": false,
+    "source_acquisition": false
+  },
+  "decision": "accept_three_existing_facility_capability_statements",
+  "reviewed_at": "2026-09-09T08:59:26Z",
+  "reviewer": "Codex main reviewer; read the complete retained six-paragraph NIST narrative, article title and visible publication dateline. A separate read-only reviewer checked source-native identity candidates.",
+  "prior_exposure": "Outcome-exposed follow-up from the full 45-group NIST PMT screen. The reviewer has already read the later narrative and frozen original-project diagnostic. This is retrospective source-claim acceptance, not independent outcome labeling, representative historical coverage or blind detector/forecast evaluation.",
+  "interpretation": "Accept three atomic attributes of the existing Coherent Sherman facility described by NIST: indium-phosphide material, 150 mm wafer size and high-volume production scale. All three share one source narrative and are not three independent observations. The narrative separately says proposed funding will support expansion, and future equipment and cleanroom capacity will be added. The up-to-$50-million letter of intent is not a finalized award, replacement of the original PMT, expansion completion or measured output. Retain the 150mm (6-inch) literal in local evidence; use exact stated 150 mm rather than converting six inches. June 16 is the publication day, not HVM onset or a physical-effective date. Source statements remain null-effective, null-confidence and excluded from physical-current claims. This v2 review supersedes the unaccepted local v1 candidate for execution only: v1 mistakenly introduced a second NIST family. Preserve its review, database and checker receipt as rejected validation artifacts, not accepted manufacturing coverage or publication candidates. The source statements and original PMT outcomes remain unchanged.",
+  "identity_review": "Create a new source-native facility, without canonical assignment. Existing Sherman sites dbb2f6db-1c37-5482-a718-954595fceebe and 7bdc424d-10a3-58a7-9447-82633eab5fc4 belong to GlobalWafers and Texas Instruments project contexts. EPA site 40512b6a-4d7d-585e-86f5-4e9f93d0db5e (epa:frs:110064117290, FINISAR SHERMAN) is a possible research lead only: this NIST narrative supplies no street address, registry identifier, Finisar identity or ownership bridge. City-name matching is insufficient. No old identity, relationship, project group or outcome is altered. Source-family review: the parent already stores NIST CHIPS disclosures in us-official-semiconductor-awards, ID 058a2903-ba0f-5a3b-a0c2-fcc50f1df3bd. Reuse that unchanged family. The capture ledger's nist-commerce-government label is source-acquisition metadata, not authority to create an independent core publisher family.",
+  "parent_database_sha256": "a1d59ad714c7df0280335faf9c4c7fd73a4a31d9f838185f60f5d1b5052306cd",
+  "evidence": {
+    "title": {
+      "start": 69226,
+      "end": 69407,
+      "sha256": "8fb1a29d8bdcc437277183e678bf090d9596fd32bb020725d5abe8c8c083d604",
+      "tag": "h1"
+    },
+    "publication": {
+      "start": 69706,
+      "end": 69764,
+      "sha256": "09c445a8e8020f8715a9fba6e9812f8e0dda1f069dc03000d16bc9ca0bf61254",
+      "tag": "time"
+    },
+    "narrative": {
+      "start": 72685,
+      "end": 74920,
+      "sha256": "bae274760830345b31d90b33aa924bc024b7bc6538420f2af259b1d7e6301122",
+      "tag": "div"
+    }
+  },
+  "rights": {
+    "use": "local_informational_review_only",
+    "basis": "The retained source-acquisition review and exact NIST robots/copyright policy bodies remain unchanged and fully hash-bound. That earlier review permitted only source retention, not claim acceptance; this separate review accepts only the bounded source-native capability statements for local informational use. No publisher body, image, PDF, ownership endorsement, unrestricted reuse or publisher-granted blanket automation permission is inferred.",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "source_family": "us-official-semiconductor-awards"
+}

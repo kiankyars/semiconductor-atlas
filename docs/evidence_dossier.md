@@ -72,6 +72,9 @@ and claim IDs are not exposed. Missing or future-known dependency/support clocks
 cyclic lineage, inconsistent typed-value hashes and malformed quantity/rate
 metadata fail closed. A referenced ingestion run must have succeeded by the cutoff;
 its completion and explicit actual acceptance clock, when present, are checked.
+Explicit acceptance must be a timezone-aware timestamp within the inclusive run
+interval. A missing field remains supported for legacy runs; explicit null,
+malformed timestamps and values outside the run interval fail closed.
 Sources, families, input documents, series, entities and record observations are
 also checked for temporal availability. The report checks recorded database
 provenance, not source-file bytes or substantive truth. Use the original frozen

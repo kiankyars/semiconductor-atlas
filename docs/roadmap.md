@@ -508,6 +508,14 @@ views. The original undated Ohio PMT case remains unresolved. This broadens sour
 evidence beyond successful production reports, but does not establish a slowdown
 start date, cancellation, representative non-survivor coverage or forecast skill.
 
+The [Coherent Sherman capability admission](coherent_sherman_capability.md) brings
+retained NIST evidence into three typed source-native capability statements:
+InP material, 150 mm wafer size and high-volume production scale. The existing
+facility is distinct from its proposed expansion and from unrelated Sherman
+entities. Unknown physical dates keep these claims outside physical-current
+views. This advances manufacturing coverage, not original-project completion,
+numeric capacity, independent corroboration or calibrated forecasting.
+
 The [exact-entity evidence dossier](evidence_dossier.md) now makes accepted source
 records inspectable through the installed CLI and a local Markdown viewer, with
 JSON available separately. Source reports, world-current claims, superseded

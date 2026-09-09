@@ -53,6 +53,9 @@ OPERATIONS = {
     "new-albany-project-statements": ("scripts/admit_new_albany_project_statements.py", "verify",
                                      ("parent", "review", "reference-root", "output",
                                       "expected-review-sha256", "expected-output-sha256")),
+    "coherent-sherman-capability": ("scripts/admit_coherent_sherman_capability.py", "verify",
+                                    ("parent", "review", "reference-root", "output",
+                                     "expected-review-sha256", "expected-output-sha256")),
 }
 DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
                  ("source-guidance-diagnostic", "review-sha256"),
@@ -70,7 +73,9 @@ DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
                  ("reviewed-source-rates", "expected-review-sha256"),
                  ("reviewed-source-rates", "expected-output-sha256"),
                  ("new-albany-project-statements", "expected-review-sha256"),
-                 ("new-albany-project-statements", "expected-output-sha256")}
+                 ("new-albany-project-statements", "expected-output-sha256"),
+                 ("coherent-sherman-capability", "expected-review-sha256"),
+                 ("coherent-sherman-capability", "expected-output-sha256")}
 MAX_OUTPUT = 1_000_000
 _LOADED_PRODUCER = runtime.digest(Path(__file__).read_bytes())
 

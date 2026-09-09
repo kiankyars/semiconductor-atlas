@@ -294,6 +294,65 @@ class EvidenceDossierTests(unittest.TestCase):
         self.claim("source", evidence=[m.EvidenceLink("doc", source_record_id="record")])
         with self.assertRaisesRegex(ValueError, "admission"):
             self.report()
+        # A later cutoff cannot make an admission after run completion consistent.
+        with self.assertRaisesRegex(ValueError, "processing interval"):
+            self.report(recorded=JUST_AFTER)
+
+    def test_explicit_run_acceptance_rejects_null_naive_invalid_and_non_timestamp_values(self):
+        for index, accepted in enumerate((None, "2026-09-09T05:52:00.817388", "not-a-date", 0,
+                                         "0001-01-01T00:00:00+01:00")):
+            identifier = "invalid-acceptance-" + str(index)
+            self.add_run(identifier, accepted=accepted)
+            r.add_entity(self.c, m.Entity(identifier, m.EntityKind.PROJECT, identifier, CREATED))
+            self.claim(identifier, entity=identifier, run=identifier)
+            before = list(self.c.iterdump())
+            with self.subTest(accepted=accepted), self.assertRaisesRegex(ValueError, "invalid explicit accepted_at"):
+                self.report(entity=identifier)
+            self.assertEqual(list(self.c.iterdump()), before)
+
+    def test_explicit_run_acceptance_rejects_one_microsecond_outside_processing_interval(self):
+        for identifier, accepted in (("before-start", "2025-12-31T23:59:59.999999Z"),
+                                      ("after-completion", JUST_AFTER)):
+            self.add_run(identifier, accepted=accepted)
+            r.add_entity(self.c, m.Entity(identifier, m.EntityKind.PROJECT, identifier, CREATED))
+            self.claim(identifier, entity=identifier, run=identifier)
+            with self.subTest(identifier=identifier), self.assertRaisesRegex(ValueError, "processing interval"):
+                self.report(entity=identifier, recorded=LATER)
+
+    def test_run_acceptance_can_be_absent_or_equal_to_either_processing_boundary(self):
+        options = (("absent", {}), ("start", {"accepted_at": CREATED}),
+            ("end", {"accepted_at": ADMITTED}),
+            ("just-inside", {"accepted_at": JUST_BEFORE}),
+            ("offset-end", {"accepted_at": "2026-09-08T22:52:00.817388-07:00"}))
+        for identifier, parameters in options:
+            r.add_ingestion_run(self.c, m.IngestionRun(identifier, "source", CREATED, m.IngestionStatus.SUCCEEDED,
+                completed_at=ADMITTED, input_document_id="doc", parameters=parameters))
+            r.add_entity(self.c, m.Entity(identifier, m.EntityKind.PROJECT, identifier, CREATED))
+            self.claim(identifier, entity=identifier, run=identifier)
+            with self.subTest(identifier=identifier):
+                report = self.report(entity=identifier)
+                self.assertEqual(report["ingestion_runs"][0]["accepted_at"], parameters.get("accepted_at"))
+                self.assertEqual(ids(report["source_statements"]), {identifier})
+
+    def test_schema10_microsecond_run_acceptance_preserves_offset_literal(self):
+        self.c.commit()
+        database.apply_migrations(self.c, target_version=10)
+        accepted = "2026-09-08T22:52:00.817389-07:00"
+        r.add_ingestion_run(self.c, m.IngestionRun("run", "source", ADMITTED, m.IngestionStatus.SUCCEEDED,
+            completed_at=JUST_AFTER, input_document_id="doc", parameters={"accepted_at": accepted}))
+        self.claim("source", recorded=JUST_AFTER, run="run")
+        report = self.report(recorded=JUST_AFTER)
+        self.assertEqual(report["ingestion_runs"][0]["accepted_at"], accepted)
+        self.assertEqual(ids(report["source_statements"]), {"source"})
+
+    def test_source_record_run_becomes_available_at_valid_acceptance_and_completion(self):
+        self.add_run(accepted=JUST_AFTER, completed=JUST_AFTER)
+        payload = {"body": "SECRET_SOURCE_RECORD_PAYLOAD"}
+        r.add_source_record(self.c, m.SourceRecord("record", "run", "doc", "fixture:record", CREATED,
+            m.source_record_payload_sha256(payload), payload))
+        self.claim("source", evidence=[m.EvidenceLink("doc", source_record_id="record")])
+        with self.assertRaisesRegex(ValueError, "run completed_at"):
+            self.report()
         later = self.report(recorded=JUST_AFTER)
         self.assertNotIn("SECRET_SOURCE_RECORD_PAYLOAD", json_bytes(later).decode())
         self.assertEqual(later["source_statements"][0]["evidence"][0]["source_record_id"], "record")

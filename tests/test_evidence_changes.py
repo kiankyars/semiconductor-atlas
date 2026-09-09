@@ -193,6 +193,41 @@ class EvidenceChangesTests(unittest.TestCase):
         self.assertEqual(report["events"][0]["event_at"], T)
         self.assertEqual(report["page_validation_cutoff"], AFTER)
 
+    def test_invalid_explicit_run_acceptance_rejects_page_instead_of_returning_events(self):
+        cases = (("null", None), ("naive", "2026-09-09T05:52:00.817388"),
+                 ("before-start", "2025-12-31T23:59:59.999999Z"), ("after-completion", AFTER))
+        for identifier, accepted in cases:
+            self.fixture.add_run(identifier, accepted=accepted)
+            r.add_entity(self.c, m.Entity(identifier, m.EntityKind.PROJECT, identifier, CREATED))
+            self.claim(identifier, entity=identifier, run=identifier)
+            before = list(self.c.iterdump())
+            with self.subTest(identifier=identifier), self.assertRaisesRegex(ValueError, "explicit accepted_at"):
+                self.feed(subject_entity_id=identifier, recorded_at=LATER)
+            self.assertEqual(list(self.c.iterdump()), before)
+
+    def test_absent_and_exact_boundary_run_acceptances_remain_valid(self):
+        for identifier, parameters in (("absent", {}), ("start", {"accepted_at": CREATED}),
+                ("end", {"accepted_at": T}),
+                ("offset", {"accepted_at": "2026-09-08T22:52:00.817388-07:00"})):
+            r.add_ingestion_run(self.c, m.IngestionRun(identifier, "source", CREATED, m.IngestionStatus.SUCCEEDED,
+                completed_at=T, input_document_id="doc", parameters=parameters))
+            r.add_entity(self.c, m.Entity(identifier, m.EntityKind.PROJECT, identifier, CREATED))
+            self.claim(identifier, entity=identifier, run=identifier)
+            with self.subTest(identifier=identifier):
+                report = self.feed(subject_entity_id=identifier)
+                self.assertEqual(report["total_events"], 1)
+                self.assertEqual(report["ingestion_runs"][0]["accepted_at"], parameters.get("accepted_at"))
+
+    def test_bad_later_page_acceptance_raises_with_population_digest_without_skipping_event(self):
+        self.claim("a-good")
+        self.fixture.add_run(accepted=None)
+        self.claim("z-invalid", run="run")
+        first = self.feed(limit=1)
+        self.assertEqual(first["total_events"], 2)
+        self.assertEqual(first["next_offset"], 1)
+        with self.assertRaisesRegex(ValueError, "invalid explicit accepted_at"):
+            self.feed(limit=1, offset=1, population_sha256=first["population_sha256"])
+
     def test_dangling_evidence_is_not_silently_omitted_when_valid_support_remains(self):
         self.fixture.document("removed")
         self.claim("source", evidence=[m.EvidenceLink("doc"), m.EvidenceLink("removed")])

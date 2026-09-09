@@ -842,6 +842,12 @@ qualifiers remain mandatory. They are source statements, not new physical-capaci
 no per-fab allocation or shipment-based utilization is inferred. The new snapshot replays
 exactly and preserves every inherited row and all physical-current claims.
 
+The [Coherent Sherman admission](docs/coherent_sherman_capability.md) represents
+NIST's existing high-volume 150 mm InP facility as three typed source-native
+capability statements. It does not treat proposed expansion as completed,
+merge unrelated Sherman identities, invent physical-effective dates or infer
+numeric output, capacity, qualification or a forecast result.
+
 The separate [realized-event workflow](docs/realized_milestones.md) now retains one
 [reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
 with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a

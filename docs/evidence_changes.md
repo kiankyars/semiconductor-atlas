@@ -69,6 +69,12 @@ completion and explicit acceptance, and auxiliary run inputs. Every declared evi
 must survive hydration; missing documents, sources or families cannot silently disappear
 behind another valid support link.
 
+An explicit run `accepted_at` must be a timezone-aware timestamp within the
+inclusive processing interval and at or before the requested cutoff. Explicit
+null, malformed timestamps and acceptance outside the run interval reject the
+page. Legacy runs without this field remain supported; absence is not a supplied
+acceptance timestamp. The dossier uses the same validation.
+
 Validation uses the **upper cutoff**, not each original event instant. Legacy ingestion can
 record claims before its run completes. A cutoff before required completion rejects the page
 instead of silently dropping the claim. Retry the original lower bound with a later upper

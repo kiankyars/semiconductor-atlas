@@ -168,8 +168,14 @@ def _check_support(connection, claims: list[dict], cutoff: datetime, entity: dic
         if not isinstance(parameters, dict):
             raise ValueError("invalid ingestion-run parameters")
         admitted = parameters.get("accepted_at")
-        if admitted is not None:
+        if "accepted_at" in parameters:
+            try:
+                admission_clock = _clock(admitted)
+            except (ValueError, OverflowError) as error:
+                raise ValueError("input lineage has invalid explicit accepted_at") from error
             _before(admitted, cutoff, "actual run admission")
+            if not _clock(row["started_at"]) <= admission_clock <= _clock(row["completed_at"]):
+                raise ValueError("explicit accepted_at is outside its processing interval")
         runs.append({key: row[key] for key in
                      ("id", "source_id", "started_at", "completed_at", "status", "code_version")}
                     | {"accepted_at": admitted})
