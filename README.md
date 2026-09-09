@@ -784,6 +784,12 @@ the screen, two unresolved. This outcome-exposed source-statement comparison is 
 historical Atlas forecast, verified historical byte availability or a calibrated result.
 The original prospective comparator and core database remain unchanged.
 
+The separate [AT&S two-project HVM diagnostic](docs/ats_hvm_timing.md) retains
+both original calendar-quarter targets: one later issuer-reported HVM start
+falls outside its interval, while Leoben's HVM outcome remains unknown.
+This private local, outcome-exposed comparison adds a reported miss without
+claiming representative forecasting accuracy or changing the prospective study.
+
 The [NIST 2024 announcement-population evidence](docs/nist_2024_announcement_population.md)
 now freezes all 65 calendar-2024 articles from the currently displayed CHIPS archive
 and retains every article body, including the 40 outside the preliminary-terms title
