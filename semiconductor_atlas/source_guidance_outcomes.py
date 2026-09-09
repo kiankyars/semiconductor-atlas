@@ -20,6 +20,7 @@ from datetime import date
 
 
 FORMAT = "semiconductor-atlas-exposed-source-guidance-outcomes-v1"
+FORMAT_V2 = "semiconductor-atlas-exposed-source-guidance-outcomes-v2"
 IDENTITY = {"case_id", "project_id", "project_group", "event_type", "scope_id"}
 BOUNDARIES = {
     "evidence_verified": False,
@@ -75,7 +76,7 @@ def _target(value):
 
 def _outcome(value):
     if not isinstance(value, dict) or not isinstance(value.get("status"), str) or value["status"] not in {
-        "observed", "explicit_nonoccurrence_through", "cancelled", "unknown"
+        "observed", "observed_by", "explicit_nonoccurrence_through", "cancelled", "unknown"
     }:
         raise ValueError("outcome requires a supported explicit status")
     status = value["status"]
@@ -83,6 +84,9 @@ def _outcome(value):
         _keys(value, {"status", "low", "high"}, "observed outcome")
         low, high = _interval(value)
         return status, low, high
+    if status == "observed_by":
+        _keys(value, {"status", "through"}, "observed-by outcome")
+        return status, None, _day(value["through"])
     if status == "explicit_nonoccurrence_through":
         _keys(value, {"status", "through"}, "nonoccurrence outcome")
         through = _day(value["through"])
@@ -96,7 +100,8 @@ def evaluate_case(target, outcome):
 
     ``target`` is null, ``{kind: interval, low, high}``, or
     ``{kind: deadline, through}``. ``outcome`` is ``{status: observed, low,
-    high}``, ``{status: explicit_nonoccurrence_through, through}``, or has
+    high}``, ``{status: observed_by, through}``,
+    ``{status: explicit_nonoccurrence_through, through}``, or has
     only a ``status`` of ``cancelled`` or ``unknown``. All dates are inclusive.
     Missing evidence must be unknown, never explicit nonoccurrence.
     """
@@ -111,6 +116,17 @@ def evaluate_case(target, outcome):
         if high >= target_high:
             result.update(classification=f"censored_{kind}_miss", target_met=False,
                           possible_satisfaction=False)
+        return result
+    if status == "observed_by":
+        if kind == "deadline":
+            if high <= target_high:
+                result.update(classification="deadline_met", target_met=True, possible_satisfaction=True)
+            else:
+                result.update(classification="deadline_upper_bound_unresolved", possible_satisfaction=True)
+        elif high < target_low:
+            result.update(classification="interval_missed_early", target_met=False, possible_satisfaction=False)
+        else:
+            result.update(classification="interval_upper_bound_unresolved", possible_satisfaction=True)
         return result
     if kind == "deadline":
         if high <= target_high:
@@ -148,10 +164,12 @@ def _context(guidance_day, outcome_day, outcome):
             "same_reported_document_day" if guidance_day == outcome_day else "outcome_document_before_guidance")
     _, low, high = _outcome(outcome)
     def relation(day):
-        if day is None or low is None:
+        if day is None or high is None:
             return "unknown"
         if high < day:
             return "before_reported_document_day"
+        if low is None:
+            return "on_or_before_reported_document_day" if high == day else "unknown"
         if low > day:
             return "after_reported_document_day"
         if low == high == day:
@@ -220,7 +238,8 @@ def score(roster, outcomes):
     for name, members in (("screened", rows), ("eligible", eligible), ("scored", scored)):
         denominators[name + "_projects"] = len({row["case"]["project_id"] for row in members})
         denominators[name + "_project_groups"] = len({row["case"]["project_group"] for row in members})
-    return {"format": FORMAT, "design": "exposed_retrospective_source_statement_comparison",
+    format_name = FORMAT_V2 if any(row['outcome_status'] == 'observed_by' for row in rows) else FORMAT
+    return {"format": format_name, "design": "exposed_retrospective_source_statement_comparison",
             "boundaries": dict(BOUNDARIES), "denominators": denominators, "cases": rows,
             "classification_counts": dict(sorted(Counter(row["classification"] for row in rows).items())),
             "screened_outcome_status_counts": dict(sorted(Counter(row["outcome_status"] for row in rows).items())),

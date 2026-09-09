@@ -14,6 +14,10 @@ def observed(low, high=None):
     return {"status": "observed", "low": low, "high": high or low}
 
 
+def observed_by(through):
+    return {"status": "observed_by", "through": through}
+
+
 def fixture(case_id="a", *, disposition="eligible", target=DEADLINE,
             outcome=None, project="project-a", group="group-a"):
     identity = {"case_id": case_id, "project_id": project, "project_group": group,
@@ -73,6 +77,41 @@ class SourceTargetArithmeticTests(unittest.TestCase):
         self.assertEqual("interval_missed_late", actual["classification"])
         self.assertIs(actual["target_met"], False)
 
+    def test_observed_by_deadline_upper_bound_is_inclusive_without_a_false_late_miss(self):
+        for through, classification, met in (
+                ("2021-01-01", "deadline_met", True),
+                ("2021-12-31", "deadline_met", True),
+                ("2022-01-01", "deadline_upper_bound_unresolved", None),
+                ("2099-12-31", "deadline_upper_bound_unresolved", None)):
+            with self.subTest(through=through):
+                actual = evaluate_case(DEADLINE, observed_by(through))
+                self.assertEqual({"target_kind": "deadline", "outcome_status": "observed_by",
+                    "classification": classification, "target_met": met,
+                    "possible_satisfaction": True}, actual)
+
+    def test_observed_by_interval_never_invents_containment_or_a_lower_bound(self):
+        for through, classification, met, possible in (
+                ("2021-09-30", "interval_missed_early", False, False),
+                ("2021-10-01", "interval_upper_bound_unresolved", None, True),
+                ("2021-11-15", "interval_upper_bound_unresolved", None, True),
+                ("2021-12-31", "interval_upper_bound_unresolved", None, True),
+                ("2022-01-01", "interval_upper_bound_unresolved", None, True),
+                ("2099-12-31", "interval_upper_bound_unresolved", None, True)):
+            with self.subTest(through=through):
+                actual = evaluate_case(INTERVAL, observed_by(through))
+                self.assertEqual({"target_kind": "interval", "outcome_status": "observed_by",
+                    "classification": classification, "target_met": met,
+                    "possible_satisfaction": possible}, actual)
+
+    def test_observed_by_is_not_an_exact_occurrence_on_its_upper_bound(self):
+        for target, through in ((INTERVAL, "2021-11-15"), (DEADLINE, "2022-01-01")):
+            with self.subTest(target=target):
+                exact = evaluate_case(target, observed(through))
+                bounded = evaluate_case(target, observed_by(through))
+                self.assertIsNotNone(exact["target_met"])
+                self.assertIsNone(bounded["target_met"])
+                self.assertNotEqual(exact["classification"], bounded["classification"])
+
     def test_explicit_nonoccurrence_requires_through_upper_bound_for_miss(self):
         for target in (DEADLINE, INTERVAL):
             for through, missed in (("2021-01-01", False), ("2021-12-30", False),
@@ -93,7 +132,8 @@ class SourceTargetArithmeticTests(unittest.TestCase):
                     self.assertIsNone(actual["possible_satisfaction"])
 
     def test_no_target_preserves_every_outcome_status(self):
-        outcomes = [observed("2021-10-01"), {"status": "cancelled"}, {"status": "unknown"},
+        outcomes = [observed("2021-10-01"), observed_by("2021-10-01"),
+                    {"status": "cancelled"}, {"status": "unknown"},
                     {"status": "explicit_nonoccurrence_through", "through": "2022-01-01"}]
         for outcome in outcomes:
             with self.subTest(outcome=outcome):
@@ -101,10 +141,12 @@ class SourceTargetArithmeticTests(unittest.TestCase):
                 self.assertEqual("no_target", actual["classification"])
                 self.assertEqual(outcome["status"], actual["outcome_status"])
                 self.assertIsNone(actual["target_met"])
+                self.assertIsNone(actual["possible_satisfaction"])
 
     def test_exact_valid_days_include_leap_day(self):
         target = {"kind": "deadline", "through": "2024-02-29"}
         self.assertIs(evaluate_case(target, observed("2024-02-29"))["target_met"], True)
+        self.assertIs(evaluate_case(target, observed_by("2024-02-29"))["target_met"], True)
 
     def test_dates_reject_invalid_noncanonical_and_non_string_inputs(self):
         invalid = [None, False, 20211231, "20211231", "2021-2-01", "2021-02-29", "0000-01-01",
@@ -114,6 +156,20 @@ class SourceTargetArithmeticTests(unittest.TestCase):
                 evaluate_case({"kind": "deadline", "through": value}, {"status": "unknown"})
             with self.subTest(outcome=value), self.assertRaises(ValueError):
                 evaluate_case(DEADLINE, {"status": "explicit_nonoccurrence_through", "through": value})
+            with self.subTest(observed_by=value), self.assertRaises(ValueError):
+                evaluate_case(DEADLINE, observed_by(value))
+
+    def test_observed_by_strict_shape_rejects_imputed_bounds_and_extra_fields_even_without_target(self):
+        outcomes = [{"status": "observed_by"},
+                    {"status": "observed_by", "high": "2021-12-31"},
+                    {"status": "observed_by", "low": "2021-01-01", "high": "2021-12-31"},
+                    *({**observed_by("2021-12-31"), key: value} for key, value in (
+                        ("low", None), ("high", "2021-12-31"), ("base", None),
+                        ("probability", 1), ("date", "2021-12-31"), ("precision", "day")))]
+        for target in (None, DEADLINE, INTERVAL):
+            for outcome in outcomes:
+                with self.subTest(target=target, outcome=outcome), self.assertRaises(ValueError):
+                    evaluate_case(target, outcome)
 
     def test_strict_tagged_shapes_reject_midpoints_probabilities_and_deadline_lower_bound(self):
         targets = [False, [], {}, {"kind": []}, {"kind": "before", "through": "2021-12-31"},
@@ -133,6 +189,66 @@ class SourceTargetArithmeticTests(unittest.TestCase):
 
 
 class SourceGuidanceRosterTests(unittest.TestCase):
+    def test_observed_by_retains_all_cases_but_scores_only_established_boolean_results(self):
+        pairs = [fixture("a", outcome=observed_by("2021-12-31")),
+                 fixture("b", outcome=observed_by("2022-01-01")),
+                 fixture("c", target=INTERVAL, outcome=observed_by("2021-09-30")),
+                 fixture("d", target=INTERVAL, outcome=observed_by("2021-11-15")),
+                 fixture("e", disposition="unresolved", target=None, outcome=observed_by("2021-12-31")),
+                 fixture("f", disposition="excluded", outcome=observed_by("2021-12-31")),
+                 fixture("g")]
+        report = score([pair[0] for pair in pairs], [pair[1] for pair in pairs])
+        self.assertEqual("semiconductor-atlas-exposed-source-guidance-outcomes-v2", report["format"])
+        self.assertEqual({"screened_cases": 7, "eligible_cases": 5, "unresolved_cases": 1,
+            "excluded_cases": 1, "scored_cases": 2, "eligible_result_unresolved_cases": 3,
+            "scored_interval_cases": 1, "scored_deadline_cases": 1,
+            "screened_projects": 1, "screened_project_groups": 1,
+            "eligible_projects": 1, "eligible_project_groups": 1,
+            "scored_projects": 1, "scored_project_groups": 1}, report["denominators"])
+        self.assertEqual({"observed_by": 6, "unknown": 1}, report["screened_outcome_status_counts"])
+        self.assertEqual({"observed_by": 4, "unknown": 1}, report["eligible_outcome_status_counts"])
+        self.assertEqual({"observed_by": 2}, report["scored_outcome_status_counts"])
+        for row in report["cases"][4:6]:
+            self.assertEqual("screened_" + row["case"]["disposition"], row["classification"])
+            self.assertIsNone(row["target_met"])
+            self.assertIsNone(row["possible_satisfaction"])
+        self.assertEqual(BOUNDARIES, report["boundaries"])
+
+    def test_v1_format_remains_for_every_legacy_status_and_v2_for_any_observed_by_case(self):
+        legacy = [observed("2021-12-31"), {"status": "unknown"}, {"status": "cancelled"},
+                  {"status": "explicit_nonoccurrence_through", "through": "2021-12-31"}]
+        for disposition in ("eligible", "unresolved", "excluded"):
+            for outcome in [*legacy, observed_by("2021-12-31")]:
+                with self.subTest(disposition=disposition, outcome=outcome):
+                    case, review = fixture(disposition=disposition, outcome=outcome)
+                    report = score([case], [review])
+                    version = "v2" if outcome["status"] == "observed_by" else "v1"
+                    self.assertEqual("semiconductor-atlas-exposed-source-guidance-outcomes-" + version,
+                                     report["format"])
+
+    def test_legacy_v1_report_retains_existing_complete_shape_and_semantics(self):
+        case, review = fixture(outcome=observed("2021-09-01"))
+        self.assertEqual({
+            "format": "semiconductor-atlas-exposed-source-guidance-outcomes-v1",
+            "design": "exposed_retrospective_source_statement_comparison",
+            "boundaries": dict(BOUNDARIES),
+            "denominators": {"screened_cases": 1, "eligible_cases": 1, "unresolved_cases": 0,
+                "excluded_cases": 0, "scored_cases": 1, "eligible_result_unresolved_cases": 0,
+                "scored_interval_cases": 0, "scored_deadline_cases": 1,
+                "screened_projects": 1, "screened_project_groups": 1,
+                "eligible_projects": 1, "eligible_project_groups": 1,
+                "scored_projects": 1, "scored_project_groups": 1},
+            "cases": [{"case": case, "review": review,
+                "source_date_context": {"source_document_order": "guidance_before_outcome_document",
+                    "outcome_relative_to_guidance_document": "after_reported_document_day",
+                    "outcome_relative_to_outcome_document": "before_reported_document_day"},
+                "target_kind": "deadline", "outcome_status": "observed", "classification": "deadline_met",
+                "target_met": True, "possible_satisfaction": True}],
+            "classification_counts": {"deadline_met": 1},
+            "screened_outcome_status_counts": {"observed": 1},
+            "eligible_outcome_status_counts": {"observed": 1},
+            "scored_outcome_status_counts": {"observed": 1}}, score([case], [review]))
+
     def test_every_screened_case_status_project_and_group_stays_counted(self):
         pairs = [fixture("a", outcome=observed("2021-08-01")),
                  fixture("b", target=INTERVAL, outcome=observed("2021-08-01")),
@@ -217,9 +333,9 @@ class SourceGuidanceRosterTests(unittest.TestCase):
                 score([case], [review])
 
     def test_resolved_outcomes_and_all_roster_cases_require_source_references(self):
-        for status in ("observed", "cancelled", "explicit_nonoccurrence_through"):
+        for status in ("observed", "observed_by", "cancelled", "explicit_nonoccurrence_through"):
             outcome = observed("2021-09-01") if status == "observed" else {"status": status}
-            if status == "explicit_nonoccurrence_through":
+            if status in {"observed_by", "explicit_nonoccurrence_through"}:
                 outcome["through"] = "2022-01-01"
             case, review = fixture(outcome=outcome); review["source_reference_ids"] = []
             with self.subTest(status=status), self.assertRaises(ValueError):
@@ -258,6 +374,44 @@ class SourceGuidanceRosterTests(unittest.TestCase):
             "outcome_relative_to_outcome_document": "unknown"}, score([case], [review])["cases"][0]["source_date_context"])
         case["source_document_date"] = "2021-03-01"; review["outcome"] = observed("2021-03-01")
         self.assertEqual("on_reported_document_day", score([case], [review])["cases"][0]["source_date_context"]["outcome_relative_to_guidance_document"])
+
+    def test_observed_by_document_context_does_not_imply_an_exact_start_or_future_occurrence(self):
+        for document_day, relation in (("2021-02-28", "unknown"),
+                                       ("2021-03-01", "on_or_before_reported_document_day"),
+                                       ("2021-03-02", "before_reported_document_day"),
+                                       (None, "unknown")):
+            case, review = fixture(outcome=observed_by("2021-03-01"))
+            case["source_document_date"] = document_day
+            review["source_document_date"] = document_day
+            with self.subTest(document_day=document_day):
+                context = score([case], [review])["cases"][0]["source_date_context"]
+                self.assertEqual("unknown" if document_day is None else "same_reported_document_day",
+                                 context["source_document_order"])
+                self.assertEqual(relation, context["outcome_relative_to_guidance_document"])
+                self.assertEqual(relation, context["outcome_relative_to_outcome_document"])
+
+    def test_observed_by_keeps_distinct_document_clocks_without_claiming_historical_availability(self):
+        case, review = fixture(outcome=observed_by("2021-03-01"))
+        review["source_document_date"] = "2021-02-28"
+        report = score([case], [review])
+        self.assertEqual({"source_document_order": "outcome_document_before_guidance",
+            "outcome_relative_to_guidance_document": "on_or_before_reported_document_day",
+            "outcome_relative_to_outcome_document": "unknown"}, report["cases"][0]["source_date_context"])
+        self.assertTrue(all(value is False for value in report["boundaries"].values()))
+        self.assertNotIn("vintage", report)
+
+    def test_observed_by_no_target_and_one_sided_shape_survive_without_alias_mutation(self):
+        case, review = fixture(disposition="unresolved", target=None, outcome=observed_by("2021-03-01"))
+        before = copy.deepcopy(([case], [review]))
+        report = score([case], [review])
+        row = report["cases"][0]
+        self.assertEqual("screened_unresolved", row["classification"])
+        self.assertIsNone(row["target_kind"])
+        self.assertIsNone(row["target_met"])
+        self.assertEqual({"status": "observed_by", "through": "2021-03-01"}, row["review"]["outcome"])
+        self.assertEqual(before, ([case], [review]))
+        row["review"]["outcome"]["through"] = "2099-12-31"
+        self.assertEqual(before, ([case], [review]))
 
     def test_source_dates_must_retain_exact_day_precision_or_null(self):
         for side in (0, 1):

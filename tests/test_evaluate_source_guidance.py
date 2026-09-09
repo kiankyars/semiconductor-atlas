@@ -74,6 +74,35 @@ class RetainedGuidanceTests(unittest.TestCase):
         self.assertEqual(adapter.BOUNDARIES, report['result']['review']['boundaries'])
         self.assertIn('manually reviewed', report['result']['verification_scope'])
 
+    def test_observed_by_create_and_exact_replay_preserve_one_sided_outcome_and_scoring(self):
+        variants = (
+            ('deadline_met', {'kind': 'deadline', 'through': '2021-08-31'}, 'eligible', 1),
+            ('deadline_upper_bound_unresolved', {'kind': 'deadline', 'through': '2021-08-30'}, 'eligible', 0),
+            ('interval_upper_bound_unresolved', {'kind': 'interval', 'low': '2021-07-01',
+                                                'high': '2021-09-30'}, 'eligible', 0),
+            ('screened_unresolved', None, 'unresolved', 0))
+        for classification, target, disposition, scored in variants:
+            with self.subTest(classification=classification):
+                review = copy.deepcopy(self.review)
+                review['roster'][0].update(target=target, disposition=disposition)
+                review['outcomes'][0]['outcome'] = {'status': 'observed_by', 'through': '2021-08-31'}
+                sha = self.retain(review)
+                output = self.root / ('artifacts/' + classification + '.json')
+                with patch.object(adapter, 'now', return_value='2026-09-09T00:00:00Z'):
+                    created = adapter.create(self.path, sha, self.root, output)
+                    before = output.read_bytes()
+                    verified = adapter.verify(output, created['sha256'], self.path, sha, self.root)
+                self.assertIs(verified['verified'], True)
+                self.assertEqual(before, output.read_bytes())
+                diagnostic = adapter.strict_json(before)['result']['diagnostic']
+                self.assertEqual('semiconductor-atlas-exposed-source-guidance-outcomes-v2',
+                                 diagnostic['format'])
+                self.assertEqual(scored, diagnostic['denominators']['scored_cases'])
+                self.assertEqual(classification, diagnostic['cases'][0]['classification'])
+                self.assertEqual({'status': 'observed_by', 'through': '2021-08-31'},
+                                 diagnostic['cases'][0]['review']['outcome'])
+                self.assertEqual(dict(adapter.diagnostic.BOUNDARIES), diagnostic['boundaries'])
+
     def test_create_does_not_replace_existing_output(self):
         sha = self.retain()
         output = self.root / 'artifacts/result.json'
@@ -182,6 +211,7 @@ class RetainedGuidanceTests(unittest.TestCase):
 
     def test_substantive_outcomes_require_primary_review_for_every_disposition(self):
         outcomes = ({'status': 'observed', 'low': '2021-08-01', 'high': '2021-08-31'},
+                    {'status': 'observed_by', 'through': '2021-08-31'},
                     {'status': 'cancelled'},
                     {'status': 'explicit_nonoccurrence_through', 'through': '2021-09-30'})
         for disposition in ('eligible', 'unresolved', 'excluded'):
@@ -199,6 +229,7 @@ class RetainedGuidanceTests(unittest.TestCase):
 
     def test_primary_outcomes_for_unresolved_and_excluded_cases_stay_unscored(self):
         outcomes = ({'status': 'observed', 'low': '2021-08-01', 'high': '2021-08-31'},
+                    {'status': 'observed_by', 'through': '2021-08-31'},
                     {'status': 'cancelled'},
                     {'status': 'explicit_nonoccurrence_through', 'through': '2021-09-30'})
         for disposition in ('unresolved', 'excluded'):
@@ -213,6 +244,39 @@ class RetainedGuidanceTests(unittest.TestCase):
                     self.assertEqual(0, result['denominators']['scored_cases'])
                     self.assertEqual({outcome['status']: 1}, result['screened_outcome_status_counts'])
                     self.assertIsNone(result['cases'][0]['target_met'])
+
+    def test_observed_by_cannot_drop_primary_references_even_without_an_eligible_target(self):
+        for disposition in ('eligible', 'unresolved', 'excluded'):
+            review = copy.deepcopy(self.review)
+            review['roster'][0]['disposition'] = disposition
+            if disposition != 'eligible':
+                review['roster'][0]['target'] = None
+            review['outcomes'][0].update(outcome={'status': 'observed_by', 'through': '2021-08-31'},
+                                         source_reference_ids=[], source_document_date=None)
+            with self.subTest(disposition=disposition):
+                with self.assertRaisesRegex(ValueError, 'source reference IDs.*substantive evidence'):
+                    self.load(review)
+
+    def test_observed_by_primary_outcome_still_requires_exact_capture_and_support_bytes(self):
+        for field, value in (('http_status', 403), ('outcome', 'failed'), ('redirect_count', 1),
+                             ('tls_verification_result', 1), ('curl_exit_code', 22),
+                             ('finished_at', '2026-09-08T00:01:00Z'), ('bytes', len(self.body) + 1)):
+            ledger = adapter.strict_json(self.ledger)
+            ledger['attempts'][0][field] = value
+            raw = runtime.canonical(ledger)
+            (self.root / self.ledger_name).write_bytes(raw)
+            review = copy.deepcopy(self.review)
+            review['input_files'][self.ledger_name] = {'bytes': len(raw), 'sha256': runtime.digest(raw)}
+            review['roster'][0].update(disposition='unresolved', target=None)
+            review['outcomes'][0]['outcome'] = {'status': 'observed_by', 'through': '2021-08-31'}
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, 'primary capture'):
+                self.load(review)
+        (self.root / self.ledger_name).write_bytes(self.ledger)
+        review = copy.deepcopy(self.review)
+        review['outcomes'][0]['outcome'] = {'status': 'observed_by', 'through': '2021-08-31'}
+        review['source_references']['ref']['support_spans'][0]['sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'exact support span differs'):
+            self.load(review)
 
     def test_unknown_outcomes_allow_screening_notes_or_no_references(self):
         for disposition in ('eligible', 'unresolved', 'excluded'):

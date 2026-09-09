@@ -1,0 +1,2163 @@
+{
+  "format": "semiconductor-atlas-reviewed-source-guidance-screen-v1",
+  "reviewed_at": "2026-09-09T04:34:46.623587Z",
+  "reviewed_by": "Codex main reviewer: retained later full narratives and original Bosch/Coherent/Powerex PMT narratives inspected. Original 45-group adjudications reused unchanged; collaborative and outcome-exposed, not blind or independent physical review.",
+  "selection": "Preserve all 45 included manufacturing groups from the frozen NIST 2024 PMT population: 15 original timing associations plus 34 undated placeholders give 49 original cases. Add one explicitly supplemental Bosch sample event, not another project or original target. Three original cases have calendar-normalized targets. This is a complete original-population accounting under incomplete later outcome acquisition, not a complete outcome review or a later-news census.",
+  "prior_exposure": "Later outcomes and successful projects were exposed before the population was selected. The 45-group research lead ledger remains separately frozen; its unretained leads are not admitted as outcomes. All captures occurred September 9, 2026. Printed source dates are assertions, not historical Atlas issuance or proof of identical historical availability. No project selection or original target is revised based on later success. Existing prospective forecasts and the earlier three-case source-guidance report remain unchanged.",
+  "rights": "Local informational review of NIST government release text under the retained source reviews and policy captures, preserving attribution and marked-copyright/product-specific exceptions. No raw redistribution, model training, commercial-use approval, issuer-site capture or scheduled-runtime change is authorized. TI is not acquired under its automated-extraction restriction; Microchip filing acquisition remains unapproved after an incomplete policy review. Access restrictions are not physical nonoccurrence.",
+  "boundaries": {
+    "historical_availability_verified": false,
+    "historical_atlas_forecasts": false,
+    "independent_or_blind_evaluation": false,
+    "representative_population": false,
+    "calibration": false,
+    "model_training": false,
+    "physical_capacity_claims": false,
+    "database_modified": false,
+    "prospective_study_modified": false,
+    "raw_redistribution": false
+  },
+  "input_files": {
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-17.body": {
+      "bytes": 92404,
+      "sha256": "540508bcf9c2ead9e187d6af21f2037a2b13b902e71b9670d8b74ba76cd7dce8"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-18.body": {
+      "bytes": 96826,
+      "sha256": "6ef56ccff61c892e13be6a2a16c9e5e74b958e5ceab975b4335b4b21e1622085"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-19.body": {
+      "bytes": 96572,
+      "sha256": "3b6df7851928499f4ee1c7b0cb3a59d145dde269123a42d666bf53bf0c52a0dd"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-27.body": {
+      "bytes": 93203,
+      "sha256": "4ec4d537a50348a662ac07e2f93319206ffbe8a9183370f0884805cdde9e154d"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-28.body": {
+      "bytes": 95514,
+      "sha256": "88ca4cfbcb9b9278a17349dc31c46b0c0eead1acd4e1b03847f74f2539509f16"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-32.body": {
+      "bytes": 94364,
+      "sha256": "6bb90ceeb9d485d61d032f321582ee18bed62aadcec5e1ea02c1964341ed71ec"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-34.body": {
+      "bytes": 97231,
+      "sha256": "0a787803f8359b7e84c93e924b35b91027e40ebe192d55563ec32825dae7782a"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-35.body": {
+      "bytes": 96220,
+      "sha256": "f4770cd37be17a884315ae603f20bd2709d81801895202fc591cc931bcc17a65"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-36.body": {
+      "bytes": 92187,
+      "sha256": "bccb601b10d1601a6f5a1b33b05e4fe6ebc54792f3b2024d62c3125ae9eed0cb"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-46.body": {
+      "bytes": 95720,
+      "sha256": "c7045c4befdbba37288071d4c0837eb301f64a229c6bb2993042fe40a591eaba"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-47.body": {
+      "bytes": 100972,
+      "sha256": "928bc2acc4d23c711f6ea295773f8cf0a9e25db1463c12196750376c34083fcf"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-48.body": {
+      "bytes": 95080,
+      "sha256": "0bba0e10854840f53065d0ef1e12119f8b6f164e59f19a3d0ffc09001ae73ba5"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-49.body": {
+      "bytes": 93954,
+      "sha256": "c1360b4158a515a08890d368206fc7dafe3fea06f7478d86abbf3fa9a884a856"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-52.body": {
+      "bytes": 95358,
+      "sha256": "a2180e57e2f3af7cce35f00d8a7c02c750c836723d1e8a6dc167f8253a13a002"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-56.body": {
+      "bytes": 95232,
+      "sha256": "e0b826ed2f352c067c655cf910c9fe7280e4d72db4ca9300f0fb84f5ddedf34d"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-57.body": {
+      "bytes": 95478,
+      "sha256": "fbc3d950042b866049e546f60103dbf627c238500d60c828d4c0119aab27baf9"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-59.body": {
+      "bytes": 93428,
+      "sha256": "0a1971a94a3f2b4e45cad45a694dfe750b1a1cb97e67eb98efe253613f2f511f"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-60.body": {
+      "bytes": 94004,
+      "sha256": "f7c892d45f8d9e996d09be8339023f9fc1a7c3f33235cd427ed08787f433dc3e"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-61.body": {
+      "bytes": 95555,
+      "sha256": "50b4f824b443e35c90e8c56a074cb96e53945b3c462da8b4dc258f88d618a0b9"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json": {
+      "bytes": 65274,
+      "sha256": "6aebf9cb3c47363f9f1ec7694cdb030ded8b8f93d95f8945abc272d3fa668ec9"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-64.body": {
+      "bytes": 99630,
+      "sha256": "db40e6cbc51f3afbf8c7de0307cf50383a3dfc490d5cddbf7835f243e8224a1a"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-66.body": {
+      "bytes": 99023,
+      "sha256": "a040b86a21990afc0a9e8e9066add2c0e5e905011ab1ef09829f7dd6250f41ed"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-67.body": {
+      "bytes": 98527,
+      "sha256": "6d69c6f3322d1eade5aaba566802d0702fb65de716e97e90e6331e4dd67d5bcb"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-70.body": {
+      "bytes": 98421,
+      "sha256": "e65dd0de3b746421191f4c429212ed3ce08d9d2bbb42252f77bafe5720bff207"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-72.body": {
+      "bytes": 99993,
+      "sha256": "be094b7590f2a47d7ee69575059bf1775f364d37e65a0c06dad9e4bdfd83ceaf"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-76.body": {
+      "bytes": 93666,
+      "sha256": "c2dd15d5c610fe5bc7890a74f50124250908e743677b10da405855983ab8ca16"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json": {
+      "bytes": 21185,
+      "sha256": "4f51a0d86fbff6d7c987bed4233d6ff829117083a3f031b002183287a0fddf43"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/last_successful_checks.json": {
+      "bytes": 4121,
+      "sha256": "e14121515ac00f27c21dcdc92a41e261bc710d70526fbb23a32a5e6e75bea173"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/manifest.json": {
+      "bytes": 2473,
+      "sha256": "05a33260bde85bf62efe4c3e8c5bd81430ba3c9c62f140ad718785cc5064579a"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/plan.json": {
+      "bytes": 4626,
+      "sha256": "ac472140e105fcd9ddeeff3e344fb654298ebf9b64140c47cd2a73183d893574"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-bosch-2026-dfa.attempt.json": {
+      "bytes": 1147,
+      "sha256": "03b588841d8ceac0dfeff4318174069522ccc3b9b891df2d106f6dce9c652d2b"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-bosch-2026-dfa.body": {
+      "bytes": 87744,
+      "sha256": "928d2b6a812e6d9842272497dcbe48202c70c5f6c8828d114be36d3c0e298c42"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-coherent-2026-loi.attempt.json": {
+      "bytes": 1155,
+      "sha256": "ea5b75c8372ef719975388962c9aeddbba89b5dee89ae606f8ec81acec12133e"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-coherent-2026-loi.body": {
+      "bytes": 87366,
+      "sha256": "05f30892d499bbb73679f10e24783eeb18e3530b3c0f9e9ba9d4d549ca70958c"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-copyright.attempt.json": {
+      "bytes": 939,
+      "sha256": "5716f33be5da06fda9226a93f12e1703c8c78674404767fa832447ee8c761d6f"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-copyright.body": {
+      "bytes": 79182,
+      "sha256": "6817f2f1122a94cc0d3e19d0daf4749a1c0f5aa668997b5a7f8e16de773a9be7"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-powerex-2026-dfa.attempt.json": {
+      "bytes": 1161,
+      "sha256": "2a41441db959f9beaac14dca1106b282917d49d92b7709197719548c8d687b82"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-powerex-2026-dfa.body": {
+      "bytes": 86462,
+      "sha256": "2c0cf40d2c6beb82ea8e7fcc4b2b88643e23d8822a6c78b02c3c6168c12462aa"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-robots.attempt.json": {
+      "bytes": 883,
+      "sha256": "ed7de854d84e46e3afe2f8cff3bd78df13ed4e3bf839d16581f64cd4c96c2d03"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-robots.body": {
+      "bytes": 2425,
+      "sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/results.json": {
+      "bytes": 2826,
+      "sha256": "d4804d36bea336cd2576ecd1a948beda96c50274aedea1f7c733619465d55f3e"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/review.json": {
+      "bytes": 2931,
+      "sha256": "942abcff0fbffcf74d318d05de6ec8c6bd8539e4ca06479b8ecd9dae065fbbe5"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/run.json": {
+      "bytes": 528,
+      "sha256": "9fd2068ec9fcf0a17cfc58b77c9171c669fae309cef7009147f6788c6598c5a6"
+    },
+    "artifacts/2026-09-09-nist-2026-progress-capture-v1/source_checks.json": {
+      "bytes": 6105,
+      "sha256": "9a194d0f0fe37a3eea1ec349b30dcb425f65749bde857c00e08ee644a53275d9"
+    },
+    "artifacts/2026-09-09-nist-article-text-v1/narratives.json": {
+      "bytes": 1187359,
+      "sha256": "9a782f90bf3a242fa3b8bf3abd5ae32ad80e27acf6f397382e33aa5c81a555ac"
+    },
+    "review_plans/2026-09-09-nist-2024-article-retention-roster-v1.json": {
+      "bytes": 66966,
+      "sha256": "93f4687efb0c627f75a65e157cf012bb23f27bd01bd118bc995e2ab4f2f3e921"
+    },
+    "review_plans/2026-09-09-nist-archive-index-roster-v1.json": {
+      "bytes": 125702,
+      "sha256": "01e78176d40796dfc4e652f7e554fd115198be5d32cee74eb8d57d5fe6a51bd6"
+    },
+    "review_plans/2026-09-09-nist-pmt-body-review-12-33-v1.json": {
+      "bytes": 33639,
+      "sha256": "c5738bc54f1cb853f4bbeed3e6cf6aff150bdd337b50e3092956a52d4d306216"
+    },
+    "review_plans/2026-09-09-nist-pmt-body-review-34-55-v1.json": {
+      "bytes": 34113,
+      "sha256": "ca178e02c21bd1afe5482db6002abf8abb97d86b9f47946141103b96f7a1bf2d"
+    },
+    "review_plans/2026-09-09-nist-pmt-body-review-56-76-v1.json": {
+      "bytes": 54191,
+      "sha256": "01b79f0dcd9f0c7efbed3f94a2bdf51cc6f84f32919d8c6ba71d50fd3f705f46"
+    },
+    "review_plans/2026-09-09-nist-pmt-body-review-v1.json": {
+      "bytes": 4099,
+      "sha256": "714ddc8a245efe714294241d0b5fc493d956168f6071cf9164b3f1c79b0a1aec"
+    }
+  },
+  "source_references": {
+    "nist-bosch-2026-dfa": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-bosch-2026-dfa.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-bosch-2026-dfa.body",
+          "start": 73053,
+          "end": 75787,
+          "sha256": "58bcbb52e6244363f6097357466d63718b0bb2f991418369aa23ccdadd79fb2c"
+        }
+      ],
+      "interpretation": "Full narrative and visible/metadata date July 13, 2026. Direct funding agreement up to USD225 million supports Roseville SiC transformation. The source reports sample production already commenced: a publication-day upper bound on this separately scoped sample event, with unknown lower bound, wafer diameter, commercial status, rate and qualification. Commercial production remains expected in 2026. This does not prove the original first-200mm-chip target. Worldwide 60-million chip deliveries are not Roseville output. Publication and same-day modification are source assertions, not proof of historical availability or actual database admission.",
+      "source_document_date": "2026-07-13",
+      "capture_finished_at": "2026-09-09T04:23:21.385466Z",
+      "source_url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/source_checks.json",
+        "attempt_id": "nist-bosch-2026-dfa"
+      }
+    },
+    "nist-coherent-2026-loi": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-coherent-2026-loi.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-coherent-2026-loi.body",
+          "start": 72685,
+          "end": 74920,
+          "sha256": "bae274760830345b31d90b33aa924bc024b7bc6538420f2af259b1d7e6301122"
+        }
+      ],
+      "interpretation": "Full narrative and visible/metadata date June 16, 2026. The new LOI proposes up to USD50 million for Sherman InP expansion and describes existing 150mm high-volume capability. Existing capability and future equipment/cleanroom expansion remain separate. No dated attainment of the complete original PMT intervention or formal replacement of its USD33-million proposal is established. LOI is not a final award.",
+      "source_document_date": "2026-06-16",
+      "capture_finished_at": "2026-09-09T04:23:23.622514Z",
+      "source_url": "https://www.nist.gov/news-events/news/2026/06/department-commerces-chips-program-announces-letter-intent-coherent-50",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/source_checks.json",
+        "attempt_id": "nist-coherent-2026-loi"
+      }
+    },
+    "nist-powerex-2026-dfa": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-powerex-2026-dfa.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/responses/nist-powerex-2026-dfa.body",
+          "start": 72779,
+          "end": 74383,
+          "sha256": "34f0c9ebcef32c04998a67ab62dc99730c5c5b48403b6598e91c8dd2f74b49c7"
+        }
+      ],
+      "interpretation": "Full narrative and visible/metadata date June 5, 2026, not the linked PDF filename. A signed agreement to invest USD30 million in manufacturing and R&D is described; no federal contribution is isolated from that amount. Pennsylvania power-module facility is compatible context, not an exact Youngwood project/phase identity bridge. No production-start or completion event is reported.",
+      "source_document_date": "2026-06-05",
+      "capture_finished_at": "2026-09-09T04:23:25.854412Z",
+      "source_url": "https://www.nist.gov/news-events/news/2026/06/department-commerce-announces-finalization-chips-incentives-powerex-enhance",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/source_checks.json",
+        "attempt_id": "nist-powerex-2026-dfa"
+      }
+    },
+    "nist2024-d17": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-17.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-17.body",
+          "end": 80627,
+          "sha256": "ddae85f08a865a3ea3cc10336429a73f9198633fd33443e9c33128ad964ab9b0",
+          "start": 72546
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-12-13",
+      "capture_finished_at": "2026-09-09T02:55:37.677469Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-preliminary-terms-bosch-advance-us",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-17"
+      }
+    },
+    "nist2024-d18": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-18.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-18.body",
+          "end": 84988,
+          "sha256": "d8e047ea7d91596e7941976c0d59a619a079d0e5662de5f9d0bc86edc2ab8f50",
+          "start": 72955
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-12-10",
+      "capture_finished_at": "2026-09-09T02:55:39.918857Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/12/department-commerce-awards-chips-incentives-micron-idaho-and-new-york",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-18"
+      }
+    },
+    "nist2024-d19": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-19.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-19.body",
+          "end": 84742,
+          "sha256": "4627be1f38990a768d3377d2c3d8cf5f078d2e31c846c970857c29506c397cc5",
+          "start": 73635
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-12-06",
+      "capture_finished_at": "2026-09-09T02:55:42.112638Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announce-preliminary-terms-coherent-skywater",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-19"
+      }
+    },
+    "nist2024-d27": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-27.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-27.body",
+          "end": 81423,
+          "sha256": "a13e8557a102a0972cf6501b6e8592390811df077562e83e6faabded484826d1",
+          "start": 73817
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-11-13",
+      "capture_finished_at": "2026-09-09T02:56:00.187094Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-preliminary-terms-akash-systems",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-27"
+      }
+    },
+    "nist2024-d28": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-28.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-28.body",
+          "end": 83806,
+          "sha256": "129fb65dd7feda5ba216188da77d867dfde19fdd9de6226d3ebb50e4ffedf349",
+          "start": 73779
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-11-08",
+      "capture_finished_at": "2026-09-09T02:56:02.449481Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-preliminary-terms-corning-and-powerex",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-28"
+      }
+    },
+    "nist2024-d32": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-32.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-32.body",
+          "end": 82594,
+          "sha256": "68dcd7b92d3213a71f16b70a7874cb0032b5de447a48bf76ccf98e75466b56a4",
+          "start": 73803
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-10-21",
+      "capture_finished_at": "2026-09-09T02:56:11.554466Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-hemlock",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-32"
+      }
+    },
+    "nist2024-d34": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-34.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-34.body",
+          "end": 85438,
+          "sha256": "ccfdc619f12cfa0b30c33a152e073ab6d11073c413d1df2188af2512aa865b37",
+          "start": 73602
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-10-17",
+      "capture_finished_at": "2026-09-09T02:56:16.091086Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-infinera-support",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-34"
+      }
+    },
+    "nist2024-d35": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-35.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-35.body",
+          "end": 84450,
+          "sha256": "f61947e06dd1e0caa55f4725787a298f0bbf16748e948f4ee6ecabe53462c5d5",
+          "start": 73512
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-10-15",
+      "capture_finished_at": "2026-09-09T02:56:18.370366Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-wolfspeed-solidify",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-35"
+      }
+    },
+    "nist2024-d36": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-36.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-36.body",
+          "end": 80451,
+          "sha256": "857cf277318e740c8946e2a900dc5493839a7d3a379ad3dd5e68c8496c7f4d54",
+          "start": 73486
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-10-10",
+      "capture_finished_at": "2026-09-09T02:56:21.052084Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-edwards-vacuum",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-36"
+      }
+    },
+    "nist2024-d46": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-46.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-46.body",
+          "end": 83947,
+          "sha256": "b623ce9f5145afbf0511713c50b304ff326b8e445b5921abdcb1e5ea523c99c0",
+          "start": 72379
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-08-27",
+      "capture_finished_at": "2026-09-09T02:56:44.321630Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/08/biden-harris-administration-announces-preliminary-terms-hp-support",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-46"
+      }
+    },
+    "nist2024-d47": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-47.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-47.body",
+          "end": 89179,
+          "sha256": "6793dd251829f11476e842b7a9b3b693a2a101bc0a8266b0973fe00373aa6b72",
+          "start": 72449
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-08-16",
+      "capture_finished_at": "2026-09-09T02:56:46.578828Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/08/biden-harris-administration-announces-preliminary-terms-texas-instruments",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-47"
+      }
+    },
+    "nist2024-d48": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-48.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-48.body",
+          "end": 83346,
+          "sha256": "b4dade5f7016e95b9ec663f806eb1085ffa84a08b8061684ef7aa21fb85bc518",
+          "start": 72230
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-08-06",
+      "capture_finished_at": "2026-09-09T02:56:48.844054Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/08/us-department-commerce-announces-preliminary-terms-sk-hynix-advance-us-ai-0",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-48"
+      }
+    },
+    "nist2024-d49": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-49.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-49.body",
+          "end": 82394,
+          "sha256": "c7ab417cc4cd8b0066ce2311e7d2dabac631451ccea469cf8fcb17ed956579b4",
+          "start": 72621
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-07-26",
+      "capture_finished_at": "2026-09-09T02:56:51.345801Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-preliminary-terms-amkor-technology",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-49"
+      }
+    },
+    "nist2024-d52": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-52.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-52.body",
+          "end": 83598,
+          "sha256": "3c2ad79270cbf23d49b5c0049d1d82f1e069ec9aa99ec73371f741a6e406d186",
+          "start": 73893
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-07-17",
+      "capture_finished_at": "2026-09-09T02:56:58.622544Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-preliminary-terms-globalwafers",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-52"
+      }
+    },
+    "nist2024-d56": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-56.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-56.body",
+          "end": 83733,
+          "sha256": "3e5ea0f793795e739a3ddda8b1cfff6cd8467c0ffb383c9f06e52ea30f562a80",
+          "start": 72132
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-07-01",
+      "capture_finished_at": "2026-09-09T02:57:08.061244Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/07/us-department-commerce-announces-preliminary-terms-rogue-valley",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-56"
+      }
+    },
+    "nist2024-d57": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-57.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-57.body",
+          "end": 83724,
+          "sha256": "ce3323250905dba7a3974d7e3670d7055534195b876146524921eb8cab82e260",
+          "start": 72336
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-06-26",
+      "capture_finished_at": "2026-09-09T02:57:10.291946Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/06/biden-harris-administration-announces-preliminary-terms-entegris-onshore",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-57"
+      }
+    },
+    "nist2024-d59": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-59.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-59.body",
+          "end": 81651,
+          "sha256": "70f2e7506ba1d9e9c4c57a61aa79eb9ccc224fec6f7d837cd55b43e0ab422779",
+          "start": 72288
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-06-11",
+      "capture_finished_at": "2026-09-09T02:57:15.408044Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/06/biden-harris-administration-announces-preliminary-terms-rocket-lab-expand",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-59"
+      }
+    },
+    "nist2024-d60": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-60.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-60.body",
+          "end": 82172,
+          "sha256": "2ca1bdf7cb98158070bc081853550f883cca8234517cbfe72562bab373884fa8",
+          "start": 72500
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-05-23",
+      "capture_finished_at": "2026-09-09T02:57:17.617685Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-absolics-support",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-60"
+      }
+    },
+    "nist2024-d61": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-61.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-1/responses/nist-2024-index-61.body",
+          "end": 83823,
+          "sha256": "b4089dca0feb533fdd6f3cff2935c10317d1aafff88ed2aa06a9748970d037dc",
+          "start": 73526
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-05-13",
+      "capture_finished_at": "2026-09-09T02:57:19.955795Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-polar-semiconductor",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-1/source_checks.json",
+        "attempt_id": "nist-2024-index-61"
+      }
+    },
+    "nist2024-d64": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-64.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-64.body",
+          "end": 88112,
+          "sha256": "629edfffa795b3ae9cb074cb1a1dafd73fa7e296b4fb22f73910c0a9acac6273",
+          "start": 72709
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-04-25",
+      "capture_finished_at": "2026-09-09T02:57:51.461937Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-micron-onshore",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json",
+        "attempt_id": "nist-2024-index-64"
+      }
+    },
+    "nist2024-d66": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-66.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-66.body",
+          "end": 87251,
+          "sha256": "f8a0aa7b3d00c72cc24a3ef0ab49820fb57d56131728985f322e1f5a3190a6cd",
+          "start": 73928
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-04-15",
+      "capture_finished_at": "2026-09-09T02:57:56.019012Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-samsung-electronics",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json",
+        "attempt_id": "nist-2024-index-66"
+      }
+    },
+    "nist2024-d67": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-67.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-67.body",
+          "end": 86764,
+          "sha256": "e1c822fe611f5c7dd035de62f9854c707c6818a0a3d3507f272261639ff0b8fc",
+          "start": 72883
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-04-08",
+      "capture_finished_at": "2026-09-09T02:57:58.261391Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-tsmc-expanded",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json",
+        "attempt_id": "nist-2024-index-67"
+      }
+    },
+    "nist2024-d70": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-70.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-70.body",
+          "end": 86627,
+          "sha256": "367d5efc61c99879c348eac175136613b4faa528a6e6a3659a46c79f5cd4324b",
+          "start": 73936
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-03-20",
+      "capture_finished_at": "2026-09-09T02:58:05.093794Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/03/biden-harris-administration-announces-preliminary-terms-intel-support",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json",
+        "attempt_id": "nist-2024-index-70"
+      }
+    },
+    "nist2024-d72": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-72.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-72.body",
+          "end": 88201,
+          "sha256": "d8635532d3636a1b20be457615ca5b3b4b905163985bdaa9d09b755093d02708",
+          "start": 72563
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-02-19",
+      "capture_finished_at": "2026-09-09T02:58:09.667058Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/02/biden-harris-administration-announces-preliminary-terms-globalfoundries",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json",
+        "attempt_id": "nist-2024-index-72"
+      }
+    },
+    "nist2024-d76": {
+      "kind": "reviewed_primary",
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-76.body",
+      "support_spans": [
+        {
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-76.body",
+          "end": 81671,
+          "sha256": "1ffcb42cb9e90c6033a92afebe9dfd6912f05a77089d9426afe959afaa5180b4",
+          "start": 73029
+        }
+      ],
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "source_document_date": "2024-01-04",
+      "capture_finished_at": "2026-09-09T02:58:19.118759Z",
+      "source_url": "https://www.nist.gov/news-events/news/2024/01/biden-harris-administration-announces-chips-preliminary-terms-microchip",
+      "capture": {
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json",
+        "attempt_id": "nist-2024-index-76"
+      }
+    }
+  },
+  "roster": [
+    {
+      "case_id": "nist2024-d17-bosch-roseville--sample-production-observed-by",
+      "project_id": "nist2024-d17-bosch-roseville",
+      "project_group": "nist2024-d17-bosch-roseville",
+      "event_type": "sample_production_start",
+      "scope_id": "nist2024-d17-bosch-roseville--sample-production-unspecified-wafer-diameter",
+      "disposition": "unresolved",
+      "target": null,
+      "reason": "Supplemental distinct event discovered in later retained evidence: Roseville SiC sample production, with wafer diameter unspecified. This event has no separate original PMT target and is not an alias for first chips on 200mm wafers, HVM, qualification or commercial production.",
+      "source_reference_ids": [
+        "nist-bosch-2026-dfa"
+      ],
+      "source_document_date": "2026-07-13"
+    },
+    {
+      "case_id": "nist2024-d17-bosch-roseville--timing-01",
+      "project_id": "nist2024-d17-bosch-roseville",
+      "project_group": "nist2024-d17-bosch-roseville",
+      "event_type": "first_chip_production",
+      "scope_id": "nist2024-d17-bosch-roseville--original-pmt-scope",
+      "disposition": "eligible",
+      "reason": "Transform and expand Bosch's existing manufacturing facility for silicon carbide power semiconductors. The same facility is described as performing front-end device manufacturing and back-end testing, sorting, and dicing. First chips on 200-millimeter wafers are distinct from HVM, full-capacity operation, or qualification. Original PMT timing: Bosch expects to produce its first chips on 200-millimeter wafers in its Roseville facility starting in 2026. The source places expected first-chip production within calendar 2026. It does not specify a day, quarter, HVM start, full-capacity date, or qualification milestone.",
+      "target": {
+        "kind": "interval",
+        "low": "2026-01-01",
+        "high": "2026-12-31"
+      },
+      "source_reference_ids": [
+        "nist2024-d17"
+      ],
+      "source_document_date": "2024-12-13"
+    },
+    {
+      "case_id": "nist2024-d18-micron-manassas--no-timing",
+      "project_id": "nist2024-d18-micron-manassas",
+      "project_group": "nist2024-d18-micron-manassas",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d18-micron-manassas--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expand and modernize Micron's existing Manassas facility to onshore 1-alpha DRAM technology for automotive and industrial markets. The source does not identify separate fab phases or a wafer diameter. The several-year capital-expenditure horizon is not a production-start assertion. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d18"
+      ],
+      "source_document_date": "2024-12-10"
+    },
+    {
+      "case_id": "nist2024-d19-coherent-sherman--no-timing",
+      "project_id": "nist2024-d19-coherent-sherman",
+      "project_group": "nist2024-d19-coherent-sherman",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d19-coherent-sherman--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernize and expand a manufacturing cleanroom within Coherent's existing Sherman facility, adding wafer fabrication equipment to establish a 150mm indium phosphide device-manufacturing line. The described line is a component within the existing facility, not a separately inferred fab or a raw-substrate-only project. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d19"
+      ],
+      "source_document_date": "2024-12-06"
+    },
+    {
+      "case_id": "nist2024-d19-skywater-bloomington--no-timing",
+      "project_id": "nist2024-d19-skywater-bloomington",
+      "project_group": "nist2024-d19-skywater-bloomington",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d19-skywater-bloomington--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernize the existing Bloomington facility through equipment replacement and cleanroom, space, and IT-system upgrades to improve production and wafer services. The source describes 90nm and 130nm process production, not wafer diameters. Existing prototyping-to-volume capability does not date completion of the proposed modernization. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d19"
+      ],
+      "source_document_date": "2024-12-06"
+    },
+    {
+      "case_id": "nist2024-d19-xfab-lubbock--no-timing",
+      "project_id": "nist2024-d19-xfab-lubbock",
+      "project_group": "nist2024-d19-xfab-lubbock",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d19-xfab-lubbock--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expand and modernize X-Fab's existing silicon carbide foundry facility in Lubbock. The source's description of the existing high-volume foundry does not establish HVM startup, completion, or installed capacity for this proposed intervention. No distinct subphases are identified. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d19"
+      ],
+      "source_document_date": "2024-12-06"
+    },
+    {
+      "case_id": "nist2024-d27-akash-west-oakland--no-timing",
+      "project_id": "nist2024-d27-akash-west-oakland",
+      "project_group": "nist2024-d27-akash-west-oakland",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d27-akash-west-oakland--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construct cleanroom space within an existing building to create a semiconductor manufacturing facility for Diamond Cooling substrates, devices, and systems at scale. The source describes synthetic diamond integration with compound semiconductors and GPU cooling applications, without allocating separate facilities or product-line phases. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d27"
+      ],
+      "source_document_date": "2024-11-13"
+    },
+    {
+      "case_id": "nist2024-d28-corning-canton--no-timing",
+      "project_id": "nist2024-d28-corning-canton",
+      "project_group": "nist2024-d28-corning-canton",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d28-corning-canton--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expand Corning's existing manufacturing facility, increase production of HPFS fused silica and EXTREME ULE glass, and scale a novel manufacturing process. These are materials used in lithography machines and photomasks, not semiconductor-device fabrication. The article does not enumerate independently timed facility phases. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d28"
+      ],
+      "source_document_date": "2024-11-08"
+    },
+    {
+      "case_id": "nist2024-d28-powerex-youngwood--no-timing",
+      "project_id": "nist2024-d28-powerex-youngwood",
+      "project_group": "nist2024-d28-powerex-youngwood",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d28-powerex-youngwood--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernize and expand Powerex's existing back-end production facility and its equipment for packaging semiconductor power modules used in defense, commercial, and industrial applications. Proposed capacity growth is not evidence of installed or realized capacity. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d28"
+      ],
+      "source_document_date": "2024-11-08"
+    },
+    {
+      "case_id": "nist2024-d32-hemlock-hemlock--no-timing",
+      "project_id": "nist2024-d32-hemlock-hemlock",
+      "project_group": "nist2024-d32-hemlock-hemlock",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d32-hemlock-hemlock--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construct a new manufacturing facility on HSC's existing campus for production and purification of hyper-pure semiconductor-grade polysilicon. This is semiconductor-materials manufacturing, not a wafer or device fab; references to the company's solar business do not establish a separate funded solar project. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d32"
+      ],
+      "source_document_date": "2024-10-21"
+    },
+    {
+      "case_id": "nist2024-d34-infinera-bethlehem--no-timing",
+      "project_id": "nist2024-d34-infinera-bethlehem",
+      "project_group": "nist2024-d34-infinera-bethlehem",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d34-infinera-bethlehem--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new advanced test and packaging facility dedicated to InP PICs, with dedicated R&D space for newer optical packaging technologies. The research space is a component of the manufacturing project, not an independently identified plant. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d34"
+      ],
+      "source_document_date": "2024-10-17"
+    },
+    {
+      "case_id": "nist2024-d34-infinera-san-jose--no-timing",
+      "project_id": "nist2024-d34-infinera-san-jose",
+      "project_group": "nist2024-d34-infinera-san-jose",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d34-infinera-san-jose--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new modernized fab and foundry for indium phosphide photonic integrated circuits. The article does not name an individual fab or identify dated construction or production phases. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d34"
+      ],
+      "source_document_date": "2024-10-17"
+    },
+    {
+      "case_id": "nist2024-d35-wolfspeed-marcy--no-timing",
+      "project_id": "nist2024-d35-wolfspeed-marcy",
+      "project_group": "nist2024-d35-wolfspeed-marcy",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d35-wolfspeed-marcy--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Planned expansion of the existing silicon carbide device manufacturing facility, linked to the Siler City development. The article says the proposed CHIPS investment is expected to catalyze this expansion, rather than stating an equivalent direct-funding allocation. Existing-fab qualification is not assigned to the proposed expansion. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d35"
+      ],
+      "source_document_date": "2024-10-15"
+    },
+    {
+      "case_id": "nist2024-d35-wolfspeed-siler-city--no-timing",
+      "project_id": "nist2024-d35-wolfspeed-siler-city",
+      "project_group": "nist2024-d35-wolfspeed-siler-city",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d35-wolfspeed-siler-city--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of the John Palmour Manufacturing Center for silicon carbide wafer manufacturing. This is wafer-materials production, distinct from the linked Marcy device-fab expansion; no existing or future numerical capacity is admitted here. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d35"
+      ],
+      "source_document_date": "2024-10-15"
+    },
+    {
+      "case_id": "nist2024-d36-edwards-vacuum-genesee-county--no-timing",
+      "project_id": "nist2024-d36-edwards-vacuum-genesee-county",
+      "project_group": "nist2024-d36-edwards-vacuum-genesee-county",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d36-edwards-vacuum-genesee-county--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a greenfield manufacturing facility for semiconductor-grade dry vacuum pumps. The source supplies county-level location, not an individual municipal or canonical facility identity. The pumps are equipment used in fabs; this facility is not itself identified as a wafer fab. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d36"
+      ],
+      "source_document_date": "2024-10-10"
+    },
+    {
+      "case_id": "nist2024-d46-hp-corvallis--no-timing",
+      "project_id": "nist2024-d46-hp-corvallis",
+      "project_group": "nist2024-d46-hp-corvallis",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d46-hp-corvallis--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expansion and modernization of HP's existing facility, spanning commercial silicon-device manufacturing and R&D based on microfluidics and MEMS. The university lease and regional lab-to-fab relationships are context, not separately identified new manufacturing projects or phases. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d46"
+      ],
+      "source_document_date": "2024-08-27"
+    },
+    {
+      "case_id": "nist2024-d47-texas-instruments-lehi--no-timing",
+      "project_id": "nist2024-d47-texas-instruments-lehi",
+      "project_group": "nist2024-d47-texas-instruments-lehi",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d47-texas-instruments-lehi--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new large-scale 300-mm fabrication facility for 28nm to 65nm analog and embedded-processing chips. The source does not name an individual fab or state its construction-completion or production-start date. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d47"
+      ],
+      "source_document_date": "2024-08-16"
+    },
+    {
+      "case_id": "nist2024-d47-texas-instruments-sherman--no-timing",
+      "project_id": "nist2024-d47-texas-instruments-sherman",
+      "project_group": "nist2024-d47-texas-instruments-sherman",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d47-texas-instruments-sherman--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of two new large-scale 300-mm fabrication facilities for 65nm to 130nm essential chips at the Sherman location. The source does not individually name the two fabs or allocate dated manufacturing targets between them; the location group retains multiplicity two without canonical identities. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d47"
+      ],
+      "source_document_date": "2024-08-16"
+    },
+    {
+      "case_id": "nist2024-d48-sk-hynix-west-lafayette--timing-01",
+      "project_id": "nist2024-d48-sk-hynix-west-lafayette",
+      "project_group": "nist2024-d48-sk-hynix-west-lafayette",
+      "event_type": "mass_production_start",
+      "scope_id": "nist2024-d48-sk-hynix-west-lafayette--original-pmt-scope",
+      "disposition": "eligible",
+      "reason": "HBM advanced packaging manufacturing at Purdue University Research Park with an associated advanced-packaging R&D facility component. The source describes a memory packaging plant, a production line and R&D; correspondence among these functional components and individual physical buildings remains unresolved. The mass-production target is for the packaging manufacturing facility, not an independently dated R&D opening. Original PMT timing: second half of 2028 The source expects mass production to begin in this half-year. The interval preserves that precision without choosing a midpoint, asserting achieved production or assigning a separate R&D opening date.",
+      "target": {
+        "kind": "interval",
+        "low": "2028-07-01",
+        "high": "2028-12-31"
+      },
+      "source_reference_ids": [
+        "nist2024-d48"
+      ],
+      "source_document_date": "2024-08-06"
+    },
+    {
+      "case_id": "nist2024-d49-amkor-peoria--timing-01",
+      "project_id": "nist2024-d49-amkor-peoria",
+      "project_group": "nist2024-d49-amkor-peoria",
+      "event_type": "full_operation",
+      "scope_id": "nist2024-d49-amkor-peoria--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Greenfield end-to-end advanced semiconductor packaging and test project, including expected use of 2.5D and other next-generation technologies. The PMT article does not distinguish numbered phases, independently named buildings or a calendar operational target. Original PMT timing: When fully operational This is an undated conditional description of future full operation, not a calendar forecast, production-start date or achieved state. No later-source date or phase identity is imported.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d49"
+      ],
+      "source_document_date": "2024-07-26"
+    },
+    {
+      "case_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion--no-timing",
+      "project_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion",
+      "project_group": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Conversion of a portion of the existing silicon epitaxy wafer manufacturing facility to production of 150mm and 200mm silicon carbide epitaxy wafers. This is a partial-facility conversion, not a whole-facility replacement, an additional greenfield fab or the new Sherman 300mm silicon-wafer facility. The source does not identify the converted portion's individual line or building. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d52"
+      ],
+      "source_document_date": "2024-07-17"
+    },
+    {
+      "case_id": "nist2024-d52-globalwafers-sherman-silicon--no-timing",
+      "project_id": "nist2024-d52-globalwafers-sherman-silicon",
+      "project_group": "nist2024-d52-globalwafers-sherman-silicon",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d52-globalwafers-sherman-silicon--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Establishment of a new 300mm silicon-wafer manufacturing facility supplying wafers used by foundries and integrated device manufacturers. This is semiconductor wafer-materials production, not a device fab. The PMT signatories are GlobalWafers America, LLC and MEMC LLC; this record does not invent a subsidiary-to-facility ownership assignment. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d52"
+      ],
+      "source_document_date": "2024-07-17"
+    },
+    {
+      "case_id": "nist2024-d52-globalwafers-st-peters-soi--no-timing",
+      "project_id": "nist2024-d52-globalwafers-st-peters-soi",
+      "project_group": "nist2024-d52-globalwafers-st-peters-soi",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d52-globalwafers-st-peters-soi--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Establishment of a new facility producing 300mm silicon-on-insulator wafers for uses including defense and aerospace. This is wafer-materials manufacturing, not a separately inferred device fab. The PMT signatories are GlobalWafers America, LLC and MEMC LLC; this record does not assign a canonical subsidiary owner. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d52"
+      ],
+      "source_document_date": "2024-07-17"
+    },
+    {
+      "case_id": "nist2024-d56-rvm-palm-bay--timing-01",
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "project_group": "nist2024-d56-rvm-palm-bay",
+      "event_type": "300mm_mems_foundry_service_capability",
+      "scope_id": "nist2024-d56-rvm-palm-bay--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new pure-play MEMS and sensor foundry, including cleanroom renovation and equipment installation. Existing Oregon foundry is context, not a separately supported project. Source-native scope; no installed capacity or canonical facility identity inferred. Original PMT timing: soon The CEO's qualitative expectation for offering 300mm pure-play MEMS capability supplies no calendar bounds and is not a shipment or completion date.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d56"
+      ],
+      "source_document_date": "2024-07-01"
+    },
+    {
+      "case_id": "nist2024-d56-rvm-palm-bay--timing-02",
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "project_group": "nist2024-d56-rvm-palm-bay",
+      "event_type": "first_wafer_shipment",
+      "scope_id": "nist2024-d56-rvm-palm-bay--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new pure-play MEMS and sensor foundry, including cleanroom renovation and equipment installation. Existing Oregon foundry is context, not a separately supported project. Source-native scope; no installed capacity or canonical facility identity inferred. Original PMT timing: early 2025 The article dates expected first wafer shipments, not production start; early does not establish a specific month or quarter.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d56"
+      ],
+      "source_document_date": "2024-07-01"
+    },
+    {
+      "case_id": "nist2024-d56-rvm-palm-bay--timing-03",
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "project_group": "nist2024-d56-rvm-palm-bay",
+      "event_type": "facility_final_completion",
+      "scope_id": "nist2024-d56-rvm-palm-bay--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new pure-play MEMS and sensor foundry, including cleanroom renovation and equipment installation. Existing Oregon foundry is context, not a separately supported project. Source-native scope; no installed capacity or canonical facility identity inferred. Original PMT timing: by mid 2025 Preserve the completion deadline wording without equating mid-year to a specified calendar endpoint.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d56"
+      ],
+      "source_document_date": "2024-07-01"
+    },
+    {
+      "case_id": "nist2024-d57-entegris-colorado-springs-phase-1--no-timing",
+      "project_id": "nist2024-d57-entegris-colorado-springs-phase-1",
+      "project_group": "nist2024-d57-entegris-colorado-springs-phase-1",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d57-entegris-colorado-springs-phase-1--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "First phase of the same new manufacturing center: FOUP wafer-handling containers and liquid-filter membranes. This is semiconductor supply-chain materials/process-equipment manufacturing, not wafer fabrication. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d57"
+      ],
+      "source_document_date": "2024-06-26"
+    },
+    {
+      "case_id": "nist2024-d57-entegris-colorado-springs-phase-2--no-timing",
+      "project_id": "nist2024-d57-entegris-colorado-springs-phase-2",
+      "project_group": "nist2024-d57-entegris-colorado-springs-phase-2",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d57-entegris-colorado-springs-phase-2--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Second phase of the same manufacturing center: advanced liquid filters and purifiers plus fluid-handling solutions. No separate building count, manufacturing-start date or phase-specific quantity is stated. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d57"
+      ],
+      "source_document_date": "2024-06-26"
+    },
+    {
+      "case_id": "nist2024-d59-rocket-lab-new-mexico--timing-01",
+      "project_id": "nist2024-d59-rocket-lab-new-mexico",
+      "project_group": "nist2024-d59-rocket-lab-new-mexico",
+      "event_type": "compound_semiconductor_production_growth",
+      "scope_id": "nist2024-d59-rocket-lab-new-mexico--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernization and expansion of compound-semiconductor production for space-grade solar cells. The article identifies Albuquerque headquarters but does not enumerate project-facility addresses or phases. Community co-innovation programs in Albuquerque, Navajo Nation and rural southern New Mexico are not additional production sites. Original PMT timing: within the next three years The proposed 50-percent production increase has a relative horizon, not an exact commissioning date or known installed-capacity denominator. Do not turn the article date into an Atlas issue time.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d59"
+      ],
+      "source_document_date": "2024-06-11"
+    },
+    {
+      "case_id": "nist2024-d60-absolics-covington--no-timing",
+      "project_id": "nist2024-d60-absolics-covington",
+      "project_group": "nist2024-d60-absolics-covington",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d60-absolics-covington--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a commercial glass-substrate facility for semiconductor advanced packaging and commercialization of the associated technology. Georgia Tech research, SHIP collaboration and training partners are supporting programs, not additional identified PMT factories. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d60"
+      ],
+      "source_document_date": "2024-05-23"
+    },
+    {
+      "case_id": "nist2024-d61-polar-bloomington--timing-01",
+      "project_id": "nist2024-d61-polar-bloomington",
+      "project_group": "nist2024-d61-polar-bloomington",
+      "event_type": "production_capacity_doubling",
+      "scope_id": "nist2024-d61-polar-bloomington--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expansion and modernization of the existing sensor- and power-chip manufacturing facility, with new technology capabilities. Proposed ownership and commercial-foundry-model transformation is not another fab or a dated production event. Original PMT timing: within two years Relative proposed doubling of U.S. sensor/power-chip production capacity; not a dated facility startup or a measurement of installed capacity.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d61"
+      ],
+      "source_document_date": "2024-05-13"
+    },
+    {
+      "case_id": "nist2024-d64-micron-boise-hvm-fab--no-timing",
+      "project_id": "nist2024-d64-micron-boise-hvm-fab",
+      "project_group": "nist2024-d64-micron-boise-hvm-fab",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d64-micron-boise-hvm-fab--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Development of a new high-volume leading-edge DRAM manufacturing fab co-located with the company's existing R&D facility. The existing R&D operation is not an additional newly announced commercial fab. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d64"
+      ],
+      "source_document_date": "2024-04-25"
+    },
+    {
+      "case_id": "nist2024-d64-micron-clay-first-two-fabs--no-timing",
+      "project_id": "nist2024-d64-micron-clay-first-two-fabs",
+      "project_group": "nist2024-d64-micron-clay-first-two-fabs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d64-micron-clay-first-two-fabs--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of the first two leading-edge DRAM fabs within a planned four-fab megafab. The additional two fabs remain wider long-term vision context, not two additional PMT-supported fabs in this article. No individual names, production schedules or capacities are allocated. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d64"
+      ],
+      "source_document_date": "2024-04-25"
+    },
+    {
+      "case_id": "nist2024-d66-samsung-austin-expansion--no-timing",
+      "project_id": "nist2024-d66-samsung-austin-expansion",
+      "project_group": "nist2024-d66-samsung-austin-expansion",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d66-samsung-austin-expansion--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expansion of the existing Austin facility/facilities to support FD-SOI process-technology production. The paragraph alternates singular and plural facility wording; no individual building count, identity or dated production target is supplied. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d66"
+      ],
+      "source_document_date": "2024-04-15"
+    },
+    {
+      "case_id": "nist2024-d66-samsung-taylor-logic--no-timing",
+      "project_id": "nist2024-d66-samsung-taylor-logic",
+      "project_group": "nist2024-d66-samsung-taylor-logic",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d66-samsung-taylor-logic--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Two leading-edge logic foundry fabs focused on mass production of 4nm and 2nm technologies. The article does not assign one process node, date or identity to each individual fab. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d66"
+      ],
+      "source_document_date": "2024-04-15"
+    },
+    {
+      "case_id": "nist2024-d66-samsung-taylor-packaging--no-timing",
+      "project_id": "nist2024-d66-samsung-taylor-packaging",
+      "project_group": "nist2024-d66-samsung-taylor-packaging",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d66-samsung-taylor-packaging--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Advanced-packaging facility producing 3D High Bandwidth Memory and 2.5D packaging, distinct from the two logic fabs and dedicated R&D fab. No dated startup is given. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d66"
+      ],
+      "source_document_date": "2024-04-15"
+    },
+    {
+      "case_id": "nist2024-d67-tsmc-phoenix-first-fab--timing-01",
+      "project_id": "nist2024-d67-tsmc-phoenix-first-fab",
+      "project_group": "nist2024-d67-tsmc-phoenix-first-fab",
+      "event_type": "high_volume_production",
+      "scope_id": "nist2024-d67-tsmc-phoenix-first-fab--original-pmt-scope",
+      "disposition": "eligible",
+      "reason": "First of the three source-native greenfield Arizona fabs, described for 4nm FinFET technologies. No canonical Fab 21 identity or commercial-commencement alias is assigned. Original PMT timing: by the first half of 2025 Interpret by the first half as an inclusive latest bound through June 30, 2025. Preserve the literal and do not impose a January 1 lower bound or change HVM into generic production start.",
+      "target": {
+        "kind": "deadline",
+        "through": "2025-06-30"
+      },
+      "source_reference_ids": [
+        "nist2024-d67"
+      ],
+      "source_document_date": "2024-04-08"
+    },
+    {
+      "case_id": "nist2024-d67-tsmc-phoenix-second-fab--no-timing",
+      "project_id": "nist2024-d67-tsmc-phoenix-second-fab",
+      "project_group": "nist2024-d67-tsmc-phoenix-second-fab",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d67-tsmc-phoenix-second-fab--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Second greenfield fab, described for 2nm nanosheet technology in addition to previously announced 3nm plans. No second-fab production date is supplied in this article. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d67"
+      ],
+      "source_document_date": "2024-04-08"
+    },
+    {
+      "case_id": "nist2024-d67-tsmc-phoenix-third-fab--timing-01",
+      "project_id": "nist2024-d67-tsmc-phoenix-third-fab",
+      "project_group": "nist2024-d67-tsmc-phoenix-third-fab",
+      "event_type": "fab_build_commitment",
+      "scope_id": "nist2024-d67-tsmc-phoenix-third-fab--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Additional third greenfield fab, with a commitment to build before the end of the decade and a customer-demand-dependent process-technology choice. Unnamed supplier plants and U.S. packaging-partner capabilities are supporting context, not additional identified PMT project rows. Original PMT timing: before the end of the decade Preserve the source's build/construction wording and decade expression without an invented exact endpoint. This is not a dated production or HVM target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d67"
+      ],
+      "source_document_date": "2024-04-08"
+    },
+    {
+      "case_id": "nist2024-d70-intel-chandler-modernization--no-timing",
+      "project_id": "nist2024-d70-intel-chandler-modernization",
+      "project_group": "nist2024-d70-intel-chandler-modernization",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d70-intel-chandler-modernization--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernization of one existing fab, listed alongside but distinct from construction of two new fabs. The article does not supply a fab number, individual technology allocation or production date. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d70"
+      ],
+      "source_document_date": "2024-03-20"
+    },
+    {
+      "case_id": "nist2024-d70-intel-chandler-new-fabs--no-timing",
+      "project_id": "nist2024-d70-intel-chandler-new-fabs",
+      "project_group": "nist2024-d70-intel-chandler-new-fabs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d70-intel-chandler-new-fabs--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of two new leading-edge logic fabs. Arizona production of Intel 18A/Clearwater Forest is described collectively and is not allocated to a particular new fab or dated in the article. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d70"
+      ],
+      "source_document_date": "2024-03-20"
+    },
+    {
+      "case_id": "nist2024-d70-intel-new-albany-new-fabs--no-timing",
+      "project_id": "nist2024-d70-intel-new-albany-new-fabs",
+      "project_group": "nist2024-d70-intel-new-albany-new-fabs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d70-intel-new-albany-new-fabs--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of two leading-edge logic fabs anchoring a regional chipmaking ecosystem. No individual fab names, phase schedules or production-start dates are supplied. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d70"
+      ],
+      "source_document_date": "2024-03-20"
+    },
+    {
+      "case_id": "nist2024-d70-intel-rio-rancho-packaging--timing-01",
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "project_group": "nist2024-d70-intel-rio-rancho-packaging",
+      "event_type": "full_production",
+      "scope_id": "nist2024-d70-intel-rio-rancho-packaging--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernization of two fabs into advanced-packaging facilities. The later singular description of the operation does not erase the two explicit fab units or establish distinct canonical identities. Original PMT timing: When in full production The article conditions its description of the packaging operation on full production but supplies no date for that state. This is not an observed event or a normalized startup forecast.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d70"
+      ],
+      "source_document_date": "2024-03-20"
+    },
+    {
+      "case_id": "nist2024-d72-gf-burlington-revitalization--no-timing",
+      "project_id": "nist2024-d72-gf-burlington-revitalization",
+      "project_group": "nist2024-d72-gf-burlington-revitalization",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d72-gf-burlington-revitalization--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Revitalization of an existing fab to commercialize new 200mm GaN-on-silicon technologies and enable high-volume manufacturing capability. Preserve the article's Burlington location rather than substituting another municipality. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d72"
+      ],
+      "source_document_date": "2024-02-19"
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-existing-expansion--timing-01",
+      "project_id": "nist2024-d72-gf-malta-existing-expansion",
+      "project_group": "nist2024-d72-gf-malta-existing-expansion",
+      "event_type": "combined_malta_projects_capacity_growth",
+      "scope_id": "nist2024-d72-gf-malta-existing-expansion--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expansion of the existing fabrication facility, including automotive supply under the General Motors agreement. Combined campus targets are not independently allocated between this expansion and the new fab. Original PMT timing: over the next 10+ years This is one combined campus growth statement for the new fab plus existing-fab expansion. It has an open relative duration and no independently allocated project quantity or completion deadline; repetition on related rows is not an independent target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d72"
+      ],
+      "source_document_date": "2024-02-19"
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-existing-expansion--timing-02",
+      "project_id": "nist2024-d72-gf-malta-existing-expansion",
+      "project_group": "nist2024-d72-gf-malta-existing-expansion",
+      "event_type": "combined_malta_projects_wafer_production_after_all_phases",
+      "scope_id": "nist2024-d72-gf-malta-existing-expansion--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expansion of the existing fabrication facility, including automotive supply under the General Motors agreement. Combined campus targets are not independently allocated between this expansion and the new fab. Original PMT timing: once all phases are complete The joint production statement is contingent on completion of all phases and supplies no calendar date. Do not allocate the campus-wide production amount to either project or treat it as measured capacity.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d72"
+      ],
+      "source_document_date": "2024-02-19"
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-new-fab--timing-01",
+      "project_id": "nist2024-d72-gf-malta-new-fab",
+      "project_group": "nist2024-d72-gf-malta-new-fab",
+      "event_type": "combined_malta_projects_capacity_growth",
+      "scope_id": "nist2024-d72-gf-malta-new-fab--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new large-scale 300mm fab, distinct from expansion of the existing Malta facility. The source's campus growth and later production statements combine both Malta projects. Original PMT timing: over the next 10+ years This is one combined campus growth statement for the new fab plus existing-fab expansion. It has an open relative duration and no independently allocated project quantity or completion deadline; repetition on related rows is not an independent target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d72"
+      ],
+      "source_document_date": "2024-02-19"
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-new-fab--timing-02",
+      "project_id": "nist2024-d72-gf-malta-new-fab",
+      "project_group": "nist2024-d72-gf-malta-new-fab",
+      "event_type": "combined_malta_projects_wafer_production_after_all_phases",
+      "scope_id": "nist2024-d72-gf-malta-new-fab--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Construction of a new large-scale 300mm fab, distinct from expansion of the existing Malta facility. The source's campus growth and later production statements combine both Malta projects. Original PMT timing: once all phases are complete The joint production statement is contingent on completion of all phases and supplies no calendar date. Do not allocate the campus-wide production amount to either project or treat it as measured capacity.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d72"
+      ],
+      "source_document_date": "2024-02-19"
+    },
+    {
+      "case_id": "nist2024-d76-microchip-colorado-springs--no-timing",
+      "project_id": "nist2024-d76-microchip-colorado-springs",
+      "project_group": "nist2024-d76-microchip-colorado-springs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d76-microchip-colorado-springs--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Modernization and expansion of a mature-node MCU/specialty-semiconductor fab. The proposed nearly tripled output statement combines Colorado Springs and Gresham and is not allocated per site. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d76"
+      ],
+      "source_document_date": "2024-01-04"
+    },
+    {
+      "case_id": "nist2024-d76-microchip-gresham--no-timing",
+      "project_id": "nist2024-d76-microchip-gresham",
+      "project_group": "nist2024-d76-microchip-gresham",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d76-microchip-gresham--original-pmt-scope",
+      "disposition": "unresolved",
+      "reason": "Expansion of a mature-node MCU/specialty-semiconductor fab. No production-start date or site-specific output quantity is supplied; the nearly tripled output statement is joint with Colorado Springs. Original PMT timing: No reviewed timing assertion; do not invent a production event or calendar target.",
+      "target": null,
+      "source_reference_ids": [
+        "nist2024-d76"
+      ],
+      "source_document_date": "2024-01-04"
+    }
+  ],
+  "outcomes": [
+    {
+      "case_id": "nist2024-d17-bosch-roseville--sample-production-observed-by",
+      "project_id": "nist2024-d17-bosch-roseville",
+      "project_group": "nist2024-d17-bosch-roseville",
+      "event_type": "sample_production_start",
+      "scope_id": "nist2024-d17-bosch-roseville--sample-production-unspecified-wafer-diameter",
+      "reason": "The July 13 source states that sample production has already commenced. Retain only a source-reported upper bound through July 13, 2026. No lower bound or exact start date is supplied. Full narrative, visible dateline and same-day publication/modification metadata were inspected in retained HTML; historical availability and independent physical corroboration remain unverified. This distinct event cannot score the original 200mm-chip target.",
+      "outcome": {
+        "status": "observed_by",
+        "through": "2026-07-13"
+      },
+      "source_reference_ids": [
+        "nist-bosch-2026-dfa"
+      ],
+      "source_document_date": "2026-07-13"
+    },
+    {
+      "case_id": "nist2024-d17-bosch-roseville--timing-01",
+      "project_id": "nist2024-d17-bosch-roseville",
+      "project_group": "nist2024-d17-bosch-roseville",
+      "event_type": "first_chip_production",
+      "scope_id": "nist2024-d17-bosch-roseville--original-pmt-scope",
+      "reason": "The later article reports unspecified samples, not first chips on 200mm wafers. Commercial production remains prospective. Preserve the original 2026 first-200mm-chip target as unresolved and keep the sample observation in a distinct supplemental case.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [
+        "nist-bosch-2026-dfa"
+      ],
+      "source_document_date": "2026-07-13"
+    },
+    {
+      "case_id": "nist2024-d18-micron-manassas--no-timing",
+      "project_id": "nist2024-d18-micron-manassas",
+      "project_group": "nist2024-d18-micron-manassas",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d18-micron-manassas--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d19-coherent-sherman--no-timing",
+      "project_id": "nist2024-d19-coherent-sherman",
+      "project_group": "nist2024-d19-coherent-sherman",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d19-coherent-sherman--original-pmt-scope",
+      "reason": "Later existing 150mm InP high-volume capability and a prospective expansion are not dated completion of the entire original cleanroom/equipment intervention. No original calendar target exists and no expansion outcome is admitted.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [
+        "nist-coherent-2026-loi"
+      ],
+      "source_document_date": "2026-06-16"
+    },
+    {
+      "case_id": "nist2024-d19-skywater-bloomington--no-timing",
+      "project_id": "nist2024-d19-skywater-bloomington",
+      "project_group": "nist2024-d19-skywater-bloomington",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d19-skywater-bloomington--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d19-xfab-lubbock--no-timing",
+      "project_id": "nist2024-d19-xfab-lubbock",
+      "project_group": "nist2024-d19-xfab-lubbock",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d19-xfab-lubbock--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d27-akash-west-oakland--no-timing",
+      "project_id": "nist2024-d27-akash-west-oakland",
+      "project_group": "nist2024-d27-akash-west-oakland",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d27-akash-west-oakland--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d28-corning-canton--no-timing",
+      "project_id": "nist2024-d28-corning-canton",
+      "project_group": "nist2024-d28-corning-canton",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d28-corning-canton--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d28-powerex-youngwood--no-timing",
+      "project_id": "nist2024-d28-powerex-youngwood",
+      "project_group": "nist2024-d28-powerex-youngwood",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d28-powerex-youngwood--original-pmt-scope",
+      "reason": "Later funding and Pennsylvania facility context do not identify an exact Youngwood intervention or production-start/completion event. No original calendar target exists; do not promote funding to a manufacturing outcome.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [
+        "nist-powerex-2026-dfa"
+      ],
+      "source_document_date": "2026-06-05"
+    },
+    {
+      "case_id": "nist2024-d32-hemlock-hemlock--no-timing",
+      "project_id": "nist2024-d32-hemlock-hemlock",
+      "project_group": "nist2024-d32-hemlock-hemlock",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d32-hemlock-hemlock--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d34-infinera-bethlehem--no-timing",
+      "project_id": "nist2024-d34-infinera-bethlehem",
+      "project_group": "nist2024-d34-infinera-bethlehem",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d34-infinera-bethlehem--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d34-infinera-san-jose--no-timing",
+      "project_id": "nist2024-d34-infinera-san-jose",
+      "project_group": "nist2024-d34-infinera-san-jose",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d34-infinera-san-jose--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d35-wolfspeed-marcy--no-timing",
+      "project_id": "nist2024-d35-wolfspeed-marcy",
+      "project_group": "nist2024-d35-wolfspeed-marcy",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d35-wolfspeed-marcy--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d35-wolfspeed-siler-city--no-timing",
+      "project_id": "nist2024-d35-wolfspeed-siler-city",
+      "project_group": "nist2024-d35-wolfspeed-siler-city",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d35-wolfspeed-siler-city--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d36-edwards-vacuum-genesee-county--no-timing",
+      "project_id": "nist2024-d36-edwards-vacuum-genesee-county",
+      "project_group": "nist2024-d36-edwards-vacuum-genesee-county",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d36-edwards-vacuum-genesee-county--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d46-hp-corvallis--no-timing",
+      "project_id": "nist2024-d46-hp-corvallis",
+      "project_group": "nist2024-d46-hp-corvallis",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d46-hp-corvallis--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d47-texas-instruments-lehi--no-timing",
+      "project_id": "nist2024-d47-texas-instruments-lehi",
+      "project_group": "nist2024-d47-texas-instruments-lehi",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d47-texas-instruments-lehi--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d47-texas-instruments-sherman--no-timing",
+      "project_id": "nist2024-d47-texas-instruments-sherman",
+      "project_group": "nist2024-d47-texas-instruments-sherman",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d47-texas-instruments-sherman--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d48-sk-hynix-west-lafayette--timing-01",
+      "project_id": "nist2024-d48-sk-hynix-west-lafayette",
+      "project_group": "nist2024-d48-sk-hynix-west-lafayette",
+      "event_type": "mass_production_start",
+      "scope_id": "nist2024-d48-sk-hynix-west-lafayette--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d49-amkor-peoria--timing-01",
+      "project_id": "nist2024-d49-amkor-peoria",
+      "project_group": "nist2024-d49-amkor-peoria",
+      "event_type": "full_operation",
+      "scope_id": "nist2024-d49-amkor-peoria--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion--no-timing",
+      "project_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion",
+      "project_group": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d52-globalwafers-sherman-silicon--no-timing",
+      "project_id": "nist2024-d52-globalwafers-sherman-silicon",
+      "project_group": "nist2024-d52-globalwafers-sherman-silicon",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d52-globalwafers-sherman-silicon--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d52-globalwafers-st-peters-soi--no-timing",
+      "project_id": "nist2024-d52-globalwafers-st-peters-soi",
+      "project_group": "nist2024-d52-globalwafers-st-peters-soi",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d52-globalwafers-st-peters-soi--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d56-rvm-palm-bay--timing-01",
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "project_group": "nist2024-d56-rvm-palm-bay",
+      "event_type": "300mm_mems_foundry_service_capability",
+      "scope_id": "nist2024-d56-rvm-palm-bay--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d56-rvm-palm-bay--timing-02",
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "project_group": "nist2024-d56-rvm-palm-bay",
+      "event_type": "first_wafer_shipment",
+      "scope_id": "nist2024-d56-rvm-palm-bay--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d56-rvm-palm-bay--timing-03",
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "project_group": "nist2024-d56-rvm-palm-bay",
+      "event_type": "facility_final_completion",
+      "scope_id": "nist2024-d56-rvm-palm-bay--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d57-entegris-colorado-springs-phase-1--no-timing",
+      "project_id": "nist2024-d57-entegris-colorado-springs-phase-1",
+      "project_group": "nist2024-d57-entegris-colorado-springs-phase-1",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d57-entegris-colorado-springs-phase-1--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d57-entegris-colorado-springs-phase-2--no-timing",
+      "project_id": "nist2024-d57-entegris-colorado-springs-phase-2",
+      "project_group": "nist2024-d57-entegris-colorado-springs-phase-2",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d57-entegris-colorado-springs-phase-2--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d59-rocket-lab-new-mexico--timing-01",
+      "project_id": "nist2024-d59-rocket-lab-new-mexico",
+      "project_group": "nist2024-d59-rocket-lab-new-mexico",
+      "event_type": "compound_semiconductor_production_growth",
+      "scope_id": "nist2024-d59-rocket-lab-new-mexico--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d60-absolics-covington--no-timing",
+      "project_id": "nist2024-d60-absolics-covington",
+      "project_group": "nist2024-d60-absolics-covington",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d60-absolics-covington--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d61-polar-bloomington--timing-01",
+      "project_id": "nist2024-d61-polar-bloomington",
+      "project_group": "nist2024-d61-polar-bloomington",
+      "event_type": "production_capacity_doubling",
+      "scope_id": "nist2024-d61-polar-bloomington--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d64-micron-boise-hvm-fab--no-timing",
+      "project_id": "nist2024-d64-micron-boise-hvm-fab",
+      "project_group": "nist2024-d64-micron-boise-hvm-fab",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d64-micron-boise-hvm-fab--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d64-micron-clay-first-two-fabs--no-timing",
+      "project_id": "nist2024-d64-micron-clay-first-two-fabs",
+      "project_group": "nist2024-d64-micron-clay-first-two-fabs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d64-micron-clay-first-two-fabs--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d66-samsung-austin-expansion--no-timing",
+      "project_id": "nist2024-d66-samsung-austin-expansion",
+      "project_group": "nist2024-d66-samsung-austin-expansion",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d66-samsung-austin-expansion--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d66-samsung-taylor-logic--no-timing",
+      "project_id": "nist2024-d66-samsung-taylor-logic",
+      "project_group": "nist2024-d66-samsung-taylor-logic",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d66-samsung-taylor-logic--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d66-samsung-taylor-packaging--no-timing",
+      "project_id": "nist2024-d66-samsung-taylor-packaging",
+      "project_group": "nist2024-d66-samsung-taylor-packaging",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d66-samsung-taylor-packaging--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d67-tsmc-phoenix-first-fab--timing-01",
+      "project_id": "nist2024-d67-tsmc-phoenix-first-fab",
+      "project_group": "nist2024-d67-tsmc-phoenix-first-fab",
+      "event_type": "high_volume_production",
+      "scope_id": "nist2024-d67-tsmc-phoenix-first-fab--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d67-tsmc-phoenix-second-fab--no-timing",
+      "project_id": "nist2024-d67-tsmc-phoenix-second-fab",
+      "project_group": "nist2024-d67-tsmc-phoenix-second-fab",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d67-tsmc-phoenix-second-fab--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d67-tsmc-phoenix-third-fab--timing-01",
+      "project_id": "nist2024-d67-tsmc-phoenix-third-fab",
+      "project_group": "nist2024-d67-tsmc-phoenix-third-fab",
+      "event_type": "fab_build_commitment",
+      "scope_id": "nist2024-d67-tsmc-phoenix-third-fab--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d70-intel-chandler-modernization--no-timing",
+      "project_id": "nist2024-d70-intel-chandler-modernization",
+      "project_group": "nist2024-d70-intel-chandler-modernization",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d70-intel-chandler-modernization--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d70-intel-chandler-new-fabs--no-timing",
+      "project_id": "nist2024-d70-intel-chandler-new-fabs",
+      "project_group": "nist2024-d70-intel-chandler-new-fabs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d70-intel-chandler-new-fabs--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d70-intel-new-albany-new-fabs--no-timing",
+      "project_id": "nist2024-d70-intel-new-albany-new-fabs",
+      "project_group": "nist2024-d70-intel-new-albany-new-fabs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d70-intel-new-albany-new-fabs--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d70-intel-rio-rancho-packaging--timing-01",
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "project_group": "nist2024-d70-intel-rio-rancho-packaging",
+      "event_type": "full_production",
+      "scope_id": "nist2024-d70-intel-rio-rancho-packaging--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d72-gf-burlington-revitalization--no-timing",
+      "project_id": "nist2024-d72-gf-burlington-revitalization",
+      "project_group": "nist2024-d72-gf-burlington-revitalization",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d72-gf-burlington-revitalization--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-existing-expansion--timing-01",
+      "project_id": "nist2024-d72-gf-malta-existing-expansion",
+      "project_group": "nist2024-d72-gf-malta-existing-expansion",
+      "event_type": "combined_malta_projects_capacity_growth",
+      "scope_id": "nist2024-d72-gf-malta-existing-expansion--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-existing-expansion--timing-02",
+      "project_id": "nist2024-d72-gf-malta-existing-expansion",
+      "project_group": "nist2024-d72-gf-malta-existing-expansion",
+      "event_type": "combined_malta_projects_wafer_production_after_all_phases",
+      "scope_id": "nist2024-d72-gf-malta-existing-expansion--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-new-fab--timing-01",
+      "project_id": "nist2024-d72-gf-malta-new-fab",
+      "project_group": "nist2024-d72-gf-malta-new-fab",
+      "event_type": "combined_malta_projects_capacity_growth",
+      "scope_id": "nist2024-d72-gf-malta-new-fab--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d72-gf-malta-new-fab--timing-02",
+      "project_id": "nist2024-d72-gf-malta-new-fab",
+      "project_group": "nist2024-d72-gf-malta-new-fab",
+      "event_type": "combined_malta_projects_wafer_production_after_all_phases",
+      "scope_id": "nist2024-d72-gf-malta-new-fab--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d76-microchip-colorado-springs--no-timing",
+      "project_id": "nist2024-d76-microchip-colorado-springs",
+      "project_group": "nist2024-d76-microchip-colorado-springs",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d76-microchip-colorado-springs--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    },
+    {
+      "case_id": "nist2024-d76-microchip-gresham--no-timing",
+      "project_id": "nist2024-d76-microchip-gresham",
+      "project_group": "nist2024-d76-microchip-gresham",
+      "event_type": "project_intervention_undated",
+      "scope_id": "nist2024-d76-microchip-gresham--original-pmt-scope",
+      "reason": "No event-equivalent outcome is admitted in this retained comparison. The broader 45-group later-evidence research screen is not primary outcome evidence. Unknown is a review status, not evidence of nonoccurrence, delay, failure or cancellation; outcome acquisition remains incomplete.",
+      "outcome": {
+        "status": "unknown"
+      },
+      "source_reference_ids": [],
+      "source_document_date": null
+    }
+  ]
+}
+

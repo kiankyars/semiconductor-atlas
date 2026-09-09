@@ -90,6 +90,14 @@ python3 scripts/evaluate_source_guidance.py \
 
 ## Reusable arithmetic and remaining gate
 
+The later [complete PMT-population screen](nist_pmt_outcome_screen.md) adds
+one-sided `observed_by` outcomes without inventing a start lower bound. Such an
+observation can prove an inclusive deadline was met, but a later upper bound
+cannot prove lateness and an absent lower bound cannot establish interval
+containment. Reports using this status select v2; legacy-status-only arithmetic
+remains v1. The 45-group retained comparison preserves all original targets and
+keeps Bosch's separately scoped sample observation unscored.
+
 `source_guidance_outcomes.evaluate_case` distinguishes an interval from an inclusive
 deadline. Early completion can satisfy a deadline while falling outside an interval;
 no lower bound is invented for deadline wording. Overlap is unresolved, not a hit.

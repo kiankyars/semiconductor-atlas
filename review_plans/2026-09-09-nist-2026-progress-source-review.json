@@ -1,0 +1,37 @@
+{
+  "format": "semiconductor-atlas-local-source-acquisition-review-v1",
+  "reviewed_at": "2026-09-09T04:23:16Z",
+  "reviewer": "local:codex-later-nist-manufacturing-progress-review",
+  "decision": "approved_exact_urls_local_informational_review_only",
+  "purpose": "Retain all three newly identified 2026 NIST releases in the bounded Bosch/Coherent/Powerex follow-up set from the full 45-group research screen. Separate funding, existing capability, sample production and prospective commercial output. No original target or project group is replaced.",
+  "policy_basis": "Main reviewer read the complete current NIST robots and Copyrights & Disclaimers pages through web tools in this turn. Exact /news-events/news/2026/ paths are permitted. NIST information may be copied except marked copyright and product-specific exceptions; no such exception was identified for the reviewed release text. Capture both policies and require the existing normalized hashes to match before source requests. Local informational review only, no raw publication, linked PDF/image retrieval, issuer routes, retries or redirects.",
+  "boundaries": {
+    "source_claim_acceptance": false,
+    "physical_capacity_inference": false,
+    "forecast_scoring": false,
+    "model_training": false,
+    "raw_redistribution": false,
+    "scheduled_runtime_change": false
+  },
+  "selection": "Outcome-exposed follow-up to the complete frozen 45-group cohort. This access-cleared subset is not a representative outcome sample. TI remains unapproved after automated-extraction restrictions; Microchip policy review remains incomplete after a main-origin robots HTTP 403. Both stay visible in the wider screen. Access failure is not project nonoccurrence.",
+  "documents": [
+    {
+      "id": "nist-bosch-2026-dfa",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million",
+      "title": "Department of Commerce Announces Direct Funding Agreement with Bosch for a $225 Million CHIPS Program Award to Support Domestic Production of Silicon Carbide Semiconductors",
+      "company": "Bosch"
+    },
+    {
+      "id": "nist-coherent-2026-loi",
+      "url": "https://www.nist.gov/news-events/news/2026/06/department-commerces-chips-program-announces-letter-intent-coherent-50",
+      "title": "The Department of Commerce’s CHIPS Program Announces a Letter of Intent with Coherent for up to $50 Million to Expand Indium Phosphide Production",
+      "company": "Coherent"
+    },
+    {
+      "id": "nist-powerex-2026-dfa",
+      "url": "https://www.nist.gov/news-events/news/2026/06/department-commerce-announces-finalization-chips-incentives-powerex-enhance",
+      "title": "Department of Commerce Announces Finalization of CHIPS Incentives with Powerex to Enhance Domestic Production Capacity of Key Components for U.S. Semiconductor Manufacturing",
+      "company": "Powerex"
+    }
+  ]
+}

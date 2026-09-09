@@ -478,6 +478,15 @@ two same-company nonmatches, not physical outcomes. The next gate is exact
 rights-reviewed acquisition and scope/date adjudication of the balanced outcome
 batch; original targets and prospective vintages remain unchanged.
 
+The [retained PMT outcome screen](nist_pmt_outcome_screen.md) now carries all 49
+original cases across the 45 groups into an executed comparison, plus a distinct
+Bosch sample-production event known only by a source-reported upper date bound.
+All three original calendar targets remain unresolved: sample production does not
+prove first 200mm chips, existing capability does not prove a full expansion, and
+funding does not prove production. This closes a one-sided timing representation
+gap and preserves complete original-population accounting; later outcome coverage,
+source-native core admission and calibrated forecasting remain open.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

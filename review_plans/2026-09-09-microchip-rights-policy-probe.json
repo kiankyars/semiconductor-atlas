@@ -1,0 +1,46 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-review-v1",
+  "purpose": "Retain only the main-origin robots and corporate copyright guidance plus the IR disclaimer. The IR robots first probe is readable and disallows only /form-submit. No filing body, source claims, SEC route, redirects, cookies, retries, raw publication or commercial use is approved here. Fetch the copyright policy only if main-origin robots permit its exact path; stop on any policy/request failure.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 1000000,
+  "entries": [
+    {
+      "id": "microchip-main-robots",
+      "url": "https://www.microchip.com/robots.txt",
+      "purpose": "access_policy",
+      "company": "Microchip Technology",
+      "country_code": "US",
+      "source_family": "microchip-issuer",
+      "scope": "Main-origin robots for the copyright-guidance path only.",
+      "media_types": [
+        "text/plain",
+        "text/html"
+      ]
+    },
+    {
+      "id": "microchip-copyright",
+      "url": "https://www.microchip.com/en-us/about/legal-information/copyright",
+      "purpose": "rights_policy",
+      "company": "Microchip Technology",
+      "country_code": "US",
+      "source_family": "microchip-issuer",
+      "scope": "Corporate copyrighted-material personal-use allowance and exceptions; no distribution or commercial-use permission.",
+      "media_types": [
+        "text/html"
+      ]
+    },
+    {
+      "id": "microchip-ir-disclaimer",
+      "url": "https://ir.microchip.com/disclaimer",
+      "purpose": "rights_policy",
+      "company": "Microchip Technology",
+      "country_code": "US",
+      "source_family": "microchip-issuer",
+      "scope": "IR-origin disclaimer and footer; not QuoteMedia market-data terms or a substitute for the separate corporate copyright permission.",
+      "media_types": [
+        "text/html"
+      ]
+    }
+  ]
+}
