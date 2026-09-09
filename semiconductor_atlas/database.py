@@ -70,11 +70,14 @@ def connect(path: str | Path) -> sqlite3.Connection:
     return connection
 
 
-def apply_migrations(connection: sqlite3.Connection, *, target_version: int | None = None) -> list[int]:
+def apply_migrations(connection: sqlite3.Connection, *, target_version: int | None = None,
+                     applied_at: str | None = None) -> list[int]:
     if connection.in_transaction:
         raise ValueError("finish the current transaction before applying migrations")
     if target_version is not None and (type(target_version) is not int or target_version < 1):
         raise ValueError("target_version must be a positive schema version")
+    if applied_at is not None and _timestamp_microseconds(applied_at) is None:
+        raise ValueError("migration applied_at requires an aware timestamp")
     register_clock_functions(connection)
     connection.execute(
         """
@@ -122,12 +125,14 @@ def apply_migrations(connection: sqlite3.Connection, *, target_version: int | No
             connection.executescript(
                 "BEGIN IMMEDIATE;\n"
                 + script
-                + "\nINSERT INTO schema_migrations(version, name, sha256) VALUES ("
-                + f"{version}, '{quoted_name}', '{checksum}');\n"
+                + "\nINSERT INTO schema_migrations(version, name, sha256"
+                + (", applied_at" if applied_at is not None else "") + ") VALUES ("
+                + f"{version}, '{quoted_name}', '{checksum}'"
+                + (", '" + applied_at.replace("'", "''") + "'" if applied_at is not None else "") + ");\n"
             )
             if connection.execute("PRAGMA foreign_key_check").fetchone() is not None:
                 raise RuntimeError(f"migration {version:04d} violates a foreign key")
-            if version == 10:
+            if version in {10, 11}:
                 # Rebuilding tables does not replay cross-table identity guards.
                 # Validate under the new schema while rollback is still possible.
                 from .repository import validate_database
@@ -135,7 +140,9 @@ def apply_migrations(connection: sqlite3.Connection, *, target_version: int | No
                 errors = validate_database(connection)
                 if errors:
                     raise sqlite3.IntegrityError(
-                        "migration 0010 exact knowledge validation failed: " + "; ".join(errors)
+                        f"migration {version:04d} "
+                        + ("exact knowledge" if version == 10 else "milestone upper bound")
+                        + " validation failed: " + "; ".join(errors)
                     )
             connection.commit()
         except BaseException:

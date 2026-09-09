@@ -314,6 +314,9 @@ def _value_summary(claim: dict) -> str:
                 f"{quantity['numeric_qualifier']}; {quantity['period_kind']} "
                 f"{quantity['period_start']} to {quantity['period_end']}; {quantity['scope_kind']}")
     if claim["value_kind"] == "milestone":
+        if value.get("date_relation") == "on_or_before":
+            return (f"{value['status']}: {value['milestone_type']}; occurred on or before {value['date_high']}; "
+                    "lower bound and exact date unknown")
         return (f"{value['status']}: {value['milestone_type']}; {value['date_low']} to {value['date_high']}; "
                 f"precision {value.get('date_precision', 'not specified')}; midpoint {value['date_base'] or 'null (unknown)'}")
     if claim["value_kind"] == "scalar":

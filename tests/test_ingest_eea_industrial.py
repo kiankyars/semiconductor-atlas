@@ -830,7 +830,7 @@ class EEAIndustrialImportTests(unittest.TestCase):
 
         self.assertEqual(0, code)
         result = json.loads(output.getvalue())
-        self.assertEqual(10, result["schema_version"])
+        self.assertEqual(11, result["schema_version"])
         self.assertEqual(self.queue.raw_sha256, result["candidate_queue_sha256"])
         self.assertEqual(self.review.raw_sha256, result["review_sha256"])
         self.assertEqual(

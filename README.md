@@ -12,6 +12,12 @@ The [schema-10 clock contract](docs/exact_knowledge_clocks.md) uses exact UTC mi
 for new admissions, corrections and identity chronology. Older snapshots and producers remain
 frozen; migration rejects inconsistent history without rewriting it.
 
+The [schema-11 occurrence-bound contract](docs/bosch_sample_production.md) preserves
+source reports that an event had occurred by a date, without inventing its lower
+bound or exact start. Such source-only milestones are not physical-current state
+or finite forecast outcomes. The retained Bosch Roseville sample-production report
+is the first bounded admission; its original 200 mm first-chip target remains unresolved.
+
 ## Capacity contract
 
 Every capacity claim uses exactly one basis:

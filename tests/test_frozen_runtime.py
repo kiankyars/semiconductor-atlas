@@ -48,6 +48,8 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/admit_new_albany_project_statements.py": PROBE,
                       "scripts/admit_coherent_sherman_capability.py": PROBE.replace(
                           '"marker": marker', '"verifier": "coherent-sherman-capability", "marker": marker'),
+                      "scripts/admit_bosch_sample_production.py": PROBE.replace(
+                          '"marker": marker', '"verifier": "bosch-sample-production", "marker": marker'),
                       "scripts/admit_reviewed_source_rates.py": PROBE.replace(
                           "from semiconductor_atlas import marker",
                           "from semiconductor_atlas.reviewed_source_rates import marker"),
@@ -645,6 +647,83 @@ class FrozenRuntimeTests(unittest.TestCase):
         with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
             self.assertEqual(replay.main(arguments), 1)
         self.assertEqual(saved, target.read_bytes())
+
+
+    def bosch_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        return {**inputs, 'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64}
+
+    def test_bosch_replay_dispatches_exact_isolated_verify_operation(self):
+        inputs = self.bosch_inputs()
+        result = self.replay(operation='bosch-sample-production', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items():
+            expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['operation_receipt']['verifier'], 'bosch-sample-production')
+        self.assertEqual(result['operation'], 'bosch-sample-production')
+        self.assertEqual(result['isolated_flags'], ['-I', '-S', '-B'])
+        self.assertFalse(result['operation_receipt']['site_loaded'])
+        self.assertEqual(result['imported_project_modules']['semiconductor_atlas.models'],
+                         'semiconductor_atlas/models.py')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+
+    def test_bosch_replay_rejects_nonliteral_or_malformed_digests_before_dispatch(self):
+        inputs = self.bosch_inputs()
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 64, 'A' * 64, 'a' * 63, 'a' * 65, 'g' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='bosch-sample-production', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+
+    def test_bosch_replay_rejects_missing_extra_relative_and_mutating_arguments(self):
+        inputs = self.bosch_inputs()
+        changes = [{key: value for key, value in inputs.items() if key != missing} for missing in inputs]
+        for field in ('parent', 'review', 'reference-root', 'output'):
+            changes.extend(({**inputs, field: Path('relative')},
+                            {**inputs, field: self.root / '..' / 'escape'}))
+        changes.extend(({**inputs, 'source-body': self.root / 'unreviewed.body'},
+                        {**inputs, 'queue': self.root / 'live.sqlite'},
+                        {**inputs, 'admit': True}, {**inputs, 'verify-only': False}))
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='bosch-sample-production', inputs=changed)
+                child.assert_not_called()
+        for operation in ('bosch-sample-production admit', 'bosch-sample-production capture'):
+            with self.subTest(operation=operation), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation=operation, inputs=inputs)
+                child.assert_not_called()
+
+    def test_bosch_replay_uses_committed_verifier_despite_hostile_current_checkout(self):
+        for name in ('scripts/admit_bosch_sample_production.py', 'semiconductor_atlas/models.py'):
+            (self.repository / name).write_text("raise RuntimeError('evolving Bosch code')\n")
+        with mock.patch.dict(os.environ, {'PYTHONPATH': str(self.repository), 'PYTHONHOME': str(self.repository)}):
+            result = self.replay(operation='bosch-sample-production', inputs=self.bosch_inputs())
+        self.assertEqual(result['operation_receipt']['verifier'], 'bosch-sample-production')
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        self.assertIsNone(result['operation_receipt']['pythonpath'])
+
+    def test_bosch_cli_preserves_digest_strings_and_rejects_unapproved_actions(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'bosch-sample-production']
+        for key, value in self.bosch_inputs().items():
+            arguments.extend(['--' + key, str(value)])
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            self.assertEqual(replay.main(arguments), 0)
+        result = json.loads(stdout.getvalue())
+        self.assertEqual(result['operation_receipt']['verifier'], 'bosch-sample-production')
+        self.assertEqual(result['operation_receipt']['arguments'][-4:],
+                         ['--expected-review-sha256', 'a' * 64, '--expected-output-sha256', 'b' * 64])
+        for extra in ('admit', '--verify-only', '--source-body', '--migrate', '--capture', '--queue'):
+            with self.subTest(extra=extra), mock.patch.object(replay, '_capture') as child:
+                with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                    replay.main([*arguments, extra])
+                child.assert_not_called()
 
 
 if __name__ == "__main__":

@@ -1261,6 +1261,12 @@ and `ATTRIBUTION.txt`.
             "probability interval. All source-claim versions and their dependencies are "
             "retained in `claim_history.jsonl`.\n"
         )
+    if any(claim.get("value", {}).get("date_relation") == "on_or_before" for claim in claim_history):
+        readme += ("\nMilestones with `date_relation=on_or_before` report an occurrence by an upper "
+                   "date bound, with unknown lower bound and exact date. Their `day` precision "
+                   "describes the bound only, not the occurrence. They are not finite event "
+                   "intervals or scored forecast outcomes. The event identity remains specific; "
+                   "a bound alone does not establish commercial production or HVM.\n")
     files["README.md"] = readme.encode("utf-8")
     if extra_files:
         for name, raw in extra_files.items():

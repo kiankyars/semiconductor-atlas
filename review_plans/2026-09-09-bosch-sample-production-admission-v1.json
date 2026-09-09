@@ -1,0 +1,104 @@
+{
+  "format": "semiconductor-atlas-bosch-sample-production-admission-v1",
+  "subject": {
+    "stable_key": "nist:bosch-roseville-2026-sample-production-source-native",
+    "label": "NIST-reported Bosch Roseville SiC facility (canonical identity unresolved)",
+    "kind": "facility",
+    "scope": "Bosch Roseville, California silicon-carbide facility with commenced sample production of unspecified wafer diameter; commercial production remains separate.",
+    "canonical_entity_id": null
+  },
+  "source": {
+    "id": "nist-bosch-2026-dfa",
+    "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million",
+    "title": "Department of Commerce Announces Direct Funding Agreement with Bosch for a $225 Million CHIPS Program Award to Support Domestic Production of Silicon Carbide Semiconductors",
+    "sha256": "928d2b6a812e6d9842272497dcbe48202c70c5f6c8828d114be36d3c0e298c42",
+    "bytes": 87744,
+    "published_at": "2026-07-13",
+    "retrieved_at": "2026-09-09T04:23:21.385466Z"
+  },
+  "rows": [
+    {
+      "key": "sample-production-start",
+      "milestone_type": "sample_production_start",
+      "status": "completed",
+      "date_low": null,
+      "date_base": null,
+      "date_high": "2026-07-13",
+      "date_precision": "day",
+      "date_literal": "Sample production has already commenced",
+      "date_relation": "on_or_before"
+    }
+  ],
+  "packet": {
+    "path": "artifacts/2026-09-09-nist-2026-progress-capture-v1",
+    "manifest_sha256": "05a33260bde85bf62efe4c3e8c5bd81430ba3c9c62f140ad718785cc5064579a"
+  },
+  "access_review": {
+    "path": "review_plans/2026-09-09-nist-2026-progress-source-review.json",
+    "sha256": "942abcff0fbffcf74d318d05de6ec8c6bd8539e4ca06479b8ecd9dae065fbbe5"
+  },
+  "boundaries": {
+    "physical_current_state_inferred": false,
+    "physical_effective_date_inferred": false,
+    "hvm_start_date_inferred": false,
+    "exact_start_date_inferred": false,
+    "lower_date_bound_inferred": false,
+    "sample_wafer_diameter_inferred": false,
+    "first_200mm_chips_target_attained": false,
+    "expansion_completion_inferred": false,
+    "numeric_capacity_inferred": false,
+    "measured_output_inferred": false,
+    "yield_utilization_qualification_inferred": false,
+    "canonical_identity_assigned": false,
+    "geometry_inferred": false,
+    "ownership_assigned": false,
+    "original_pmt_superseded": false,
+    "independent_physical_corroboration": false,
+    "historical_system_knowledge_backdated": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "original_pmt_target_changed": false,
+    "original_pmt_outcome_changed": false,
+    "alert_generated": false,
+    "baseline_modified": false,
+    "scheduled_execution_changed": false,
+    "raw_redistribution": false,
+    "model_training": false,
+    "source_acquisition": false
+  },
+  "source_family": "us-official-semiconductor-awards",
+  "decision": "accept_one_source_reported_sample_production_upper_bound",
+  "reviewed_at": "2026-09-09T09:33:47.702725Z",
+  "reviewer": "Codex main reviewer; read the complete retained six-paragraph NIST narrative, complete title and visible July 13 dateline. A separate read-only reviewer checked source-native identity candidates and the original PMT scope.",
+  "prior_exposure": "Outcome-exposed follow-up from the complete 45-group NIST PMT screen. The reviewers have read the later narrative and original project diagnostic. This is retrospective source-claim acceptance, not independent outcome labeling, blind detection evaluation, representative realization coverage or forecast calibration.",
+  "interpretation": "Accept exactly one source-reported sample_production_start at the Roseville SiC facility. The narrative says sample production has already commenced, so the occurrence is on or before the separately retained July 13, 2026 publication dateline. That day is an inclusive upper bound, not the event date. No lower bound or midpoint is supported, including no inferred January 1 lower bound. The article separately expects commercial production in 2026; it does not report its attainment. Wafer diameter for the samples is unspecified. The worldwide more-than-60-million-chip figure since 2021 is not Roseville output. Keep the original first-200mm-chips-in-2026 target unresolved: unspecified samples do not establish that event or containment in calendar 2026. Preserve original case nist2024-d17-bosch-roseville--timing-01 and all frozen outcomes unchanged. The reviewed supplemental sample-production case remains targetless and unscored. Null effective dates and confidence mean this source report is excluded from physical-current state. The new typed upper-bound value is not an eligible finite timing outcome or forecast ramp.",
+  "identity_review": "Create a new source-native facility without canonical assignment. EPA sites 7b847944-b50a-5c63-96ae-8ba4ab61080b (epa:frs:110041999825) and 30fd5d8c-7866-53b8-94c0-4e2c1ab97a3a (epa:frs:110071517298) both carry Robert Bosch Semiconductor LLC at 7501 Foothills Boulevard. Four additional Roseville/TSI/NEC records share the address, and these six candidates have no accepted identity assignments. The retained NIST narrative provides neither street address nor registry identifier, so none is selected or collapsed and no geometry is inherited. Reuse unchanged NIST core family us-official-semiconductor-awards, ID 058a2903-ba0f-5a3b-a0c2-fcc50f1df3bd. Capture labels identify acquisition routes, not independent publishers.",
+  "parent_database_sha256": "d7fa83b3593030d4dc9a8942e066c8dd71b9e005dcabef7f887adcb0439d7572",
+  "evidence": {
+    "title": {
+      "start": 69536,
+      "end": 69742,
+      "sha256": "aab98b1e7c52aff60aa21f0eb1b950a9edc9b5f2dfafdba62dc6ab9772b87393",
+      "tag": "h1"
+    },
+    "publication": {
+      "start": 70060,
+      "end": 70118,
+      "sha256": "14dc955671bad8f358b279813b879b7dbf0b3e700df13d3488337ba1731782e7",
+      "tag": "time"
+    },
+    "narrative": {
+      "start": 73053,
+      "end": 75787,
+      "sha256": "58bcbb52e6244363f6097357466d63718b0bb2f991418369aa23ccdadd79fb2c",
+      "tag": "div"
+    }
+  },
+  "rights": {
+    "use": "local_informational_review_only",
+    "basis": "The retained acquisition review and exact NIST policy bodies remain unchanged and fully hash-bound. That review permitted retention, not claim acceptance; this separate review accepts only this bounded source-native sample-production occurrence for local informational use. No raw publisher-body redistribution, image/PDF acquisition, unrestricted reuse, endorsement, training or blanket automation permission is inferred.",
+    "raw_redistribution": false,
+    "model_training": false
+  }
+}
+

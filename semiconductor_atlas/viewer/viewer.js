@@ -32,7 +32,10 @@
     const v = claim.value;
     if (v.source_rate) { const r = v.source_rate; return `${r.source_number_literal} ${r.numerator_unit}/${r.denominator_unit} · ${human(r.numeric_qualifier)} · ${human(r.reference_period_kind)} · ${r.scope_label} · not physical capacity`; }
     if (v.source_quantity) { const q = v.source_quantity; return `${q.source_number_literal} × ${q.source_unit_scale} ${q.unit} · ${human(q.numeric_qualifier)} · ${human(q.period_kind)} ${q.period_start} to ${q.period_end} · ${q.scope_label}`; }
-    if (claim.value_kind === "milestone") return `${human(v.status)}: ${human(v.milestone_type)} · ${v.date_low} to ${v.date_high} · precision ${v.date_precision || "not specified"} · midpoint ${v.date_base || "null"}`;
+    if (claim.value_kind === "milestone") {
+      if (v.date_relation === "on_or_before") return `${human(v.status)}: ${human(v.milestone_type)} · occurred on or before ${v.date_high} · lower bound and exact date unknown`;
+      return `${human(v.status)}: ${human(v.milestone_type)} · ${v.date_low} to ${v.date_high} · precision ${v.date_precision || "not specified"} · midpoint ${v.date_base || "null"}`;
+    }
     if (claim.value_kind === "scalar") return display(v.value) + (v.unit ? " " + v.unit : "");
     return JSON.stringify(v);
   }

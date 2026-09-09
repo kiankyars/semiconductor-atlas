@@ -315,7 +315,7 @@ def _verify_replay(connection: sqlite3.Connection, data: dict, prior: sqlite3.Ro
         raise ValueError("recorded review content conflicts")
     if params.get("dependency_code_sha256") != data["code_sha256"]:
         raise ValueError("acceptance-time helper code or migration fingerprint differs")
-    expected, _ = database.initialize(":memory:")
+    expected, _ = database.initialize(":memory:", target_version=database.schema_version(connection))
     try:
         origin = params["lineage_creation_clocks"]["entity_run"]
         if origin != prior["id"]:

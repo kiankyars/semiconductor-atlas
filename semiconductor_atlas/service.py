@@ -67,7 +67,7 @@ def _claim_value_from_row(value_kind: str, row: Mapping[str, Any]) -> dict[str, 
             "date_base": row["date_base"],
             "date_high": row["date_high"],
         }
-        for field in ("date_precision", "date_literal"):
+        for field in ("date_precision", "date_literal", "date_relation"):
             if field in row.keys() and row[field] is not None:
                 result[field] = row[field]
         return result

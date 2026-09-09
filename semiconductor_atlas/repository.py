@@ -17,6 +17,7 @@ from .models import (
     CapabilityValue,
     CapacityBasis,
     CapacityValue,
+    ClaimKind,
     ClaimSeries,
     ClaimValue,
     ClaimVersion,
@@ -37,6 +38,7 @@ from .models import (
     IngestionStatus,
     MilestoneStatus,
     MilestoneValue,
+    MilestoneUpperBoundValue,
     RelationshipValue,
     ResourceValue,
     OrganizationIdentifierClaimMetadata,
@@ -885,7 +887,7 @@ def _value_payload(value: ClaimValue) -> dict[str, Any]:
             "relationship_type": value.relationship_type,
             "attributes": value.attributes,
         }
-    if isinstance(value, MilestoneValue):
+    if isinstance(value, (MilestoneValue, MilestoneUpperBoundValue)):
         payload = {
             "kind": value.kind.value,
             "milestone_type": value.milestone_type,
@@ -896,6 +898,8 @@ def _value_payload(value: ClaimValue) -> dict[str, Any]:
         }
         if value.date_precision is not None:
             payload.update(date_precision=value.date_precision, date_literal=value.date_literal)
+        if isinstance(value, MilestoneUpperBoundValue):
+            payload["date_relation"] = value.date_relation
         return payload
     if isinstance(value, CapabilityValue):
         return {
@@ -1026,9 +1030,14 @@ def _insert_typed_value(
                 _json(value.attributes),
             ),
         )
-    elif isinstance(value, MilestoneValue):
+    elif isinstance(value, (MilestoneValue, MilestoneUpperBoundValue)):
         extra_columns = ", date_precision, date_literal" if value.date_precision is not None else ""
         extra_parameters = ", ?, ?" if extra_columns else ""
+        extra_values = (value.date_precision, value.date_literal) if extra_columns else ()
+        if isinstance(value, MilestoneUpperBoundValue):
+            extra_columns += ", date_relation"
+            extra_parameters += ", ?"
+            extra_values += (value.date_relation,)
         connection.execute(
             f"""
             INSERT INTO milestone_values(
@@ -1042,7 +1051,7 @@ def _insert_typed_value(
                 value.date_low,
                 value.date_base,
                 value.date_high,
-            ) + ((value.date_precision, value.date_literal) if extra_columns else ()),
+            ) + extra_values,
         )
     elif isinstance(value, CapabilityValue):
         text_value = value.value if isinstance(value.value, str) else None
@@ -1134,6 +1143,11 @@ def insert_claim(
     clock = admission_clock_sql(connection)
     if not evidence and not dependencies:
         raise ValueError("a claim requires evidence or a dependency")
+    if isinstance(value, MilestoneUpperBoundValue) and (
+        version.claim_kind is not ClaimKind.SOURCE_STATEMENT or version.valid_from is not None
+        or version.valid_to is not None or version.confidence is not None
+    ):
+        raise ValueError("milestone upper bounds require a source statement with unknown effective dates and confidence")
     if any(link.depends_on_claim_version_id == version.id for link in dependencies):
         raise ValueError("a claim cannot depend on itself")
     for link in evidence:
@@ -1543,6 +1557,12 @@ def _stored_claim_value(
             json.loads(row["attributes_json"]),
         )
     if value_kind == "milestone":
+        if "date_relation" in row.keys() and row["date_relation"] is not None:
+            return MilestoneUpperBoundValue(
+                row["milestone_type"], MilestoneStatus(row["status"]), row["date_low"],
+                row["date_base"], row["date_high"], row["date_precision"], row["date_literal"],
+                row["date_relation"],
+            )
         return MilestoneValue(
             row["milestone_type"],
             MilestoneStatus(row["status"]),
@@ -1599,6 +1619,14 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
     errors.extend(validate_quantities(connection))
     from .source_rates import validate_rates
     errors.extend(validate_rates(connection))
+    if "date_relation" in {row[1] for row in connection.execute("PRAGMA table_info(milestone_values)")}:
+        for row in connection.execute("""
+            SELECT v.id FROM claim_versions v JOIN milestone_values m ON m.claim_version_id=v.id
+            WHERE m.date_relation IS NOT NULL AND
+                (v.claim_kind != 'source_statement' OR v.valid_from IS NOT NULL
+                 OR v.valid_to IS NOT NULL OR v.confidence IS NOT NULL)
+        """):
+            errors.append(f"claim {row['id']} milestone upper bound requires source-only unknown effective dates and confidence")
     integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
     if integrity != "ok":
         errors.append(f"integrity_check: {integrity}")

@@ -335,7 +335,7 @@ class EvidenceChangesTests(unittest.TestCase):
         self.claim("source")
         old = self.feed()
         self.c.commit()
-        database.apply_migrations(self.c)
+        database.apply_migrations(self.c, target_version=10)
         current = self.feed()
         self.assertEqual(current["schema_version"], 10)
         self.assertEqual(old["events"], current["events"])

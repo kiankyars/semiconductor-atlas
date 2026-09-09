@@ -516,6 +516,14 @@ entities. Unknown physical dates keep these claims outside physical-current
 views. This advances manufacturing coverage, not original-project completion,
 numeric capacity, independent corroboration or calibrated forecasting.
 
+The [Bosch Roseville sample-production admission](bosch_sample_production.md)
+adds a distinct one-sided occurrence value: sample production had started on or
+before July 13, 2026, with no supported lower bound or exact date. Schema 11 and
+the evidence viewer retain that uncertainty. The original 200 mm first-chip
+target remains unresolved; no physical-current state, capacity or scored finite
+timing outcome is inferred. This closes a representation and source-coverage gap,
+not the forecast-calibration gate.
+
 The [exact-entity evidence dossier](evidence_dossier.md) now makes accepted source
 records inspectable through the installed CLI and a local Markdown viewer, with
 JSON available separately. Source reports, world-current claims, superseded

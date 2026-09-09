@@ -808,6 +808,33 @@ class MilestoneValue:
 
 
 @dataclass(frozen=True, slots=True)
+class MilestoneUpperBoundValue:
+    """A source-reported occurrence with an upper date bound, not an event date."""
+
+    milestone_type: str
+    status: MilestoneStatus
+    date_low: None
+    date_base: None
+    date_high: str
+    date_precision: str
+    date_literal: str
+    date_relation: str = "on_or_before"
+
+    @property
+    def kind(self) -> ValueKind:
+        return ValueKind.MILESTONE
+
+    def __post_init__(self) -> None:
+        _required(self.milestone_type, "milestone_type")
+        _required(self.date_literal, "date_literal")
+        _iso_date(self.date_high, "date_high")
+        if (self.status is not MilestoneStatus.COMPLETED or self.date_low is not None
+                or self.date_base is not None or self.date_precision != "day"
+                or self.date_relation != "on_or_before"):
+            raise ValueError("milestone upper bounds require completed status, on_or_before day bound, and unknown lower bound/midpoint")
+
+
+@dataclass(frozen=True, slots=True)
 class CapabilityValue:
     capability_type: str
     value: str | float
@@ -908,6 +935,7 @@ ClaimValue: TypeAlias = (
     | GeometryValue
     | RelationshipValue
     | MilestoneValue
+    | MilestoneUpperBoundValue
     | CapabilityValue
     | CapacityValue
     | ResourceValue

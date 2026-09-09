@@ -90,6 +90,17 @@ test('selection shows four semantic sections and visible compact values', async 
   assert.equal(descendants(env.get('list'), 'button')[0].attributes['aria-pressed'], 'true');
   assert.equal(env.get('dossier').focused, true);
 });
+
+test('one-sided occurrence is never shown as an exact date or null-to-date interval', async () => {
+  const bounded = claim({value_kind: 'milestone', value: {milestone_type: 'sample_production_start',
+    status: 'completed', date_relation: 'on_or_before', date_low: null, date_base: null,
+    date_high: '2026-07-13', date_precision: 'day', date_literal: 'Sample production has already commenced'}});
+  const env = await selected(dossier({source_statements: [bounded], recorded_history: [bounded]}));
+  const summaries = descendants(env.get('dossier'), 'summary').map(e => e.textContent).join('\n');
+  assert.match(summaries, /occurred on or before 2026-07-13/);
+  assert.match(summaries, /lower bound and exact date unknown/);
+  assert.doesNotMatch(summaries, /null to|precision day|midpoint/);
+});
 test('malicious names and evidence labels stay text, only safe source links are active', async () => {
   const env = await selected(dossier({entity: entity('city', '<script>alert(1)</script>'),
     source_statements: [claim({evidence: [
