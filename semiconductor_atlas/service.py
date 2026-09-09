@@ -8,7 +8,7 @@ from collections import Counter, defaultdict
 from datetime import UTC, date, datetime
 from typing import Any, Iterable, Mapping, Sequence
 
-from .database import knowledge_clock_sql, schema_version
+from .database import admission_clock_sql, knowledge_clock_sql, schema_version
 from .repository import current_claims, known_source_claims, validate_database
 
 
@@ -490,6 +490,7 @@ def _geojson_source_terms(
 ) -> tuple[list[str], list[str]]:
     """Collect source terms reachable from selected claims at the cutoff."""
 
+    clock = admission_clock_sql(connection)
     seeds = sorted(set(claim_ids))
     if not seeds:
         return [], []
@@ -522,7 +523,7 @@ def _geojson_source_terms(
           ON documents.id = evidence.source_document_id
         WHERE julianday(documents.retrieved_at) <= julianday(?)
         ORDER BY attribution, license
-        """,
+        """.replace("julianday(", f"{clock}("),
         (json.dumps(seeds), recorded_at, recorded_at),
     ).fetchall()
     attributions = sorted({row["attribution"] for row in rows if row["attribution"]})

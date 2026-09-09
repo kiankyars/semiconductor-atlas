@@ -8,6 +8,10 @@ Version 0.1 is a bounded, reproducible seed. It is **not** a global facility cen
 announced project is operating, a comparison with commercial databases, a calibrated forecast, or
 investment advice. Unknown values remain unknown.
 
+The [schema-10 clock contract](docs/exact_knowledge_clocks.md) uses exact UTC microseconds
+for new admissions, corrections and identity chronology. Older snapshots and producers remain
+frozen; migration rejects inconsistent history without rewriting it.
+
 ## Capacity contract
 
 Every capacity claim uses exactly one basis:

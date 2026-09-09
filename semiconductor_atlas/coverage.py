@@ -7,7 +7,7 @@ import sqlite3
 from collections import Counter
 from typing import Any, Sequence
 
-from .database import knowledge_clock_sql
+from .database import admission_clock_sql, knowledge_clock_sql
 from .models import CapacityBasis
 from .service import (
     _accepted_document_runs_sql,
@@ -116,6 +116,7 @@ def reviewed_relationship_claim_ids_if_visible(
 ) -> set[str] | None:
     """Validate review action lineage and return IDs once every effect is visible."""
 
+    clock = admission_clock_sql(connection)
     descriptor_ids: list[str] = []
     for field in ("created_claims", "reaffirmed_claims"):
         descriptors = parameters.get(field)
@@ -167,7 +168,7 @@ def reviewed_relationship_claim_ids_if_visible(
 
     for timestamp in timestamps:
         comparison = connection.execute(
-            "SELECT julianday(?) <= julianday(?)", (timestamp, recorded_at)
+            f"SELECT {clock}(?) <= {clock}(?)", (timestamp, recorded_at)
         ).fetchone()[0]
         if comparison is None:
             raise ValueError(f"{context} contains an invalid lineage timestamp")
@@ -182,6 +183,7 @@ def _taiwan_tax_relationship_review_scope(
     recorded_at: str,
     claims: Sequence[dict[str, Any]],
 ) -> dict[str, Any] | None:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT runs.id AS review_ingestion_run_id,
@@ -199,7 +201,7 @@ def _taiwan_tax_relationship_review_scope(
         ORDER BY julianday(runs.completed_at) DESC,
                  julianday(runs.started_at) DESC,
                  runs.id DESC
-        """,
+        """.replace("julianday(", f"{clock}("),
         (
             REVIEWED_RELATIONSHIP_FAMILY_KEY,
             recorded_at,
@@ -379,6 +381,7 @@ def coverage_report(
     ]
     document_runs_sql = _accepted_document_runs_sql(connection)
     clock = knowledge_clock_sql(connection)
+    scope_clock = admission_clock_sql(connection)
     source_rows = connection.execute(
         f"""
         WITH document_runs AS (
@@ -456,7 +459,7 @@ def coverage_report(
                  runs.started_at DESC, documents.retrieved_at DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (recorded_at, as_of),
     ).fetchone()
     frs_candidate_scope = None
@@ -572,7 +575,7 @@ def coverage_report(
                  runs.started_at DESC, documents.retrieved_at DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (TAIWAN_MOENV_FAMILY_KEY, recorded_at, as_of),
     ).fetchone()
     moenv_candidate_scope = None
@@ -786,7 +789,7 @@ def coverage_report(
                  runs.started_at DESC, documents.retrieved_at DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (TAIWAN_FACTORY_FAMILY_KEY, recorded_at, as_of),
     ).fetchone()
     factory_candidate_scope = None
@@ -921,7 +924,7 @@ def coverage_report(
                  runs.started_at DESC, documents.retrieved_at DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (TAIWAN_MOF_FAMILY_KEY, recorded_at, as_of),
     ).fetchone()
     mof_tax_registration_scope = None

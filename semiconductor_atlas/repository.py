@@ -11,7 +11,7 @@ from contextlib import contextmanager
 from datetime import UTC, datetime
 from typing import Any, Iterator, Mapping, Sequence
 
-from .database import knowledge_clock_sql
+from .database import admission_clock_sql, knowledge_clock_sql
 
 from .models import (
     CapabilityValue,
@@ -588,6 +588,7 @@ def _validate_candidate_target_evidence(
     candidate_entity_id: str,
     claim_ids: Sequence[str],
 ) -> None:
+    clock = admission_clock_sql(connection)
     resolution = connection.execute(
         "SELECT started_at FROM entity_resolution_runs WHERE id = ?",
         (resolution_run_id,),
@@ -625,12 +626,12 @@ def _validate_candidate_target_evidence(
             or row["completed_at"] is None
             or row["declared_input"] != 1
             or connection.execute(
-                "SELECT julianday(?) <= julianday(?)",
+                f"SELECT {clock}(?) <= {clock}(?)",
                 (row["recorded_at"], resolution["started_at"]),
             ).fetchone()[0]
             != 1
             or connection.execute(
-                "SELECT julianday(?) <= julianday(?)",
+                f"SELECT {clock}(?) <= {clock}(?)",
                 (row["completed_at"], resolution["started_at"]),
             ).fetchone()[0]
             != 1
@@ -798,6 +799,7 @@ def current_source_entity_assignments(
     source_record_id: str | None = None,
     observed_entity_id: str | None = None,
 ) -> list[sqlite3.Row]:
+    clock = admission_clock_sql(connection)
     try:
         parsed_as_of = datetime.fromisoformat(as_of)
     except ValueError as error:
@@ -808,8 +810,8 @@ def current_source_entity_assignments(
     filters = [
         "valid_from <= ?",
         "(valid_to IS NULL OR valid_to > ?)",
-        "julianday(recorded_at) <= julianday(?)",
-        "(superseded_at IS NULL OR julianday(superseded_at) > julianday(?))",
+        f"{clock}(recorded_at) <= {clock}(?)",
+        f"(superseded_at IS NULL OR {clock}(superseded_at) > {clock}(?))",
     ]
     params: list[object] = [as_of, as_of, cutoff, cutoff]
     if source_record_id is not None:
@@ -1129,15 +1131,16 @@ def insert_claim(
     evidence: Sequence[EvidenceLink] = (),
     dependencies: Sequence[DependencyLink] = (),
 ) -> bool:
+    clock = admission_clock_sql(connection)
     if not evidence and not dependencies:
         raise ValueError("a claim requires evidence or a dependency")
     if any(link.depends_on_claim_version_id == version.id for link in dependencies):
         raise ValueError("a claim cannot depend on itself")
     for link in evidence:
         document = connection.execute(
-            """
+            f"""
             SELECT retrieved_at,
-                   julianday(retrieved_at) <= julianday(?) AS available
+                   {clock}(retrieved_at) <= {clock}(?) AS available
             FROM source_documents
             WHERE id = ?
             """,
@@ -1152,10 +1155,10 @@ def insert_claim(
             )
         if link.source_record_id is not None:
             record = connection.execute(
-                """
+                f"""
                 SELECT records.observed_at, runs.started_at,
-                       julianday(records.observed_at) <= julianday(?) AS record_available,
-                       julianday(runs.started_at) <= julianday(?) AS run_available
+                       {clock}(records.observed_at) <= {clock}(?) AS record_available,
+                       {clock}(runs.started_at) <= {clock}(?) AS run_available
                 FROM source_records AS records
                 JOIN ingestion_runs AS runs ON runs.id = records.ingestion_run_id
                 WHERE records.id = ? AND records.source_document_id = ?
@@ -1183,9 +1186,9 @@ def insert_claim(
                 )
     for link in dependencies:
         parent = connection.execute(
-            """
+            f"""
             SELECT recorded_at,
-                   julianday(recorded_at) <= julianday(?) AS available
+                   {clock}(recorded_at) <= {clock}(?) AS available
             FROM claim_versions
             WHERE id = ?
             """,
@@ -1199,11 +1202,11 @@ def insert_claim(
                 f"claim {version.id}"
             )
     series = connection.execute(
-        """
+        f"""
         SELECT series.value_kind, series.created_at,
                entities.created_at AS entity_created_at,
-               julianday(series.created_at) <= julianday(?) AS series_available,
-               julianday(entities.created_at) <= julianday(?) AS entity_available
+               {clock}(series.created_at) <= {clock}(?) AS series_available,
+               {clock}(entities.created_at) <= {clock}(?) AS entity_available
         FROM claim_series AS series
         JOIN entities ON entities.id = series.subject_entity_id
         WHERE series.id = ?
@@ -1234,8 +1237,8 @@ def insert_claim(
         target_entity_id = value.constrained_entity_id
     if target_entity_id is not None:
         target = connection.execute(
-            """
-            SELECT julianday(created_at) <= julianday(?) AS available
+            f"""
+            SELECT {clock}(created_at) <= {clock}(?) AS available
             FROM entities
             WHERE id = ?
             """,
@@ -1319,12 +1322,12 @@ def insert_claim(
 
     with _atomic(connection):
         later = connection.execute(
-            """
+            f"""
             SELECT id FROM claim_versions
             WHERE series_id = ?
               AND valid_from IS ?
               AND superseded_at IS NULL
-              AND julianday(recorded_at) >= julianday(?)
+              AND {clock}(recorded_at) >= {clock}(?)
             LIMIT 1
             """,
             (version.series_id, version.valid_from, version.recorded_at),
@@ -1334,13 +1337,13 @@ def insert_claim(
                 "cannot insert an out-of-order correction behind an active transaction-time version"
             )
         connection.execute(
-            """
+            f"""
             UPDATE claim_versions
             SET superseded_at = ?
             WHERE series_id = ?
               AND valid_from IS ?
               AND superseded_at IS NULL
-              AND julianday(recorded_at) < julianday(?)
+              AND {clock}(recorded_at) < {clock}(?)
             """,
             (version.recorded_at, version.series_id, version.valid_from, version.recorded_at),
         )
@@ -1590,6 +1593,7 @@ def _stored_claim_value(
 
 
 def validate_database(connection: sqlite3.Connection) -> list[str]:
+    clock = admission_clock_sql(connection)
     errors: list[str] = []
     from .source_quantities import validate_quantities
     errors.extend(validate_quantities(connection))
@@ -1766,15 +1770,15 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
             errors.append(f"claim {row['id']} contains an invalid temporal value")
 
     for row in connection.execute(
-        """
+        f"""
         SELECT evidence.claim_version_id, evidence.source_document_id,
                documents.retrieved_at, versions.recorded_at
         FROM claim_evidence AS evidence
         JOIN claim_versions AS versions ON versions.id = evidence.claim_version_id
         JOIN source_documents AS documents ON documents.id = evidence.source_document_id
-        WHERE julianday(documents.retrieved_at) IS NULL
-           OR julianday(versions.recorded_at) IS NULL
-           OR julianday(documents.retrieved_at) > julianday(versions.recorded_at)
+        WHERE {clock}(documents.retrieved_at) IS NULL
+           OR {clock}(versions.recorded_at) IS NULL
+           OR {clock}(documents.retrieved_at) > {clock}(versions.recorded_at)
         ORDER BY evidence.claim_version_id, evidence.source_document_id
         """
     ):
@@ -1784,7 +1788,7 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT evidence.claim_version_id, evidence.source_record_id,
                records.observed_at, versions.recorded_at
         FROM claim_evidence AS evidence
@@ -1792,9 +1796,9 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         JOIN source_records AS records ON records.id = evidence.source_record_id
         WHERE evidence.source_record_id IS NOT NULL
           AND (
-                julianday(records.observed_at) IS NULL
-                OR julianday(versions.recorded_at) IS NULL
-                OR julianday(records.observed_at) > julianday(versions.recorded_at)
+                {clock}(records.observed_at) IS NULL
+                OR {clock}(versions.recorded_at) IS NULL
+                OR {clock}(records.observed_at) > {clock}(versions.recorded_at)
               )
         ORDER BY evidence.claim_version_id, evidence.source_record_id
         """
@@ -1805,7 +1809,7 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT evidence.claim_version_id, evidence.source_record_id,
                runs.id AS ingestion_run_id, runs.started_at, versions.recorded_at
         FROM claim_evidence AS evidence
@@ -1814,9 +1818,9 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         JOIN ingestion_runs AS runs ON runs.id = records.ingestion_run_id
         WHERE evidence.source_record_id IS NOT NULL
           AND (
-                julianday(runs.started_at) IS NULL
-                OR julianday(versions.recorded_at) IS NULL
-                OR julianday(runs.started_at) > julianday(versions.recorded_at)
+                {clock}(runs.started_at) IS NULL
+                OR {clock}(versions.recorded_at) IS NULL
+                OR {clock}(runs.started_at) > {clock}(versions.recorded_at)
               )
         ORDER BY evidence.claim_version_id, evidence.source_record_id
         """
@@ -1828,7 +1832,7 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT dependencies.claim_version_id,
                dependencies.depends_on_claim_version_id,
                children.recorded_at AS child_recorded_at,
@@ -1837,9 +1841,9 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         JOIN claim_versions AS children ON children.id = dependencies.claim_version_id
         JOIN claim_versions AS parents
           ON parents.id = dependencies.depends_on_claim_version_id
-        WHERE julianday(children.recorded_at) IS NULL
-           OR julianday(parents.recorded_at) IS NULL
-           OR julianday(parents.recorded_at) > julianday(children.recorded_at)
+        WHERE {clock}(children.recorded_at) IS NULL
+           OR {clock}(parents.recorded_at) IS NULL
+           OR {clock}(parents.recorded_at) > {clock}(children.recorded_at)
         ORDER BY dependencies.claim_version_id,
                  dependencies.depends_on_claim_version_id
         """
@@ -1850,13 +1854,13 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT versions.id, series.id AS series_id
         FROM claim_versions AS versions
         JOIN claim_series AS series ON series.id = versions.series_id
-        WHERE julianday(series.created_at) IS NULL
-           OR julianday(versions.recorded_at) IS NULL
-           OR julianday(series.created_at) > julianday(versions.recorded_at)
+        WHERE {clock}(series.created_at) IS NULL
+           OR {clock}(versions.recorded_at) IS NULL
+           OR {clock}(series.created_at) > {clock}(versions.recorded_at)
         ORDER BY versions.id
         """
     ):
@@ -1865,14 +1869,14 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT versions.id, entities.id AS entity_id
         FROM claim_versions AS versions
         JOIN claim_series AS series ON series.id = versions.series_id
         JOIN entities ON entities.id = series.subject_entity_id
-        WHERE julianday(entities.created_at) IS NULL
-           OR julianday(versions.recorded_at) IS NULL
-           OR julianday(entities.created_at) > julianday(versions.recorded_at)
+        WHERE {clock}(entities.created_at) IS NULL
+           OR {clock}(versions.recorded_at) IS NULL
+           OR {clock}(entities.created_at) > {clock}(versions.recorded_at)
         ORDER BY versions.id
         """
     ):
@@ -1893,9 +1897,9 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
             JOIN entities ON entities.id = values_.{entity_column}
             WHERE values_.{entity_column} IS NOT NULL
               AND (
-                    julianday(entities.created_at) IS NULL
-                    OR julianday(versions.recorded_at) IS NULL
-                    OR julianday(entities.created_at) > julianday(versions.recorded_at)
+                    {clock}(entities.created_at) IS NULL
+                    OR {clock}(versions.recorded_at) IS NULL
+                    OR {clock}(entities.created_at) > {clock}(versions.recorded_at)
                   )
             ORDER BY versions.id
             """
@@ -2102,10 +2106,10 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
             )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT id
         FROM entity_resolution_runs
-        WHERE julianday(started_at) IS NULL
+        WHERE {clock}(started_at) IS NULL
            OR (status = 'running' AND (completed_at IS NOT NULL OR error IS NOT NULL))
            OR (status = 'succeeded' AND (completed_at IS NULL OR error IS NOT NULL))
            OR (
@@ -2115,8 +2119,8 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
            OR (
                 completed_at IS NOT NULL
                 AND (
-                    julianday(completed_at) IS NULL
-                    OR julianday(completed_at) <= julianday(started_at)
+                    {clock}(completed_at) IS NULL
+                    OR {clock}(completed_at) <= {clock}(started_at)
                 )
            )
         ORDER BY id
@@ -2125,16 +2129,16 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         errors.append(f"entity resolution run {row['id']} has invalid timestamps")
 
     for row in connection.execute(
-        """
+        f"""
         SELECT inputs.resolution_run_id, inputs.ingestion_run_id
         FROM entity_resolution_run_inputs AS inputs
         JOIN ingestion_runs AS runs ON runs.id = inputs.ingestion_run_id
         JOIN entity_resolution_runs AS resolution_runs
           ON resolution_runs.id = inputs.resolution_run_id
         WHERE runs.status != 'succeeded'
-           OR julianday(resolution_runs.started_at) IS NULL
-           OR julianday(runs.completed_at) IS NULL
-           OR julianday(resolution_runs.started_at) < julianday(runs.completed_at)
+           OR {clock}(resolution_runs.started_at) IS NULL
+           OR {clock}(runs.completed_at) IS NULL
+           OR {clock}(resolution_runs.started_at) < {clock}(runs.completed_at)
         ORDER BY inputs.resolution_run_id, inputs.ingestion_run_id
         """
     ):
@@ -2144,7 +2148,7 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT candidates.id
         FROM entity_resolution_candidates AS candidates
         JOIN entity_resolution_runs AS resolution_runs
@@ -2157,20 +2161,20 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
            OR candidates.observed_entity_id = candidates.candidate_entity_id
            OR typeof(candidates.candidate_rank) != 'integer'
            OR candidates.candidate_rank < 1
-           OR julianday(candidates.created_at) IS NULL
-           OR julianday(candidates.created_at) < julianday(resolution_runs.started_at)
+           OR {clock}(candidates.created_at) IS NULL
+           OR {clock}(candidates.created_at) < {clock}(resolution_runs.started_at)
            OR (
                 resolution_runs.completed_at IS NOT NULL
-                AND julianday(candidates.created_at)
-                    > julianday(resolution_runs.completed_at)
+                AND {clock}(candidates.created_at)
+                    > {clock}(resolution_runs.completed_at)
            )
-           OR julianday(records.observed_at) IS NULL
-           OR julianday(candidates.created_at) < julianday(records.observed_at)
-           OR julianday(records.observed_at) > julianday(resolution_runs.started_at)
-           OR julianday(observed.created_at) IS NULL
-           OR julianday(observed.created_at) > julianday(resolution_runs.started_at)
-           OR julianday(proposed.created_at) IS NULL
-           OR julianday(proposed.created_at) > julianday(resolution_runs.started_at)
+           OR {clock}(records.observed_at) IS NULL
+           OR {clock}(candidates.created_at) < {clock}(records.observed_at)
+           OR {clock}(records.observed_at) > {clock}(resolution_runs.started_at)
+           OR {clock}(observed.created_at) IS NULL
+           OR {clock}(observed.created_at) > {clock}(resolution_runs.started_at)
+           OR {clock}(proposed.created_at) IS NULL
+           OR {clock}(proposed.created_at) > {clock}(resolution_runs.started_at)
            OR NOT EXISTS (
                 SELECT 1
                 FROM entity_resolution_run_inputs AS inputs
@@ -2185,8 +2189,8 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
                 JOIN claim_series AS series ON series.id = versions.series_id
                 WHERE evidence.source_record_id = candidates.source_record_id
                   AND series.subject_entity_id = candidates.observed_entity_id
-                  AND julianday(versions.recorded_at)
-                      <= julianday(resolution_runs.started_at)
+                  AND {clock}(versions.recorded_at)
+                      <= {clock}(resolution_runs.started_at)
            )
         ORDER BY candidates.id
         """
@@ -2217,24 +2221,24 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
             )
 
     for row in connection.execute(
-        """
+        f"""
         SELECT decisions.id
         FROM entity_resolution_decisions AS decisions
         JOIN entity_resolution_candidates AS candidates
           ON candidates.id = decisions.candidate_id
         JOIN entity_resolution_runs AS resolution_runs
           ON resolution_runs.id = candidates.resolution_run_id
-        WHERE julianday(decisions.decided_at) IS NULL
+        WHERE {clock}(decisions.decided_at) IS NULL
            OR resolution_runs.status != 'succeeded'
-           OR julianday(decisions.decided_at) < julianday(candidates.created_at)
-           OR julianday(decisions.decided_at) < julianday(resolution_runs.completed_at)
+           OR {clock}(decisions.decided_at) < {clock}(candidates.created_at)
+           OR {clock}(decisions.decided_at) < {clock}(resolution_runs.completed_at)
         ORDER BY decisions.id
         """
     ):
         errors.append(f"entity resolution decision {row['id']} predates its candidate")
 
     for row in connection.execute(
-        """
+        f"""
         SELECT assignments.id
         FROM source_entity_assignments AS assignments
         JOIN entity_resolution_decisions AS decisions
@@ -2262,17 +2266,17 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
                     OR assignments.valid_to <= assignments.valid_from
                 )
            )
-           OR julianday(assignments.recorded_at) IS NULL
-           OR julianday(assignments.recorded_at) < julianday(decisions.decided_at)
-           OR julianday(assignments.recorded_at) < julianday(records.observed_at)
-           OR julianday(assignments.recorded_at) < julianday(observed.created_at)
-           OR julianday(assignments.recorded_at) < julianday(canonical.created_at)
+           OR {clock}(assignments.recorded_at) IS NULL
+           OR {clock}(assignments.recorded_at) < {clock}(decisions.decided_at)
+           OR {clock}(assignments.recorded_at) < {clock}(records.observed_at)
+           OR {clock}(assignments.recorded_at) < {clock}(observed.created_at)
+           OR {clock}(assignments.recorded_at) < {clock}(canonical.created_at)
            OR (
                 assignments.superseded_at IS NOT NULL
                 AND (
-                    julianday(assignments.superseded_at) IS NULL
-                    OR julianday(assignments.superseded_at)
-                       <= julianday(assignments.recorded_at)
+                    {clock}(assignments.superseded_at) IS NULL
+                    OR {clock}(assignments.superseded_at)
+                       <= {clock}(assignments.recorded_at)
                 )
            )
         ORDER BY assignments.id
@@ -2281,7 +2285,7 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         errors.append(f"source entity assignment {row['id']} has invalid decision lineage")
 
     for row in connection.execute(
-        """
+        f"""
         SELECT left_.id AS left_id, right_.id AS right_id
         FROM source_entity_assignments AS left_
         JOIN source_entity_assignments AS right_
@@ -2289,10 +2293,10 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
          AND right_.id > left_.id
         WHERE left_.valid_from < COALESCE(right_.valid_to, '9999-12-31')
           AND right_.valid_from < COALESCE(left_.valid_to, '9999-12-31')
-          AND julianday(left_.recorded_at) < julianday(
+          AND {clock}(left_.recorded_at) < {clock}(
               COALESCE(right_.superseded_at, '9999-12-31T23:59:59Z')
           )
-          AND julianday(right_.recorded_at) < julianday(
+          AND {clock}(right_.recorded_at) < {clock}(
               COALESCE(left_.superseded_at, '9999-12-31T23:59:59Z')
           )
         ORDER BY left_.id, right_.id

@@ -381,6 +381,7 @@ def readonly_database(database_path: Path):
         raise ValueError("database must be an existing regular, non-symlink file")
     connection = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True)
     connection.row_factory = sqlite3.Row
+    database.register_clock_functions(connection)
     try:
         connection.execute("PRAGMA query_only=ON")
         yield connection

@@ -16,7 +16,7 @@ from typing import Any, Iterable, Mapping, Sequence
 from .adapters.moenv_ems import MOENV_ATTRIBUTION
 from .adapters.taiwan_factory_registry import TAIWAN_FACTORY_ATTRIBUTION
 from .adapters.taiwan_mof_tax_registry import TAIWAN_MOF_ATTRIBUTION
-from .database import knowledge_clock_sql, schema_version
+from .database import admission_clock_sql, knowledge_clock_sql, schema_version
 from .coverage import (
     REVIEWED_RELATIONSHIP_FAMILY_KEY,
     TAIWAN_FACTORY_FAMILY_KEY,
@@ -376,6 +376,7 @@ def _reviewed_relationship_runs(
     *,
     recorded_at: str,
 ) -> tuple[list[dict[str, Any]], set[str]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT runs.id AS review_ingestion_run_id,
@@ -391,7 +392,7 @@ def _reviewed_relationship_runs(
           AND runs.completed_at IS NOT NULL
           AND julianday(runs.completed_at) <= julianday(?)
         ORDER BY julianday(runs.completed_at), julianday(runs.started_at), runs.id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (REVIEWED_RELATIONSHIP_FAMILY_KEY, recorded_at),
     ).fetchall()
     result: list[dict[str, Any]] = []
@@ -513,6 +514,7 @@ def _entity_resolution_runs(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT id, started_at, completed_at, status, resolver_version,
@@ -521,7 +523,7 @@ def _entity_resolution_runs(
         WHERE status IN ('succeeded', 'failed')
           AND julianday(completed_at) <= julianday(?)
         ORDER BY started_at, id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     if not rows:
@@ -574,6 +576,7 @@ def _entity_resolution_candidates(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT candidates.id, candidates.resolution_run_id,
@@ -599,7 +602,7 @@ def _entity_resolution_candidates(
         ORDER BY runs.started_at, candidates.resolution_run_id,
                  candidates.source_record_id, candidates.observed_entity_id,
                  candidates.candidate_rank, candidates.id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, recorded_at),
     ).fetchall()
     result: list[dict[str, Any]] = []
@@ -615,6 +618,7 @@ def _entity_resolution_decisions(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT decisions.id, decisions.candidate_id,
@@ -635,7 +639,7 @@ def _entity_resolution_decisions(
           AND julianday(runs.completed_at) <= julianday(?)
           AND julianday(decisions.decided_at) <= julianday(?)
         ORDER BY decisions.decided_at, decisions.id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, recorded_at),
     ).fetchall()
     result: list[dict[str, Any]] = []
@@ -652,6 +656,7 @@ def _source_entity_assignments(
     as_of: str,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT assignments.id, assignments.source_record_id,
@@ -681,7 +686,7 @@ def _source_entity_assignments(
           AND julianday(decisions.decided_at) <= julianday(?)
         ORDER BY assignments.source_record_id, assignments.observed_entity_id,
                  assignments.valid_from, assignments.recorded_at, assignments.id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, as_of, recorded_at, recorded_at),
     ).fetchall()
     return [dict(row) for row in rows]

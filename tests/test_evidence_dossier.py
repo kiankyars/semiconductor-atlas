@@ -44,7 +44,9 @@ class EvidenceDossierTests(unittest.TestCase):
         # Resolve macOS /var before testing explicit non-symlink output parents.
         self.root = Path(self.temporary.name).resolve()
         self.path = self.root / "atlas.sqlite"
-        self.c, _ = database.initialize(self.path)
+        # These retained-schema reader tests include impossible legacy lineage.
+        # Schema-10 admission rejection is covered separately in exact-clock tests.
+        self.c, _ = database.initialize(self.path, target_version=9)
         self.addCleanup(self.c.close)
         r.add_source_family(self.c, m.SourceFamily("family", "fixture-family", "Fixture", CREATED))
         r.add_source(self.c, m.Source("source", "family", "fixture-source", "Fixture", "Synthetic publisher",

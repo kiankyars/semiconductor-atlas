@@ -18,6 +18,11 @@ Deliver:
 Exit gate: the fixture can reproduce what the database believed before and after a correction,
 without deleting either state.
 
+The [schema-10 exact-clock upgrade](exact_knowledge_clocks.md) closes a sub-millisecond
+admission and correction defect while preserving older schemas and payloads. It also rejects
+invalid retained identity chronology before a migration can commit. This strengthens replay
+integrity; it does not establish the monitoring, alert-evaluation or forecasting exit gates.
+
 ## Phase 1: honest v0.1 registry
 
 Deliver:

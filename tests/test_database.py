@@ -188,8 +188,8 @@ class DatabaseTests(unittest.TestCase):
         ]
 
     def test_migration_is_versioned_checksummed_and_idempotent(self) -> None:
-        self.assertEqual(self.installed, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-        self.assertEqual(schema_version(self.connection), 9)
+        self.assertEqual(self.installed, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        self.assertEqual(schema_version(self.connection), 10)
         self.assertEqual(apply_migrations(self.connection), [])
         rows = self.connection.execute(
             "SELECT version, name, length(sha256) FROM schema_migrations ORDER BY version"
@@ -206,6 +206,7 @@ class DatabaseTests(unittest.TestCase):
                 (7, "source_quantities", 64),
                 (8, "source_quantity_area_fiscal_year", 64),
                 (9, "source_rates", 64),
+                (10, "exact_knowledge_clocks", 64),
             ],
         )
         indexes = {
@@ -795,7 +796,7 @@ class DatabaseTests(unittest.TestCase):
             dependencies=[DependencyLink(source_version.id)],
         )
         self.assertEqual(validate_database(self.connection), [])
-        with self.assertRaisesRegex(sqlite3.IntegrityError, "cycle"):
+        with self.assertRaisesRegex(sqlite3.IntegrityError, "cycle|dependency is unavailable"):
             self.connection.execute(
                 """
                 INSERT INTO claim_dependencies(
@@ -806,6 +807,9 @@ class DatabaseTests(unittest.TestCase):
             )
 
     def test_temporal_lineage_is_enforced_on_insert_and_audited(self) -> None:
+        # Deliberately corrupt lineage after separately testing admission rejection.
+        self.connection.execute("DROP TRIGGER claim_evidence_knowledge_guard")
+        self.connection.execute("DROP TRIGGER claim_dependencies_knowledge_guard")
         future_document_id = stable_id("document", "future-evidence")
         add_source_document(
             self.connection,
@@ -901,6 +905,8 @@ class DatabaseTests(unittest.TestCase):
         self.assertTrue(any("later-recorded claim" in error for error in errors))
 
     def test_source_record_and_ingestion_run_must_precede_claim_knowledge_time(self) -> None:
+        # The audit still diagnoses malformed stores even if SQL guards were removed.
+        self.connection.execute("DROP TRIGGER claim_evidence_knowledge_guard")
         future_run_id = stable_id("run", "future-evidence-run")
         add_ingestion_run(
             self.connection,
@@ -1011,6 +1017,7 @@ class DatabaseTests(unittest.TestCase):
         self.assertTrue(any("observed after" in error for error in errors))
 
     def test_claim_entities_and_series_must_exist_by_recorded_time(self) -> None:
+        self.connection.execute("DROP TRIGGER relationship_values_knowledge_guard")
         future_time = "2026-07-17T13:00:00Z"
         future_entity_id = stable_id("entity", "future-target")
         add_entity(

@@ -23,7 +23,7 @@ from .analytics import (
     forecast_jsonl,
     forecast_summary,
 )
-from .database import connect, initialize, schema_version
+from .database import connect, initialize, register_clock_functions, schema_version
 from .eea_industrial_review import (
     read_eea_industrial_review_file,
     read_eea_industrial_review_queue_file,
@@ -675,6 +675,7 @@ def _eea_scope_connection(path: Path, *, write: bool = False):
         raise ValueError("EEA scope requires an existing regular working database")
     connection = sqlite3.connect(path.absolute().as_uri() + ("?mode=rw" if write else "?mode=ro"), uri=True)
     connection.row_factory = sqlite3.Row
+    register_clock_functions(connection)
     connection.execute("PRAGMA foreign_keys = ON")
     connection.execute("PRAGMA busy_timeout = 5000")
     return connection
