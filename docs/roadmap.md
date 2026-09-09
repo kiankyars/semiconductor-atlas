@@ -462,9 +462,13 @@ population or the Phase 4 exit gate. Existing prospective vintages remain unchan
 The [NIST 2024 announcement-population evidence](nist_2024_announcement_population.md)
 now retains the complete current filtered index and all 65 dated-2024 article bodies,
 not just the 25 preliminary-terms title candidates or today's award recipients.
-Project/event/condition adjudication and later outcome pairing remain open. The
-selection is outcome-exposed, US-focused and not a historically complete census;
-no new forecast score or physical-capacity claim follows.
+The [complete full-body review](nist_2024_pmt_body_review.md) now retains all 65
+article decisions, 45 source-native manufacturing groups and three excluded
+research scopes. Only three manufacturing groups have calendar-normalizable
+targets in the original PMT articles; undated and ambiguously timed groups remain
+in the population. Later outcome pairing remains open. The selection is
+outcome-exposed, US-focused and not a historically complete census; no new
+forecast score or physical-capacity claim follows.
 
 ## Phase 5: supply-demand scenarios and investable signals
 

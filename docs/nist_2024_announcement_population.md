@@ -92,11 +92,11 @@ Exact source bodies remain outside Git and public releases.
 
 ## Next evidence gate
 
-Review every 2024 article's full body. Record all PMT-bearing documents, non-PMT
-exclusions, manufacturing projects/phases, literal events and conditions,
-unresolved dates and identity boundaries. Equipment, materials, fabrication,
-packaging and R&D are distinct scopes. Then review later outcomes against that
-complete roster, preserving cancellations, unknowns and unsuccessful projects.
+The subsequent [full-body review](nist_2024_pmt_body_review.md) now records every
+article decision and all identified source-native manufacturing project groups,
+including undated groups and separately excluded research scopes. Later outcome
+review remains open; it must preserve cancellations, unknowns and unsuccessful
+projects rather than selecting only examples with clear dates or final awards.
 
 The generic diagnostic now requires primary evidence for every substantive
 outcome, even on unresolved or excluded cases. Its original three-project report

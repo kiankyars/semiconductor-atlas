@@ -1,0 +1,53 @@
+{
+  "format": "semiconductor-atlas-nist-pmt-population-review-v1",
+  "reviewed_at": "2026-09-09T03:39:40Z",
+  "reviewed_by": "Codex primary agent with full-body reviews by government_output_evidence (positions 12-33), villach_quantity_schema (34-55), and north_star_explanation_review (56-76). Collaborative, outcome-exposed review; not independent or blind adjudication.",
+  "selection": "Review all 65 complete retained calendar-2024 articles from the frozen current NIST CHIPS-filtered archive, including all 40 outside the preliminary-terms title flag. Include newly announced signed nonbinding manufacturing-incentive PMTs covering commercial semiconductor fabrication, packaging, materials and equipment. Retain source-native project, location and explicitly differentiated phase groups; do not invent individual identities for unnamed multi-fab groups or sum component counts into facilities. Keep separately identified research scopes excluded but visible. Final awards, research-only opportunities, workforce and governance articles are retained as article decisions rather than promoted to new PMT projects. Shared evidence and timing across related projects are not independent observations.",
+  "prior_exposure": "Known outcomes and later guidance were already exposed before source selection and body review. The reviewers read all 65 current retained bodies, including final-award articles, while determining the PMT population. No new later-outcome acquisition or outcome adjudication was performed for this frozen project review. Publication metadata is context, not an Atlas issue time or proof of identical 2024 availability; all 65 pages carry 2025 modification metadata and were retained in September 2026. This current filtered archive can omit removed or differently tagged articles and is US-focused, not a global census. Later guidance is not backfilled into original PMT articles.",
+  "rights": "Local review of exact NIST article bytes acquired under the separately retained archive and 65-article source reviews, with robots and copyrights/disclaimers policy checks. NIST's public-information notice retains marked-copyright and product-specific exceptions. Keep attribution and exact provenance; no raw redistribution, model training, issuer-site acquisition or scheduled-runtime transition is authorized by this review. Source semantics and date normalization are manual decisions, not independently established physical facts.",
+  "boundaries": {
+    "historical_availability_verified": false,
+    "global_census": false,
+    "independent_or_blind_evaluation": false,
+    "canonical_facility_identity": false,
+    "physical_capacity_claims": false,
+    "outcomes_adjudicated": false,
+    "forecast_scoring": false,
+    "model_training": false,
+    "database_modified": false,
+    "scheduled_runtime_modified": false,
+    "raw_redistribution": false
+  },
+  "index_roster": {
+    "path": "review_plans/2026-09-09-nist-archive-index-roster-v1.json",
+    "sha256": "01e78176d40796dfc4e652f7e554fd115198be5d32cee74eb8d57d5fe6a51bd6",
+    "bytes": 125702
+  },
+  "retention_roster": {
+    "path": "review_plans/2026-09-09-nist-2024-article-retention-roster-v1.json",
+    "sha256": "93f4687efb0c627f75a65e157cf012bb23f27bd01bd118bc995e2ab4f2f3e921",
+    "bytes": 66966
+  },
+  "narratives": {
+    "path": "artifacts/2026-09-09-nist-article-text-v1/narratives.json",
+    "sha256": "9a782f90bf3a242fa3b8bf3abd5ae32ad80e27acf6f397382e33aa5c81a555ac",
+    "bytes": 1187359
+  },
+  "fragments": [
+    {
+      "path": "review_plans/2026-09-09-nist-pmt-body-review-12-33-v1.json",
+      "sha256": "c5738bc54f1cb853f4bbeed3e6cf6aff150bdd337b50e3092956a52d4d306216",
+      "bytes": 33639
+    },
+    {
+      "path": "review_plans/2026-09-09-nist-pmt-body-review-34-55-v1.json",
+      "sha256": "ca178e02c21bd1afe5482db6002abf8abb97d86b9f47946141103b96f7a1bf2d",
+      "bytes": 34113
+    },
+    {
+      "path": "review_plans/2026-09-09-nist-pmt-body-review-56-76-v1.json",
+      "sha256": "01b79f0dcd9f0c7efbed3f94a2bdf51cc6f84f32919d8c6ba71d50fd3f705f46",
+      "bytes": 54191
+    }
+  ]
+}

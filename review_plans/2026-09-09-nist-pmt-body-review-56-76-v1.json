@@ -1,0 +1,1276 @@
+{
+  "articles": [
+    {
+      "position": 56,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The July 1, 2024 article newly announces a signed non-binding RVM PMT for Palm Bay MEMS foundry construction, not a final award or a repeated PMT mention.",
+      "evidence": [
+        "d56-b001",
+        "d56-b006",
+        "d56-b009"
+      ],
+      "non_target_dates": [
+        "July 1, 2024 is the article announcement date, not a factory event date.",
+        "End-of-decade national investment and leading-edge share projections, and national growth from 2022 to 2032, are not Palm Bay milestones."
+      ]
+    },
+    {
+      "position": 57,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The June 26, 2024 article newly announces a non-binding Entegris PMT for supply-chain manufacturing. It distinguishes two Colorado Springs manufacturing phases and a separate unspecified U.S. R&D commitment.",
+      "evidence": [
+        "d57-b001",
+        "d57-b006",
+        "d57-b009"
+      ],
+      "non_target_dates": [
+        "June 26, 2024 is the article announcement date.",
+        "Several years and by 2030 describe manufacturing/construction jobs, not production startup.",
+        "By the end of the decade describes geographically unspecified R&D expansion, not either manufacturing phase.",
+        "2030 emissions goals relative to a 2020 baseline and national 2032 growth projections are not facility production dates."
+      ]
+    },
+    {
+      "position": 58,
+      "classification": "other",
+      "reason": "The June 18, 2024 announcement concerns voluntary Women in Construction Framework commitments by GlobalFoundries and Polar. It expressly refers to companies that already signed PMTs; it announces no new PMT.",
+      "evidence": [
+        "d58-b001",
+        "d58-b013",
+        "d58-b014"
+      ],
+      "non_target_dates": [
+        "June 18, 2024 is the framework-commitment announcement date.",
+        "The next decade, next 10 years, and months following adoption concern workforce objectives and implementation, not new manufacturing targets."
+      ]
+    },
+    {
+      "position": 59,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The June 11, 2024 article newly announces a signed Rocket Lab/SolAero non-binding PMT for compound-semiconductor production modernization and expansion.",
+      "evidence": [
+        "d59-b001",
+        "d59-b003",
+        "d59-b009"
+      ],
+      "non_target_dates": [
+        "June 11, 2024 is the article announcement date; the production-growth wording remains a relative duration.",
+        "A separate next-three-years commitment concerns SolAero community-program contributions, not the manufacturing project schedule."
+      ]
+    },
+    {
+      "position": 60,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The May 23, 2024 article newly announces a signed Absolics PMT for a commercial Covington glass-substrate manufacturing facility. Accompanying technology development does not make this an R&D-only award.",
+      "evidence": [
+        "d60-b001",
+        "d60-b005",
+        "d60-b009"
+      ],
+      "non_target_dates": [
+        "May 23, 2024 is the article announcement date. No dated manufacturing startup or completion target is stated.",
+        "References to Administration legislation and further PMT announcements throughout 2024 are not project timing."
+      ]
+    },
+    {
+      "position": 61,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The May 13, 2024 article newly announces a non-binding Polar PMT for Bloomington fab expansion and modernization, alongside a proposed ownership/foundry-model transformation.",
+      "evidence": [
+        "d61-b001",
+        "d61-b011"
+      ],
+      "non_target_dates": [
+        "May 13, 2024 is the article announcement date; within two years remains a relative proposed capacity-growth target.",
+        "August 2022 refers to CHIPS Act enactment, not the facility project."
+      ]
+    },
+    {
+      "position": 62,
+      "classification": "research_only",
+      "reason": "The May 6, 2024 article announces a funding opportunity for a digital-twin Manufacturing USA institute, including research, demonstrations, shared facilities and training. No manufacturing-project PMT recipient is announced.",
+      "evidence": [
+        "d62-b002",
+        "d62-b006",
+        "d62-b008"
+      ],
+      "non_target_dates": [
+        "May 6, 2024 is the funding-opportunity announcement date.",
+        "May 8 and May 16, 2024 are applicant briefing/meeting dates, not factory milestones."
+      ]
+    },
+    {
+      "position": 63,
+      "classification": "other",
+      "reason": "The May 2, 2024 article launches a workforce framework and Intel/Micron voluntary commitments. Eligibility refers to companies that have already signed PMTs; there is no new PMT in this article.",
+      "evidence": [
+        "d63-b001",
+        "d63-b010",
+        "d63-b015"
+      ],
+      "non_target_dates": [
+        "May 2, 2024 is the framework announcement date.",
+        "The next decade and coming months describe workforce objectives and framework implementation, not new manufacturing targets."
+      ]
+    },
+    {
+      "position": 64,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The April 25, 2024 article newly announces a Micron PMT supporting the first two Clay DRAM fabs and a Boise HVM fab. The broader four-fab New York vision is not four PMT-supported fabs in this announcement.",
+      "evidence": [
+        "d64-b003",
+        "d64-b010",
+        "d64-b011",
+        "d64-b018"
+      ],
+      "non_target_dates": [
+        "April 25, 2024 is the PMT announcement date.",
+        "Next six years describes capex for the first three fabs, not a production-start date.",
+        "Two decades and next 20 years describe investment, employment and company production-share visions, not individual fab timing.",
+        "September 2024 is a Boise childcare-center opening.",
+        "Net-zero by 2050 and next-10-years community investments are not fab milestones."
+      ]
+    },
+    {
+      "position": 65,
+      "classification": "research_only",
+      "reason": "The April 16, 2024 article announces an SBIR metrology research funding opportunity, including feasibility, instruments and R&D testbeds. It is not a manufacturing PMT announcement.",
+      "evidence": [
+        "d65-b001",
+        "d65-b002",
+        "d65-b009"
+      ],
+      "non_target_dates": [
+        "April 16, 2024 is the funding-opportunity announcement date; April 18, 2024 is a webinar date.",
+        "August 9, 2022 is CHIPS Act enactment and September 2022 is a metrology-report publication date."
+      ]
+    },
+    {
+      "position": 66,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The April 15, 2024 article newly announces a signed Samsung PMT with Taylor logic, packaging and R&D branches plus Austin expansion. It is not a final award; the explicitly dedicated R&D fab is screened separately.",
+      "evidence": [
+        "d66-b001",
+        "d66-b002",
+        "d66-b009",
+        "d66-b010",
+        "d66-b014"
+      ],
+      "non_target_dates": [
+        "April 15, 2024 is the PMT announcement date.",
+        "Within the next five years describes job creation, not facility startup.",
+        "Since 1996 and nearly 30 years describe existing U.S./Austin presence.",
+        "The U.S. leading-edge share projection for 2030 is not a Samsung facility target."
+      ]
+    },
+    {
+      "position": 67,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The April 8, 2024 article newly announces a signed TSMC Arizona PMT for three Phoenix fabs, including a newly committed third fab. Unnamed supplier and packaging-partner plans are supporting ecosystem context, not separately identified PMT recipients.",
+      "evidence": [
+        "d67-b002",
+        "d67-b003",
+        "d67-b009",
+        "d67-b010",
+        "d67-b011",
+        "d67-b015"
+      ],
+      "non_target_dates": [
+        "April 8, 2024 is the article announcement date, not an Atlas forecast issue date.",
+        "In this decade describes aggregate employment; the national leading-edge share projection by 2030 is not an individual fab target.",
+        "No second-fab production-start date appears in this article; no later or detail-page target is imported."
+      ]
+    },
+    {
+      "position": 68,
+      "classification": "research_only",
+      "reason": "The April 5, 2024 article announces an NSTC R&D update webinar and anticipated research competitions, not a manufacturing PMT.",
+      "evidence": [
+        "d68-b001",
+        "d68-b002",
+        "d68-b003",
+        "d68-b004"
+      ],
+      "non_target_dates": [
+        "April 5, 2024 is the article date; April 9, 2024 is the webinar.",
+        "Summer 2024 concerns research competitions, not factory production."
+      ]
+    },
+    {
+      "position": 69,
+      "classification": "other",
+      "reason": "The March 29, 2024 article reports a small-supply-chain application pipeline and future application invitations. Its Intel PMT mention explicitly concerns an earlier announcement; no new PMT is announced.",
+      "evidence": [
+        "d69-b001",
+        "d69-b002",
+        "d69-b004",
+        "d69-b006"
+      ],
+      "non_target_dates": [
+        "March 29, 2024 is the pipeline announcement date.",
+        "September 2023 and December 2023 concern the funding opportunity and concept-plan application phase.",
+        "Later this Spring is a full-application invitation target; earlier this month refers to the prior Intel PMT, not a new project date."
+      ]
+    },
+    {
+      "position": 70,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The March 20, 2024 article newly announces an Intel PMT with Chandler, Rio Rancho, New Albany and Hillsboro branches. Chandler new-fab construction and existing-fab modernization are separate intervention groups; the explicit Hillsboro technology-development branch is screened as research.",
+      "evidence": [
+        "d70-b001",
+        "d70-b008",
+        "d70-b009",
+        "d70-b010",
+        "d70-b011",
+        "d70-b014"
+      ],
+      "non_target_dates": [
+        "March 20, 2024 is the PMT announcement date.",
+        "Next five years describes aggregate investment; past five years describes workforce spending, not fab startup.",
+        "2022 references describe a technician program and Oregon supplier spending, not new manufacturing milestones.",
+        "The article does not date Clearwater Forest production or allocate it to a particular Arizona fab."
+      ]
+    },
+    {
+      "position": 71,
+      "classification": "research_only",
+      "reason": "The February 28, 2024 article announces a packaging-substrate R&D funding opportunity. Pilot substrate and demonstration-device production are research activities, not named commercial manufacturing PMTs.",
+      "evidence": [
+        "d71-b001",
+        "d71-b007"
+      ],
+      "non_target_dates": [
+        "February 28, 2024 is the funding-opportunity announcement date.",
+        "March 1 and March 12, 2024 are applicant events.",
+        "Within a decade describes a national packaging-program vision, not a named facility milestone.",
+        "August 9, 2022 refers to CHIPS Act enactment."
+      ]
+    },
+    {
+      "position": 72,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The February 19, 2024 article newly announces a signed GlobalFoundries PMT expressly split across three manufacturing projects: new Malta fab, existing Malta expansion and Burlington revitalization.",
+      "evidence": [
+        "d72-b002",
+        "d72-b010",
+        "d72-b011",
+        "d72-b012",
+        "d72-b013",
+        "d72-b016"
+      ],
+      "non_target_dates": [
+        "February 19, 2024 is the PMT announcement date.",
+        "Over the next 10 years describes jobs across projects, not a dated production-start commitment.",
+        "2022 describes apprenticeship graduates; last year describes the earlier General Motors agreement.",
+        "Malta next-10-plus-years growth is a combined relative target retained on both related project rows, not two independent deadlines."
+      ]
+    },
+    {
+      "position": 73,
+      "classification": "research_only",
+      "reason": "The February 9, 2024 article launches the NSTC consortium and expected CHIPS R&D investments. Manufacturing incentives are background; it announces no new manufacturing PMT.",
+      "evidence": [
+        "d73-b001",
+        "d73-b002",
+        "d73-b006"
+      ],
+      "non_target_dates": [
+        "February 9, 2024 is the R&D-program announcement date.",
+        "March 2024 concerns an early NSTC update, not a manufacturing event."
+      ]
+    },
+    {
+      "position": 74,
+      "classification": "other",
+      "reason": "The January 16, 2024 article and reproduced Natcast release announce a CEO appointment and organizational startup, not a manufacturing-project PMT.",
+      "evidence": [
+        "d74-b001",
+        "d74-b010",
+        "d74-b016"
+      ],
+      "non_target_dates": [
+        "January 16, 2024 is the appointment announcement date.",
+        "February 1, 2024 is the CEO's official start; operations in 2024 concerns Natcast, not a fab.",
+        "August 2022 refers to CHIPS Act enactment."
+      ]
+    },
+    {
+      "position": 75,
+      "classification": "other",
+      "reason": "The January 12, 2024 article announces Industrial Advisory Committee appointments. It contains no new PMT or manufacturing project.",
+      "evidence": [
+        "d75-b001",
+        "d75-b002",
+        "d75-b011"
+      ],
+      "non_target_dates": [
+        "January 12, 2024 is the article date, while the new committee members' terms began December 20, 2023.",
+        "September 2022 appointments, October 2023 term endings and one-/two-/three-year terms concern committee governance."
+      ]
+    },
+    {
+      "position": 76,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The January 4, 2024 article newly announces a non-binding Microchip PMT explicitly split between Colorado Springs modernization/expansion and Gresham expansion.",
+      "evidence": [
+        "d76-b001",
+        "d76-b002",
+        "d76-b007"
+      ],
+      "non_target_dates": [
+        "January 4, 2024 is the PMT announcement date; no dated construction or production-start target is stated.",
+        "August 2022 is CHIPS Act enactment and further announcements throughout 2024 is program context."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "nist2024-d56-rvm-palm-bay",
+      "position": 56,
+      "organization": "Rogue Valley Microdevices",
+      "location": "Palm Bay, Florida",
+      "scope": "Construction of a new pure-play MEMS and sensor foundry, including cleanroom renovation and equipment installation. Existing Oregon foundry is context, not a separately supported project. Source-native scope; no installed capacity or canonical facility identity inferred.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Newly announced PMT supports semiconductor/MEMS fabrication; keep vague first-shipment, service-capability and completion targets distinct.",
+      "components": [
+        {
+          "description": "New MEMS and sensor foundry, including its cleanroom and equipment work",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d56-b001",
+        "d56-b005",
+        "d56-b006"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d56-b009"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "300mm_mems_foundry_service_capability",
+          "literal": "soon",
+          "classification": "vague",
+          "target": null,
+          "reason": "The CEO's qualitative expectation for offering 300mm pure-play MEMS capability supplies no calendar bounds and is not a shipment or completion date.",
+          "evidence": [
+            "d56-b005"
+          ]
+        },
+        {
+          "event": "first_wafer_shipment",
+          "literal": "early 2025",
+          "classification": "vague",
+          "target": null,
+          "reason": "The article dates expected first wafer shipments, not production start; early does not establish a specific month or quarter.",
+          "evidence": [
+            "d56-b006"
+          ]
+        },
+        {
+          "event": "facility_final_completion",
+          "literal": "by mid 2025",
+          "classification": "vague",
+          "target": null,
+          "reason": "Preserve the completion deadline wording without equating mid-year to a specified calendar endpoint.",
+          "evidence": [
+            "d56-b006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d57-entegris-colorado-springs-phase-1",
+      "position": 57,
+      "organization": "Entegris",
+      "location": "Colorado Springs",
+      "scope": "First phase of the same new manufacturing center: FOUP wafer-handling containers and liquid-filter membranes. This is semiconductor supply-chain materials/process-equipment manufacturing, not wafer fabrication.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The manufacturing center has an explicitly distinguished first phase; jobs and R&D dates are not phase production targets.",
+      "components": [
+        {
+          "description": "Phase 1 manufacturing-center phase for FOUPs and liquid-filter membranes",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d57-b001",
+        "d57-b004",
+        "d57-b006"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d57-b009"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d57-entegris-colorado-springs-phase-2",
+      "position": 57,
+      "organization": "Entegris",
+      "location": "Colorado Springs",
+      "scope": "Second phase of the same manufacturing center: advanced liquid filters and purifiers plus fluid-handling solutions. No separate building count, manufacturing-start date or phase-specific quantity is stated.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Explicit second manufacturing phase belongs in the supply-chain cohort even without a dated start.",
+      "components": [
+        {
+          "description": "Phase 2 manufacturing-center phase for filters, purifiers and fluid-handling solutions",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d57-b001",
+        "d57-b006"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d57-b009"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d57-entegris-us-rd-program",
+      "position": 57,
+      "organization": "Entegris",
+      "location": "United States",
+      "scope": "Geographically unspecified commitment to further expand U.S. R&D capabilities by the end of the decade. This is a program commitment, not an identified additional factory.",
+      "selection": "excluded_research",
+      "selection_reason": "Preserve the explicit research branch without inventing facility locations or counting it as commercial manufacturing.",
+      "components": [
+        {
+          "description": "Unspecified U.S. R&D expansion program; facility count not stated",
+          "count": null
+        }
+      ],
+      "evidence": [
+        "d57-b006"
+      ],
+      "conditions": [],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d59-rocket-lab-new-mexico",
+      "position": 59,
+      "organization": "Rocket Lab / SolAero Technologies Corp.",
+      "location": "New Mexico; headquartered in Albuquerque",
+      "scope": "Modernization and expansion of compound-semiconductor production for space-grade solar cells. The article identifies Albuquerque headquarters but does not enumerate project-facility addresses or phases. Community co-innovation programs in Albuquerque, Navajo Nation and rural southern New Mexico are not additional production sites.",
+      "selection": "included_manufacturing",
+      "selection_reason": "New PMT supports semiconductor manufacturing; retain project geography at the precision actually supplied.",
+      "components": [
+        {
+          "description": "Compound-semiconductor production modernization and expansion; individual facility count not enumerated",
+          "count": null
+        }
+      ],
+      "evidence": [
+        "d59-b001",
+        "d59-b003",
+        "d59-b006",
+        "d59-b007"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d59-b009"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "compound_semiconductor_production_growth",
+          "literal": "within the next three years",
+          "classification": "relative",
+          "target": null,
+          "reason": "The proposed 50-percent production increase has a relative horizon, not an exact commissioning date or known installed-capacity denominator. Do not turn the article date into an Atlas issue time.",
+          "evidence": [
+            "d59-b001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d60-absolics-covington",
+      "position": 60,
+      "organization": "Absolics",
+      "location": "Covington, Georgia",
+      "scope": "Construction of a commercial glass-substrate facility for semiconductor advanced packaging and commercialization of the associated technology. Georgia Tech research, SHIP collaboration and training partners are supporting programs, not additional identified PMT factories.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Commercial advanced-packaging materials manufacturing is in scope despite accompanying technology development.",
+      "components": [
+        {
+          "description": "Commercial glass-substrate manufacturing facility",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d60-b001",
+        "d60-b005",
+        "d60-b006",
+        "d60-b008"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d60-b009"
+          ]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The CEO links full commercialization of the glass-substrate technology to support from the proposed CHIPS funding; no unconditional commercialization date is supplied.",
+          "evidence": [
+            "d60-b008"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d61-polar-bloomington",
+      "position": 61,
+      "organization": "Polar Semiconductor",
+      "location": "Bloomington, Minnesota",
+      "scope": "Expansion and modernization of the existing sensor- and power-chip manufacturing facility, with new technology capabilities. Proposed ownership and commercial-foundry-model transformation is not another fab or a dated production event.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Retain the existing-fab manufacturing project and its relative capacity-growth statement.",
+      "components": [
+        {
+          "description": "Existing manufacturing facility expansion and modernization",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d61-b001",
+        "d61-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d61-b011"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "production_capacity_doubling",
+          "literal": "within two years",
+          "classification": "relative",
+          "target": null,
+          "reason": "Relative proposed doubling of U.S. sensor/power-chip production capacity; not a dated facility startup or a measurement of installed capacity.",
+          "evidence": [
+            "d61-b001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d64-micron-clay-first-two-fabs",
+      "position": 64,
+      "organization": "Micron Technology",
+      "location": "Clay, New York",
+      "scope": "Construction of the first two leading-edge DRAM fabs within a planned four-fab megafab. The additional two fabs remain wider long-term vision context, not two additional PMT-supported fabs in this article. No individual names, production schedules or capacities are allocated.",
+      "selection": "included_manufacturing",
+      "selection_reason": "One source-native project group retains both explicitly supported fab units without importing schedules from later sources.",
+      "components": [
+        {
+          "description": "First two DRAM fabs supported within the planned four-fab megafab",
+          "count": 2
+        }
+      ],
+      "evidence": [
+        "d64-b003",
+        "d64-b010",
+        "d64-b012"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d64-b018"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d64-micron-boise-hvm-fab",
+      "position": 64,
+      "organization": "Micron Technology",
+      "location": "Boise, Idaho",
+      "scope": "Development of a new high-volume leading-edge DRAM manufacturing fab co-located with the company's existing R&D facility. The existing R&D operation is not an additional newly announced commercial fab.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The PMT explicitly supports a manufacturing fab even though no dated production-start target is provided.",
+      "components": [
+        {
+          "description": "New high-volume DRAM manufacturing fab",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d64-b003",
+        "d64-b011"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d64-b018"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d66-samsung-taylor-logic",
+      "position": 66,
+      "organization": "Samsung Electronics",
+      "location": "Taylor, Texas",
+      "scope": "Two leading-edge logic foundry fabs focused on mass production of 4nm and 2nm technologies. The article does not assign one process node, date or identity to each individual fab.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Retain both explicit logic-fab units in a single source-native project group; no job-creation period becomes a production interval.",
+      "components": [
+        {
+          "description": "Leading-edge logic foundry fabs",
+          "count": 2
+        }
+      ],
+      "evidence": [
+        "d66-b002",
+        "d66-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d66-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d66-samsung-taylor-packaging",
+      "position": 66,
+      "organization": "Samsung Electronics",
+      "location": "Taylor, Texas",
+      "scope": "Advanced-packaging facility producing 3D High Bandwidth Memory and 2.5D packaging, distinct from the two logic fabs and dedicated R&D fab. No dated startup is given.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Advanced packaging production is part of the new manufacturing PMT cohort.",
+      "components": [
+        {
+          "description": "Advanced-packaging facility",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d66-b002",
+        "d66-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d66-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d66-samsung-austin-expansion",
+      "position": 66,
+      "organization": "Samsung Electronics",
+      "location": "Austin, Texas",
+      "scope": "Expansion of the existing Austin facility/facilities to support FD-SOI process-technology production. The paragraph alternates singular and plural facility wording; no individual building count, identity or dated production target is supplied.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Explicit existing-site production expansion is distinct from the Taylor projects.",
+      "components": [
+        {
+          "description": "Austin existing-site expansion; individual facility count unresolved",
+          "count": null
+        }
+      ],
+      "evidence": [
+        "d66-b002",
+        "d66-b010"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d66-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d66-samsung-taylor-rd-fab",
+      "position": 66,
+      "organization": "Samsung Electronics",
+      "location": "Taylor, Texas",
+      "scope": "Dedicated R&D fab for development and research on technology generations ahead of nodes currently in production, distinct from commercial logic and packaging facilities.",
+      "selection": "excluded_research",
+      "selection_reason": "The article expressly dedicates this branch to research/development; retain it in the PMT source census but outside the selected commercial-manufacturing groups.",
+      "components": [
+        {
+          "description": "Dedicated R&D fab",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d66-b002",
+        "d66-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d66-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d67-tsmc-phoenix-first-fab",
+      "position": 67,
+      "organization": "TSMC Arizona Corporation",
+      "location": "Phoenix, Arizona",
+      "scope": "First of the three source-native greenfield Arizona fabs, described for 4nm FinFET technologies. No canonical Fab 21 identity or commercial-commencement alias is assigned.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The article identifies a distinct first fab and an explicit HVM deadline formulation.",
+      "components": [
+        {
+          "description": "First greenfield leading-edge fab",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d67-b002",
+        "d67-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d67-b015"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "high_volume_production",
+          "literal": "by the first half of 2025",
+          "classification": "calendar_deadline",
+          "target": {
+            "kind": "deadline",
+            "through": "2025-06-30"
+          },
+          "reason": "Interpret by the first half as an inclusive latest bound through June 30, 2025. Preserve the literal and do not impose a January 1 lower bound or change HVM into generic production start.",
+          "evidence": [
+            "d67-b009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d67-tsmc-phoenix-second-fab",
+      "position": 67,
+      "organization": "TSMC Arizona Corporation",
+      "location": "Phoenix, Arizona",
+      "scope": "Second greenfield fab, described for 2nm nanosheet technology in addition to previously announced 3nm plans. No second-fab production date is supplied in this article.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Retain the explicitly identified second fab without importing 2028 or later revised detail-page guidance.",
+      "components": [
+        {
+          "description": "Second greenfield leading-edge fab",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d67-b002",
+        "d67-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d67-b015"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d67-tsmc-phoenix-third-fab",
+      "position": 67,
+      "organization": "TSMC Arizona Corporation",
+      "location": "Phoenix, Arizona",
+      "scope": "Additional third greenfield fab, with a commitment to build before the end of the decade and a customer-demand-dependent process-technology choice. Unnamed supplier plants and U.S. packaging-partner capabilities are supporting context, not additional identified PMT project rows.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The article explicitly adds a third fab; preserve build timing separately from HVM or production-start timing.",
+      "components": [
+        {
+          "description": "Third greenfield leading-edge fab",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d67-b002",
+        "d67-b003",
+        "d67-b009",
+        "d67-b010",
+        "d67-b011"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d67-b015"
+          ]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "The third fab's 2nm-or-more-advanced technology depends on customer demand. The statement is not evidence that demand or the selected technology is already established.",
+          "evidence": [
+            "d67-b009"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "fab_build_commitment",
+          "literal": "before the end of the decade",
+          "classification": "vague",
+          "target": null,
+          "reason": "Preserve the source's build/construction wording and decade expression without an invented exact endpoint. This is not a dated production or HVM target.",
+          "evidence": [
+            "d67-b003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d70-intel-chandler-new-fabs",
+      "position": 70,
+      "organization": "Intel Corporation",
+      "location": "Chandler, Arizona",
+      "scope": "Construction of two new leading-edge logic fabs. Arizona production of Intel 18A/Clearwater Forest is described collectively and is not allocated to a particular new fab or dated in the article.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Separate new construction from the existing-fab modernization while retaining the explicit two-fab multiplicity.",
+      "components": [
+        {
+          "description": "New leading-edge logic fabs",
+          "count": 2
+        }
+      ],
+      "evidence": [
+        "d70-b001",
+        "d70-b008"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed award remains subject to availability of funds; availability and final approval are not established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d70-intel-chandler-modernization",
+      "position": 70,
+      "organization": "Intel Corporation",
+      "location": "Chandler, Arizona",
+      "scope": "Modernization of one existing fab, listed alongside but distinct from construction of two new fabs. The article does not supply a fab number, individual technology allocation or production date.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Existing-fab modernization is a separately stated manufacturing intervention, not part of the new-fab count.",
+      "components": [
+        {
+          "description": "Existing fab modernization",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d70-b008"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed award remains subject to availability of funds; availability and final approval are not established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d70-intel-rio-rancho-packaging",
+      "position": 70,
+      "organization": "Intel Corporation",
+      "location": "Rio Rancho, New Mexico",
+      "scope": "Modernization of two fabs into advanced-packaging facilities. The later singular description of the operation does not erase the two explicit fab units or establish distinct canonical identities.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Retain both packaging-fab conversions in one source-native project group.",
+      "components": [
+        {
+          "description": "Fabs modernized into advanced-packaging facilities",
+          "count": 2
+        }
+      ],
+      "evidence": [
+        "d70-b009"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed award remains subject to availability of funds; availability and final approval are not established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "full_production",
+          "literal": "When in full production",
+          "classification": "undated",
+          "target": null,
+          "reason": "The article conditions its description of the packaging operation on full production but supplies no date for that state. This is not an observed event or a normalized startup forecast.",
+          "evidence": [
+            "d70-b009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d70-intel-new-albany-new-fabs",
+      "position": 70,
+      "organization": "Intel Corporation",
+      "location": "New Albany, Ohio",
+      "scope": "Construction of two leading-edge logic fabs anchoring a regional chipmaking ecosystem. No individual fab names, phase schedules or production-start dates are supplied.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Both explicit manufacturing units are retained without substituting aggregate capex or jobs timing.",
+      "components": [
+        {
+          "description": "New leading-edge logic fabs",
+          "count": 2
+        }
+      ],
+      "evidence": [
+        "d70-b010"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed award remains subject to availability of funds; availability and final approval are not established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d70-intel-hillsboro-development",
+      "position": 70,
+      "organization": "Intel Corporation",
+      "location": "Hillsboro, Oregon; Gordon Moore Park campus at Ronler Acres",
+      "scope": "Expansion and modernization of technology-development facilities incorporating High NA EUV equipment. The paragraph describes research and technology development, not a commercial-production expansion with a dated output target.",
+      "selection": "excluded_research",
+      "selection_reason": "Retain the explicit PMT development branch but exclude it under the pure-R&D/development screening rule; manufacturing job language alone does not establish commercial-production scope.",
+      "components": [
+        {
+          "description": "Technology-development facilities; individual facility count not enumerated",
+          "count": null
+        }
+      ],
+      "evidence": [
+        "d70-b011"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. Award amounts are conditional on milestones; no detailed project prerequisite or its fulfillment is established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed award remains subject to availability of funds; availability and final approval are not established here.",
+          "evidence": [
+            "d70-b014"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d72-gf-malta-new-fab",
+      "position": 72,
+      "organization": "GlobalFoundries",
+      "location": "Malta, New York",
+      "scope": "Construction of a new large-scale 300mm fab, distinct from expansion of the existing Malta facility. The source's campus growth and later production statements combine both Malta projects.",
+      "selection": "included_manufacturing",
+      "selection_reason": "One of the article's three explicitly enumerated manufacturing projects.",
+      "components": [
+        {
+          "description": "New 300mm fabrication facility",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d72-b010",
+        "d72-b011",
+        "d72-b012"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. No final award is established by the PMT.",
+          "evidence": [
+            "d72-b016"
+          ]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "The joint Malta production statement applies only once all phases are complete. It is shared across the new fab and existing expansion, not a separate per-project amount or dated outcome.",
+          "evidence": [
+            "d72-b012"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "combined_malta_projects_capacity_growth",
+          "literal": "over the next 10+ years",
+          "classification": "relative",
+          "target": null,
+          "reason": "This is one combined campus growth statement for the new fab plus existing-fab expansion. It has an open relative duration and no independently allocated project quantity or completion deadline; repetition on related rows is not an independent target.",
+          "evidence": [
+            "d72-b012"
+          ]
+        },
+        {
+          "event": "combined_malta_projects_wafer_production_after_all_phases",
+          "literal": "once all phases are complete",
+          "classification": "undated",
+          "target": null,
+          "reason": "The joint production statement is contingent on completion of all phases and supplies no calendar date. Do not allocate the campus-wide production amount to either project or treat it as measured capacity.",
+          "evidence": [
+            "d72-b012"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d72-gf-malta-existing-expansion",
+      "position": 72,
+      "organization": "GlobalFoundries",
+      "location": "Malta, New York",
+      "scope": "Expansion of the existing fabrication facility, including automotive supply under the General Motors agreement. Combined campus targets are not independently allocated between this expansion and the new fab.",
+      "selection": "included_manufacturing",
+      "selection_reason": "Existing-fab expansion is distinct from the separate new Malta fab.",
+      "components": [
+        {
+          "description": "Existing fabrication facility expansion",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d72-b010",
+        "d72-b012"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. No final award is established by the PMT.",
+          "evidence": [
+            "d72-b016"
+          ]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "The joint Malta production statement applies only once all phases are complete. It is shared across the new fab and existing expansion, not a separate per-project amount or dated outcome.",
+          "evidence": [
+            "d72-b012"
+          ]
+        }
+      ],
+      "timing": [
+        {
+          "event": "combined_malta_projects_capacity_growth",
+          "literal": "over the next 10+ years",
+          "classification": "relative",
+          "target": null,
+          "reason": "This is one combined campus growth statement for the new fab plus existing-fab expansion. It has an open relative duration and no independently allocated project quantity or completion deadline; repetition on related rows is not an independent target.",
+          "evidence": [
+            "d72-b012"
+          ]
+        },
+        {
+          "event": "combined_malta_projects_wafer_production_after_all_phases",
+          "literal": "once all phases are complete",
+          "classification": "undated",
+          "target": null,
+          "reason": "The joint production statement is contingent on completion of all phases and supplies no calendar date. Do not allocate the campus-wide production amount to either project or treat it as measured capacity.",
+          "evidence": [
+            "d72-b012"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d72-gf-burlington-revitalization",
+      "position": 72,
+      "organization": "GlobalFoundries",
+      "location": "Burlington, Vermont",
+      "scope": "Revitalization of an existing fab to commercialize new 200mm GaN-on-silicon technologies and enable high-volume manufacturing capability. Preserve the article's Burlington location rather than substituting another municipality.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The third explicitly enumerated manufacturing project remains included without a dated startup target.",
+      "components": [
+        {
+          "description": "Existing fabrication facility revitalization",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d72-b010",
+        "d72-b013"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. No final award is established by the PMT.",
+          "evidence": [
+            "d72-b016"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d76-microchip-colorado-springs",
+      "position": 76,
+      "organization": "Microchip Technology Inc.",
+      "location": "Colorado Springs, Colorado",
+      "scope": "Modernization and expansion of a mature-node MCU/specialty-semiconductor fab. The proposed nearly tripled output statement combines Colorado Springs and Gresham and is not allocated per site.",
+      "selection": "included_manufacturing",
+      "selection_reason": "One of two explicitly identified PMT manufacturing projects; retain despite no dated milestone.",
+      "components": [
+        {
+          "description": "Fabrication facility modernization and expansion",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d76-b001",
+        "d76-b002",
+        "d76-b006"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. No final award is established by the PMT.",
+          "evidence": [
+            "d76-b007"
+          ]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d76-microchip-gresham",
+      "position": 76,
+      "organization": "Microchip Technology Inc.",
+      "location": "Gresham, Oregon",
+      "scope": "Expansion of a mature-node MCU/specialty-semiconductor fab. No production-start date or site-specific output quantity is supplied; the nearly tripled output statement is joint with Colorado Springs.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The second explicit PMT manufacturing project is distinct from the Colorado Springs intervention.",
+      "components": [
+        {
+          "description": "Fabrication facility expansion",
+          "count": 1
+        }
+      ],
+      "evidence": [
+        "d76-b001",
+        "d76-b002",
+        "d76-b006"
+      ],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding and subject to due diligence and negotiated final award documents whose terms may differ. No final award is established by the PMT.",
+          "evidence": [
+            "d76-b007"
+          ]
+        }
+      ],
+      "timing": []
+    }
+  ]
+}

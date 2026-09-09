@@ -1,0 +1,508 @@
+{
+  "articles": [
+    {
+      "position": 12,
+      "classification": "final_award_only",
+      "reason": "The article awards Amkor funding for the Peoria advanced packaging and test facility after an earlier PMT and completed due diligence. It does not newly announce a PMT.",
+      "evidence": ["d12-b002", "d12-b005", "d12-b007"],
+      "non_target_dates": [
+        "December 20, 2024 is the article and final-award announcement date, not a manufacturing startup date.",
+        "July 26, 2024 is the explicitly referenced earlier PMT announcement date."
+      ]
+    },
+    {
+      "position": 13,
+      "classification": "final_award_only",
+      "reason": "The article finalizes Samsung's award following an earlier PMT. The two Taylor logic fabs, Taylor R&D fab, and Austin expansion are final-award scope, not newly announced PMTs.",
+      "evidence": ["d13-b002", "d13-b005", "d13-b008"],
+      "non_target_dates": [
+        "December 20, 2024 is the article and final-award announcement date.",
+        "April 15, 2024 is the earlier PMT announcement date.",
+        "The coming years investment horizon and next five years employment horizon are not manufacturing startup targets.",
+        "Manufacturing since 1996 describes Samsung's historical U.S. presence, not the proposed facilities' startup."
+      ]
+    },
+    {
+      "position": 14,
+      "classification": "final_award_only",
+      "reason": "The article awards Texas Instruments funding after an earlier PMT and due diligence. Its three facilities, two in Texas and one in Utah, are final-award scope.",
+      "evidence": ["d14-b002", "d14-b004", "d14-b008"],
+      "non_target_dates": [
+        "December 20, 2024 is the article and final-award announcement date.",
+        "August 16, 2024 is the earlier PMT announcement date.",
+        "Through the end of the decade describes the investment horizon; it is not a separate new-PMT manufacturing startup target."
+      ]
+    },
+    {
+      "position": 15,
+      "classification": "final_award_only",
+      "reason": "The article finalizes SK hynix funding following an earlier PMT. West Lafayette memory packaging and associated advanced packaging fabrication and R&D are award scope, not another PMT.",
+      "evidence": ["d15-b002", "d15-b005", "d15-b009"],
+      "non_target_dates": [
+        "December 19, 2024 is the article and final-award announcement date.",
+        "August 6, 2024 is the earlier PMT announcement date."
+      ]
+    },
+    {
+      "position": 16,
+      "classification": "final_award_only",
+      "reason": "The article issues awards to GlobalWafers America and MEMC after an earlier PMT. Texas silicon wafer production, Missouri SOI wafer production, and the Sherman epitaxy conversion are final-award scope or terms, not new PMTs.",
+      "evidence": ["d16-b002", "d16-b005", "d16-b006", "d16-b009"],
+      "non_target_dates": [
+        "December 17, 2024 is the article and final-award announcement date.",
+        "July 17, 2024 is the earlier PMT announcement date."
+      ]
+    },
+    {
+      "position": 17,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The article newly announces a signed non-binding Bosch PMT for transforming and expanding the existing Roseville facility to produce SiC power semiconductors, with a distinct first-chip expectation for 2026.",
+      "evidence": ["d17-b001", "d17-b006", "d17-b009", "d17-b010"],
+      "non_target_dates": [
+        "December 13, 2024 is the article and PMT announcement date, separate from the 2026 first-chip production target.",
+        "When at full capacity is an undated conditional operating state, not another dated startup target."
+      ]
+    },
+    {
+      "position": 18,
+      "classification": "mixed_final_and_new_pmt",
+      "reason": "The article finalizes Micron's Idaho and New York award following an earlier PMT, then separately announces a new non-binding PMT to expand and modernize the Manassas, Virginia facility for 1-alpha DRAM technology. Only Manassas enters the new-PMT project roster from this article.",
+      "evidence": ["d18-b001", "d18-b002", "d18-b003", "d18-b004", "d18-b009"],
+      "non_target_dates": [
+        "December 10, 2024 is the article announcement date for both the final award and the new Virginia PMT.",
+        "April 25, 2024 refers to the earlier Idaho and New York PMT, not a Virginia manufacturing event.",
+        "Over the next several years in the Virginia paragraph describes expected capital expenditure, not production startup or completion.",
+        "The two-decade vision, end-of-decade spending and employment horizons, and 2035 national memory-share objective concern the Idaho and New York award or broader portfolio, not the new Virginia project's startup."
+      ]
+    },
+    {
+      "position": 19,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The article newly announces three separate PMTs and explicitly enumerates Coherent in Sherman, SkyWater in Bloomington, and X-Fab in Lubbock. All three are manufacturing interventions, despite the absence of dated startup targets.",
+      "evidence": ["d19-b002", "d19-b005", "d19-b006", "d19-b007", "d19-b008", "d19-b013"],
+      "non_target_dates": [
+        "December 6, 2024 is the article and three-PMT announcement date.",
+        "SkyWater's 40-year Bloomington history and the discussion of pandemic disruptions are background chronology, not project timing.",
+        "Existing volume-production or high-volume-foundry descriptions do not date production startup for the proposed modernization projects."
+      ]
+    },
+    {
+      "position": 20,
+      "classification": "final_award_only",
+      "reason": "The article explicitly finalizes separate Absolics and Entegris awards following earlier PMTs. Covington glass substrates and Colorado Springs filtration products and wafer carriers are final-award scope, not newly announced PMTs.",
+      "evidence": ["d20-b001", "d20-b005", "d20-b006", "d20-b009"],
+      "non_target_dates": [
+        "December 5, 2024 is the article and final-awards announcement date.",
+        "May 23, 2024 and June 26, 2024 are the earlier Absolics and Entegris PMT announcement dates, respectively.",
+        "Entegris's initial commercial operations target in 2025 is stated in a final-award article and is not a newly announced PMT case from this document."
+      ]
+    },
+    {
+      "position": 21,
+      "classification": "final_award_only",
+      "reason": "The article awards Intel funding after its earlier PMT and due diligence. The four-state fabrication and packaging portfolio and technology-production statements do not announce another PMT.",
+      "evidence": ["d21-b001", "d21-b004", "d21-b005", "d21-b007"],
+      "non_target_dates": [
+        "November 26, 2024 is the article and final-award announcement date.",
+        "March 20, 2024 is the earlier PMT announcement date.",
+        "By the end of the decade describes Intel's expected investment horizon.",
+        "Intel 18A set to follow next year is a technology-production statement in this final-award article, without a unique facility allocation; it is not a new-PMT project target here."
+      ]
+    },
+    {
+      "position": 22,
+      "classification": "final_award_only",
+      "reason": "The article finalizes BAE Systems and Rocket Lab awards after previously announced PMTs. BAE's cited PMT is from 2023, and Rocket Lab's is from 2024; neither is newly announced here.",
+      "evidence": ["d22-b001", "d22-b005", "d22-b006", "d22-b009"],
+      "non_target_dates": [
+        "November 25, 2024 is the article and final-awards announcement date.",
+        "December 11, 2023 is BAE's earlier PMT announcement date and is outside the 2024 new-PMT cohort.",
+        "June 11, 2024 is Rocket Lab's earlier PMT announcement date.",
+        "Rocket Lab's within the next three years production-expansion horizon and BAE's halved modernization timeline are final-award statements, not new PMT announcements."
+      ]
+    },
+    {
+      "position": 23,
+      "classification": "research_only",
+      "reason": "The article announces negotiations for NAPMP research investments in Absolics at Covington, Applied Materials at Santa Clara, and Arizona State University at Tempe. Research scaling, ASU's proposed interconnect foundry, and future manufacturing ambitions do not make these commercial manufacturing-incentive PMTs.",
+      "evidence": ["d23-b002", "d23-b003", "d23-b006", "d23-b009", "d23-b010", "d23-b011", "d23-b015"],
+      "non_target_dates": [
+        "November 21, 2024 is the article and research-negotiation announcement date.",
+        "Within a decade describes the NAPMP program's broader expected industry development, not a manufacturing PMT startup target."
+      ]
+    },
+    {
+      "position": 24,
+      "classification": "final_award_only",
+      "reason": "The article awards GlobalFoundries funding after an earlier PMT. New and expanded New York manufacturing facilities and Vermont modernization are final-award scope, not new PMTs.",
+      "evidence": ["d24-b002", "d24-b005", "d24-b008"],
+      "non_target_dates": [
+        "November 20, 2024 is the article and final-award announcement date.",
+        "February 19, 2024 is the earlier PMT announcement date.",
+        "Over the next 10-plus years describes the portfolio investment horizon, not an individual manufacturing startup date."
+      ]
+    },
+    {
+      "position": 25,
+      "classification": "research_only",
+      "reason": "The article announces negotiations to establish and operate the SMART USA Manufacturing USA institute headquartered in Durham. Its digital-twin research, collaboration, and workforce program is not a manufacturing-incentive PMT or a distinct commercial production facility.",
+      "evidence": ["d25-b002", "d25-b004", "d25-b006", "d25-b013", "d25-b014", "d25-b015", "d25-b016", "d25-b017", "d25-b018"],
+      "non_target_dates": [
+        "November 19, 2024 is the article and proposed research-institute award announcement date.",
+        "Within five years is the horizon for institute research, cost, cycle-time, emissions, and training objectives, not a factory startup date.",
+        "The 2023 Manufacturing USA network statistics are historical program context."
+      ]
+    },
+    {
+      "position": 26,
+      "classification": "final_award_only",
+      "reason": "The article awards TSMC Arizona funding after an earlier PMT. Its three Phoenix fabs and statements about opening or early production are final-award context and do not newly announce a PMT.",
+      "evidence": ["d26-b002", "d26-b003", "d26-b005", "d26-b008"],
+      "non_target_dates": [
+        "November 15, 2024 is the article and final-award announcement date.",
+        "April 8, 2024 is the earlier PMT announcement date.",
+        "Early next year is an opening expectation in the final-award article, not a new-PMT target from this document and not a statement of HVM startup.",
+        "By the end of the decade concerns the quoted employment horizon; early 2020 and two years ago describe prior collaboration or visits."
+      ]
+    },
+    {
+      "position": 27,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The article newly announces a signed non-binding Akash Systems PMT for cleanroom construction within an existing building and manufacturing of Diamond Cooling substrates, devices, and systems in West Oakland. Research and product development context does not negate the explicit manufacturing intervention.",
+      "evidence": ["d27-b002", "d27-b004", "d27-b007", "d27-b009"],
+      "non_target_dates": [
+        "November 13, 2024 is the article and PMT announcement date; no dated manufacturing event is stated."
+      ]
+    },
+    {
+      "position": 28,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The article newly announces two separate PMTs: Corning's Canton lithography-materials manufacturing expansion and Powerex's Youngwood back-end power-module packaging modernization and expansion. Both fall within the manufacturing cohort, which includes materials and packaging.",
+      "evidence": ["d28-b001", "d28-b004", "d28-b005", "d28-b010"],
+      "non_target_dates": [
+        "November 8, 2024 is the article and two-PMT announcement date.",
+        "Corning's per-year childcare commitment for the duration of the proposed project does not establish a manufacturing event date."
+      ]
+    },
+    {
+      "position": 29,
+      "classification": "research_only",
+      "reason": "The article identifies Sunnyvale as the expected site of the NSTC Design and Collaboration Facility for design research, workforce programs, collaboration, and administration. It announces neither a manufacturing PMT nor a commercial production project.",
+      "evidence": ["d29-b001", "d29-b006", "d29-b007", "d29-b008", "d29-b009", "d29-b010", "d29-b014"],
+      "non_target_dates": [
+        "November 1, 2024 is the article and expected-location announcement date.",
+        "At a later date describes future information about affiliated technical-center selection, not manufacturing startup."
+      ]
+    },
+    {
+      "position": 30,
+      "classification": "research_only",
+      "reason": "The article announces the expected Albany site of the NSTC EUV Accelerator and an R&D MOU. A nonbinding MOU for research access is not a manufacturing-incentive PMT, even though the research uses lithography equipment and has operational timing.",
+      "evidence": ["d30-b001", "d30-b008", "d30-b009", "d30-b015"],
+      "non_target_dates": [
+        "October 31, 2024 is the article and R&D-location announcement date.",
+        "Initial operations in 2025, standard-NA EUV expected by 2025, and high-NA EUV in 2026 are R&D capability targets, not manufacturing PMT startup targets.",
+        "The expected 10-year final-contract term and coming-months technical-center selection information are program or contracting horizons."
+      ]
+    },
+    {
+      "position": 31,
+      "classification": "research_only",
+      "reason": "The article opens the CARISSMA research funding opportunity for AI and autonomous-experimentation collaborations, with anticipated university and research participants. It announces no signed manufacturing PMTs or selected commercial production projects.",
+      "evidence": ["d31-b001", "d31-b002", "d31-b003", "d31-b007"],
+      "non_target_dates": [
+        "October 30, 2024 is the article and research-NOFO announcement date.",
+        "Within five years is a research-to-industry-testing objective, not a factory startup target.",
+        "November 8 and November 15, 2024 are applicant webinar and meeting dates."
+      ]
+    },
+    {
+      "position": 32,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The article newly announces a signed non-binding Hemlock Semiconductor PMT for a new facility producing and purifying semiconductor-grade polysilicon on its existing Hemlock campus. Materials manufacturing is included even without a dated startup target.",
+      "evidence": ["d32-b001", "d32-b003", "d32-b009"],
+      "non_target_dates": [
+        "October 21, 2024 is the article and PMT announcement date; no dated manufacturing event is stated.",
+        "Founded in 1961 and investment comparisons with the preceding two decades are historical company context.",
+        "Over time describes employment expectations, not manufacturing startup."
+      ]
+    },
+    {
+      "position": 33,
+      "classification": "research_only",
+      "reason": "The article opens a NAPMP NOFO spanning five research areas with possible follow-on prototyping. It is a research competition, not a signed manufacturing-PMT announcement, despite its intended eventual manufacturing adoption.",
+      "evidence": ["d33-b001", "d33-b006", "d33-b012", "d33-b013"],
+      "non_target_dates": [
+        "October 18, 2024 is the article and research-NOFO announcement date.",
+        "The five-year period of performance concerns research awards; later this year concerns anticipated announcement of a piloting facility.",
+        "October 21 and October 22, 2024 are registration deadlines and an applicant meeting date, not manufacturing milestones."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "nist2024-d17-bosch-roseville",
+      "position": 17,
+      "organization": "Bosch",
+      "location": "Roseville, California",
+      "scope": "Transform and expand Bosch's existing manufacturing facility for silicon carbide power semiconductors. The same facility is described as performing front-end device manufacturing and back-end testing, sorting, and dicing. First chips on 200-millimeter wafers are distinct from HVM, full-capacity operation, or qualification.",
+      "selection": "included_manufacturing",
+      "selection_reason": "A newly announced non-binding PMT explicitly supports a facility-level device-manufacturing intervention; mixed front-end and back-end functions do not create separate facility candidates.",
+      "components": [
+        {"description": "Existing Roseville manufacturing facility to be transformed and expanded for SiC devices, including front-end fabrication and back-end testing, sorting, and dicing", "count": 1}
+      ],
+      "evidence": ["d17-b001", "d17-b004", "d17-b006"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not asserted physical prerequisites for chip production. The source repeats the same general paragraph twice.",
+          "evidence": ["d17-b009", "d17-b010"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The PMT also proposes approximately $350 million in loans, and Bosch indicates an intention to claim the investment tax credit. Neither proposed loan availability nor that intention establishes realized funding or a physical startup prerequisite.",
+          "evidence": ["d17-b008"]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "Construction is stated to operate under a project labor agreement with the Sacramento-Sierra Building and Construction Trades Council. Childcare support commitments are also described. Neither supplies a production date.",
+          "evidence": ["d17-b007"]
+        }
+      ],
+      "timing": [
+        {
+          "event": "first_chip_production",
+          "literal": "Bosch expects to produce its first chips on 200-millimeter wafers in its Roseville facility starting in 2026.",
+          "classification": "calendar_interval",
+          "target": {"kind": "interval", "low": "2026-01-01", "high": "2026-12-31"},
+          "reason": "The source places expected first-chip production within calendar 2026. It does not specify a day, quarter, HVM start, full-capacity date, or qualification milestone.",
+          "evidence": ["d17-b006"]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d18-micron-manassas",
+      "position": 18,
+      "organization": "Micron Technology",
+      "location": "Manassas, Virginia",
+      "scope": "Expand and modernize Micron's existing Manassas facility to onshore 1-alpha DRAM technology for automotive and industrial markets. The source does not identify separate fab phases or a wafer diameter. The several-year capital-expenditure horizon is not a production-start assertion.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The Virginia paragraph separately announces a new non-binding manufacturing PMT, unlike the Idaho and New York final-award paragraphs in the same article. An undated manufacturing intervention remains included.",
+      "components": [
+        {"description": "Existing Manassas DRAM facility expansion and modernization for 1-alpha technology", "count": 1}
+      ],
+      "evidence": ["d18-b003", "d18-b004"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These funding conditions do not establish physical prerequisites or a manufacturing event date.",
+          "evidence": ["d18-b003", "d18-b009"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d19-coherent-sherman",
+      "position": 19,
+      "organization": "Coherent",
+      "location": "Sherman, Texas",
+      "scope": "Modernize and expand a manufacturing cleanroom within Coherent's existing Sherman facility, adding wafer fabrication equipment to establish a 150mm indium phosphide device-manufacturing line. The described line is a component within the existing facility, not a separately inferred fab or a raw-substrate-only project.",
+      "selection": "included_manufacturing",
+      "selection_reason": "One of three newly announced PMTs explicitly supports InP device fabrication. No dated startup target is supplied, which does not exclude the project.",
+      "components": [
+        {"description": "Manufacturing cleanroom modernization and expansion within the existing Sherman facility", "count": 1},
+        {"description": "150mm InP manufacturing line to be established within that same facility, not an additional independent facility", "count": 1}
+      ],
+      "evidence": ["d19-b002", "d19-b006"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not asserted physical prerequisites for manufacturing.",
+          "evidence": ["d19-b013"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "Coherent indicates an intention to claim the investment tax credit. The article does not assert that the credit has been received or that receipt is a physical prerequisite for production.",
+          "evidence": ["d19-b012"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d19-skywater-bloomington",
+      "position": 19,
+      "organization": "SkyWater Technology Foundry Inc.",
+      "location": "Bloomington, Minnesota",
+      "scope": "Modernize the existing Bloomington facility through equipment replacement and cleanroom, space, and IT-system upgrades to improve production and wafer services. The source describes 90nm and 130nm process production, not wafer diameters. Existing prototyping-to-volume capability does not date completion of the proposed modernization.",
+      "selection": "included_manufacturing",
+      "selection_reason": "One of three newly announced PMTs directly supports modernization of an existing foundry. No distinct physical phases or dated production events are stated.",
+      "components": [
+        {"description": "Existing Bloomington foundry modernization encompassing equipment, cleanroom, space, and IT upgrades", "count": 1}
+      ],
+      "evidence": ["d19-b002", "d19-b007"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not physical prerequisites or a production date.",
+          "evidence": ["d19-b013"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The article says Minnesota's Forward Fund would provide $19 million dedicated to this proposed project. It does not state that the funding has been disbursed or establish receipt as a physical startup prerequisite.",
+          "evidence": ["d19-b007"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "SkyWater indicates an intention to claim the investment tax credit; this is not evidence of receipt or a physical manufacturing prerequisite.",
+          "evidence": ["d19-b012"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d19-xfab-lubbock",
+      "position": 19,
+      "organization": "X-Fab",
+      "location": "Lubbock, Texas",
+      "scope": "Expand and modernize X-Fab's existing silicon carbide foundry facility in Lubbock. The source's description of the existing high-volume foundry does not establish HVM startup, completion, or installed capacity for this proposed intervention. No distinct subphases are identified.",
+      "selection": "included_manufacturing",
+      "selection_reason": "One of three newly announced PMTs explicitly supports SiC foundry manufacturing modernization and expansion, despite having no dated manufacturing target.",
+      "components": [
+        {"description": "Existing Lubbock SiC foundry facility expansion and modernization", "count": 1}
+      ],
+      "evidence": ["d19-b002", "d19-b008"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not physical manufacturing prerequisites.",
+          "evidence": ["d19-b013"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "X-Fab indicates an intention to claim the investment tax credit. Neither actual receipt nor a physical production dependency is stated.",
+          "evidence": ["d19-b012"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d27-akash-west-oakland",
+      "position": 27,
+      "organization": "Akash Systems",
+      "location": "West Oakland, California",
+      "scope": "Construct cleanroom space within an existing building to create a semiconductor manufacturing facility for Diamond Cooling substrates, devices, and systems at scale. The source describes synthetic diamond integration with compound semiconductors and GPU cooling applications, without allocating separate facilities or product-line phases.",
+      "selection": "included_manufacturing",
+      "selection_reason": "A newly announced non-binding PMT explicitly supports physical manufacturing, including materials and devices. Associated technology development does not make the project research-only.",
+      "components": [
+        {"description": "Existing building to be transformed through cleanroom construction into the West Oakland manufacturing facility", "count": 1}
+      ],
+      "evidence": ["d27-b002", "d27-b004"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Proposed award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not asserted physical startup prerequisites.",
+          "evidence": ["d27-b009"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed CHIPS funding is described together with Akash, venture-capital, and other private funding as supporting the total investment. The article does not establish that all funding is secured or a particular financing event is a physical startup prerequisite. Akash also indicates an intention to claim the investment tax credit.",
+          "evidence": ["d27-b002", "d27-b008"]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "Construction is stated to operate under a project labor agreement with the Alameda Building Trades, with targeted local hiring and workforce-development commitments. These commitments do not specify a production date.",
+          "evidence": ["d27-b007"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d28-corning-canton",
+      "position": 28,
+      "organization": "Corning",
+      "location": "Canton, New York",
+      "scope": "Expand Corning's existing manufacturing facility, increase production of HPFS fused silica and EXTREME ULE glass, and scale a novel manufacturing process. These are materials used in lithography machines and photomasks, not semiconductor-device fabrication. The article does not enumerate independently timed facility phases.",
+      "selection": "included_manufacturing",
+      "selection_reason": "A newly announced PMT supports manufacturing of semiconductor supply-chain materials, which is within the cohort even without a startup date.",
+      "components": [
+        {"description": "Existing Canton manufacturing facility expansion for fused silica, ultra-low-expansion glass, and associated process scaling", "count": 1}
+      ],
+      "evidence": ["d28-b001", "d28-b004", "d28-b007"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not physical manufacturing prerequisites.",
+          "evidence": ["d28-b010"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "Corning indicates an intention to claim the investment tax credit; actual receipt and a physical startup dependency are not stated.",
+          "evidence": ["d28-b009"]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "The source describes workforce partnerships and planned annual childcare-program support for the duration of the proposed project. This is a workforce commitment, not a dated physical project prerequisite or manufacturing target.",
+          "evidence": ["d28-b004"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d28-powerex-youngwood",
+      "position": 28,
+      "organization": "Powerex",
+      "location": "Youngwood, Pennsylvania",
+      "scope": "Modernize and expand Powerex's existing back-end production facility and its equipment for packaging semiconductor power modules used in defense, commercial, and industrial applications. Proposed capacity growth is not evidence of installed or realized capacity.",
+      "selection": "included_manufacturing",
+      "selection_reason": "A newly announced PMT explicitly supports back-end packaging manufacturing. The absence of a dated startup or completion target does not exclude it.",
+      "components": [
+        {"description": "Existing Youngwood power-module packaging facility expansion and equipment modernization", "count": 1}
+      ],
+      "evidence": ["d28-b001", "d28-b005"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not asserted physical production prerequisites.",
+          "evidence": ["d28-b010"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "Powerex indicates an intention to claim the investment tax credit; receipt and a physical startup dependency are not established.",
+          "evidence": ["d28-b009"]
+        }
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d32-hemlock-hemlock",
+      "position": 32,
+      "organization": "Hemlock Semiconductor",
+      "location": "Hemlock, Michigan",
+      "scope": "Construct a new manufacturing facility on HSC's existing campus for production and purification of hyper-pure semiconductor-grade polysilicon. This is semiconductor-materials manufacturing, not a wafer or device fab; references to the company's solar business do not establish a separate funded solar project.",
+      "selection": "included_manufacturing",
+      "selection_reason": "A newly announced non-binding PMT supports a specific materials-manufacturing facility. It remains in the cohort without an explicit startup, construction, or completion date.",
+      "components": [
+        {"description": "New semiconductor-grade polysilicon production and purification facility on the existing Hemlock campus", "count": 1}
+      ],
+      "evidence": ["d32-b001", "d32-b003", "d32-b007"],
+      "conditions": [
+        {
+          "kind": "funding_general",
+          "interpretation": "The PMT is non-binding. Potential award amounts are subject to due diligence, negotiation of award documents, and achievement of milestones, and final terms may differ. These are funding conditions, not asserted physical startup prerequisites.",
+          "evidence": ["d32-b009"]
+        },
+        {
+          "kind": "funding_specific",
+          "interpretation": "The proposed direct funding includes a workforce-development allocation. This proposed use of funding does not establish disbursement, manufacturing readiness, or a physical startup prerequisite.",
+          "evidence": ["d32-b006"]
+        },
+        {
+          "kind": "project_specific",
+          "interpretation": "The source describes local training partnerships and commitments to strengthen childcare availability and affordability. These are workforce commitments, not manufacturing-event dates.",
+          "evidence": ["d32-b006"]
+        }
+      ],
+      "timing": []
+    }
+  ]
+}
