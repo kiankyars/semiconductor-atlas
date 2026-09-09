@@ -118,3 +118,22 @@ The protected checkout, original checksum ledger, baseline, r3 release and
 scheduled runtime remain unchanged. No push, publication, deployment or scheduler
 change is part of this correction. Useful measured alerts, broader outcome coverage,
 calibrated forecasts and supply-demand scenarios remain open north-star gates.
+
+## Frozen implementation receipt
+
+Implementation commit: `3b9adf7ce2b3ca98ad52433c06f6ae2176ccb4cb`.
+The retained runtime `artifacts/2026-09-09-3b9adf7-frozen-runtime-v1.json` contains
+163 committed source files and 3,447,099 decoded payload bytes; bundle size is
+4,643,928 bytes, SHA-256
+`4bda7fb689152ad0beb55c3d5d25121946854ad5d30d1949479df47ec97a9380`.
+
+The isolated frozen producer loaded 19 project modules and reconstructed all
+310,259,712 successor bytes exactly. Receipt:
+`artifacts/2026-09-09-source-family-frozen-replay-v1.json`, 17,518 bytes, SHA-256
+`69591c619448a44812b47b55c9e83e98d8c2bb1f1f319196a0e8a7f2fdc1a5ff`.
+The separate current-producer replay receipt
+`artifacts/2026-09-09-source-family-direct-replay-v1.json` has SHA-256
+`9635ba4a093a736f14ba84a47b5587598ef5308c4407c68508415e9ad2b2c41b`.
+Both require literal parent, review and successor hashes; the input source bodies
+remain at their original protected-parent paths. Frozen source isolation does not
+claim a hermetic operating system or independent semantic adjudication.
