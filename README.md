@@ -763,6 +763,12 @@ the screen, two unresolved. This outcome-exposed source-statement comparison is 
 historical Atlas forecast, verified historical byte availability or a calibrated result.
 The original prospective comparator and core database remain unchanged.
 
+The [NIST 2024 announcement-population evidence](docs/nist_2024_announcement_population.md)
+now freezes all 65 calendar-2024 articles from the currently displayed CHIPS archive
+and retains every article body, including the 40 outside the preliminary-terms title
+filter. Complete project and outcome adjudication remain pending. This broadens
+the source population without claiming historical completeness or new forecast scores.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision

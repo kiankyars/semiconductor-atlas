@@ -180,6 +180,65 @@ class RetainedGuidanceTests(unittest.TestCase):
         self.assertEqual(1, result['denominators']['unresolved_cases'])
         self.assertEqual(0, result['denominators']['scored_cases'])
 
+    def test_substantive_outcomes_require_primary_review_for_every_disposition(self):
+        outcomes = ({'status': 'observed', 'low': '2021-08-01', 'high': '2021-08-31'},
+                    {'status': 'cancelled'},
+                    {'status': 'explicit_nonoccurrence_through', 'through': '2021-09-30'})
+        for disposition in ('eligible', 'unresolved', 'excluded'):
+            for outcome in outcomes:
+                for refs in (['note'], ['note', 'ref']):
+                    review = copy.deepcopy(self.review)
+                    review['roster'][0]['disposition'] = disposition
+                    review['outcomes'][0].update(outcome=outcome, source_reference_ids=refs)
+                    note = copy.deepcopy(review['source_references']['ref'])
+                    note.update(kind='screening_note', capture_finished_at=None, source_url=None, capture=None)
+                    review['source_references']['note'] = note
+                    with self.subTest(disposition=disposition, outcome=outcome, refs=refs):
+                        with self.assertRaisesRegex(ValueError, 'substantive outcomes require primary-source'):
+                            self.load(review)
+
+    def test_primary_outcomes_for_unresolved_and_excluded_cases_stay_unscored(self):
+        outcomes = ({'status': 'observed', 'low': '2021-08-01', 'high': '2021-08-31'},
+                    {'status': 'cancelled'},
+                    {'status': 'explicit_nonoccurrence_through', 'through': '2021-09-30'})
+        for disposition in ('unresolved', 'excluded'):
+            for outcome in outcomes:
+                review = copy.deepcopy(self.review)
+                review['roster'][0].update(disposition=disposition, target=None)
+                review['outcomes'][0]['outcome'] = outcome
+                with self.subTest(disposition=disposition, outcome=outcome):
+                    result = self.load(review)['diagnostic']
+                    self.assertEqual(1, result['denominators']['screened_cases'])
+                    self.assertEqual(1, result['denominators'][disposition + '_cases'])
+                    self.assertEqual(0, result['denominators']['scored_cases'])
+                    self.assertEqual({outcome['status']: 1}, result['screened_outcome_status_counts'])
+                    self.assertIsNone(result['cases'][0]['target_met'])
+
+    def test_unknown_outcomes_allow_screening_notes_or_no_references(self):
+        for disposition in ('eligible', 'unresolved', 'excluded'):
+            for refs in ([], ['note']):
+                review = copy.deepcopy(self.review)
+                review['roster'][0]['disposition'] = disposition
+                review['outcomes'][0].update(outcome={'status': 'unknown'}, source_reference_ids=refs,
+                                              source_document_date=None)
+                if refs:
+                    note = copy.deepcopy(review['source_references']['ref'])
+                    note.update(kind='screening_note', capture_finished_at=None, source_url=None, capture=None)
+                    review['source_references']['note'] = note
+                with self.subTest(disposition=disposition, refs=refs):
+                    result = self.load(review)['diagnostic']
+                    self.assertEqual({'unknown': 1}, result['screened_outcome_status_counts'])
+                    self.assertEqual(0, result['denominators']['scored_cases'])
+
+    def test_eligible_target_still_requires_primary_review_when_outcome_is_unknown(self):
+        review = copy.deepcopy(self.review)
+        review['source_references']['ref'].update(kind='screening_note', capture_finished_at=None,
+                                                  source_url=None, capture=None)
+        review['outcomes'][0].update(outcome={'status': 'unknown'}, source_reference_ids=[],
+                                      source_document_date=None)
+        with self.assertRaisesRegex(ValueError, 'eligible targets.*primary-source review'):
+            self.load(review)
+
     def test_capture_binding_cannot_be_changed_by_rehashing_ledger(self):
         for field, value in (('url', 'https://example.test/wrong'), ('http_status', 302),
                              ('finished_at', '2026-09-08T00:01:00Z'), ('sha256', '0' * 64),

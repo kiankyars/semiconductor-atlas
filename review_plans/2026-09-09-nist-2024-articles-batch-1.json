@@ -1,0 +1,1000 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v1",
+  "plan_id": "nist-2024-archive-articles-batch-1",
+  "review_scope_id": "nist-2024-complete-index-article-review",
+  "checked_facility_key": "nist-2024-multi-project-research-population",
+  "reviewed_at": "2026-09-09T02:53:49Z",
+  "expires_at": "2026-09-10T02:53:49Z",
+  "decision": "approved_exact_urls",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "minimum_interval_seconds": 2,
+  "timeout_seconds": 30,
+  "max_response_bytes": 2000000,
+  "policies": [
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-robots",
+      "url": "https://www.nist.gov/robots.txt",
+      "purpose": "access_policy",
+      "scope": "Exact NIST origin robots policy; no source request on normalized drift.",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd"
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-copyright",
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "purpose": "rights_policy",
+      "scope": "Exact NIST origin public-information and exception notice; no source request on normalized drift.",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v2",
+      "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46"
+    }
+  ],
+  "documents": [
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-12",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-amkor",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 12. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with Amkor Technology to Bring End-to-End Chip Production to the U.S."
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-13",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 13. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with Samsung Electronics to Solidify U.S. Leadership in Leading-Edge Semiconductor Production"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-14",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-texas",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 14. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with Texas Instruments to Expand U.S. Capacity of Current-Generation and Mature-Node Chips"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-15",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-sk-hynix",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 15. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with SK hynix to Advance U.S. Technological Leadership and Expand Capacity of Chips Crucial to the AI Supply Chain"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-16",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-awards-globalwafers",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 16. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Awards with GlobalWafers to Support Domestic Production of Silicon Wafers"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-17",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-preliminary-terms-bosch-advance-us",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 17. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Bosch to Advance U.S. Supply Chain Resiliency of Crucial Semiconductor Manufacturing Components"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-18",
+      "url": "https://www.nist.gov/news-events/news/2024/12/department-commerce-awards-chips-incentives-micron-idaho-and-new-york",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 18. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Department of Commerce Awards CHIPS Incentives to Micron for Idaho and New York Projects and Announces Preliminary Memorandum of Terms for Virginia DRAM Project to Secure Domestic Supply of Legacy Memory Chips"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-19",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announce-preliminary-terms-coherent-skywater",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 19. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announce Preliminary Terms with Coherent, SkyWater, and X-Fab to Advance U.S. Supply Chain Security"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-20",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-awards-absolics-and",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 20. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Awards with Absolics and Entegris to Support Development of Advanced Packaging Technology and Onshore Material for Leading-Edge Chip Production"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-21",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award-intel-advance",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 21. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with Intel to Advance U.S. Leading-Edge Chip Capacity and Create Tens of Thousands of Jobs"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-22",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-awards-bae-systems",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 22. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Awards with BAE Systems, Inc., and Rocket Lab to Expand Production of Chips Critical for U.S. National Security and Space Industry"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-23",
+      "url": "https://www.nist.gov/news-events/news/2024/11/chips-america-announces-300-million-funding-boost-us-semiconductor",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 23. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "CHIPS for America Announces up to $300 million in Funding to Boost U.S. Semiconductor Packaging"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-24",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 24. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with GlobalFoundries to Strengthen Essential Chip Supply for Key U.S. Industries Including Auto and Defense"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-25",
+      "url": "https://www.nist.gov/news-events/news/2024/11/chips-america-announces-new-proposed-285-million-award-chips-manufacturing",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 25. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "CHIPS for America Announces New Proposed $285 Million Award for CHIPS Manufacturing USA Institute for Digital Twins, Headquartered in North Carolina"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-26",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award-tsmc-arizona",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 26. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with TSMC Arizona to Secure U.S. Leadership in Advanced Semiconductor Technology"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-27",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-preliminary-terms-akash-systems",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 27. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Akash Systems to Support Development and Production of Emerging Semiconductor Technology"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-28",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-preliminary-terms-corning-and-powerex",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 28. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Corning and Powerex to Support U.S. Supply Chain Resiliency"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-29",
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-sunnyvale-ca-expected-location-second",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 29. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Sunnyvale, CA as Expected Location for Second CHIPS for America R&D Flagship Facility"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-30",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-ny-creates-albany-nanotech-complex",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 30. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces NY CREATES’ Albany NanoTech Complex as the first CHIPS for America R&D Flagship Facility and Planned Site for the estimated $825 Million CHIPS for America EUV Accelerator"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-31",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-opens-100-million-competition-accelerate-rd-and",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 31. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Opens $100 million Competition to Accelerate R&D and AI Technologies for Sustainable Semiconductor Materials"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-32",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-hemlock",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 32. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Hemlock Semiconductor to Significantly Expand U.S. Production Capacity of Semiconductor-Grade Polysilicon"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-33",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-opens-funding-competition-16-billion-accelerate",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 33. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Opens Funding Competition for Up to $1.6 Billion to Accelerate U.S. Semiconductor Advanced Packaging Technologies"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-34",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-infinera-support",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 34. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Infinera to Support Development of Semiconductor Technology Important for Communications and National Security"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-35",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-wolfspeed-solidify",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 35. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Wolfspeed to Solidify U.S. Technological Leadership in Silicon Carbide Manufacturing"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-36",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-edwards-vacuum",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 36. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Edwards Vacuum to Bring Specialized Dry Vacuum Pump Manufacturing to the U.S. for the First Time"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-37",
+      "url": "https://www.nist.gov/news-events/news/2024/10/chips-america-welcomes-new-chair-and-vice-chair-industrial-advisory",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 37. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "CHIPS for America Welcomes New Chair and Vice Chair to Industrial Advisory Committee (IAC)"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-38",
+      "url": "https://www.nist.gov/news-events/news/2024/10/chips-america-welcomes-new-and-returning-members-industrial-advisory",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 38. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "CHIPS for America Welcomes New and Returning Members to the Industrial Advisory Committee"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-39",
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-invest-100-million-accelerate-rd-and-ai",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 39. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration to Invest up to $100 Million to Accelerate R&D and AI Technologies for Sustainable Semiconductor Materials"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-40",
+      "url": "https://www.nist.gov/news-events/news/2024/09/us-national-science-foundation-and-department-commerce-announce-new-30m",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 40. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. National Science Foundation and Department of Commerce Announce a New $30M Funding Opportunity, Funded by the CHIPS & Science Act, to Prepare Talent for Semiconductor Jobs Nationwide"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-41",
+      "url": "https://www.nist.gov/news-events/news/2024/09/chips-america-releases-metis-data-exchange-ecosystem-supporting-metrology",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 41. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "CHIPS for America Releases METIS Data Exchange Ecosystem for Supporting Metrology Innovation"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-42",
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-launches-nstc-workforce-center-excellence",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 42. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Launches NSTC Workforce Center of Excellence with Expected $250 Million Investment"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-43",
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-announces-first-chips-commercial-fabrication",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 43. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces First CHIPS Commercial Fabrication Facilities Award with Polar Semiconductor, Establishing Independent American Foundry"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-44",
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-awards-nearly-5-million-small-businesses-bring",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 44. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Awards nearly $5 million to Small Businesses to Bring New CHIPS Technology to the Commercial Market"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-45",
+      "url": "https://www.nist.gov/news-events/news/2024/08/chips-america-announces-new-chips-metrology-community-practice",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 45. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "CHIPS for America Announces New CHIPS Metrology Community of Practice"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-46",
+      "url": "https://www.nist.gov/news-events/news/2024/08/biden-harris-administration-announces-preliminary-terms-hp-support",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 46. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with HP to Support Development and Commercialization of Cutting-Edge Semiconductor Technologies"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-47",
+      "url": "https://www.nist.gov/news-events/news/2024/08/biden-harris-administration-announces-preliminary-terms-texas-instruments",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 47. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Texas Instruments to Expand U.S. Current-Generation and Mature-Node Chip Capacity"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-48",
+      "url": "https://www.nist.gov/news-events/news/2024/08/us-department-commerce-announces-preliminary-terms-sk-hynix-advance-us-ai-0",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 48. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Announces Preliminary Terms with SK hynix to Advance U.S. AI Supply Chain Security"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-49",
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-preliminary-terms-amkor-technology",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 49. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Amkor Technology to Bring Cutting-Edge Advanced Packaging Technology to the U.S. for Leading-Edge Semiconductors"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-50",
+      "url": "https://www.nist.gov/news-events/news/2024/07/department-commerce-and-national-science-foundation-partner-advance",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 50. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Department of Commerce and National Science Foundation partner to advance semiconductor workforce development"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-51",
+      "url": "https://www.nist.gov/news-events/news/2024/07/dr-dev-palmer-joins-chips-america-research-and-development-office",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 51. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Dr. Dev Palmer Joins the CHIPS for America Research and Development Office"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-52",
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-preliminary-terms-globalwafers",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 52. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with GlobalWafers to Significantly Increase Production of Silicon Wafers in U.S."
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-53",
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-first-chips-america-rd-facilities-and",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 53. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces First CHIPS for America R&D Facilities and Selection Processes"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-54",
+      "url": "https://www.nist.gov/news-events/news/2024/07/us-department-commerce-names-lynelle-mckay-chief-portfolio-management",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 54. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Names Lynelle McKay as Chief Portfolio Management Officer of CHIPS Program Office"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-55",
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-invest-16-billion-establish-and-accelerate",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 55. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration to Invest Up to $1.6 Billion to Establish and Accelerate Domestic Capacity Advanced Packaging"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-56",
+      "url": "https://www.nist.gov/news-events/news/2024/07/us-department-commerce-announces-preliminary-terms-rogue-valley",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 56. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Announces Preliminary Terms with Rogue Valley Microdevices to Support the Construction of New Foundry"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-57",
+      "url": "https://www.nist.gov/news-events/news/2024/06/biden-harris-administration-announces-preliminary-terms-entegris-onshore",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 57. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Entegris to Onshore Supply Chain Materials for Leading-Edge Chip Production"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-58",
+      "url": "https://www.nist.gov/news-events/news/2024/06/us-department-commerce-announces-two-new-voluntary-company-commitments",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 58. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Announces Two New Voluntary Company Commitments to the CHIPS Women in Construction Framework"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-59",
+      "url": "https://www.nist.gov/news-events/news/2024/06/biden-harris-administration-announces-preliminary-terms-rocket-lab-expand",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 59. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Rocket Lab to Expand Production of Compound Semiconductors that Power Spacecrafts and Satellites"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-60",
+      "url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-absolics-support",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 60. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Absolics to Support Development of Glass Substrate Technology for Semiconductor Advanced Packaging"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2024-index-61",
+      "url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-polar-semiconductor",
+      "purpose": "source_document",
+      "scope": "Complete body for displayed archive position 61. Article scope, PMT status, conditions, projects and dates remain unadjudicated; not a physical-capacity claim.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Preliminary Terms with Polar Semiconductor to Establish an Independent American Foundry"
+      ]
+    }
+  ],
+  "notes": "All 65 canonical NIST article links below, in displayed-index order, split 50/15 only to respect the existing capture tool's per-plan bound. Exact index titles are identity checks, not claim truth or outcome labels. Raw HTML is local only; no core ingestion, training, public raw distribution, forecast scoring, permission emails or scheduler changes are authorized. Complete population selection is bound by the referenced review and roster hash; public raw redistribution remains false.",
+  "review_record": {
+    "path": "review_plans/2026-09-09-nist-2024-article-source-review.json",
+    "sha256": "e6f585e2ee9261a002f4a1da86eada8d11a41f07462d11e3d3f01b76e828d70c"
+  }
+}

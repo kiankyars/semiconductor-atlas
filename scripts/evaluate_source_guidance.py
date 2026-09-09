@@ -163,10 +163,11 @@ def load_review(path, expected_sha256, reference_root):
             if row['source_document_date'] is not None and not any(
                     references[key]['source_document_date'] == row['source_document_date'] for key in ids):
                 raise ValueError('case date lacks its reviewed source reference')
-            if case['disposition'] == 'eligible' and not (
-                    row is outcome and outcome['outcome']['status'] == 'unknown'):
+            needs_primary = ((row is case and case['disposition'] == 'eligible')
+                             or (row is outcome and outcome['outcome']['status'] != 'unknown'))
+            if needs_primary:
                 if not ids or any(references[key]['kind'] != 'reviewed_primary' for key in ids):
-                    raise ValueError('eligible substantive claims require primary-source review')
+                    raise ValueError('eligible targets and substantive outcomes require primary-source review')
     if used != set(references):
         raise ValueError('unreferenced or missing source evidence')
     return {'review_sha256': expected_sha256, 'review': review, 'diagnostic': result,

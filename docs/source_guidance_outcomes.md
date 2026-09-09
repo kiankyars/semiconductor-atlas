@@ -74,7 +74,10 @@ and rejects unmatched or dropped cases. Its report retains actual review and
 execution times. These checks authenticate bytes and reference membership; they do
 not mechanically prove the manual semantic decisions or historical availability.
 
-From this isolated checkout, verify without creating a new assessment:
+The direct command below is valid only with the original producer
+`1d4e9b2b3c508183474d6ddb4c45a765efa28065`. From the evolved checkout, use the
+frozen-runtime command at the end of this document. A producer mismatch is an
+intentional rejection; do not repin the old report to make it pass.
 
 ```sh
 python3 scripts/evaluate_source_guidance.py \
@@ -98,6 +101,26 @@ project-group and outcome-status counts. Multiple targets for the same project d
 not become independent projects. Source-document chronology is descriptive context
 only, even when reversed or uncertain. The adapter separately enforces the pinned
 manual evidence review; the pure arithmetic helper claims no evidence verification.
+
+The September 9 follow-up closes an evidence-gate defect before expanding the
+population: observed events, cancellations and explicit nonoccurrence now require
+reviewed-primary references for **every** disposition, including unresolved and
+excluded cases. Previously, only eligible cases received that check. Unknown
+outcomes may still use screening notes or no outcome references; eligible targets
+still require primary evidence. Conditional targets remain unresolved unless
+their applicability is separately established. No new arithmetic or outcome
+labels follow from this correction.
+
+The original three-project review contains no affected substantive outcomes on
+unresolved/excluded cases. It remains immutable and replays under its original
+producer. The post-fix frozen replay verified the same 35,855 report bytes and
+all 16 imported module origins; receipt
+`artifacts/2026-09-09-post-primary-gate-frozen-guidance-replay-v1.json` has SHA-256
+`d7daa46ccecab67f4a4b646c369dbc0827e68ed08a0d76dbe91c578942ff7c67`.
+
+The [broader population source screen](../review_plans/2026-09-09-project-population-source-screen.md)
+records why the Intel announcement leads were not acquired and why the current
+NIST archive is being enumerated separately from the mutable award portfolio.
 
 The substantive next gate remains broad, declared project coverage including
 non-survivors, version-specific historical evidence where available, actual
