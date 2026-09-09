@@ -495,6 +495,14 @@ the Bosch supplement stays unscored. Legacy batch and ingestion records remain
 explicitly distinct from modern HTTP capture. This is one retrospectively matched
 source-guidance result, not a pre-outcome Atlas prediction or calibrated forecast.
 
+The [Ohio One municipal construction report](new_albany_project_statements.md)
+adds a separately scoped adverse-project source report to schema 9: construction
+slowing, commitment reaffirmed and an announcement month supplied by the City
+index. Unknown physical dates keep these TEXT statements outside physical-current
+views. The original undated Ohio PMT case remains unresolved. This broadens source
+evidence beyond successful production reports, but does not establish a slowdown
+start date, cancellation, representative non-survivor coverage or forecast skill.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

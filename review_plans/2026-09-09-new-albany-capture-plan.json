@@ -1,0 +1,70 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v1",
+  "plan_id": "new-albany-ohio-construction-report-2026-09-09-v1",
+  "review_scope_id": "new-albany-two-fab-construction-pace-source-review",
+  "checked_facility_key": "nist2024-d70-intel-new-albany-new-fabs",
+  "reviewed_at": "2026-09-09T05:28:40.059606Z",
+  "expires_at": "2026-09-10T05:28:40.059606Z",
+  "decision": "approved_exact_urls",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "minimum_interval_seconds": 10,
+  "timeout_seconds": 25,
+  "max_response_bytes": 2000000,
+  "review_record": {
+    "path": "review_plans/2026-09-09-new-albany-source-review.json",
+    "sha256": "a2839a09ee1f0b9656c677916d910bf50b11e687820ca45a3a6e7cc53ab43cd3"
+  },
+  "policies": [
+    {
+      "id": "new-albany-silicon-robots",
+      "url": "https://siliconheartland.newalbanyohio.org/robots.txt",
+      "purpose": "access_policy",
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "new-albany-city-government",
+      "scope": "Exact project-origin robots; 10-second cadence, no sitemap or disallowed path acquisition.",
+      "media_types": ["text/plain"],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "c9085405c005ce48fabe41b4d196d4187c5c19f16e39c416dec7fff0d9441422"
+    },
+    {
+      "id": "new-albany-silicon-copyright",
+      "url": "https://siliconheartland.newalbanyohio.org/",
+      "purpose": "rights_policy",
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "new-albany-city-government",
+      "scope": "Exact reviewed City copyright/operator page. Internal local-review decision only; no affirmative open license or raw redistribution grant.",
+      "media_types": ["text/html"],
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "efdfaa80762f29ddafc97bab4270bc706204af68953ff2b581631dd8e505ea3f"
+    }
+  ],
+  "documents": [
+    {
+      "id": "new-albany-project-timeline",
+      "url": "https://siliconheartland.newalbanyohio.org/project-timeline-update/",
+      "purpose": "source_document",
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "new-albany-city-government",
+      "scope": "City response about the two-fab Ohio One program; source-native construction pace and commitment only, not cancellation or production attainment.",
+      "media_types": ["text/html"],
+      "policy_ids": ["new-albany-silicon-robots", "new-albany-silicon-copyright"],
+      "required_text": ["Project Timeline Update", "Ohio One", "slow the construction pace"]
+    },
+    {
+      "id": "new-albany-construction-updates",
+      "url": "https://siliconheartland.newalbanyohio.org/construction-updates/",
+      "purpose": "source_document",
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "new-albany-city-government",
+      "scope": "Exact municipal index linking the timeline article and reporting an announcement month; surrounding roadwork, imagery and funding are not fab timing or capacity.",
+      "media_types": ["text/html"],
+      "policy_ids": ["new-albany-silicon-robots", "new-albany-silicon-copyright"],
+      "required_text": ["Construction Updates", "Intel announced in July 2025", "two chip manufacturing plants"]
+    }
+  ],
+  "notes": "One bounded local acquisition of two independently authored City pages after both same-origin policies pass. Preserve all copyright and provenance. No images, linked resources, main-city source documents, broad crawling, model training, commercial reuse, claim acceptance, scoring, public raw content or scheduled collector activation. Main-city privacy is ancillary reviewed context, not a substituted same-origin rights policy."
+}

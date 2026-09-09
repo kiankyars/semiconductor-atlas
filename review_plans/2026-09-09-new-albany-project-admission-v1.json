@@ -1,0 +1,266 @@
+{
+  "format": "semiconductor-atlas-new-albany-project-admission-v1",
+  "decision": "accept_three_source_reported_project_statements",
+  "reviewed_at": "2026-09-09T05:45:40.301668Z",
+  "reviewer": "Codex main reviewer; complete visible text of both retained pages and complete selected project narratives read, including the index link, surrounding roadwork and image caption context.",
+  "prior_exposure": "Reviewer has already seen source discovery results, both retained City narratives, the frozen NIST Ohio PMT case and its complete original source narrative. This is exposed retrospective adjudication, not independent outcome labeling or a blind forecast evaluation.",
+  "interpretation": "Admit only the City-reported Ohio One two-fab construction slowdown, accompanying reaffirmed commitment and index-reported announcement month. The three-paragraph article narrative retains the mayoral attribution, demand contingency and campus scope; the complete index block supplies July 2025 and links the same article. Neither page identifies a publication date or physical slowdown start. February 2025 labels an infographic and 2024 labels copyright; roadwork dates and completion are unrelated to fab production. No individual fabs, cancellation, full pause, production attainment, numeric capacity, current physical state or PMT deadline outcome are established. Both pages belong to the same City publisher and are not independent physical observations. Interpretation is a reviewed source statement, not authenticated manufacturing truth.",
+  "parent_database_sha256": "1b9bae15c988e69479f4d82e70bbb6f0a95f89a4d9b5bbe73ac878b9873ee51a",
+  "project": {
+    "stable_key": "new-albany-city:ohio-one-two-fab-program-source-native-unresolved",
+    "label": "City-reported Ohio One two-fab program (canonical identity unresolved)",
+    "scope": "The two Intel chip plants and Ohio One campus in New Albany described together by the City; no allocation to individual fabs or assignment to the NIST project.",
+    "canonical_entity_id": null
+  },
+  "documents": {
+    "new-albany-project-timeline": {
+      "url": "https://siliconheartland.newalbanyohio.org/project-timeline-update/",
+      "title": "Project Timeline Update",
+      "sha256": "51312492b646ccc2ebc08adaf3fe97436326d6c6036b592cdfc90cb08d3dad74",
+      "bytes": 24799,
+      "retrieved_at": "2026-09-09T05:31:11.686176Z",
+      "published_at": null,
+      "body_path": "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-project-timeline.body",
+      "narrative": {
+        "start": 20641,
+        "end": 21980,
+        "sha256": "951e810ae7b57b82ea4df89e51b89babf832ca0b81e396c924fc0f2948b1b2fd",
+        "tag": "div"
+      }
+    },
+    "new-albany-construction-updates": {
+      "url": "https://siliconheartland.newalbanyohio.org/construction-updates/",
+      "title": "Construction Updates",
+      "sha256": "48856cac6ecff00a555b30ded0b69da399d6612d140b9f10c4fccb84ed5d7e08",
+      "bytes": 35280,
+      "retrieved_at": "2026-09-09T05:31:22.455443Z",
+      "published_at": null,
+      "body_path": "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-construction-updates.body",
+      "narrative": {
+        "start": 24339,
+        "end": 25057,
+        "sha256": "882b1ba86a6bbea06f54c33822b7f2d6421541c25c649f0fd3bcf7dafc22337d",
+        "tag": "div"
+      }
+    }
+  },
+  "rows": [
+    {
+      "key": "construction-pace",
+      "predicate": "source_reported.construction_pace",
+      "value": "slowing",
+      "support": [
+        "new-albany-project-timeline",
+        "new-albany-construction-updates"
+      ],
+      "scope_limit": "Municipal report of a construction-pace decision, not full suspension, cancellation, achieved production or a quantified capacity change."
+    },
+    {
+      "key": "project-commitment",
+      "predicate": "source_reported.project_commitment",
+      "value": "reaffirmed",
+      "support": [
+        "new-albany-project-timeline",
+        "new-albany-construction-updates"
+      ],
+      "scope_limit": "Commitment language accompanies the slowdown; it does not establish funding sufficiency, completion probability or current physical work."
+    },
+    {
+      "key": "slowdown-announcement-month",
+      "predicate": "source_reported.slowdown_announcement_month",
+      "value": "2025-07",
+      "support": [
+        "new-albany-construction-updates"
+      ],
+      "scope_limit": "Month of the Intel announcement as reported by the City index, not page publication, physical slowdown onset or a deadline; no day or midpoint is assigned."
+    }
+  ],
+  "packets": [
+    {
+      "path": "artifacts/2026-09-09-new-albany-policy-probe-v1",
+      "manifest_sha256": "9d99b589c0b20ef56c8bdc3f63c682196d68f0a655f629e9eacec12bfd151044",
+      "plan_path": "review_plans/2026-09-09-new-albany-policy-probe.json",
+      "kind": "robots_probe"
+    },
+    {
+      "path": "artifacts/2026-09-09-new-albany-rights-probe-v1",
+      "manifest_sha256": "397e9bb4e1719acb8eb1352a767c083a23fea5b89cf5da5c568a76114b32add3",
+      "plan_path": "review_plans/2026-09-09-new-albany-rights-probe.json",
+      "kind": "rights_probe"
+    },
+    {
+      "path": "artifacts/2026-09-09-new-albany-project-capture-v1",
+      "manifest_sha256": "9d758cfe6d95247d85673141df1ef953187ba24c551dc03a31a94045c5acaab4",
+      "plan_path": "review_plans/2026-09-09-new-albany-capture-plan.json",
+      "kind": "curated_capture"
+    }
+  ],
+  "access_review": {
+    "path": "review_plans/2026-09-09-new-albany-source-review.json",
+    "sha256": "a2839a09ee1f0b9656c677916d910bf50b11e687820ca45a3a6e7cc53ab43cd3"
+  },
+  "input_files": {
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/manifest.json": {
+      "sha256": "9d99b589c0b20ef56c8bdc3f63c682196d68f0a655f629e9eacec12bfd151044",
+      "bytes": 1342
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/probe.json": {
+      "sha256": "fee2cc7fdacb5d6c1b872f647a96a2cbaae589fd88f40cd5c3200401891efc8e",
+      "bytes": 1540
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/responses/new-albany-main-robots.attempt.json": {
+      "sha256": "13cfa4dad32f7fb47340d2bfe9c13ce7205f84984c81ebbb8e893210689e6754",
+      "bytes": 877
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/responses/new-albany-main-robots.body": {
+      "sha256": "76f080d50448f3a20d0d50a300ec2f3c1ed2d071f6197da63964a7bb58b16b87",
+      "bytes": 1164
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/responses/new-albany-main-robots.transport.json": {
+      "sha256": "60c1c9402c8b0086edb2599879daf39514e2e224178ea17733a043d49520e993",
+      "bytes": 12980
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/responses/new-albany-silicon-robots.attempt.json": {
+      "sha256": "84b835ccdf428a6a21b2ec34476425dcf7ca3b40b246a8fe4cb88306bd811b14",
+      "bytes": 956
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/responses/new-albany-silicon-robots.body": {
+      "sha256": "e1f61727e31265e3658734d2efdfcbc5a619670302a5fbb1cd7cc94de80115dc",
+      "bytes": 150
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/responses/new-albany-silicon-robots.transport.json": {
+      "sha256": "a113e142578bf63a1c11489835a18b5d9854fd7e51558fa46d2c3a31599bd9c4",
+      "bytes": 13146
+    },
+    "artifacts/2026-09-09-new-albany-policy-probe-v1/source_checks.json": {
+      "sha256": "789300bc6cfb6f159841252dbd320fc12e30ee21b98d966e4bd51db2a798e635",
+      "bytes": 2337
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/last_successful_checks.json": {
+      "sha256": "d22ada7589a9370ab9f5a69a9aaee93b8c1ee12e6724612730a657702491323c",
+      "bytes": 2653
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/manifest.json": {
+      "sha256": "9d758cfe6d95247d85673141df1ef953187ba24c551dc03a31a94045c5acaab4",
+      "bytes": 2239
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/plan.json": {
+      "sha256": "7634f38944b0efac0b97aac503dae4293325b131c8397101ce96cdcbeb6727e3",
+      "bytes": 3750
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-construction-updates.attempt.json": {
+      "sha256": "9939353307b4d272c94bb6b92347d18bdc658fa8f06e8b6663f272f43ebd2ec0",
+      "bytes": 1054
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-construction-updates.body": {
+      "sha256": "48856cac6ecff00a555b30ded0b69da399d6612d140b9f10c4fccb84ed5d7e08",
+      "bytes": 35280
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-project-timeline.attempt.json": {
+      "sha256": "092f895fb5993751bf7f702e0622831c078bdddb0693d50c38edb881cbfbfc8b",
+      "bytes": 1035
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-project-timeline.body": {
+      "sha256": "51312492b646ccc2ebc08adaf3fe97436326d6c6036b592cdfc90cb08d3dad74",
+      "bytes": 24799
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-silicon-copyright.attempt.json": {
+      "sha256": "3e19889e9d50bbd8543184dc5c85251542ac8ecc0eed7004ead3574d7a077164",
+      "bytes": 981
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-silicon-copyright.body": {
+      "sha256": "d3786d5cd0ff8feb690337c0a3cba932d638560755863e60a813c2d1f361decc",
+      "bytes": 65041
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-silicon-robots.attempt.json": {
+      "sha256": "7cf40a2e59876cea8b463d3a226915aaad3a749d0fe4f7f0f26c63d3d146da78",
+      "bytes": 946
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/responses/new-albany-silicon-robots.body": {
+      "sha256": "e1f61727e31265e3658734d2efdfcbc5a619670302a5fbb1cd7cc94de80115dc",
+      "bytes": 150
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/results.json": {
+      "sha256": "2621df64d7bcbe0d50592fa7a9adee743cc48950d3910dacaab27456f75c0608",
+      "bytes": 2066
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/review.json": {
+      "sha256": "a2839a09ee1f0b9656c677916d910bf50b11e687820ca45a3a6e7cc53ab43cd3",
+      "bytes": 4928
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/run.json": {
+      "sha256": "96159fc6d92feebd7d37e898d92a99e2f4c0f8f704624868dd9b6f869552932a",
+      "bytes": 528
+    },
+    "artifacts/2026-09-09-new-albany-project-capture-v1/source_checks.json": {
+      "sha256": "b169a10d1146ce415d1ccd96bce11fef480041c764a5ccbc3c47afda1aa0faea",
+      "bytes": 4742
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/manifest.json": {
+      "sha256": "397e9bb4e1719acb8eb1352a767c083a23fea5b89cf5da5c568a76114b32add3",
+      "bytes": 1013
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/probe.json": {
+      "sha256": "845b2ef42e9de21df8626311c7a5cd92145e80971ff319c9cb8e49390ceac7fb",
+      "bytes": 1907
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/responses/new-albany-main-privacy.attempt.json": {
+      "sha256": "9c918f069c97f885624c0b47b211aa469865dc660c7b691d56abbd7fed57c80f",
+      "bytes": 981
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/responses/new-albany-main-privacy.body": {
+      "sha256": "6daaec8ff86579101c3b163a98b07fe7d3232658abbf711961be3995ee006cb3",
+      "bytes": 716282
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/responses/new-albany-silicon-copyright.attempt.json": {
+      "sha256": "8e24f6ae892a478fc6ee259c7c7edfaa838aa22924c455c546ee39417e92e348",
+      "bytes": 985
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/responses/new-albany-silicon-copyright.body": {
+      "sha256": "496144e2e3ba6541e42ef2e0e5a478f14ee189faef3dc088c8157dbba1a19447",
+      "bytes": 65041
+    },
+    "artifacts/2026-09-09-new-albany-rights-probe-v1/source_checks.json": {
+      "sha256": "db728823686ffe2f02f136fca55213869794a5eba30ae5d644973c15bad62bb4",
+      "bytes": 2479
+    },
+    "review_plans/2026-09-09-new-albany-capture-plan.json": {
+      "sha256": "7634f38944b0efac0b97aac503dae4293325b131c8397101ce96cdcbeb6727e3",
+      "bytes": 3750
+    },
+    "review_plans/2026-09-09-new-albany-policy-probe.json": {
+      "sha256": "fee2cc7fdacb5d6c1b872f647a96a2cbaae589fd88f40cd5c3200401891efc8e",
+      "bytes": 1540
+    },
+    "review_plans/2026-09-09-new-albany-rights-probe.json": {
+      "sha256": "845b2ef42e9de21df8626311c7a5cd92145e80971ff319c9cb8e49390ceac7fb",
+      "bytes": 1907
+    },
+    "review_plans/2026-09-09-new-albany-source-review.json": {
+      "sha256": "a2839a09ee1f0b9656c677916d910bf50b11e687820ca45a3a6e7cc53ab43cd3",
+      "bytes": 4928
+    }
+  },
+  "boundaries": {
+    "current_physical_state_inferred": false,
+    "physical_effective_date_inferred": false,
+    "publication_date_inferred": false,
+    "cancellation_inferred": false,
+    "full_pause_inferred": false,
+    "completed_milestone_inferred": false,
+    "numeric_capacity_inferred": false,
+    "canonical_identity_assigned": false,
+    "individual_fab_allocation": false,
+    "independent_physical_corroboration": false,
+    "historical_system_knowledge_backdated": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "original_pmt_target_changed": false,
+    "original_pmt_outcome_changed": false,
+    "alert_generated": false,
+    "baseline_modified": false,
+    "scheduled_execution_changed": false,
+    "raw_redistribution": false,
+    "source_acquisition": false
+  }
+}

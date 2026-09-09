@@ -53,6 +53,7 @@ future interpreter upgrade needs an explicit compatibility review, not an ignore
 | `ase-k18b-milestones` | `admit_ase_k18b_milestones.py verify` | Reconstruct the entire existing milestone successor from its parent and frozen handoff; no live queue dependency |
 | `infineon-villach-output` | `admit_infineon_villach_output.py verify` | Reconstruct the entire existing schema-8 successor from its parent, explicit admission review and complete retained PDF/policy/visual evidence chain |
 | `tower-closure-milestones` | `admit_tower_closure_milestones.py verify` | Reconstruct the entire existing schema-8 milestone successor from its parent, admission review and complete retained HTML/policy evidence graph |
+| `new-albany-project-statements` | `admit_new_albany_project_statements.py verify` | Reconstruct the schema-9 municipal Ohio One source statements, preserving unknown physical dates and the complete policy/source graph |
 
 There is no arbitrary script/command route, acquisition, admission, study advancement, scoring or
 migration operation. Optional `--receipt` saves only a new local verification receipt. Each

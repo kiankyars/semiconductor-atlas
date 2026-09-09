@@ -45,6 +45,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/admit_ase_k18b_milestones.py": PROBE,
                       "scripts/admit_infineon_villach_output.py": PROBE,
                       "scripts/admit_tower_closure_milestones.py": PROBE,
+                      "scripts/admit_new_albany_project_statements.py": PROBE,
                       "scripts/admit_reviewed_source_rates.py": PROBE.replace(
                           "from semiconductor_atlas import marker",
                           "from semiconductor_atlas.reviewed_source_rates import marker"),
@@ -349,6 +350,37 @@ class FrozenRuntimeTests(unittest.TestCase):
                 child.assert_not_called()
         with self.assertRaises(ValueError):
             self.replay(operation='reviewed-source-rates admit', inputs=inputs)
+
+    def test_new_albany_replay_preserves_inputs_and_is_verify_only(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='new-albany-project-statements', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items():
+            expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='new-albany-project-statements', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='new-albany-project-statements admit', inputs=inputs)
+
+    def test_new_albany_replay_rejects_ambiguous_or_relative_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        changes = [{key: value for key, value in inputs.items() if key != 'expected-output-sha256'},
+                   {**inputs, 'parent': Path('relative.sqlite')},
+                   {**inputs, 'reference-root': self.root / '..' / 'escape'},
+                   {**inputs, 'source-body': self.root / 'unreviewed.body'},
+                   {**inputs, 'admit': True}]
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='new-albany-project-statements', inputs=changed)
+                child.assert_not_called()
 
     def test_source_rate_replay_uses_retained_script_and_importer(self):
         for name in ('scripts/admit_reviewed_source_rates.py', 'semiconductor_atlas/reviewed_source_rates.py'):

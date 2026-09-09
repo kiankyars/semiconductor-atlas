@@ -796,6 +796,13 @@ The legacy batch-clock provenance stays distinct from per-request HTTP evidence;
 no old diagnostic, core database or forecast vintage is rewritten. This is a
 retrospective issuer-guidance result, not measured Atlas forecast accuracy.
 
+The [Ohio One municipal construction report](docs/new_albany_project_statements.md)
+adds three schema-9 source statements: slower construction pace, reaffirmed
+commitment and an index-reported July 2025 announcement month. Both retained City
+pages share one source family and one unresolved source-native project. Physical
+effective dates and publication dates stay unknown; no cancellation, numeric
+capacity, existing PMT target/outcome change or forecast score is inferred.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision

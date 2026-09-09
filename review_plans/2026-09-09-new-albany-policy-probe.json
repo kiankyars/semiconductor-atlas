@@ -1,0 +1,30 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-review-v1",
+  "purpose": "Review the City's independently authored Silicon Heartland project reporting as a separate publisher from the stopped Ohio House route. The official City homepage links Silicon Heartland and that site links back. Only first direct robots requests are approved here. Stop serial processing on a request failure or redirect; no article capture, cookie session, TLS exception, retries, redistribution or model training is approved.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "minimum_interval_seconds": 1,
+  "entries": [
+    {
+      "id": "new-albany-silicon-robots",
+      "url": "https://siliconheartland.newalbanyohio.org/robots.txt",
+      "purpose": "access_policy",
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "new-albany-city-government",
+      "scope": "Robots for the exact public project reporting origin, not project outcome evidence or a reuse grant.",
+      "media_types": ["text/plain", "text/html"]
+    },
+    {
+      "id": "new-albany-main-robots",
+      "url": "https://newalbanyohio.org/robots.txt",
+      "purpose": "access_policy",
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "new-albany-city-government",
+      "scope": "Robots for the separate main-city origin before any privacy-policy capture.",
+      "media_types": ["text/plain", "text/html"]
+    }
+  ]
+}

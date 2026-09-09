@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Separate first direct policy review of the publicly indexed official origin https://house.ohio.gov. Search results for Ohio House news independently use this no-www hostname. The earlier www-origin probe failed TLS hostname validation before any HTTP response and remains a failed check; no certificate exception, HTTP downgrade, retry of that origin or manufactured redirect is allowed. The canonical-origin web reader likewise supplied no policy body. Approve one identified robots request only, stopping on denial, redirects or uncertainty. No source document, training or redistribution is approved.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "ohio-house-canonical-robots",
+    "url": "https://house.ohio.gov/robots.txt",
+    "purpose": "access_policy",
+    "company": "Intel",
+    "country_code": "US",
+    "source_family": "ohio-house-government",
+    "scope": "Separate official canonical-origin robots review only; no source-body approval or inferred project outcome.",
+    "media_types": ["text/plain", "text/html"]
+  }
+}

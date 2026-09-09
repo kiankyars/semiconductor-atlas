@@ -1,0 +1,70 @@
+{
+  "format": "semiconductor-atlas-new-albany-source-review-v1",
+  "reviewed_at": "2026-09-09T05:28:40.059606Z",
+  "reviewer": "Codex main reviewer: both exact retained robots bodies, complete project-origin copyright/operator page and complete City privacy policy read; no source-document acceptance is performed here.",
+  "decision": "approve_two_exact_city_pages_for_local_source_text_review_only",
+  "project_id": "nist2024-d70-intel-new-albany-new-fabs",
+  "independent_publisher_scope": "This is the City of New Albany's own project reporting and mayoral response, not a rehost of the stopped Ohio House article or a route around issuer restrictions. The main City site's Work navigation links Silicon Heartland, which links back and identifies City copyright. City reporting of Intel decisions is not independent physical measurement.",
+  "policy_captures": [
+    {
+      "path": "artifacts/2026-09-09-new-albany-policy-probe-v1",
+      "manifest_sha256": "9d99b589c0b20ef56c8bdc3f63c682196d68f0a655f629e9eacec12bfd151044",
+      "review": "Both origins returned HTTP 200 with verified TLS and no redirects. Their wildcard robots rules leave the selected public article, index, homepage and privacy paths open and request a 10-second crawl delay. No sitemap, search, admin path or listed resource is acquired. The project robots sitemap line has a trailing Crawl token; it is not followed or treated as another rule."
+    },
+    {
+      "path": "artifacts/2026-09-09-new-albany-rights-probe-v1",
+      "manifest_sha256": "397e9bb4e1719acb8eb1352a767c083a23fea5b89cf5da5c568a76114b32add3",
+      "review": "The exact project homepage asserts City of New Albany copyright and all rights reserved. Its complete visible text and links were reviewed; no separate content terms or open license were identified. The complete main-City privacy policy concerns visitor data, public records and external links; it is ancillary context, not a copyright license or a same-origin policy substitution. No forms, personal submissions, cookies, scripts or third-party resources are used."
+    }
+  ],
+  "bound_policies": [
+    {
+      "url": "https://siliconheartland.newalbanyohio.org/robots.txt",
+      "body_sha256": "e1f61727e31265e3658734d2efdfcbc5a619670302a5fbb1cd7cc94de80115dc",
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "c9085405c005ce48fabe41b4d196d4187c5c19f16e39c416dec7fff0d9441422"
+    },
+    {
+      "url": "https://siliconheartland.newalbanyohio.org/",
+      "body_sha256": "496144e2e3ba6541e42ef2e0e5a478f14ee189faef3dc088c8157dbba1a19447",
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "efdfaa80762f29ddafc97bab4270bc706204af68953ff2b581631dd8e505ea3f"
+    }
+  ],
+  "rights": {
+    "license_status": "unknown_no_open_license_identified",
+    "copyright_holder": "City of New Albany",
+    "access_class": "public_without_login",
+    "local_use": "Bounded internal research decision to retain these two exact publicly accessible municipal pages for source verification; not a publisher-granted permission or a blanket authorization for automated collection.",
+    "public_output": "Operational metadata, source attribution and original reviewer analysis only; no raw HTML, images, attachments or substantial publisher text.",
+    "raw_redistribution": false,
+    "model_training": false,
+    "third_party_resources": false,
+    "commercial_reuse_approved": false
+  },
+  "documents": [
+    {
+      "id": "new-albany-project-timeline",
+      "url": "https://siliconheartland.newalbanyohio.org/project-timeline-update/",
+      "scope": "City response concerning the two Ohio chip plants and the Ohio One campus in New Albany. Review construction pace only; preserve commitment language and do not infer cancellation, full pause, achieved output, exact event day or a new original-PMT target."
+    },
+    {
+      "id": "new-albany-construction-updates",
+      "url": "https://siliconheartland.newalbanyohio.org/construction-updates/",
+      "scope": "Exact public construction index containing the project-timeline link and July 2025 announcement wording. Roadwork dates, completion, funding and February 2025 infographic caption must not become fab production or source-publication dates. No linked roadwork pages, imagery or attachments are acquired."
+    }
+  ],
+  "acquisition_boundary": {
+    "minimum_interval_seconds": 10,
+    "timeout_seconds": 25,
+    "max_response_bytes": 2000000,
+    "redirects": false,
+    "retries": false,
+    "cookies": false,
+    "discovery": false,
+    "claim_acceptance": false,
+    "delivery_eligible": false,
+    "scheduled_execution": false
+  },
+  "validity_note": "One-day internal review window, not a publisher permission period. Recheck both bound same-origin policy hashes before these exact pages. Changed or failed policy checks require new review, never automatic renewal. Preserve all frozen cases, targets and prior outcomes."
+}
