@@ -138,3 +138,27 @@ admission, historical target replay, frozen-runtime and reader suite passed all
 187 tests. Web generation passed 12 tests, and viewer state/script checks passed
 21 tests. Those script checks are not browser-rendering QA; this background,
 local-only continuation did not open a browser or deploy a site.
+
+The implementation is committed as `3d414ee4cb6d8fce3ea5504de529079b9a35b44c`.
+Its frozen runtime is `artifacts/2026-09-09-3d414ee-frozen-runtime-v1.json`:
+159 source files, 3,418,526 decoded payload bytes, 4,604,643 bundle bytes,
+SHA-256 `b31fbe13a642021fabd9f4b4a222df1b7d5eb682c07c5adf5e1eb9612756e700`.
+The isolated frozen producer reproduced the complete selected database exactly,
+using 25 project modules. Replay receipt:
+`artifacts/2026-09-09-frozen-bosch-sample-production-replay-v2.json`, 5,343 bytes,
+SHA-256 `8a194bdb61df7d05f981039705186a2f9f0c74be91d89e8f9405a28d8200d74f`.
+
+## Outstanding publisher-family correction
+
+A separate read-only audit of the selected successor found an inherited NIST
+family split. Documents `b357aa1e-1f3e-5bff-a831-db6ba5c136df` and
+`e54850f0-e411-57e9-8f6e-819385101e86` share the exact Fab 2 source URL,
+retrieval clock `2026-07-18T01:54:47Z`, and SHA-256
+`0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c`,
+but belong to `reviewed-source-project-targets` and
+`us-official-semiconductor-awards`. This is one publisher, not independent evidence.
+The Bosch admission adds no family and does not repair those immutable inherited
+assignments. The existing project census uses the former label as an importer-route
+marker, so a correction must preserve its historical population and cutoff behavior.
+A reviewed, knowledge-time-aware publisher-family correction is the next concrete
+provenance gate; editing old family rows in place would destroy replay fidelity.
