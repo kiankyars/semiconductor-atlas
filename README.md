@@ -748,6 +748,11 @@ JSONL; evidence and capacity CSV; GeoJSON; source metadata; attribution; summary
 Its 20-quarter baseline forecast is deterministic and
 parameter-fingerprinted, but every coefficient and ramp curve is labelled `assumption_not_fact`.
 It has not been calibrated or backtested and is not approved for investment use.
+The [capacity/event scope gate](docs/capacity_scope_review.md) now requires an
+explicit evidence-bound project/phase review before a candidate production ramp
+can be emitted. The retained Amkor rates are currently deferred, not converted
+into expanded-project forecasts or zero physical capacity. Shared documents and
+dependencies alone are not semantic scope approval.
 The CLI builds from a private SQLite backup, so forecasts, alerts, claims, source inputs, and coverage
 share one database snapshot without holding a long read lock on the live store.
 

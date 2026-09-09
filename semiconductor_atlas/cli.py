@@ -954,7 +954,45 @@ def _summary(args: argparse.Namespace) -> dict[str, object]:
         connection.close()
 
 
+def _bounded_scope_bytes(path: Path) -> bytes:
+    with path.open("rb") as stream:
+        raw = stream.read(20_000_001)
+    if len(raw) > 20_000_000:
+        raise ValueError("forecast scope input exceeds the 20 MB bound")
+    return raw
+
+
+def _review_forecast_scope(args: argparse.Namespace) -> dict[str, object]:
+    from .forecast_scope import canonical_bytes, create_scope_review
+    from .milestone_benchmark import write_new_bytes
+    from .evidence_dossier import readonly_database
+
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError("duplicate scope decision JSON key")
+            result[key] = value
+        return result
+
+    decisions = json.loads(_bounded_scope_bytes(args.decisions), object_pairs_hook=unique)
+    database_path = args.database.absolute()
+    resolved_database = database_path.resolve()
+    if args.output.resolve() in {Path(str(resolved_database) + suffix) for suffix in ("", "-wal", "-shm", "-journal")}:
+        raise ValueError("scope output cannot be the database or a SQLite sidecar")
+    with readonly_database(database_path) as connection:
+        review = create_scope_review(connection, as_of=args.as_of,
+            recorded_at=args.recorded_at, reviewer=args.reviewer, decisions=decisions)
+        raw = canonical_bytes(review)
+        write_new_bytes(args.output, raw)
+        return {"path": str(args.output.absolute()), "bytes": len(raw),
+                "sha256": hashlib.sha256(raw).hexdigest(), "reviewed_at": review["reviewed_at"]}
+
+
 def _release(args: argparse.Namespace) -> dict[str, object]:
+    if (args.forecast_scope_review is None) != (args.forecast_scope_review_sha256 is None):
+        raise ValueError("forecast scope review and trusted SHA-256 must be supplied together")
+    scope_raw = _bounded_scope_bytes(args.forecast_scope_review) if args.forecast_scope_review is not None else None
     connection = _existing_database(args.database)
     try:
         with tempfile.TemporaryDirectory(
@@ -975,6 +1013,8 @@ def _release(args: argparse.Namespace) -> dict[str, object]:
                     recorded_at=args.recorded_at,
                     forecast_start=date.fromisoformat(args.forecast_start),
                     claims=claims,
+                    scope_review=scope_raw,
+                    scope_review_sha256=args.forecast_scope_review_sha256,
                 )
                 alerts = detect_revision_alerts(
                     snapshot_connection,
@@ -990,6 +1030,8 @@ def _release(args: argparse.Namespace) -> dict[str, object]:
                     "experimental_forecasts.csv": forecast_csv(results),
                     "experimental_forecasts.jsonl": forecast_jsonl(results),
                 }
+                if scope_raw is not None:
+                    extras["experimental_capacity_scope_review.json"] = scope_raw
                 manifest = write_release(
                     snapshot_connection,
                     args.output,
@@ -1300,6 +1342,16 @@ def build_parser() -> argparse.ArgumentParser:
     viewer.add_argument("--port", type=int, default=0, help="loopback port; default chooses an unused port")
     viewer.set_defaults(handler=_evidence_viewer)
 
+    scope_review = subparsers.add_parser("review-forecast-scope",
+        help="retain explicit capacity/event/project/phase decisions with current local review clock")
+    scope_review.add_argument("--database", required=True, type=Path)
+    scope_review.add_argument("--decisions", required=True, type=Path)
+    scope_review.add_argument("--reviewer", required=True)
+    scope_review.add_argument("--as-of", required=True, type=_date)
+    scope_review.add_argument("--recorded-at", required=True, type=_timestamp)
+    scope_review.add_argument("--output", required=True, type=Path)
+    scope_review.set_defaults(handler=_review_forecast_scope)
+
     release = subparsers.add_parser(
         "release",
         help="write a deterministic evidence, map, alert, and forecast bundle",
@@ -1309,6 +1361,8 @@ def build_parser() -> argparse.ArgumentParser:
     release.add_argument("--as-of", required=True, type=_date)
     release.add_argument("--recorded-at", required=True, type=_timestamp)
     release.add_argument("--forecast-start", required=True, type=_date)
+    release.add_argument("--forecast-scope-review", type=Path)
+    release.add_argument("--forecast-scope-review-sha256")
     release.set_defaults(handler=_release)
     return parser
 

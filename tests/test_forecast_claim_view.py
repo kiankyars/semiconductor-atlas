@@ -31,7 +31,8 @@ class ForecastClaimViewTests(unittest.TestCase):
 
     def forecast(self, *, as_of=AS_OF, recorded_at=RECORDED, claims=None):
         return analytics.forecast_current_capacity(self.connection, as_of=as_of, recorded_at=recorded_at,
-            forecast_start=date(2026, 7, 1), claims=claims)
+            forecast_start=date(2026, 7, 1), claims=claims,
+            **self.fixture._scope_review(as_of=as_of, recorded_at=recorded_at))
 
     def database_rows(self):
         return {row[0]: [tuple(item) for item in self.connection.execute(f'SELECT * FROM "{row[0]}" ORDER BY rowid')]

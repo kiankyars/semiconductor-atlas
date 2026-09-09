@@ -429,6 +429,13 @@ caller-supplied claims cannot bypass either cutoff, and linked cancellation evid
 ignored in favor of an expected ramp. The next gate is an executed interval comparator with
 explicit event identities and later outcome review, not an invented point-date training cohort.
 
+The [September 9 capacity/event scope gate](capacity_scope_review.md) separates
+provenance candidates from explicit, hash-bound project/phase/event approval.
+It removes two unsupported current Amkor scenario series while retaining both
+announced rates and the unresolved expanded-project correspondence. Accepted
+synthetic pairs still produce twenty-quarter scenarios; no real scope approval,
+capacity loss or improvement in forecast accuracy is inferred.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,
