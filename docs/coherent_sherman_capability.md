@@ -145,3 +145,16 @@ No browser-rendered QA or deployment was performed in this backend/evidence turn
 The parent checkout and scheduled runtime remain unchanged; nothing was pushed
 or published. Independent manufacturing outcomes, useful measured alerts and
 calibrated forecasts remain open north-star gates.
+
+## Frozen committed replay
+
+Implementation commit `80c122ab2b6424650fb35948d3ee0879c6b6c885` is retained in
+`artifacts/2026-09-09-80c122a-frozen-runtime-v1.json`: 156 source files,
+3,386,422 decoded payload bytes and 4,560,948 bundle bytes, SHA-256
+`6f5cccd7b0fb6cb0d23b343b620284c8e4dba9a7cf43cea1a4c52220f21551bc`.
+Its isolated `coherent-sherman-capability` verification matched the complete v2
+successor. All 25 imported project modules resolved inside the retained runtime.
+The new-only receipt is
+`artifacts/2026-09-09-frozen-coherent-capability-replay-v2.json`, 6,057 bytes,
+SHA-256 `a1a86b3c8ff150f86162cd91af30cc8d160b35878dcb7781daa294a5a44fd0b0`.
+This retains project code, not source payloads or a hermetic operating system.
