@@ -162,9 +162,9 @@ def _context(guidance_day, outcome_day, outcome):
     if guidance_day is not None and outcome_day is not None:
         order = "guidance_before_outcome_document" if guidance_day < outcome_day else (
             "same_reported_document_day" if guidance_day == outcome_day else "outcome_document_before_guidance")
-    _, low, high = _outcome(outcome)
+    status, low, high = _outcome(outcome)
     def relation(day):
-        if day is None or high is None:
+        if status not in {"observed", "observed_by"} or day is None or high is None:
             return "unknown"
         if high < day:
             return "before_reported_document_day"

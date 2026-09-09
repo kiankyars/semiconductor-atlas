@@ -189,6 +189,45 @@ class SourceTargetArithmeticTests(unittest.TestCase):
 
 
 class SourceGuidanceRosterTests(unittest.TestCase):
+    def test_nonoccurrence_cutoff_never_becomes_an_occurrence_date(self):
+        for disposition in ("eligible", "unresolved", "excluded"):
+            for target in (DEADLINE, INTERVAL):
+                for guidance_day in (None, "2021-12-30", "2021-12-31", "2022-01-01"):
+                    for outcome_day in (None, "2021-12-30", "2021-12-31", "2022-01-01"):
+                        with self.subTest(disposition=disposition, target=target,
+                                          guidance_day=guidance_day, outcome_day=outcome_day):
+                            case, review = fixture(disposition=disposition, target=target,
+                                outcome={"status": "explicit_nonoccurrence_through",
+                                         "through": "2021-12-31"})
+                            case["source_document_date"] = guidance_day
+                            review["source_document_date"] = outcome_day
+                            report = score([case], [review])
+                            row = report["cases"][0]
+                            context = row["source_date_context"]
+                            self.assertEqual("unknown", context["outcome_relative_to_guidance_document"])
+                            self.assertEqual("unknown", context["outcome_relative_to_outcome_document"])
+                            order = "unknown"
+                            if guidance_day is not None and outcome_day is not None:
+                                order = "guidance_before_outcome_document" if guidance_day < outcome_day else (
+                                    "same_reported_document_day" if guidance_day == outcome_day else
+                                    "outcome_document_before_guidance")
+                            self.assertEqual(order, context["source_document_order"])
+                            expected = False if disposition == "eligible" else None
+                            self.assertIs(expected, row["target_met"])
+                            self.assertEqual(int(disposition == "eligible"), report["denominators"]["scored_cases"])
+
+    def test_occurrence_context_stays_distinct_from_nonoccurrence_at_the_same_bound(self):
+        for outcome, expected in ((observed("2021-12-31"), "on_reported_document_day"),
+                (observed_by("2021-12-31"), "on_or_before_reported_document_day"),
+                ({"status": "explicit_nonoccurrence_through", "through": "2021-12-31"}, "unknown"),
+                ({"status": "cancelled"}, "unknown"), ({"status": "unknown"}, "unknown")):
+            with self.subTest(outcome=outcome):
+                case, review = fixture(outcome=outcome)
+                case["source_document_date"] = review["source_document_date"] = "2021-12-31"
+                row = score([case], [review])["cases"][0]
+                self.assertEqual(expected, row["source_date_context"]["outcome_relative_to_guidance_document"])
+                self.assertEqual(expected, row["source_date_context"]["outcome_relative_to_outcome_document"])
+
     def test_observed_by_retains_all_cases_but_scores_only_established_boolean_results(self):
         pairs = [fixture("a", outcome=observed_by("2021-12-31")),
                  fixture("b", outcome=observed_by("2022-01-01")),

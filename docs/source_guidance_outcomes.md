@@ -142,6 +142,44 @@ pre-outcome forecast vintages, later comparable outcomes and held-out evaluation
 This result supplies one real evidence/arithmetic path; it does not close that gate
 or justify fitting a model on these materials.
 
+A subsequent chronology correction keeps `explicit_nonoccurrence_through` separate
+from an observed event. Its cutoff can establish a missed target, but is not an
+occurrence date: both event-relative-to-document fields now remain `unknown`.
+The ordering of the two reported source-document dates is still retained. Target
+scoring, screened denominators, and observed/observed-by semantics are unchanged.
+Historical reports remain bound to their original producers; this correction does
+not rewrite an old review, issue clock or result.
+
+The before/after check covers 21,000 synthetic reports. Only 4,032 nonoccurrence
+contexts change; the complete remaining output, including all scoring arithmetic
+and denominators, matches. All three committed generic reviews (59 case rows,
+not independent projects) produce unchanged arithmetic/context results. None uses
+the affected status. This comparison does not revalidate their evidence graphs.
+Receipt `artifacts/2026-09-09-nonoccurrence-chronology-check-v1.json`, SHA-256
+`f438de56a96c8b29a9d433272be673fed274deafa852eefe3bb13fde41fc397b`, records the
+old/new source hashes and each reviewed file. A separate agent identified the
+defect and checked the target arithmetic independently; the main reviewer wrote
+the exhaustive differential checker.
+
+The prior Dresden/Kulim report separately passed its full evidence-bound frozen
+replay under `e33d6ccdbd40017c6c595b78952072c6b141c812`: all 50,300 report bytes
+matched and all 16 imported project modules resolved inside that runtime.
+Receipt `artifacts/2026-09-09-post-chronology-frozen-replay-v1.json` has SHA-256
+`617cf4cb7ee7c90461fd6c4f2230a6bf49a4214a1b7f78354633fbf63b4e7093`.
+
+The [institutional timing-data screen](../review_plans/2026-09-09-institutional-timing-data-screen.md)
+found no scorable same-event pair in ECA's ten-project audit sample. No empty
+benchmark or new outcome label was created. Its separate aggregate-production
+lead is not a facility-capacity forecast or an approved new workstream.
+
+Validation after the correction: 2,245 core tests ran (2,244 passed and one
+expected optional-payload skip), all 12 web tests passed, and the 102-test focused
+scorer/adapter/frozen-runtime suite passed. Offline source-distribution and wheel
+builds succeeded; the wheel's scorer bytes match the checked source. The selected
+schema-12 database and protected parent database, collector, map template,
+checksum ledger and r3 archive retain their previous exact hashes. No source
+acquisition, core admission, scheduled change, push or publication was performed.
+
 The original prospective comparator was separately re-executed under its unchanged
 producer `0a78d259d4134eb47276bc8afecbed05b1f9cd51`; all 871,408 vintage bytes matched.
 Receipt `artifacts/2026-09-09-post-diagnostic-guidance-replay-v1.json` has SHA-256
