@@ -452,6 +452,13 @@ measurement interval and wafer diameter. Schema 9 preserves complete-period quan
 physical-capacity bases. The exact successor reconstruction passes; the figure is not independently
 measured finished-wafer output, installed capacity, a dated monthly total or a forecast/outcome pair.
 
+The [September 9 source-guidance diagnostic](source_guidance_outcomes.md) supplies an
+executed retained-evidence path from a project target to a later issuer-reported outcome:
+one new Villach fab startup month contained in its target fiscal quarter, with two other
+screened candidates unresolved. This is outcome-exposed descriptive arithmetic, not
+historical system forecasting, verified historical availability, an independent outcome
+population or the Phase 4 exit gate. Existing prospective vintages remain unchanged.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

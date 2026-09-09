@@ -30,6 +30,8 @@ OPERATIONS = {
     "target-population": ("scripts/evaluate_project_targets.py", "verify", ("frozen",)),
     "guidance-interval": ("scripts/guidance_interval_baseline.py", "verify",
                           ("database", "vintage", "trusted-vintage-sha256")),
+    "source-guidance-diagnostic": ("scripts/evaluate_source_guidance.py", "verify",
+                                   ("review", "review-sha256", "reference-root", "report", "report-sha256")),
     "tsmc-source-quantities": ("scripts/admit_tsmc_source_quantities.py", "verify",
                               ("parent", "review", "source-body", "output",
                                "expected-review-sha256", "expected-output-sha256")),
@@ -47,6 +49,8 @@ OPERATIONS = {
                                "expected-review-sha256", "expected-output-sha256")),
 }
 DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
+                 ("source-guidance-diagnostic", "review-sha256"),
+                 ("source-guidance-diagnostic", "report-sha256"),
                  ("tsmc-source-quantities", "expected-review-sha256"),
                  ("tsmc-source-quantities", "expected-output-sha256"),
                  ("ase-k18b-milestones", "expected-review-sha256"),
@@ -163,6 +167,8 @@ def run_verified(bundle, *, expected_sha256, expected_commit, operation, inputs,
         if not path.is_absolute() or ".." in path.parts:
             raise ValueError("replay evidence inputs require explicit absolute paths")
         arguments.extend(["--" + field, str(path)])
+    if operation == "source-guidance-diagnostic":
+        arguments = [*arguments[1:7], command, *arguments[7:]]
     working_directory = Path(working_directory).absolute()
     descriptor = runtime._directory(working_directory)
     os.close(descriptor)

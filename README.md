@@ -756,6 +756,13 @@ so later package and migration changes need not invalidate the old vintage. Sepa
 twelve-fab quantity tables but admits no cells: direct source acquisition is not approved, and
 estimated maximum output must not be relabeled as installed, qualified or usable capacity.
 
+The separate [retrospective source-guidance diagnostic](docs/source_guidance_outcomes.md)
+now compares one retained Infineon new-Villach-fab target with its later issuer-reported
+startup month; the month is contained in the target quarter. Three candidates remain in
+the screen, two unresolved. This outcome-exposed source-statement comparison is not a
+historical Atlas forecast, verified historical byte availability or a calibrated result.
+The original prospective comparator and core database remain unchanged.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision

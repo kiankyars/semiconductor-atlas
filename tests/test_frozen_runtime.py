@@ -39,6 +39,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "semiconductor_atlas/adapters/__init__.py": "",
                       "scripts/record_realized_fab_cohort.py": PROBE,
                       "scripts/guidance_interval_baseline.py": PROBE,
+                      "scripts/evaluate_source_guidance.py": PROBE,
                       "scripts/admit_tsmc_source_quantities.py": PROBE,
                       "scripts/admit_ase_k18b_milestones.py": PROBE,
                       "scripts/admit_infineon_villach_output.py": PROBE,
@@ -147,6 +148,36 @@ class FrozenRuntimeTests(unittest.TestCase):
                     self.replay(operation="tsmc-source-quantities", inputs={**inputs, key: invalid})
         with self.assertRaises(ValueError):
             self.replay(operation="tsmc-source-quantities admit", inputs=inputs)
+
+    def test_source_guidance_diagnostic_replay_keeps_read_only_argument_order(self):
+        inputs = {'review': self.root / 'review.json', 'review-sha256': 'a' * 64,
+                  'reference-root': self.root, 'report': self.root / 'report.json',
+                  'report-sha256': 'b' * 64}
+        result = self.replay(operation='source-guidance-diagnostic', inputs=inputs)
+        self.assertEqual(result['operation_receipt']['arguments'], [
+            '--review', str(inputs['review']), '--review-sha256', 'a' * 64,
+            '--reference-root', str(self.root), 'verify', '--report', str(inputs['report']),
+            '--report-sha256', 'b' * 64])
+        for key in ('review-sha256', 'report-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--create'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='source-guidance-diagnostic', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        for changes in ({**inputs, 'output': self.root / 'new.json'},
+                        {**inputs, 'review': 'relative.json'},
+                        {k: v for k, v in inputs.items() if k != 'report-sha256'}):
+            with self.assertRaises(ValueError):
+                self.replay(operation='source-guidance-diagnostic', inputs=changes)
+        with self.assertRaises(ValueError):
+            self.replay(operation='source-guidance-diagnostic create', inputs=inputs)
+
+    def test_source_guidance_diagnostic_replay_uses_committed_script(self):
+        (self.repository / 'scripts/evaluate_source_guidance.py').write_text("raise RuntimeError('changed')\n")
+        inputs = {'review': self.root / 'review.json', 'review-sha256': 'a' * 64,
+                  'reference-root': self.root, 'report': self.root / 'report.json',
+                  'report-sha256': 'b' * 64}
+        self.assertEqual('committed', self.replay(operation='source-guidance-diagnostic', inputs=inputs)['operation_receipt']['marker'])
 
     def test_guidance_replay_rejects_missing_malformed_or_option_like_digest_before_execution(self):
         inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
