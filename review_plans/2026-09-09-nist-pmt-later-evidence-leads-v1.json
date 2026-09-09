@@ -1,0 +1,799 @@
+{
+  "format": "semiconductor-atlas-pmt-later-evidence-leads-v1",
+  "screened_at": "2026-09-09T04:05:22Z",
+  "population_review": {
+    "path": "review_plans/2026-09-09-nist-pmt-body-review-v1.json",
+    "bytes": 4099,
+    "sha256": "714ddc8a245efe714294241d0b5fc493d956168f6071cf9164b3f1c79b0a1aec"
+  },
+  "scope": "Bounded outcome-exposed later-evidence research across every included manufacturing group. Source dates are publisher labels as reviewed, not proof of historical availability. This research ledger is not admissible primary outcome evidence; source bodies for leads are not pinned here. Retained NIST archive positions refer to the separate exact-byte 2024 or 2025 packets, not new source acquisition.",
+  "search_scope": "Three collaborators each reverified the frozen population and searched all assigned groups: original positions 12-33 (9 groups), 34-55 (13), 56-76 (23). Sources included all matching retained NIST narratives and targeted official NIST/Commerce, state/local government and permitted issuer searches. Intel/GF issuer and SEC routes excluded; X-Fab issuer access excluded. Access failures and rights restrictions were not bypassed. Search silence and mutable-directory omissions are not negative evidence.",
+  "limitations": [
+    "Manual, outcome-exposed screening; not independent or blind and no claim of exhaustive search recall.",
+    "Unretained leads require exact source/policy review, successful capture where permitted, semantic correspondence review and separate admission before use as outcomes.",
+    "Two projects can share one source event; component attainment is not whole-project attainment.",
+    "Paused, cancelled, complete, operating and new guidance are distinct; no machine outcome labels or forecast scores are produced.",
+    "The restricted IEDC guidance lead predates the prospective September freeze. Preserve the old vintage and disclose coverage gaps rather than backfilling knowledge."
+  ],
+  "sources": [
+    {
+      "id": "bosch",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million",
+      "source_date_label": "2026-07-13",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "micron2025",
+      "url": "https://www.nist.gov/news-events/news/2025/06/president-trump-secures-200b-investment-micron-technology-memory-chip",
+      "source_date_label": "2025-06-12",
+      "reading_status": "search_result_only",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "coherent",
+      "url": "https://www.nist.gov/news-events/news/2026/06/department-commerces-chips-program-announces-letter-intent-coherent-50",
+      "source_date_label": "2026-06-16",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "coherent_profile",
+      "url": "https://www.nist.gov/chips/coherent-texas-sherman",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "skywater",
+      "url": "https://www.skywatertechnology.com/skywater-strengthening-americas-semiconductor-foundation/",
+      "source_date_label": "2026-03-12",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "xfab",
+      "url": "https://www.nist.gov/chips/chips-program-office-awards?page=1",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "akash",
+      "url": "https://www.akashsystems.com/news",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "powerex",
+      "url": "https://www.nist.gov/news-events/news/2026/06/department-commerce-announces-finalization-chips-incentives-powerex-enhance",
+      "source_date_label": "2026-06-05",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "hemlock",
+      "url": "https://www.nist.gov/chips/hemlock-semiconductor-michigan-hemlock",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "nokia_q2",
+      "url": "https://www.nokia.com/newsroom/nokia-corporation-report-for-q2-and-half-year-2026/",
+      "source_date_label": "2026-07-23",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "nokia_pa",
+      "url": "https://www.nokia.com/newsroom/nokia-announces-major-expansion-of-us-semiconductor-advanced-test-and-packaging-in-pennsylvania-to-bolster-ai-growth/",
+      "source_date_label": "2026-06-16",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "infinera_profile",
+      "url": "https://www.nist.gov/chips/infinera-pennsylvania-bethlehem",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "wolfspeed",
+      "url": "https://s29.q4cdn.com/278875087/files/doc_earnings/2026/q1/earnings-result/Wolfspeed_Q1_2026_Earnings_Release.pdf",
+      "source_date_label": "2025-10-29",
+      "reading_status": "pdf_text_review_only_no_visual_verification",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "edwards",
+      "url": "https://www.edwardsvacuum.com/en-us/about-us/genesee-dry-pump-facility",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "oregon",
+      "url": "https://www.oregon.gov/biz/Publications/OR_CHIPS_Report%203_March_2026.pdf",
+      "source_date_label": "2026-03-20",
+      "reading_status": "pdf_text_review_only_no_visual_verification",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "ti_bridge",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2024/2024-12-20-texas-instruments-announces-award-agreement-for-chips-and-science-act-funding.html",
+      "source_date_label": "2024-12-20",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "ti_sm1",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas.html",
+      "source_date_label": "2025-12-17",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "ti_lehi",
+      "url": "https://www.ti.com/about-ti/manufacturing/lehi.html",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "sk_iedc",
+      "url": "https://www.iedc.in.gov/events/news/details/2026/08/27/gov.-braun-breaks-ground-on-sk-hynix-semiconductor-packaging-fab-in-indiana",
+      "source_date_label": "2026-08-27",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "derivative_use_unapproved_no_capture"
+    },
+    {
+      "id": "amkor_aca",
+      "url": "https://www.azcommerce.com/news-events/news/2025/10/amkor-technology-breaks-ground-on-new-semiconductor-advanced-packaging-and-test-campus-in-peoria-expands-investment-to-7-billion/",
+      "source_date_label": "2025-10-06",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "gw_opening",
+      "url": "https://www.sas-globalwafers.com/en/gwc_news_en_20250516/",
+      "source_date_label": "2025-05-16",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "gw_q2",
+      "url": "https://www.sas-globalwafers.com/en/gwc_news_en_20260804/",
+      "source_date_label": "2026-08-04",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "rvm",
+      "url": "https://roguevalleymicrodevices.com/rogue-valley-microdevices-and-c2mi-sign-mou-to-offer-fast-track-mems-platform-creation-and-deployment/",
+      "source_date_label": "2025-10-02",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "entegris",
+      "url": "https://investor.entegris.com/news/news-details/2025/Entegris-Celebrates-Grand-Opening-of-Colorado-Springs-Manufacturing-Center-of-Excellence/default.aspx",
+      "source_date_label": "2025-11-05",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "entegris_profile",
+      "url": "https://www.nist.gov/chips/entegris-colorado-colorado-springs",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "absolics",
+      "url": "https://www.skc.kr/m/eng/Conmmunication/pr/newsDetail.do?gubun=&seq=1742",
+      "source_date_label": "2026-08-21",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "polar",
+      "url": "https://polarsemi.com/service/manufacturing/",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "issuer_copying_restriction_no_capture"
+    },
+    {
+      "id": "micron_clay",
+      "url": "https://www.governor.ny.gov/news/promise-progress-governor-hochul-celebrates-groundbreaking-microns-semiconductor-manufacturing",
+      "source_date_label": "2026-01-16",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "micron_boise",
+      "url": "https://www.micron.com/us-expansion/id",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "samsung",
+      "url": "https://semiconductor.samsung.com/sas/local-news/samsung-austin-semiconductors-two-campuses-inject-10-9b-into-central-texas-economy-in-2025/",
+      "source_date_label": "2026-06-10",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "tsmc",
+      "url": "https://www.tsmc.com/static/abouttsmcaz/index.htm",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "tsmc_newsletter",
+      "url": "https://pr.tsmc.com/static/campaign/2025March/tsmc_na/index.html",
+      "source_date_label": "2025-03",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "chandler",
+      "url": "https://www.chandleraz.gov/business/economic-development/key-industries-and-employers/advanced-manufacturing",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "rio_rancho",
+      "url": "https://www.biz.nm.gov/newsroom/may-jtip-exceeds-6-million-100000564",
+      "source_date_label": "2024-05-23",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "ohio",
+      "url": "https://www.house.ohio.gov/members/sean-p-brennan/news/reps-brennan-brown-piccolantonio-calling-for-quarterly-updates-full-financial-accounting-of-intel-ohio-one-project-136326",
+      "source_date_label": "2025-08-14",
+      "reading_status": "direct_open_failed_502",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "gf_profile",
+      "url": "https://www.nist.gov/chips/globalfoundries-vermont-burlington",
+      "source_date_label": null,
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "gf_packaging",
+      "url": "https://www.governor.ny.gov/news/governor-hochul-announces-globalfoundries-will-establish-first-its-kind-advanced-packaging-and",
+      "source_date_label": "2025-01-17",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    },
+    {
+      "id": "microchip",
+      "url": "https://ir.microchip.com/sec-filings/all-sec-filings/content/0000827054-26-000016/mchp-20260331.htm",
+      "source_date_label": "2026-05-21",
+      "reading_status": "primary_html_read_or_listing_review",
+      "retention_status": "not_retained_in_this_screen",
+      "rights_status": "fresh_exact_source_review_required"
+    }
+  ],
+  "cases": [
+    {
+      "project_id": "nist2024-d17-bosch-roseville",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "bosch"
+      ],
+      "finding": "DFA finalization and samples commenced by July 2026; commercial production remains expected in 2026. Sample-start date and diameter are unspecified, so the original first-200mm-chip target is not yet matched.",
+      "next_action": "Capture the NIST release under a fresh exact-URL plan; adjudicate samples separately from 200mm first-chip attainment."
+    },
+    {
+      "project_id": "nist2024-d18-micron-manassas",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "micron2025"
+      ],
+      "finding": "Later multistate investment/funding announcement mentions Manassas. Full NIST body unread; the Commerce route returned 403 and was stopped. Portfolio funding must not be allocated to Manassas without source support.",
+      "next_action": "Keep discovery-only. Do not route around Commerce denial; independently assess any legitimate NIST source and its own publication/access context."
+    },
+    {
+      "project_id": "nist2024-d19-coherent-sherman",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "coherent",
+        "coherent_profile"
+      ],
+      "finding": "Later $50m LOI and an existing high-volume 150mm InP capability do not establish completion of the frozen expansion. Mutable profile associates $50m with December 2024, conflicting with the retained $33m original PMT.",
+      "next_action": "Capture permitted NIST exact sources and preserve conflicting vintages; do not replace the original $33m or infer expansion attainment."
+    },
+    {
+      "project_id": "nist2024-d19-skywater-bloomington",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "skywater"
+      ],
+      "finding": "No adequate later Bloomington modernization event found. The issuer update concerns Austin Fab 25 and Florida packaging, not this project.",
+      "next_action": "Retain unresolved group and location-based nonmatch; do not capture unrelated updates as Bloomington outcomes."
+    },
+    {
+      "project_id": "nist2024-d19-xfab-lubbock",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "xfab"
+      ],
+      "finding": "No qualifying later Lubbock funding or physical event found in the bounded permitted search. Mutable directory wording cannot prove no final award or progress.",
+      "next_action": "Continue permitted government sources; issuer restrictions remain in force."
+    },
+    {
+      "project_id": "nist2024-d27-akash-west-oakland",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "akash"
+      ],
+      "finding": "No qualifying West Oakland fab event found. Server delivery/product listings do not locate production here and include manufacture by MiTAC.",
+      "next_action": "Retain unresolved; seek facility-specific manufacturing evidence, not company product deliveries."
+    },
+    {
+      "project_id": "nist2024-d28-corning-canton",
+      "retained_nist_archive_positions": [
+        3
+      ],
+      "lead_source_ids": [],
+      "finding": "Retained January 2025 NIST final award matches Canton HPFS/ULE expansion, with milestone-conditioned disbursements. Expanded production is not established.",
+      "next_action": "Funding correspondence is verified in the separate complete-2025 review; physical outcome remains open."
+    },
+    {
+      "project_id": "nist2024-d28-powerex-youngwood",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "powerex"
+      ],
+      "finding": "Later DFA and $30m manufacturing/R&D investment wording; exact federal contribution not isolated. Body identifies Pennsylvania rather than Youngwood explicitly. No production completion event.",
+      "next_action": "Capture permitted NIST source and review location/intervention correspondence before assigning funding or physical status."
+    },
+    {
+      "project_id": "nist2024-d32-hemlock-hemlock",
+      "retained_nist_archive_positions": [
+        9
+      ],
+      "lead_source_ids": [
+        "hemlock"
+      ],
+      "finding": "Final award matches the new Hemlock facility. Undated current profile adds production-in-2028 guidance, absent from the original PMT.",
+      "next_action": "Keep current-profile guidance separate from original targets and dated production outcomes."
+    },
+    {
+      "project_id": "nist2024-d34-infinera-san-jose",
+      "retained_nist_archive_positions": [
+        3
+      ],
+      "lead_source_ids": [
+        "nokia_q2"
+      ],
+      "finding": "Final award matches new San Jose fab. Nokia later forecasts ramp in Q4 2026; no attained production is established and ownership/project bridge needs review.",
+      "next_action": "Review Nokia rights and precise Infinera-to-Nokia new-fab correspondence before capture."
+    },
+    {
+      "project_id": "nist2024-d34-infinera-bethlehem",
+      "retained_nist_archive_positions": [
+        3
+      ],
+      "lead_source_ids": [
+        "nokia_q2",
+        "nokia_pa",
+        "infinera_profile"
+      ],
+      "finding": "Final award matches new Bethlehem packaging facility. Current NIST summer-2026 guidance is undated; Nokia's existing Allentown expansion may be a different scope. Neither is established Bethlehem attainment.",
+      "next_action": "Resolve new Bethlehem versus existing Allentown correspondence; do not use city/region similarity as identity proof."
+    },
+    {
+      "project_id": "nist2024-d35-wolfspeed-siler-city",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "wolfspeed"
+      ],
+      "finding": "Production readiness reported in late fiscal 2025, not an exact first-output date or completed full ramp.",
+      "next_action": "Review issuer and PDF-host rights, then visually verify fiscal wording and project scope."
+    },
+    {
+      "project_id": "nist2024-d35-wolfspeed-marcy",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "wolfspeed"
+      ],
+      "finding": "Ongoing Mohawk Valley business is not completion of the PMT-supported expansion. Corporate restructuring is not physical cancellation; no official PMT withdrawal established in bounded search.",
+      "next_action": "Keep expansion outcome unresolved; preserve restructuring context separately."
+    },
+    {
+      "project_id": "nist2024-d36-edwards-vacuum-genesee-county",
+      "retained_nist_archive_positions": [
+        3
+      ],
+      "lead_source_ids": [
+        "edwards"
+      ],
+      "finding": "Current undated page reports facility/equipment/commissioning milestones, not demonstrated commercial production. Grand-opening guidance conflicts internally between October 2026 and this November.",
+      "next_action": "Review source rights; retain both contradictory targets and unknown publication/date precision."
+    },
+    {
+      "project_id": "nist2024-d46-hp-corvallis",
+      "retained_nist_archive_positions": [
+        8
+      ],
+      "lead_source_ids": [
+        "oregon"
+      ],
+      "finding": "Oregon report principally through June 2025 lists product-specific manufacturing releases and a first customer shipment; not whole-expansion completion. Its federal-funding recap conflicts with original PMT date/amount.",
+      "next_action": "Review state policy and visually inspect pages 9-10; preserve product scope, reporting interval and discrepancies."
+    },
+    {
+      "project_id": "nist2024-d47-texas-instruments-sherman",
+      "retained_nist_archive_positions": [
+        14
+      ],
+      "lead_source_ids": [
+        "ti_bridge",
+        "ti_sm1"
+      ],
+      "finding": "Award identity bridge differentiates SM1 cleanroom/tools and SM2 shell. SM1 production started in December 2025; this is one component, not both fabs or full ramp.",
+      "next_action": "Prioritize exact rights-reviewed bridge plus SM1 source capture; adjudicate component scope without relabeling the entire group complete."
+    },
+    {
+      "project_id": "nist2024-d47-texas-instruments-lehi",
+      "retained_nist_archive_positions": [
+        14
+      ],
+      "lead_source_ids": [
+        "ti_bridge",
+        "ti_lehi"
+      ],
+      "finding": "Bridge names LFAB2. Current undated page describes construction; existing LFAB1 production is not LFAB2 attainment.",
+      "next_action": "Retain unknown LFAB2 production and separate existing-fab history."
+    },
+    {
+      "project_id": "nist2024-d48-sk-hynix-west-lafayette",
+      "retained_nist_archive_positions": [
+        15
+      ],
+      "lead_source_ids": [
+        "sk_iedc"
+      ],
+      "finding": "August 2026 source reports groundbreaking and revises mass-production guidance from H2 2028 to H2 2029, with cleanroom by Q4 2028. Not measured future production delay. Source predates the September prospective freeze, exposing a coverage gap.",
+      "next_action": "IEDC terms leave Atlas derivative use unapproved. No raw capture or admission; seek independently permissible primary evidence and preserve the frozen vintage unchanged."
+    },
+    {
+      "project_id": "nist2024-d49-amkor-peoria",
+      "retained_nist_archive_positions": [
+        12
+      ],
+      "lead_source_ids": [
+        "amkor_aca"
+      ],
+      "finding": "October 2025 groundbreaking concerns an expanded two-phase campus. Mid-2027 construction and early-2028 production remain vague first-facility guidance, not entire-campus attainment.",
+      "next_action": "Review ACA policy and source-family dependence; bridge changed phase scope before admitting physical events."
+    },
+    {
+      "project_id": "nist2024-d52-globalwafers-sherman-silicon",
+      "retained_nist_archive_positions": [
+        16
+      ],
+      "lead_source_ids": [
+        "gw_opening",
+        "gw_q2"
+      ],
+      "finding": "May 2025 grand opening and later customer qualifications are distinct milestones, not first-production date or full ramp. Additional phases remain outside frozen scope.",
+      "next_action": "Review issuer rights, capture dated sources, and preserve US event date versus issuer publication date."
+    },
+    {
+      "project_id": "nist2024-d52-globalwafers-st-peters-soi",
+      "retained_nist_archive_positions": [
+        16
+      ],
+      "lead_source_ids": [
+        "gw_q2"
+      ],
+      "finding": "New 12-inch SOI line progressively entering volume production is a strong partial-attainment lead. Exact first-production date and new-line/new-facility correspondence remain unresolved.",
+      "next_action": "Review rights and line-to-PMT-facility correspondence; do not infer whole-building completion."
+    },
+    {
+      "project_id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion",
+      "retained_nist_archive_positions": [
+        16
+      ],
+      "lead_source_ids": [],
+      "finding": "Final award carries forward the partial existing-facility SiC epitaxy conversion. No later intervention-specific physical attainment found.",
+      "next_action": "Retain unresolved; new silicon-facility milestones and generic SiC product certifications are not conversion completion."
+    },
+    {
+      "project_id": "nist2024-d56-rvm-palm-bay",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "rvm"
+      ],
+      "finding": "October 2025 continued build-out and prospective film-order acceptance in December, then MEMS/post-CMOS orders early 2026. Order acceptance is not the frozen first shipment or final completion.",
+      "next_action": "Review rights and seek dated shipment/completion evidence; preserve revised vague guidance separately."
+    },
+    {
+      "project_id": "nist2024-d57-entegris-colorado-springs-phase-1",
+      "retained_nist_archive_positions": [
+        20
+      ],
+      "lead_source_ids": [
+        "entegris"
+      ],
+      "finding": "Center-level initial commercial operations earlier in 2025 and November grand opening; phase-1 correspondence and complete phase capacity remain unproven.",
+      "next_action": "Capture after rights review; distinguish center operation from entire phase attainment."
+    },
+    {
+      "project_id": "nist2024-d57-entegris-colorado-springs-phase-2",
+      "retained_nist_archive_positions": [
+        20
+      ],
+      "lead_source_ids": [
+        "entegris",
+        "entegris_profile"
+      ],
+      "finding": "Opening does not establish phase-2 completion. Undated profile retains separate phase/peak-capacity guidance.",
+      "next_action": "Do not count one center opening as two independently attained phase outcomes."
+    },
+    {
+      "project_id": "nist2024-d59-rocket-lab-new-mexico",
+      "retained_nist_archive_positions": [
+        22
+      ],
+      "lead_source_ids": [],
+      "finding": "Final NIST award explicitly locates the New Mexico expansion in Albuquerque. A 50% production increase within three years remains guidance; later product/contract news does not measure expansion attainment.",
+      "next_action": "Retain unknown target attainment; exact baseline/output measurements still needed."
+    },
+    {
+      "project_id": "nist2024-d60-absolics-covington",
+      "retained_nist_archive_positions": [
+        20,
+        6
+      ],
+      "lead_source_ids": [
+        "absolics"
+      ],
+      "finding": "Later Georgia-made samples progressed from preliminary to reliability evaluation; mass-production preparations continue. Separate 2025 SMART research funding is not manufacturing attainment.",
+      "next_action": "Review SKC rights and sample/process correspondence; keep qualification work distinct from commercial HVM."
+    },
+    {
+      "project_id": "nist2024-d61-polar-bloomington",
+      "retained_nist_archive_positions": [
+        43
+      ],
+      "lead_source_ids": [
+        "polar"
+      ],
+      "finding": "Final funding is retained. Undated current page describes full deployment in 2027, not measured doubling attained.",
+      "next_action": "Issuer copying restrictions remain; no fresh capture. Seek independently permitted government evidence."
+    },
+    {
+      "project_id": "nist2024-d64-micron-clay-first-two-fabs",
+      "retained_nist_archive_positions": [
+        18
+      ],
+      "lead_source_ids": [
+        "micron_clay"
+      ],
+      "finding": "January 2026 groundbreaking is for the first fab within the frozen first-two-fab group, not two completed fabs or production.",
+      "next_action": "Review government-source policy and capture component-specific construction event."
+    },
+    {
+      "project_id": "nist2024-d64-micron-boise-hvm-fab",
+      "retained_nist_archive_positions": [
+        18
+      ],
+      "lead_source_ids": [
+        "micron_boise"
+      ],
+      "finding": "Current undated issuer page describes construction milestones and first-fab DRAM output scheduled for 2027. A subsequently added second Idaho fab must not enlarge the frozen single-fab group.",
+      "next_action": "Review issuer rights and dated first-fab sources; no production attainment yet established."
+    },
+    {
+      "project_id": "nist2024-d66-samsung-taylor-logic",
+      "retained_nist_archive_positions": [
+        13
+      ],
+      "lead_source_ids": [
+        "samsung"
+      ],
+      "finding": "Final award retains two logic fabs. Later site/fab operation by end-2026 is guidance, not attainment of both fabs.",
+      "next_action": "Review precise singular site/fab scope and date semantics before any physical label."
+    },
+    {
+      "project_id": "nist2024-d66-samsung-taylor-packaging",
+      "retained_nist_archive_positions": [
+        13
+      ],
+      "lead_source_ids": [],
+      "finding": "Packaging omitted from final award's listed funded scope; omission is not physical cancellation. No qualifying later packaging cancellation or attainment found.",
+      "next_action": "Retain original group with unknown outcome; do not infer negative physical evidence from omission."
+    },
+    {
+      "project_id": "nist2024-d66-samsung-austin-expansion",
+      "retained_nist_archive_positions": [
+        13
+      ],
+      "lead_source_ids": [
+        "samsung"
+      ],
+      "finding": "Final award retains Austin expansion. Existing operations and regional economic impact do not date attainment of this expansion.",
+      "next_action": "Seek expansion-specific physical evidence, not company/site operating history."
+    },
+    {
+      "project_id": "nist2024-d67-tsmc-phoenix-first-fab",
+      "retained_nist_archive_positions": [
+        26
+      ],
+      "lead_source_ids": [
+        "tsmc",
+        "tsmc_newsletter"
+      ],
+      "finding": "Unretained issuer pages report first-fab N4 HVM beginning Q4 2024. The root separately verified the already-retained fiscal-2025 20-F Arizona narrative against source hash c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b and span hash eb22e3ca5b1afd9fb497a89eae3e7d08459bbc9045f39e4c4fcdefbb7b2ce97b: it says the first Phoenix facility entered HVM at the end of 2024, not explicitly Q4. Neither source-native Fab 21 aggregate nor its commercial-commencement row is an automatic first-fab HVM alias.",
+      "next_action": "Use the retained Arizona narrative locator in review_plans/2026-09-08-tsmc-operating-fab-correspondence.json for explicit first-facility correspondence. Do not manufacture Q4 bounds from end-of-2024 wording; assess supported one-sided or conservative date precision, or separately capture an exact-quarter source if permitted. Retrospective pairing is not calibrated system prediction."
+    },
+    {
+      "project_id": "nist2024-d67-tsmc-phoenix-second-fab",
+      "retained_nist_archive_positions": [
+        26
+      ],
+      "lead_source_ids": [
+        "tsmc"
+      ],
+      "finding": "Current page reports fab structure complete in 2025 and N3 HVM targeted H2 2027. Construction and prospective production must remain distinct.",
+      "next_action": "Preserve source-native year precision and separate HVM guidance from attained construction."
+    },
+    {
+      "project_id": "nist2024-d67-tsmc-phoenix-third-fab",
+      "retained_nist_archive_positions": [
+        26
+      ],
+      "lead_source_ids": [
+        "tsmc"
+      ],
+      "finding": "Current page reports April 2025 groundbreaking, not completed build or production. Additional later fabs are outside frozen scope.",
+      "next_action": "Review rights and exact third-fab correspondence; do not treat groundbreaking as final completion."
+    },
+    {
+      "project_id": "nist2024-d70-intel-chandler-new-fabs",
+      "retained_nist_archive_positions": [
+        21
+      ],
+      "lead_source_ids": [
+        "chandler"
+      ],
+      "finding": "Current government page identifies Fab 52 open/producing logic chips within a two-new-fab investment. Fab 62 attainment and exact opening date unresolved.",
+      "next_action": "Review government policy and component identity; one fab's production is partial group attainment."
+    },
+    {
+      "project_id": "nist2024-d70-intel-chandler-modernization",
+      "retained_nist_archive_positions": [
+        21
+      ],
+      "lead_source_ids": [
+        "chandler"
+      ],
+      "finding": "Funding and modernization scope retained, but no separately dated modernization attainment. Fab 52 opening belongs to the new-fab intervention.",
+      "next_action": "Retain unresolved modernization outcome and avoid cross-intervention evidence assignment."
+    },
+    {
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "retained_nist_archive_positions": [
+        21
+      ],
+      "lead_source_ids": [
+        "rio_rancho"
+      ],
+      "finding": "May 2024 New Mexico government statement names Fab 9 and Fab 11x as an operational mass-production packaging site by publication; exact start date and completion of all PMT components unknown.",
+      "next_action": "Prioritize rights review and capture for source-reported attained state, with by-publication bounds and group-scope review."
+    },
+    {
+      "project_id": "nist2024-d70-intel-new-albany-new-fabs",
+      "retained_nist_archive_positions": [
+        21
+      ],
+      "lead_source_ids": [
+        "ohio"
+      ],
+      "finding": "Ohio House discovery lead describes delays into next decade; direct opening returned 502. No usable full-body evidence or cancellation established.",
+      "next_action": "Keep discovery-only and outcome unknown; do not label cancelled from search snippets."
+    },
+    {
+      "project_id": "nist2024-d72-gf-malta-new-fab",
+      "retained_nist_archive_positions": [
+        24
+      ],
+      "lead_source_ids": [
+        "gf_profile"
+      ],
+      "finding": "Final funding retained; current NIST profile remains prospective for new Malta fab. No dated physical attainment found within government-only search.",
+      "next_action": "Continue permitted government sources; issuer restrictions preserved."
+    },
+    {
+      "project_id": "nist2024-d72-gf-malta-existing-expansion",
+      "retained_nist_archive_positions": [
+        24,
+        3
+      ],
+      "lead_source_ids": [
+        "gf_packaging"
+      ],
+      "finding": "Additional 2025 packaging/photonics center is not attainment of frozen automotive fab expansion. Combined campus targets remain unallocated.",
+      "next_action": "Preserve additional scope separately; do not silently merge projects or count packaging announcement as automotive completion."
+    },
+    {
+      "project_id": "nist2024-d72-gf-burlington-revitalization",
+      "retained_nist_archive_positions": [
+        24
+      ],
+      "lead_source_ids": [
+        "gf_profile"
+      ],
+      "finding": "Funding and prospective GaN-on-Si capability remain represented; no dated revitalization completion established. Current funding totals include changed/additional scope.",
+      "next_action": "Keep original project and amounts unchanged; seek intervention-specific physical outcomes."
+    },
+    {
+      "project_id": "nist2024-d76-microchip-colorado-springs",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "microchip"
+      ],
+      "finding": "FY2026 filing states Fab 5 expansion paused from fiscal Q4 2024 through fiscal 2027, with selected investments and existing production continuing. Pause is not closure/cancellation.",
+      "next_action": "Prioritize rights review and exact issuer-hosted filing capture for non-attainment coverage; preserve fiscal wording and event/filing clocks."
+    },
+    {
+      "project_id": "nist2024-d76-microchip-gresham",
+      "retained_nist_archive_positions": [],
+      "lead_source_ids": [
+        "microchip"
+      ],
+      "finding": "Same filing states Fab 4 expansion/capital-equipment plan paused through fiscal 2027 while existing production continues. Separately discussed Fab 2 closure is not Gresham.",
+      "next_action": "Same rights review; keep pause distinct from closure, cancellation and existing-site operation."
+    }
+  ]
+}

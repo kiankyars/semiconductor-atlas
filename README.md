@@ -772,6 +772,13 @@ scopes, including undated groups and shared-source dependencies. Later outcome
 adjudication remains pending. This broadens the source population without claiming
 historical completeness, independent evaluation or new forecast scores.
 
+The [later-evidence screen](docs/nist_2024_pmt_followup_screen.md) keeps all 45
+manufacturing groups and records both attainment and pause leads for further
+rights-reviewed acquisition. Separately, all eleven retained 2025 archive
+articles have full-body correspondence decisions: six finalized-funding links,
+one additional-scope link and two same-company nonmatches. Neither this funding
+review nor the unretained research leads supply physical outcomes or new scores.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision

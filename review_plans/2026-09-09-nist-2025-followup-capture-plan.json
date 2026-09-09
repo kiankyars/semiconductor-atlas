@@ -1,0 +1,259 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v1",
+  "plan_id": "nist-2025-complete-index-followup",
+  "review_scope_id": "nist-2025-complete-index-followup-review",
+  "checked_facility_key": "nist-2024-pmt-45-group-later-source-screen",
+  "reviewed_at": "2026-09-09T03:44:09Z",
+  "expires_at": "2026-09-10T03:44:09Z",
+  "decision": "approved_exact_urls",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "minimum_interval_seconds": 2,
+  "timeout_seconds": 30,
+  "max_response_bytes": 2000000,
+  "policies": [
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-robots",
+      "url": "https://www.nist.gov/robots.txt",
+      "purpose": "access_policy",
+      "scope": "Exact NIST origin robots policy; no source request on normalized drift.",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd"
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-copyright",
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "purpose": "rights_policy",
+      "scope": "Exact NIST origin public-information and exception notice; no source request on normalized drift.",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v2",
+      "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46"
+    }
+  ],
+  "documents": [
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-1",
+      "url": "https://www.nist.gov/news-events/news/2025/07/thank-you-departing-iac-member-dr-tsu-jae-king-liu",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 1. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Thank You to Departing IAC Member Dr. Tsu-Jae King Liu"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-2",
+      "url": "https://www.nist.gov/news-events/news/2025/05/todd-younkin-steps-down-department-commerces-industrial-advisory-committee",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 2. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Todd Younkin Steps Down from Department of Commerce’s Industrial Advisory Committee"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-3",
+      "url": "https://www.nist.gov/news-events/news/2025/01/us-department-commerce-announces-chips-incentives-awards-corning-edwards",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 3. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Announces CHIPS Incentives Awards with Corning, Edwards Vacuum, and Infinera to Increase Domestic Production Capacity of Chips and Equipment Critical for U.S. Technological Leadership"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-4",
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-finalizes-long-term-partnership-natcast-operate",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 4. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Department of Commerce Finalizes Long-Term Partnership with Natcast to Operate the National Semiconductor Technology Center"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-5",
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 5. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Department of Commerce Announces Preliminary Terms with Analog Devices, Coherent Corp., Intelligent Epitaxy Technology, Inc. and Sumika Semiconductor Materials Texas Inc., to Strengthen U.S. Semiconductor Leadership"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-6",
+      "url": "https://www.nist.gov/news-events/news/2025/01/us-department-commerce-announces-14-billion-final-awards-support-next",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 6. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Announces $1.4 Billion in Final Awards to Support the Next Generation of U.S. Semiconductor Advanced Packaging"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-7",
+      "url": "https://www.nist.gov/news-events/news/2025/01/us-department-commerce-announces-preliminary-terms-macom-help-strengthen",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 7. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "U.S. Department of Commerce Announces Preliminary Terms with MACOM to Help Strengthen Supply Chain Resilience for U.S. Defense and Telecommunications Industries"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-8",
+      "url": "https://www.nist.gov/news-events/news/2025/01/biden-harris-administration-announces-chips-incentives-award-hp-support",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 8. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces CHIPS Incentives Award with HP to Support Domestic Manufacturing of Next-Generation Technologies and “Lab-to-Fab” Ecosystem"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-9",
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-announces-chips-incentives-award-hemlock-semiconductor",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 9. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Department of Commerce Announces CHIPS Incentives Award with Hemlock Semiconductor to Help Secure U.S. Production Capacity of Semiconductor-Grade Polysilicon"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-10",
+      "url": "https://www.nist.gov/news-events/news/2025/01/biden-harris-administration-announces-arizona-state-university-research",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 10. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Announces Arizona State University Research Park as Planned Site for Third CHIPS for America R&D Flagship Facility"
+      ]
+    },
+    {
+      "company": "NIST CHIPS archive (multi-company)",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "id": "nist-2025-index-11",
+      "url": "https://www.nist.gov/news-events/news/2025/01/biden-harris-administration-awards-semiconductor-research-corporation",
+      "purpose": "source_document",
+      "scope": "Complete later article for displayed archive position 11. Funding, guidance, research and physical events remain unadjudicated; does not expand the 2024 PMT project population.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright"
+      ],
+      "required_text": [
+        "Biden-Harris Administration Awards Semiconductor Research Corporation Manufacturing Consortium Corporation $285M for New CHIPS Manufacturing USA Institute for Digital Twins, Headquartered in North Carolina"
+      ]
+    }
+  ],
+  "notes": "All 11 calendar-2025 rows at displayed positions 1-11, in index order, including personnel, research, new-PMT and award articles. Exact index titles are identity checks, not outcome evidence. Current archive selection may omit differently tagged or removed reports and is not a comprehensive current-events search. New 2025 projects do not enter the 2024 PMT cohort. Local review only, no core ingestion, model training, public raw redistribution, forecast scoring or scheduled-runtime changes.",
+  "review_record": {
+    "path": "review_plans/2026-09-09-nist-2025-followup-source-review.json",
+    "sha256": "f5d7590e53da22c741466e81ab7a0be509b7d278d76087a3016947c6eae2e1de"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "format": "semiconductor-atlas-local-source-acquisition-review-v1",
+  "reviewed_at": "2026-09-09T03:44:09Z",
+  "reviewer": "local:complete-nist-post-2024-index-followup-review",
+  "decision": "approved_exact_urls_local_informational_review_only",
+  "purpose": "Retain every 2025-dated article in the already frozen NIST CHIPS archive as a separately bounded later-source set for review against the frozen 45-group 2024 PMT manufacturing population. Do not select only final-award titles or replace the original cohort.",
+  "index_roster": {
+    "path": "review_plans/2026-09-09-nist-archive-index-roster-v1.json",
+    "sha256": "01e78176d40796dfc4e652f7e554fd115198be5d32cee74eb8d57d5fe6a51bd6"
+  },
+  "pmt_population_review": {
+    "path": "review_plans/2026-09-09-nist-pmt-body-review-v1.json",
+    "sha256": "714ddc8a245efe714294241d0b5fc493d956168f6071cf9164b3f1c79b0a1aec"
+  },
+  "policy_basis": "Main reviewer re-read the complete retained NIST robots and Copyrights & Disclaimers policies in this turn. The exact canonical /news-events/news/2025/ article URLs do not match robot exclusions. NIST information is public and may be copied except marked copyrighted material and product-specific restrictions; preserve attribution and separately adjudicate any marked exceptions. The capture must recheck both current normalized policies and stop source requests on policy drift. Retrieve only original HTML, no linked images, attachments, issuer sites, credentials, cookies, redirects or retries.",
+  "scope": "All 11 calendar-2025 rows at displayed positions 1-11, in index order, including personnel, research, new-PMT and award articles. Exact index titles are identity checks, not outcome evidence. Current archive selection may omit differently tagged or removed reports and is not a comprehensive current-events search. New 2025 projects do not enter the 2024 PMT cohort. Local review only, no core ingestion, model training, public raw redistribution, forecast scoring or scheduled-runtime changes.",
+  "prior_exposure": "Reviewers are already exposed to known outcomes, earlier final-award articles and later guidance. New captures use actual September 2026 clocks and do not prove exact historical content availability. Funding finalization/withdrawal, construction and manufacturing attainment require separate semantics and project correspondence.",
+  "documents": [
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/07/thank-you-departing-iac-member-dr-tsu-jae-king-liu",
+      "title": "Thank You to Departing IAC Member Dr. Tsu-Jae King Liu",
+      "displayed_position": 1,
+      "index_date": "2025-07-01T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/05/todd-younkin-steps-down-department-commerces-industrial-advisory-committee",
+      "title": "Todd Younkin Steps Down from Department of Commerce’s Industrial Advisory Committee",
+      "displayed_position": 2,
+      "index_date": "2025-05-07T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/us-department-commerce-announces-chips-incentives-awards-corning-edwards",
+      "title": "U.S. Department of Commerce Announces CHIPS Incentives Awards with Corning, Edwards Vacuum, and Infinera to Increase Domestic Production Capacity of Chips and Equipment Critical for U.S. Technological Leadership",
+      "displayed_position": 3,
+      "index_date": "2025-01-17T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-finalizes-long-term-partnership-natcast-operate",
+      "title": "Department of Commerce Finalizes Long-Term Partnership with Natcast to Operate the National Semiconductor Technology Center",
+      "displayed_position": 4,
+      "index_date": "2025-01-16T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent",
+      "title": "Department of Commerce Announces Preliminary Terms with Analog Devices, Coherent Corp., Intelligent Epitaxy Technology, Inc. and Sumika Semiconductor Materials Texas Inc., to Strengthen U.S. Semiconductor Leadership",
+      "displayed_position": 5,
+      "index_date": "2025-01-16T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/us-department-commerce-announces-14-billion-final-awards-support-next",
+      "title": "U.S. Department of Commerce Announces $1.4 Billion in Final Awards to Support the Next Generation of U.S. Semiconductor Advanced Packaging",
+      "displayed_position": 6,
+      "index_date": "2025-01-16T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/us-department-commerce-announces-preliminary-terms-macom-help-strengthen",
+      "title": "U.S. Department of Commerce Announces Preliminary Terms with MACOM to Help Strengthen Supply Chain Resilience for U.S. Defense and Telecommunications Industries",
+      "displayed_position": 7,
+      "index_date": "2025-01-14T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/biden-harris-administration-announces-chips-incentives-award-hp-support",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with HP to Support Domestic Manufacturing of Next-Generation Technologies and “Lab-to-Fab” Ecosystem",
+      "displayed_position": 8,
+      "index_date": "2025-01-13T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-announces-chips-incentives-award-hemlock-semiconductor",
+      "title": "Department of Commerce Announces CHIPS Incentives Award with Hemlock Semiconductor to Help Secure U.S. Production Capacity of Semiconductor-Grade Polysilicon",
+      "displayed_position": 9,
+      "index_date": "2025-01-07T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/biden-harris-administration-announces-arizona-state-university-research",
+      "title": "Biden-Harris Administration Announces Arizona State University Research Park as Planned Site for Third CHIPS for America R&D Flagship Facility",
+      "displayed_position": 10,
+      "index_date": "2025-01-06T12:00:00Z"
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2025/01/biden-harris-administration-awards-semiconductor-research-corporation",
+      "title": "Biden-Harris Administration Awards Semiconductor Research Corporation Manufacturing Consortium Corporation $285M for New CHIPS Manufacturing USA Institute for Digital Twins, Headquartered in North Carolina",
+      "displayed_position": 11,
+      "index_date": "2025-01-03T12:00:00Z"
+    }
+  ]
+}

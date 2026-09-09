@@ -470,6 +470,14 @@ in the population. Later outcome pairing remains open. The selection is
 outcome-exposed, US-focused and not a historically complete census; no new
 forecast score or physical-capacity claim follows.
 
+The [later-evidence screen](nist_2024_pmt_followup_screen.md) preserves research
+coverage of all 45 groups, including pauses, partial attainment and unresolved
+projects. Its separately captured and replayed eleven-article 2025 index subset
+adds six finalized-funding correspondences, one additional-scope amendment and
+two same-company nonmatches, not physical outcomes. The next gate is exact
+rights-reviewed acquisition and scope/date adjudication of the balanced outcome
+batch; original targets and prospective vintages remain unchanged.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,
