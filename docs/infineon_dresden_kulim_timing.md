@@ -86,15 +86,15 @@ the frozen runtime. This authenticates reproducibility, not historical execution
 
 ```sh
 python3 scripts/replay_frozen_runtime.py \
-  --bundle artifacts/2026-09-09-e33d6cc-frozen-runtime-v1.json \
+  --bundle /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-09-e33d6cc-frozen-runtime-v1.json \
   --sha256 0eed3603b35f770b64527a572b5bb570684a75195ec99f6d46ec2a99e557517c \
   --commit e33d6ccdbd40017c6c595b78952072c6b141c812 \
   --working-directory /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
   source-guidance-diagnostic \
-  --review review_plans/2026-09-09-infineon-dresden-kulim-review-v1.json \
+  --review /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/review_plans/2026-09-09-infineon-dresden-kulim-review-v1.json \
   --review-sha256 e8567584367f2aaef9499e774535078bf2fb06afcce465d66d3e33d952ce8054 \
   --reference-root /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
-  --report artifacts/2026-09-09-infineon-dresden-kulim-diagnostic-v1.json \
+  --report /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-09-infineon-dresden-kulim-diagnostic-v1.json \
   --report-sha256 ffeb409fad5dbe0cf214e890ed3e1923bd8597abe9d3df57cdfbc40298151ea9
 ```
 
