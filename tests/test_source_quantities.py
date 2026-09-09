@@ -312,9 +312,9 @@ class SourceQuantityTests(unittest.TestCase):
             before = {table: [tuple(row) for row in old.execute(f'SELECT * FROM "{table}" ORDER BY rowid')]
                       for table in tables}
             old_views = service.source_claim_records(old, recorded_at=ADMITTED)
-            self.assertEqual(database.apply_migrations(old), [8])
+            self.assertEqual(database.apply_migrations(old, target_version=8), [8])
             self.assertEqual(database.schema_version(old), 8)
-            self.assertEqual(database.apply_migrations(old), [])
+            self.assertEqual(database.apply_migrations(old, target_version=8), [])
             for table, rows in before.items():
                 with self.subTest(table=table):
                     self.assertEqual([tuple(row) for row in old.execute(f'SELECT * FROM "{table}" ORDER BY rowid')], rows)

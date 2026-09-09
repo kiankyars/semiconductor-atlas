@@ -34,6 +34,7 @@ class FrozenRuntimeTests(unittest.TestCase):
         self.repository.mkdir()
         self.files = {"semiconductor_atlas/__init__.py": "from .models import marker\n",
                       "semiconductor_atlas/models.py": "marker = 'committed'\n",
+                      "semiconductor_atlas/reviewed_source_rates.py": "from .models import marker\n",
                       "semiconductor_atlas/migrations/0001_initial.sql": "-- original SQL\n",
                       "semiconductor_atlas/adapters/__init__.py": "",
                       "scripts/record_realized_fab_cohort.py": PROBE,
@@ -42,6 +43,9 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/admit_ase_k18b_milestones.py": PROBE,
                       "scripts/admit_infineon_villach_output.py": PROBE,
                       "scripts/admit_tower_closure_milestones.py": PROBE,
+                      "scripts/admit_reviewed_source_rates.py": PROBE.replace(
+                          "from semiconductor_atlas import marker",
+                          "from semiconductor_atlas.reviewed_source_rates import marker"),
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -225,6 +229,74 @@ class FrozenRuntimeTests(unittest.TestCase):
                     child.assert_not_called()
         with self.assertRaises(ValueError):
             self.replay(operation='tower-closure-milestones admit', inputs=inputs)
+
+    def test_source_rate_replay_is_verify_only_and_preserves_explicit_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='reviewed-source-rates', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['imported_project_modules']['semiconductor_atlas.reviewed_source_rates'],
+                         'semiconductor_atlas/reviewed_source_rates.py')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 64, 'A' * 64, 'a' * 63, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='reviewed-source-rates', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        changes = [{key: value for key, value in inputs.items() if key != 'expected-output-sha256'},
+                   {**inputs, 'parent': Path('relative.sqlite')},
+                   {**inputs, 'reference-root': self.root / '..' / 'escape'},
+                   {**inputs, 'source-body': self.root / 'unreviewed.body'},
+                   {**inputs, 'verify-only': False}]
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='reviewed-source-rates', inputs=changed)
+                child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='reviewed-source-rates admit', inputs=inputs)
+
+    def test_source_rate_replay_uses_retained_script_and_importer(self):
+        for name in ('scripts/admit_reviewed_source_rates.py', 'semiconductor_atlas/reviewed_source_rates.py'):
+            (self.repository / name).write_text("raise RuntimeError('evolving rate importer')\n")
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='reviewed-source-rates', inputs=inputs)
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        self.assertEqual(result['operation_receipt']['arguments'][0], 'verify')
+
+    def test_source_rate_cli_accepts_only_the_bounded_verify_contract(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'reviewed-source-rates']
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        for key, value in inputs.items(): arguments.extend(['--' + key, str(value)])
+        stdout = io.StringIO()
+        with redirect_stdout(stdout): self.assertEqual(replay.main(arguments), 0)
+        receipt = json.loads(stdout.getvalue())
+        self.assertEqual(receipt['operation'], 'reviewed-source-rates')
+        self.assertEqual(receipt['operation_receipt']['arguments'][-4:],
+                         ['--expected-review-sha256', 'a' * 64, '--expected-output-sha256', 'b' * 64])
+        for extra in ('admit', '--verify-only', '--source-body', '--migrate', '--capture'):
+            with self.subTest(extra=extra), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                replay.main([*arguments, extra])
+
+    def test_source_rate_verifier_missing_from_an_older_runtime_fails_closed(self):
+        name = 'scripts/admit_reviewed_source_rates.py'
+        self.git('rm', name)
+        self.git('-c', 'user.name=Runtime tests', '-c', 'user.email=runtime@example.test', 'commit', '-qm', 'without rate verifier')
+        commit, bundle = self.git('rev-parse', 'HEAD').strip(), self.root / 'without-rates.json'
+        receipt = runtime.retain_runtime(self.repository, commit=commit, output=bundle)
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        with mock.patch.object(replay, '_capture') as child, self.assertRaisesRegex(ValueError, 'absent'):
+            replay.run_verified(bundle, expected_sha256=receipt['sha256'], expected_commit=commit,
+                operation='reviewed-source-rates', inputs=inputs, working_directory=self.repository)
+        child.assert_not_called()
 
     def test_interpreter_drift_fails_before_running_any_code(self):
         with mock.patch.object(runtime, "interpreter", return_value={}), mock.patch.object(replay, "_capture") as child:

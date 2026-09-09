@@ -446,6 +446,12 @@ and the complete physical-current view remain unchanged; exact successor replay 
 numeric capacity loss, current physical closure, independent outcome, representative non-survivor
 population or forecast score follows from this admission.
 
+The [source-rate contract and Polar admission](source_rates.md) add one retained government-office
+production-rate statement with source-native facility scope, a monthly denominator and unknown
+measurement interval and wafer diameter. Schema 9 preserves complete-period quantities and all
+physical-capacity bases. The exact successor reconstruction passes; the figure is not independently
+measured finished-wafer output, installed capacity, a dated monthly total or a forecast/outcome pair.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

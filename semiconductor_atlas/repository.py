@@ -1593,6 +1593,8 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
     errors: list[str] = []
     from .source_quantities import validate_quantities
     errors.extend(validate_quantities(connection))
+    from .source_rates import validate_rates
+    errors.extend(validate_rates(connection))
     integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
     if integrity != "ok":
         errors.append(f"integrity_check: {integrity}")

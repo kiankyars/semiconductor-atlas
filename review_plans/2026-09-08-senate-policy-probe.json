@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Check the Senate main-origin robots policy before retaining the policy pages linked from the senator site or the exact file-not-found destination in the senator robots response. The senator response was a 302 missing-file redirect, not a crawler challenge or an authorization denial. No automatic redirect or manufacturing document acquisition occurs.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "senate-robots",
+    "url": "https://www.senate.gov/robots.txt",
+    "purpose": "access_policy",
+    "company": "Polar Semiconductor",
+    "country_code": "US",
+    "source_family": "us-senate",
+    "scope": "Main-origin access-policy check only; no manufacturing claims.",
+    "media_types": ["text/plain"]
+  }
+}

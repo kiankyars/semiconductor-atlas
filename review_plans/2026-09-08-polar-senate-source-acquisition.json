@@ -1,0 +1,37 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-chain-source-acquisition-v1",
+  "decision": "approved_exact_source_url_after_retained_policy_review",
+  "reviewed_at": "2026-09-08T23:39:00Z",
+  "reviewer": "Codex primary agent",
+  "purpose": "Retain one selected government-office news-release HTML for local informational research. The primary agent read the complete retained senator privacy page, all seven central Senate privacy provisions and all six usage-rule sections. Senator privacy expressly links to central Senate privacy and distinguishes external non-senate.gov sites. Central policy permits copying unless otherwise specified; usage rules define official Senate-office websites and govern Senate-office resource/communication activity. No conflicting source-text restriction was found in the web-read release. This is an explicit reviewed policy-chain inference, not a same-origin permission automatically supplied by the existing collector.",
+  "access_review": "Both origin robots requests returned HTTP 302 to the same named public missing-file page. A separately authorized exact request returned HTTP 200 with a complete 404 Error Page and Requested Page Not Found (404) text. No robots directives were received and no positive robots grant is claimed. There was no authentication, crawler challenge, access denial or further redirect. A single identified source HTML request is approved; no workaround, automatic redirect, retry or bulk crawl is authorized.",
+  "rights_scope": "Local informational research of the government-authored release text with publisher/title/date/URL attribution. Do not fetch linked assets, seals, images, scripts or third-party resources. Keep raw redistribution and publication disabled pending a separate release-rights review.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 1000000,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "collector_enabled": false,
+  "raw_redistribution": false,
+  "dependencies": [
+    {"path": "artifacts/2026-09-08-polar-senate-policy-probe-v1/manifest.json", "sha256": "057a3e6f5b1659cae853bb87272164ea20b8fcabef8fe13a80e662179616343c"},
+    {"path": "artifacts/2026-09-08-senate-policy-probe-v1/manifest.json", "sha256": "027454d97d98a00700530f8a815c68fecae909a044b9752a5f6c5dfb4c47e4a9"},
+    {"path": "artifacts/2026-09-08-senate-missing-policy-destination-v1/manifest.json", "sha256": "5656da7178f25dfdabf1603dd1b24cb81961282cb6646bc4f20142a5b2dcc4a0"},
+    {"path": "artifacts/2026-09-08-senate-rights-chain-v1/manifest.json", "sha256": "78544ff2f4085b748c664c983298e18e5b4710976fc48f469386ffe8fbc75bf1"},
+    {"path": "artifacts/2026-09-08-senate-rights-chain-v1/responses/klobuchar-privacy.body", "sha256": "1aa4882ef93310b2891f3131a8dad3349a84fb153277096a3beb2b125d035d1c"},
+    {"path": "artifacts/2026-09-08-senate-rights-chain-v1/responses/senate-privacy.body", "sha256": "a0c5fb1875d93e25f6c256ba06d3b673fb1443521405f680e04eb81435c4de63"},
+    {"path": "artifacts/2026-09-08-senate-rights-chain-v1/responses/senate-usage.body", "sha256": "5152bd19e912d2b93c607c52984613b5996bc27d45d619d38642e61acabee3d6"}
+  ],
+  "entry": {
+    "id": "polar-senate-production-rate",
+    "url": "https://www.klobuchar.senate.gov/public/index.cfm/2024/9/klobuchar-announces-major-funding-for-polar-semiconductor-s-bloomington-manufacturing-facility",
+    "purpose": "source_document",
+    "company": "Polar Semiconductor",
+    "country_code": "US",
+    "source_family": "us-senate-klobuchar",
+    "scope": "One government-office release containing a source-reported production rate in Bloomington facility context; not a measured output series or physical-capacity admission.",
+    "media_types": ["text/html"]
+  }
+}

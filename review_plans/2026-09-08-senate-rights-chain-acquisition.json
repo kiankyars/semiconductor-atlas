@@ -1,0 +1,26 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-chain-acquisition-v1",
+  "purpose": "Retain three exact policy pages already fully read through web extraction. Both origins return the same missing-file redirect for robots.txt; the explicit destination was independently requested and visibly says Requested Page Not Found (404), though its HTTP status is 200. Record these exact statuses without pretending an HTTP 404 or a positive robots permission. The reviewed chain contains no crawler prohibition or challenge; one bounded personal research request per policy is approved. This does not authorize bulk crawling or manufacturing source capture.",
+  "decision": "approved_exact_policy_urls_after_missing_robots_review",
+  "reviewed_at": "2026-09-08T23:38:00Z",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 1000000,
+  "minimum_interval_seconds": 10,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "dependencies": [
+    {"path": "artifacts/2026-09-08-polar-senate-policy-probe-v1/responses/klobuchar-robots.body", "sha256": "f02b6a012715360041fda97b743408827c6474131d65b022c0da961ea7e9421c"},
+    {"path": "artifacts/2026-09-08-polar-senate-policy-probe-v1/source_checks.json", "sha256": "8ef7bd6b2fd8d16f8ceb227b7a9e039c774edc66ba6497b9737e9ab1e82cdcbb"},
+    {"path": "artifacts/2026-09-08-senate-policy-probe-v1/source_checks.json", "sha256": "d04abb96997ba860b47aba029b2f525695966e3abbd0b43950395878ad9b9350"},
+    {"path": "artifacts/2026-09-08-senate-missing-policy-destination-v1/responses/senate-missing-policy-destination.body", "sha256": "7bb82f38d7b9b50fba0f22fcfbf1d2cfd73acafcc7105c006f410855af3f4a76"},
+    {"path": "artifacts/2026-09-08-senate-missing-policy-destination-v1/source_checks.json", "sha256": "41908026b231cb0ab8d8635ddff78166db30e0b6fcd7c336aea3f169c54c52d1"}
+  ],
+  "entries": [
+    {"id": "klobuchar-privacy", "url": "https://www.klobuchar.senate.gov/public/index.cfm/privacypolicy", "purpose": "rights_policy", "company": "Polar Semiconductor", "country_code": "US", "source_family": "us-senate-klobuchar", "scope": "Same-origin privacy page that explicitly links to the general Senate policy; not itself a reproduction grant.", "media_types": ["text/html"]},
+    {"id": "senate-privacy", "url": "https://www.senate.gov/pagelayout/general/one_item_and_teasers/privacy.htm", "purpose": "rights_policy", "company": "Polar Semiconductor", "country_code": "US", "source_family": "us-senate", "scope": "Linked Senate policy including copying permission unless otherwise specified, and attribution request.", "media_types": ["text/html"]},
+    {"id": "senate-usage", "url": "https://www.senate.gov/usage/internetpolicy.htm", "purpose": "rights_policy", "company": "Polar Semiconductor", "country_code": "US", "source_family": "us-senate", "scope": "Usage rules linked from general policy; review complete scope and restrictions.", "media_types": ["text/html"]}
+  ]
+}

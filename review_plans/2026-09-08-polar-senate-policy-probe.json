@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "First direct identified request for the senator origin robots policy. Earlier web-tool URL-safety failures returned no publisher HTTP status or body; they do not establish publisher denial. This probe is not a retry of a publisher block. Stop after this single request and review the complete response before considering any other origin request.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "klobuchar-robots",
+    "url": "https://www.klobuchar.senate.gov/robots.txt",
+    "purpose": "access_policy",
+    "company": "Polar Semiconductor",
+    "country_code": "US",
+    "source_family": "us-senate-klobuchar",
+    "scope": "Exact senator origin access policy only; no manufacturing source acquisition or claim acceptance.",
+    "media_types": ["text/plain"]
+  }
+}

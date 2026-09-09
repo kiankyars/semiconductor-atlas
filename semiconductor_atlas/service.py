@@ -127,6 +127,10 @@ def claim_value(connection: sqlite3.Connection, claim_id: str, value_kind: str) 
         metadata = metadata_for_claims(connection, [claim_id])
         if claim_id in metadata:
             result['source_quantity'] = metadata[claim_id]
+        from .source_rates import metadata_for_claims as rate_metadata_for_claims
+        metadata = rate_metadata_for_claims(connection, [claim_id])
+        if claim_id in metadata:
+            result['source_rate'] = metadata[claim_id]
     return result
 
 
@@ -158,6 +162,9 @@ def _hydrate_claim_rows(
     from .source_quantities import metadata_for_claims
     for claim_id, metadata in metadata_for_claims(connection, selected_ids).items():
         values[claim_id]['source_quantity'] = metadata
+    from .source_rates import metadata_for_claims as rate_metadata_for_claims
+    for claim_id, metadata in rate_metadata_for_claims(connection, selected_ids).items():
+        values[claim_id]['source_rate'] = metadata
 
     evidence: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for evidence_row in connection.execute(
