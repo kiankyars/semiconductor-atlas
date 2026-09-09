@@ -478,7 +478,7 @@ two same-company nonmatches, not physical outcomes. The next gate is exact
 rights-reviewed acquisition and scope/date adjudication of the balanced outcome
 batch; original targets and prospective vintages remain unchanged.
 
-The [retained PMT outcome screen](nist_pmt_outcome_screen.md) now carries all 49
+The [NIST-only PMT outcome screen](nist_pmt_outcome_screen.md) carries all 49
 original cases across the 45 groups into an executed comparison, plus a distinct
 Bosch sample-production event known only by a source-reported upper date bound.
 All three original calendar targets remain unresolved: sample production does not
@@ -486,6 +486,14 @@ prove first 200mm chips, existing capability does not prove a full expansion, an
 funding does not prove production. This closes a one-sided timing representation
 gap and preserves complete original-population accounting; later outcome coverage,
 source-native core admission and calibrated forecasting remain open.
+
+The separate [legacy TSMC outcome comparison](tsmc_legacy_pmt_outcome.md) fills
+one original outcome without changing any of the 50 cases or targets. A complete
+first-Phoenix-facility narrative supports HVM by end-2024 and therefore satisfies
+the original June 30, 2025 deadline. All 48 other original outcomes remain unknown;
+the Bosch supplement stays unscored. Legacy batch and ingestion records remain
+explicitly distinct from modern HTTP capture. This is one retrospectively matched
+source-guidance result, not a pre-outcome Atlas prediction or calibrated forecast.
 
 ## Phase 5: supply-demand scenarios and investable signals
 

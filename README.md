@@ -779,7 +779,7 @@ articles have full-body correspondence decisions: six finalized-funding links,
 one additional-scope link and two same-company nonmatches. Neither this funding
 review nor the unretained research leads supply physical outcomes or new scores.
 
-The [retained PMT outcome comparison](docs/nist_pmt_outcome_screen.md) now preserves
+The [NIST-only PMT outcome comparison](docs/nist_pmt_outcome_screen.md) preserves
 49 original cases across all 45 groups and adds one separately scoped Bosch
 sample-production observation with a source-reported upper date bound. It also
 retains Coherent's existing 150mm InP capability separately from future expansion
@@ -787,6 +787,14 @@ and Powerex's funding/location limitations. The three original calendar targets
 remain unresolved, with zero scored targets. One-sided timing cannot invent exact
 start dates, interval containment or late misses. No core database, prospective
 vintage or scheduled-runtime change follows.
+
+The separate [retained TSMC outcome comparison](docs/tsmc_legacy_pmt_outcome.md)
+preserves all 50 cases and adds one original source-guidance deadline hit: the
+first Phoenix fab's HVM is reported by end-2024, before its June 30, 2025 deadline.
+Forty-eight original outcomes remain unknown and two calendar results unresolved.
+The legacy batch-clock provenance stays distinct from per-request HTTP evidence;
+no old diagnostic, core database or forecast vintage is rewritten. This is a
+retrospective issuer-guidance result, not measured Atlas forecast accuracy.
 
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting

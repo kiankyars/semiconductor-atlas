@@ -40,6 +40,7 @@ class FrozenRuntimeTests(unittest.TestCase):
                       "scripts/record_realized_fab_cohort.py": PROBE,
                       "scripts/guidance_interval_baseline.py": PROBE,
                       "scripts/evaluate_source_guidance.py": PROBE,
+                      "scripts/evaluate_legacy_pmt_outcomes.py": PROBE,
                       "scripts/admit_tsmc_source_quantities.py": PROBE,
                       "scripts/admit_ase_k18b_milestones.py": PROBE,
                       "scripts/admit_infineon_villach_output.py": PROBE,
@@ -178,6 +179,64 @@ class FrozenRuntimeTests(unittest.TestCase):
                   'reference-root': self.root, 'report': self.root / 'report.json',
                   'report-sha256': 'b' * 64}
         self.assertEqual('committed', self.replay(operation='source-guidance-diagnostic', inputs=inputs)['operation_receipt']['marker'])
+
+    def legacy_inputs(self):
+        return {'review': self.root / 'review.json', 'review-sha256': 'a' * 64,
+                'reference-root': self.root, 'source-body': self.root / 'legacy.html',
+                'provenance': self.root / 'baseline.json', 'source-manifest': self.root / 'manifest.json',
+                'report': self.root / 'report.json', 'report-sha256': 'b' * 64}
+
+    def test_legacy_pmt_replay_preserves_six_global_options_and_committed_script(self):
+        (self.repository / 'scripts/evaluate_legacy_pmt_outcomes.py').write_text("raise RuntimeError('changed')\n")
+        inputs = self.legacy_inputs()
+        result = self.replay(operation='legacy-pmt-outcome-diagnostic', inputs=inputs)
+        expected = []
+        for key, value in list(inputs.items())[:6]: expected += ['--' + key, str(value)]
+        expected += ['verify', '--report', str(inputs['report']), '--report-sha256', 'b' * 64]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+
+    def test_legacy_pmt_replay_rejects_missing_inputs_unsafe_paths_and_invalid_digests(self):
+        inputs = self.legacy_inputs()
+        changes = [{key: value for key, value in inputs.items() if key != missing} for missing in inputs]
+        changes.append({**inputs, 'output': self.root / 'new-report.json'})
+        for key in ('review-sha256', 'report-sha256'):
+            changes.extend({**inputs, key: bad} for bad in (None, True, 64, 'A' * 64, 'a' * 63,
+                                                            Path('a' * 64), '--create'))
+        for key in ('review', 'reference-root', 'source-body', 'provenance', 'source-manifest', 'report'):
+            changes.extend({**inputs, key: bad} for bad in ('relative', self.root / '..' / 'outside'))
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='legacy-pmt-outcome-diagnostic', inputs=changed)
+                child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='legacy-pmt-outcome-diagnostic create', inputs=inputs)
+
+    def test_legacy_pmt_cli_accepts_only_the_explicit_read_only_contract(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'legacy-pmt-outcome-diagnostic']
+        for key, value in self.legacy_inputs().items(): arguments += ['--' + key, str(value)]
+        stdout = io.StringIO()
+        with redirect_stdout(stdout): self.assertEqual(replay.main(arguments), 0)
+        result = json.loads(stdout.getvalue())
+        self.assertEqual(result['operation'], 'legacy-pmt-outcome-diagnostic')
+        self.assertEqual(result['operation_receipt']['arguments'][12], 'verify')
+        for extra in ('create', '--output', '--capture', '--migrate', '--http-ledger'):
+            with self.subTest(extra=extra), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                replay.main([*arguments, extra])
+
+    def test_legacy_pmt_replay_rejects_runtime_without_its_verifier(self):
+        self.git('rm', 'scripts/evaluate_legacy_pmt_outcomes.py')
+        self.git('-c', 'user.name=Runtime tests', '-c', 'user.email=runtime@example.test', 'commit', '-qm', 'old runtime')
+        commit, bundle = self.git('rev-parse', 'HEAD').strip(), self.root / 'without-legacy.json'
+        receipt = runtime.retain_runtime(self.repository, commit=commit, output=bundle)
+        with mock.patch.object(replay, '_capture') as child, self.assertRaisesRegex(ValueError, 'absent'):
+            replay.run_verified(bundle, expected_sha256=receipt['sha256'], expected_commit=commit,
+                operation='legacy-pmt-outcome-diagnostic', inputs=self.legacy_inputs(), working_directory=self.repository)
+        child.assert_not_called()
 
     def test_guidance_replay_rejects_missing_malformed_or_option_like_digest_before_execution(self):
         inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",

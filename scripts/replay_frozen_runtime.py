@@ -32,6 +32,9 @@ OPERATIONS = {
                           ("database", "vintage", "trusted-vintage-sha256")),
     "source-guidance-diagnostic": ("scripts/evaluate_source_guidance.py", "verify",
                                    ("review", "review-sha256", "reference-root", "report", "report-sha256")),
+    "legacy-pmt-outcome-diagnostic": ("scripts/evaluate_legacy_pmt_outcomes.py", "verify",
+                                      ("review", "review-sha256", "reference-root", "source-body",
+                                       "provenance", "source-manifest", "report", "report-sha256")),
     "tsmc-source-quantities": ("scripts/admit_tsmc_source_quantities.py", "verify",
                               ("parent", "review", "source-body", "output",
                                "expected-review-sha256", "expected-output-sha256")),
@@ -51,6 +54,8 @@ OPERATIONS = {
 DIGEST_FIELDS = {("guidance-interval", "trusted-vintage-sha256"),
                  ("source-guidance-diagnostic", "review-sha256"),
                  ("source-guidance-diagnostic", "report-sha256"),
+                 ("legacy-pmt-outcome-diagnostic", "review-sha256"),
+                 ("legacy-pmt-outcome-diagnostic", "report-sha256"),
                  ("tsmc-source-quantities", "expected-review-sha256"),
                  ("tsmc-source-quantities", "expected-output-sha256"),
                  ("ase-k18b-milestones", "expected-review-sha256"),
@@ -167,8 +172,10 @@ def run_verified(bundle, *, expected_sha256, expected_commit, operation, inputs,
         if not path.is_absolute() or ".." in path.parts:
             raise ValueError("replay evidence inputs require explicit absolute paths")
         arguments.extend(["--" + field, str(path)])
-    if operation == "source-guidance-diagnostic":
-        arguments = [*arguments[1:7], command, *arguments[7:]]
+    global_options = {"source-guidance-diagnostic": 3, "legacy-pmt-outcome-diagnostic": 6}
+    if operation in global_options:
+        boundary = 1 + 2 * global_options[operation]
+        arguments = [*arguments[1:boundary], command, *arguments[boundary:]]
     working_directory = Path(working_directory).absolute()
     descriptor = runtime._directory(working_directory)
     os.close(descriptor)

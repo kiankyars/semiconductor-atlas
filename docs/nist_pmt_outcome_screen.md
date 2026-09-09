@@ -2,6 +2,11 @@
 
 ## Result and scope
 
+This page records the original NIST-only comparison. A subsequent
+[legacy TSMC comparison](tsmc_legacy_pmt_outcome.md) preserves every case and
+target but supports one original HVM deadline outcome. It is a new diagnostic;
+the zero-score artifacts and hashes documented below remain unchanged.
+
 The September 9, 2026 retained-evidence comparison preserves all 45 manufacturing
 groups in the frozen NIST 2024 PMT population. It contains 49 original cases:
 15 timing associations and 34 placeholders for groups without timing assertions.
