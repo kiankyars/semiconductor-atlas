@@ -8,6 +8,10 @@ identities, produce forecasts or deliver alerts.
 
 ## Read a retained subject
 
+If the entity ID is not known, start with [evidence search](evidence_search.md).
+It finds literal registry and direct-source metadata matches while keeping every
+source-native ID separate; use the selected entry's `dossier_selection` fields.
+
 Run from the isolated development checkout, using an existing output directory:
 
 ```sh
@@ -144,7 +148,8 @@ SHA-256 `8b6be40a1f94f777b344f55fc32d7d466c06f7d3befe80c148de97315c476cd2`.
 The parent checkout's ledger, baseline, analytics producer and scheduled database,
 and the isolated prospective guidance vintage, retain their prior hashes.
 
-This closes a local inspection gap for already accepted evidence. Searchable
-entity discovery, integration into the geographic viewer, broader evidence
+This closes a local inspection gap for already accepted evidence. Literal
+[entity discovery](evidence_search.md) is now available separately. Integration
+into the geographic viewer, broader evidence
 coverage, independent outcome review, measured alert performance and calibrated
 forecasts remain separate work toward the north-star.

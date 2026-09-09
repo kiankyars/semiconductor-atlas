@@ -8,6 +8,7 @@ import json
 import re
 import sqlite3
 from collections import defaultdict
+from contextlib import contextmanager
 from datetime import UTC, date, datetime
 from pathlib import Path
 from urllib.parse import quote, urlsplit
@@ -372,6 +373,21 @@ def markdown_bytes(report: dict) -> bytes:
     return ("\n".join(lines).rstrip() + "\n").encode()
 
 
+@contextmanager
+def readonly_database(database_path: Path):
+    """Open an existing database without ignoring its WAL or migrating its schema."""
+    path = Path(database_path).absolute()
+    if path.is_symlink() or not path.is_file():
+        raise ValueError("database must be an existing regular, non-symlink file")
+    connection = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True)
+    connection.row_factory = sqlite3.Row
+    try:
+        connection.execute("PRAGMA query_only=ON")
+        yield connection
+    finally:
+        connection.close()
+
+
 def write_dossier(database_path: Path, output: Path, *, subject_entity_id: str,
                   as_of: str, recorded_at: str, output_format: str = "markdown") -> dict:
     from .milestone_benchmark import write_new_bytes
@@ -379,19 +395,12 @@ def write_dossier(database_path: Path, output: Path, *, subject_entity_id: str,
     if output_format not in {"markdown", "json"}:
         raise ValueError("dossier format must be markdown or json")
     path = Path(database_path).absolute()
-    if path.is_symlink() or not path.is_file():
-        raise ValueError("database must be an existing regular, non-symlink file")
     protected = {path.resolve(), *(Path(str(path.resolve()) + suffix) for suffix in ("-wal", "-shm", "-journal"))}
     if Path(output).resolve() in protected:
         raise ValueError("dossier output cannot replace the database or its SQLite sidecars")
-    connection = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True)
-    connection.row_factory = sqlite3.Row
-    try:
-        connection.execute("PRAGMA query_only=ON")
+    with readonly_database(path) as connection:
         report = build_evidence_dossier(connection, subject_entity_id=subject_entity_id,
             as_of=as_of, recorded_at=recorded_at)
-    finally:
-        connection.close()
     raw = markdown_bytes(report) if output_format == "markdown" else json_bytes(report)
     write_new_bytes(output, raw)
     return {"output": str(Path(output).absolute()), "format": output_format,

@@ -509,8 +509,12 @@ JSON available separately. Source reports, world-current claims, superseded
 history and dependency-only context are explicitly separated by their temporal
 semantics. Typed fiscal quantities, monthly rates, milestone precision and
 provenance remain visible without source bodies or inferred physical capacity.
-This addresses local evidence usability, not map integration, searchable entity
-discovery, independent event corroboration or any forecasting/evaluation gate.
+The [literal evidence-search workflow](evidence_search.md) now discovers those
+exact IDs from registry and currently associated direct-source metadata, with
+kind filters, complete pagination denominators and separate temporal claim counts.
+It preserves source-native duplicates rather than making identity decisions.
+These additions address local evidence usability, not map integration, reviewed
+semantic/alias discovery, independent event corroboration or any forecasting gate.
 
 ## Phase 5: supply-demand scenarios and investable signals
 

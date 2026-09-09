@@ -115,6 +115,15 @@ def _evidence_dossier(args: argparse.Namespace) -> dict:
         as_of=args.as_of, recorded_at=args.recorded_at, output_format=args.format)
 
 
+def _evidence_search(args: argparse.Namespace) -> dict:
+    from .evidence_dossier import readonly_database
+    from .evidence_search import search_evidence
+
+    with readonly_database(args.database) as connection:
+        return search_evidence(connection, as_of=args.as_of, recorded_at=args.recorded_at,
+            query=args.query, kind=args.kind, limit=args.limit, offset=args.offset)
+
+
 def _assert_imported_hashes(connection, snapshot, nist, osm) -> None:
     expected_pairs = [
         (item.url, item.sha256)
@@ -1243,6 +1252,16 @@ def build_parser() -> argparse.ArgumentParser:
     dossier.add_argument("--output", required=True, type=Path)
     dossier.add_argument("--format", choices=("markdown", "json"), default="markdown")
     dossier.set_defaults(handler=_evidence_dossier)
+
+    search = subparsers.add_parser("evidence-search", help="find exact registry entries by literal entity or direct-source metadata")
+    search.add_argument("--database", required=True, type=Path)
+    search.add_argument("--as-of", required=True, type=_date)
+    search.add_argument("--recorded-at", required=True, type=_timestamp)
+    search.add_argument("--query", help="literal metadata substring; omit to browse")
+    search.add_argument("--kind", help="exact entity kind, such as project or facility")
+    search.add_argument("--limit", type=int, default=50)
+    search.add_argument("--offset", type=int, default=0)
+    search.set_defaults(handler=_evidence_search)
 
     release = subparsers.add_parser(
         "release",

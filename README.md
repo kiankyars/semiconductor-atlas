@@ -811,6 +811,13 @@ quantity scope, rate denominators and evidence provenance remain intact. This is
 read-only inspection, not a fresh source check, canonical identity assignment,
 physical-state certification or forecast result.
 
+Use the installed [evidence search](docs/evidence_search.md) to find those exact
+IDs from a name, stable key or currently associated publisher/family label. It
+supports literal Unicode matching, kind filters and counted pagination, preserves
+separate source-native identities and gives an explicit selection for the dossier.
+Search counts are metadata inventories, not operating-facility counts or full
+lineage/source verification.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision
