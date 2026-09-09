@@ -310,6 +310,11 @@ policy change is exactly two site-footer dates; the active policy gate is not re
 Operational recording coverage is not measured accuracy, final population closure, or a passed
 alert-evaluation gate.
 
+The separately versioned [MTI footer-date normalizer](curated_acquisition.md) addresses the observed
+boilerplate sensitivity for a future reviewed plan. It preserves substantive policy text and links
+and fails closed on changed structural scope. It is implemented and tested on retained bytes, not
+activated: the current study's whole-policy pin and blocked source remain unchanged.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,

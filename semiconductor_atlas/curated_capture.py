@@ -25,6 +25,8 @@ RUN_FORMAT = "semiconductor-atlas-curated-acquisition-run-v2"
 RUN_FORMAT_V3 = "semiconductor-atlas-curated-acquisition-run-v3"
 RULE_VERSION = "fixed-url-review-candidates-v1"
 RULE_VERSION_V2 = "fixed-url-reviewed-policy-response-v2"
+MTI_POLICY_NORMALIZATION = "mti_terms_footer_date_v1"
+MTI_TERMS_URL = "https://www.mti.gov.sg/terms-of-use/"
 
 
 def _now() -> str:
@@ -61,6 +63,113 @@ class _Links(HTMLParser):
             self.links.extend(value for key, value in attrs if key == "href" and value is not None)
 
 
+class PolicyNormalizationError(ValueError):
+    """The response does not fit an explicitly reviewed normalization scope."""
+
+
+class _MtiFooterDates(HTMLParser):
+    _void = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+    _footer = "bg-base-canvas-inverse text-base-content-inverse"
+    _paragraph = "prose-label-md-regular text-base-content-inverse-subtle"
+    _branches = {"flex flex-col gap-8 px-6 py-11 md:px-10 lg:hidden lg:py-16": "mobile",
+                 "hidden px-10 py-14 lg:block": "desktop"}
+    _months = "January February March April May June July August September October November December".split()
+
+    def __init__(self, text: str) -> None:
+        super().__init__(convert_charrefs=True)
+        self.text = text
+        self.lines = [0, *(match.end() for match in re.finditer("\n", text))]
+        self.stack: list[tuple[str, dict]] = []
+        self.html_count = self.body_count = 0
+        self.main_count = self.footer_count = 0
+        self.main_closed = False
+        self.candidate: tuple[int, str] | None = None
+        self.dates: dict[str, tuple[int, int, str]] = {}
+
+    def _position(self) -> int:
+        line, column = self.getpos()
+        return self.lines[line - 1] + column
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = dict(attrs)
+        if len(attributes) != len(attrs) or self.candidate is not None:
+            raise PolicyNormalizationError("ambiguous MTI attributes or nested footer-date markup")
+        parent = self.stack[-1][0] if self.stack else None
+        if tag == "html":
+            self.html_count += 1
+            if parent is not None or self.html_count != 1:
+                raise PolicyNormalizationError("ambiguous MTI HTML root")
+        if tag == "body":
+            self.body_count += 1
+            if parent != "html" or self.body_count != 1:
+                raise PolicyNormalizationError("ambiguous MTI policy body")
+        if tag == "main":
+            self.main_count += 1
+            if parent != "body" or self.main_count != 1 or self.footer_count or attributes.get("id") != "main-content":
+                raise PolicyNormalizationError("MTI main-content scope changed")
+        if tag == "footer":
+            self.footer_count += 1
+            if parent != "body" or not self.main_closed or self.footer_count != 1 or attributes != {"class": self._footer}:
+                raise PolicyNormalizationError("MTI footer scope changed")
+        if tag == "p" and attributes.get("class") == self._paragraph and any(name == "footer" for name, _ in self.stack):
+            footer = next(index for index, (name, _) in enumerate(self.stack) if name == "footer")
+            branch = self.stack[footer + 1:]
+            if (not branch or any(name != "div" for name, _ in branch)
+                    or branch[0][1].get("class") not in self._branches
+                    or attributes != {"class": self._paragraph}):
+                raise PolicyNormalizationError("MTI footer-date branch changed")
+            name = self._branches[branch[0][1]["class"]]
+            if name in self.dates:
+                raise PolicyNormalizationError("duplicate MTI footer date")
+            self.candidate = self._position() + len(self.get_starttag_text()), name
+        if tag not in self._void:
+            self.stack.append((tag, attributes))
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        self.handle_starttag(tag, attrs)
+        if tag not in self._void:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag: str) -> None:
+        if not self.stack or self.stack[-1][0] != tag:
+            raise PolicyNormalizationError("malformed MTI policy nesting")
+        if self.candidate is not None:
+            if tag != "p":
+                raise PolicyNormalizationError("unclosed MTI footer-date paragraph")
+            start, branch = self.candidate
+            inner = self.text[start:self._position()]
+            visible = _html_visible_text(inner)
+            match = re.fullmatch(r"© [0-9]{4} Government of Singapore, last updated ([1-9][0-9]? ([A-Za-z]+) ([0-9]{4}))", visible)
+            if match is None or match[2] not in self._months:
+                raise PolicyNormalizationError("MTI footer-date text changed")
+            date = match[1]
+            try:
+                datetime(int(match[3]), self._months.index(match[2]) + 1, int(date.split()[0]))
+            except ValueError as error:
+                raise PolicyNormalizationError("invalid MTI footer calendar date") from error
+            literal = re.search(re.escape(date) + r"\s*\Z", inner)
+            if literal is None:
+                raise PolicyNormalizationError("MTI footer date is not a literal text suffix")
+            self.dates[branch] = start + literal.start(), start + literal.start() + len(date), date
+            self.candidate = None
+        if tag == "main":
+            self.main_closed = True
+        self.stack.pop()
+
+    def normalized_html(self) -> str:
+        self.feed(self.text)
+        self.close()
+        if (self.stack or self.candidate is not None or self.html_count != 1 or self.body_count != 1
+                or self.main_count != 1 or self.footer_count != 1
+                or set(self.dates) != {"mobile", "desktop"}
+                or len({date for _, _, date in self.dates.values()}) != 1):
+            raise PolicyNormalizationError("missing or inconsistent MTI footer dates")
+        result = self.text
+        for start, end, _ in sorted(self.dates.values(), reverse=True):
+            result = result[:start] + "[reviewed-site-footer-date]" + result[end:]
+        return result
+
+
 def normalized_bytes(raw: bytes, normalization: str) -> bytes:
     if normalization == "reviewed_robots_404_body_v1":
         return raw
@@ -69,6 +178,8 @@ def normalized_bytes(raw: bytes, normalization: str) -> bytes:
         return (text.replace("\r\n", "\n").replace("\r", "\n").rstrip("\n") + "\n").encode("utf-8")
     if normalization == "html_visible_text_v1":
         return _html_visible_text(text).encode("utf-8")
+    if normalization == MTI_POLICY_NORMALIZATION:
+        return normalized_bytes(_MtiFooterDates(text).normalized_html().encode("utf-8"), "html_policy_v1")
     if normalization in {"html_policy_v1", "html_policy_v2"}:
         parser = _Links()
         parser.feed(text)
@@ -153,6 +264,9 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
                 expected_normalizations = {"robots_text_v1"} if entry["purpose"] == "access_policy" else {"html_policy_v1", "html_policy_v2"}
                 if plan["format"] == PLAN_FORMAT_V2 and entry["purpose"] == "access_policy":
                     expected_normalizations.add("reviewed_robots_404_body_v1")
+                if (plan["format"] == PLAN_FORMAT_V2 and entry["purpose"] == "rights_policy"
+                        and entry["url"] == MTI_TERMS_URL and entry["media_types"] == ["text/html"]):
+                    expected_normalizations.add(MTI_POLICY_NORMALIZATION)
                 if entry["normalization"] not in expected_normalizations:
                     raise ValueError("policy normalization does not match purpose")
                 if not isinstance(entry["normalized_sha256"], str) or not re.fullmatch(r"[0-9a-f]{64}", entry["normalized_sha256"]):
@@ -333,6 +447,8 @@ def derive_results(plan: dict, ledger: dict, root: Path, prior_ledger: dict | No
                     reason = "policy_changed_requires_review"
             except UnicodeError:
                 reason = "unsupported_encoding"
+            except PolicyNormalizationError:
+                reason = "policy_normalization_scope_changed_requires_review"
         result = {"id": policy["id"], "accepted": reason is None, "reason": reason, "normalized_sha256": digest}
         if plan["format"] == PLAN_FORMAT_V2:
             result["http_status"] = attempt["http_status"]
@@ -544,7 +660,7 @@ def capture_sources(
                 digest = _sha(normalized_bytes(_read(root / attempt["path"]), entry["normalization"]))
                 if digest == entry["normalized_sha256"]:
                     accepted.add(entry["id"])
-            except UnicodeError:
+            except (UnicodeError, PolicyNormalizationError):
                 pass
     ledger = {
         "format": CHECK_FORMAT, "review_scope_id": plan["review_scope_id"],
