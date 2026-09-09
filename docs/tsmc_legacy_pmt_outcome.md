@@ -104,6 +104,43 @@ only verification, never new report creation or source acquisition, and requires
 absolute evidence paths. It includes the parent population wrapper in the
 isolated execution, not just the pure timing arithmetic.
 
+## Frozen-code replay
+
+Implementation commit: `a8f6eafee070dd0bc4844f7ffed522828daee226`.
+Its retained runtime is `artifacts/2026-09-09-a8f6eaf-frozen-runtime-v1.json`:
+144 files, 3,212,177 decoded source bytes, 4,325,134 bundle bytes; SHA-256
+`797626dfa843bcf30038c8756429d18fdb8295917679b46cc40b90b1e5ba2f7f`.
+
+The isolated replay matched all 168,207 diagnostic bytes. All 25 imported project
+modules, including the parent population verifier, resolved inside the frozen
+runtime. Receipt `artifacts/2026-09-09-frozen-tsmc-legacy-pmt-replay-v1.json`
+contains 3,696 bytes; SHA-256
+`9374c9f74e768359b1ee2bf3fc873322fe434311e9b768088eef14bc0a7ae7d4`.
+
+The source runtime embeds no evidence bodies or databases. Replay still needs
+the exact original evidence inputs and recorded interpreter identity. It verifies
+local reconstruction, not a hermetic OS environment, external attestation or an
+independent judgment of manufacturing truth.
+
+```sh
+atlas_root=/Users/kian/Developer/semiconductor_atlas
+atlas_work="$atlas_root/artifacts/core-v6-evolution"
+python3 "$atlas_work/scripts/replay_frozen_runtime.py" \
+  --bundle "$atlas_work/artifacts/2026-09-09-a8f6eaf-frozen-runtime-v1.json" \
+  --sha256 797626dfa843bcf30038c8756429d18fdb8295917679b46cc40b90b1e5ba2f7f \
+  --commit a8f6eafee070dd0bc4844f7ffed522828daee226 \
+  --working-directory "$atlas_work" \
+  legacy-pmt-outcome-diagnostic \
+  --review "$atlas_work/review_plans/2026-09-09-tsmc-legacy-pmt-outcome-review-v1.json" \
+  --review-sha256 147603d1556cd8220a1e32d98f04831c13a01ce894b5f5249a0adcb7ac623c32 \
+  --reference-root "$atlas_work" \
+  --source-body "$atlas_root/source_snapshots/2026-08-20-ai-critical-manufacturing-v1/tsmc-2025-form-20f.html" \
+  --provenance "$atlas_root/baselines/ai_critical_manufacturing_v1.json" \
+  --source-manifest "$atlas_root/source_snapshots/2026-08-20-ai-critical-manufacturing-v1/manifest.json" \
+  --report "$atlas_work/artifacts/2026-09-09-tsmc-legacy-pmt-outcome-diagnostic-v1.json" \
+  --report-sha256 a4a660544ebb32ab8a5603be5d807b4c90be4623ec1989e2e8f9d581d20e7986
+```
+
 ## Validation
 
 The complete core run executed 1,837 tests in 257.853 seconds: 1,836 passed and
@@ -119,6 +156,12 @@ that exactly one outcome changes and that the supplemental Bosch event remains
 unscored. The original NIST-only diagnostic also replayed successfully under its
 `efe11afb33978554d00b290c3698669c72d3766b` frozen producer. Tests and byte replay
 do not independently authenticate publisher statements or semantic judgment.
+
+Before and after this work, the parent checksum ledger, pinned baseline,
+analytics module and scheduled schema-5 database retained their exact hashes,
+as did the isolated schema-9 database and prospective guidance vintage. Neither
+checkout has unmerged paths. No source was acquired, no core database was written
+and nothing was pushed, published or rerouted to scheduled execution.
 
 ## Remaining north-star work
 
