@@ -13,17 +13,19 @@
   <header><h1>Semiconductor Atlas <span> / Evidence</span></h1><p class="badge">Local · read only</p></header>
   <p id="snapshot" class="muted">Loading the retained evidence snapshot…</p>
   <form id="filters" aria-label="Evidence search">
-    <label class="query">Entity or publisher<input id="query" type="search" maxlength="200" placeholder="Ohio, Fab 21, Villach…"></label>
+    <label>View<select id="view-mode"><option value="registry">Registry</option><option value="changes">New evidence</option></select></label>
+    <label class="query" id="query-label">Entity or publisher<input id="query" type="search" maxlength="200" placeholder="Ohio, Fab 21, Villach…"></label>
+    <label id="since-label" hidden>Learned after (exclusive)<input id="since" type="text" spellcheck="false" disabled placeholder="2026-09-08T19:00:00Z"></label>
     <label>Entity kind<select id="kind"><option value="">All kinds</option></select></label>
     <label>World date<input id="as-of" type="date" required></label>
     <label>Known by (with timezone)<input id="recorded-at" type="text" required spellcheck="false" placeholder="2026-09-09T05:52:00Z"></label>
     <button type="submit" id="search" disabled>Search</button>
   </form>
-  <p class="hint">Literal metadata search, not aliases or document full text. Similar names remain separate records.</p>
+  <p class="hint" id="query-hint">Literal metadata search, not aliases or document full text. Similar names remain separate records.</p>
   <p id="status" role="status" aria-live="polite"></p>
   <div class="workspace">
-    <section class="results" aria-label="Registry results">
-      <h2>Registry records</h2>
+    <section class="results" aria-label="Evidence results">
+      <h2 id="list-title">Registry records</h2>
       <p id="counts" class="muted"></p>
       <ul id="list"></ul>
       <nav aria-label="Result pages"><button id="previous" disabled>Previous</button><span id="page"></span><button id="next" disabled>Next</button></nav>

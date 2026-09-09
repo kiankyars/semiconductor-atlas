@@ -54,7 +54,16 @@ cutoff or entity selection. Empty results, unknown values and rejected dossiers
 are distinct states. Dossier rejection never yields a partial or empty-looking
 report; the CLI can provide more specific provenance diagnostics.
 
-The existing dossier allowlist is reused without a second claim-hydration path.
+Choose **New evidence** to inspect [recorded admissions and supersessions](evidence_changes.md).
+The suggested lower bound is one day before the initial knowledge cutoff; edit it to choose
+a different window. It is exclusive, and Known by is inclusive. This mode hides literal
+registry search and retains entity-kind filtering. World date affects dossier context,
+not event selection. Counts distinguish events, claims and exact subjects. Expand event
+claims directly or open a broader exact dossier. Page dependencies, ingestion clocks,
+inventory hash and limits remain inspectable. Pagination binds the selected inventory;
+input changes clear stale results and that binding. These are not physical events or alerts.
+
+The existing typed-value hydrator and dossier allowlist are reused.
 Source quantities retain fiscal periods and units; monthly rates keep their
 denominators and qualifiers; milestones keep bounds, precision and null
 midpoints. Null confidence is not rendered as zero. Source reports do not
@@ -71,8 +80,8 @@ open, alongside reviewed semantic discovery and the alert/forecast gates.
 - Only `127.0.0.1` is bound. Every GET requires the exact Host and random session
   path. Supplied Origin and Fetch Metadata headers must be same-origin (or a
   direct-navigation `none` fetch site). There is no CORS permission.
-- Only three packaged assets and three read endpoints exist: `api/config`,
-  `api/search`, `api/dossier`. API parameters are allowlisted; duplicate and
+- Only three packaged assets and four read endpoints exist: `api/config`,
+  `api/search`, `api/dossier`, `api/changes`. API parameters are allowlisted; duplicate and
   unsupported fields are rejected. Both cutoffs are required for data requests.
   No arbitrary file, SQL, source URL, export path or mutation endpoint exists.
 - Non-GET methods are unsupported. Request targets are bounded to 8,192
@@ -103,10 +112,10 @@ python3 -m unittest discover -s web/tests
 uv build --offline --quiet --out-dir artifacts/NEW-BUILD-DIRECTORY
 ```
 
-The 25 HTTP tests exercise actual loopback requests, exact search/dossier API
+The HTTP tests exercise actual loopback requests, exact search/dossier/change API
 bytes, cutoff boundaries, invalid lineage, pagination, origin/Host/token and
 parameter rejection, unchanged database bytes, and committed-WAL snapshot
-isolation across restart. The 13 JavaScript tests execute the actual packaged
+isolation across restart. The JavaScript tests execute the actual packaged
 client script with a minimal DOM double to exercise selection, summaries,
 safe links, error states, pagination and stale-response guards. They are not
 browser interaction, accessibility or screenshot validation.

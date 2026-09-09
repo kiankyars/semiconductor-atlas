@@ -29,6 +29,16 @@ reads have used exact microseconds since schema 5.
 Physical validity dates remain separate from knowledge timestamps.
 An announcement still does not establish operation, qualification, utilization or output.
 
+### Chronological metadata selection
+
+The follow-up reader repair orders schema-10 timestamps by instant, not text spelling.
+All four EPA/Taiwan latest-source scopes, per-document first acceptance, family first/last
+retrieval and acceptance, release processing runs and identity histories use exact chronology.
+Original timestamp strings remain intact. Run ties use existing ID ordering; aggregate
+equal-instant representatives use deterministic literal ordering. Schemas 1–9 retain previous
+ordering for historical compatibility. No migration or snapshot rewrite is required. Eleven
+regressions cover fractional boundaries, raw offsets, equal-instant ties and reversed insertion.
+
 Direct SQL receives claim-lineage guards as well as the existing immutable-content and identity
 guards. This is not a replacement for `validate_database`: callers must still use the complete
 repository workflow and validator for evidence completeness, typed values and other semantic

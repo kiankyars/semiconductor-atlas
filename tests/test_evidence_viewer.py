@@ -13,6 +13,7 @@ from urllib.parse import urlencode
 from semiconductor_atlas import models as m, repository as r
 from semiconductor_atlas.cli import build_parser
 from semiconductor_atlas.evidence_dossier import json_bytes
+from semiconductor_atlas.evidence_changes import evidence_changes
 from semiconductor_atlas.evidence_search import search_evidence
 from semiconductor_atlas.evidence_viewer import CSP, open_viewer
 from tests import test_evidence_dossier as fixtures
@@ -115,6 +116,67 @@ class EvidenceViewerTests(unittest.TestCase):
         self.assertEqual(raw, json_bytes(self.fixture.report()))
         self.assertNotIn(b"SECRET", raw)
         self.assertEqual(json.loads(raw)["source_statements"][0]["confidence"], None)
+
+    def test_changes_match_direct_api_including_future_effective_claim(self):
+        status, _, raw = self.api("api/changes", since=fixtures.CREATED)
+        expected = evidence_changes(self.fixture.c, since=fixtures.CREATED,
+            as_of=fixtures.AS_OF, recorded_at=fixtures.ADMITTED)
+        self.assertEqual(status, 200)
+        self.assertEqual(raw, json_bytes(expected))
+        self.assertEqual(expected["total_events"], 2)
+        self.assertNotIn(b"SECRET", raw)
+
+    def test_changes_pagination_requires_digest_and_keeps_all_supported_selectors(self):
+        _, _, raw = self.api("api/changes", since=fixtures.CREATED, limit="1", kind="project", entity_id="project")
+        first = json.loads(raw)
+        status, _, raw = self.api("api/changes", since=fixtures.CREATED, limit="1", offset="1",
+            kind="project", entity_id="project", population_sha256=first["population_sha256"])
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(raw)["total_events"], 2)
+        self.assertEqual(json.loads(raw)["population_sha256"], first["population_sha256"])
+        self.assertEqual(self.api("api/changes", since=fixtures.CREATED, offset="1")[0], 400)
+
+    def test_changes_reject_missing_start_bad_window_and_unsupported_query(self):
+        for params in ({}, {"since": fixtures.ADMITTED}, {"since": "2026-09-09"},
+                       {"since": "0001-01-01T00:00:00+01:00"},
+                       {"since": fixtures.CREATED, "query": "Ohio"},
+                       {"since": fixtures.CREATED, "entity_id": "x" * 201}):
+            with self.subTest(params=params):
+                status, _, raw = self.api("api/changes", **params)
+                self.assertEqual(status, 400)
+                self.assertNotIn(b'"events"', raw)
+
+    def test_changes_empty_window_and_rejected_lineage_are_different(self):
+        status, _, raw = self.api("api/changes", since=fixtures.CREATED, recorded_at=fixtures.JUST_BEFORE)
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(raw)["total_events"], 0)
+        self.stop()
+        self.fixture.document("future", retrieved_at=fixtures.JUST_AFTER)
+        self.fixture.claim("future-evidence", evidence=[m.EvidenceLink("future")])
+        self.fixture.c.commit()
+        self.start()
+        status, _, raw = self.api("api/changes", since=fixtures.CREATED)
+        self.assertEqual(status, 400)
+        self.assertNotIn(b'"events"', raw)
+
+    def test_changes_share_the_session_snapshot_and_observe_later_commits_only_after_restart(self):
+        _, _, raw = self.api("api/changes", since=fixtures.CREATED)
+        first = json.loads(raw)
+        self.fixture.claim("later-commit")
+        self.fixture.c.commit()
+        _, _, raw = self.api("api/changes", since=fixtures.CREATED)
+        self.assertEqual(json.loads(raw), first)
+        self.stop()
+        self.start()
+        status, _, raw = self.api("api/changes", since=fixtures.CREATED,
+                                  population_sha256=first["population_sha256"])
+        self.assertEqual(status, 400)
+        _, _, raw = self.api("api/changes", since=fixtures.CREATED)
+        self.assertEqual(json.loads(raw)["total_events"], 3)
+
+    def test_config_suggests_previous_day_without_truncating_microseconds(self):
+        _, _, raw = self.request("api/config")
+        self.assertEqual(json.loads(raw)["suggested_since"], "2026-09-08T05:52:00.817388Z")
 
     def test_each_request_applies_its_own_explicit_cutoffs(self):
         _, _, raw = self.api(recorded_at=fixtures.JUST_BEFORE)

@@ -50,6 +50,14 @@ def admission_clock_sql(connection: sqlite3.Connection) -> str:
     return "atlas_timestamp_us"
 
 
+def chronological_order_sql(connection: sqlite3.Connection, expression: str) -> str:
+    """Order trusted timestamp SQL by instant in schema 10, preserving legacy text order."""
+    if schema_version(connection) < 10:
+        return expression
+    register_clock_functions(connection)
+    return f"atlas_timestamp_us({expression})"
+
+
 def connect(path: str | Path) -> sqlite3.Connection:
     database_path = Path(path)
     if str(database_path) != ":memory:":

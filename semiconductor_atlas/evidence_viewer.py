@@ -6,12 +6,13 @@ import json
 import secrets
 import sqlite3
 from contextlib import contextmanager
-from datetime import date
+from datetime import date, timedelta
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from importlib.resources import files
 from urllib.parse import parse_qs, urlsplit
 
 from .database import schema_version
+from .evidence_changes import evidence_changes
 from .evidence_dossier import _clock, build_evidence_dossier, json_bytes, readonly_database
 from .evidence_search import search_evidence
 from .models import EntityKind
@@ -108,7 +109,7 @@ class EvidenceHandler(BaseHTTPRequestHandler):
             if parsed.fragment:
                 raise ValueError("fragments are not request parameters")
             params = parse_qs(parsed.query, keep_blank_values=True, strict_parsing=True,
-                              max_num_fields=8, encoding="utf-8", errors="strict")
+                              max_num_fields=9, encoding="utf-8", errors="strict")
             if any(len(values) != 1 for values in params.values()):
                 raise ValueError("duplicate request parameters")
             params = {key: values[0] for key, values in params.items()}
@@ -121,13 +122,21 @@ class EvidenceHandler(BaseHTTPRequestHandler):
             if route == "api/config":
                 if params:
                     raise ValueError("config does not accept parameters")
+                try:
+                    suggested_since = (_clock(self.server.recorded_at) - timedelta(days=1)).isoformat().replace("+00:00", "Z")
+                except OverflowError:
+                    suggested_since = None
                 result = {"format": FORMAT, "schema_version": self.server.version,
                           "as_of": self.server.as_of, "recorded_at": self.server.recorded_at,
+                          "suggested_since": suggested_since,
                           "entity_kinds": [kind.value for kind in EntityKind],
                           "snapshot": "Fixed read-only database transaction; restart to see later admissions"}
-            elif route in {"api/search", "api/dossier"}:
-                allowed = {"as_of", "recorded_at"} | (
-                    {"query", "kind", "limit", "offset"} if route == "api/search" else {"entity_id"})
+            elif route in {"api/search", "api/dossier", "api/changes"}:
+                allowed = {"as_of", "recorded_at"} | {
+                    "api/search": {"query", "kind", "limit", "offset"},
+                    "api/dossier": {"entity_id"},
+                    "api/changes": {"since", "kind", "entity_id", "limit", "offset", "population_sha256"},
+                }[route]
                 if params.keys() - allowed or not {"as_of", "recorded_at"} <= params.keys():
                     raise ValueError("both cutoffs and only supported parameters are required")
                 as_of, recorded_at = _cutoffs(params["as_of"], params["recorded_at"])
@@ -135,6 +144,13 @@ class EvidenceHandler(BaseHTTPRequestHandler):
                     result = search_evidence(self.server.connection, as_of=as_of, recorded_at=recorded_at,
                         query=params.get("query"), kind=params.get("kind"),
                         limit=int(params.get("limit", "50")), offset=int(params.get("offset", "0")))
+                elif route == "api/changes":
+                    if not params.get("since") or len(params.get("entity_id", "")) > 200:
+                        raise ValueError("since and an optional bounded exact entity ID are required")
+                    result = evidence_changes(self.server.connection, as_of=as_of, recorded_at=recorded_at,
+                        since=params["since"], kind=params.get("kind"), subject_entity_id=params.get("entity_id"),
+                        limit=int(params.get("limit", "50")), offset=int(params.get("offset", "0")),
+                        population_sha256=params.get("population_sha256"))
                 else:
                     if not params.get("entity_id") or len(params["entity_id"]) > 200:
                         raise ValueError("an exact entity ID of at most 200 characters is required")
@@ -145,7 +161,7 @@ class EvidenceHandler(BaseHTTPRequestHandler):
                 return
             self._response(200, json_bytes(result))
         except (ValueError, UnicodeError):
-            self._response(400, json_bytes({"error": "Invalid request or evidence unavailable at these cutoffs. Check the inputs; inspect the CLI dossier for provenance diagnostics."}))
+            self._response(400, json_bytes({"error": "Invalid request or evidence unavailable at these cutoffs. Check the inputs; inspect the corresponding CLI command for provenance diagnostics."}))
         except sqlite3.Error:
             self._response(422, json_bytes({"error": "Evidence snapshot could not be read; no partial dossier returned"}))
 

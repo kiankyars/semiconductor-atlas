@@ -527,6 +527,13 @@ without changing the published map or redistributing source bodies.
 These additions address local evidence usability, not geographic-map integration, reviewed
 semantic/alias discovery, independent event corroboration or any forecasting gate.
 
+The [recorded evidence-change feed](evidence_changes.md) exposes admissions and supersessions
+through the installed CLI and local viewer, with exact knowledge windows, complete population
+accounting, digest-bound pagination and selected-page lineage checks. Independent enumeration
+matches the retained 18-admission/seven-subject case. These source records are not 18 physical
+events or evaluated alerts. Backdated-write completeness, commit-ordered synchronization,
+independent event adjudication, measured alert utility and calibrated forecasts remain open.
+
 ## Phase 5: supply-demand scenarios and investable signals
 
 Add scenario assumptions for demand, yield, qualification, project timing, export controls,

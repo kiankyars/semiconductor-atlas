@@ -131,6 +131,16 @@ def _evidence_viewer(args: argparse.Namespace) -> dict:
                         port=args.port)
 
 
+def _evidence_changes(args: argparse.Namespace) -> dict:
+    from .evidence_changes import evidence_changes
+    from .evidence_dossier import readonly_database
+
+    with readonly_database(args.database) as connection:
+        return evidence_changes(connection, since=args.since, recorded_at=args.recorded_at,
+            as_of=args.as_of, kind=args.kind, subject_entity_id=args.entity_id,
+            limit=args.limit, offset=args.offset, population_sha256=args.population_sha256)
+
+
 def _assert_imported_hashes(connection, snapshot, nist, osm) -> None:
     expected_pairs = [
         (item.url, item.sha256)
@@ -1270,6 +1280,18 @@ def build_parser() -> argparse.ArgumentParser:
     search.add_argument("--limit", type=int, default=50)
     search.add_argument("--offset", type=int, default=0)
     search.set_defaults(handler=_evidence_search)
+
+    changes = subparsers.add_parser("evidence-changes", help="inspect stored claim admissions and supersessions, not manufacturing events")
+    changes.add_argument("--database", required=True, type=Path)
+    changes.add_argument("--since", required=True, type=_timestamp, help="exclusive knowledge-window start")
+    changes.add_argument("--recorded-at", required=True, type=_timestamp, help="inclusive knowledge-window end")
+    changes.add_argument("--as-of", required=True, type=_date, help="physical date for dossier drill-through only")
+    changes.add_argument("--kind", help="exact entity kind")
+    changes.add_argument("--entity-id", help="exact subject ID; no alias or related-entity expansion")
+    changes.add_argument("--limit", type=int, default=50)
+    changes.add_argument("--offset", type=int, default=0)
+    changes.add_argument("--population-sha256", help="first-page inventory hash; required for subsequent pages")
+    changes.set_defaults(handler=_evidence_changes)
 
     viewer = subparsers.add_parser("evidence-viewer", help="inspect evidence in a read-only loopback browser session")
     viewer.add_argument("--database", required=True, type=Path)

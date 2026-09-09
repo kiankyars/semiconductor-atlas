@@ -822,6 +822,11 @@ separate source-native identities and gives an explicit selection for the dossie
 Search counts are metadata inventories, not operating-facility counts or full
 lineage/source verification.
 
+The [recorded evidence-change feed](docs/evidence_changes.md) adds exact-window claim
+admissions and supersessions, complete event accounting and digest-bound pagination through
+the CLI and the local viewer's New evidence mode. Source claims remain distinct from physical
+manufacturing events; typed values, provenance and strict page-level lineage checks are retained.
+
 The installed [local evidence viewer](docs/evidence_viewer.md) connects that search
 to exact dossiers in a browser, with editable world/knowledge cutoffs, counted
 pagination and separate source, current, history and dependency sections. It is

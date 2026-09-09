@@ -7,7 +7,7 @@ import sqlite3
 from collections import Counter
 from typing import Any, Sequence
 
-from .database import admission_clock_sql, knowledge_clock_sql
+from .database import admission_clock_sql, chronological_order_sql, knowledge_clock_sql, schema_version
 from .models import CapacityBasis
 from .service import (
     _accepted_document_runs_sql,
@@ -341,6 +341,91 @@ def _taiwan_tax_relationship_review_scope(
     }
 
 
+def _source_family_rows(
+    connection: sqlite3.Connection,
+    *,
+    recorded_at: str,
+) -> list[sqlite3.Row]:
+    document_runs_sql = _accepted_document_runs_sql(connection)
+    clock = knowledge_clock_sql(connection)
+    if schema_version(connection) >= 10:
+        return connection.execute(
+            f"""
+            WITH document_runs AS (
+                {document_runs_sql}
+            ), accepted_documents AS (
+                SELECT DISTINCT document_id,
+                       FIRST_VALUE(started_at) OVER (
+                           PARTITION BY document_id
+                           ORDER BY {clock}(started_at), started_at
+                       ) AS database_accepted_at
+                FROM document_runs
+                WHERE {clock}(started_at) <= {clock}(?)
+            ), family_documents AS (
+                SELECT families.id AS family_id,
+                       families.stable_key AS source_family,
+                       families.name AS source_family_name,
+                       sources.id AS source_id, documents.id AS document_id,
+                       documents.retrieved_at, accepted_documents.database_accepted_at
+                FROM accepted_documents
+                JOIN source_documents AS documents ON documents.id = accepted_documents.document_id
+                JOIN sources ON sources.id = documents.source_id
+                JOIN source_families AS families ON families.id = sources.family_id
+            ), ranked AS (
+                SELECT *,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(retrieved_at), retrieved_at, document_id) AS first_retrieval,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(retrieved_at) DESC, retrieved_at DESC, document_id DESC) AS last_retrieval,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(database_accepted_at), database_accepted_at, document_id) AS first_acceptance,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(database_accepted_at) DESC, database_accepted_at DESC, document_id DESC) AS last_acceptance
+                FROM family_documents
+            )
+            SELECT source_family, source_family_name,
+                   COUNT(DISTINCT source_id) AS source_count,
+                   COUNT(document_id) AS document_count,
+                   MAX(CASE WHEN first_retrieval = 1 THEN retrieved_at END) AS first_retrieved_at,
+                   MAX(CASE WHEN last_retrieval = 1 THEN retrieved_at END) AS last_retrieved_at,
+                   MAX(CASE WHEN first_acceptance = 1 THEN database_accepted_at END) AS first_database_accepted_at,
+                   MAX(CASE WHEN last_acceptance = 1 THEN database_accepted_at END) AS last_database_accepted_at
+            FROM ranked
+            GROUP BY family_id
+            ORDER BY source_family
+            """,
+            (recorded_at,),
+        ).fetchall()
+    return connection.execute(
+        f"""
+        WITH document_runs AS (
+            {document_runs_sql}
+        ), accepted_documents AS (
+            SELECT document_id, MIN(started_at) AS database_accepted_at
+            FROM document_runs
+            WHERE julianday(started_at) <= julianday(?)
+            GROUP BY document_id
+        )
+        SELECT families.stable_key AS source_family,
+               families.name AS source_family_name,
+               COUNT(DISTINCT sources.id) AS source_count,
+               COUNT(documents.id) AS document_count,
+               MIN(documents.retrieved_at) AS first_retrieved_at,
+               MAX(documents.retrieved_at) AS last_retrieved_at,
+               MIN(accepted_documents.database_accepted_at) AS first_database_accepted_at,
+               MAX(accepted_documents.database_accepted_at) AS last_database_accepted_at
+        FROM accepted_documents
+        JOIN source_documents AS documents
+          ON documents.id = accepted_documents.document_id
+        JOIN sources ON sources.id = documents.source_id
+        JOIN source_families AS families ON families.id = sources.family_id
+        GROUP BY families.id
+        ORDER BY families.stable_key
+        """.replace("julianday(", f"{clock}("),
+        (recorded_at,),
+    ).fetchall()
+
+
 def coverage_report(
     connection: sqlite3.Connection,
     *,
@@ -379,37 +464,16 @@ def coverage_report(
     non_organizations = [
         item for item in entity_view if item["entity_kind"] != "organization"
     ]
-    document_runs_sql = _accepted_document_runs_sql(connection)
-    clock = knowledge_clock_sql(connection)
     scope_clock = admission_clock_sql(connection)
-    source_rows = connection.execute(
-        f"""
-        WITH document_runs AS (
-            {document_runs_sql}
-        ), accepted_documents AS (
-            SELECT document_id, MIN(started_at) AS database_accepted_at
-            FROM document_runs
-            WHERE julianday(started_at) <= julianday(?)
-            GROUP BY document_id
+    source_rows = _source_family_rows(connection, recorded_at=recorded_at)
+    run_order = chronological_order_sql(connection, "runs.started_at")
+    retrieval_order = chronological_order_sql(connection, "documents.retrieved_at")
+    first_acceptance_sql = "MIN(runs.started_at) OVER (PARTITION BY documents.id)"
+    if schema_version(connection) >= 10:
+        first_acceptance_sql = (
+            "FIRST_VALUE(runs.started_at) OVER (PARTITION BY documents.id "
+            f"ORDER BY {run_order}, runs.id)"
         )
-        SELECT families.stable_key AS source_family,
-               families.name AS source_family_name,
-               COUNT(DISTINCT sources.id) AS source_count,
-               COUNT(documents.id) AS document_count,
-               MIN(documents.retrieved_at) AS first_retrieved_at,
-               MAX(documents.retrieved_at) AS last_retrieved_at,
-               MIN(accepted_documents.database_accepted_at) AS first_database_accepted_at,
-               MAX(accepted_documents.database_accepted_at) AS last_database_accepted_at
-        FROM accepted_documents
-        JOIN source_documents AS documents
-          ON documents.id = accepted_documents.document_id
-        JOIN sources ON sources.id = documents.source_id
-        JOIN source_families AS families ON families.id = sources.family_id
-        GROUP BY families.id
-        ORDER BY families.stable_key
-        """.replace("julianday(", f"{clock}("),
-        (recorded_at,),
-    ).fetchall()
     namespace_counts = dict(
         sorted(
             Counter(
@@ -441,12 +505,10 @@ def coverage_report(
         item for item in entity_view if item["stable_key"].startswith("epa:frs:")
     ]
     frs_document = connection.execute(
-        """
+        f"""
         SELECT documents.metadata_json, runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM source_documents AS documents
         JOIN sources ON sources.id = documents.source_id
         JOIN source_families AS families ON families.id = sources.family_id
@@ -456,7 +518,7 @@ def coverage_report(
           AND julianday(runs.started_at) <= julianday(?)
           AND date(json_extract(runs.parameters_json, '$.as_of_date')) <= date(?)
         ORDER BY date(json_extract(runs.parameters_json, '$.as_of_date')) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
         """.replace("julianday(", f"{scope_clock}("),
@@ -548,14 +610,12 @@ def coverage_report(
         if str(item["entity_id"]) in current_claim_entity_ids
     ]
     moenv_document = connection.execute(
-        """
+        f"""
         SELECT documents.id AS source_document_id,
                documents.metadata_json, documents.retrieved_at,
                runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM ingestion_runs AS runs
         JOIN source_documents AS documents
           ON documents.id = runs.input_document_id
@@ -572,7 +632,7 @@ def coverage_report(
                      json_extract(runs.parameters_json, '$.dataset_updated_at'),
                      '+8 hours'
                  ) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
         """.replace("julianday(", f"{scope_clock}("),
@@ -762,14 +822,12 @@ def coverage_report(
         if str(item["entity_id"]) in current_claim_entity_ids
     ]
     factory_document = connection.execute(
-        """
+        f"""
         SELECT documents.id AS source_document_id,
                documents.metadata_json, documents.retrieved_at,
                runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM ingestion_runs AS runs
         JOIN source_documents AS documents
           ON documents.id = runs.input_document_id
@@ -786,7 +844,7 @@ def coverage_report(
                      json_extract(runs.parameters_json, '$.source_updated_at'),
                      '+8 hours'
                  ) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
         """.replace("julianday(", f"{scope_clock}("),
@@ -902,14 +960,12 @@ def coverage_report(
         if str(item["entity_id"]) in current_claim_entity_ids
     ]
     mof_document = connection.execute(
-        """
+        f"""
         SELECT documents.id AS source_document_id,
                documents.metadata_json, documents.retrieved_at,
                runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM ingestion_runs AS runs
         JOIN source_documents AS documents
           ON documents.id = runs.input_document_id
@@ -921,7 +977,7 @@ def coverage_report(
           AND date(json_extract(runs.parameters_json, '$.publisher_date'))
               <= date(?)
         ORDER BY date(json_extract(runs.parameters_json, '$.publisher_date')) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
         """.replace("julianday(", f"{scope_clock}("),

@@ -4,7 +4,7 @@
   const node = (tag, text, className) => { const el = document.createElement(tag); if (text !== undefined) el.textContent = text; if (className) el.className = className; return el; };
   const human = value => String(value).replaceAll("_", " ");
   const display = value => value === null ? "null — unknown or not applicable" : typeof value === "object" ? JSON.stringify(value) : String(value);
-  const state = {generation: 0, selection: 0, request: null, page: null, query: null};
+  const state = {generation: 0, selection: 0, request: null, page: null, query: null, mode: "registry"};
   async function get(route, params, signal) {
     const response = await fetch(route + (params ? "?" + new URLSearchParams(params) : ""), {signal, cache: "no-store", credentials: "omit"});
     const data = await response.json();
@@ -80,16 +80,61 @@
     for (const e of report.results) { const button = node("button"); button.type = "button"; button.setAttribute("aria-pressed", "false"); button.append(node("span", e.display_name || e.stable_key), node("span", `${human(e.kind)} · ${e.known_source_statement_count} source reports · ${e.world_current_claim_count} world-current claims`, "meta"), node("span", e.direct_sources.map(s => s.publisher).filter((s, i, a) => a.indexOf(s) === i).join(" · ") || "No selected direct-source labels", "meta"), node("span", e.id, "meta")); button.addEventListener("click", () => select(e, button)); const li = node("li"); li.append(button); $("list").append(li); }
     if (!report.results.length) $("list").append(node("li", "No matching retained records. Try another literal name or publisher."));
   }
+  function renderChanges(report) {
+    state.page = report; $("list").replaceChildren();
+    $("counts").textContent = `${report.total_events} recorded events · ${report.distinct_claims} claims · ${report.distinct_subjects} exact subjects`;
+    $("page").textContent = report.returned_events ? `${report.offset + 1}–${report.offset + report.returned_events}` : "No recorded events";
+    $("previous").disabled = report.offset === 0; $("next").disabled = report.next_offset === null;
+    for (const event of report.events) {
+      const li = node("li", undefined, "knowledge-event"), e = event.entity, button = node("button");
+      button.type = "button"; button.setAttribute("aria-pressed", "false");
+      button.append(node("span", e.display_name || e.stable_key), node("span", `Open exact dossier · ${e.id}`, "meta"));
+      button.addEventListener("click", () => select({...e, dossier_selection: event.dossier_selection}, button));
+      li.append(button, node("p", `${human(event.event_type)} · ${event.event_at}`, "meta"), claimCard(event.claim));
+      if (event.event_type === "claim_superseded") li.append(node("p", "Bookkeeping only; not closure, cancellation or capacity loss.", "meta"));
+      li.append(disclosure("Event identity", fields({event_id: event.event_id, event_at: event.event_at, event_type: event.event_type})));
+      $("list").append(li);
+    }
+    if (!report.events.length) $("list").append(node("li", "No stored events in this window. This does not establish no real-world change."));
+    const root = $("dossier"); root.replaceChildren(node("h2", "Recorded knowledge, not manufacturing events"),
+      node("p", `${report.event_counts.claim_admitted} admissions · ${report.event_counts.claim_superseded} supersessions`),
+      node("p", "Expand a claim to inspect its value and evidence. Open an exact dossier for broader context. World date affects the dossier, not this event list."));
+    root.append(disclosure("Window and population", fields({since_exclusive: report.since, recorded_at_inclusive: report.recorded_at,
+      population_sha256: report.population_sha256, total_events: report.total_events, returned_events: report.returned_events,
+      page_validation_cutoff: report.page_validation_cutoff})));
+    const dependencies = node("div"); for (const claim of report.dependency_context) dependencies.append(claimCard(claim));
+    root.append(disclosure(`Page dependency context · ${report.dependency_context.length}`, dependencies));
+    const runs = node("div"); for (const run of report.ingestion_runs) runs.append(fields(run)); root.append(disclosure("Page ingestion clocks", runs));
+    const boundaries = node("ul"); for (const text of report.boundaries) boundaries.append(node("li", text)); root.append(disclosure("Interpretation and limits", boundaries));
+  }
+  function modeControls() {
+    const changes = $("view-mode").value === "changes";
+    $("query-label").hidden = changes; $("query").disabled = changes;
+    $("since-label").hidden = !changes; $("since").disabled = !changes; $("since").required = changes;
+    $("search").textContent = changes ? "Load evidence" : "Search";
+    $("list-title").textContent = changes ? "New evidence" : "Registry records";
+    $("query-hint").textContent = changes ? "Stored admissions and supersessions, not physical events or alerts. Start is exclusive; Known by is inclusive. World date only selects dossier context." : "Literal metadata search, not aliases or document full text. Similar names remain separate records.";
+  }
   async function search(offset = 0, newQuery = true) {
     state.request?.abort(); state.request = new AbortController(); const generation = ++state.generation;
-    if (newQuery) { state.query = {as_of: $("as-of").value, recorded_at: $("recorded-at").value.trim()}; if ($("query").value.trim()) state.query.query = $("query").value.trim(); if ($("kind").value) state.query.kind = $("kind").value; }
-    $("status").textContent = "Searching the retained snapshot…"; $("previous").disabled = true; $("next").disabled = true; $("counts").textContent = ""; $("page").textContent = ""; $("list").replaceChildren(); $("dossier").replaceChildren(node("h2", "Inspect an exact record"), node("p", "Select a result after the search completes."));
-    try { const report = await get("api/search", {...state.query, limit: 50, offset}, state.request.signal); if (generation !== state.generation) return; renderResults(report); $("status").textContent = `Results: world date ${report.as_of} · known by ${report.recorded_at}. Counts are not a facility census or physical-capacity totals.`; }
+    if (newQuery) { state.mode = $("view-mode").value === "changes" ? "changes" : "registry"; state.page = null;
+      state.query = {as_of: $("as-of").value, recorded_at: $("recorded-at").value.trim()};
+      if (state.mode === "changes") state.query.since = $("since").value.trim();
+      else if ($("query").value.trim()) state.query.query = $("query").value.trim();
+      if ($("kind").value) state.query.kind = $("kind").value;
+    }
+    const params = {...state.query, limit: 50, offset};
+    if (state.mode === "changes" && !newQuery && state.page) params.population_sha256 = state.page.population_sha256;
+    $("status").textContent = state.mode === "changes" ? "Loading recorded evidence events…" : "Searching the retained snapshot…"; $("previous").disabled = true; $("next").disabled = true; $("counts").textContent = ""; $("page").textContent = ""; $("list").replaceChildren(); $("dossier").replaceChildren(node("h2", "Inspect an exact record"), node("p", "Select a result after the search completes."));
+    try { const report = await get(state.mode === "changes" ? "api/changes" : "api/search", params, state.request.signal); if (generation !== state.generation) return;
+      if (state.mode === "changes") { renderChanges(report); $("status").textContent = `Learned after ${report.since} through ${report.recorded_at}. These are stored knowledge events, not physical changes.`; }
+      else { renderResults(report); $("status").textContent = `Results: world date ${report.as_of} · known by ${report.recorded_at}. Counts are not a facility census or physical-capacity totals.`; }
+    }
     catch (error) { if (error.name !== "AbortError" && generation === state.generation) $("status").textContent = error.message; }
   }
   $("filters").addEventListener("submit", event => { event.preventDefault(); search(); });
   $("previous").addEventListener("click", () => search(Math.max(0, state.page.offset - 50), false));
   $("next").addEventListener("click", () => search(state.page.next_offset, false));
-  $("filters").addEventListener("input", () => { state.request?.abort(); ++state.generation; state.page = null; $("list").replaceChildren(); $("counts").textContent = ""; $("page").textContent = ""; $("previous").disabled = true; $("next").disabled = true; $("dossier").replaceChildren(node("h2", "Search inputs changed"), node("p", "Submit the search to inspect evidence at the new cutoffs.")); $("status").textContent = "Inputs changed. Search to apply."; });
-  get("api/config").then(config => { $("as-of").value = config.as_of; $("recorded-at").value = config.recorded_at; $("snapshot").textContent = config.snapshot; for (const kind of config.entity_kinds) { const option = node("option", human(kind)); option.value = kind; $("kind").append(option); } $("search").disabled = false; search(); }).catch(error => { $("status").textContent = error.message; });
+  $("filters").addEventListener("input", () => { state.request?.abort(); ++state.generation; state.page = null; modeControls(); $("list").replaceChildren(); $("counts").textContent = ""; $("page").textContent = ""; $("previous").disabled = true; $("next").disabled = true; $("dossier").replaceChildren(node("h2", "Search inputs changed"), node("p", "Submit to inspect evidence at the new cutoffs.")); $("status").textContent = "Inputs changed. Submit to apply."; });
+  get("api/config").then(config => { $("as-of").value = config.as_of; $("recorded-at").value = config.recorded_at; $("since").value = config.suggested_since || ""; $("snapshot").textContent = config.snapshot; for (const kind of config.entity_kinds) { const option = node("option", human(kind)); option.value = kind; $("kind").append(option); } $("search").disabled = false; modeControls(); search(); }).catch(error => { $("status").textContent = error.message; });
 })();

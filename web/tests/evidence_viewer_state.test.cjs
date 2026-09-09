@@ -186,3 +186,84 @@ test('failed search clears old results and leaves an explicit error', async () =
   assert.equal(env.get('status').textContent, 'Invalid cutoff');
   assert.equal(env.get('next').disabled, true);
 });
+
+function knowledgePage(changes = {}) {
+  return {since: '2026-09-08T19:00:00Z', recorded_at: cutoff, as_of: '2026-09-09',
+    events: [{event_id: 'evidence-event:stable', event_type: 'claim_admitted', event_at: cutoff,
+      entity: entity('city'), claim: claim(), dossier_selection: entity('city').dossier_selection}],
+    event_counts: {claim_admitted: 1, claim_superseded: 0}, distinct_claims: 1, distinct_subjects: 1,
+    total_events: 1, returned_events: 1, offset: 0, next_offset: null, population_sha256: 'a'.repeat(64),
+    page_validation_cutoff: cutoff, dependency_context: [], ingestion_runs: [], boundaries: ['Not physical events'], ...changes};
+}
+async function newEvidence(report = knowledgePage()) {
+  const env = await loaded(); env.get('view-mode').value = 'changes'; env.get('since').value = report.since;
+  await env.get('filters').fire('input'); await env.get('filters').fire('submit');
+  await env.answer(env.request('api/changes'), report); return env;
+}
+test('new evidence mode hides literal search and sends exact start/end strings', async () => {
+  const env = await loaded(); env.get('query').value = 'ignored registry query';
+  env.get('view-mode').value = 'changes'; env.get('since').value = '2026-09-08T19:00:00.000001Z';
+  await env.get('filters').fire('input'); await env.get('filters').fire('submit');
+  const req = env.request('api/changes'), params = new URL(req.url, 'http://local/').searchParams;
+  assert.equal(params.get('since'), '2026-09-08T19:00:00.000001Z'); assert.equal(params.get('recorded_at'), cutoff);
+  assert.equal(params.has('query'), false); assert.equal(env.get('query').disabled, true);
+  assert.equal(env.get('query-label').hidden, true); assert.equal(env.get('since').required, true);
+  assert.equal(env.get('since-label').hidden, false); assert.equal(env.get('list-title').textContent, 'New evidence');
+  await env.answer(req, knowledgePage());
+  assert.match(env.get('counts').textContent, /1 recorded events · 1 claims · 1 exact subjects/);
+  assert.match(env.get('list').textContent, /slowing/); assert.match(env.get('dossier').textContent, /not manufacturing events/);
+});
+test('supersession remains bookkeeping and old claim value stays inspectable', async () => {
+  const report = knowledgePage(); report.events[0].event_type = 'claim_superseded';
+  report.event_counts = {claim_admitted: 0, claim_superseded: 1};
+  const env = await newEvidence(report);
+  assert.match(env.get('list').textContent, /Bookkeeping only; not closure, cancellation or capacity loss/);
+  assert.match(env.get('list').textContent, /evidence-event:stable/);
+  assert.match(env.get('dossier').textContent, /0 admissions · 1 supersessions/);
+});
+test('event dossier drill-through retains the exact subject and cutoffs', async () => {
+  const env = await newEvidence(), button = descendants(env.get('list'), 'button')[0];
+  const started = button.fire('click'), req = env.request('api/dossier');
+  const params = new URL(req.url, 'http://local/').searchParams;
+  assert.equal(params.get('entity_id'), 'city'); assert.equal(params.get('recorded_at'), cutoff);
+  await env.answer(req, dossier()); await started;
+  assert.match(env.get('dossier').textContent, /Source statements · 1/);
+});
+test('evidence pagination binds the inventory hash in both directions', async () => {
+  const env = await newEvidence(knowledgePage({next_offset: 50, total_events: 51}));
+  let started = env.get('next').fire('click'), req = env.request('api/changes');
+  let params = new URL(req.url, 'http://local/').searchParams;
+  assert.equal(params.get('population_sha256'), 'a'.repeat(64)); assert.equal(params.get('offset'), '50');
+  assert.equal(params.get('since'), '2026-09-08T19:00:00Z');
+  await env.answer(req, knowledgePage({offset: 50, total_events: 51})); await started;
+  started = env.get('previous').fire('click'); req = env.request('api/changes');
+  params = new URL(req.url, 'http://local/').searchParams;
+  assert.equal(params.get('population_sha256'), 'a'.repeat(64)); assert.equal(params.get('offset'), '0');
+  await env.answer(req, knowledgePage({next_offset: 50, total_events: 51})); await started;
+});
+test('switching back to registry suppresses stale evidence response and drops since', async () => {
+  const env = await newEvidence(); await env.get('filters').fire('submit'); const old = env.request('api/changes');
+  env.get('view-mode').value = 'registry'; await env.get('filters').fire('input'); await env.get('filters').fire('submit');
+  const recent = env.request('api/search'); assert.equal(new URL(recent.url, 'http://local/').searchParams.has('since'), false);
+  await env.answer(recent, page([entity('new', 'New registry result')])); await env.answer(old, knowledgePage());
+  assert.match(env.get('list').textContent, /New registry result/); assert.doesNotMatch(env.get('list').textContent, /slowing/);
+  assert.equal(env.get('since').disabled, true); assert.equal(env.get('query-label').hidden, false);
+});
+test('changing since suppresses a stale dossier and clears applied population', async () => {
+  const env = await newEvidence(); const started = descendants(env.get('list'), 'button')[0].fire('click');
+  const old = env.request('api/dossier'); env.get('since').value = '2026-09-09T00:00:00Z';
+  await env.get('filters').fire('input'); await env.answer(old, dossier()); await started;
+  assert.doesNotMatch(env.get('dossier').textContent, /slowing/); assert.equal(env.get('next').disabled, true);
+  await env.get('filters').fire('submit'); const req = env.request('api/changes');
+  assert.equal(new URL(req.url, 'http://local/').searchParams.has('population_sha256'), false);
+  await env.answer(req, knowledgePage());
+});
+test('empty knowledge window and failed lineage have distinct states', async () => {
+  const env = await newEvidence(knowledgePage({events: [], total_events: 0, returned_events: 0,
+    distinct_claims: 0, distinct_subjects: 0, event_counts: {claim_admitted: 0, claim_superseded: 0}}));
+  assert.match(env.get('list').textContent, /does not establish no real-world change/);
+  await env.get('filters').fire('submit'); await env.answer(env.request('api/changes'), {error: 'Invalid lineage'}, false);
+  assert.equal(env.get('list').children.length, 0); assert.equal(env.get('counts').textContent, '');
+  assert.match(env.get('status').textContent, /Invalid lineage/);
+  assert.doesNotMatch(env.get('page').textContent, /No recorded events/);
+});

@@ -16,7 +16,7 @@ from typing import Any, Iterable, Mapping, Sequence
 from .adapters.moenv_ems import MOENV_ATTRIBUTION
 from .adapters.taiwan_factory_registry import TAIWAN_FACTORY_ATTRIBUTION
 from .adapters.taiwan_mof_tax_registry import TAIWAN_MOF_ATTRIBUTION
-from .database import admission_clock_sql, knowledge_clock_sql, schema_version
+from .database import admission_clock_sql, chronological_order_sql, knowledge_clock_sql, schema_version
 from .coverage import (
     REVIEWED_RELATIONSHIP_FAMILY_KEY,
     TAIWAN_FACTORY_FAMILY_KEY,
@@ -334,7 +334,8 @@ def _source_inputs(
         JOIN source_families AS families ON families.id = sources.family_id
         JOIN accepted ON accepted.document_id = documents.id
         ORDER BY families.stable_key, sources.stable_key, documents.document_url,
-                 accepted.admitted_at, documents.retrieved_at, documents.id,
+                 {chronological_order_sql(connection, 'accepted.admitted_at')},
+                 {chronological_order_sql(connection, 'documents.retrieved_at')}, documents.id,
                  accepted.run_id
         """.replace("julianday(", f"{clock}("),
         (recorded_at,),
@@ -464,7 +465,8 @@ def _source_observations(
         WHERE julianday({accepted_at_sql}) <= julianday(?)
           AND runs.status = 'succeeded'
         ORDER BY families.stable_key, sources.stable_key,
-                 database_accepted_at, records.source_record_key, records.id
+                 {chronological_order_sql(connection, 'database_accepted_at')},
+                 records.source_record_key, records.id
         """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
@@ -516,13 +518,13 @@ def _entity_resolution_runs(
 ) -> list[dict[str, Any]]:
     clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT id, started_at, completed_at, status, resolver_version,
                code_version, parameters_json, error
         FROM entity_resolution_runs
         WHERE status IN ('succeeded', 'failed')
           AND julianday(completed_at) <= julianday(?)
-        ORDER BY started_at, id
+        ORDER BY {chronological_order_sql(connection, 'started_at')}, id
         """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
@@ -578,7 +580,7 @@ def _entity_resolution_candidates(
 ) -> list[dict[str, Any]]:
     clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT candidates.id, candidates.resolution_run_id,
                candidates.source_record_id, records.source_record_key,
                candidates.observed_entity_id,
@@ -599,7 +601,7 @@ def _entity_resolution_candidates(
         WHERE runs.status IN ('succeeded', 'failed')
           AND julianday(runs.completed_at) <= julianday(?)
           AND julianday(candidates.created_at) <= julianday(?)
-        ORDER BY runs.started_at, candidates.resolution_run_id,
+        ORDER BY {chronological_order_sql(connection, 'runs.started_at')}, candidates.resolution_run_id,
                  candidates.source_record_id, candidates.observed_entity_id,
                  candidates.candidate_rank, candidates.id
         """.replace("julianday(", f"{clock}("),
@@ -620,7 +622,7 @@ def _entity_resolution_decisions(
 ) -> list[dict[str, Any]]:
     clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT decisions.id, decisions.candidate_id,
                candidates.resolution_run_id, decisions.outcome,
                decisions.decided_at, decisions.decided_by, decisions.reason,
@@ -638,7 +640,7 @@ def _entity_resolution_decisions(
         WHERE runs.status = 'succeeded'
           AND julianday(runs.completed_at) <= julianday(?)
           AND julianday(decisions.decided_at) <= julianday(?)
-        ORDER BY decisions.decided_at, decisions.id
+        ORDER BY {chronological_order_sql(connection, 'decisions.decided_at')}, decisions.id
         """.replace("julianday(", f"{clock}("),
         (recorded_at, recorded_at),
     ).fetchall()
@@ -658,7 +660,7 @@ def _source_entity_assignments(
 ) -> list[dict[str, Any]]:
     clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT assignments.id, assignments.source_record_id,
                records.source_record_key, assignments.observed_entity_id,
                observed.stable_key AS observed_entity_stable_key,
@@ -685,7 +687,8 @@ def _source_entity_assignments(
           AND julianday(assignments.recorded_at) <= julianday(?)
           AND julianday(decisions.decided_at) <= julianday(?)
         ORDER BY assignments.source_record_id, assignments.observed_entity_id,
-                 assignments.valid_from, assignments.recorded_at, assignments.id
+                 assignments.valid_from,
+                 {chronological_order_sql(connection, 'assignments.recorded_at')}, assignments.id
         """.replace("julianday(", f"{clock}("),
         (recorded_at, as_of, recorded_at, recorded_at),
     ).fetchall()
