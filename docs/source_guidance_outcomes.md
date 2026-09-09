@@ -109,3 +109,52 @@ The original prospective comparator was separately re-executed under its unchang
 producer `0a78d259d4134eb47276bc8afecbed05b1f9cd51`; all 871,408 vintage bytes matched.
 Receipt `artifacts/2026-09-09-post-diagnostic-guidance-replay-v1.json` has SHA-256
 `7cd55ee32a73c66d423e7831e374e6b9e4c4e9dd75b38cfe98b239f31f283573`.
+
+## Independent checks and frozen producer
+
+The separate checker imports neither the scoring helper nor its adapter. It
+verified all 25 retained files, primary source identities/clocks, support spans,
+three-project accounting and interval containment. It independently re-extracted
+the PDF text and re-rendered pages 1, 7 and 15; all text and PNG bytes matched.
+Its receipt is `artifacts/2026-09-09-independent-guidance-check-v1.json`, 731 bytes,
+SHA-256 `ac6ef0a47bd0c8387e223352e4beb5aa655b4042db7b7f120b07ba760f669fc0`.
+This independent implementation check is not independent physical corroboration.
+
+Committed producer `1d4e9b2b3c508183474d6ddb4c45a765efa28065` is retained in
+`artifacts/2026-09-09-1d4e9b2-frozen-runtime-v1.json`:
+
+- 4,220,158 bundle bytes, 140 files, 3,134,300 source bytes;
+- SHA-256 `11e0762264eeeec02d20079a714955e0130a3afdae184d8d1aae0f284ee10cb8`;
+- all 97 diagnostic producer-file hashes retained without repinning the report.
+
+The new allowlisted read-only replay verified the entire 35,855-byte report in an
+isolated source runtime. All 16 imported project modules resolved inside that
+runtime. Receipt `artifacts/2026-09-09-frozen-source-guidance-diagnostic-replay-v1.json`
+is 2,613 bytes, SHA-256
+`e5e97f374f3b2b639ea409d29b9640f54700007f2f3efbc44e3f440351d5b0e8`.
+Evidence stays outside the code bundle. No claim of a hermetic operating system,
+historical 2021 execution or changed scheduled runtime follows.
+
+All 140 decoded runtime files were independently compared with their committed Git
+blobs, and all 97 report producer hashes matched that exact commit. Final validation:
+1,695 core tests ran (1,694 passed, one expected optional-payload skip), all 12 web
+tests passed, and the 66-test focused diagnostic/adapter/runtime suite passed.
+Offline source-distribution and wheel builds succeeded. The parent checkout's
+checksum ledger, baseline, analytics module and scheduled database hashes remained
+unchanged; the latest isolated schema-9 database and prospective vintage also
+retained their exact hashes. No merge conflicts, publication or scheduler changes
+were introduced.
+
+```sh
+python3 scripts/replay_frozen_runtime.py \
+  --bundle /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-09-1d4e9b2-frozen-runtime-v1.json \
+  --sha256 11e0762264eeeec02d20079a714955e0130a3afdae184d8d1aae0f284ee10cb8 \
+  --commit 1d4e9b2b3c508183474d6ddb4c45a765efa28065 \
+  --working-directory /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  source-guidance-diagnostic \
+  --review /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/review_plans/2026-09-09-source-guidance-pairing-review-v1.json \
+  --review-sha256 8c8c0144f1652bbc9c59d12c19f2be3faba2ea8deed7913a86b653a0aff3eac5 \
+  --reference-root /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  --report /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-09-source-guidance-diagnostic-v1.json \
+  --report-sha256 25d2ed49cd5218517a0e72e511702d9b79172f23e559cd6415a8bb9427f8be39
+```

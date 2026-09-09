@@ -47,6 +47,7 @@ future interpreter upgrade needs an explicit compatibility review, not an ignore
 | `target-policy` | `evaluate_prospective_source_targets.py verify-policy` | Registered policy, code and inputs |
 | `target-population` | `evaluate_project_targets.py verify` | Retained census consistency; not independent live-core/source authentication |
 | `guidance-interval` | `guidance_interval_baseline.py verify` | Re-execute the frozen comparator using its original database, evidence and trusted vintage hash |
+| `source-guidance-diagnostic` | `evaluate_source_guidance.py ... verify` | Reconstruct a previously executed exposed source-statement diagnostic from the trusted review/report hashes and retained evidence; no new assessment or historical forecast vintage |
 | `tsmc-source-quantities` | `admit_tsmc_source_quantities.py verify` | Reconstruct the entire existing quantity successor from its original parent, review and source bytes |
 | `ase-k18b-milestones` | `admit_ase_k18b_milestones.py verify` | Reconstruct the entire existing milestone successor from its parent and frozen handoff; no live queue dependency |
 | `infineon-villach-output` | `admit_infineon_villach_output.py verify` | Reconstruct the entire existing schema-8 successor from its parent, explicit admission review and complete retained PDF/policy/visual evidence chain |
