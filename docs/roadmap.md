@@ -302,6 +302,14 @@ joins evidence-bound labels only after packet acceptance. It retains missing/lat
 positive cases in timely sensitivity and includes late wrong candidates in review burden.
 Actual future adjudication and independently verified detection performance remain open.
 
+The [September 9 interim monitoring audit](prospective_monitoring_status.md) verifies the first
+accepted batch with the original registered runtime: seven on-time recordings, four timely
+candidate-or-quiet decisions among six comparable documents, and one policy-blocked opportunity.
+The two unsupported parser routes and two unmonitored facilities remain explicit. MTI's normalized
+policy change is exactly two site-footer dates; the active policy gate is not repinned or bypassed.
+Operational recording coverage is not measured accuracy, final population closure, or a passed
+alert-evaluation gate.
+
 The [AI-critical alert-review ledger](ai_critical_alert_review.md) connects validated comparisons
 and both release vintages to explicit, manifest-bound admission reviews. It retains derivative
 evidence and supporting review bytes in a portable append-only history, with acknowledgment,

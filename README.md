@@ -696,6 +696,12 @@ closure. It includes all seven configured documents; four have parser routes and
 The fixed September 8–15 UTC study does not yet supply future outcomes, independently reviewed
 labels, measured detector performance or calibrated forecasts.
 
+The [interim monitoring audit](docs/prospective_monitoring_status.md) replays the first accepted
+batch in its original frozen runtime. It distinguishes seven on-time recordings from four timely
+decisions across six comparable documents (four of seven total opportunities), preserving two
+unsupported parser routes and the MTI policy block. It changes no registered study inputs and
+supplies no accuracy labels or scores.
+
 The separate [prospective outcome evaluator](docs/prospective_target_evaluation.md) pins its
 scoring policy before observations, produces source-only review material after closure and
 retains unresolved labels, abstentions, late and missing outputs in conditional document-triage
