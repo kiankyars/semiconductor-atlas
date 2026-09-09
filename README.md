@@ -818,6 +818,14 @@ separate source-native identities and gives an explicit selection for the dossie
 Search counts are metadata inventories, not operating-facility counts or full
 lineage/source verification.
 
+The installed [local evidence viewer](docs/evidence_viewer.md) connects that search
+to exact dossiers in a browser, with editable world/knowledge cutoffs, counted
+pagination and separate source, current, history and dependency sections. It is
+loopback-only and pins a read-only database snapshot for the session. Typed
+values and nulls remain intact; old requests cannot overwrite newer selections.
+This does not modify or publish the release map, merge identities or establish
+alert/forecast performance.
+
 The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
 company-level TSMC capacity/shipment references from the already-retained filing. Reporting
 periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision

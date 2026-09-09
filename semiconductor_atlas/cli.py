@@ -124,6 +124,13 @@ def _evidence_search(args: argparse.Namespace) -> dict:
             query=args.query, kind=args.kind, limit=args.limit, offset=args.offset)
 
 
+def _evidence_viewer(args: argparse.Namespace) -> dict:
+    from .evidence_viewer import serve_viewer
+
+    return serve_viewer(args.database, as_of=args.as_of, recorded_at=args.recorded_at,
+                        port=args.port)
+
+
 def _assert_imported_hashes(connection, snapshot, nist, osm) -> None:
     expected_pairs = [
         (item.url, item.sha256)
@@ -1262,6 +1269,13 @@ def build_parser() -> argparse.ArgumentParser:
     search.add_argument("--limit", type=int, default=50)
     search.add_argument("--offset", type=int, default=0)
     search.set_defaults(handler=_evidence_search)
+
+    viewer = subparsers.add_parser("evidence-viewer", help="inspect evidence in a read-only loopback browser session")
+    viewer.add_argument("--database", required=True, type=Path)
+    viewer.add_argument("--as-of", required=True, type=_date)
+    viewer.add_argument("--recorded-at", required=True, type=_timestamp)
+    viewer.add_argument("--port", type=int, default=0, help="loopback port; default chooses an unused port")
+    viewer.set_defaults(handler=_evidence_viewer)
 
     release = subparsers.add_parser(
         "release",

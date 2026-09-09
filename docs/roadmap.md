@@ -513,7 +513,13 @@ The [literal evidence-search workflow](evidence_search.md) now discovers those
 exact IDs from registry and currently associated direct-source metadata, with
 kind filters, complete pagination denominators and separate temporal claim counts.
 It preserves source-native duplicates rather than making identity decisions.
-These additions address local evidence usability, not map integration, reviewed
+The [local evidence viewer](evidence_viewer.md) connects search to exact dossiers
+through an installed, loopback-only browser interface. Both cutoff controls keep
+their exact strings, input changes clear stale detail, and one pinned read-only
+database transaction prevents mixed database snapshots. Source-only records,
+typed quantities/rates, provenance and all four dossier sections are accessible
+without changing the published map or redistributing source bodies.
+These additions address local evidence usability, not geographic-map integration, reviewed
 semantic/alias discovery, independent event corroboration or any forecasting gate.
 
 ## Phase 5: supply-demand scenarios and investable signals
