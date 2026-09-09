@@ -576,6 +576,12 @@ Fab1 last output and Arai operations cessation. Quarter, month and year precisio
 without date midpoints. The schema-8 successor preserves every inherited row and the complete
 physical-current view; no current closure, numeric capacity loss or forecast outcome is inferred.
 
+The isolated [source-rate contract and Polar admission](docs/source_rates.md) extend the core to
+schema 9. One government-office production-rate statement is retained with its monthly denominator,
+unknown measurement interval and wafer diameter, exact wording and source-native facility scope.
+It remains outside physical-capacity exports. All prior rows and historical views are preserved;
+the complete successor replays under its separately retained committed producer.
+
 The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
 across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
 actions and historical cutoffs replay from an exportable append-only event log. The live pilot

@@ -282,3 +282,39 @@ python3 scripts/replay_frozen_runtime.py \
   --expected-review-sha256 d4355211ab593216b6fb4012ee83ff28454909c7da5329f2c5047afc6f5db96b \
   --expected-output-sha256 b2445daa4cc4dfb4ff56617ad2199ed9a7993f950794f5bf45a184b1d0974bea
 ```
+
+## September 8 source-rate schema-9 producer retention
+
+Committed producer `56c900f9b85d87fcd8c655aeb0627e2097b67dec` is retained at
+`artifacts/2026-09-08-56c900f-frozen-runtime-v1.json`: 4,186,146 bytes, 138 files and
+3,109,225 source bytes. Its SHA-256 is
+`ea8e91f39fd22bfaa94e51adb8ba8cecf779b6a96c5f4f3178e145fee5d8762e`.
+All decoded member bytes, modes and Git blob identities were independently compared with the
+commit; all 96 code fingerprints recorded by the actual admission matched that committed producer.
+
+The `reviewed-source-rates` operation accepts only the retained verifier. It reconstructs the
+[complete Polar schema-9 successor](source_rates.md) from the original Tower schema-8 parent,
+explicit admission review and 43-file acquisition/evidence graph. Isolated replay matched all
+242,692,096 database bytes; all 24 imported project modules resolved inside the frozen runtime.
+Receipt `artifacts/2026-09-08-frozen-polar-source-rate-replay-v1.json` is 5,969 bytes, SHA-256
+`4d431c6a8cae1b7772326435af7e9d5a9361021a93589504f6bf74779adcae69`.
+
+The older Tower producer also replayed its unchanged schema-8 image after rate implementation.
+Receipt `artifacts/2026-09-08-post-rates-frozen-tower-replay-v1.json` is 5,860 bytes, SHA-256
+`127556ee9d34c543755f316f46863caee36cbf9c8fda0ce5aae28a269549fdc5`.
+No old producer, forecast vintage or scheduled execution was repinned.
+
+```sh
+python3 scripts/replay_frozen_runtime.py \
+  --bundle /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-56c900f-frozen-runtime-v1.json \
+  --sha256 ea8e91f39fd22bfaa94e51adb8ba8cecf779b6a96c5f4f3178e145fee5d8762e \
+  --commit 56c900f9b85d87fcd8c655aeb0627e2097b67dec \
+  --working-directory /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  reviewed-source-rates \
+  --parent /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-tower-closure-milestones-schema8.sqlite \
+  --review /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/review_plans/2026-09-08-polar-source-rate-admission-v1.json \
+  --reference-root /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution \
+  --output /Users/kian/Developer/semiconductor_atlas/artifacts/core-v6-evolution/artifacts/2026-09-08-polar-production-rate-schema9.sqlite \
+  --expected-review-sha256 83856f759fd7741350539d68e5871616895de58f74f5bb95234fe12ea0b21823 \
+  --expected-output-sha256 1b9bae15c988e69479f4d82e70bbb6f0a95f89a4d9b5bbe73ac878b9873ee51a
+```

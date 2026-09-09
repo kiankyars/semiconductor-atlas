@@ -72,6 +72,13 @@ Receipt `artifacts/2026-09-08-polar-independent-check-v1.json` is 3,809 bytes, S
 This audit does not import the admission implementation and is distinct from manufacturing
 verification of the government-published number.
 
+Validation completed with 1,657 core tests (1,656 passed and one expected optional-payload skip),
+12 passing web tests, 77 passing focused rate/quantity/replay tests, and successful offline sdist
+and wheel builds. The first full run exposed four old schema-version assertions; their expected
+latest version now includes migration 9. Historical migration tests remain explicitly pinned to
+their original target versions. Migrations 1–8, the published baseline and the strict historical
+HTML parser are byte-unchanged.
+
 ## Local verification
 
 The admission CLI constructs only a new image from the hash-bound schema-8 parent. It refuses an
