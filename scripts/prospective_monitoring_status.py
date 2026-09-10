@@ -8,7 +8,7 @@ import sys
 from semiconductor_atlas import prospective_target_review as shadow
 
 
-FORMAT = "semiconductor-atlas-prospective-monitoring-status-v1"
+FORMAT = "semiconductor-atlas-prospective-monitoring-status-v2"
 BOUNDARIES = {
     "final_population": False, "source_only_blinded_packet": False,
     "scheduler_trigger_authenticated": False, "source_acquisition": False,
@@ -16,6 +16,8 @@ BOUNDARIES = {
     "manufacturing_truth_established": False, "alert_accuracy_established": False,
     "forecast_calibration_established": False, "absence_inference_allowed": False,
     "atomic_filesystem_snapshot": False,
+    "continuous_monitoring_established": False, "missed_scheduled_runs_established": False,
+    "source_content_freshness_established": False,
 }
 
 
@@ -40,13 +42,67 @@ def summarize(rows):
     }
 
 
-def project(registration, reconciled):
+def activity(rows, *, study_start, observation_cutoff):
+    start, cutoff = shadow._instant(study_start), shadow._instant(observation_cutoff)
+    if not start < cutoff:
+        raise ValueError("activity requires a positive observation window")
+    completed = [row for row in rows if row["case_kind"] == "document_check"]
+    attempted = [row for row in completed if row["source_request_attempted"]]
+
+    def latest(items, field):
+        if not items:
+            return {"at": None, "age_seconds": None, "case_ids": [],
+                    "collection_statuses": {}, "transport_outcomes": {}}
+        clock = max(shadow._instant(row[field]) for row in items)
+        tied = sorted((row for row in items if shadow._instant(row[field]) == clock),
+                      key=lambda row: row["case_id"])
+        return {"at": tied[0][field], "age_seconds": (cutoff - clock).total_seconds(),
+                "case_ids": [row["case_id"] for row in tied],
+                "collection_statuses": dict(sorted(Counter(row["collection_status"] for row in tied).items())),
+                "transport_outcomes": dict(sorted(Counter(row["transport_outcome"] or "not_attempted"
+                                                          for row in tied).items()))}
+
+    assessment = latest(completed, "assessment_at")
+    clocks = [start, *sorted({shadow._instant(row["assessment_at"]) for row in completed}), cutoff]
+    return {"completed_assessments": len(completed),
+        "source_attempts_in_completed_assessments": len(attempted),
+        "last_completed_assessment": assessment,
+        "last_source_attempt": latest(attempted, "source_attempt_finished_at"),
+        "assessment_gap_to_cutoff_seconds": (cutoff - clocks[-2]).total_seconds(),
+        "assessment_gap_basis": "last_completed_assessment" if completed else "study_start_no_completed_assessment",
+        "largest_assessment_gap_seconds": max((right - left).total_seconds()
+                                              for left, right in zip(clocks, clocks[1:]))}
+
+
+def project(registration, reconciled, *, study_start, observation_cutoff):
+    start, cutoff = shadow._instant(study_start), shadow._instant(observation_cutoff)
+    if not start < cutoff:
+        raise ValueError("activity requires a positive observation window")
     rows = []
     for item in reconciled["cases"]:
         case, prediction = item["case"], item["prediction"]
+        if case["kind"] == "document_check":
+            assessment, attempted = case["assessment_at"], case["attempted"]
+            attempt_finished, outcome = case["response_finished_at"], case["transport_outcome"]
+            if (not start <= shadow._instant(assessment) < cutoff or type(attempted) is not bool
+                    or (attempted and (outcome not in {"succeeded", "failed"} or attempt_finished is None
+                                       or shadow._instant(attempt_finished) > shadow._instant(assessment)))
+                    or (not attempted and (attempt_finished is not None or outcome is not None))):
+                raise ValueError("inconsistent completed assessment activity")
+            intent = None
+        elif case["kind"] == "incomplete_document":
+            assessment = attempted = attempt_finished = outcome = None
+            intent = case["intent_started_at"]
+            if not start <= shadow._instant(intent) < cutoff:
+                raise ValueError("incomplete intent is outside the observation window")
+        else:
+            raise ValueError("unknown monitoring case kind")
         rows.append({"case_id": item["case_id"], "opportunity_id": item["opportunity_id"],
             "url": case["url"], "document_id": case["document_id"],
             "capture_path": case["capture_path"], "case_kind": case["kind"],
+            "assessment_at": assessment, "intent_started_at": intent,
+            "source_request_attempted": attempted, "source_attempt_finished_at": attempt_finished,
+            "transport_outcome": outcome,
             "collection_status": case.get("status", "incomplete_document"),
             "collector_comparable": case.get("comparison_eligible") is True,
             "in_protocol": item["in_protocol"], "collection_mode": item["collection_mode"],
@@ -64,14 +120,23 @@ def project(registration, reconciled):
             "facility_key": document["facility_key"], "parser_route_implemented": support[document["url"]],
             "has_in_protocol_opportunity": bool(scoped),
             "has_completed_collector_assessment": any(row["case_kind"] == "document_check" for row in scoped),
+            "activity": activity(scoped, study_start=study_start, observation_cutoff=observation_cutoff),
             **summarize(scoped)})
     return {"cases": rows, "registered_documents": documents,
+        "activity_basis": {"population": "in_protocol_assessments_completed_in_observation_window",
+            "assessment_clock": "retained_capture_finished_at",
+            "source_attempt_clock": "source_document_attempt_finished_at_in_completed_capture",
+            "gaps_include_window_boundaries": True,
+            "source_attempts_may_predate_window": True,
+            "incomplete_intents_do_not_establish_request_execution": True},
         "unmonitored_facilities": registration["inputs"]["unmonitored_facilities"],
         "counts": {"registered_documents": len(documents),
             "unmonitored_facilities": len(registration["inputs"]["unmonitored_facilities"]),
             "interim_document_opportunities": len(rows),
             "registered_documents_without_in_protocol_opportunities": sum(not row["has_in_protocol_opportunity"] for row in documents),
             "registered_documents_without_completed_collector_assessments": sum(not row["has_completed_collector_assessment"] for row in documents),
+            "registered_documents_without_source_attempts_in_completed_assessments": sum(
+                row["activity"]["source_attempts_in_completed_assessments"] == 0 for row in documents),
             "superseded_interim_cases": len(reconciled["superseded_interim_case_ids"])},
         "in_protocol": summarize([row for row in rows if row["in_protocol"]]),
         "outside_protocol": summarize([row for row in rows if not row["in_protocol"]])}
@@ -97,7 +162,8 @@ def audit(registration_path, reference_root):
         if any(shadow._instant(clock) > shadow._instant(started) for clock in clocks):
             raise ValueError("prediction journal crossed the audit start; rerun the read-only audit")
     frozen = shadow._freeze(registration, root, cutoff)
-    result = project(registration, shadow._reconcile(registration, frozen, records))
+    result = project(registration, shadow._reconcile(registration, frozen, records),
+                     study_start=study["start"], observation_cutoff=cutoff)
     shadow._verify_current_population(frozen, root)
     if (entries != sorted(directory.iterdir())
             or any(shadow._read(name) != content for name, content in retained.items())

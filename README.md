@@ -702,6 +702,12 @@ decisions across six comparable documents (four of seven total opportunities), p
 unsupported parser routes and the MTI policy block. It changes no registered study inputs and
 supplies no accuracy labels or scores.
 
+Its version-2 activity view now separates completed-assessment age, document
+attempt completion and prediction receipt timing. At the September 10 audit
+cutoff, the same seven on-time recordings coexisted with assessments about
+32.6 hours old. Failed requests, policy blocks and incomplete intents remain
+distinct; no missed-run count or continuous-monitoring claim is inferred.
+
 The separate [prospective outcome evaluator](docs/prospective_target_evaluation.md) pins its
 scoring policy before observations, produces source-only review material after closure and
 retains unresolved labels, abstentions, late and missing outputs in conditional document-triage

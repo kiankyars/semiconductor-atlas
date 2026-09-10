@@ -18,6 +18,9 @@ def example_row(index, *, result="no_candidate", comparable=True, recording="on_
     return {"case_id": str(index), "opportunity_id": f"opportunity-{index}",
         "case": {"url": f"https://example.org/{index}", "document_id": str(index),
             "capture_path": f"captures/{index}", "kind": "document_check",
+            "assessment_at": "2026-09-07T05:00:00Z", "attempted": comparable,
+            "response_finished_at": "2026-09-07T04:59:50Z" if comparable else None,
+            "transport_outcome": "succeeded" if comparable else None,
             "status": "unchanged" if comparable else "not_attempted_policy_blocked",
             "comparison_eligible": comparable},
         "prediction": {"result": result, "reason": "unchanged"} if result else None,
@@ -35,7 +38,8 @@ def example_registration(count=7):
 
 class MonitoringProjectionTests(unittest.TestCase):
     def project(self, rows, count=7):
-        return status.project(example_registration(count), {"cases": rows, "superseded_interim_case_ids": []})
+        return status.project(example_registration(count), {"cases": rows, "superseded_interim_case_ids": []},
+                              study_start="2026-09-07T04:00:00Z", observation_cutoff="2026-09-07T08:00:00Z")
 
     def test_first_batch_denominators_keep_abstentions_and_policy_block(self):
         rows = [example_row(i) for i in range(4)] + [example_row(i, result="abstain") for i in (4, 5)]
@@ -75,6 +79,7 @@ class MonitoringProjectionTests(unittest.TestCase):
     def test_incomplete_intent_is_not_a_completed_check(self):
         row = example_row(0, result="abstain", comparable=False)
         row["case"]["kind"] = "incomplete_document"
+        row["case"]["intent_started_at"] = "2026-09-07T05:00:00Z"
         del row["case"]["status"]
         report = self.project([row])
         self.assertEqual(6, report["counts"]["registered_documents_without_in_protocol_opportunities"])
@@ -211,7 +216,8 @@ class MonitoringAuditTests(unittest.TestCase):
         later["batch"]["predictions"][0]["result"] = "revision_candidate"
         alone = shadow._reconcile(registration, population, [later])
         self.assertEqual("late", alone["cases"][0]["recording_status"])
-        combined = status.project(registration, shadow._reconcile(registration, population, [later, *records]))
+        combined = status.project(registration, shadow._reconcile(registration, population, [later, *records]),
+                                  study_start=self.fixture.study["start"], observation_cutoff=self.fixture.study["end"])
         self.assertEqual(1, combined["counts"]["interim_document_opportunities"])
         self.assertEqual("no_candidate", combined["cases"][0]["recorded_result"])
 

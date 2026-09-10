@@ -69,7 +69,7 @@ def run_audit(bundle, *, expected_sha256, expected_commit, registration, referen
                 or any(name not in payloads for name in imports["modules"].values())):
             raise ValueError("audit imports escaped the retained source runtime")
         result = json.loads(stdout)
-        if not isinstance(result, dict) or result.get("format") != "semiconductor-atlas-prospective-monitoring-status-v1":
+        if not isinstance(result, dict) or result.get("format") != "semiconductor-atlas-prospective-monitoring-status-v2":
             raise ValueError("audit worker did not return the operational report")
     runtime.verify_runtime(bundle, expected_sha256=expected_sha256, expected_commit=expected_commit)
     if (identities != codes() or runtime.read(registration) != registration_raw
@@ -110,7 +110,10 @@ def main(argv=None):
         if args.output:
             saved = save_report(args.output, result, reference_root=args.reference_root)
             result = {**saved, "counts": result["counts"], "batches": result["batches"],
-                      "in_protocol": result["in_protocol"], "status": result["status"]}
+                      "in_protocol": result["in_protocol"], "status": result["status"],
+                      "observation_cutoff": result["observation_cutoff"],
+                      "document_activity": [{"document_id": row["document_id"], "url": row["url"],
+                                             **row["activity"]} for row in result["registered_documents"]]}
     except (OSError, ValueError, TypeError, KeyError, subprocess.SubprocessError) as error:
         print(str(error), file=sys.stderr)
         return 1

@@ -89,6 +89,77 @@ collector writes, prediction writes, labels, source claims or scheduler changes.
 It emits hashes, paths and operational metadata, not source-page bodies or
 detector target analyses. Do not give it to a reviewer as a blinded packet.
 
+## Version 2: assessment activity, not continuous coverage
+
+The separately versioned audit now includes retained collection clocks. A 7/7
+timely-recording ratio can remain unchanged while its last source checks grow
+older. Receipt acceptance measures prediction recording, not collection recency.
+The registered collector, detector and study remain at their original versions;
+only the standalone audit worker and controller change. Earlier v1 report bytes
+and their Git producers remain retained.
+
+Each case now distinguishes completed assessment time, source-request attempt
+completion, transport outcome and incomplete polling intent. Each registered
+document includes the latest in-protocol completed assessment and attempt, their
+ages at the observation cutoff, every tied latest case and outcome, the trailing
+assessment gap, and the largest gap including the study-window boundaries.
+No completed assessment yields null last-time/age and an explicitly labelled gap
+from study start. An incomplete intent leaves request execution unknown.
+
+The clock semantics are deliberately separate:
+
+- A policy block is a completed assessment but not a source-document request.
+- A failed transport can have an attempt-completion clock without an HTTP response.
+- HTTP success does not establish document identity or content eligibility.
+- An attempt can precede study start when its enclosing assessment completes
+  inside the half-open observation window. The report preserves that earlier clock.
+- Missing, late or newly accepted prediction receipts cannot refresh collection
+  activity. Forced or otherwise out-of-protocol captures cannot fill a registered
+  document's activity row.
+
+These are gaps between retained assessments, not inferred missed daily runs,
+proof that no process executed, or a new source-freshness classification. The
+existing coverage report separately uses content-eligible responses and its
+seven-day threshold. The collector's 23-hour minimum spacing is neither that
+threshold nor proof of daily execution. After study end, activity ages cap at
+the original observation-window boundary.
+
+The real v2 audit cutoff was `2026-09-10T00:12:26.891663Z`. It retained the same
+seven cases, one accepted batch, seven on-time recordings and four timely
+decisions. The latest completed assessments were
+117,239.920289–117,263.004592 seconds old, about 32.6 hours. Six documents had
+one retained request each; MTI had a policy-block assessment and no document
+request. This does not establish fresh publisher content or physical conditions.
+
+Local report: `artifacts/2026-09-10-prospective-monitoring-activity-v2.json`,
+137,342 bytes, SHA-256
+`9e1541f735092b0cb507b88dbd6234e45e48f6a2beaa8f3b470d792c63d290bf`.
+The same audit command above now emits v2 and includes document activity in its
+CLI summary. Historical v1 output is not rewritten or silently reinterpreted.
+
+A separate standard-library checker matched all seven case clocks to retained
+`run.json` and `source_checks.json`, independently recomputed the seven document
+activity projections, verified 446 bound inputs (11,466,505 bytes) and four audit
+producer hashes, and confirmed that the earlier v1 cases and metrics are unchanged.
+It makes no protocol-revalidation or manufacturing-truth claim. Reproduce it with
+`python3 artifacts/2026-09-10-check-monitoring-activity-v2.py`.
+
+Twenty-two new regression tests cover aging checks with unchanged recording
+ratios, blocked and failed requests, rejected content after successful transport,
+incomplete unknowns, tied outcomes, protocol exclusions, recording-clock
+independence, and exact microsecond/window boundaries. Together with the original
+28 monitoring tests, all 50 focused tests passed. The full core suite ran 2,308
+tests in 320.677 seconds: 2,307 passed and one expected fixture-dependent test was
+skipped. All 12 web tests passed. The retained test receipt at
+`artifacts/2026-09-10-monitoring-activity-full-tests.json` confirms that every
+Python source file under the package, scripts, tests and web directories was
+unchanged throughout the run. These are engineering checks, not detector accuracy.
+
+The saved daily source-check task was observed `PAUSED` during this audit turn;
+that is a local configuration observation, not authenticated execution history.
+Resuming the task requires a separate user decision. No scheduler, permission,
+study, journal, source capture, core database or release bytes were changed.
+
 ## MTI policy blockage: exact retained comparison
 
 The September 8 run preserved `policy_changed_requires_review` for MTI terms

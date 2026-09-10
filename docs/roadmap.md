@@ -310,6 +310,14 @@ policy change is exactly two site-footer dates; the active policy gate is not re
 Operational recording coverage is not measured accuracy, final population closure, or a passed
 alert-evaluation gate.
 
+The standalone audit's version-2 activity projection closes a reporting gap:
+old checks no longer appear only as study-wide recording coverage. It shows exact
+assessment/attempt ages and gaps while preserving the frozen study's cases,
+receipts and producer. The September 10 audit found the same seven on-time
+recordings with assessments about 32.6 hours old; the saved task was observed
+paused and was not resumed. This does not satisfy continuous collection,
+independent adjudication or measured alert utility.
+
 The separately versioned [MTI footer-date normalizer](curated_acquisition.md) addresses the observed
 boilerplate sensitivity for a future reviewed plan. It preserves substantive policy text and links
 and fails closed on changed structural scope. It is implemented and tested on retained bytes, not
