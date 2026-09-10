@@ -1,0 +1,29 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "nm-rio-rancho-private-source-review-2026-09-09",
+  "reviewed_at": "2026-09-09T23:47:38Z",
+  "expires_at": "2026-09-10T23:47:38Z",
+  "decision": "approved_exact_urls_private_local_factual_review_only",
+  "purpose": "Retain the New Mexico government portal's own operator description and May 23, 2024 JTIP article for bounded private factual research. Review the exact Fab 9/Fab 11x operational-packaging statement against the unchanged original NIST project scope. Do not acquire Intel issuer pages, replace an access-denied route, infer independent physical measurement, complete every funded component, or score an undated target.",
+  "rights_review": "The main reviewer read the About page and complete article through the web reader and inspected the full retained 404 visible text and all links. The portal identifies a State of New Mexico digital-government service and carries an all-rights-reserved notice. No open license or express automation/reuse grant was identified. This is a narrow internal research decision for two public factual pages, not publisher-granted permission, legal certification or an assertion that state-government material is public domain. Preserve originals and attribution locally; no raw redistribution, public service, commercial reuse, model training, linked images/PDFs, credentials or content outside these exact pages. Inspect source-specific notices in the retained bodies before any separate evidence acceptance.",
+  "robots_review": "The first identified direct robots request returned HTTP 404, TLS verification zero and no redirect, with a 14,114-byte ordinary portal Page not found body. Its entire visible text and link inventory contain no robots directives or automated-access prohibition. The probe stopped after that failure as planned. This new manually reviewed acquisition treats the specifically retained missing robots page as absence of supplied directives, not as affirmative permission. The failed probe remains failed; no robots retry, policy rewrite, alternative host or access-denial bypass occurs.",
+  "dependencies": [
+    {"path": "artifacts/2026-09-09-nm-business-robots-probe-v1/responses/nm-business-robots.body", "sha256": "3bbdc8fc6da539b4d3faa2d7215def58363a9c4f471e2047424342643aeb1172"},
+    {"path": "artifacts/2026-09-09-nm-business-robots-probe-v1/source_checks.json", "sha256": "8eb5aaebc39a6a5d07bb2c39922e7d97cda1eeb8be27e3d179a83ec634137f3b"},
+    {"path": "artifacts/2026-09-09-nm-business-robots-probe-v1/manifest.json", "sha256": "b0e90bcb79cd5541aa9261fd5fe741e9e02240b78bac989b68b8a7d7299d9bc9"}
+  ],
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 2000000,
+  "minimum_interval_seconds": 10,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "entries": [
+    {"id": "nm-business-about", "url": "https://www.biz.nm.gov/about-the-new-mexico-business-portal", "purpose": "rights_policy", "company": "Intel", "country_code": "US", "source_family": "new-mexico-state-government", "scope": "Portal operator and rights-notice context only, not a reuse license or manufacturing evidence.", "media_types": ["text/html"]},
+    {"id": "nm-jtip-may-2024", "url": "https://www.biz.nm.gov/newsroom/may-jtip-exceeds-6-million-100000564", "purpose": "source_document", "company": "Intel", "country_code": "US", "source_family": "new-mexico-state-government", "scope": "Complete May 23, 2024 JTIP article including the Rio Rancho Fab 9/Fab 11x paragraph, date and surrounding context. Operational two-facility packaging site is not exact startup, completion of all PMT expansion components or numerical capacity.", "media_types": ["text/html"]}
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "boundaries": {
+    "calibration": false,
+    "database_modified": false,
+    "historical_atlas_forecasts": false,
+    "historical_availability_verified": false,
+    "independent_or_blind_evaluation": false,
+    "model_training": false,
+    "physical_capacity_claims": false,
+    "prospective_study_modified": false,
+    "raw_redistribution": false,
+    "representative_population": false
+  },
+  "format": "semiconductor-atlas-reviewed-source-guidance-screen-v1",
+  "input_files": {
+    "artifacts/2026-09-09-build-nm-rio-rancho-review-v2.py": {
+      "bytes": 953,
+      "sha256": "341ee8a1e8a6dbe2db8c6b31e8ea5e66eab127f65856290b54e3ba5e6ec0a5b9"
+    },
+    "artifacts/2026-09-09-build-nm-rio-rancho-review.py": {
+      "bytes": 9817,
+      "sha256": "5d7a940879d18e6f428cd36f424645b7a5bf1acee21d42e216d33fc0403e2a93"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-70.body": {
+      "bytes": 98421,
+      "sha256": "e65dd0de3b746421191f4c429212ed3ce08d9d2bbb42252f77bafe5720bff207"
+    },
+    "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json": {
+      "bytes": 21185,
+      "sha256": "4f51a0d86fbff6d7c987bed4233d6ff829117083a3f031b002183287a0fddf43"
+    },
+    "artifacts/2026-09-09-nm-business-robots-probe-v1/capture.py": {
+      "bytes": 1770,
+      "sha256": "c120bd2bd48e1b4a91f0d97c7f2cfadef0f994cff07309191af956685807f210"
+    },
+    "artifacts/2026-09-09-nm-business-robots-probe-v1/manifest.json": {
+      "bytes": 526,
+      "sha256": "b0e90bcb79cd5541aa9261fd5fe741e9e02240b78bac989b68b8a7d7299d9bc9"
+    },
+    "artifacts/2026-09-09-nm-business-robots-probe-v1/plan.json": {
+      "bytes": 1194,
+      "sha256": "365b3f5286afbd94e0577c032d8343317e15f37f22ee5fe42536f747390438b2"
+    },
+    "artifacts/2026-09-09-nm-business-robots-probe-v1/responses/nm-business-robots.body": {
+      "bytes": 14114,
+      "sha256": "3bbdc8fc6da539b4d3faa2d7215def58363a9c4f471e2047424342643aeb1172"
+    },
+    "artifacts/2026-09-09-nm-business-robots-probe-v1/source_checks.json": {
+      "bytes": 1353,
+      "sha256": "8eb5aaebc39a6a5d07bb2c39922e7d97cda1eeb8be27e3d179a83ec634137f3b"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/capture.py": {
+      "bytes": 3564,
+      "sha256": "2e5bcd2c5c42c93d5aebc04f4b09fcce48943431b6cbb60fe463a62f4f4bfd80"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/dependencies/0-nm-business-robots.body": {
+      "bytes": 14114,
+      "sha256": "3bbdc8fc6da539b4d3faa2d7215def58363a9c4f471e2047424342643aeb1172"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/dependencies/1-source_checks.json": {
+      "bytes": 1353,
+      "sha256": "8eb5aaebc39a6a5d07bb2c39922e7d97cda1eeb8be27e3d179a83ec634137f3b"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/dependencies/2-manifest.json": {
+      "bytes": 526,
+      "sha256": "b0e90bcb79cd5541aa9261fd5fe741e9e02240b78bac989b68b8a7d7299d9bc9"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/manifest.json": {
+      "bytes": 1108,
+      "sha256": "3392975afe30fd603db4c7e8a4d06761879698810674bf617dc49eb16539b3b9"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/plan.json": {
+      "bytes": 3913,
+      "sha256": "d6ce9892d942425dea9bb4631913b98a45434f5a169a996f57dca26292e5d3ab"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-business-about.body": {
+      "bytes": 20064,
+      "sha256": "4e6748be168f785ab2d592d5e19e5f451ca52a78f162162af63331364f35dadf"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-jtip-may-2024.body": {
+      "bytes": 30818,
+      "sha256": "82b2fbcbfc36c278f15454268ed78387e06efe0d72b86524c94161ed1893846c"
+    },
+    "artifacts/2026-09-09-nm-rio-rancho-capture-v1/source_checks.json": {
+      "bytes": 2557,
+      "sha256": "6b82e7d7f105536d2fd80b41853f2481447146492f7e6916676077785e065173"
+    },
+    "review_plans/2026-09-09-nist-pmt-body-review-56-76-v1.json": {
+      "bytes": 54191,
+      "sha256": "01b79f0dcd9f0c7efbed3f94a2bdf51cc6f84f32919d8c6ba71d50fd3f705f46"
+    },
+    "review_plans/2026-09-09-nist-pmt-body-review-v1.json": {
+      "bytes": 4099,
+      "sha256": "714ddc8a245efe714294241d0b5fc493d956168f6071cf9164b3f1c79b0a1aec"
+    },
+    "review_plans/2026-09-09-nist-pmt-outcome-diagnostic-review-v1.json": {
+      "bytes": 128432,
+      "sha256": "91ba19f5ce700fed519389b90d2ef04b9036be32d2e15dd52b204347636a8154"
+    },
+    "review_plans/2026-09-09-nm-business-robots-probe.json": {
+      "bytes": 1194,
+      "sha256": "365b3f5286afbd94e0577c032d8343317e15f37f22ee5fe42536f747390438b2"
+    },
+    "review_plans/2026-09-09-nm-rio-rancho-source-acquisition.json": {
+      "bytes": 3913,
+      "sha256": "d6ce9892d942425dea9bb4631913b98a45434f5a169a996f57dca26292e5d3ab"
+    }
+  },
+  "outcomes": [
+    {
+      "case_id": "nist2024-d70-intel-rio-rancho-packaging--nm-operational-packaging-site",
+      "event_type": "operational_3d_high_volume_packaging_site",
+      "outcome": {
+        "status": "observed_by",
+        "through": "2024-05-23"
+      },
+      "project_group": "nist2024-d70-intel-rio-rancho-packaging",
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "reason": "The government portal describes the named two-facility site as operational for mass production and high-volume advanced packaging. This supports an inclusive source-reported operational-by bound, not an exact event day or a lower bound. Actual retrieval/review occur in September 2026; the printed May 2024 date does not prove historical byte availability, earlier Atlas knowledge or current physical status. No target exists for this supplemental scope, so it supplies no timing score.",
+      "scope_id": "State-reported co-located Rio Rancho Fab 9/Fab 11x site; no per-fab allocation or full PMT intervention completion",
+      "source_document_date": "2024-05-23",
+      "source_reference_ids": [
+        "nm-rio-rancho-operational"
+      ]
+    },
+    {
+      "case_id": "nist2024-d70-intel-rio-rancho-packaging--timing-01",
+      "event_type": "full_production",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "nist2024-d70-intel-rio-rancho-packaging",
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "reason": "The newly retained State portal paragraph reports an operational Fab 9/Fab 11x packaging site, not attainment of every component or the original PMT's full-production state. The original untimed full-production target remains unresolved. This is a separate two-case evidence review, not a replacement of the complete 45-group diagnostic, an inferred cancellation or a timing score.",
+      "scope_id": "nist2024-d70-intel-rio-rancho-packaging--original-pmt-scope",
+      "source_document_date": "2024-05-23",
+      "source_reference_ids": [
+        "nist2024-d70",
+        "nm-rio-rancho-operational"
+      ]
+    }
+  ],
+  "prior_exposure": "The May 2024 portal paragraph was web-read before this review and before the September 2026 retained capture. Selection is outcome-exposed and was motivated by a known positive operational lead. Current-day capture is not historical availability. The source page is truncated after another company's entry; only the complete Intel paragraph and its visible date/context support the observation. Existing Microchip adverse-state leads remain access-limited and are not replaced by a success-only evaluation claim.",
+  "reviewed_at": "2026-09-09T23:54:38.809231Z",
+  "reviewed_by": "Codex main reviewer; complete retrieved HTML narrative and original NIST article inspected. A separate agent previously checked the frozen NIST population and identified this lead, but did not independently review this new capture. No blind evaluator or physical observer.",
+  "rights": "Private bounded factual research only under the separately pinned acquisition review. The State portal reserves rights; no open license, public-domain status, blanket automation grant, commercial reuse or legal certification is asserted. The reviewed robots response remains an HTTP-404 failure and supplies no directives or affirmative permission. The About page establishes operator/notice context, not a reuse grant. Keep original sources and attribution locally; no raw redistribution, training, public service, linked-image/PDF acquisition, issuer-origin access or scheduled collection follows. The unchanged NIST evidence remains under its prior exact-source local-review conditions.",
+  "roster": [
+    {
+      "case_id": "nist2024-d70-intel-rio-rancho-packaging--nm-operational-packaging-site",
+      "disposition": "unresolved",
+      "event_type": "operational_3d_high_volume_packaging_site",
+      "project_group": "nist2024-d70-intel-rio-rancho-packaging",
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "reason": "A distinct source-reported operational-state observation, not the original untimed full-production target or a new prediction. Preserve the two named facilities as one aggregate source scope.",
+      "scope_id": "State-reported co-located Rio Rancho Fab 9/Fab 11x site; no per-fab allocation or full PMT intervention completion",
+      "source_document_date": "2024-05-23",
+      "source_reference_ids": [
+        "nm-rio-rancho-operational"
+      ],
+      "target": null
+    },
+    {
+      "case_id": "nist2024-d70-intel-rio-rancho-packaging--timing-01",
+      "disposition": "unresolved",
+      "event_type": "full_production",
+      "project_group": "nist2024-d70-intel-rio-rancho-packaging",
+      "project_id": "nist2024-d70-intel-rio-rancho-packaging",
+      "reason": "Modernization of two fabs into advanced-packaging facilities. The later singular description of the operation does not erase the two explicit fab units or establish distinct canonical identities. Original PMT timing: When in full production The article conditions its description of the packaging operation on full production but supplies no date for that state. This is not an observed event or a normalized startup forecast.",
+      "scope_id": "nist2024-d70-intel-rio-rancho-packaging--original-pmt-scope",
+      "source_document_date": "2024-03-20",
+      "source_reference_ids": [
+        "nist2024-d70"
+      ],
+      "target": null
+    }
+  ],
+  "selection": "A separate purposive evidence review of one frozen PMT project, with its exact original untimed full-production case carried forward and one explicitly distinct aggregate operational-packaging observation. This is not a replacement or a reduced denominator for the original 45-group/50-case diagnostic. All original files remain immutable; two cases are one project group, not two independent projects or a measured success rate.",
+  "source_references": {
+    "nist2024-d70": {
+      "body_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-70.body",
+      "capture": {
+        "attempt_id": "nist-2024-index-70",
+        "ledger_path": "artifacts/2026-09-09-nist-2024-articles-batch-2/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T02:58:05.093794Z",
+      "interpretation": "Complete original PMT article narrative. Project scopes, component boundaries, timing literals, conditions and exact block allocations remain those of the pinned full-population manual review; no later guidance is substituted.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2024-03-20",
+      "source_url": "https://www.nist.gov/news-events/news/2024/03/biden-harris-administration-announces-preliminary-terms-intel-support",
+      "support_spans": [
+        {
+          "end": 86627,
+          "path": "artifacts/2026-09-09-nist-2024-articles-batch-2/responses/nist-2024-index-70.body",
+          "sha256": "367d5efc61c99879c348eac175136613b4faa528a6e6a3659a46c79f5cd4324b",
+          "start": 73936
+        }
+      ]
+    },
+    "nm-rio-rancho-operational": {
+      "body_path": "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-jtip-may-2024.body",
+      "capture": {
+        "attempt_id": "nm-jtip-may-2024",
+        "ledger_path": "artifacts/2026-09-09-nm-rio-rancho-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T23:49:07.998633Z",
+      "interpretation": "The complete retrieved portal page visibly dates the JTIP item May 23, 2024 and attributes it to Economic Development New Mexico. The complete Intel label and paragraph name Rio Rancho Fab 9 and Fab 11x jointly as an operational mass-production 3D advanced-packaging site and describe co-located high-volume packaging. Accept only that aggregate source-reported operational state by the source day. No exact start, lower bound, per-fab allocation, full ramp or completion of all PMT modernization work is established. The surrounding grant/trainee figures are not production capacity. The page itself ends mid-description of another company with an ellipsis; it is not the complete original thirteen-company release. The complete Intel paragraph has its own closing tag and is followed by other company entries. The footer reserves State rights; About identifies the portal operator but grants no license. Generic homepage canonical/OpenGraph metadata do not identify the article: the exact HTTP request and visible title/date do. This state-publisher report is not an independently measured factory audit, and possible company-supplied wording is not treated as an independent source family of physical observations.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2024-05-23",
+      "source_url": "https://www.biz.nm.gov/newsroom/may-jtip-exceeds-6-million-100000564",
+      "support_spans": [
+        {
+          "end": 12341,
+          "path": "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-jtip-may-2024.body",
+          "sha256": "fd2027cc3ee45b1b1b2f3565acb0d97ec6beff6fe83055841900234dbd4053c6",
+          "start": 4861
+        },
+        {
+          "end": 5159,
+          "path": "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-jtip-may-2024.body",
+          "sha256": "2350fa2c041c578d64e50be195a3148dce881b02411d0df26164b59b73d1aad9",
+          "start": 5041
+        },
+        {
+          "end": 5252,
+          "path": "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-jtip-may-2024.body",
+          "sha256": "fcf4f19640c809561eb100f9f6340c1f9b1bc35ad3d3461554653c681c232ddc",
+          "start": 5159
+        },
+        {
+          "end": 10678,
+          "path": "artifacts/2026-09-09-nm-rio-rancho-capture-v1/responses/nm-jtip-may-2024.body",
+          "sha256": "98b713db5de6c4113adb51a3d3fa0b476bf3be7d733a12491aa643f144474181",
+          "start": 9993
+        }
+      ]
+    }
+  }
+}

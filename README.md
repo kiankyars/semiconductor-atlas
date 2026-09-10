@@ -828,6 +828,12 @@ The legacy batch-clock provenance stays distinct from per-request HTTP evidence;
 no old diagnostic, core database or forecast vintage is rewritten. This is a
 retrospective issuer-guidance result, not measured Atlas forecast accuracy.
 
+The separate [Rio Rancho operational-source review](docs/nm_rio_rancho_operational_review.md)
+retains a State portal report about the combined Fab 9/Fab 11x packaging site.
+The source-reported operational-by bound does not resolve the original untimed
+PMT full-production case or produce a forecast score. The source's truncated
+broader release, aggregate facility scope and actual retrieval clock remain explicit.
+
 The [Ohio One municipal construction report](docs/new_albany_project_statements.md)
 adds three schema-9 source statements: slower construction pace, reaffirmed
 commitment and an index-reported July 2025 announcement month. Both retained City

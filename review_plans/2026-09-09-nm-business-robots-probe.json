@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "First direct identified request for the New Mexico Business Portal access policy before deciding whether to retain its own May 2024 JTIP source report. The web research reader could not open robots and supplied no HTTP status or body. This is policy inspection only, not a retry of a retained denial, alternate issuer acquisition or manufacturing claim admission. Stop after this request on any failure or redirect.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "nm-business-robots",
+    "url": "https://www.biz.nm.gov/robots.txt",
+    "purpose": "access_policy",
+    "company": "Intel",
+    "country_code": "US",
+    "source_family": "new-mexico-state-government",
+    "scope": "Exact government portal access policy only. No reuse grant, source retention, event date, facility identity or independent physical corroboration follows.",
+    "media_types": ["text/plain", "text/html"]
+  }
+}

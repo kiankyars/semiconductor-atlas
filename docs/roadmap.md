@@ -528,6 +528,14 @@ views. The original undated Ohio PMT case remains unresolved. This broadens sour
 evidence beyond successful production reports, but does not establish a slowdown
 start date, cancellation, representative non-survivor coverage or forecast skill.
 
+The [Rio Rancho operational-source review](nm_rio_rancho_operational_review.md)
+now retains a separate State portal report about the Fab 9/Fab 11x aggregate
+packaging site, with a source-reported operational-by bound and exact source
+scope. It leaves the original untimed full-production target unresolved and
+the complete PMT diagnostic unchanged. Different publisher, positive operation
+and reproducible bytes do not establish independent physical measurement,
+representative outcome coverage or a forecast score.
+
 The [Coherent Sherman capability admission](coherent_sherman_capability.md) brings
 retained NIST evidence into three typed source-native capability statements:
 InP material, 150 mm wafer size and high-volume production scale. The existing
