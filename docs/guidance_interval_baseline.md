@@ -92,6 +92,12 @@ scheduled detector study or modify its schema-5 artifacts, checksum ledger, coll
 
 ## Later outcomes and scoring
 
+The [September 10 complete-roster source refresh](guidance_roster_refresh_2026-09-10.md)
+subsequently retained all six project pages and reviewed all seven cases against
+their correct original versions. It finds no new matching physical outcomes;
+this source-freshness sidecar neither rewrites the vintage nor substitutes for
+the prespecified later outcome reviews below.
+
 Each vintage prespecifies twenty full calendar quarters after the freeze quarter. Evidence
 cutoffs are each quarter's last day at 23:59:59 UTC; reviews are due 31 days later. This is a
 retained evaluation schedule, not an installed automation. The final quarter bounds the timing

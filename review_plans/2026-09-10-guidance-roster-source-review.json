@@ -1,0 +1,77 @@
+{
+  "format": "semiconductor-atlas-local-source-acquisition-review-v1",
+  "reviewed_at": "2026-09-10T16:57:39Z",
+  "reviewer": "local:codex-frozen-guidance-roster-refresh",
+  "decision": "approved_exact_urls_local_informational_review_only",
+  "purpose": "Refresh the complete six-URL source set for all seven cases in the unchanged September 8 guidance comparator. Retain newly retrieved source versions and review every case for unchanged or revised guidance, explicit attained events, explicit nonoccurrence or cancellation, and unknowns. A source refresh is not a new prediction or proof of current physical state.",
+  "policy_basis": "The main reviewer read all 90 lines of the current NIST robots policy and the complete Copyrights & Disclaimers page on September 10. The six /chips/ routes are outside the robots exclusions. NIST permits copying public information except marked copyright and product-specific exceptions. Preserve source attribution; inspect page-specific notices. Use the established collector to reacquire both exact canonical policies and require their previously reviewed normalized hashes before any document request; drift or failed policies block all documents. This is a new exact-URL decision, not reuse of an expired acquisition approval.",
+  "selection": {
+    "population": "All seven already frozen cases, including three issued intervals, three abstentions and one excluded aggregate; six unique NIST pages, no outcome-based selection.",
+    "vintage": {
+      "path": "artifacts/2026-09-08-guidance-interval-baseline-v1.json",
+      "sha256": "d7d0b539717b3c51799710190e21c40247e8d62b20908d7035992a1ba7de4b00"
+    },
+    "input_review": {
+      "path": "review_plans/2026-09-08-guidance-interval-inputs-v1.json",
+      "sha256": "edee4f6d92a6932b58a1b1ac86d10e87f684c10b0a0a3da570b598bb659131e2"
+    }
+  },
+  "boundaries": {
+    "source_claim_acceptance": false,
+    "physical_capacity_inference": false,
+    "forecast_scoring": false,
+    "model_training": false,
+    "raw_redistribution": false,
+    "scheduled_runtime_change": false,
+    "existing_vintage_change": false,
+    "redirects": false,
+    "retries": false,
+    "cookies": false,
+    "linked_asset_acquisition": false
+  },
+  "prior_exposure": "The frozen source statements, previous outcome screens and an unadmitted SK hynix schedule discrepancy have been seen. This is not blind outcome review or source-coverage proof. No issuer, mirror or previously denied route is authorized; unchanged NIST wording cannot resolve an unverified external discrepancy or establish nonoccurrence.",
+  "documents": [
+    {
+      "id": "nist-tsmc-phoenix",
+      "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+      "company": "TSMC",
+      "title": "TSMC Arizona",
+      "scope": "Phoenix multi-fab table; isolate named Fab 2 production start from the legacy aggregate exclusion."
+    },
+    {
+      "id": "nist-hemlock-michigan",
+      "url": "https://www.nist.gov/chips/hemlock-semiconductor-michigan-hemlock",
+      "company": "Hemlock",
+      "title": "Hemlock Semiconductor (Michigan)",
+      "scope": "New hyper-pure polysilicon facility on an existing campus; not original campus commencement."
+    },
+    {
+      "id": "nist-sk-hynix-indiana",
+      "url": "https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette",
+      "company": "SK hynix",
+      "title": "SK hynix (Indiana)",
+      "scope": "West Lafayette advanced packaging and R&D project; mass production distinct from construction and research."
+    },
+    {
+      "id": "nist-amkor-peoria",
+      "url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria",
+      "company": "Amkor",
+      "title": "Amkor Technology, Inc. (Arizona)",
+      "scope": "Phase-unspecified Peoria advanced packaging/test project; do not substitute Phase One opening for mass production."
+    },
+    {
+      "id": "nist-infinera-california",
+      "url": "https://www.nist.gov/chips/infinera-california-san-jose",
+      "company": "Infinera",
+      "title": "Infinera (California)",
+      "scope": "San Jose fab/foundry construction and modernization; local timeline within shared two-site award."
+    },
+    {
+      "id": "nist-infinera-pennsylvania",
+      "url": "https://www.nist.gov/chips/infinera-pennsylvania-bethlehem",
+      "company": "Infinera",
+      "title": "Infinera (Pennsylvania)",
+      "scope": "Bethlehem new advanced test/packaging facility; preserve grouping with San Jose and distinct local scope."
+    }
+  ]
+}

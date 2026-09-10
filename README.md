@@ -783,6 +783,12 @@ production-start milestone, and unrelated unavailable history does not suppress
 a separately supported input. The real retained three-capacity population and
 its existing exclusions remain unchanged.
 
+The [September 10 complete-roster refresh](docs/guidance_roster_refresh_2026-09-10.md)
+retains six freshly checked NIST pages and reviews all seven existing forecast
+cases. Selected timing and scope tables are unchanged; surrounding text omissions
+remain source changes, not terminated commitments or physical outcomes. The old
+forecast vintage and its uncertainty remain intact.
+
 The separate [executed source-guidance interval comparator](docs/guidance_interval_baseline.md)
 now retains a real September 8 vintage: three source-derived intervals with null midpoints,
 three abstentions and one aggregate exclusion. Exact re-execution reproduces all frozen bytes.
