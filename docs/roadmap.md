@@ -444,6 +444,14 @@ announced rates and the unresolved expanded-project correspondence. Accepted
 synthetic pairs still produce twenty-quarter scenarios; no real scope approval,
 capacity loss or improvement in forecast accuracy is inferred.
 
+The [September 10 forecast support repair](forecast_support_cutoffs.md) closes
+a valid-store historical leakage path for economically usable capacity: selected
+roots now need cutoff-available transitive evidence even without a milestone
+scope review. A synthetic series is excluded before its supporting run completes
+and remains available with identical points at the exact completion boundary.
+The real three-capacity population is unchanged. This establishes input-selection
+correctness for the tested path, not measured forecasting skill.
+
 Add versioned quarterly forecasts for project milestones, capacity bases, utilization, yield, and
 resource use. Forecast runs pin their input release, cutoff, model, configuration, and twenty-quarter
 point series. Aggregates cover company, country, process, packaging, wafer size, product/end market,

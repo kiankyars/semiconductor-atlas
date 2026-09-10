@@ -775,6 +775,14 @@ cutoff override and linked-cancellation conflict. Caller-provided `claims=` must
 complete database view at both cutoffs; it cannot replace that view with selected or altered facts.
 These repairs do not turn the experimental scenarios into calibrated forecasts.
 
+The [forecast support cutoff repair](docs/forecast_support_cutoffs.md) also checks
+the transitive evidence behind every emitted capacity series. A succeeded run
+that finishes after the requested knowledge cutoff cannot support an earlier
+usable-capacity forecast. Already-usable capacity remains independent of a
+production-start milestone, and unrelated unavailable history does not suppress
+a separately supported input. The real retained three-capacity population and
+its existing exclusions remain unchanged.
+
 The separate [executed source-guidance interval comparator](docs/guidance_interval_baseline.md)
 now retains a real September 8 vintage: three source-derived intervals with null midpoints,
 three abstentions and one aggregate exclusion. Exact re-execution reproduces all frozen bytes.

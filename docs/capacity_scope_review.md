@@ -100,6 +100,10 @@ Economically usable input capacity does not require a production-start pairing,
 so that existing path is unchanged. Its evidence quality and forecast assumptions
 remain separate concerns, not newly established by this scope review.
 
+The later [forecast support cutoff repair](forecast_support_cutoffs.md) adds
+transitive input-availability validation to every emitted series, including this
+already-usable path, without introducing a production-start pairing requirement.
+
 Accepted pairings carry the review hash, project/phase labels and review clock
 in JSONL, CSV and summary outputs. The numerical ramp model is unchanged and
 still labelled `assumption_not_fact`, not calibrated probabilities.

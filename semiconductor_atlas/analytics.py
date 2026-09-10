@@ -25,6 +25,7 @@ from .forecast import (
 from .models import CapacityBasis
 from .service import claim_records
 from .forecast_scope import validate_scope_review
+from .evidence_dossier import validate_claim_support
 
 
 PRODUCTION_MILESTONES = {
@@ -310,6 +311,8 @@ def forecast_current_capacity(
     Source-only views with unknown effective dates are not physical-current views.
     Provenance links only nominate ramps. Every selected capacity/milestone pair
     also requires a hash-bound affirmative project/phase/event scope review.
+    Every emitted series additionally requires cutoff-available transitive support,
+    including economically usable capacity that does not need a milestone.
     """
     with _forecast_snapshot(connection):
         current = claim_records(connection, as_of=as_of, recorded_at=recorded_at)
@@ -327,7 +330,7 @@ def forecast_current_capacity(
             expected_sha256=scope_review_sha256, as_of=as_of, recorded_at=recorded_at)
             if scope_review is not None else {})
         scope_reviewed_at = json.loads(scope_review)["reviewed_at"] if scope_review is not None else None
-        return _forecast_from_current_view(connection, current, forecast_start=forecast_start,
+        return _forecast_from_current_view(connection, current, forecast_start=forecast_start, recorded_at=recorded_at,
             parameters=parameters, scope_reviews=scope_reviews,
             scope_review_sha256=scope_review_sha256, scope_reviewed_at=scope_reviewed_at)
 
@@ -337,6 +340,7 @@ def _forecast_from_current_view(
     current: Sequence[dict[str, object]],
     *,
     forecast_start: date,
+    recorded_at: str,
     parameters: ModelParameters,
     scope_reviews: dict[str, dict[str, object]] | None = None,
     scope_review_sha256: str | None = None,
@@ -488,6 +492,17 @@ def _forecast_from_current_view(
                     project_scope=str(scope["project_scope"]), phase_scope=str(scope["phase_scope"]),
                     scope_reviewed_at=scope_reviewed_at,
                 )
+            try:
+                validate_claim_support(connection,
+                    claim_ids=[capacity_claim_id] + ([milestone.milestone_claim_id] if milestone else []),
+                    recorded_at=recorded_at)
+            except ValueError as error:
+                exclusions.append(ForecastExclusion(
+                    entity_id, capacity_claim_id, "forecast_input_support_unavailable_or_invalid",
+                    str(error), ((milestone.milestone_claim_id,) if milestone else ()),
+                ))
+                continue
+            if selected_pairing is not None:
                 pairings.append(selected_pairing)
             capacity_input = CapacityInput(
                 entity_id=entity_id,
@@ -641,6 +656,11 @@ def forecast_summary(results: Iterable[ForecastResult]) -> bytes:
         "excluded_capacity_inputs": len(exclusions),
         "exclusion_reason_counts": dict(sorted(reason_counts.items())),
         "exclusions": [item.as_dict() for item in exclusions],
+        "input_support_rule": (
+            "Every emitted capacity series requires stored typed-value integrity and transitive "
+            "claim, source, record and ingestion-run availability at the knowledge cutoff. "
+            "This does not independently verify source bytes or manufacturing truth."
+        ),
         "milestone_pairing_rule": (
             "For announced through qualified inputs, require exactly one active production "
             "milestone on the same entity linked by claim lineage or a shared transitive source "

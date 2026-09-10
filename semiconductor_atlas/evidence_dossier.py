@@ -87,11 +87,11 @@ def _history(connection, subject: str, as_of: str, recorded_at: str) -> list[dic
     return service._hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
 
 
-def _check_support(connection, claims: list[dict], cutoff: datetime, entity: dict) -> list[dict]:
+def _check_support(connection, claims: list[dict], cutoff: datetime, entity: dict | None = None) -> list[dict]:
     """Check selected typed values and provenance clocks, not the original source bytes."""
     claim_ids = {c["id"] for c in claims}
     pending_counts, children = {}, defaultdict(set)
-    run_ids = {entity["created_by_run_id"]} - {None}
+    run_ids = {entity["created_by_run_id"]} - {None} if entity is not None else set()
     document_ids, record_ids, record_documents = set(), set(), defaultdict(set)
     for claim in claims:
         _before(claim["recorded_at"], cutoff, "claim admission")
@@ -200,6 +200,41 @@ def _check_support(connection, claims: list[dict], cutoff: datetime, entity: dic
             elif _clock(published) > _clock(row["retrieved_at"]):
                 raise ValueError("publication clock postdates retrieval")
     return runs
+
+
+def validate_claim_support(connection: sqlite3.Connection, *, claim_ids: list[str],
+                           recorded_at: str) -> None:
+    """Validate selected roots and transitive support without including unrelated history.
+
+    This checks stored typed-value hashes, support completeness and provenance
+    clocks. Root current-view eligibility is the caller's responsibility. Historical
+    dependency versions need not be current, but must be known at the cutoff.
+    Source bodies, semantic truth and external timestamp authenticity are not checked.
+    """
+    if (not isinstance(claim_ids, list) or not claim_ids
+            or any(not isinstance(value, str) or not value.strip() for value in claim_ids)):
+        raise ValueError("support validation requires nonempty claim IDs")
+    cutoff = _clock(recorded_at)
+    connection.execute("SAVEPOINT atlas_claim_support_read")
+    try:
+        rows = connection.execute("""
+            WITH RECURSIVE selected(id) AS (
+                SELECT value FROM json_each(?)
+                UNION
+                SELECT d.depends_on_claim_version_id FROM claim_dependencies d
+                JOIN selected ON selected.id=d.claim_version_id
+            )
+            SELECT v.*,s.subject_entity_id,s.stable_key AS series_stable_key,s.predicate
+            FROM selected JOIN claim_versions v ON v.id=selected.id
+            JOIN claim_series s ON s.id=v.series_id ORDER BY v.id
+            """, (json.dumps(sorted(set(claim_ids))),)).fetchall()
+        if not set(claim_ids) <= {row["id"] for row in rows}:
+            raise ValueError("support validation references an unknown claim")
+        claims = service._hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
+        _check_support(connection, claims, cutoff)
+    finally:
+        connection.execute("ROLLBACK TO SAVEPOINT atlas_claim_support_read")
+        connection.execute("RELEASE SAVEPOINT atlas_claim_support_read")
 
 
 def _public_claim(claim: dict) -> dict:
