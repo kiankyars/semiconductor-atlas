@@ -64,6 +64,25 @@ class AlertReviewV2CLITests(unittest.TestCase):
         self.assertEqual(before, exported.read_bytes())
         self.assertEqual(events, self.invoke("export", "--database", self.database))
 
+    def test_interrupted_restore_publishes_nothing_and_can_be_retried(self):
+        self.invoke("init", "--database", self.database)
+        exported = self.root / "export.json"
+        self.invoke("export", "--database", self.database, "--output", exported)
+        restored = self.root / "restored.sqlite"
+
+        def interrupted(path, events):
+            review.initialize_queue(path)
+            raise ValueError("simulated interruption after queue creation")
+
+        with patch.object(review, "restore_queue", side_effect=interrupted), \
+                redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            self.invoke("restore", "--database", restored, "--events", exported)
+        self.assertFalse(restored.exists())
+        self.assertEqual([], [path.name for path in self.root.iterdir() if path.name.startswith(".alert-restore-")])
+        self.invoke("restore", "--database", restored, "--events", exported)
+        self.assertEqual(self.invoke("export", "--database", self.database),
+                         self.invoke("export", "--database", restored))
+
     def test_malformed_restore_does_not_create_database(self):
         exported = self.root / "malformed.json"
         for body in (b"null", b"[]", b'{"format":"wrong","events":[]}', b'{"format":"a","format":"b","events":[]}'):

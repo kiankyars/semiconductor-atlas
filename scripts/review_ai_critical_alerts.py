@@ -5,12 +5,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from semiconductor_atlas import ai_critical_alert_review as review
+from semiconductor_atlas.ai_critical import ensure_real_directory, install_file_exclusive
 from semiconductor_atlas.ai_critical_changes import _pretty_bytes, _strict_json
 from semiconductor_atlas.curated_capture import _write
 
@@ -20,9 +23,23 @@ def _evidence_ref(value: str) -> dict:
         result = _strict_json(value.encode("utf-8"), "evidence reference")
         if not isinstance(result, dict):
             raise ValueError("evidence reference must be a JSON object")
+        if not all(isinstance(item, str) for item in result.values()):
+            raise ValueError("evidence reference fields must be strings")
         return result
     except ValueError as error:
         raise argparse.ArgumentTypeError(str(error)) from error
+
+
+def _restore(database: Path, events: Path) -> dict:
+    """Publish the restored queue only after every event is written and read back."""
+    destination = ensure_real_directory(database.absolute().parent, "alert queue parent") / database.name
+    staging = Path(tempfile.mkdtemp(prefix=".alert-restore-", dir=destination.parent))
+    try:
+        result = review.restore_queue(staging / destination.name, events)
+        install_file_exclusive(staging / destination.name, destination)
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
+    return result
 
 
 def main() -> None:
@@ -72,7 +89,7 @@ def main() -> None:
                 _write(args.output, _pretty_bytes(result))
                 result = {"output": str(args.output), "event_count": len(result["events"])}
         elif args.command == "restore":
-            result = review.restore_queue(args.database, args.events)
+            result = _restore(args.database, args.events)
         else:
             result = review.verify_queue(args.database)
     except (OSError, ValueError) as error:

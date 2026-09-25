@@ -6,14 +6,17 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import shutil
 import sqlite3
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from semiconductor_atlas import alert_review_v2 as review
 from semiconductor_atlas import project_target_changes
+from semiconductor_atlas.ai_critical import ensure_real_directory, install_file_exclusive
 from semiconductor_atlas.ai_critical_changes import _pretty_bytes, _strict_json
 from semiconductor_atlas.curated_capture import _write
 
@@ -26,6 +29,18 @@ def _evidence_ref(value: str) -> dict:
         return result
     except ValueError as error:
         raise argparse.ArgumentTypeError(str(error)) from error
+
+
+def _restore(database: Path, events: Path) -> dict:
+    """Publish the restored queue only after every event is written and read back."""
+    destination = ensure_real_directory(database.absolute().parent, "alert queue parent") / database.name
+    staging = Path(tempfile.mkdtemp(prefix=".alert-restore-", dir=destination.parent))
+    try:
+        result = review.restore_queue(staging / destination.name, events)
+        install_file_exclusive(staging / destination.name, destination)
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
+    return result
 
 
 def main() -> None:
@@ -69,7 +84,7 @@ def main() -> None:
         if args.command == "init":
             result = review.initialize_queue(args.database)
         elif args.command == "restore":
-            result = review.restore_queue(args.database, args.events)
+            result = _restore(args.database, args.events)
         elif args.command == "report":
             result = review.queue_report(args.database, as_of=args.as_of)
         elif args.command == "verify":

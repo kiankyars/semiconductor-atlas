@@ -97,6 +97,30 @@ class AlertReviewCLITests(unittest.TestCase):
             self.invoke("init", "--database", self.database)
         self.assertEqual(events, self.invoke("export", "--database", self.database))
 
+    def test_interrupted_restore_publishes_nothing_and_can_be_retried(self) -> None:
+        self.invoke("init", "--database", self.database)
+        self.import_bundle()
+        report = self.invoke("report", "--database", self.database)
+        exported = self.root / "portable.json"
+        self.invoke("export", "--database", self.database, "--output", exported)
+        restored = self.root / "restored.sqlite"
+
+        def interrupted(path: Path, events: Path) -> dict:
+            review.initialize_queue(path)
+            raise ValueError("simulated interruption after queue creation")
+
+        with patch.object(review, "restore_queue", side_effect=interrupted), \
+                redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            self.invoke("restore", "--database", restored, "--events", exported)
+        self.assertFalse(restored.exists())
+        self.assertEqual([], [path.name for path in self.root.iterdir() if path.name.startswith(".alert-restore-")])
+        self.invoke("restore", "--database", restored, "--events", exported)
+        self.assertEqual(report, self.invoke("report", "--database", restored))
+        before = restored.read_bytes()
+        with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+            self.invoke("restore", "--database", restored, "--events", exported)
+        self.assertEqual(before, restored.read_bytes())
+
     def test_cli_decisions_preserve_bound_evidence_and_reject_stale_token(self) -> None:
         self.invoke("init", "--database", self.database)
         self.import_bundle()
@@ -144,6 +168,18 @@ class AlertReviewCLITests(unittest.TestCase):
                 self.invoke("decide", "--database", self.database, "--alert", "fixture",
                             "--action", "retract", "--reviewer", "fixture", "--reason", "fixture",
                             "--expected-event", "fixture", "--evidence-ref", malformed)
+            self.assertFalse(self.database.exists())
+
+    def test_evidence_argument_rejects_non_string_fields_before_database_access(self) -> None:
+        fields = {"bundle_id": "b", "side": "current", "claim_id": "c", "evidence_id": "e",
+                  "fragment_sha256": "f"}
+        for name, value in (("bundle_id", []), ("side", {}), ("claim_id", 1), ("fragment_sha256", None)):
+            malformed = json.dumps({**fields, name: value})
+            with self.subTest(field=name), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as raised:
+                self.invoke("decide", "--database", self.database, "--alert", "fixture",
+                            "--action", "resolve", "--reviewer", "fixture", "--reason", "fixture",
+                            "--expected-event", "fixture", "--evidence-ref", malformed)
+            self.assertEqual(2, raised.exception.code)
             self.assertFalse(self.database.exists())
 
 
