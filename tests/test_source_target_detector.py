@@ -259,6 +259,14 @@ class SourceTargetDetectorTests(unittest.TestCase):
                 self.assert_abstain(detector.TSMC, before, before.replace(b"<body>", b"<body>" + markup))
         self.assert_abstain(detector.TSMC, before, before.replace(b"</p>", b"</p unknown>", 1))
 
+    def test_regex_metacharacters_in_tag_names_match_end_tags_literally(self):
+        before = tsmc_html()
+        for markup in (b"<a(>x</a(>", b"<x[>y</x[>", b"<c++>z</c++>", b"<b*>z</B*>"):
+            with self.subTest(markup=markup):
+                self.assertEqual("no_candidate", detector.analyze(detector.TSMC, before, before.replace(b"<body>", b"<body>" + markup))["result"])
+        result = self.assert_abstain(detector.TSMC, before, before.replace(b"<body>", b"<body><a(>x</a( junk>"))
+        self.assertEqual("malformed_html_end_tag", result["coverage"]["after"]["reason"])
+
     def test_phase_allocation_in_nist_scope_cannot_be_called_unspecified(self):
         before = amkor_html()
         phase = before.replace(b"new advanced packaging and test facility", b"new advanced packaging and test facility for Phase One")

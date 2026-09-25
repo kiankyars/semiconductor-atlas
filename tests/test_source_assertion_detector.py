@@ -200,6 +200,53 @@ class SourceAssertionDetectorTests(unittest.TestCase):
                     b"</body>", b"</dialog></body>")
                 self.assert_abstains(url, raw)
 
+    def test_rendered_aria_hidden_inert_and_closed_details_text_remains_bound_context(self):
+        sentence = "The project has been cancelled."
+        wrappers = ('<p aria-hidden="true">{}</p>', "<p inert>{}</p>", "<details><summary>{}</summary><p>More.</p></details>",
+                    "<details><summary>More</summary><p>{}</p></details>")
+        for url, builder in self.routes():
+            for wrapper in wrappers:
+                with self.subTest(url=url, wrapper=wrapper):
+                    self.assert_not_quiet(url, builder(), builder(extra=wrapper.format(sentence)))
+                    self.assert_abstains(url, builder(extra=wrapper.format(sentence)))
+            with self.subTest(url=url, mode="context_hash"):
+                self.assert_not_quiet(url, builder(extra='<p aria-hidden="true">Revision A applies.</p>'),
+                                      builder(extra='<p aria-hidden="true">Revision B applies.</p>'))
+
+    def test_rendered_aria_hidden_text_inside_assertion_paragraph_is_still_scanned(self):
+        variants = ((detector.CHANDLER, chandler_html(), b"in the U.S.</p>"),
+                    (detector.AMKOR_GROUNDBREAKING, amkor_html(), b"supply chain resilience.</p>"),
+                    (detector.MICRON_MTI, micron_html(), b"in the years ahead.</p>"))
+        for url, raw, anchor in variants:
+            with self.subTest(url=url):
+                self.assert_abstains(url, raw.replace(anchor, anchor[:-4] + b'<span aria-hidden="true"> The project has been cancelled.</span></p>'))
+
+    def test_unrendered_hidden_text_is_not_scanned_as_bound_context(self):
+        for url, builder in self.routes():
+            for extra in ("<p hidden>The project has been cancelled.</p>", '<p style="display: none">The project has been cancelled.</p>',
+                          "<div popover>The project has been cancelled.</div>", "<dialog>The project has been cancelled.</dialog>"):
+                with self.subTest(url=url, extra=extra):
+                    self.assert_extracted(url, builder(extra=extra))
+
+    def test_adjacent_block_elements_cannot_glue_hazard_words_together(self):
+        for url, builder in self.routes():
+            for extra in ("<dl><dt>Completion</dt><dd>2027</dd></dl>", "<blockquote>Production</blockquote><blockquote>delayed</blockquote>",
+                          "<header>Production</header><footer>cancelled</footer>", "<figure><figcaption>Opening</figcaption></figure><address>2032</address>",
+                          "<dl><dt>Another</dt> <dd>plant</dd></dl>"):
+                with self.subTest(url=url, extra=extra):
+                    self.assert_abstains(url, builder(extra=extra))
+        for markup in (b"<table><tr><th>Completion</th><td>2027</td></tr></table>", b"<h2>Opening</h2><h3>2027</h3>",
+                       b"<table><tr><td>Another</td> <td>plant</td></tr></table>"):
+            with self.subTest(markup=markup):
+                self.assert_abstains(detector.MICRON_MTI, micron_html().replace(b"</main>", markup + b"</main>"))
+
+    def test_regex_metacharacters_in_unrelated_tag_names_do_not_escape_extraction(self):
+        for url, builder in self.routes():
+            for markup in ("<a(>x</a(>", "<x[>y</x[>"):
+                with self.subTest(url=url, markup=markup):
+                    self.assert_extracted(url, builder(before=markup))
+                    self.assertEqual("no_candidate", detector.analyze(url, builder(), builder(before=markup))["result"])
+
     def test_hidden_positive_lure_cannot_override_visible_negation(self):
         before = chandler_html()
         after = before.replace(b"is now open", b'is <span hidden>now open</span>not open')
