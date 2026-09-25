@@ -337,6 +337,22 @@ class NISTDiscoveryTests(unittest.TestCase):
         self.assertTrue((self.root / "capture/responses/nist-robots.attempt.json").is_file())
         self.assertFalse((self.root / "capture/manifest.json").exists())
 
+    def test_rejectable_transport_or_expiry_straddle_leaves_unmanifested_receipts(self) -> None:
+        for name, overrides, expires_at, error in (
+            ("status", {"news-page-1": {"http_code": 999}}, "2026-10-06T00:00:00Z", "invalid HTTP status"),
+            ("signal", {"news-page-1": {"http_code": None, "curl_exit_code": -9, "transport_error": None}}, "2026-10-06T00:00:00Z", "nonnegative"),
+            # The last page starts at 05:00:05.10, before expiry, and finishes at 05:00:05.12, after it.
+            ("straddle", {}, "2026-09-07T05:00:05.110000Z", "outside reviewed interval"),
+        ):
+            with self.subTest(name=name):
+                self.now = datetime(2026, 9, 7, 5, tzinfo=timezone.utc)
+                self.overrides, self.plan["expires_at"] = overrides, expires_at
+                with self.assertRaisesRegex(ValueError, error):
+                    self.run_capture(name)
+                self.assertTrue((self.root / name / "source_checks.json").is_file())
+                self.assertTrue((self.root / name / "run.json").is_file())
+                self.assertFalse((self.root / name / "manifest.json").exists())
+
     def test_existing_output_expired_plan_and_protected_input_overlap_do_not_fetch(self) -> None:
         root, _ = self.run_capture()
         original_manifest = (root / "manifest.json").read_bytes()
