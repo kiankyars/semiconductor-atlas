@@ -5,6 +5,7 @@ import argparse
 import json
 import os
 import sqlite3
+import stat
 import sys
 from pathlib import Path
 
@@ -15,7 +16,19 @@ from semiconductor_atlas.ai_critical_changes import _open_real_directory_fd, _pr
 from semiconductor_atlas.source_checks import _read
 
 
+def _identities(paths) -> set:
+    statuses = []
+    for path in paths:
+        try:
+            statuses.append(os.stat(path, follow_symlinks=False))
+        except OSError:
+            pass
+    return {(status.st_dev, status.st_ino) for status in statuses if stat.S_ISDIR(status.st_mode)}
+
+
 def _write_report(output: Path, raw: bytes, frozen_path: Path, reference_root: Path, frozen_sha256: str):
+    if ".." in output.parts:
+        raise ValueError("report output cannot contain parent traversal")
     output = output.absolute()
     root = reference_root.resolve()
     frozen_raw = _read(frozen_path)
@@ -25,7 +38,8 @@ def _write_report(output: Path, raw: bytes, frozen_path: Path, reference_root: P
     protected = {root / Path(name).parent for name in frozen["snapshot"]["files"]}
     protected.update(root / name for name in frozen["snapshot"]["root_entries"])
     protected.update(root / row["path"] for row in frozen["snapshot"]["captures"])
-    if any(output == directory or output.is_relative_to(directory) for directory in protected):
+    if (any(output == directory or output.is_relative_to(directory) for directory in protected)
+            or _identities(protected) & _identities(output.parents)):
         raise ValueError("report output must be outside retained source and polling directories")
     _, directory = _open_real_directory_fd(output.parent, "report output parent", create=False)
     try:

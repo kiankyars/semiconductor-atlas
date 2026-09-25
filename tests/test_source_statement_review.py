@@ -581,6 +581,41 @@ class SourceStatementReviewTests(unittest.TestCase):
             self.assertFalse(output.exists())
         self.assertTrue(population.verify_population_sources(self.frozen_path, reference_root=self.root)["exact_retention_snapshot_replayed"])
 
+    def test_cli_rejects_parent_traversal_into_retained_directories(self):
+        case = self.paired()
+        self.annotate(case, "reviewed_targets", statements=[self.statement(case)])
+        packet = self.root / case["capture_path"]
+        (self.root / "artifacts").mkdir()
+        entries, frozen_sha256 = sorted(packet.iterdir()), population._hash(self.frozen_path.read_bytes())
+        for parent in ("artifacts", "missing"):
+            output = self.root / parent / ".." / case["capture_path"] / f"{parent}-cli.json"
+            with self.subTest(path=output), self.assertRaises(SystemExit):
+                self.invoke_cli(output)
+            output = output.with_name(f"{parent}-direct.json")
+            with self.subTest(path=output), self.assertRaisesRegex(ValueError, "parent traversal"):
+                cli._write_report(output, b"{}", self.frozen_path, self.root, frozen_sha256)
+        self.assertEqual(entries, sorted(packet.iterdir()))
+        self.assertTrue(population.verify_population_sources(self.frozen_path, reference_root=self.root)["exact_retention_snapshot_replayed"])
+
+    def test_cli_rejects_case_aliases_of_retained_directories(self):
+        if not (self.root / "POLL-CAPTURES").is_dir():
+            self.skipTest("case-sensitive filesystem")
+        case = self.paired()
+        self.annotate(case, "reviewed_targets", statements=[self.statement(case)])
+        packet, state = self.root / case["capture_path"], next((self.root / "poll-state").iterdir())
+        (self.root / "artifacts").mkdir()
+        entries = {directory: sorted(directory.iterdir()) for directory in (packet, state)}
+        for output in (self.root / case["capture_path"].upper() / "injected-review.json",
+                       self.root / "Poll-Captures" / "injected-review.json",
+                       self.root / "POLL-STATE" / state.name / "injected-review.json"):
+            with self.subTest(path=output), self.assertRaises(SystemExit):
+                self.invoke_cli(output)
+            self.assertFalse(output.exists())
+        self.assertEqual(entries, {directory: sorted(directory.iterdir()) for directory in entries})
+        output = self.root / "artifacts" / "statement-report.json"
+        summary = self.invoke_cli(output)
+        self.assertEqual(population._hash(output.read_bytes()), summary["sha256"])
+
     def test_cli_rejects_symlink_output_parent_and_changed_freeze_at_installation(self):
         case = self.paired()
         self.annotate(case, "reviewed_targets", statements=[self.statement(case)])
