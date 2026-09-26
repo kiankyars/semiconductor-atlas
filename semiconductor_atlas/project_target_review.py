@@ -19,7 +19,9 @@ from .source_checks import _read
 
 
 REVIEW_FORMAT = "semiconductor-atlas-project-target-claim-review-v1"
-RULE_VERSION = "reviewed-source-native-project-target-v1"
+LEGACY_RULE_VERSION = "reviewed-source-native-project-target-v1"
+RULE_VERSION = "reviewed-source-native-project-target-v2"
+RULE_VERSIONS = (LEGACY_RULE_VERSION, RULE_VERSION)
 DECISION = "accept_two_source_native_project_target_statements"
 BOUNDARIES = dict.fromkeys(("canonical_facility_assignment", "baseline_modified", "capacity_claim",
     "manufacturing_attainment", "delivery_eligible", "raw_redistribution",
@@ -246,24 +248,28 @@ def _load(path: Path, root: Path) -> dict:
             "source_admitted_at": observation["imported_at"], "source_handoff_at": decision["recorded_at"]}
 
 
-def _ids(data: dict) -> dict:
+def _ids(data: dict, rule: str = RULE_VERSION) -> dict:
+    """Family and project identity span rules; v2 keeps project-neutral page versions under its own source."""
     review = data["review"]
     source_key = "reviewed-project-source:" + review["source_url"]
     project_key = source_key + ":" + review["project"]["source_native_subject"]
-    return {"family_id": repository.stable_id(RULE_VERSION, "family"),
-        "source_id": repository.stable_id(RULE_VERSION, "source", source_key), "source_key": source_key,
-        "entity_id": repository.stable_id(RULE_VERSION, "project", project_key), "project_key": project_key,
-        "run_id": repository.stable_id(RULE_VERSION, data["review_sha256"])}
+    if rule != LEGACY_RULE_VERSION:
+        source_key = "reviewed-project-source-v2:" + review["source_url"]
+    return {"family_id": repository.stable_id(LEGACY_RULE_VERSION, "family"),
+        "source_id": repository.stable_id(rule, "source", source_key), "source_key": source_key,
+        "entity_id": repository.stable_id(LEGACY_RULE_VERSION, "project", project_key), "project_key": project_key,
+        "run_id": repository.stable_id(rule, data["review_sha256"])}
 
 
-def _populate(connection: sqlite3.Connection, data: dict, started: str, admitted: str, clocks: dict) -> dict:
-    review, ids = data["review"], _ids(data)
+def _populate(connection: sqlite3.Connection, data: dict, started: str, admitted: str, clocks: dict,
+              rule: str = RULE_VERSION) -> dict:
+    review, ids = data["review"], _ids(data, rule)
     family = models.SourceFamily(ids["family_id"], "reviewed-source-project-targets", "Reviewed source-native project targets", clocks["family"])
     source = models.Source(ids["source_id"], family.id, ids["source_key"], "Reviewed project statements: " + review["source_url"],
         "NIST", review["source_url"], clocks["source"], "NIST public information; marked and third-party exceptions excluded; raw retained locally")
     repository.add_source_family(connection, family)
     repository.add_source(connection, source)
-    parameters = {"rule_version": RULE_VERSION, "review_sha256": data["review_sha256"],
+    parameters = {"rule_version": rule, "review_sha256": data["review_sha256"],
         "acceptance_timestamp_basis": "actual_database_admission",
         "accepted_at": admitted,
         "dependency_code_sha256": data["code_sha256"],
@@ -276,11 +282,13 @@ def _populate(connection: sqlite3.Connection, data: dict, started: str, admitted
     for name in ("before", "after"):
         row, verified = review[name], data["variants"][name]
         document_id = repository.stable_id(ids["source_id"], row["body"]["sha256"], row["retrieved_at"])
-        metadata = {"source_native_project_scope": review["project"], "retained_body": row["body"],
-            "claim_effective_at": None, "publication_time": None,
+        metadata = {"retained_body": row["body"], "claim_effective_at": None, "publication_time": None,
             "retrieval_timestamp_basis": row.get("retrieval_timestamp_basis", "UTC microsecond response-finished invocation clock")}
+        title = "NIST project target statement"
+        if rule == LEGACY_RULE_VERSION:
+            metadata["source_native_project_scope"], title = review["project"], title + ": " + review["project"]["label"]
         repository.add_source_document(connection, models.SourceDocument(document_id, source.id, review["source_url"],
-            "NIST project target statement: " + review["project"]["label"], row["retrieved_at"], row["body"]["sha256"],
+            title, row["retrieved_at"], row["body"]["sha256"],
             media_type="text/html", license=source.license, metadata=metadata))
         payload = {"project": review["project"], "target": row["target"], "spans": verified["spans"],
             "review_sha256": data["review_sha256"], "source_capture": review["source"] if name == "after" else row["manifest"],
@@ -296,13 +304,13 @@ def _populate(connection: sqlite3.Connection, data: dict, started: str, admitted
             clocks["series"].get(series_id, admitted)))
         claim_id = repository.stable_id(series_id, data["review_sha256"])
         repository.insert_claim(connection, models.ClaimVersion(claim_id, series_id, None, admitted,
-            models.ClaimKind.SOURCE_STATEMENT, RULE_VERSION, None, created_by_run_id=ids["run_id"],
+            models.ClaimKind.SOURCE_STATEMENT, rule, None, created_by_run_id=ids["run_id"],
             notes="Reviewed document-version target, not attainment; effective time and calibrated confidence unknown."), verified["value"],
             evidence=[models.EvidenceLink(document_id, source_record_id=record_id,
                 locator=f"{span['locator']}; UTF-8 bytes [{span['start']},{span['end']}); SHA-256 {span['sha256']}",
                 excerpt=span["excerpt"]) for span in verified["spans"]])
         claims[name], documents[name] = claim_id, document_id
-    return {"format": "semiconductor-atlas-project-target-acceptance-v1", "rule_version": RULE_VERSION,
+    return {"format": "semiconductor-atlas-project-target-acceptance-v1", "rule_version": rule,
         "run_id": ids["run_id"], "entity_id": ids["entity_id"], "review_sha256": data["review_sha256"],
         "admitted_at": admitted, "claim_ids": claims, "document_ids": documents,
         "comparison": {"kind": "source_stated_target_reaffirmation" if review["before"]["target"] == review["after"]["target"] else "source_stated_target_revision", "before": review["before"]["target"],
@@ -315,17 +323,23 @@ def _verify_replay(connection: sqlite3.Connection, data: dict, prior: sqlite3.Ro
         raise ValueError("recorded review content conflicts")
     if params.get("dependency_code_sha256") != data["code_sha256"]:
         raise ValueError("acceptance-time helper code or migration fingerprint differs")
+    rule = params.get("rule_version")
+    if rule not in RULE_VERSIONS or _ids(data, rule)["run_id"] != prior["id"]:
+        raise ValueError("recorded rule version differs from the admission identity")
+    ids = _ids(data, rule)
     expected, _ = database.initialize(":memory:")
     try:
         origin = params["lineage_creation_clocks"]["entity_run"]
         if origin != prior["id"]:
-            for table, key, identifier in (("source_families", "id", _ids(data)["family_id"]),
-                    ("sources", "id", _ids(data)["source_id"]), ("ingestion_runs", "id", origin)):
+            owner = connection.execute("SELECT source_id FROM ingestion_runs WHERE id=?", (origin,)).fetchone()
+            for table, key, identifier in (("source_families", "id", ids["family_id"]),
+                    *(("sources", "id", source) for source in dict.fromkeys((ids["source_id"], owner and owner[0]))),
+                    ("ingestion_runs", "id", origin)):
                 row = connection.execute(f"SELECT * FROM {table} WHERE {key}=?", (identifier,)).fetchone()
                 if row is None:
                     raise ValueError("missing original project lineage")
                 expected.execute(f"INSERT INTO {table} VALUES ({','.join('?' for _ in row)})", tuple(row))
-        result = _populate(expected, data, prior["started_at"], prior["completed_at"], params["lineage_creation_clocks"])
+        result = _populate(expected, data, prior["started_at"], prior["completed_at"], params["lineage_creation_clocks"], rule)
         tables = [row[0] for row in expected.execute("SELECT name FROM sqlite_master WHERE type='table' AND name != 'schema_migrations'")]
         for table in tables:
             for row in expected.execute(f"SELECT * FROM {table}"):
@@ -363,8 +377,12 @@ def _verify_replay(connection: sqlite3.Connection, data: dict, prior: sqlite3.Ro
 
 
 def accept_review(connection: sqlite3.Connection, review_path: str | Path, *, reference_root: str | Path,
-                  source_queue: str | Path) -> dict:
-    """Own one atomic admission; exact replay checks rows without writing to this database."""
+                  source_queue: str | Path, rule_version: str = RULE_VERSION) -> dict:
+    """Own one atomic admission; exact replay checks rows without writing to this database.
+
+    rule_version selects only a new admission's rule; replay always follows the recorded rule."""
+    if rule_version not in RULE_VERSIONS:
+        raise ValueError("unsupported project target rule version")
     if connection.in_transaction:
         raise ValueError("project acceptance requires ownership of its database transaction")
     if database.schema_version(connection) < 5:
@@ -381,8 +399,11 @@ def accept_review(connection: sqlite3.Connection, review_path: str | Path, *, re
         data["code_sha256"] = _code_fingerprint(snapshot)
     except (KeyError, TypeError, IndexError, AttributeError) as error:
         raise ValueError("malformed project target review") from error
-    ids = _ids(data)
-    prior = connection.execute("SELECT * FROM ingestion_runs WHERE id=?", (ids["run_id"],)).fetchone()
+    ids, runs = _ids(data, rule_version), [_ids(data, rule)["run_id"] for rule in RULE_VERSIONS]
+    priors = connection.execute(f"SELECT * FROM ingestion_runs WHERE id IN ({','.join('?' * len(runs))})", runs).fetchall()
+    if len(priors) > 1:
+        raise ValueError("review is admitted under more than one rule version")
+    prior = priors[0] if priors else None
     live = curated_review.export_events(source_queue)["events"]
     if (live[:len(data["events"])] != data["events"] or not prior and live != data["events"]):
         raise ValueError("current source queue differs from reviewed export lineage")
@@ -408,7 +429,7 @@ def accept_review(connection: sqlite3.Connection, review_path: str | Path, *, re
             raise ValueError("source queue changed before acceptance reservation")
         connection.execute("BEGIN IMMEDIATE")
         try:
-            result = _populate(connection, data, started, admitted, clocks)
+            result = _populate(connection, data, started, admitted, clocks, rule_version)
             errors = repository.validate_database(connection)
             if errors:
                 raise ValueError("project acceptance database validation: " + "; ".join(errors))
