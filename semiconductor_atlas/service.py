@@ -9,7 +9,9 @@ from datetime import UTC, date, datetime
 from typing import Any, Iterable, Mapping, Sequence
 
 from .database import knowledge_clock_sql, schema_version
-from .repository import current_claims, known_source_claims, validate_database
+from .repository import (
+    _normalized_timestamp, current_claims, known_source_claims, validate_database,
+)
 
 
 def default_as_of() -> str:
@@ -255,6 +257,7 @@ def claim_history_records(
     superseded statements with unknown or future effective dates.
     """
 
+    _normalized_timestamp(recorded_at, "recorded_at")
     clock = knowledge_clock_sql(connection)
     available_rows = connection.execute(
         """
@@ -367,6 +370,7 @@ def materialize_entities(
     additional_entity_ids: Iterable[str] = (),
     claims: Sequence[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
+    _normalized_timestamp(recorded_at, "recorded_at")
     claims_by_entity: dict[str, list[dict[str, Any]]] = defaultdict(list)
     referenced_entity_ids: set[str] = set()
     claim_view = (
@@ -574,6 +578,7 @@ def summarize(
     claims: Sequence[dict[str, Any]] | None = None,
     entities: Sequence[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    _normalized_timestamp(recorded_at, "recorded_at")
     claim_view = (
         list(claims)
         if claims is not None

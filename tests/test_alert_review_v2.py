@@ -189,6 +189,16 @@ class AlertReviewV2Tests(unittest.TestCase):
         self.assertEqual(0, result["delivery_eligible_count"])
         self.assertTrue(all(not row["delivery_eligible"] for row in result["alerts"]))
 
+    def test_mixed_rows_follow_admission_instant_not_clock_text(self):
+        fixture = self.legacy_fixture()
+        self.import_legacy(fixture, clock=REVIEWED)
+        self.write_admission()
+        admitted = "2026-09-07T11:00:00.500000Z"
+        result = self.import_project(clock=admitted)
+        self.assertEqual([("baseline_facility", REVIEWED), ("source_native_project", admitted)],
+            [(row["origin"], row["first_recorded_at"]) for row in result["alerts"]])
+        self.assertEqual(result["alerts"], review.queue_report(self.db, as_of=admitted)["alerts"])
+
     def test_restore_v1_preserves_exact_prefix_and_original_queue(self):
         fixture = self.legacy_fixture()
         first = fixture._import()["alerts"][0]
