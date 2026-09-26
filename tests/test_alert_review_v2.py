@@ -118,6 +118,20 @@ class AlertReviewV2Tests(unittest.TestCase):
         self.assertEqual(0, review.queue_report(self.db, as_of=REVIEWED)["alert_count"])
         self.assertEqual(1, review.queue_report(self.db, as_of=ADMITTED)["alert_count"])
 
+    def test_legacy_rule_project_packet_imports_and_refolds(self):
+        self.fixture = project_fixtures.ProjectTargetReviewTests(); self.fixture.setUp()
+        self.addCleanup(self.fixture.doCleanups)
+        self.root, rule = self.fixture.root, project_fixtures.targets.LEGACY_RULE_VERSION
+        accepted = self.fixture.accept_path(self.fixture.review_path, rule_version=rule)
+        self.packet = self.build_packet()
+        self.write_admission()
+        alert = self.import_project()["alerts"][0]
+        observation = alert["observations"][0]
+        self.assertEqual((accepted["run_id"], accepted["entity_id"]), (observation["comparison_id"], alert["subject_entity_id"]))
+        self.assertEqual([rule, rule], [observation[side]["method"] for side in ("before", "after")])
+        self.decide(alert, "resolve", refs=[self.project_ref(alert)])
+        self.assertEqual(["resolved"], [row["status"] for row in review.queue_report(self.db)["alerts"]])
+
     def test_exact_repeat_retains_original_admission_clock_and_decision(self):
         alert = self.import_project()["alerts"][0]
         acknowledged = self.decide(alert, "acknowledge")

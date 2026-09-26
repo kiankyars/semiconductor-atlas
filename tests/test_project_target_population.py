@@ -11,6 +11,7 @@ from semiconductor_atlas import ai_critical_alert_review as legacy
 from semiconductor_atlas import alert_review_v2 as alerts
 from semiconductor_atlas import project_target_changes as changes
 from semiconductor_atlas import project_target_population as population
+from semiconductor_atlas import project_target_review as acceptance, repository
 from semiconductor_atlas.ai_critical_changes import _pretty_bytes
 from tests import test_project_target_review as fixtures
 
@@ -304,6 +305,21 @@ class ProjectTargetPopulationTests(unittest.TestCase):
         self.write_study(start=second["admitted_at"])
         self.fixture.before_path.write_bytes(self.fixture.before_path.read_bytes() + b" changed")
         with self.assertRaises(ValueError):
+            self.freeze()
+
+    def test_legacy_and_current_rule_admissions_share_one_census(self):
+        self.fixture.second_review()
+        second = self.fixture.accept_path(self.fixture.review_path, rule_version=acceptance.LEGACY_RULE_VERSION)
+        self.reviews.append(self.review_ref(second, self.fixture.review_path))
+        self.write_study()
+        frozen = self.freeze()
+        self.assertEqual(sorted((self.first["run_id"], second["run_id"])), [packet["comparison_id"] for packet in frozen["packets"]])
+        self.assertEqual({acceptance.LEGACY_RULE_VERSION, acceptance.RULE_VERSION},
+                         {packet["provenance"]["acceptance"]["rule_version"] for packet in frozen["packets"]})
+        self.assertEqual(1, len(frozen["cohort"]))
+        self.assertEqual(frozen, self.validate(frozen)[0])
+        self.write_study(reviews=[{**self.reviews[1], "run_id": repository.stable_id(acceptance.RULE_VERSION, self.reviews[1]["sha256"])}, self.reviews[0]])
+        with self.assertRaisesRegex(ValueError, "exactly cover"):
             self.freeze()
 
     def test_missing_rule_marker_cannot_remove_run_from_census(self):

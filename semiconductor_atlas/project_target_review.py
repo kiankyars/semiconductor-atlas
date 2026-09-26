@@ -248,7 +248,7 @@ def _load(path: Path, root: Path) -> dict:
             "source_admitted_at": observation["imported_at"], "source_handoff_at": decision["recorded_at"]}
 
 
-def _ids(data: dict, rule: str = RULE_VERSION) -> dict:
+def _ids(data: dict, rule: str) -> dict:
     """Family and project identity span rules; v2 keeps project-neutral page versions under its own source."""
     review = data["review"]
     source_key = "reviewed-project-source:" + review["source_url"]
@@ -262,7 +262,7 @@ def _ids(data: dict, rule: str = RULE_VERSION) -> dict:
 
 
 def _populate(connection: sqlite3.Connection, data: dict, started: str, admitted: str, clocks: dict,
-              rule: str = RULE_VERSION) -> dict:
+              rule: str) -> dict:
     review, ids = data["review"], _ids(data, rule)
     family = models.SourceFamily(ids["family_id"], "reviewed-source-project-targets", "Reviewed source-native project targets", clocks["family"])
     source = models.Source(ids["source_id"], family.id, ids["source_key"], "Reviewed project statements: " + review["source_url"],
