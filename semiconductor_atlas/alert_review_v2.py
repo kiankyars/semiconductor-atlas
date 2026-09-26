@@ -190,7 +190,7 @@ def _fold_unchecked(events: list[dict], *, as_of: str | None = None, full: bool 
         else:
             raise ValueError("unsupported version-2 alert event kind")
     rows = [{"origin": "baseline_facility", **alert} for alert in old["alerts"]] + list(alerts.values())
-    rows.sort(key=lambda item: (item["first_recorded_at"], item["id"]))
+    rows.sort(key=lambda item: (_instant(item["first_recorded_at"]), item["id"]))
     return {"format": "semiconductor-atlas-alert-review-report-v2", "rule_version": RULE_VERSION,
         "as_of": as_of, "event_count": len(selected), "head_event_id": selected[-1]["event_id"] if selected else None,
         "packet_count": old["packet_count"] + len(packets), "alert_count": len(rows),

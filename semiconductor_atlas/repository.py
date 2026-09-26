@@ -1414,6 +1414,7 @@ def current_claims(
     subject_entity_id: str | None = None,
     predicate: str | None = None,
 ) -> list[sqlite3.Row]:
+    _normalized_timestamp(recorded_at, "recorded_at")
     clock = knowledge_clock_sql(connection)
     return connection.execute(
         """

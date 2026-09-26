@@ -221,6 +221,13 @@ def derive_results(plan: dict, ledger: dict, root: Path) -> dict:
 
 def validate_capture(root_value: str | Path) -> dict:
     root = Path(root_value).absolute()
+    expected = _validate_contents(root)
+    if _json(root / "manifest.json") != {"format": MANIFEST_FORMAT, "files": _inventory(root)}:
+        raise ValueError("discovery manifest inventory mismatch")
+    return expected
+
+
+def _validate_contents(root: Path) -> dict:
     plan_raw = _read(root / "plan.json")
     plan = _plan(plan_raw)
     if _sha(_read(root / "review.json")) != plan["review_record"]["sha256"]:
@@ -266,8 +273,7 @@ def validate_capture(root_value: str | Path) -> dict:
     expected = derive_results(plan, ledger, root)
     if _read(root / "results.json") != _pretty_bytes(expected):
         raise ValueError("discovery results do not replay")
-    files = _inventory(root)
-    if set(files) != expected_paths or _json(root / "manifest.json") != {"format": MANIFEST_FORMAT, "files": files}:
+    if set(_inventory(root)) != expected_paths:
         raise ValueError("discovery manifest inventory mismatch")
     return expected
 
@@ -340,6 +346,7 @@ def capture_indexes(plan_path: str | Path, output: str | Path, *, repository_roo
            "plan_sha256": _sha(raw), "code_sha256": _sha(_read(Path(__file__))),
            "parser_sha256": _sha(_read(Path(__file__).with_name("adapters") / "nist_discovery.py")),
            "claim_acceptance": False, "raw_redistribution": False}))
+    _validate_contents(root)  # A rejectable run stays an unmanifested, incomplete capture.
     _write(root / "manifest.json", _pretty_bytes({"format": MANIFEST_FORMAT, "files": _inventory(root)}))
     return validate_capture(root)
 

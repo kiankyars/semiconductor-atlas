@@ -5,6 +5,8 @@ from __future__ import annotations
 from collections import Counter
 import os
 from pathlib import Path
+import secrets
+import stat
 from urllib.parse import urlsplit
 
 from . import curated_observation_population as population, snapshot
@@ -332,23 +334,51 @@ def review(frozen_path: str | Path, labels_path: str | Path, *, reference_root: 
     return result
 
 
-def write_new(path: Path, data: dict, *, reference_root: Path, protected_directories: list[str]) -> dict:
+def _identities(paths) -> set:
+    statuses = []
+    for path in paths:
+        try:
+            statuses.append(os.stat(path, follow_symlinks=False))
+        except OSError:
+            pass
+    return {(status.st_dev, status.st_ino) for status in statuses if stat.S_ISDIR(status.st_mode)}
+
+
+def write_new(path: Path, data: dict, *, reference_root: Path, protected_directories: list[str],
+              stage_outside: bool = False) -> dict:
+    """Publish complete bytes by no-replace link from a staging file, never leaving a torn output name.
+
+    Journal writers pass stage_outside so a crash orphans the staging file in the parent directory
+    rather than inside a directory whose scanner rejects foreign entries.
+    """
     if ".." in path.parts:
         raise ValueError("artifact output cannot contain parent traversal")
     output, root = path.absolute(), reference_root.resolve()
     protected = [population._path(root, relative) for relative in protected_directories]
-    if any(output == directory or output.is_relative_to(directory) for directory in protected):
+    if (any(output == directory or output.is_relative_to(directory) for directory in protected)
+            or _identities(protected) & _identities(output.parents)):
         raise ValueError("artifact output cannot be inside retained source or polling directories")
     raw = _pretty_bytes(data)
     if len(raw) > population.MAX_BYTES:
         raise ValueError("artifact exceeds 20 MB")
     _, directory = _open_real_directory_fd(output.parent, "cross-vintage output parent", create=False)
     try:
-        descriptor = os.open(output.name, os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW, 0o644, dir_fd=directory)
-        with os.fdopen(descriptor, "wb") as stream:
-            stream.write(raw)
-            stream.flush()
-            os.fsync(stream.fileno())
+        parent = (os.open("..", os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=directory)
+                  if stage_outside else os.dup(directory))
+        try:
+            staging = ".atlas-staging-" + secrets.token_hex(16)
+            descriptor = os.open(staging, os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW, 0o644, dir_fd=parent)
+            try:
+                with os.fdopen(descriptor, "wb") as stream:
+                    stream.write(raw)
+                    stream.flush()
+                    os.fsync(stream.fileno())
+                os.link(staging, output.name, src_dir_fd=parent, dst_dir_fd=directory, follow_symlinks=False)
+                os.fsync(directory)
+            finally:
+                os.unlink(staging, dir_fd=parent)
+        finally:
+            os.close(parent)
     finally:
         os.close(directory)
     return {"output": str(output), "bytes": len(raw), "sha256": _hash(raw)}

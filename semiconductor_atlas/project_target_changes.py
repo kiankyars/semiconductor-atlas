@@ -180,7 +180,7 @@ def _validate_claim(item: object, *, name: str, review: dict, packet: dict) -> N
     if any(claim[key] is not None for key in ("valid_from", "valid_to", "confidence")):
         raise ValueError("effective time and calibrated confidence must remain unknown")
     if (claim["entity_id"] != project["entity_id"] or claim["predicate"] != PREDICATE
-            or claim["claim_kind"] != "source_statement" or claim["method"] != acceptance.RULE_VERSION
+            or claim["claim_kind"] != "source_statement" or claim["method"] != packet["provenance"]["acceptance"]["rule_version"]
             or claim["value_kind"] != "milestone" or claim["recorded_at"] != packet["accepted_at"]
             or claim["created_by_run_id"] != packet["comparison_id"]):
         raise ValueError("claim kind, source scope, predicate or actual admission differs")
@@ -263,7 +263,11 @@ def _validate_packet(packet: object, clock: str) -> dict:
     if review["format"] != acceptance.REVIEW_FORMAT or review["decision"] != acceptance.DECISION or review["boundaries"] != acceptance.BOUNDARIES:
         raise ValueError("packet lacks the separate explicit source-project claim review")
     _review_structure(review)
-    ids = acceptance._ids({"review": review, "review_sha256": review_bound["sha256"]})
+    run = _keys(provenance["acceptance"], {"run_id", "started_at", "completed_at", "rule_version", "code_sha256", "dependency_code_sha256",
+                                         "timestamp_basis", "replayed_at_build"}, "acceptance provenance")
+    if run["rule_version"] not in acceptance.RULE_VERSIONS:
+        raise ValueError("packet does not identify a separately replayed actual core admission")
+    ids = acceptance._ids({"review": review, "review_sha256": review_bound["sha256"]}, run["rule_version"])
     project = _keys(provenance["project"], {"entity_id", "kind", "stable_key", "display_name", "source_native_scope", "canonical_facility_assignment"}, "project")
     if row["subject"] != project:
         raise ValueError("proposal subject differs from bound source-native project")
@@ -276,9 +280,7 @@ def _validate_packet(packet: object, clock: str) -> dict:
         raise ValueError("source publisher or identity differs")
     if row["comparison_id"] != ids["run_id"] or row["series_id"] != _series_id(ids["entity_id"]):
         raise ValueError("comparison or source-native proposal series identity differs")
-    run = _keys(provenance["acceptance"], {"run_id", "started_at", "completed_at", "rule_version", "code_sha256", "dependency_code_sha256",
-                                         "timestamp_basis", "replayed_at_build"}, "acceptance provenance")
-    if (run["run_id"] != row["comparison_id"] or run["completed_at"] != row["accepted_at"] or run["rule_version"] != acceptance.RULE_VERSION
+    if (run["run_id"] != row["comparison_id"] or run["completed_at"] != row["accepted_at"]
             or run["timestamp_basis"] != "actual_database_admission" or run["replayed_at_build"] is not True):
         raise ValueError("packet does not identify a separately replayed actual core admission")
     _digest(run["code_sha256"])
@@ -318,6 +320,16 @@ def validate_packet(packet: object, *, clock: str) -> dict:
         raise ValueError("malformed portable project change packet") from error
 
 
+def _run_id(connection: sqlite3.Connection, review_sha: str) -> str:
+    runs = [repository.stable_id(rule, review_sha) for rule in acceptance.RULE_VERSIONS]
+    found = [row[0] for row in connection.execute(f"SELECT id FROM ingestion_runs WHERE id IN ({','.join('?' * len(runs))})", runs)]
+    if len(found) > 1:
+        raise ValueError("review is admitted under more than one rule version")
+    if not found:
+        raise ValueError("missing accepted core ingestion_runs row")
+    return found[0]
+
+
 def _build_snapshot_packet(connection: sqlite3.Connection, review_path: str | Path, *, reference_root: str | Path,
                            source_queue: str | Path) -> dict:
     if connection.in_transaction:
@@ -326,7 +338,7 @@ def _build_snapshot_packet(connection: sqlite3.Connection, review_path: str | Pa
     raw = _read(path)
     review = _strict_json(raw, "claim review")
     review_sha = _hash(raw)
-    run_id = repository.stable_id(acceptance.RULE_VERSION, review_sha)
+    run_id = _run_id(connection, review_sha)
     run = _row(connection, "ingestion_runs", run_id)
     params = _strict_json(run["parameters_json"].encode(), "accepted run parameters")
     if params.get("review_sha256") != review_sha or params.get("review") != review:
@@ -374,8 +386,7 @@ def build_packet(connection: sqlite3.Connection, review_path: str | Path, *, ref
     if connection.in_transaction:
         raise ValueError("project proposal builder requires no active database transaction")
     raw = _read(Path(review_path))
-    run_id = repository.stable_id(acceptance.RULE_VERSION, _hash(raw))
-    _row(connection, "ingestion_runs", run_id)
+    _run_id(connection, _hash(raw))
     snapshot = sqlite3.connect(":memory:")
     snapshot.row_factory = sqlite3.Row
     try:

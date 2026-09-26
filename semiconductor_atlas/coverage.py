@@ -9,6 +9,7 @@ from typing import Any, Sequence
 
 from .database import knowledge_clock_sql
 from .models import CapacityBasis
+from .repository import _normalized_timestamp
 from .service import (
     _accepted_document_runs_sql,
     claim_records,
@@ -348,6 +349,7 @@ def coverage_report(
     entities: Sequence[dict[str, Any]] | None = None,
     summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    _normalized_timestamp(recorded_at, "recorded_at")
     claim_view = (
         list(claims)
         if claims is not None

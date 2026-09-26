@@ -40,6 +40,8 @@ _UNPARSED_PREDICATE = re.compile(
     r"|\b(?:produces?|producing|manufactures?|(?:is|are|was|were) manufacturing)\b.{0,60}\b(?:chips?|wafers?)\b", re.I)
 _SCOPE_QUALIFICATION = re.compile(r"\b(?:(?<!not )only|excluding|except|instead|another|additional|fourth|phase (?:one|two|1|2))\b", re.I)
 _DATE_TEXT = r"(?:[1-9]|[12][0-9]|3[01]) (?:January|February|March|April|May|June|July|August|September|October|November|December) 20\d{2}"
+_SPACED_BLOCK = set("h1 h2 h3 h4 h5 h6 hgroup table caption thead tbody tfoot tr td th hr dl dt dd menu blockquote figure figcaption pre address "
+                    "center header footer main nav aside search details summary dialog fieldset legend form".split())
 
 
 def _class(node, value):
@@ -84,25 +86,39 @@ def _assertion(document, url, subject, predicate, formulation, node, literal, co
     }
 
 
-def _residual(node, substitutions):
+def _unrendered(node):
+    # Narrower than node.hidden: aria-hidden and inert text is drawn and closed disclosures
+    # are read statically, so they cannot supply assertions but stay in scan and context.
+    style = re.sub(r"\s+", "", node.attrs.get("style", "") or "").casefold()
+    return (node.tag in {"script", "style", "template", "noscript"} or "hidden" in node.attrs or "popover" in node.attrs
+            or (node.tag == "dialog" and "open" not in node.attrs) or "display:none" in style or "visibility:hidden" in style)
+
+
+def _residual(node, substitutions, dropped=_unrendered, spaced=_SPACED_BLOCK):
     if isinstance(node, str):
         return node
-    if node.hidden:
+    if dropped(node):
         return ""
     if id(node) in substitutions:
-        value = node.text()
+        value = " ".join(_residual(node, {}, dropped, spaced).split()) if spaced else node.text()
         for literal, replacement in substitutions[id(node)]:
             if value.count(literal) != 1:
                 raise _Abstain("ambiguous_residual_substitution")
             value = value.replace(literal, replacement, 1)
         return "\n" + value + "\n"
-    value = "".join(_residual(child, substitutions) for child in node.children)
-    return "\n" + value + "\n" if node.tag in {"p", "div", "section", "article", "li", "ol", "ul", "br"} else value
+    value = "".join(_residual(child, substitutions, dropped, spaced) for child in node.children)
+    if node.tag in {"p", "div", "section", "article", "li", "ol", "ul", "br"}:
+        return "\n" + value + "\n"
+    # Spaces, not new lines: glued words split without narrowing line co-occurrence scans.
+    return " " + value + " " if node.tag in spaced else value
 
 
 def _coverage(document, containers, assertions, substitutions, exclusions, nominal_context=()):
     texts = [_residual(node, substitutions) for node in containers]
-    for value in texts:
+    # Drawn hidden text can glue onto visible words and block spaces can stretch bounded
+    # phrases, so the scan also reads without them; no spaced set reproduces v1's residual.
+    for value in texts + [_residual(node, substitutions, lambda item: item.hidden, spaced)
+                          for spaced in (_SPACED_BLOCK, ()) for node in containers]:
         for line in value.splitlines():
             line = " ".join(line.split())
             if not line:

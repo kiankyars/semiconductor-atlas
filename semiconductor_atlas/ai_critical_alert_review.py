@@ -414,7 +414,7 @@ def _fold(events: list[dict], *, as_of: str | None = None, full: bool = False) -
             alert["decisions"].append({**deepcopy(payload), "recorded_at": event["recorded_at"], "event_id": event["event_id"]})
         else:
             raise ValueError("unsupported alert event kind")
-    rows = sorted(alerts.values(), key=lambda item: (item["first_recorded_at"], item["id"]))
+    rows = sorted(alerts.values(), key=lambda item: (_instant(item["first_recorded_at"]), item["id"]))
     return {"format": "semiconductor-atlas-ai-critical-alert-review-report-v1", "rule_version": RULE_VERSION,
             "as_of": as_of, "event_count": len(selected), "packet_count": len(packets),
             "head_event_id": selected[-1]["event_id"] if selected else None,

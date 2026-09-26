@@ -202,6 +202,25 @@ class ProjectTargetChangeTests(unittest.TestCase):
             self.assertEqual([], packet["proposals"])
             self.assertEqual(packet, changes.validate_packet(packet, clock=other.now()))
 
+    def test_legacy_rule_admission_builds_and_validates_under_its_recorded_rule(self):
+        other = test_project_target_review.ProjectTargetReviewTests(); other.setUp()
+        self.addCleanup(other.doCleanups)
+        legacy = other.accept_path(other.review_path, rule_version=acceptance.LEGACY_RULE_VERSION)
+        with patch.object(changes, "_now", side_effect=other.now):
+            packet = changes.build_packet(other.connection, other.review_path, reference_root=other.root, source_queue=other.queue)
+            self.assertEqual((legacy["run_id"], acceptance.LEGACY_RULE_VERSION), (packet["comparison_id"], packet["provenance"]["acceptance"]["rule_version"]))
+            self.assertEqual({acceptance.LEGACY_RULE_VERSION}, {claim["method"] for claim in packet["claims"].values()})
+            self.assertEqual(packet, changes.validate_packet(packet, clock=other.now()))
+            for rule, methods in ((acceptance.RULE_VERSION, acceptance.RULE_VERSION), ("reviewed-source-native-project-target-v0", "reviewed-source-native-project-target-v0"),
+                                  (acceptance.LEGACY_RULE_VERSION, acceptance.RULE_VERSION)):
+                forged = copy.deepcopy(packet)
+                forged["provenance"]["acceptance"]["rule_version"] = rule
+                for claim in forged["claims"].values():
+                    claim["method"] = methods
+                self.resign(forged)
+                with self.assertRaises(ValueError):
+                    changes.validate_packet(forged, clock=other.now())
+
     def test_packet_omits_future_canonical_scope_and_raw_publisher_html(self):
         packet = self.build()
         self.assertIsNone(packet["subject"]["canonical_facility_assignment"])
@@ -264,3 +283,18 @@ class ProjectTargetChangeTests(unittest.TestCase):
         self.assertNotEqual(first["comparison_id"], second["comparison_id"])
         self.assertEqual("disjoint_later", second["change"]["classification"])
         self.assertEqual(first["claims"]["after"]["document"]["id"], second["claims"]["before"]["document"]["id"])
+
+    def test_current_rule_follow_up_of_legacy_admission_keeps_both_packets_valid(self):
+        other = test_project_target_review.ProjectTargetReviewTests(); other.setUp()
+        self.addCleanup(other.doCleanups)
+        first_path = other.review_path
+        other.accept_path(first_path, rule_version=acceptance.LEGACY_RULE_VERSION)
+        other.second_review(); other.accept()
+        with patch.object(changes, "_now", side_effect=other.now):
+            first, second = (changes.build_packet(other.connection, path, reference_root=other.root, source_queue=other.queue)
+                             for path in (first_path, other.review_path))
+            self.assertEqual([acceptance.LEGACY_RULE_VERSION, acceptance.RULE_VERSION], [packet["provenance"]["acceptance"]["rule_version"] for packet in (first, second)])
+            self.assertEqual((first["series_id"], first["subject"]), (second["series_id"], second["subject"]))
+            self.assertNotEqual(first["provenance"]["source"]["id"], second["provenance"]["source"]["id"])
+            for packet in (first, second):
+                self.assertEqual(packet, changes.validate_packet(packet, clock=other.now()))

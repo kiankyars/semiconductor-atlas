@@ -127,7 +127,7 @@ class _Document(HTMLParser):
         node = self.stack.pop()
         start = self.position()
         finish = self.raw.find(b">", start)
-        if finish == -1 or re.fullmatch(rb"</" + tag.encode() + rb"\s*>", self.raw[start:finish + 1], re.I) is None:
+        if finish == -1 or re.fullmatch(rb"</" + re.escape(tag.encode()) + rb"\s*>", self.raw[start:finish + 1], re.I) is None:
             raise _Abstain("malformed_html_end_tag")
         node.end = finish + 1
 
