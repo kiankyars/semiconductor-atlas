@@ -238,6 +238,7 @@ class SourceAssertionDetectorTests(unittest.TestCase):
         for url, builder in self.routes():
             for extra in ("<dl><dt>Completion</dt><dd>2027</dd></dl>", "<blockquote>Production</blockquote><blockquote>delayed</blockquote>",
                           "<header>Production</header><footer>cancelled</footer>", "<figure><figcaption>Opening</figcaption></figure><address>2032</address>",
+                          "<menu>Production</menu><menu>delayed</menu>", "<center>Opening</center><search>2027</search>",
                           "<dl><dt>Another</dt> <dd>plant</dd></dl>"):
                 with self.subTest(url=url, extra=extra):
                     self.assert_abstains(url, builder(extra=extra))
@@ -245,6 +246,12 @@ class SourceAssertionDetectorTests(unittest.TestCase):
                        b"<table><tr><td>Another</td> <td>plant</td></tr></table>"):
             with self.subTest(markup=markup):
                 self.assert_abstains(detector.MICRON_MTI, micron_html().replace(b"</main>", markup + b"</main>"))
+
+    def test_block_spacing_cannot_stretch_bounded_predicates_out_of_their_window(self):
+        extra = "<p>Micron produces " + "x" * 50 + "<dt>ab</dt>" * 4 + " chips</p>"
+        for url, builder in self.routes():
+            with self.subTest(url=url):
+                self.assert_abstains(url, builder(extra=extra))
 
     def test_regex_metacharacters_in_unrelated_tag_names_do_not_escape_extraction(self):
         for url, builder in self.routes():
