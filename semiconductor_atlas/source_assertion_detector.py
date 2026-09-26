@@ -94,19 +94,19 @@ def _unrendered(node):
             or (node.tag == "dialog" and "open" not in node.attrs) or "display:none" in style or "visibility:hidden" in style)
 
 
-def _residual(node, substitutions):
+def _residual(node, substitutions, dropped=_unrendered):
     if isinstance(node, str):
         return node
-    if _unrendered(node):
+    if dropped(node):
         return ""
     if id(node) in substitutions:
-        value = " ".join(_residual(node, {}).split())
+        value = " ".join(_residual(node, {}, dropped).split())
         for literal, replacement in substitutions[id(node)]:
             if value.count(literal) != 1:
                 raise _Abstain("ambiguous_residual_substitution")
             value = value.replace(literal, replacement, 1)
         return "\n" + value + "\n"
-    value = "".join(_residual(child, substitutions) for child in node.children)
+    value = "".join(_residual(child, substitutions, dropped) for child in node.children)
     if node.tag in {"p", "div", "section", "article", "li", "ol", "ul", "br"}:
         return "\n" + value + "\n"
     # Spaces, not new lines: glued words split without narrowing line co-occurrence scans.
@@ -115,7 +115,8 @@ def _residual(node, substitutions):
 
 def _coverage(document, containers, assertions, substitutions, exclusions, nominal_context=()):
     texts = [_residual(node, substitutions) for node in containers]
-    for value in texts:
+    # Drawn hidden text can glue onto visible words, so the scan also reads without it.
+    for value in texts + [_residual(node, substitutions, lambda item: item.hidden) for node in containers]:
         for line in value.splitlines():
             line = " ".join(line.split())
             if not line:

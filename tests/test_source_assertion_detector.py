@@ -221,6 +221,12 @@ class SourceAssertionDetectorTests(unittest.TestCase):
             with self.subTest(url=url):
                 self.assert_abstains(url, raw.replace(anchor, anchor[:-4] + b'<span aria-hidden="true"> The project has been cancelled.</span></p>'))
 
+    def test_drawn_hidden_text_cannot_glue_onto_visible_hazard_words(self):
+        for url, builder in self.routes():
+            for extra in ('<p><span aria-hidden="true">schedule</span>Delayed</p>', "<p>Opening<i inert>icon</i></p>"):
+                with self.subTest(url=url, extra=extra):
+                    self.assert_abstains(url, builder(extra=extra))
+
     def test_unrendered_hidden_text_is_not_scanned_as_bound_context(self):
         for url, builder in self.routes():
             for extra in ("<p hidden>The project has been cancelled.</p>", '<p style="display: none">The project has been cancelled.</p>',
