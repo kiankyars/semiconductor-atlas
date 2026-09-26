@@ -1,0 +1,19 @@
+{
+  "format": "semiconductor-atlas-policy-normalization-review-v1",
+  "reviewed_at": "2026-09-07T02:50:12Z",
+  "reviewer": "local:curated-acquisition-policy-review",
+  "decision": "approve_html_policy_v2_for_exact_nist_policy_url",
+  "prior_review_path": "review_plans/2026-09-07-amkor-peoria-successor.json",
+  "prior_review_sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160",
+  "policy_url": "https://www.nist.gov/copyrights-disclaimers",
+  "prior_body_sha256": "9f613a7ca33d0a33da4abeb0588f02703a1306ca8d432b09abc3c72d12edc0a0",
+  "current_body_sha256": "c0981c8734c13c975391d7754a3bb0999d03d006bea8ef618d52f71cef580885",
+  "current_body_path": "source_snapshots/2026-09-07-amkor-repeatable-capture-01/responses/nist-copyright-current.body",
+  "comparison": "Visible policy text is identical. The sole hyperlink difference is the rotating XOR key in the publicly rendered webmaster contact link. Decoding both byte sequences produces identical destination bytes. Every other href is identical.",
+  "normalization": "html_policy_v2 preserves html_policy_v1 visible text and all hrefs, except an exact /cdn-cgi/l/email-protection#HEX link is represented by a SHA-256 of its decoded destination bytes. Actual destination changes remain material. Malformed or different link shapes remain literal.",
+  "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46",
+  "rights_change": false,
+  "raw_redistribution": false,
+  "scope_expansion": false,
+  "prior_blocked_run_preserved": "source_snapshots/2026-09-07-amkor-repeatable-capture-01"
+}

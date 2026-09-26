@@ -1,0 +1,57 @@
+{
+  "format": "semiconductor-atlas-curated-coverage-catalog-v2",
+  "catalog_id": "ai-critical-seven-company-coverage-v2",
+  "recorded_at": "2026-09-07T04:39:18Z",
+  "baseline": {
+    "path": "baselines/ai_critical_manufacturing_v1.json",
+    "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958"
+  },
+  "freshness_seconds": 604800,
+  "notes": "Three facility scopes have exact-document monitoring: TSMC Phoenix and Samsung Taylor through broader NIST award pages, plus the unchanged three-document Amkor plan. Source page scope must remain visible; only reviewed unit-specific statements can support facility claims. Four other cohort facilities remain explicitly unmonitored. Fresh response age is not current manufacturing-state evidence, publisher-wide discovery, or uninterrupted operation. Historical v1 catalog and plans remain intact.",
+  "facilities": [
+    {
+      "facility_key": "tsmc:fab21-arizona",
+      "plan": {
+        "path": "acquisition_plans/tsmc_arizona_nist_v1.json",
+        "sha256": "9fb2f1b7fff36d30a00f22e7bc7642f5a95abfdcbf00732316acdb255c8ce63b"
+      },
+      "unmonitored_reason": null
+    },
+    {
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "plan": {
+        "path": "acquisition_plans/samsung_taylor_nist_v1.json",
+        "sha256": "3a0e0f686a48c3e399cd71edf2ce85054b855d8bdf795a96f80781b20511a868"
+      },
+      "unmonitored_reason": null
+    },
+    {
+      "facility_key": "intel:fab52-chandler",
+      "plan": null,
+      "unmonitored_reason": "NIST Chandler page describes a multi-fab program, not an explicit Fab 52 unit. Keep unconfigured until a reviewed unit-identifying source is available."
+    },
+    {
+      "facility_key": "micron:singapore-hbm-packaging-project",
+      "plan": null,
+      "unmonitored_reason": "NIST U.S. awards are not evidence for the Singapore HBM packaging project."
+    },
+    {
+      "facility_key": "sk-hynix:m15x-cheongju",
+      "plan": null,
+      "unmonitored_reason": "NIST West Lafayette award is not evidence for M15X in Cheongju. Restricted SK hynix newsroom collection remains disabled."
+    },
+    {
+      "facility_key": "amkor:peoria-advanced-packaging-project",
+      "plan": {
+        "path": "acquisition_plans/amkor_peoria_v2.json",
+        "sha256": "15811641832d26e746a945d8fa6f728f7057cda5b5f70780693370df3c4bab7a"
+      },
+      "unmonitored_reason": null
+    },
+    {
+      "facility_key": "ase:kaohsiung-site",
+      "plan": null,
+      "unmonitored_reason": "No facility-safe NIST source for the Kaohsiung campus has been identified; no new source permission is inferred."
+    }
+  ]
+}

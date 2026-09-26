@@ -1,0 +1,71 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v1",
+  "plan_id": "tsmc-arizona-nist-exact-document-v1",
+  "review_scope_id": "nist-cohort-expansion-2026-09-07",
+  "checked_facility_key": "tsmc:fab21-arizona",
+  "reviewed_at": "2026-09-07T04:38:20Z",
+  "expires_at": "2026-10-07T04:38:20Z",
+  "user_agent": "SemiconductorAtlas/0.1 (+https://github.com/kiankyars/semiconductor-atlas)",
+  "minimum_interval_seconds": 1,
+  "timeout_seconds": 30,
+  "max_response_bytes": 2000000,
+  "review_record": {
+    "path": "review_plans/2026-09-07-nist-source-expansion.json",
+    "sha256": "ceb77c4872e5f4786afa2d9d5b241513b6da5e14682678bfd852ce7c2b7b316f"
+  },
+  "notes": "Only the exact NIST URL below is approved after both policy checks pass. Whole-page visible-text changes enter source-version review, not facility-event attribution or accepted claims. Whole three-fab Phoenix award page; only explicitly first-fab/Fab 1 statements may be candidates relevant to the baseline Fab 21 scope. Fabs 2 and 3, cluster totals, and forward-looking schedules are not Fab 21 current operating evidence. The public page retains an earlier first-fab production target. Retrieving that text today does not update its event date or corroborate later HVM. Whole-page text changes require location and unit reconciliation before any manufacturing claim changes. No crawl, redirect following, restricted publisher collection, linked-resource acquisition, raw redistribution or automatic permission renewal. This expiry is an internal review deadline, not a publisher permission period.",
+  "policies": [
+    {
+      "company": "TSMC",
+      "country_code": "US",
+      "source_family": "nist-chips-award",
+      "id": "nist-robots",
+      "url": "https://www.nist.gov/robots.txt",
+      "purpose": "access_policy",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd",
+      "scope": "Exact policy URL for the listed NIST document request only; no blanket automation authorization"
+    },
+    {
+      "company": "TSMC",
+      "country_code": "US",
+      "source_family": "nist-chips-award",
+      "id": "nist-copyright-current",
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "purpose": "rights_policy",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v2",
+      "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46",
+      "scope": "Exact policy URL for the listed NIST document request only; no blanket automation authorization"
+    }
+  ],
+  "documents": [
+    {
+      "company": "TSMC",
+      "country_code": "US",
+      "source_family": "nist-chips-award",
+      "id": "nist-tsmc-arizona",
+      "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+      "purpose": "source_document",
+      "scope": "Whole three-fab Phoenix award page; only explicitly first-fab/Fab 1 statements may be candidates relevant to the baseline Fab 21 scope. Fabs 2 and 3, cluster totals, and forward-looking schedules are not Fab 21 current operating evidence.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright-current"
+      ],
+      "required_text": [
+        "TSMC Arizona",
+        "Phoenix",
+        "first fab"
+      ]
+    }
+  ],
+  "decision": "approved_exact_urls"
+}

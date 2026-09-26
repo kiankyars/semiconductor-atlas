@@ -1,0 +1,69 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "m15x-moel-acquisition-deferred-2026-09-07",
+  "review_completed_at": "2026-09-07T14:53:41Z",
+  "facility_key": "sk-hynix:m15x-cheongju",
+  "decision": "retention_rights_unverified",
+  "collector_enabled": false,
+  "claim_acceptance": false,
+  "source_lead": {
+    "url": "https://www.moel.go.kr/local/cheongju/news/reportexplan/view.do?bbs_seq=20250301293",
+    "publisher": "Ministry of Employment and Labor, Cheongju office",
+    "publication_date": "2025-03-19",
+    "event_date": "2025-03-19",
+    "review_method": "Primary-source web reading plus one identified, bounded direct GET for transient viewing and license-reference inspection; publisher document body not retained",
+    "scope": "Government report of a construction-safety campaign and meeting at the explicitly named SK hynix M15X project site in Cheongju. This historical construction-site observation predates the baseline's October 2025 equipment-installation evidence. It is not a new ramp transition, current-state reaffirmation, completion forecast, capacity measurement or qualification observation.",
+    "source_document_archived": false,
+    "source_document_exact_byte_replay_available": false,
+    "document_specific_kogl_mark_verified": false,
+    "prior_consultation_obtained": false,
+    "attachments_acquired": false
+  },
+  "access_check": {
+    "url": "https://www.moel.go.kr/robots.txt",
+    "attempt_path": "source_snapshots/2026-09-07-m15x-moel-policy-review-v1/moel-robots.attempt.json",
+    "response_path": "source_snapshots/2026-09-07-m15x-moel-policy-review-v1/responses/moel-robots.body",
+    "finished_at": "2026-09-07T14:50:09.959955Z",
+    "http_status": 200,
+    "content_type": "text/plain;charset=UTF-8",
+    "bytes": 452,
+    "sha256": "198f8a75772dd8a3e06278bbe31bd9b0174f92545aaa4d0a861afb7b40c3b08e",
+    "assessment": "The actual wildcard directives do not exclude the selected report or copyright-policy path. Commented Disallow lines are not active rules. This successful robots check supersedes only the earlier web-tool uncertainty for this origin; it does not establish content-retention rights. No robots-excluded endpoint, redirect, cookie session or user-agent workaround was used."
+  },
+  "rights_review": {
+    "url": "https://www.moel.go.kr/local/cheongju/site/copyright/copyrightList.do",
+    "attempt_path": "source_snapshots/2026-09-07-m15x-moel-policy-review-v1/moel-copyright.attempt.json",
+    "response_path": "source_snapshots/2026-09-07-m15x-moel-policy-review-v1/responses/moel-copyright.body",
+    "finished_at": "2026-09-07T14:53:18.921051Z",
+    "http_status": 200,
+    "bytes": 150479,
+    "sha256": "e6ef3ee987c61094f5803182552936b075f588ceb63d376738ed23fff9d640df",
+    "assessment": "Read all three policy clauses. Free reuse of ministry-owned works requires checking the document's KOGL Type 1 marking and giving attribution. Unmarked materials require prior consultation; works not wholly owned by the ministry have additional restrictions beyond simple viewing. A document-specific mark has not been verified for this report. Government authorship, successful transport and robots compatibility do not close that gap. Direct document links must be accompanied by this copyright-policy link.",
+    "rights_clearance": "unverified_do_not_enable_durable_document_acquisition",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "other_leads_not_acquired": [
+    {
+      "url": "https://english.motie.go.kr/eng/article/EATCLdfa319ada/2184/view?bbsCdN=2&pageIndex=1",
+      "publication_date": "2024-12-30",
+      "status": "search_lead_direct_open_failed",
+      "assessment": "Government manufacturing-plan text identifies M15X; prospective November wording must not acquire an inferred year. No exact document or rights approval retained."
+    },
+    {
+      "url": "https://www.cheongju.go.kr/www/selectBbsNttView.do?bbsNo=40&integrDeptCode=&key=279&nttNo=257491",
+      "publication_date": "2026-04-15",
+      "status": "research_open_redirected_to_block_page",
+      "assessment": "The detailed permitting example concerns P&T7, not M15X. No workaround or collector request followed the research access block."
+    },
+    {
+      "url": "https://www.investkorea.org/cb-en/bbs/i-1310/detail.do?ntt_sn=491442",
+      "status": "syndicated_journalism_not_independent_government_evidence",
+      "assessment": "Government-hosted Yonhap reporting retains third-party provenance and rights. It is not a substitute permission route for restricted issuer content or an independently authored government confirmation."
+    }
+  ],
+  "next_action": "Verify applicable document-specific retention/reuse clearance or review a genuinely separate primary disclosure source. Preserve existing SK hynix newsroom restrictions. Do not collect this report or its attachments under a recurring plan until that gate passes.",
+  "baseline_modified": false,
+  "registered_study_modified": false,
+  "delivery_eligible": false
+}

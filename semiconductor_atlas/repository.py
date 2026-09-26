@@ -11,6 +11,8 @@ from contextlib import contextmanager
 from datetime import UTC, datetime
 from typing import Any, Iterator, Mapping, Sequence
 
+from .database import knowledge_clock_sql
+
 from .models import (
     CapabilityValue,
     CapacityBasis,
@@ -882,7 +884,7 @@ def _value_payload(value: ClaimValue) -> dict[str, Any]:
             "attributes": value.attributes,
         }
     if isinstance(value, MilestoneValue):
-        return {
+        payload = {
             "kind": value.kind.value,
             "milestone_type": value.milestone_type,
             "status": value.status.value,
@@ -890,6 +892,9 @@ def _value_payload(value: ClaimValue) -> dict[str, Any]:
             "date_base": value.date_base,
             "date_high": value.date_high,
         }
+        if value.date_precision is not None:
+            payload.update(date_precision=value.date_precision, date_literal=value.date_literal)
+        return payload
     if isinstance(value, CapabilityValue):
         return {
             "kind": value.kind.value,
@@ -1020,11 +1025,13 @@ def _insert_typed_value(
             ),
         )
     elif isinstance(value, MilestoneValue):
+        extra_columns = ", date_precision, date_literal" if value.date_precision is not None else ""
+        extra_parameters = ", ?, ?" if extra_columns else ""
         connection.execute(
-            """
+            f"""
             INSERT INTO milestone_values(
-                claim_version_id, milestone_type, status, date_low, date_base, date_high
-            ) VALUES (?, ?, ?, ?, ?, ?)
+                claim_version_id, milestone_type, status, date_low, date_base, date_high{extra_columns}
+            ) VALUES (?, ?, ?, ?, ?, ?{extra_parameters})
             """,
             (
                 claim_version_id,
@@ -1033,7 +1040,7 @@ def _insert_typed_value(
                 value.date_low,
                 value.date_base,
                 value.date_high,
-            ),
+            ) + ((value.date_precision, value.date_literal) if extra_columns else ()),
         )
     elif isinstance(value, CapabilityValue):
         text_value = value.value if isinstance(value.value, str) else None
@@ -1255,7 +1262,7 @@ def insert_claim(
             "recorded_at": version.recorded_at,
             "claim_kind": version.claim_kind.value,
             "method": version.method,
-            "confidence": float(version.confidence),
+            "confidence": float(version.confidence) if version.confidence is not None else None,
             "created_by_run_id": version.created_by_run_id,
             "notes": version.notes,
         }
@@ -1315,7 +1322,7 @@ def insert_claim(
             """
             SELECT id FROM claim_versions
             WHERE series_id = ?
-              AND valid_from = ?
+              AND valid_from IS ?
               AND superseded_at IS NULL
               AND julianday(recorded_at) >= julianday(?)
             LIMIT 1
@@ -1331,7 +1338,7 @@ def insert_claim(
             UPDATE claim_versions
             SET superseded_at = ?
             WHERE series_id = ?
-              AND valid_from = ?
+              AND valid_from IS ?
               AND superseded_at IS NULL
               AND julianday(recorded_at) < julianday(?)
             """,
@@ -1354,7 +1361,7 @@ def insert_claim(
                 version.recorded_at,
                 version.claim_kind.value,
                 version.method,
-                float(version.confidence),
+                float(version.confidence) if version.confidence is not None else None,
                 version.created_by_run_id,
                 version.notes,
             ),
@@ -1407,6 +1414,7 @@ def current_claims(
     subject_entity_id: str | None = None,
     predicate: str | None = None,
 ) -> list[sqlite3.Row]:
+    clock = knowledge_clock_sql(connection)
     return connection.execute(
         """
         WITH eligible AS (
@@ -1445,7 +1453,7 @@ def current_claims(
         FROM eligible
         WHERE temporal_rank = 1
         ORDER BY subject_entity_id, predicate, series_id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (
             as_of,
             as_of,
@@ -1457,6 +1465,37 @@ def current_claims(
             predicate,
             recorded_at,
         ),
+    ).fetchall()
+
+
+def known_source_claims(
+    connection: sqlite3.Connection,
+    *,
+    recorded_at: str,
+    subject_entity_id: str | None = None,
+) -> list[sqlite3.Row]:
+    """Visible source statements by knowledge time, never a physical-world state view."""
+    recorded_at = _normalized_timestamp(recorded_at, "recorded_at")
+    clock = knowledge_clock_sql(connection)
+    return connection.execute(
+        """
+        SELECT versions.id, versions.series_id, versions.value_kind, versions.value_sha256,
+               versions.valid_from, versions.valid_to, versions.recorded_at,
+               CASE WHEN julianday(versions.superseded_at) <= julianday(?)
+                    THEN versions.superseded_at ELSE NULL END AS superseded_at,
+               versions.claim_kind, versions.method, versions.confidence,
+               versions.created_by_run_id, versions.notes, series.subject_entity_id,
+               series.stable_key AS series_stable_key, series.predicate
+        FROM claim_versions AS versions
+        JOIN claim_series AS series ON series.id = versions.series_id
+        WHERE versions.claim_kind = 'source_statement'
+          AND julianday(versions.recorded_at) <= julianday(?)
+          AND (versions.superseded_at IS NULL OR julianday(?) < julianday(versions.superseded_at))
+          AND (? IS NULL OR series.subject_entity_id = ?)
+        ORDER BY series.subject_entity_id, series.predicate, series.id,
+                 versions.valid_from, versions.recorded_at, versions.id
+        """.replace("julianday(", f"{clock}("),
+        (recorded_at, recorded_at, recorded_at, subject_entity_id, subject_entity_id),
     ).fetchall()
 
 
@@ -1507,6 +1546,8 @@ def _stored_claim_value(
             row["date_low"],
             row["date_base"],
             row["date_high"],
+            row["date_precision"] if "date_precision" in row.keys() else None,
+            row["date_literal"] if "date_literal" in row.keys() else None,
         )
     if value_kind == "capability":
         capability = (
@@ -1704,16 +1745,20 @@ def validate_database(connection: sqlite3.Connection) -> list[str]:
         )
 
     for row in connection.execute(
-        "SELECT id, valid_from, valid_to, recorded_at, superseded_at FROM claim_versions"
+        "SELECT id, valid_from, valid_to, recorded_at, superseded_at, claim_kind FROM claim_versions"
     ):
         try:
-            datetime.fromisoformat(row["valid_from"])
+            if row["valid_from"] is None:
+                if row["claim_kind"] != "source_statement" or row["valid_to"] is not None:
+                    raise ValueError("unknown effective time requires an unbounded source statement")
+            else:
+                datetime.fromisoformat(row["valid_from"])
             if row["valid_to"]:
                 datetime.fromisoformat(row["valid_to"])
             datetime.fromisoformat(row["recorded_at"].replace("Z", "+00:00"))
             if row["superseded_at"]:
                 datetime.fromisoformat(row["superseded_at"].replace("Z", "+00:00"))
-        except ValueError:
+        except (TypeError, ValueError):
             errors.append(f"claim {row['id']} contains an invalid temporal value")
 
     for row in connection.execute(

@@ -1,0 +1,1634 @@
+{
+  "candidate_count": 108,
+  "candidate_queue_sha256": "a5a0738edcbed94f6eb7b75e992e9342a5d1e3b12f04b9789e3191c7bbfaf58d",
+  "decisions": [
+    {
+      "candidate_id": "01e2e603-7934-540a-988b-746042959257",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:55:45Z",
+          "excerpt": "Design, development, manufacture, assembly and testing of Tantalum and Niobium Oxide electrolytic capacitors",
+          "title": "KYOCERA AVX Lanškroun ISO 9001 certificate FS 735333, effective July 22 2024",
+          "url": "https://www.kyocera-avx.com/docs/certificates/Europe/Czech_Republic/ISO_9001_Lanskroun.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The certificate binds an organization-wide certified capacitor process to Dvorakova 328. Tantalum/niobium-oxide electrolytic capacitors are affirmative passive products, not a semiconductor-device process merely because materials overlap. Verify certificate scope/address visually before relying on its layout; retain the exclusion only for the stated historical passive-process interpretation. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "02304548-0a5e-5b16-9d36-12db770621dd",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The GPV Chemitalic record at Egebjergvej 128, Horsens remains a plausible historical PCB-manufacturing lead, but the relevant primary qualification-list body could not be opened. Neither its source-native PCB division name nor secondary reports about other GPV sites is sufficient for a definitive exclusion. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "04f94cca-3f9a-548f-8ee3-b576c83cb81f",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:00:39Z",
+          "excerpt": "Infrared Detectors Southampton UK [...] Fully integrated capability from material growth to volume manufacture",
+          "title": "Leonardo Latest Detector Developments in IR, March 19 2024, PDF page 2: Southampton manufacturing capability",
+          "url": "https://ceoi.ac.uk/wp-content/uploads/2024/04/03-Latest-Developments-in-IR-CEOI-Presentation-2024-ALD_CompPart1.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T17:00:39Z",
+          "excerpt": "Leonardo UK Ltd, First Avenue, Millbrook Industrial Estate, Southampton, England SO15 0LG [...] grown by Metal Organic Vapour Phase Epitaxy (MOVPE)",
+          "title": "Leonardo-authored SPIE 2022 paper, PDF page 2: First Avenue address and MOVPE MCT detectors",
+          "url": "https://www.leonardo.us/hubfs/SPIE-DCS%202022%20-%20Condor%20HD.pdf?hsLang=en"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Southampton semiconductor-detector manufacture is explicit, but a paper author's First Avenue affiliation does not by itself locate the manufacturing process at that street address. The slides and paper remain text-only, and later Leonardo UK naming is not an identity bridge to every historical Leonardo MW establishment. Needed before admission: Obtain a facility-specific primary statement tying material growth or detector fabrication to First Avenue, or visually verify a source section that directly makes that connection. Preserve the 2019/2022/2024 clock distinction."
+    },
+    {
+      "candidate_id": "05dc8613-9710-55d7-9d1e-dc184ad9b97f",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:03:09Z",
+          "excerpt": "front-end and back-end production. … Wernerwerkstraße 2, 93049 Regensburg",
+          "title": "Regensburg | Infineon Technologies",
+          "url": "https://www.infineon.com/regional/regensburg"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only the reported campus's semiconductor-facility scope. Infineon's dedicated Regensburg page, site description and production sections, describes chip manufacturing; its Contact us section gives Wernerwerkstrasse 2, 93049 Regensburg. The source's abbreviated street is preserved, not rewritten. Individual buildings, lines, capacity and current operating state remain unassigned."
+    },
+    {
+      "candidate_id": "087e7985-7b45-5d50-a232-fdf2b4609d93",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:56:41Z",
+          "excerpt": "Sales company: Weidmüller Interface GmbH & Co. KG Klingenbergstraße 16 32758 Detmold",
+          "title": "Who we are - Weidmüller company and locations",
+          "url": "https://www.weidmueller.com/int/company/our_company/who_we_are/index.jsp"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Weidmüller's official locations account identifies Weidmüller Interface GmbH & Co. KG at Klingenbergstraße 16, Detmold, but labels that entry a sales company. It does not establish the historical manufacturing process associated with this EEA facility. A modern sales-address entry neither proves semiconductor manufacture nor proves the historical facility was out of scope. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "109b5a1a-bccc-5c83-8509-6415d050e0b7",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The bounded exact-address search did not yield a verified primary manufacturing-process description for the separate Blatná ESTA B1 record at Riegrova 1231. A certificate-registry opening failed. A municipal water-utility sewer regulation opened partially, but the relevant industrial/address entry could not be verified before subsequent access timed out. No scope is borrowed from Blatná B2, Dolní Rychnov or the Vishay group. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "11f6ae38-336d-560a-9794-01fc778c4c49",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:10Z",
+          "excerpt": "With customised high-end printed circuit boards (PCBs) for demanding applications",
+          "title": "Varioprint PCB products and Heiden address",
+          "url": "https://varioprint.ch/en"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The existing page establishes PCB manufacture, but a specific primary brochure search extraction additionally advertises embedded components and interposer/glass substrates. That is a material unresolved boundary under broad semiconductor substrate/assembly scope. Obtain readable issuer process documentation and a local allocation of interposer/glass-substrate and embedded-component work; distinguish passive embedding, bare die, and ordinary board products. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "13e642ba-72c1-5c96-b640-3bce6b9867a0",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:20Z",
+          "excerpt": "Seit 1979 fertigen wir Leiterplatten für anspruchsvolle industrielle Anwendungen vom ersten Muster bis zur Serie.",
+          "title": "Schaltungsdruck Storz | Lösungspartner für Leiterplatten",
+          "url": "https://www.storz-pcb.de/"
+        },
+        {
+          "accessed_at": "2026-09-07T17:02:20Z",
+          "excerpt": "Schaltungsdruck Storz GmbH + Co. KG Carl-Benz-Strasse 1 79341 Kenzingen",
+          "title": "Kontakt | Schaltungsdruck Storz",
+          "url": "https://www.storz-pcb.de/kontakt"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The firm's own Kenzingen production account and exact Carl-Benz-Strasse 1 contact positively identify prototype-to-series PCB manufacture. Retain source-native spelling/address and explicit ordinary-PCB operational interpretation; reopen if a local semiconductor substrate or bare-die process is evidenced. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "1becff5f-0ca1-575d-9ce4-61281e47458e",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:03:23Z",
+          "excerpt": "Die ams-OSRAM International GmbH betreibt am Standort Regensburg, Leibnizstraße 4 ein Werk zur Entwicklung und Herstellung von Opto-Halbleitern.",
+          "title": "ams-OSRAM International GmbH: Information der Öffentlichkeit, Werk Regensburg",
+          "url": "https://look.ams-osram.com/m/7c18c3148be5d4ac/original/ams-OSRAM-Int-GmbH-Regensburg-Storfallinformation.pdf"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only semiconductor-device manufacturing scope. The issuer's Regensburg public-information notice, PDF page 3 section 1.3, directly joins the named company, Leibnizstrasse 4 and opto-semiconductor manufacture in one prose sentence, then describes wafer-to-chip processes. This does not depend on a certificate table or adjacent-site grouping. Text was inspected; no visual check or current operation, capacity, qualification or geometry is claimed."
+    },
+    {
+      "candidate_id": "1d6a7b5d-bca5-5228-9995-775479d16266",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:59:19Z",
+          "excerpt": "Fixed capacitor for electromagnetic interference suppression and connection to the supply mains",
+          "title": "VDE certificate 40003976, Vishay document 22235, revision August 4 2025",
+          "url": "https://www.vishay.com/doc/?22235="
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The VDE evidence establishes a particular capacitor product and place of manufacture, but is a product certificate rather than an establishment portfolio. It cannot alone settle whether the reported facility has another in-scope activity. Read a plant-level issuer process account or annual-report properties row and bridge it to Bergmannova 392; visually check any multirow mapping. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "1fe16c09-a11f-524a-b3ec-dcd8a508cbb0",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:04:46Z",
+          "excerpt": "DESIGN AND MANUFACTURING OF SEMICONDUCTOR PRODUCTS",
+          "title": "STMicroelectronics Agrate Brianza — IATF certificate 0536159",
+          "url": "https://www.st.com/content/ccc/resource/quality_and_reliability/quality_certificate/certification_document/group3/68/38/ec/87/84/a7/4e/2c/STMicroelectronics_Agrate_Brianza/files/STMicroelectronics_Agrate_Brianza.pdf/jcr:content/translations/en.STMicroelectronics_Agrate_Brianza.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T17:05:08Z",
+          "excerpt": "the integration of ex-Micron R2 manufacturing plant.",
+          "title": "STMicroelectronics — 2014 sustainability report, ex-Micron R2 integration",
+          "url": "https://www.st.com/content/dam/aboutus/sustainability/reports/pdf/st-sustainability-report-2015-en.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The historical report establishes an ex-Micron R2 fab in Agrate, while the modern certificate covers the wider address. The exact 2013 EEA facility is not independently tied to R2 rather than another co-addressed establishment. Report integration in 2014 is not proof or disproof of the source-name handover clause. Needed before admission: Obtain a historical plant/permit source tying the specific ex-Micron establishment to R2 and Via Camillo Olivetti 2; verify relevant PDF layout. Do not use the modern campus certificate alone or merge the separate Agrate source IDs."
+    },
+    {
+      "candidate_id": "201e9f72-3113-5d9c-bdc4-b007e03f8ea5",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:27Z",
+          "excerpt": "COMPOUND SEMICONDUCTOR TECHNOLOGIES GLOBAL LIMITED",
+          "title": "European Commission CORDIS — project 607153 participant record",
+          "url": "https://cordis.europa.eu/project/id/607153"
+        },
+        {
+          "accessed_at": "2026-09-07T16:35:47Z",
+          "excerpt": "Manufacturing facility at Hamilton International Technology Park in Blantyre, Glasgow, Scotland",
+          "title": "Sivers Semiconductors — Company history",
+          "url": "https://www.sivers-semiconductors.com/company-history/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:35:47Z",
+          "excerpt": "CST Global Ltd 4 Stanley Boulevard Hamilton International Technology Park Blantyre Glasgow G72 0BN",
+          "title": "CST Global and the University of Glasgow join forces to install and operate an MOCVD machine",
+          "url": "https://www.sivers-semiconductors.com/press/cst-global-and-the-university-of-glasgow-join-forces-to-install-and-operate-an-mocvd-machine/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only historical foundry-site scope. The issuer-hosted August 11, 2017 release's opening paragraph identifies the III-V semiconductor foundry; its CST Global address block gives 4 Stanley Boulevard, Hamilton International Technology Park, G72 0BN. CORDIS project 607153's named participant section bridges the expanded Compound Semiconductor Technologies Global name to the same street/park/postcode. The company-history 2010 section describes the park's wafer fab. Preserve Hamilton/Blantyre/Glasgow source variants and both CST candidate IDs independently; no canonical identity, owner, equipment attainment or capacity is assigned."
+    },
+    {
+      "candidate_id": "20992f7d-2966-55c4-b9be-ca5616809e49",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:00:39Z",
+          "excerpt": "Infrared transmitting optical components [...] with an optical coating of boron phosphide (BP).",
+          "title": "GB2223510A patent publication: infrared optical components and boron-phosphide coating",
+          "url": "https://patents.google.com/patent/GB2223510A/en"
+        },
+        {
+          "accessed_at": "2026-09-07T17:00:39Z",
+          "excerpt": "THALES UK LIMITED [...] 1 LINTHOUSE ROAD GB-GLASGOW G51 4BZ",
+          "title": "Thales published ISO 37001 certificate appendix, PDF page 5: Glasgow address only",
+          "url": "https://www.thalesgroup.com/sites/default/files/2025-09/Thales-ISO-37001-Certification-THSA_V8_060525.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The opened Thales certificate identifies a Glasgow site at 1 Linthouse Road, but its scope is anti-bribery management, not semiconductor manufacture. A historical patent concerns boron-phosphide optical coatings, which does not prove manufacture at this source facility or resolve whether the coatings qualify as semiconductor materials rather than protective optical coatings. Keep deferred; neither the compound name nor the NACE code can settle this boundary. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "23332aeb-950b-55c8-af76-552ead0cbceb",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:01:59Z",
+          "excerpt": "The design and manufacture of power semi-conductor devices",
+          "title": "Bourns Limited Bedford — NQA certificate 125631",
+          "url": "https://bourns.com/docs/technical-documents/certificates/iso9001_bedford.pdf?sfvrsn=16f097f1_22"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The proposed process is clearly in scope and the reported Bourns parent agrees, but the sole external support is a text-read certificate whose address-to-scope relationship has not been visually checked. Needed before admission: Verify the main certificate's Bourns site/address and power-semiconductor scope together, or obtain equivalent facility-specific HTML. Do not require current certificate validity for historical scope."
+    },
+    {
+      "candidate_id": "241ad8a2-513a-509c-a93c-1f5e5b9fdff3",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:01:38Z",
+          "excerpt": "fab located at Earnhill Road, Larkfield Industrial Estate in Greenock, Scotland.",
+          "title": "ATREG directly involved adviser account February 11 2019: Greenock wafer fab",
+          "url": "https://atreg.com/available-for-sale-ti-200mm-150mm-fab-greenock-scotland/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only historical wafer-fab scope. The directly involved adviser's February 11, 2019 Greenock fab account explicitly locates the factory on Earnhill Road, Larkfield Industrial Estate. Its previously inspected opening passage is the activity/address basis, not the later certificate's unverified layout. A repeat access during this review timed out; the original evidence access clock is retained, with no fresh-page verification claimed. The 2018 EEA record and later account do not establish ownership-change dates, current operation or capacity."
+    },
+    {
+      "candidate_id": "28d4e041-8e6d-5a51-9eea-00cacc875adb",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:23Z",
+          "excerpt": "ELCI. [...] Adresse du siège social : avenue Pierre Marzin 22300 Lannion.",
+          "title": "BODACC C 91, December 4 2009, notice 3439, PDF page 106: ELCI address",
+          "url": "https://www.bodacc.fr/telechargements/COMMERCIALES/PDF/C/BODACC-C_20090091_0001_p000.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The official 2009 BODACC notice binds ELCI to Avenue Pierre Marzin in Lannion. Search leads from regional water-planning documents describe historical PCB manufacture, but those document opens failed. The inspected legal address alone does not establish the process at the reported facility, so keep deferred pending readable primary process evidence. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "301b7769-b0bc-5197-899d-b334e60293d5",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:37:14Z",
+          "excerpt": "manufacture of wafer etch and deposition machines … registered office at Imperial Park, Newport, NP10 8UJ.",
+          "title": "Surface Technology Systems plc — Preliminary Announcement of Results for year ended 31 Dec 2002",
+          "url": "https://www.globenewswire.com/news-release/2003/03/28/295371/2101/en/surface-technology-systems-plc-preliminary-announcement-of-results-for-year-ended-31-dec-2002.html"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. A primary issuer-authored 2003 results announcement, syndicated by GlobeNewswire, describes Surface Technology Systems' wafer etch/deposition machinery business and gives its registered office as Imperial Park, Newport, NP10 8UJ. This indicates an equipment-supplier boundary rather than evidence that the reported site manufactures semiconductor devices/materials. The policy does not explicitly settle equipment-only inclusion, and a registered office is not exact-factory activity proof, so neither acceptance nor blanket equipment exclusion is justified. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "320955bb-3508-5aee-b3fc-30cf2fbdb1ee",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:40:24Z",
+          "excerpt": "Tamerton Road, Roborough, Plymouth, Devon, PL6 7BQ … X-FAB U.K. LTD.",
+          "title": "PLESSEY SEMICONDUCTORS LIMITED — Companies House overview",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/04129612"
+        },
+        {
+          "accessed_at": "2026-09-07T16:36:13Z",
+          "excerpt": "In Plymouth, Plessey Semiconductors is an IDM with front-end fab capability",
+          "title": "Semiconductor sector study 2026 — UK government",
+          "url": "https://www.gov.uk/government/publications/semiconductor-sector-study-2026/semiconductor-sector-study-2026"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The government study supports a Plymouth fab, but Companies House supplies a registered-office address rather than a manufacturing-site address. Combining those facts does not conclusively locate the fab at Tamerton Road, even with the historical X-FAB name. Needed before admission: Obtain a primary plant-specific Tamerton Road manufacturing account or permit. Respect prior failed certificate access; keep the unusual source building_number and historical corporate names unchanged."
+    },
+    {
+      "candidate_id": "34ebe9df-ae0e-5695-811e-d70228f5230e",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:55:12Z",
+          "excerpt": "BD SENSORS s.r.o. Hradišťská 817 687 08 Buchlovice",
+          "title": "BD SENSORS Czech Republic, company/product page and Buchlovice contact",
+          "url": "https://www.bdsensors.cz/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. BD SENSORS' official page binds the company to Hradišťská 817, 687 08 Buchlovice and describes electronic pressure-measurement products. That establishes a named product business but does not distinguish semiconductor sensor die manufacture or chip-level packaging from purchase/integration of sensing elements into instruments. The exact-site semiconductor-process bridge remains missing, so neither acceptance nor rejection is justified by the product category alone. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "34f8e77b-8273-5d81-86f5-3a2b976da407",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:20Z",
+          "excerpt": "KSG GmbH manufactures unassembled printed circuit boards",
+          "title": "KSG GmbH - Grounding Page & Facts",
+          "url": "https://www.ksg-pcb.com/en/facts/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:55:20Z",
+          "excerpt": "KSG produces printed circuit boards in all technologies, from samples to series production. … Auerbacher Strasse 3-5 09390 Gornsdorf",
+          "title": "Information to the public | KSG GmbH",
+          "url": "https://www.ksg-pcb.com/en/information-to-the-public/"
+        },
+        {
+          "accessed_at": "2026-09-07T17:02:30Z",
+          "excerpt": "integration of active and passive electronic components … Production of application-specific systems (system-in-package, SiP)",
+          "title": "Embedded printed circuit boards from the manufacturer KSG in Europe",
+          "url": "https://www.ksg-pcb.com/en/printed-circuit-boards/embedding/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The official Gornsdorf public-information page establishes PCB manufacturing and the Auerbacher Strasse 3-5 address. However, KSG's opened embedding page explicitly offers integration of active components and system-in-package production. Its facts page also characterizes products as unassembled PCBs. A plain PCB exclusion would ignore this material boundary: exact Gornsdorf chip-level process allocation and the intended semiconductor assembly/materials scope need review. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "36df25a3-d0da-506f-b2fa-a14419d3d045",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:01:59Z",
+          "excerpt": "Polished Wafer & Epitaxial Wafer manufacturing at its bespoke manufacturing facility located in Livingston, Scotland.",
+          "title": "Shin-Etsu Handotai Europe — Polished Wafer & Epitaxial Wafer",
+          "url": "https://www.sehe.com/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only semiconductor wafer-material manufacturing scope. SEH Europe's homepage manufacturing paragraph names a Livingston wafer facility, and its address footer specifies Wilson Road, Eliburn, EH54 7DA. The paragraph separately distinguishes sales offices. Preserve the EEA site record without a plant-unit allocation, owner relationship, current operating claim, wafer-size claim, capacity or geometry."
+    },
+    {
+      "candidate_id": "3a3e7c88-0693-5170-adb9-0686dfb58596",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:56Z",
+          "excerpt": "Robert Bosch Semiconductor Manufacturing Dresden GmbH & Co. KG Robert-Bosch-Ring 1 01109 Dresden",
+          "title": "Bosch Dresden — Information der Öffentlichkeit, page marked February 2026",
+          "url": "https://www.bosch-semiconductors.com/about-us/where-we-produce/dresden/bosch-werk-dresden.html"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only semiconductor-facility scope. Bosch's Dresden public-information page, local manufacturing section, expressly describes integrated-circuit and power-semiconductor fabrication. Its further-information address block names Robert-Bosch-Ring 1, 01109 Dresden. The page's GmbH and GmbH & Co. KG variants do not resolve legal-form history. Preserve the source's trailing space and native identifier; no current production, lifecycle, capacity or geometry is promoted."
+    },
+    {
+      "candidate_id": "3f024ab0-44b2-592d-829c-6d0ce3c186aa",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The official Croatian waste-plan inventory's search text identifies SELK production at Slavonska 1, Kutina; its PDF open returned metadata, not the relevant inspected table passage. That lead does not specify semiconductor-device or semiconductor-material manufacturing. The company's about-page route returned a verification screen. Exact process scope remains unresolved, so the electronic-components code is insufficient for acceptance or exclusion. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "41992adf-170b-5132-92b4-833c481f3a19",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:04:57Z",
+          "excerpt": "production of glass-to-metal seals and other components, chiefly for use in the automotive industry",
+          "title": "SCHOTT Lanškroun, local manufacturing description and Dvořákova 997 contact",
+          "url": "https://www.schott.com/en-cz/about-us/company/regions-and-locations/lanskroun"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. SCHOTT's dedicated Lanškroun page explicitly binds SCHOTT CR s.r.o. to Dvořákova 997 and describes glass-to-metal seals, hermetic packaging, automotive components, sensors and optoelectronic applications. These are credible local manufacturing leads, but the opened page does not clearly bind semiconductor-specific package/material manufacture or actual chip assembly to this site rather than general automotive feedthroughs, airbag headers and battery lids. The semiconductor scope bridge remains ambiguous; no blanket exclusion of package housings is assumed. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "41f3cbc5-3efb-53d4-82e1-d4f7d076e1a9",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:56:13Z",
+          "excerpt": "our series and standard PCB plant in Schopfheim",
+          "title": "Site consolidation at Würth Elektronik",
+          "url": "https://www.we-online.com/en/news-center/press?d=site-consolidation-pcb-production-schopfheim"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Würth's dated 2024 company announcement explicitly describes a series/standard PCB plant in Schopfheim, which is affirmative ordinary-PCB evidence. The inspected HTML does not identify An der Wiese 1; the address-and-scope certificate could not be read successfully. Defer the exact source-address exclusion, especially because other Schopfheim addresses appear in certificate discovery leads. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "449fc48d-d27f-558c-8939-c8586417a770",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:29Z",
+          "excerpt": "Manufacture of Semiconductor Wafers and Test of 300 mm Wafers",
+          "title": "TUV SUD Dresden energy-management scope certificate, June 2024",
+          "url": "https://gf.com/wp-content/uploads/2021/08/67493_00_ms50001_en_Korrektur.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The same company-hosted certificate lead as Module One lists a separate Module Two row with manufacturing scope, but its table could not be visually inspected and the direct browser returned 404. Preserve this unresolved lead; do not infer Module Two's facility scope merely from Module One or a campus-wide description. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "459a936c-5c67-5c29-a53c-cb271607cec2",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:32:51Z",
+          "excerpt": "1, Maje 2230, 75661 Rožnov pod Radhoštěm, Czech Republic … Manufacturing – Fab",
+          "title": "DNV GL management system certificate schedule — onsemi",
+          "url": "https://www.onsemi.com/site/pdf/OnSemi_120787-cert-_REV2.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The certificate proposal points to the correct numbered fab address rather than the separately listed design center. Nevertheless the admission depends on an unverified site-row/scope association. Needed before admission: Visually verify the Rožnov manufacturing row and separation from 1. máje 2594, or replace it with primary exact-site prose. Retain both Czech source IDs independently."
+    },
+    {
+      "candidate_id": "463cc0f1-bce1-5600-bfe3-af8b46d5a91e",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:11Z",
+          "excerpt": "NXP Semiconductors UK Limited Bramhall Moor Lane, Hazel Grove, Stockport, Cheshire, SK7 5BJ, United Kingdom",
+          "title": "NXP ISO 9001 certificate 2109701, historical multi-site schedule",
+          "url": "https://www.nxp.com/docs/en/supporting-information/ISO9001-NXP-2109701.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Historical NXP wafer-fabrication scope is appropriate, but the stored quotation is address-only and the manufacturing assignment depends on the certificate schedule layout. Needed before admission: Verify the full Stockport row and its fabrication/test scope with a page locator. Preserve the historical certificate interval without backdating or extending operation to 2019 or today."
+    },
+    {
+      "candidate_id": "49998d14-8957-58a5-954b-6792d3825d8c",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:50Z",
+          "excerpt": "connector parts manufacturing, surface coating, assembly of high-frequency connectors and cable assemblies",
+          "title": "Headquarters Germany - Rosenberger Group",
+          "url": "https://www.rosenberger.com/company/headquarters-germany/"
+        },
+        {
+          "accessed_at": "2026-09-07T17:02:50Z",
+          "excerpt": "Plant Address: Hauptstrasse 1 83413 Fridolfing Germany",
+          "title": "Headquarters Germany - Rosenberger plant address",
+          "url": "https://www.rosenberger.com/contact/headquarters-germany/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Rosenberger's Fridolfing site page and plant-address page establish connector-part fabrication, surface coating, connector/cable assembly, and precision mechanical manufacture at Hauptstrasse 1. This is affirmative interconnect manufacturing, not established semiconductor-device fabrication. Because its broader portfolio includes semiconductor test equipment and the equipment/interconnect boundary is not resolved by v1, defer rather than impose a blanket equipment exclusion. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "4db0132b-6154-5b27-9196-78ab1e7d1043",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:05:36Z",
+          "excerpt": "Ship Company specialises in the manufacture of small and medium volume Printed Circuit Boards (PCBs)",
+          "title": "EPA — project 2004-CP2-AL, Ship Company PCB process research",
+          "url": "https://www.epa.ie/our-services/research/epa-funded-research/epa-funded-projects/research-data-table-dev/energy-efficient-system-for-zero-waste-transport-and-zero-rinse-water-emission.php"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. EPA's funded-project record identifies Ship Company Ltd as a Macroom printed-circuit-board manufacturer and describes its copper-etching research. The opened primary page does not provide Gurteenroe/Killarney Road, and the street-address bridge surfaced only in secondary directories. Defer exact source-facility matching rather than reject or accept a potentially different location. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "519f45b0-d803-5fbd-bc27-8f3f7a7ef2dd",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:59:07Z",
+          "excerpt": "production of prototype printed circuit boards",
+          "title": "Gatema PCB: About us, express PCB service and Boskovice contact",
+          "url": "https://www.gatema.com/about-us-our-express-pcb-service/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The official local company account affirmatively describes prototype PCB production and binds Boskovice Prumyslova 2503/2. Preserve the address difference and ordinary-PCB interpretation; do not allocate group services or infer absence over time. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "528ad4e1-33d2-581b-92e5-ab686b6d1096",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The Greule GmbH record at Gewerbestr. 6, Schömberg needs a historical exact-site manufacturing bridge. Search results distinguish other Greule locations and later entities, but no opened primary source established the process at this address. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "52caa403-adab-5dc3-ae60-1bc0659659b6",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:36Z",
+          "excerpt": "Werk Andlau [...] STOCKO CONTACT Eurl 7, Route d'Eichhoffen [...] 67140 - Andlau, Frankreich",
+          "title": "Stocko official contacts: Andlau factory address",
+          "url": "https://www.stocko-contact.com/de/unternehmen-kontakt.php"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:36Z",
+          "excerpt": "At our production centres in Hellenthal and Andlau we produce the precision stamped parts",
+          "title": "Stocko company manufacturing profile: Andlau precision stamping",
+          "url": "https://www.stocko-contact.com/en/company-profile.php"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. Stocko explicitly allocates connector precision stamping to Andlau and separately labels the exact factory/delivery address. This is better than a generic group product menu. Use the Andlau-specific stamping passage and factory address, not assembly processes explicitly allocated to other Stocko locations. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "59db9d95-59ce-5374-a3e8-f6d31d0e816d",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:40:02Z",
+          "excerpt": "Atmel’s eight-inch wafer fabrication equipment from its fab in North Tyneside, United Kingdom.",
+          "title": "TSMC Signs Contract with Atmel to Purchase Eight-inch Wafer Fabrication Equipment",
+          "url": "https://pr.tsmc.com/english/news/1466"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. TSMC's October 9, 2007 transaction release directly establishes that Atmel had a wafer fab in North Tyneside. It does not bind that fab to the EEA Silverlink Integrated Circuits name or the precise Middle Engine Road, NE28 9NZ address. Search leads also use Middle Engine Lane, while municipal redevelopment material can refer to former parking land rather than the fab parcel. A primary street/site identity bridge remains unresolved. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "5a479d4a-8af9-5d1f-a066-f2743e495ec3",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:04:46Z",
+          "excerpt": "This is where we produce our solar cell material on an industrial scale",
+          "title": "Exeger — A new Swedish industry",
+          "url": "https://www.exeger.com/about-us/made-in-sweden/"
+        },
+        {
+          "accessed_at": "2026-09-07T17:04:46Z",
+          "excerpt": "Design, Development, Production and Sales of Solar Cells",
+          "title": "Exeger Operations AB — DNV ISO 9001 certificate and location appendix",
+          "url": "https://www.exeger.com/uploads/2025/01/ISO_9001-ENG-10000488774-MSC-SWEDAC-SWE-2-20241113.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The live HTML directly supports solar-cell-material manufacture beside the named campus at Brinellvägen 32. The main unresolved question is whether the final Atlas scope deliberately includes this photovoltaic material/device category; absence of a solar exclusion is not a completed policy decision. Needed before admission: Record explicit photovoltaic-device/material inclusion criteria and apply them consistently with BP Solar. If relying on the certificate for legal-name/site allocation, visually verify its appendix; HTML already supplies a substantive exact-site bridge."
+    },
+    {
+      "candidate_id": "62a47c9b-cfb4-5663-9326-025a4d572941",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:17Z",
+          "excerpt": "Right next to the castle is our ultra-modern 200 mm fab. ... Tobelbader Strasse 30 8141 Premstaetten Austria",
+          "title": "ams OSRAM headquarters locations",
+          "url": "https://ams-osram.com/about-us/locations-distribution/headquarters"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The live headquarters page says a fab is beside the castle and gives the headquarters address. That is a credible campus lead, but adjacent fab and headquarters are not automatically the same reported establishment. The research reason currently overstates exact-facility readiness. Needed before admission: Obtain a plant/permit or company site source that binds fab/manufacturing scope to the reported Tobelbaderstraße 30 establishment, or explicitly justify and document its campus aggregate scope. Do not geocode adjacency or merge municipality labels."
+    },
+    {
+      "candidate_id": "6445ec94-4db9-51ad-800d-b3573a96dc0c",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:35:14Z",
+          "excerpt": "Cypress Drive St Mellons Cardiff CF3 0LW … IQE manufactures advanced electronic and opto-electronic group III-V semiconductor material structures",
+          "title": "St Mellons Semiconductor Plant — draft permit EPR/KP3235SS, Natural Resources Wales",
+          "url": "https://naturalresources.wales/media/681913/v003-final-draft-permit-cymraeg.pdf"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only historical semiconductor-materials facility scope. The NRW-hosted draft EPR/KP3235SS document's cover and introductory note, PDF pages 1-2, identify the St Mellons plant at Cypress Drive and describe its semiconductor-material manufacture in direct prose. The note is expressly outside the operative permit, and date placeholders remain. Page 4 separately labels Pascal Close as registered office and Cyprus Drive as installation address; preserve the Cypress/Cyprus discrepancy. This is not an issued-permit, reactor-count, current-operation, qualification, capacity or geometry claim; no visual layout verification is asserted."
+    },
+    {
+      "candidate_id": "66f20321-0135-5191-92db-fafe3874e26f",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:00:25Z",
+          "excerpt": "Sheet metal mechanics production [...] bending machines for the plants in Sievi, Vantaa and Estonia.",
+          "title": "Scanfil interim report October 23 2009, PDF page 2: Vantaa mechanics",
+          "url": "https://attachment.news.eu.nasdaq.com/a40638d3b58eac2af87c207eaad5afb57"
+        },
+        {
+          "accessed_at": "2026-09-07T16:57:51Z",
+          "excerpt": "Scanfil plc's subsidiary Scanfil EMS Oy's statutory negotiations at Vantaa plant",
+          "title": "Scanfil issuer announcement April 1 2010: Vantaa plant",
+          "url": "https://www.globenewswire.com/news-release/2010/04/01/161948/0/en/closure-of-statutory-negotiations-at-vantaa-plant-of-scanfil-plc-s-subsidiary-scanfil-ems-oy.html"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Company evidence identifies a historical Scanfil EMS Vantaa plant and describes sheet-metal mechanics there, which points away from semiconductor-device fabrication. However, the opened primary material did not bind that operation to Kisallintie 12. Keep deferred rather than making a definitive exclusion from a city-level manufacturing description or the EMS company name. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "68b4d13e-f9e3-5801-b744-fe5fc2545570",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:20Z",
+          "excerpt": "Scanfil OÜ Vana-Sauga 40 EE- 80010 Pärnu, Estonia",
+          "title": "Manufacturing services in Asia, America and Europe - Scanfil",
+          "url": "https://www.scanfil.com/contact-us-3/scanfil-factory-network"
+        },
+        {
+          "accessed_at": "2026-09-07T17:02:20Z",
+          "excerpt": "Scanfil’s plants in Mysłowice and Pärnu supply PCBAs, enclosures, and high-level assemblies",
+          "title": "Scanfil Expands Partnership with the AXS Division of the Life Science & Medtech Company Bruker",
+          "url": "https://www.scanfil.com/newsroom/press_release/scanfil-expands-partnership-with-the-axs-division-of-the-life-science-medtech-company-bruker"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Scanfil's factory-network page identifies Scanfil OÜ at Vana-Sauga 40, Pärnu. A dated company announcement affirmatively describes PCBA, enclosure, and higher-level assembly supply from Pärnu and Mysłowice. That is an ordinary EMS lead, not semiconductor manufacture. However, the announcement does not isolate which Pärnu premises perform which processes, so the exact-address rejection remains deferred. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "6b46a67e-8e3c-5c30-92dd-1e3b9f8492cd",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:51Z",
+          "excerpt": "Dirección: POLIG POLIGONO INDUSTRIAL ZONA OESTE SN [...] Población: TRES CANTOS [...] Actividad económica principal: FABRICACION DE CELULAS FOTOVOLTAICAS",
+          "title": "PRTR Espana: BP Solar facility 6512, address and principal activity",
+          "url": "https://prtr-es.miteco.gob.es/Informes/fichacomplejo.aspx?Id_Complejo=5443"
+        },
+        {
+          "accessed_at": "2026-09-07T16:59:42Z",
+          "excerpt": "Era la fábrica más grande de células solares del mundo por aquel entonces. [...] tecnología de producción Saturn.",
+          "title": "Bovis: BP Solar Tres Cantos photovoltaic production plant project",
+          "url": "https://www.bovis.es/es/proyecto/planta-produccion-de-placas-fotovoltaicas-ref100001705.html"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Regulator and directly involved project evidence establish historical photovoltaic-cell manufacture at the named Tres Cantos facility. The uncertainty is scope policy, not mere panel-versus-cell wording. PRTR and EEA may share a reporting chain. Needed before admission: Record an explicit, consistent photovoltaic-cell inclusion decision. Keep PRTR non-independent from EEA where applicable, and retain the construction participant as distinct corroboration without adopting production quantities or closure chronology."
+    },
+    {
+      "candidate_id": "6c48e20d-ddee-55c1-97a1-800aefd7397b",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:04:57Z",
+          "excerpt": "Design and manufacturing of electronic and mechatronic components and connector systems",
+          "title": "DQS certificate 515109 IATF25: TE Connectivity Belgium BV, Siemenslaan 14, edition July 30 2026",
+          "url": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=BEL-DQS-515109IATF25-260730&DocType=Agency+Approval+Document"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:07Z",
+          "excerpt": "componenten voor de automobielsector: connectoren en inductieve systemen of spoelen.",
+          "title": "SERV workplace practice case: TE Connectivity Oostkamp, historical report",
+          "url": "https://www.werkbaarwerk.be/sites/default/files/documenten/Praktijkvoorbeeld%20TE%20Connectivity.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. Historical SERV evidence names the Oostkamp operation and its automotive connectors/inductive coils; the later exact Siemenslaan 14 certificate independently supports connector/mechatronic manufacturing. Carry both historical local process evidence and exact-address certificate, preserve name vintages, and verify layout before final use. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "6f25c6c1-e21f-5423-af02-89ce3a614813",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:46Z",
+          "excerpt": "We produce parts in complex alloys here, but also our own recipes for insulating ceramics",
+          "title": "Exxelia September 19 2022 retrospective: Pessac manufacturing site",
+          "url": "https://exxelia.com/en/news/50th-anniversary-of-our-pessac-manufacturing-site"
+        },
+        {
+          "accessed_at": "2026-09-07T17:00:55Z",
+          "excerpt": "Exxelia Pessac [...] Parc Industriel Bersol – Voie Romaine [...] 33600 Pessac",
+          "title": "Exxelia group locations: Pessac",
+          "url": "https://exxelia.com/fr/a-propos/groupe"
+        },
+        {
+          "accessed_at": "2026-09-07T16:59:42Z",
+          "excerpt": "EXXELIA as multilayers ceramic capacitors, ceramic and ferrite materials",
+          "title": "Exxelia Pessac declaration March 15 2024: supplied product categories",
+          "url": "https://exxelia.com/storage/exxelia-assets-prod/medias/Catalogs_-_Brochures_-_Docs/Quality_certificates/Exxelia_France/Pessac/reach-exxelia-pessac.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Exxelia's Pessac site is directly bound to Parc Industriel Bersol, Voie Romaine, and company evidence describes insulating ceramics, ceramic capacitors and ferrite materials. These are not automatically semiconductor materials. The opened primary pages also do not explicitly bridge the historical TEMEX CERAMICS source name to that exact facility. Defer pending both the historical name/address bridge and an explicit semiconductor-material application or a fully bounded passive-component exclusion. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "70837de4-e0a8-5a4d-9055-341a58cc6333",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:06:00Z",
+          "excerpt": "Intel Ireland Collinstown Industrial Park, Leixlip, Kildare, Ireland Manufacture of Integrated Circuits.",
+          "title": "Intel Corporation — Intertek ISO 9001 certificate 0222427 and site appendix",
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2026-01/0222427-cert-qms-eng-intel-corporation-main-appendix.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Intel Ireland integrated-circuit manufacture is unambiguously in scope, but the support is a text-only multi-site certificate annex. An incorrect row attachment would change the meaning. Needed before admission: Visually verify the Ireland address and manufacturing scope on annex page 3, including the main/annex relationship. Accept at campus scope only; no individual Leixlip fab assignment."
+    },
+    {
+      "candidate_id": "77b114de-2615-5e92-8812-029298353d97",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:21Z",
+          "excerpt": "There are a number of new operations located on-site by companies who have rented out space",
+          "title": "Allied Metal Recycling — Independent Closure Audit Report, 9 January 2026 V2, EPA-hosted",
+          "url": "https://leap.epa.ie/docs/a3d73b76-b5fa-4127-a93a-14f53dda5e7a.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. An EPA-hosted consultant closure audit binds Allied Metal Recycling (Ireland) Ltd to Shannon Industrial Estate and licence P0288-02, describes the former Molex installation, and lists several later tenants. This exposes a historical site/tenant allocation issue; it does not establish semiconductor manufacturing by the EEA-named facility or justify exclusion solely from the owner's recycling name. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "7d8e4bfc-d627-58d0-a930-64db39e097fe",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The bounded search for PPC Electronic AG at Riedstrasse 2, Cham did not yield an opened primary facility/process account. A WIPO historical publication was a possible corporate-address lead, but opening it returned a JavaScript/robot verification page rather than the patent body. Even a patent-party address would not establish the actual local manufacturing process. Historical facility scope and address identity remain unresolved. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "7f5ddd69-f884-5f50-86dd-ad498fc33afe",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:56:41Z",
+          "excerpt": "Design, production and sales of electronic systems and components for high frequency and acoustic applications",
+          "title": "DNV Management System Certificate 10000409122-MSC-ANAB-DEU",
+          "url": "https://www.qualcomm.com/media/documents/files/munich-germany-iso-9001-quality-management-system-certificate.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T16:55:43Z",
+          "excerpt": "Anzinger Straße 13 81671 Munich",
+          "title": "Qualcomm RF360 details and company information",
+          "url": "https://www.qualcomm.com/modems/rf-solutions/rffe-filter-products/about"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Qualcomm's RF360 account binds the company to Anzinger Straße 13, Munich. The historical company-hosted DNV certificate explicitly includes Munich production of electronic systems and components for high-frequency and acoustic applications. That establishes a manufacturing lead, but not which semiconductor fabrication, substrate, or die/package process is performed at this site. The acoustic-filter boundary needs a scoped decision and process evidence. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "81a6d801-7eca-5435-a767-91179fcaff09",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The distinct 2008 FUBA PRINTED CIRCUITS record at Kesselsdorfer Str. 216, Dresden was considered separately. The same municipal lead could not be opened; an independently verified primary facility/process bridge is still missing. Shared address and historical naming do not settle scope or source identity. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "825c81fc-b014-576f-bc2e-427ad87f7164",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:46Z",
+          "excerpt": "Circuits multicouches, [...] Circuits flex-rigides, [...] Circuits HDI, [...] CIMULEC ZI «Les Jonquières » Rue Charles Picard 57365 ENNERY",
+          "title": "Cimulec Group official manufacturing and Ennery contact page",
+          "url": "https://www.cimulecgroup.com/mobile/fr/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The existing mobile page mixes group product information and contacts. A newly opened company-specific Cimulec page explicitly describes Cimulec as a PCB manufacturer, strengthening the local named-company bridge to the retained Ennery contact. Add the opened named-company page to the research basis; if investigating embedding, require local bare-die/process evidence rather than treating passive embedded resistors as semiconductor assembly. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "84905641-2d31-5693-a9f0-ca60cba27ff1",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:51Z",
+          "excerpt": "inventories related to the printed wiring board business of its Teuva factory",
+          "title": "Aspocomp stock exchange release, September 3 2003: Teuva board factory",
+          "url": "https://aspocomp.com/reports/aspocomp-has-sold-the-teuva-printed-wiring-board-factory/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:46Z",
+          "excerpt": "Production [...] Mäki-Mikkiläntie 3 [...] 64700 Teuva",
+          "title": "Aspocomp Annual Report 2013: production contact information, PDF page 77",
+          "url": "https://aspocomp.com/wp-content/uploads/2020/02/Aspocomp-Annual-Report-2013.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. Issuer historical releases describe Teuva printed-wiring-board manufacture; the 2013 production-contact list provides the reported Maki-Mikkilantie 3 bridge. Verify the Teuva production-address row visually and retain a historical rather than current-operation scope. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "8d71eb13-ee38-59df-afb2-0adf68cc8551",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:56:02Z",
+          "excerpt": "hybridních integrovaných obvodů, senzorů, výkonových elektronických modulů",
+          "title": "ELCERAM, official industrial manufacturing description",
+          "url": "https://www.elceram.cz/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:56:33Z",
+          "excerpt": "ELCERAM a.s. Okružní 1144 500 03 Hradec Králové",
+          "title": "ELCERAM contacts, Hradec Králové",
+          "url": "https://www.elceram.cz/kontakty/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. ELCERAM's official company page describes industrial manufacture of ceramics, PCBs, hybrid integrated circuits, sensors and power modules; its contacts identify Okružní 1144, Hradec Králové. A dedicated product page mentions power semiconductor structures and module manufacture. This is stronger than a generic electronics label but still leaves the local semiconductor-device/material or bare-chip assembly process ambiguous: power modules may integrate bought-in devices, while ceramics and PCBs are not automatically semiconductor-specific materials. Retain the case for targeted process review rather than widening scope. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "8df3da28-408a-5779-9aec-b0f89d8116ff",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:53Z",
+          "excerpt": "ismet transformátory s.r.o. Běhařovice 100 CZ-67139 Běhařovice",
+          "title": "ismet Czech contact, Běhařovice 100",
+          "url": "https://www.ismet.de/cz/kontakt/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:59:19Z",
+          "excerpt": "Výroba a prodej transformátorů, tlumivek, sestav filtrů, stejnosměrných zdrojů, elektronických komponent a indukčních specifických řešení",
+          "title": "ismet transformátory Czech ISO 9001 certificate, validity August 10 2018 to August 9 2021",
+          "url": "https://www.ismet.de/fileadmin/05_unternehmen/06_zertifikate_zualssungen/Zertifikat_ISO_9001_2015_tschech.PDF"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The exact-site quality certificate describes transformer, choke, filter, power-supply and inductive-solution activity, reinforced by the local contact address. Verify certificate scope/address layout; preserve EEA street N/A and building 100 rather than inventing a street. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "8e611ec1-cd8f-5640-af33-cc4409584fc2",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:55:45Z",
+          "excerpt": "Vishay ESTA",
+          "title": "Vishay ESTA, certificate 436969 IRIS, document revision August 17 2010",
+          "url": "https://www.vishay.com/docs/13166/436969ir.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The historical issuer-hosted IRIS certificate lead is titled Vishay ESTA, but its opened extract exposes only sparse cover text, not the Paštická 1243 address/process schedule. A later municipal building-permit lead timed out. The historical certificate's identity is a lead, not verified evidence that B2 made semiconductors or only passive components; exact local process remains unresolved. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "8fa2a22c-a4b5-5ccf-ba77-2bbce9fe1197",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:05:08Z",
+          "excerpt": "Baterías de tracción … EnerSys S.r.l. Viale Europa, 73/A 36075 Montecchio Maggiore (VI)",
+          "title": "EnerSys — Fiamm Motive Power energy plus brochure, June 2010",
+          "url": "https://www.enersys.com/493bb4/globalassets/documents/product-documentation/fiamm/energy-plus/emea/eneregy-plus-sales-brochure-spanish.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. EnerSys' official 2010 traction-battery brochure gives EnerSys S.r.l. at Viale Europa 73/A, Montecchio Maggiore. It establishes a historical company address and battery-product context, but not whether that address was a manufacturing plant versus office or its precise activity in the EEA reporting period. Defer exact facility scope. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "99147e57-f3e3-5b06-9eab-0b3290c4bf82",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:11Z",
+          "excerpt": "ON Semiconductor Czech Republic, s.r.o 1 Maje, 2230, 75661, Roznoz P., Czech Republic Manufacturing, Wafer Fab",
+          "title": "ON Semiconductor management-system certificate 119990-2012-AE-USA-RvA, 2017 site schedule",
+          "url": "https://www.onsemi.com/site/pdf/ISO14001-ON-Semiconductor.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T16:33:11Z",
+          "excerpt": "Roznov p. Radhostem, 75661, Czech Republic",
+          "title": "ON Semiconductor Certificate of Approval UQA0113121, historical multi-site schedule",
+          "url": "https://www.onsemi.com/site/pdf/ON_Semi_Corp_Cert.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Both historical schedules plausibly support the Czech fab. Their matching street/postcode do not remove the need to verify row alignment and the extracted town-name discrepancy. Needed before admission: Verify the Czech wafer-fab rows visually and preserve the reported spelling variants. Do not merge this candidate with the separately reported silicon-wafer/chip facility at the same address."
+    },
+    {
+      "candidate_id": "993bf761-a6b2-5f1f-959e-949056ff9b1b",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The 2007 FUBA PRINTED CIRCUITS record at Kesselsdorfer Str. 216, Dresden remains unverified. A municipal historical notice is a promising PCB-factory lead, but its body could not be opened and a primary address-to-process bridge was not established. Neither the company name nor NACE alone supports rejection. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "998611d9-9e62-5c55-8f16-36cc2e96065b",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:29Z",
+          "excerpt": "Manufacture of Semiconductor Wafers and Test of 300 mm Wafers",
+          "title": "TUV SUD Dresden energy-management scope certificate, June 2024",
+          "url": "https://gf.com/wp-content/uploads/2021/08/67493_00_ms50001_en_Korrektur.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The web reader returns a TÜV SÜD certificate whose extracted site rows separately name Dresden Module One and Module Two at Wilschdorfer Landstr. 101 and assign semiconductor-wafer manufacture/test scope. However, screenshot calls yielded no image content, and direct browser navigation returned 404. The certificate's table has not been visually checked, so this is retained as an unresolved primary-source lead rather than an acceptance proposal. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "9c40c084-c579-5a78-a9e0-ce0f55598157",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:46Z",
+          "excerpt": "Le groupe elvia electronics se positionne comme un leader européen dans la fabrication de circuits imprimés",
+          "title": "Elvia Electronics official group manufacturing description",
+          "url": "https://elviaelectronics.com/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:15Z",
+          "excerpt": "Bellegarde (45270) [...] Expertise et Technologies Avancées en Fabrication de Circuits Imprimés (PCB)",
+          "title": "NAE Elvia member profile: Bellegarde location and group PCB activity",
+          "url": "https://www.nae.fr/membres/elvia-pcb/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Elvia's company page and member-supplied industry profile describe PCB manufacture and list Bellegarde among locations, pointing toward an ordinary-board exclusion. They do not allocate a specific process to the source-reported ZI facility. Keep deferred until a local production description bridges that precise site, rather than applying group-wide capabilities to every location. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "9c8eec31-1a93-58fb-ae3a-b55d9645e695",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:03:44Z",
+          "excerpt": "the manufacture of printed circuit boards",
+          "title": "EPA — Celtic Circuits Limited granted IPC licence 428",
+          "url": "https://www.epa.ie/licences/lic_eDMS/090151b280043480.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The granted EPA licence positively names the Clieveragh establishment and PCB-manufacturing activity, rather than only a company-wide product family. Visually confirm the named licensee/address/activity association; retain the explicit ordinary-PCB interpretation. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "9ec81824-c15d-533a-b629-075d985e73f0",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:23Z",
+          "excerpt": "NICOSOFRA. [...] 1 avenue du Bois de l’Épine Bp 143, Courcouronnes , 91005 Évry Cedex.",
+          "title": "BODACC C 61, August 26 2008, notice 6132, PDF page 182: Nicosofra address",
+          "url": "https://www.bodacc.fr/telechargements/COMMERCIALES/PDF/C/BODACC-C_20080061_0001_p000.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:46Z",
+          "excerpt": "Entreprise Nicosofra [...] spécialisée dans la fabrication de circuits imprimés [...] siège et usine à Evry (Essonne).",
+          "title": "French economic ministry archival finding aid, PDF page 9, B-0073741/2: Nicosofra Evry factory",
+          "url": "https://www.economie.gouv.fr/files/files/directions_services/saef/docs_joints/rech_en_arch/DGT/Aide_entreprises_B-0073730_B-0074034.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The finding aid names a PCB company with headquarters and factory at Evry, while the BODACC notice gives an exact company address. The two sources do not explicitly establish that the factory occupied that exact street address. Find an establishment-level permit, original archival record or issuer document explicitly binding the factory process to 1 avenue du Bois de l'Epine. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "a136e244-4e80-584b-9e63-663f682cd95d",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:11Z",
+          "excerpt": "STMicroelectronics (Rousset) SAS 190 Av. Célestin Coq, Zone Industrielle de Peynier Rousset, 13790, ROUSSET, France",
+          "title": "STMicroelectronics Rousset IATF certificate, revision dated September 16, 2025",
+          "url": "https://www.st.com/content/dam/aboutus/product-quality-reliability/certifications/pdf/st-rousset-iatf16949-en.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The Rousset name/address and semiconductor-product scope appear appropriately bounded to the main site, but the only support is an unverified PDF certificate. The stored excerpt itself contains identity rather than the manufacturing wording. Needed before admission: Verify main-site address/scope and separate remote-support entries, or obtain equivalent local-process HTML. Include exact page/section locator for the manufacturing assertion."
+    },
+    {
+      "candidate_id": "a20cb8fd-6579-50dd-a190-e4d3288dc7f2",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:11Z",
+          "excerpt": "ON Semiconductor Belgium BVBA Westerring 15 9700 Oudenaarde, Belgium Wafer Fabrication.",
+          "title": "ON Semiconductor Certificate of Approval UQA0113121, historical multi-site schedule",
+          "url": "https://www.onsemi.com/site/pdf/ON_Semi_Corp_Cert.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The old Belgium schedule has an exact numbered address and wafer-fabrication scope, sufficient in principle for historical classification. The decisive row association remains text-only. Needed before admission: Visually verify the Westerring 15 row and wafer-fabrication scope. Do not require current certification, infer continued operation, or use a later owner to rewrite the raw source name."
+    },
+    {
+      "candidate_id": "a2367b9a-42b6-5b40-805b-6507c51caf21",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:39Z",
+          "excerpt": "STMicroelectronics France SAS et STMicroelectronics (Crolles 2) SAS 850, rue Jean Monnet 38926 Crolles Cedex",
+          "title": "STMicroelectronics — Déclaration environnementale 2023, site de Crolles",
+          "url": "https://www.st.com/content/dam/aboutus/sustainability/reports/pdf/st-crolles-emas-declaration-2023-fr.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The report expressly distinguishes two legal entities sharing the Crolles site. That supports a site-level interpretation but not allocation to one fab; manufacturing and postal-code associations span the PDF report and certificate content. Needed before admission: Verify identity, shared-site statement, manufacturing section, and the two postal presentations in their original layout. Preserve both legal entities and prohibit assignment to Crolles 200/300 or individual lines."
+    },
+    {
+      "candidate_id": "a46357cb-a311-52ee-a4e6-477bb0922721",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:41:16Z",
+          "excerpt": "Former Zarlink site … S/10/0473",
+          "title": "Find or request s106 or s52 documents — Swindon Borough Council",
+          "url": "https://www.swindon.gov.uk/info/20030/planning_and_building_control/1379/find_or_request_s106_or_s52_documents"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The opened Swindon Borough Council page acknowledges a former Zarlink site and points to planning application S/10/0473. It does not itself establish the semiconductor process or bind that name to the exact Darby Close/SN2 2QW address. Historical foundry reporting is promising, but a directly opened primary source providing the required facility/process/location connection was not obtained in this pass. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "a5f4339d-d43a-52bc-950f-474cc73ece65",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:43Z",
+          "excerpt": "Silicone overhead line insulators (ACIM)",
+          "title": "PFISTERER production locations, Kadaň",
+          "url": "https://www.pfisterer.com/en/production"
+        },
+        {
+          "accessed_at": "2026-09-07T16:56:23Z",
+          "excerpt": "PFISTERER Czech s.r.o. Královský Vrch 1977 432 01 Kadaň",
+          "title": "PFISTERER Sustainability Report 2023, Czech site schedule",
+          "url": "https://www.pfisterer.com/sites/default/files/downloads/PFISTERER_Sustainability_Report_2023_ENG_0.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The dedicated Kadan production description specifies electrical cable accessories and silicone overhead-line insulators, with a separate exact-address report. Verify local address allocation in the report; retain the dedicated electrical-accessory process interpretation. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "a856b01c-93e1-51c9-ae7c-71481a7f7edf",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:23Z",
+          "excerpt": "Corbeil-Essonnes, France [...] 180 nm analog/mixed-signal CMOS process [...] X-FAB France SAS 224 Boulevard John Kennedy 91105 Corbeil-Essonnes Cedex",
+          "title": "X-FAB Our Fabs: Corbeil-Essonnes process and address section",
+          "url": "https://www.xfab.com/manufacturing/our-fabs"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only semiconductor-fabrication scope. X-FAB's Our Fabs page has a distinct Corbeil-Essonnes section that pairs its local CMOS/SOI processes with X-FAB France SAS, 224 Boulevard John Kennedy. Neighboring fabs have separate headings. Preserve source postal code 91100 and evidence postal code 91105 Cedex as variants, without geocoding, merging sites or importing process-node, capacity, current-operation or ownership claims."
+    },
+    {
+      "candidate_id": "aae786c2-c0f4-5f12-9f58-1728145f6bb8",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:23Z",
+          "excerpt": "un atelier de traitement de surfaces au sein de son unité de fabrication de circuits imprimés situé à GORCY.",
+          "title": "Lorraine regulator inspection report, PDF page 2: Gorcy circuit-board activity",
+          "url": "https://georisques.gouv.fr/webappReport/ws/installations/document/93032c6f117a4962a48bed8ccc975830"
+        },
+        {
+          "accessed_at": "2026-09-07T17:01:38Z",
+          "excerpt": "LORRAINE CIRCUIT. [...] Adresse : Z I du Roitelet 54730 Gorcy.",
+          "title": "BODACC A 231 2015, notice 3533, PDF page 231: Lorraine Circuit address",
+          "url": "https://www.bodacc.fr/telechargements/COMMERCIALES/PDF/A/BODACC-A_20150231_0001_p000.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The regulator explicitly describes Lorraine Circuit's Gorcy board-manufacturing unit and its surface-treatment workshop; a legal notice supplies ZI le Roitelet. Verify the legal-notice and regulator layout/address linkage; keep the historical unit scope and avoid closure claims. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "b0e54b76-066f-5539-8114-303e9e56c641",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Stockholm's official contamination-inventory search text links MultiCad to PCB/electronics activity at Krossgatan 36-38. The initial PDF open returned document metadata, but passage navigation timed out and the separate appendix exceeded the reader's size limit. Defer until the primary passage and exact site correspondence can be fully inspected; do not convert an industry-directory label into a semiconductor classification. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "b13abe46-8cd8-53b4-bb13-13d2bd753306",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:03:30Z",
+          "excerpt": "printed circuit board manufacturers",
+          "title": "Cistelaier — About us and PCB manufacturing history",
+          "url": "https://www.cistelaier.it/en/about-us"
+        },
+        {
+          "accessed_at": "2026-09-07T17:03:30Z",
+          "excerpt": "Modena Plant … Via Gandhi 1 41122 Modena … Genoa Plant … Via Pillea, 8 16153 Genova",
+          "title": "Cistelaier — separate Modena and Genoa plant contacts",
+          "url": "https://www.cistelaier.it/en/contacts"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Cistelaier's official contacts page distinguishes its Modena plant at Via Gandhi 1, 41122 from its Genoa plant at Via Pillea 8. The EEA record names SITO DI GENOVA but contains the Modena address. The issuer describes PCB manufacture, yet the conflicting source site identity must be resolved before assigning either plant's activity to this record. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "b5de88ff-a0ff-5ce8-86fb-587374be5c06",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:04:46Z",
+          "excerpt": "Oclaro Technology plc, Oclaro Technology Plc EPR/WP3633BB, Caswell, Northamptonshire, NN12 8EQ",
+          "title": "Environment Agency — permit EPR/WP3633BB",
+          "url": "https://environment.data.gov.uk/public-register/industrial-installations/registration/EPR-WP3633BB?__pageState=result-industrial-installations"
+        },
+        {
+          "accessed_at": "2026-09-07T17:04:25Z",
+          "excerpt": "The company operates wafer fabs in San Jose, CA (USA), Caswell (UK)",
+          "title": "Lumentum — EMLs: The Unsung Heroes Powering AI's Digital Arteries",
+          "url": "https://www.lumentum.com/en/blog/emls-unsung-heroes-powering-ais-digital-arteries"
+        },
+        {
+          "accessed_at": "2026-09-07T17:01:59Z",
+          "excerpt": "Fabrication Manufacturing of Optical and Photonic Products.",
+          "title": "Lumentum — ISO 9001 certificate and site annex, February 2026",
+          "url": "https://www.lumentum.com/sites/default/files/2026-02/Lumentum_IS09001_certificate_2028.07.04.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The regulator locates historical Oclaro at Caswell, while later Lumentum sources establish a Caswell fab. Co-addressing across different named entities does not itself prove that the later manufacturing facility is the exact historical EEA establishment; the certificate adds layout dependence. Needed before admission: Obtain a primary site-specific historical Oclaro fabrication account or explicit facility continuity bridge, without creating a canonical owner relationship. Verify the Caswell certificate row if relied upon."
+    },
+    {
+      "candidate_id": "b60ce2a0-1701-5d0b-be5a-512b8351b9dc",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:42:22Z",
+          "excerpt": "Plzeňská 1067, 330 11 Třemošná, Czech Republic … Manufacturing of printed circuit board assembly (PCBA).",
+          "title": "LRQA Certificate of Approval 10619240 — Integrated Micro-Electronics Czech Republic s.r.o.",
+          "url": "https://www.global-imi.com/sites/default/files/Czech%20republic%20Certificate%202024-2027-ISO%209001%20EN.PDF"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The exact Plzenska 1067 quality-system certificate positively defines local PCBA manufacturing. No read primary source in this audit allocated semiconductor die assembly to that site. Visually verify the exact local certificate. Keep explicit reopen conditions for local bare-die, hybrid or power-semiconductor package assembly; do not borrow other-site processes. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "bd2e114b-c141-5798-abc8-82f84df3b35f",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:39Z",
+          "excerpt": "Site name: Newport Semiconductor Plant Facility address: Cardiff Road, Duffryn, Newport NP10 8YJ",
+          "title": "Natural Resources Wales public register — EPR-BV7460ID-V004 Newport Wafer Fab Variation Notice",
+          "url": "https://publicregister.naturalresources.wales/Search/Results?searchTerm=Newport"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only historical semiconductor-facility scope. In the NRW public register, the exact entry EPR-BV7460ID-V004 Newport Wafer Fab Variation Notice, dated November 29, 2019, has details naming Newport Semiconductor Plant, Cardiff Road, Duffryn, Newport NP10 8YJ and customer Newport Wafer Fab Ltd. This is the inspected register entry, not the uninspected linked permit. The register URL is mutable and its external body is not exact-byte retained. Preserve the raw EEA parent and address without an ownership-succession, plant-boundary, current-operation or capacity assertion."
+    },
+    {
+      "candidate_id": "bda1e224-44ec-56e8-9ba6-93c6d8866ebf",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:00:25Z",
+          "excerpt": "The circuit designs were first reproduced as photomasks by courtesy of Compugraphics in Glenrothes",
+          "title": "University of Dundee 2005 project account: Compugraphics photomasks",
+          "url": "https://app.dundee.ac.uk/pressreleases/prmar05/engineering.html"
+        },
+        {
+          "accessed_at": "2026-09-07T17:00:25Z",
+          "excerpt": "la fabrication des masques [...] COMPUGRAPHICS INT. LTD. Newark Road North Eastfield industrial Estate Glenrothes Fife, KY7 4NT Scotland",
+          "title": "ANSSI-CC-2016/12, PDF page 8: mask-manufacturing locations",
+          "url": "https://messervices.cyber.gouv.fr/visas/ANSSI-CC-2016-12-rapport.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T17:01:19Z",
+          "excerpt": "Glenrothes office [...] Newark Rd North, Eastfield Bus. Park [...] KY7 4NT",
+          "title": "MacDermid Alpha official locations: Glenrothes address observation",
+          "url": "https://www.macdermidalpha.com/about-us/locations?page=0"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Historical photomask work in Glenrothes is explicit, but exact-address mask-manufacturing allocation depends on the ANSSI list grouping. The neighboring wafer-manufacturing section creates a concrete layout hazard. Needed before admission: Visually verify the Compugraphics address under mask manufacture and its separation from the following wafer-site section. Keep the modern office listing contextual, not manufacturing proof."
+    },
+    {
+      "candidate_id": "be563488-214f-597e-a64f-3019e7ce6236",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:33Z",
+          "excerpt": "Raytheon, Queensway Industrial Estate, Glenrothes, Fife, KY7 5PY, Scotland",
+          "title": "Environment Agency — semiconductor-sector reduced-rate certificate, 21 July 2017",
+          "url": "https://assets.publishing.service.gov.uk/media/5a822ffb40f0b6230269b4d9/LIT_8123.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T17:02:33Z",
+          "excerpt": "Raytheon opens first UK Silicon Carbide manufacturing facility in Glenrothes.",
+          "title": "Raytheon UK — historical timeline",
+          "url": "https://prd-sc102-cdn.rtx.com/-/media/rtx-uk/who-we-are/history/2018-12/files/ruk_history_timeline.pdf?hash=982723FAFF07B1DBAB1E54EEF256F7B2&rev=508574f05c4c48c9bc4a833ba4a486d2"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. RTX's historical timeline describes semiconductor-diode and silicon-carbide manufacturing in Glenrothes. An Environment Agency certificate lists Raytheon at the exact Queensway Industrial Estate postal address, but its broad sector list also includes equipment and PCB businesses. Neither source explicitly bounds the EEA record's Chemical Plant sub-installation to semiconductor fabrication or materials manufacture. Defer that subunit mapping. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "bf13884b-5bb6-5d52-8420-d357bcf3f9d2",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:40:02Z",
+          "excerpt": "DESIGN AND MANUFACTURE OF INTEGRATED CIRCUITS AND DISCRETE SEMICONDUCTOR DEVICES",
+          "title": "Diodes Zetex Semiconductors IATF certificate 190638-2015-AQ-GBR-IATF, revision February 1, 2024",
+          "url": "https://www.diodes.com/assets/MediaList-Attachments/Diodes-Zetex-Semiconductors-IATF16949-exp040224.pdf"
+        },
+        {
+          "accessed_at": "2026-09-07T16:34:11Z",
+          "excerpt": "Diodes Zetex Semiconductors Limited Zetex Technology Park, Lansdowne Road, Chadderton, Oldham, OL9 9LL",
+          "title": "Oldham Council — Cooling towers register",
+          "url": "https://www.oldham.gov.uk/info/200204/licensing/387/cooling_towers"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The council supplies a matching named industrial location; the certificate supplies the semiconductor-device process. Exact scope is plausible but still rests on a text-only main-certificate association. Needed before admission: Verify the main manufacturing certificate site/scope together. Preserve Lansdown/Lansdowne and zero/letter postcode differences rather than silently repairing source strings."
+    },
+    {
+      "candidate_id": "bf64373b-54e1-5b61-a05d-9a6a9ac4c3b8",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:12:29Z",
+          "excerpt": "Analog Devices International Raheen Industrial Estate Limerick, Ireland",
+          "title": "Analog Devices — directions to Analog Devices International",
+          "url": "https://www.analog.com/en/who-we-are/corporate-information/regional-headquarters/directions-to-analog-devices-international.html"
+        },
+        {
+          "accessed_at": "2026-09-07T17:12:41Z",
+          "excerpt": "Analog Devices International, located at Raheen Road in Limerick, operates a microchip wafer manufacturing plant on their site.",
+          "title": "Ardmac — Analog Devices Raheen wafer-fabrication project",
+          "url": "https://www.ardmac.com/case_studies/analog-devices/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only the reported Raheen campus's semiconductor-manufacturing scope. The directly involved Ardmac project's opening narrative identifies Analog Devices International's wafer plant at Raheen Road; the issuer's directions name Raheen Industrial Estate and describe the business-park main building. The previously inspected participant passage and original access clock are retained; an audit repeat timed out, so no new participant-body verification is claimed. The unverified certificate columns are not relied upon. No individual fab, completed expansion, owner relationship, current operating state or capacity is assigned."
+    },
+    {
+      "candidate_id": "c01c2eab-471f-5760-85ff-fcace4910db7",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:59:12Z",
+          "excerpt": "III-V opto-electronic, semiconductor foundry",
+          "title": "CST Global company release: III-V foundry and printed Blantyre address",
+          "url": "https://www.sivers-semiconductors.com/press/cst-global-and-the-university-of-glasgow-join-forces-to-install-and-operate-an-mocvd-machine/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only historical foundry-site scope. The August 11, 2017 issuer-hosted CST Global release identifies a III-V semiconductor foundry in its opening paragraph and gives 4 Stanley Boulevard, Hamilton International Technology Park, Blantyre G72 0BN in its CST Global address block. The dated narrative supports manufacturing scope without the later contact-page identity. Keep this source ID separate from candidate 201e9f72-3113-5d9c-bdc4-b007e03f8ea5; do not infer installed equipment, ownership, current operation or capacity."
+    },
+    {
+      "candidate_id": "c14a7ab0-088a-5c7c-908b-cd667151b00a",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:17Z",
+          "excerpt": "Site Villach Siemensstraße 2 9500 Villach",
+          "title": "Infineon Austria locations",
+          "url": "https://www.infineon.com/regional/austria/about"
+        },
+        {
+          "accessed_at": "2026-09-07T16:33:44Z",
+          "excerpt": "chip factory for power electronics on 300-millimeter thin wafers at its Villach site in Austria",
+          "title": "Infineon Villach chip-factory announcement, September 2021",
+          "url": "https://www.infineon.com/regional/austria/press-release/2021/mission-future"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only the reported Villach campus's semiconductor-facility scope. The issuer's Austria locations page, Site Villach section, identifies its plant at Siemensstrasse 2; the September 17, 2021 site-specific announcement's opening paragraph describes its chip factory. Preserve Villach-Auen as reported, without assigning the source record to an individual new fab or production line, converting the announcement into present output, or adding capacity, ownership or geometry."
+    },
+    {
+      "candidate_id": "c33672d4-7379-54d2-9a84-3aa3128d6e78",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:55:12Z",
+          "excerpt": "Konektory vyrábíme od vstupních komponent až po finální produkt.",
+          "title": "KYOCERA AVX Components, Bzenec plant description",
+          "url": "https://www.kyocera-avx.cz/cs/o-nas/bzenec"
+        },
+        {
+          "accessed_at": "2026-09-07T16:55:24Z",
+          "excerpt": "KYOCERA AVX Components s.r.o. - Bzenec Spojovací 1613 Bzenec 696 81",
+          "title": "KYOCERA AVX Components, Bzenec contact",
+          "url": "https://www.kyocera-avx.cz/en/kontakty/bzenec"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The dedicated Bzenec page describes connector manufacture from incoming components to finished connectors, and the contact page binds Spojovaci 1613. Keep this Bzenec source identifier distinct from the other KYOCERA plants and retain the dedicated connector process basis. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "c36566c1-60b5-5fe5-b6c2-280bef593fe4",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:30Z",
+          "excerpt": "Production of PCBs: RIGID.flex, embedding technology, advanced solutions, small and medium series … Salzstraße 21 74676 Niedernhall",
+          "title": "Headquarter Niedernhall",
+          "url": "https://www.we-online.com/en/company/locations/niedernhall"
+        },
+        {
+          "accessed_at": "2026-09-07T17:03:23Z",
+          "excerpt": "FLIP-CHIP.embedding: Unpackaged chips of active components are provided with bumps and bonded to structured inner layers.",
+          "title": "Würth Elektronik embedding solutions",
+          "url": "https://www.we-online.com/en/products/printed-circuit-boards/embedding"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Würth's exact Niedernhall location page binds Salzstraße 21 to PCB production including embedding. Its linked technical page distinguishes packaged-component solder embedding, direct chip contact, and unpackaged-chip flip-chip embedding. This is a material semiconductor-assembly boundary, not grounds for an automatic ordinary-PCB rejection. The particular chip-level variants historically performed at this source facility and their admission scope remain to be resolved. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "c389adbc-6ec5-5f56-a1a8-6e10b0c2d443",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:56:33Z",
+          "excerpt": "Závod SADY Za Olšávkou 303 Uherské Hradiště 686 01",
+          "title": "KYOCERA AVX Components, Uherské Hradiště SADY contact",
+          "url": "https://www.kyocera-avx.cz/cs/kontakty/uherske-hradiste"
+        },
+        {
+          "accessed_at": "2026-09-07T16:56:33Z",
+          "excerpt": "In both Uherské Hradiště plants, production is focused on passive electronic components, mainly ceramic, power and special capacitors.",
+          "title": "KYOCERA AVX Components, Uherské Hradiště plants",
+          "url": "https://www.kyocera-avx.cz/en/o-nas/uherske_hradiste"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The issuer expressly applies its passive-capacitor description to both Uherske Hradiste plants, while the contact separately binds SADY at Za Olsavkou 303. Retain both-plants wording plus SADY address; no merging with MESIT or Bzenec. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "ca04b41d-4ebc-547b-b14a-618d67e2e33d",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:03:09Z",
+          "excerpt": "production line for power semiconductors … Königsbrücker Str. 180 01099 Dresden",
+          "title": "Dresden | Infineon Technologies",
+          "url": "https://www.infineon.com/regional/dresden"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only semiconductor production-site scope. Infineon's Dresden page, production description and two-address section, describes wafer manufacturing while distinguishing the Meinholdstrasse laboratories, offices and logistics location. Its contact block gives Konigsbrucker Strasse 180, 01099 Dresden, matching the reported numbered address. Preserve exact raw Unicode spelling and legal-name variants, without merging the two sites, assigning the expansion, or claiming present operation, capacity or ownership."
+    },
+    {
+      "candidate_id": "cbb40c99-6d02-5998-8cc7-22a22e6ede48",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:41:36Z",
+          "excerpt": "Production focuses on different types of printed circuit boards",
+          "title": "AT&S worldwide locations in English",
+          "url": "https://ats.net/en/company/ats-worldwide/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:33:17Z",
+          "excerpt": "hochkomplexen flexiblen und starr-flexiblen Leiterplatten.",
+          "title": "AT&S worldwide locations",
+          "url": "https://ats.net/unternehmen/ats-worldwide/?_sfm_l_region=europe&_sfm_l_type=production"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The reopened issuer location page explicitly separates Fehring's ordinary/flexible/rigid-flex/IMS PCB portfolio and Industriepark 4 from Leoben's ECP, embedded power solutions and IC-substrate work. Use the local Fehring paragraph/technology list only; retain historical/provisional scope and reopen on actual Fehring semiconductor-substrate or bare-die evidence. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "ccab2d90-624c-5e60-8c8c-f09bd16a8be8",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The historical DNP Denmark record at Skruegangen 2, Karlslunde has not been bridged to a verified primary description of manufacturing activity. Screen/optical-component and solar-component discovery labels do not distinguish semiconductor materials/device production from downstream optical or module manufacture. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "ce6100e0-ae68-526c-b4a2-ede321c743ae",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:07Z",
+          "excerpt": "SCHURTER spol. s r.o. has been producing in the Czech Republic since 1991.",
+          "title": "SCHURTER Czech Republic, Malá Skála company location",
+          "url": "https://www.schurter.com/en/about-us/company/locations/schurter-czech-republic"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. SCHURTER's official Czech location page identifies Malá Skála 190, postal 46822, and states that the Czech company has produced there since 1991, but the opened local body does not specify the manufacturing product/process. A linked certificate resolved only to a download shell, and the attempted regional site description failed. Local manufacture is a lead; the exact semiconductor-versus-general-electrical scope remains unverified. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "d08f794b-2312-563d-b5f3-10632d7c8aac",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:00:55Z",
+          "excerpt": "Valtimo Components Oyj [...] Ratakatu 14 75700 Valtimo Finland",
+          "title": "Valtimo Components official contact address",
+          "url": "https://valtimo.com/yhteydenotto/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:15Z",
+          "excerpt": "CNC-koneistus, pinnoitus ja kokoonpano [...] Pinnoitamme terästä, alumiinia, messinkiä, kuparia ja ruostumatonta terästä",
+          "title": "Valtimo Components official manufacturing services",
+          "url": "https://www.valtimo.com/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The company's opened pages affirmatively describe precision machining, metal surface finishing, and mechanical/electronics assembly at Valtimo. They give Ratakatu 14, not the historical source surface-treatment facility at Teollisuuspolku 1. The missing address/process bridge prevents either acceptance or confident facility-specific exclusion. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "d527628a-d4ae-5374-a8d2-3c93bc499f79",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The historical Landshut Silicon Foundry record at Jenaer Straße 1 has a promising municipal former-semiconductor-factory lead, but its body could not be accessed. The opened current LFoundry homepage did not establish the historical Landshut address or process. Historical facility scope therefore remains deferred rather than inferred from the company name. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "d67aa2f8-1161-5751-a990-aa820307eb14",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:59Z",
+          "excerpt": "STMicroelectronics Silicon Carbide AB … Ramshällsvägen 15, 60238, NORRKÖPING, Sweden … DESIGN AND MANUFACTURING OF WIDE BANDGAP SEMICONDUCTOR MATERIAL",
+          "title": "DNV IATF 16949 certificate C595940 — STMicroelectronics Silicon Carbide AB",
+          "url": "https://www.st.com/content/ccc/resource/quality_and_reliability/quality_certificate/certification_document/group3/97/04/cb/f6/88/1e/46/b9/norrkoping-IATF-16949/files/norrkoping-iatf-16949.pdf/_jcr_content/translations/en.norrkoping-iatf-16949.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The certificate describes semiconductor material at the exact Norrköping address, an in-scope process rather than a chemicals-NACE inference. Main site versus remote-support separation still depends on a PDF-only read. Needed before admission: Verify the main Norrköping address/material scope and the remote-support separation visually. The expired stated interval is acceptable historical evidence, not current certification."
+    },
+    {
+      "candidate_id": "d86c12d0-a382-534a-9dff-3000b7889a51",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:02:30Z",
+          "excerpt": "Embedding solutions with integrated semiconductors enable extremely reliable high-performance modules",
+          "title": "Schweizer: Custom PCB & system solutions for all requirements",
+          "url": "https://schweizer.ag/en/technologies-solutions/pcb-technologies"
+        },
+        {
+          "accessed_at": "2026-09-07T16:57:34Z",
+          "excerpt": "PCB production sites in Schramberg in the Black Forest and in Jintan in China … Einsteinstrasse 10 78713 Schramberg",
+          "title": "Schweizer company presentation and locations",
+          "url": "https://schweizer.ag/en/the-company"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Schweizer's own company account names PCB production in Schramberg and its Einsteinstrasse 10 address. Its technical page explicitly describes modules with integrated semiconductors and semiconductor embedding, so a blanket ordinary-PCB rejection would be unsafe. What remains unverified is the exact Schramberg allocation of die embedding versus group/Jintan production and its treatment under the operational scope. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "d9079eb7-d54f-5ac0-9b60-510e79cc2095",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:03:23Z",
+          "excerpt": "Leiterplatten werden in einer Vielzahl von mechanischen, galvanischen und rein chemischen Prozessschritten hergestellt. … Langwiesenweg 73 75323 Bad Wildbad",
+          "title": "Polytron-Print informiert über Gefahren und Maßnahmen im Störfall",
+          "url": "https://polytron-print.de/oeffentlichkeitsinformationen/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The public process description binds Langwiesenweg 73 to copper-clad epoxy/glass board machining, patterning, plating, etching and finishing. Retain the local manufacturing-process description and explicit ordinary-PCB interpretation. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "d948fa05-eae3-51e8-a2d8-30b6ffb2f2cd",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:34Z",
+          "excerpt": "At Multek this means to produce printed circuit boards … Multek Europe factory in Böblingen, Germany",
+          "title": "Regeneration of acid Copper pulse plating baths in PCB production using UV recycling",
+          "url": "https://www.enviolet.com/fileadmin/DAM/PDFs/Badpflege/Copper_Bath_Recycling_at_Multek_2006_LQ.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. A Multek-coauthored historical technical paper on a process supplier's site explicitly identifies PCB production at the Multek Europe factory in Böblingen. That is affirmative ordinary-PCB evidence, but the paper text inspected does not bind it to Herrenberger Str. 110. The exact-address IPC paper lead failed to open. Hold the proposed exclusion pending that facility bridge. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "db84ddab-2035-58a3-8ca9-99247f380744",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:07Z",
+          "excerpt": "de productie van basismateriaal voor printplaten",
+          "title": "Provincial environmental-permit decision for BV ROGERS, OMV_2020131878, Noorwegenstraat 3 Evergem",
+          "url": "https://gpbv.omgeving.vlaanderen.be/api/view/vergunningsbesluiten/bestand?uniekeSleutel=d0ebaf69-4fa1-49ce-b35c-627210fc9b18"
+        },
+        {
+          "accessed_at": "2026-09-07T16:57:53Z",
+          "excerpt": "manufacturing of advanced circuit materials and other related activities at its Evergem, Belgium factory",
+          "title": "Rogers Corporation Announces Further Actions to Streamline Operations and Drive Margin Improvement, June 6 2024",
+          "url": "https://www.rogerscorp.com/news/2024/rogers-corporation-announces-further-actions-to-streamline-operations-and-drive-margin-improvement"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The reopened permit genuinely binds Noorwegenstraat 3 to PCB base materials and elastomer activity, but its broader company description also lists electroluminescent lamps and power-distribution products. Page 17 combines the project area with northern Noorwegenstraat 7. Explicitly adjudicate the wider historical product/process list and tie the EEA establishment to the relevant permit operating area; distinguish ordinary board laminates from semiconductor-specific materials and lamp assembly from device fabrication. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "db990df9-0d1c-5cbe-84ed-c2fbdeae80f5",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:39Z",
+          "excerpt": "ABB Schweiz AG Semiconductors Fabrikstrasse 3 5600 Lenzburg",
+          "title": "ABB Lenzburg site directions",
+          "url": "https://new.abb.com/docs/librariesprovider27/situationsplaene/gra_situationsplan-lenzburg-def_100812_ci.pdf?sfvrsn=2"
+        },
+        {
+          "accessed_at": "2026-09-07T16:33:09Z",
+          "excerpt": "Die Produktionsstätte für Leistungshalbleiter wurde 1981 in Lenzburg eröffnet.",
+          "title": "Genesis – die Schöpfungsgeschichte der digitalen Fabrik in Lenzburg",
+          "url": "https://new.abb.com/news/de/detail/23061/genesis-die-schopfungsgeschichte-der-digitalen-fabrik-in-lenzburg"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The historical Lenzburg power-semiconductor production account is substantive. The exact Fabrikstrasse 3 bridge relies on a PDF location sheet that also describes another ABB activity at number 9. Needed before admission: Visually verify which ABB activity belongs to Fabrikstrasse 3 versus 9, or obtain an equivalent primary HTML address-to-semiconductor plant source. Do not merge the two addresses."
+    },
+    {
+      "candidate_id": "e0730140-b753-5268-93e3-1552400907ce",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:35:07Z",
+          "excerpt": "IQE Silicon Compounds has launched its own SOI product range",
+          "title": "IQE Introduces Customisable Silicon on Insulator (SOI) With Improved Thickness and Doping Control",
+          "url": "https://www.iqep.com/media/press-releases/2011/iqe-introduces-customisable-silicon-on-insulator-soi-with-improved-thickness-and-doping-control/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. IQE's opened 2011 issuer release establishes semiconductor-materials product scope for IQE Silicon Compounds, but it does not tie that activity to the EEA Cypress Drive, CF3 0LW premises. Search results exposed site-specific certificates, but their bodies were not successfully opened. The group's multiple Cardiff facilities and another distinct St Mellons EEA record make a generic Cardiff or group-name match insufficient. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "e35be46b-0643-56b2-9190-4a7a53c41090",
+      "evidence": [],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The bounded search did not produce an opened primary source tying ELECTRONIC APPARATUS at Essenschotstraat, INDUSTRIEPARK 3, Tessenderlo to a specific manufacturing process. Secondary records and search snippets suggested a printed-circuit business and a Ravenshout address variant, but neither is accepted as verified process or address evidence. The historical process and numbered-address bridge remain unresolved. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "e3ee93c1-0faf-580a-af4e-c808a948209d",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:37:02Z",
+          "excerpt": "Milton Keynes (IQE Wafer Technology Substrates) … 34 Maryland Road Tongwell, Bucks Milton Keynes, MK15 8HJ UK",
+          "title": "Global footprint — IQE",
+          "url": "https://www.iqep.com/about-us/sites/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only semiconductor-specific wafer-materials facility scope. IQE's Global footprint page contains a manufacturing-platform introduction and a distinct Milton Keynes Wafer Technology Substrates location at 34 Maryland Road, MK15 8HJ. This named location supplies the materials/address bridge; the generic metal-production NACE label and company words are not the classification basis. No substrate chemistry, process quantity, current operation, parent assignment or geometry is imported."
+    },
+    {
+      "candidate_id": "e60e689b-1ec8-5fa4-9068-3fb0c0548771",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:34:39Z",
+          "excerpt": "STMicroelectronics S.r.l. Stradale Primosole 50 - CAP 95121 CATANIA (CT) - Italy",
+          "title": "STMicroelectronics Catania IATF certificate, revision September 9, 2024",
+          "url": "https://www.st.com/content/dam/aboutus/product-quality-reliability/certifications/pdf/st-catania-iatf16949-en.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The main Catania certificate plausibly binds the numbered source address to semiconductor-product manufacture, but its identity/scope relationship remains text-only and the excerpt is identity-only. Needed before admission: Visually verify page 1 main-site scope or obtain exact-site primary prose. Keep remote support, individual fabs, and new SiC campus projects unassigned."
+    },
+    {
+      "candidate_id": "e7358431-5606-5261-8647-aacf9679d6e8",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:59:42Z",
+          "excerpt": "L/H 20 cumberland drive granby industrial estate weymouth",
+          "title": "Companies House Kemet Electronics Limited: historical Cumberland Drive property references",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/02775957/charges"
+        },
+        {
+          "accessed_at": "2026-09-07T16:59:12Z",
+          "excerpt": "new Electrolytic Innovation Center (EIC) in Weymouth, U.K. [...] dedicated aluminum electrolytic capacitor technology facility",
+          "title": "Kemet issuer release October 2 2013: Weymouth innovation center",
+          "url": "https://www.prnewswire.com/news-releases/kemet-opens-new-electrolytic-innovation-center-in-uk-226119371.html"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Kemet's issuer-authored 2013 announcement describes an aluminum-electrolytic capacitor innovation facility in Weymouth, suggesting passive-component activity rather than semiconductor manufacture. Companies House records connect Kemet Electronics Limited to Cumberland Drive property, but the inspected sources do not explicitly prove the innovation facility is the EEA manufacturing installation at number 20. Defer rather than assign a city's newly described operation to the historical source facility. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "e9a7fd9e-d933-5039-a790-9dea01dfe086",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:11Z",
+          "excerpt": "STMicroelectronics S.r.l. Via Camillo Olivetti 2 - CAP 20864 AGRATE BRIANZA (MB) - Italy",
+          "title": "STMicroelectronics Agrate Brianza IATF certificate, revision August 7, 2024",
+          "url": "https://www.st.com/content/ccc/resource/quality_and_reliability/quality_certificate/certification_document/group3/68/38/ec/87/84/a7/4e/2c/STMicroelectronics_Agrate_Brianza/files/STMicroelectronics_Agrate_Brianza.pdf/jcr:content/translations/en.STMicroelectronics_Agrate_Brianza.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The matching Agrate address and main-site semiconductor scope are plausible, but admission depends on the text-read certificate. The co-addressed ex-Micron EEA record is not thereby identified with this one. Needed before admission: Verify the main certificate address and manufacturing scope visually. Preserve the source misspelling and keep this candidate distinct from ex-Micron/R2."
+    },
+    {
+      "candidate_id": "eab77465-d954-597e-9949-16b99e3a685d",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:41:36Z",
+          "excerpt": "cores for the IC substrate plants",
+          "title": "AT&S worldwide locations in English",
+          "url": "https://ats.net/en/company/ats-worldwide/"
+        }
+      ],
+      "outcome": "accept_in_scope",
+      "reason": "Accept only dedicated IC-substrate-materials scope for the reported Leoben/Hinterberg campus. AT&S's worldwide page, Leoben headquarters section, expressly allocates IC-substrate-core manufacture to the location and prints Fabriksgasse 13, 8700 Leoben. It distinguishes this work from both ordinary PCB products and a separately described new substrate plant. This semiconductor-specific materials process is within the existing substrate scope. Preserve Hinterberg as reported; do not assign HTB3, a particular building, 2024 operation, current lifecycle, ownership, geometry or capacity."
+    },
+    {
+      "candidate_id": "ed2b5aaf-7dcd-5591-ada9-3f6b8429474a",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:51Z",
+          "excerpt": "ongoing conversion project at the Salo, Finland PCB plant.",
+          "title": "Aspocomp interim report January-June 2006: Salo PCB plant",
+          "url": "https://aspocomp.com/reports/aspocomps-interim-report-january-1-june-30-2006/"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:15Z",
+          "excerpt": "The real estate leased by Aspocomp in Salo, Örninkatu 15",
+          "title": "Aspocomp issuer announcement February 27 2008: Salo property",
+          "url": "https://www.globenewswire.com/news-release/2008/02/27/64931/0/en/the-real-estate-leased-by-aspocomp-in-salo-has-been-sold.html"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The 2006 issuer account names the Salo PCB/HDI plant and the 2008 issuer-authored release identifies the Orninkatu 15 plant property. Retain the two historical source vintages and explicit ordinary-PCB interpretation. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "f08ddf22-f5de-5088-8437-d7f550217e4e",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:58:46Z",
+          "excerpt": "une usine de fabrication de composants micro-électroniques de type micro-circuits sur films souples.",
+          "title": "French environmental inspection, PDF page 2: Mantes manufacturing description",
+          "url": "https://www.georisques.gouv.fr/webappReport/ws/installations/inspection/0v4zginKKBfLBhKGaEsgCPZGNUMPdsOX"
+        },
+        {
+          "accessed_at": "2026-09-07T17:02:23Z",
+          "excerpt": "Mantes-la-Jolie - France [...] Products: Tapes, Inlays, Module Packaging",
+          "title": "Linxens microconnectors: separately scoped Mantes and Changi expertise centers",
+          "url": "https://www.linxens.com/en/core-competencies/microconnectors"
+        },
+        {
+          "accessed_at": "2026-09-07T16:58:36Z",
+          "excerpt": "Linxens France [...] ZI des Closeaux 37, rue des Closeaux 78200 Mantes La Jolie",
+          "title": "Linxens official locations: Mantes-la-Jolie address",
+          "url": "https://www.linxens.com/fr/linxens-en-bref"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The exact Mantes site and flexible-film microcircuit manufacturing are supported. The company lists Mantes products as tapes, inlays and module packaging, making this a substantive semiconductor-interconnect/substrate candidate rather than a generic PCB dismissal. But the explicit semiconductor-packaging wording on the same page belongs to Changi, not Mantes. Defer the operational inclusion boundary pending a site-specific chip-substrate or semiconductor-assembly process description. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "f21d8fac-bcb7-5be5-a4ce-f08010e2bdf7",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:40:24Z",
+          "excerpt": "Pure Wafer International Limited Swansea Silicon Semi Conductor, Millbrook Drive, Central Business Park, Swansea Vale, Swansea, SA7 0AB",
+          "title": "Permit Applications Determined — December 2015, Natural Resources Wales",
+          "url": "https://naturalresources.wales/media/675618/environmental-permit-applications-determined-december-2015.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. An opened NRW determination list binds Pure Wafer International Limited to Swansea Silicon Semi Conductor, Millbrook Drive, Central Business Park, Swansea Vale, SA7 0AB. However, the opened regulator entry names the facility rather than describing its wafer-reclaim process. Exact-facility semiconductor-materials activity was not adequately established from an opened primary page in this pass. Wafer reclaim is not rejected merely because NACE labels it materials recovery. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "f3d03714-71f4-5511-99ca-100e70dcbb78",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:04:25Z",
+          "excerpt": "STONE - CIRCUITOS IMPRESSOS",
+          "title": "Municipality of Maia — construction-licence inventory, Annex II",
+          "url": "https://www.cm-maia.pt/cmmaia/uploads/document/file/1655/anexoII.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Maia's official construction-licence inventory contains STONE - CIRCUITOS IMPRESSOS at number 133 in Zona Industrial Maia I Sector VII, Moreira. The EEA source instead identifies lot 134, and the licence table does not establish a manufacturing process. Company-name translation and secondary directories cannot settle semiconductor scope or the address difference. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "f3e2ce01-644e-5ed3-8c9d-012fad4f1048",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:33:17Z",
+          "excerpt": "Nos deux usines situées à Dendermonde et Malville (France) toutes les deux orientées fabrication de circuits imprimés",
+          "title": "ACB factory locations and contact",
+          "url": "https://acb.be/fr/entrez-en-relation-avec-acb/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The issuer expressly describes both Dendermonde and Malville plants as PCB fabricators and binds Vosmeer 3 to Dendermonde. This is an explicit two-plant statement, not an arbitrary group-to-site transfer. Keep local factory address and both-plants process passage; reopen only on actual local die/package/substrate manufacture evidence. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    },
+    {
+      "candidate_id": "f3ecf5a5-d7a5-5e04-b051-2f7de257a99f",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:56:33Z",
+          "excerpt": "These hybrids integrate several types of active and passive add-on parts, inside customized hermetic package",
+          "title": "ESCC/RP/HP/PCAL008 Issue 17, Thales Alenia Space Belgium hybrid-line process description",
+          "url": "https://escies.org/download/webDocumentFile?id=71424"
+        },
+        {
+          "accessed_at": "2026-09-07T16:55:24Z",
+          "excerpt": "Rue Chapelle Beaussart 101 B-6032 Mont-sur-Marchienne (Charleroi) Belgium",
+          "title": "ESA ESCIES: ESCC Process Capability Approval, Manufacturer Thales Alenia Space, page published January 8 2026",
+          "url": "https://escies.org/webdocument/showArticle?id=1059"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. Live text confirms semiconductor bare-chip integration and die interconnection in a named hermetic hybrid line, not merely finished-board assembly. The linked address is independently readable as HTML, but the process description and capability context remain PDF-only. Needed before admission: Visually verify the process description and named line/address association before final acceptance. Record the narrow bare-die hybrid assembly/packaging rationale, not advanced-packaging, wafer-fabrication, or current qualification."
+    },
+    {
+      "candidate_id": "f74b7a81-fee6-53e6-893c-4f8c27c0fb91",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T17:05:36Z",
+          "excerpt": "manufacturing microelectronic devices and MEMS in its 2 wafer fab facilities operating in Glenrothes, Scotland",
+          "title": "Semefab — Foundry & Products",
+          "url": "https://semefab.co.uk/products/"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. The live page describes two Glenrothes wafer fabs and gives a Newark Road South contact address; the research also flags a different North address in a certificate. The company-wide process paragraph does not conclusively allocate manufacturing to the exact South establishment. Needed before admission: Obtain a site-specific primary manufacturing statement or permit for Newark Road South/KY7 4NS. Do not borrow North/KY7 4NT activity or assume both listed premises are the same facility."
+    },
+    {
+      "candidate_id": "fbcae996-40a7-50cf-a7f3-b640ff8142e6",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:07Z",
+          "excerpt": "OPTREX Czech a.s., Bucharova 194, 543 17 Vrchlabí 4",
+          "title": "2018 expert property valuation filed in the Czech contract register, OPTREX address reference",
+          "url": "https://smlouvy.gov.cz/smlouva/soubor/9544959/posudek.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff. A historical valuation filed in the Czech public contract register names OPTREX Czech a.s. at Bucharova 194, Vrchlabí, supporting an address lead. It concerns water-related property rather than the factory's semiconductor/display production process. The local historical manufacturing route remains unverified, and neither a later tenant nor a hydropower property description resolves it. The detailed missing-evidence and scope limits remain recorded under this candidate ID in scope-research-v2; no negative manufacturing, ownership, operation, geometry or capacity claim follows."
+    },
+    {
+      "candidate_id": "fcfff9a6-a113-5a3f-b83a-a7973faec26d",
+      "evidence": [
+        {
+          "accessed_at": "2026-09-07T16:57:29Z",
+          "excerpt": "ein Zweigwerk für die Lagerung und Entwicklung von Explosivstoffen und Gegenständen mit Explosivstoff.",
+          "title": "Diehl Defence public information for the Röthenbach site, brochure marked April 2023",
+          "url": "https://www.diehl.com/cms/files/FlyerINTERNET_Stoerfaelle2023.pdf"
+        }
+      ],
+      "outcome": "defer",
+      "reason": "Defer at this cutoff; the earlier out-of-scope proposal is not a final negative decision. The brochure really describes a Rothenbach branch at Fischbachstrasse 16-20 for hazardous-material storage/development and gives contact number 16. It does not explicitly identify the complete activity scope or boundary of EEA Werk S01331. Obtain an establishment/permit identifier or site-specific process account demonstrating whether this hazard branch is coextensive with the reported Werk, and evaluate any other named activities. Ordinary PCB, passive-component and connector exclusions remain a provisional scope interpretation pending an explicit common boundary. Neither missing evidence nor this deferral establishes absence of semiconductor activity, closure or zero capacity."
+    }
+  ],
+  "filter_version": "eea-industrial-semiconductor-candidates-v1",
+  "format": "semiconductor-atlas-eea-industrial-review-v1",
+  "knowledge_cutoff_at": "2026-09-07T17:35:45Z",
+  "reviewed_at": "2026-09-07T17:35:45Z",
+  "reviewed_by": "Codex root with exposed collaborative scope audits; not independent blind adjudication",
+  "snapshot_manifest_sha256": "3fe6f2d54a04265e7a5d07b31cf4fc87c25147b2c31e66073ff05d8b9c7f132c",
+  "source_candidate_sha256": "1ecb3aa2f1339739c2b889f5bd2831e7868402da116e39c7ac36e1eb649456a7"
+}

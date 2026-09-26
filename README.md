@@ -77,8 +77,28 @@ priorities order work; they are not classifications or decisions. A complete rev
 every candidate as `accept_in_scope`, `defer`, or `reject_out_of_scope`. Accept and reject decisions
 require external HTTPS evidence acquired no later than the declared review cutoff. The importer
 creates source-native facilities and a narrow scalar claim set only for accepted candidates. It
-does not promote review outcomes, coordinates, status, ownership, output, or capacity. No v16
-candidate review has been accepted or imported yet.
+does not promote review outcomes, coordinates, status, ownership, output, or capacity. The
+[September 7 bounded admission](docs/eea_scope_admission_2026-09-07.md) now records 15 in-scope
+decisions and 93 deferrals, with no final exclusions. Its isolated schema-5 database contains
+15 source-local facility records and 132 exact EEA scalar statements; the frozen parent is unchanged.
+Claim-effective dates and uncalibrated confidence remain null, not the publication date or `1.0`.
+
+The [September 7 full-population scope research](review_plans/2026-09-07-eea-industrial-v16-scope-research-v2.json)
+records research for all 108 candidates: 38 proposed in-scope, 23 proposed out-of-scope, and 47
+deferred with explicit missing-evidence or scope reasons. The original
+[31-candidate batch](review_plans/2026-09-07-eea-industrial-v16-scope-research-v1.json) and its entries
+remain unchanged. Research completion is not final adjudication: these are historical
+facility-scope proposals, not accepted claims, new unique fabs, AI-critical additions, or
+operating-capacity evidence. Ordinary PCB, connector and passive-component exclusions remain
+provisional process-specific judgments; chip embedding, packaging and dedicated IC substrates
+need separate treatment. External bodies were web-read, not exact-byte archived; failed/search-only
+leads and pending PDF layout checks remain explicit. Neither research format is importable as an
+adjudication ledger. The separate complete admission review preserves all decisive layout/site/scope
+holds as deferrals. The original v1/v2 importer still allows one immutable review per database.
+The separate [append-only scope-revision workflow](docs/eea_scope_revisions.md) now supports later
+complete decisions, preserves original source statements, and provides cutoff-scoped export and
+parent-bound restoration. The real Newport evidence correction added review history without new
+claims. Different source editions, canonical identity and the 93 evidence/scope holds remain open.
 
 ### Taiwan MOENV candidate contract
 
@@ -343,22 +363,25 @@ cmp review_plans/2026-07-20-eea-industrial-v16-candidates.json \
   /tmp/eea-industrial-v16-candidates.rebuilt.json
 ```
 
-After a complete evidence-backed review exists, validate and import that exact ledger. These
-commands are intentionally not runnable against the repository today because no accepted review
-artifact is present:
+Validate the complete review and replay the retained local admission with its original clock. The
+database and snapshot are ignored local artifacts, not included in a clean clone:
 
 ```sh
 python -m semiconductor_atlas.eea_industrial_review validate-review \
   --candidates review_plans/2026-07-20-eea-industrial-v16-candidates.json \
-  --review review_plans/2026-07-20-eea-industrial-v16-review.json
+  --review review_plans/2026-09-07-eea-industrial-v16-scope-admission-v2.json
 
 semiconductor-atlas ingest-eea-industrial-snapshot \
-  --database atlas.sqlite \
+  --database artifacts/2026-09-07-eea-reviewed-source-statements-v2-corrected.sqlite \
   --snapshot source_snapshots/2026-07-20-eea-industrial-v16-semiconductor-candidates \
   --candidate-queue review_plans/2026-07-20-eea-industrial-v16-candidates.json \
-  --review review_plans/2026-07-20-eea-industrial-v16-review.json \
-  --accepted-at YYYY-MM-DDTHH:MM:SSZ
+  --review review_plans/2026-09-07-eea-industrial-v16-scope-admission-v2.json \
+  --accepted-at 2026-09-07T18:00:52.627180Z
 ```
+
+For a new admission to a separately prepared existing schema-5 database, use `--accept-now` instead
+of `--accepted-at`. The latter is replay-only, not permission to backdate a fresh import. The EEA
+command does not initialize or migrate databases, and changed reviews fail closed.
 
 The bounded GLEIF fetcher accepts one checksum-valid uppercase LEI per line in canonical sorted
 order. It spaces request starts by at least 1.1 seconds, retries a Golden Copy rotation as a whole,
@@ -466,8 +489,200 @@ rights decision.
 
 The achieved row-level coverage and unresolved evidence are recorded in
 `docs/ai_critical_baseline_v1_gap_matrix.md`.
+The [public-release handoff audit](docs/supply_intelligence_handoff_audit_2026-09-07.md)
+verifies the published r3 asset and distinguishes consumer compatibility from the still-missing
+evidence for quarterly Blackwell supply estimates.
+
+### Cross-vintage change ledger
+
+Compare two independently built AI-critical release directories into new, non-existing output
+paths:
+
+```sh
+python3 scripts/compare_ai_critical_releases.py \
+  --prior releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3 \
+  --current releases/YYYY-MM-DD-ai-critical-manufacturing-baseline-v2 \
+  --output releases/YYYY-MM-DD-ai-critical-manufacturing-changes-v1 \
+  --archive releases/YYYY-MM-DD-ai-critical-manufacturing-changes-v1.tar.gz
+```
+
+The comparison is a deterministic cross-vintage ledger and alert-proposal layer. It pins both input
+release manifests, derives stable semantic series independently of release-local claim IDs, and
+records each series as `reaffirmed`, `revised`, `added`, or `not_carried_forward`. The last status
+means only that a prior series was not carried by the current release. Omission is never negative
+evidence without a durable ledger proving that the relevant source, scope, and interval were checked
+successfully.
+
+Series identity binds the value kind. Capability slices additionally bind category, technology, and
+effective date. Capacity slices additionally bind metric, basis, unit, accounting scope,
+input/output basis, quantity semantics, period, technology scope, and effective date, so unlike
+quantities are never revised across one another. A material capacity proposal fires when the exact
+rational change in any comparable `low`, `base`, or `high` bound is at least 15 percent; it never
+uses ambient decimal precision or non-finite JSON numbers.
+Readiness changes with a later effective date also produce proposals when the two observations
+match unambiguously on entity, category, and technology; both dated evidence lineages are retained.
+
+Structured release payloads must validate under the installed schema. Manifest-bound historical
+rendering differences are tolerated only for release `README.md` and `METHODOLOGY.md`; structured
+claims, evidence, provenance, exports, hashes, and clocks remain exact. The retained local `r2` to
+`r3` comparison therefore resolves to 75 reaffirmed series and zero alert proposals.
+
+Alert proposals have unknown confidence and are not delivery-eligible. The separate
+[review ledger](docs/ai_critical_alert_review.md) adds acknowledgment and retraction; calibrated
+hysteresis and blind historical detection-performance evaluation remain open. This does not
+complete roadmap Phase 3. The [frozen diagnostic evaluator](docs/alert_evaluation.md) measures
+evidence-linked retrospective labels, preserves unresolved outcomes and separates backfills from
+in-window detections. It cannot certify blind performance or enable delivery.
+The comparison writes a new bundle and optional deterministic archive;
+it does not modify either input release, including the retained `r3` bundle. Output paths are preflighted outside
+both inputs. The bundle and archive are separate no-replace publications, so a late archive failure
+can leave the already validated bundle in place.
 
 ## Release and interface
+
+### Reviewed Amkor update
+
+The [September 7 Amkor review](docs/amkor_peoria_successor_review_2026-09-07.md) exercises the
+complete local evidence-to-change loop: three exact document checks, a reviewed successor input,
+reproducible release, and one lifecycle review proposal. It preserves four failed acquisition
+attempts and explicitly leaves the other six companies unrefreshed. Old NIST throughput figures
+remain historical assertions with unresolved applicability to the expanded project; their omission
+is not capacity loss. This is late ingestion of earlier evidence, not proven early detection.
+
+The [reviewed-URL collector](docs/curated_acquisition.md) now repeats the three selected document
+checks with bound policy gates, retained failure receipts, content comparisons and offline replay.
+Last-eligible observations survive failed later checks. The first successful repeat found two
+byte-identical Amkor pages and a NIST page with unchanged visible text; it accepted no new claims.
+This is a batch acquisition tool, not a scheduled service or complete publisher search.
+
+The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
+across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
+actions and historical cutoffs replay from an exportable append-only event log. The live pilot
+preserved three pending items through a quiet repeat, then resolved them through recorded review
+against the earlier evidence. Queue disposition does not accept claims or grant publishing rights.
+
+The [coverage report](docs/curated_coverage.md) binds the full seven-company denominator to an
+explicit monitoring catalog. It distinguishes recent document checks, stale evidence, blocked or
+failed checks, expired review windows, and unresolved review work. The initial pilot retains three
+recent Amkor document checks and six unmonitored cohort facilities. The later
+[NIST expansion](docs/nist_monitoring_expansion.md) adds two exact project-page checks for TSMC
+Phoenix and Samsung Taylor: five fresh documents, three configured facility scopes, four remaining
+gaps, and two pending review items. Report v2 exposes the broader document scopes; v1 reports remain
+byte-replayable. An empty queue is not complete coverage or accepted manufacturing evidence.
+
+The [scheduled polling runner](docs/curated_poll.md) now connects those components with a process
+lock, cadence guard, retained invocation receipts, and completed-packet recovery before refetch.
+A daily 08:00 local app task is enabled for the seven reviewed URLs. Manual end-to-end
+capture and not-due repeats passed; scheduler-triggered execution and uninterrupted operation
+are not yet demonstrated. It does not accept claims, publish data, or enable restricted sources.
+
+The separate [NIST index discovery collector](docs/nist_discovery.md) follows the reviewed current
+news and awards page chains, retaining exact responses and pagination accounting. Its manual pilot
+observed 64 document links across six index pages, with 14 company-name matches for review; it
+fetched no linked documents and accepted no claims. The inventory retains earlier links through
+later failures or rolling-window disappearance, and a restored packet reproduced its bytes exactly.
+The subsequent [discovery queue and runner](docs/discovery_review_and_poll.md) retain URL review
+dispositions, admission-time replay and crash recovery; the existing daily task now runs both
+collectors sequentially. Its manual pilot preserved all 64 URLs and two explicit deferrals through
+an unchanged repeat. Actual scheduler execution remains unobserved. This is current index coverage,
+not complete publisher history or additional refreshed facilities.
+
+The [Intel expansion](docs/intel_chandler_monitoring.md) added a municipal page explicitly
+naming Fab 52, bringing monitoring to six documents across four of seven scopes. Its undated
+opening/production statement was reviewed without changing the manufacturing baseline; no HVM
+attainment or usable capacity is inferred. Its versioned v3 catalog/config preserved prior plans
+and due times. The 14-event queue and historical v1/v2 reports replay exactly.
+
+The subsequent [Micron MTI expansion](docs/micron_mti_monitoring.md) brings monitoring to seven
+documents across five of seven scopes, using one Singapore government speech about the January 8,
+2025 HBM packaging groundbreaking. This is a recent check of an old document, not a current
+production or capacity observation. Its first text version was reviewed without changing the
+baseline. The daily task now uses v4; prior plans and due times are unchanged. SK hynix M15X and
+ASE Kaohsiung remain unmonitored. The 16-event queue restores at every event cutoff, and historical
+v1/v2/v3 coverage reports remain byte-identical. Two earlier NIST text-review items remained pending
+at that pilot's cutoff.
+
+The [discovery-to-source handoff](docs/discovery_handoff.md) now verifies an observed URL through
+separate exact-document access approval, retained acquisition and explicit text review. One manual
+Samsung Taylor capture repeated the monitored Austin page's project narrative; both versions were
+reviewed without a baseline revision. CMS page dates are retained separately from claim dates and
+physical milestones. The duplicate URL was not added to the recurring catalog. The source queue
+now has one pending TSMC text review, and historical v1/v2/v3/v4 coverage reports replay exactly.
+The handoff's local historical projection is retrospective and depends on original capture packets;
+it is not a portable source archive, claim acceptance or evaluated early detection.
+
+The [reviewed source-native project target gate](docs/source_project_targets.md) now admits the
+TSMC Fab 2 target revision into the core claim store: two separately retained NIST document
+statements, 2028 and second half of 2027, on an unassigned source-native project. Schema 5 preserves
+unknown effective dates and confidence, literal calendar precision without an invented midpoint,
+and actual admission clocks. Its knowledge-time export is separate from physical-world claims;
+the first-fab baseline, capacity and attained production remain unchanged. The original schema-4
+database and r3 artifacts are preserved. This is reviewed historical evidence, not early detection,
+a calibrated forecast or a new public release.
+
+The [AI-critical alert-review ledger](docs/ai_critical_alert_review.md) now connects retained
+comparisons and both underlying releases to append-only proposal review. Imports require a
+manifest-bound review record; portable exports retain derivative evidence and supporting reviews.
+Acknowledgment, resolution, retraction and reopening preserve admission-time history without
+changing canonical facts or enabling delivery. The Amkor pilot is retrospective, not a measured
+early-detection success. The [Micron acquisition review](review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
+leaves the selected issuer-site route disabled pending rights sufficient for durable retention;
+the separately reviewed government speech does not change that restriction.
+
+The [unified proposal-review queue](docs/alert_review_v2.md) now brings the Amkor facility proposal
+and the separately scoped TSMC Fab 2 target proposal into one version-2 history. A read-only producer
+replays already accepted core evidence from a coherent database snapshot; a separate packet-bound
+review admits the proposal at its actual new clock. The original Amkor events remain unchanged.
+Both local proposals are acknowledged, neither is delivery-eligible, and offline packet consistency
+is explicitly distinct from replaying the original source acceptance. Blind performance evaluation
+and calibrated forecasting remain open.
+
+The [accepted-project population evaluator](docs/project_target_evaluation.md) freezes every
+supported-route comparison before a cutoff, including unadmitted revisions and reaffirmations.
+Post-freeze source-statement labels measure conditional support and admission coverage; they do
+not establish realized production, publisher recall, independent evaluation or calibrated forecasts.
+
+The [retained source-observation inventory](docs/curated_observation_population.md) moves the
+denominator before claim acceptance: every captured document check, unimported capture and durable
+polling intent in its declared inputs remains visible. The actual frozen sample has 22 checks,
+including unchanged and policy-blocked observations; collector classifications are not semantic
+revision labels or proof of complete publisher coverage.
+
+The [prospective source-target workflow](docs/prospective_source_targets.md) adds pre-window
+registration, pure target-literal detection, durable shadow predictions and full-population
+closure. It includes all seven configured documents; four have parser routes and three abstain.
+The fixed September 8–15 UTC study does not yet supply future outcomes, independently reviewed
+labels, measured detector performance or calibrated forecasts.
+
+The separate [prospective outcome evaluator](docs/prospective_target_evaluation.md) pins its
+scoring policy before observations, produces source-only review material after closure and
+retains unresolved labels, abstentions, late and missing outputs in conditional document-triage
+diagnostics. It does not infer reviewer independence, subject-level correctness or physical truth.
+
+The separate [source-assertion inventory](docs/source_assertions.md) extracts bounded ceremony,
+opening, production and undated aspiration wording from the retained Amkor, Chandler and MTI
+documents. It preserves all 22 document opportunities: five unchanged Amkor pairs, two
+extraction-only first observations and 15 checks outside these three routes. Exact evidence and
+source context remain bound; first observations, unsupported wording and editorial revisions
+cannot become manufacturing progress. This is exposed engineering work, not a change to the
+registered study, claim acceptance or measured detection performance.
+
+The separate [source-native statement review](docs/source_statement_review.md) now labels all
+22 frozen checks: eleven target-bearing pairs, five scoped no-target findings and six uncomparable
+checks. Sixteen reviewed target pairs reduce to nine distinct evidence pairs, with no revisions
+found in these supplied versions. Source-native scope, literal deadlines and milestone distinctions
+remain explicit; this exposed retrospective review measures coverage, not alert accuracy or
+physical production. It leaves the frozen collector population and accepted claims unchanged.
+
+The separate [selected source-vintage review](docs/source_vintage_review.md) now compares every
+exact NIST award URL shared by the retained July snapshot and frozen September inventory: three
+URLs, with 25 unmatched historical award pages and 13 outside September checks kept explicit.
+Eight reviewed calendar-target formulations include two changed Fab 2 formulations describing
+one revised subject; the other six formulations are unchanged. The July anchors do not replace
+actual collector predecessors. All 369 retained source bindings verify, and the new report
+rebuilds byte-identically while earlier reports remain unchanged. This is exposed retrospective
+review, not a detector prediction, independent evaluation or proof of physical acceleration.
+The next gate requires prespecified future detector outputs followed by separate adjudication.
 
 Create a deterministic release for explicit world-state and knowledge cutoffs:
 
@@ -487,6 +702,30 @@ parameter-fingerprinted, but every coefficient and ramp curve is labelled `assum
 It has not been calibrated or backtested and is not approved for investment use.
 The CLI builds from a private SQLite backup, so forecasts, alerts, claims, source inputs, and coverage
 share one database snapshot without holding a long read lock on the live store.
+
+The separate [milestone benchmark](docs/milestone_benchmark.md) and
+[CLI workflow](docs/milestone_benchmark_cli.md) freeze evidence-bound timing scenarios and match
+them to separately reviewed outcomes. They preserve cutoff-safe lineage, project/geography splits
+and unknown or censored cases without writing core claims or embedding publisher bodies. The
+workflow is tested, but no real prediction/outcome study or calibrated forecasting result has been
+produced. See the [implementation review](docs/milestone_benchmark_implementation_review.md).
+
+The separate [realized-event workflow](docs/realized_milestones.md) now retains one
+[reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
+with year-2024 bounds and a null midpoint. It is a source-reported retrospective event, not a
+canonical core claim, an HVM alias, independent physical corroboration or a scored forecast pair.
+
+The [complete operating-fab cohort](docs/tsmc_operating_fab_realizations_2026-09-07.md) now
+retains all 16 source-native rows from the same issuer table: 15 additional reported commencement
+years and the unchanged Fab 21 observation. Its [review and replay workflow](docs/realized_fab_cohort.md)
+preserves the original admission, complete row inventory and explicit operating-only selection
+bias. This is a retrospective evidence cohort, not a historical project census or a forecast result;
+the published seven-company baseline and frozen core remain unchanged.
+
+The [frozen source runtime](docs/frozen_runtime.md) retains the complete committed package,
+migrations, scripts and required web assets for isolated historical verification. All five
+existing realization/registration/policy/population replay operations pass with their project
+imports bound to that runtime. It does not migrate the core or reroute scheduled execution.
 
 Generate the standalone, dependency-free interface from the release GeoJSON:
 

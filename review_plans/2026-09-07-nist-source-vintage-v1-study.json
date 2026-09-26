@@ -1,0 +1,14 @@
+{
+  "after_population": {
+    "path": "artifacts/2026-09-07-curated-observation-population-v1-r3-frozen.json",
+    "sha256": "857d95ff223d83e30666d0ad73481f4901ff84e579ae1cb8da767f63de4a6fd4"
+  },
+  "before_manifest": {
+    "path": "source_snapshots/2026-07-17-open-seed/manifest.json",
+    "sha256": "4bc7aeecde774055c8dc13728588fd132152e3006adc25008b51396494b78723"
+  },
+  "format": "semiconductor-atlas-source-vintage-study-v1",
+  "selection_rationale": "Retrospective development study of every historical NIST award-detail URL also present among all in-window document checks or incomplete planned-document cases in the frozen September source inventory. Do not select only the known TSMC Fab 2 revision, alias URLs, or discard failure-only intersections. Select the latest content-eligible successful response for each shared exact URL, preserving all other checks and actual collector predecessors. July directory naming does not override the manifest's corrected July 18 batch-completion clock. The reviewers have prior exposure; this is not preregistered, blind, independently adjudicated, publisher-complete or an alert-performance evaluation.",
+  "selection_rule": "all-shared-nist-award-urls-latest-eligible-response-v1",
+  "study_id": "2026-09-07-all-shared-nist-july-september-source-targets-v1"
+}

@@ -1,0 +1,43 @@
+{
+  "format": "semiconductor-atlas-monitoring-gap-review-record-v1",
+  "verified_at": "2026-09-07T14:59:09.123040Z",
+  "verification": {
+    "path": "artifacts/2026-09-07-monitoring-gap-review-v1-verification.json",
+    "sha256": "d64761b75b0f7fc56d5070d51bfbd6bf3b13e80d9c336813293f660e0381f48e",
+    "verifier_path": "artifacts/2026-09-07-verify-monitoring-gap-review-v1.py",
+    "verifier_sha256": "7abaff42f10556ed3b801503eb8272f6baa7ecb1e5a43519fa4679447a625429"
+  },
+  "research_decisions": [
+    {
+      "path": "review_plans/2026-09-07-m15x-moel-acquisition-deferred.json",
+      "sha256": "6fe75b1456550109792acbaf31e98762d165c001ae6cc963115656c945577cbe",
+      "decision": "retention_rights_unverified"
+    },
+    {
+      "path": "review_plans/2026-09-07-ase-kcg-acquisition-deferred.json",
+      "sha256": "1edf61035f1197ee1e87f3fc78723cda77ea06ccd694113788458be224cc2fc1",
+      "decision": "missing_policy_unsupported_by_current_collector"
+    }
+  ],
+  "validation": {
+    "exact_policy_response_receipts_verified": 3,
+    "original_checksum_listed_payloads_passed": 353,
+    "frozen_source_population_replayed": true,
+    "exposed_amkor_byte_identical_pairs": 5,
+    "exposed_intel_first_observations": 1,
+    "exposed_micron_first_observations": 1,
+    "original_registered_detector_and_policy_preserved": true,
+    "independent_read_only_review": "No blocker found in policy bindings, source-clock distinctions, preserved unknowns or exposed-observation counts. This engineering review is not independent future outcome adjudication."
+  },
+  "new_collectors": 0,
+  "new_calendar_parser_routes": 0,
+  "new_manufacturing_claims": 0,
+  "publisher_source_documents_archived": 0,
+  "policy_response_bodies_archived": 3,
+  "real_future_packets": 0,
+  "real_future_predictions": 0,
+  "scheduled_configuration_modified": false,
+  "registered_study_modified": false,
+  "raw_redistribution": false,
+  "calibrated_forecast": false
+}

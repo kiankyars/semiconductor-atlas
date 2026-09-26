@@ -1,0 +1,767 @@
+{
+  "audited_at": "2026-09-07T17:35:45Z",
+  "boundaries": [
+    "All 108 decisions bind the unchanged candidate queue and snapshot. The original v1/v2 research artifacts are historical records, not silently corrected or replaced.",
+    "This is exposed Codex-assisted collaborative review, including self-originated proposals, not human sign-off, independent blind adjudication or measured detection accuracy.",
+    "The 18 conditionally supported exclusion proposals are deferred in the admission review because ordinary PCB, passive-component and connector scope remains provisional, and some also retain decisive PDF checks. Five other exclusion proposals have additional explicit site/process ambiguities.",
+    "The 15 accepted candidates have a direct named-site semiconductor or semiconductor-specific materials bridge. Two self-contained PDF prose accounts support scope without certificate-row association. No PDF page image was inspected; all decisive certificate/table/grouping dependencies remain deferred.",
+    "The review stores only bounded excerpts and citations from external sources, not exact-byte external source archives or source authenticity certificates. All original evidence access clocks are preserved. The immutable EEA package is the retained source for every imported scalar.",
+    "Fresh root body checks covered Infineon Regensburg/Dresden/Villach, Bosch Dresden, SEH Europe, IQE Milton Keynes, X-FAB Corbeil, CST's 2017 release/history and CORDIS participant, AT&S Leoben, ams Regensburg direct prose, NRW St Mellons direct prose, NRW Newport's exact register entry, and Analog issuer directions. They occurred between 2026-09-07T17:30:17Z and 2026-09-07T17:32:01Z, before the review cutoff.",
+    "Greenock ATREG and Analog Ardmac rely on the earlier successfully inspected passages retained in v2, with original access times. Repeat body checks timed out; no fresh verification or contradictory content is inferred and no access-stop workaround was used.",
+    "Accepted EEA source IDs remain distinct, including the two CST records. Review eligibility does not create canonical identity, ownership, current operation, manufacturing attainment, geometry, output or capacity claims.",
+    "New admissions require the corrected schema-5 v2 importer: unknown effective time and uncalibrated confidence remain null. The v1 importer must not create a new publication-dated or confidence-one admission.",
+    "One immutable scope review per source/database remains the supported contract. Later differing reviews need append-only scope revision and current-scope consumer semantics; withdrawal must not assert physical closure or delete source history."
+  ],
+  "collaborative_audits": [
+    {
+      "independent_blind": false,
+      "kind": "38 proposed inclusions",
+      "local_working_report_sha256": "67ba3da5cb56d9bf51a2213d6fe4daabe16115a6a4e2f490ff44ff57ebd741f5",
+      "pdf_layout_holds": 15,
+      "scope_boundary_holds": 2,
+      "scope_supported": 15,
+      "self_originated_proposals": 9,
+      "site_bridge_holds": 6
+    },
+    {
+      "additional_scope_or_site_holds": 5,
+      "conditionally_supported_rejections": 18,
+      "independent_blind": false,
+      "kind": "23 proposed exclusions",
+      "local_working_report_sha256": "f1fec49451c8cfc22f64495aa615b7a4d8b6b84a5967acfa359b897ef289b873"
+    }
+  ],
+  "counts": {
+    "accept_in_scope": 15,
+    "complete_review_decisions": 108,
+    "defer": 93,
+    "reject_out_of_scope": 0,
+    "unchanged_research_deferrals": 47
+  },
+  "format": "semiconductor-atlas-eea-industrial-admission-audit-v1",
+  "inputs": [
+    {
+      "path": "review_plans/2026-09-07-eea-industrial-v16-scope-research-v1.json",
+      "sha256": "916621ebaf3f670ef8812065c1cddb8b13823b476824fb75a47e7f23df8238b4"
+    },
+    {
+      "path": "review_plans/2026-09-07-eea-industrial-v16-scope-research-v2.json",
+      "sha256": "b6ff8b365d012c5036aec5b5529ee4f844f49ee2ca2cf9368b79b99361f8cba8"
+    }
+  ],
+  "records": [
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "01e2e603-7934-540a-988b-746042959257",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify certificate scope/address visually before relying on its layout; retain the exclusion only for the stated historical passive-process interpretation."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The certificate binds an organization-wide certified capacitor process to Dvorakova 328. Tantalum/niobium-oxide electrolytic capacitors are affirmative passive products, not a semiconductor-device process merely because materials overlap.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_site_bridge",
+      "candidate_id": "04f94cca-3f9a-548f-8ee3-b576c83cb81f",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain a facility-specific primary statement tying material growth or detector fabrication to First Avenue, or visually verify a source section that directly makes that connection. Preserve the 2019/2022/2024 clock distinction."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Southampton semiconductor-detector manufacture is explicit, but a paper author's First Avenue affiliation does not by itself locate the manufacturing process at that street address. The slides and paper remain text-only, and later Leonardo UK naming is not an identity bridge to every historical Leonardo MW establishment.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "05dc8613-9710-55d7-9d1e-dc184ad9b97f",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No additional scope evidence identified. Carry the site-description and contact-section locators into the final decision, preserving campus limits."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The dedicated Regensburg account combines the manufacturing campus description and matching numbered address. No wrong-site allocation is apparent at the source-facility scope; individual lines and buildings remain unassigned.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "defer_scope_ambiguity",
+      "candidate_id": "11f6ae38-336d-560a-9794-01fc778c4c49",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain readable issuer process documentation and a local allocation of interposer/glass-substrate and embedded-component work; distinguish passive embedding, bare die, and ordinary board products."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The existing page establishes PCB manufacture, but a specific primary brochure search extraction additionally advertises embedded components and interposer/glass substrates. That is a material unresolved boundary under broad semiconductor substrate/assembly scope.",
+      "recommended_outcome": "defer"
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "13e642ba-72c1-5c96-b640-3bce6b9867a0",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Retain source-native spelling/address and explicit ordinary-PCB operational interpretation; reopen if a local semiconductor substrate or bare-die process is evidenced."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The firm's own Kenzingen production account and exact Carl-Benz-Strasse 1 contact positively identify prototype-to-series PCB manufacture.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "1becff5f-0ca1-575d-9ce4-61281e47458e",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No additional site/process bridge identified. Retain PDF page 3 section 1.3 and the text-only limitation; visually verify any additional layout-dependent field before using it."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The public-information paragraph itself names Leibnizstraße 4 and opto-semiconductor manufacture, followed by chip-processing prose. Its support is not dependent on associating neighboring table rows. Text-only PDF provenance remains explicit.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "defer_evidence_bridge",
+      "candidate_id": "1d6a7b5d-bca5-5228-9995-775479d16266",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Read a plant-level issuer process account or annual-report properties row and bridge it to Bergmannova 392; visually check any multirow mapping."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The VDE evidence establishes a particular capacitor product and place of manufacture, but is a product certificate rather than an establishment portfolio. It cannot alone settle whether the reported facility has another in-scope activity.",
+      "recommended_outcome": "defer"
+    },
+    {
+      "admission_readiness": "hold_site_bridge",
+      "candidate_id": "1fe16c09-a11f-524a-b3ec-dcd8a508cbb0",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain a historical plant/permit source tying the specific ex-Micron establishment to R2 and Via Camillo Olivetti 2; verify relevant PDF layout. Do not use the modern campus certificate alone or merge the separate Agrate source IDs."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The historical report establishes an ex-Micron R2 fab in Agrate, while the modern certificate covers the wider address. The exact 2013 EEA facility is not independently tied to R2 rather than another co-addressed establishment. Report integration in 2014 is not proof or disproof of the source-name handover clause.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "201e9f72-3113-5d9c-bdc4-b007e03f8ea5",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No additional scope bridge identified. Keep the two CST source IDs separate and record Hamilton versus Blantyre as source variants, not a canonical municipality correction."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The historical foundry release includes the numbered street and park, with expanded legal-name and manufacturing context in additional sources. This is stronger than a generic corporate-name or office-only match.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "23332aeb-950b-55c8-af76-552ead0cbceb",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the main certificate's Bourns site/address and power-semiconductor scope together, or obtain equivalent facility-specific HTML. Do not require current certificate validity for historical scope."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The proposed process is clearly in scope and the reported Bourns parent agrees, but the sole external support is a text-read certificate whose address-to-scope relationship has not been visually checked.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "241ad8a2-513a-509c-a93c-1f5e5b9fdff3",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No new scope evidence identified. Keep the adviser's specific factory/location passage as the basis; treat the certificate as contextual until visual verification and do not infer a transaction timeline."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The directly involved adviser identifies a wafer fab at the source's named estate and road, independently of the later certificate. The certificate supplies supplementary name/postcode context, not the sole fab or location bridge.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_site_bridge",
+      "candidate_id": "320955bb-3508-5aee-b3fc-30cf2fbdb1ee",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain a primary plant-specific Tamerton Road manufacturing account or permit. Respect prior failed certificate access; keep the unusual source building_number and historical corporate names unchanged."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The government study supports a Plymouth fab, but Companies House supplies a registered-office address rather than a manufacturing-site address. Combining those facts does not conclusively locate the fab at Tamerton Road, even with the historical X-FAB name.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "36df25a3-d0da-506f-b2fa-a14419d3d045",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Preserve the manufacturing paragraph and address locators. A future precise plant-boundary or subfacility assignment would need stronger location evidence; none is proposed here."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The official page describes a specific Livingston wafer-manufacturing facility and gives the matching Wilson Road/Eliburn address. Separate sales-office discussion does not replace the manufacturing paragraph. Bounded site scope is supported; no process quantities are admitted.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "3a3e7c88-0693-5170-adb9-0686dfb58596",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No additional scope evidence identified. The retained excerpt is mostly identity text, so add a precise manufacturing-section locator in the final reason without exceeding the existing quotation budget."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The dedicated Dresden public-information account identifies the semiconductor plant, local fabrication process, and numbered address. A live spot-check confirmed those sections. Legal-form variants are not silently reconciled.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "459a936c-5c67-5c29-a53c-cb271607cec2",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify the Rožnov manufacturing row and separation from 1. máje 2594, or replace it with primary exact-site prose. Retain both Czech source IDs independently."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The certificate proposal points to the correct numbered fab address rather than the separately listed design center. Nevertheless the admission depends on an unverified site-row/scope association.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "463cc0f1-bce1-5600-bfe3-af8b46d5a91e",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the full Stockport row and its fabrication/test scope with a page locator. Preserve the historical certificate interval without backdating or extending operation to 2019 or today."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Historical NXP wafer-fabrication scope is appropriate, but the stored quotation is address-only and the manufacturing assignment depends on the certificate schedule layout.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "519f45b0-d803-5fbd-bc27-8f3f7a7ef2dd",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Preserve the address difference and ordinary-PCB interpretation; do not allocate group services or infer absence over time."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The official local company account affirmatively describes prototype PCB production and binds Boskovice Prumyslova 2503/2.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "52caa403-adab-5dc3-ae60-1bc0659659b6",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Use the Andlau-specific stamping passage and factory address, not assembly processes explicitly allocated to other Stocko locations."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "Stocko explicitly allocates connector precision stamping to Andlau and separately labels the exact factory/delivery address. This is better than a generic group product menu.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_scope_boundary",
+      "candidate_id": "5a479d4a-8af9-5d1f-a066-f2743e495ec3",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Record explicit photovoltaic-device/material inclusion criteria and apply them consistently with BP Solar. If relying on the certificate for legal-name/site allocation, visually verify its appendix; HTML already supplies a substantive exact-site bridge."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The live HTML directly supports solar-cell-material manufacture beside the named campus at Brinellvägen 32. The main unresolved question is whether the final Atlas scope deliberately includes this photovoltaic material/device category; absence of a solar exclusion is not a completed policy decision.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_site_bridge",
+      "candidate_id": "62a47c9b-cfb4-5663-9326-025a4d572941",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain a plant/permit or company site source that binds fab/manufacturing scope to the reported Tobelbaderstraße 30 establishment, or explicitly justify and document its campus aggregate scope. Do not geocode adjacency or merge municipality labels."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The live headquarters page says a fab is beside the castle and gives the headquarters address. That is a credible campus lead, but adjacent fab and headquarters are not automatically the same reported establishment. The research reason currently overstates exact-facility readiness.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "6445ec94-4db9-51ad-800d-b3573a96dc0c",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Preserve cover/introduction locators, draft status, date placeholders, and Cypress/Cyprus discrepancy. No issued-permit, current-operation, or location-normalization claim should follow."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The regulator-hosted draft identifies one named St Mellons plant and describes semiconductor-material manufacture. Historical scope can be supported by that introductory prose without treating the draft as an issued permit.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_scope_boundary",
+      "candidate_id": "6b46a67e-8e3c-5c30-92dd-1e3b9f8492cd",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Record an explicit, consistent photovoltaic-cell inclusion decision. Keep PRTR non-independent from EEA where applicable, and retain the construction participant as distinct corroboration without adopting production quantities or closure chronology."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Regulator and directly involved project evidence establish historical photovoltaic-cell manufacture at the named Tres Cantos facility. The uncertainty is scope policy, not mere panel-versus-cell wording. PRTR and EEA may share a reporting chain.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "6c48e20d-ddee-55c1-97a1-800aefd7397b",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Carry both historical local process evidence and exact-address certificate, preserve name vintages, and verify layout before final use."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "Historical SERV evidence names the Oostkamp operation and its automotive connectors/inductive coils; the later exact Siemenslaan 14 certificate independently supports connector/mechatronic manufacturing.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "70837de4-e0a8-5a4d-9055-341a58cc6333",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify the Ireland address and manufacturing scope on annex page 3, including the main/annex relationship. Accept at campus scope only; no individual Leixlip fab assignment."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Intel Ireland integrated-circuit manufacture is unambiguously in scope, but the support is a text-only multi-site certificate annex. An incorrect row attachment would change the meaning.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "825c81fc-b014-576f-bc2e-427ad87f7164",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Add the opened named-company page to the research basis; if investigating embedding, require local bare-die/process evidence rather than treating passive embedded resistors as semiconductor assembly."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The existing mobile page mixes group product information and contacts. A newly opened company-specific Cimulec page explicitly describes Cimulec as a PCB manufacturer, strengthening the local named-company bridge to the retained Ennery contact.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "84905641-2d31-5693-a9f0-ca60cba27ff1",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the Teuva production-address row visually and retain a historical rather than current-operation scope."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "Issuer historical releases describe Teuva printed-wiring-board manufacture; the 2013 production-contact list provides the reported Maki-Mikkilantie 3 bridge.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "8df3da28-408a-5779-9aec-b0f89d8116ff",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify certificate scope/address layout; preserve EEA street N/A and building 100 rather than inventing a street."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The exact-site quality certificate describes transformer, choke, filter, power-supply and inductive-solution activity, reinforced by the local contact address.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "99147e57-f3e3-5b06-9eab-0b3290c4bf82",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the Czech wafer-fab rows visually and preserve the reported spelling variants. Do not merge this candidate with the separately reported silicon-wafer/chip facility at the same address."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Both historical schedules plausibly support the Czech fab. Their matching street/postcode do not remove the need to verify row alignment and the extracted town-name discrepancy.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "9c8eec31-1a93-58fb-ae3a-b55d9645e695",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually confirm the named licensee/address/activity association; retain the explicit ordinary-PCB interpretation."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The granted EPA licence positively names the Clieveragh establishment and PCB-manufacturing activity, rather than only a company-wide product family.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "defer_evidence_bridge",
+      "candidate_id": "9ec81824-c15d-533a-b629-075d985e73f0",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Find an establishment-level permit, original archival record or issuer document explicitly binding the factory process to 1 avenue du Bois de l'Epine."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The finding aid names a PCB company with headquarters and factory at Evry, while the BODACC notice gives an exact company address. The two sources do not explicitly establish that the factory occupied that exact street address.",
+      "recommended_outcome": "defer"
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "a136e244-4e80-584b-9e63-663f682cd95d",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify main-site address/scope and separate remote-support entries, or obtain equivalent local-process HTML. Include exact page/section locator for the manufacturing assertion."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The Rousset name/address and semiconductor-product scope appear appropriately bounded to the main site, but the only support is an unverified PDF certificate. The stored excerpt itself contains identity rather than the manufacturing wording.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "a20cb8fd-6579-50dd-a190-e4d3288dc7f2",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify the Westerring 15 row and wafer-fabrication scope. Do not require current certification, infer continued operation, or use a later owner to rewrite the raw source name."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The old Belgium schedule has an exact numbered address and wafer-fabrication scope, sufficient in principle for historical classification. The decisive row association remains text-only.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "a2367b9a-42b6-5b40-805b-6507c51caf21",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify identity, shared-site statement, manufacturing section, and the two postal presentations in their original layout. Preserve both legal entities and prohibit assignment to Crolles 200/300 or individual lines."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The report expressly distinguishes two legal entities sharing the Crolles site. That supports a site-level interpretation but not allocation to one fab; manufacturing and postal-code associations span the PDF report and certificate content.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "a5f4339d-d43a-52bc-950f-474cc73ece65",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify local address allocation in the report; retain the dedicated electrical-accessory process interpretation."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The dedicated Kadan production description specifies electrical cable accessories and silicone overhead-line insulators, with a separate exact-address report.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "a856b01c-93e1-51c9-ae7c-71481a7f7edf",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Carry the Corbeil section locator and postal-variant caveat into the final decision. Do not import the process-node or wafer-size wording merely because it appears in the evidence."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "A dedicated Corbeil-Essonnes fab section reportedly pairs semiconductor processes with X-FAB France's numbered address, while other fabs are separately headed. No wrong-site allocation is identified at this level.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "aae786c2-c0f4-5f12-9f58-1728145f6bb8",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the legal-notice and regulator layout/address linkage; keep the historical unit scope and avoid closure claims."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The regulator explicitly describes Lorraine Circuit's Gorcy board-manufacturing unit and its surface-treatment workshop; a legal notice supplies ZI le Roitelet.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_site_bridge",
+      "candidate_id": "b5de88ff-a0ff-5ce8-86fb-587374be5c06",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain a primary site-specific historical Oclaro fabrication account or explicit facility continuity bridge, without creating a canonical owner relationship. Verify the Caswell certificate row if relied upon."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The regulator locates historical Oclaro at Caswell, while later Lumentum sources establish a Caswell fab. Co-addressing across different named entities does not itself prove that the later manufacturing facility is the exact historical EEA establishment; the certificate adds layout dependence.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "b60ce2a0-1701-5d0b-be5a-512b8351b9dc",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify the exact local certificate. Keep explicit reopen conditions for local bare-die, hybrid or power-semiconductor package assembly; do not borrow other-site processes."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The exact Plzenska 1067 quality-system certificate positively defines local PCBA manufacturing. No read primary source in this audit allocated semiconductor die assembly to that site.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "bd2e114b-c141-5798-abc8-82f84df3b35f",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Retain the exact accessed regulator entry with a stable locator or lawful bounded record in the final review. Do not turn the mutable search URL or acquisition release into current ownership, operation, or a building merge."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The regulator entry uses the exact Newport Semiconductor Plant name and address, unlike a corporate registered-office join. The issuer supplies explicit fab scope. Historical parent/customer differences remain unassigned.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "bda1e224-44ec-56e8-9ba6-93c6d8866ebf",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify the Compugraphics address under mask manufacture and its separation from the following wafer-site section. Keep the modern office listing contextual, not manufacturing proof."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Historical photomask work in Glenrothes is explicit, but exact-address mask-manufacturing allocation depends on the ANSSI list grouping. The neighboring wafer-manufacturing section creates a concrete layout hazard.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "bf13884b-5bb6-5d52-8420-d357bcf3f9d2",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the main manufacturing certificate site/scope together. Preserve Lansdown/Lansdowne and zero/letter postcode differences rather than silently repairing source strings."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The council supplies a matching named industrial location; the certificate supplies the semiconductor-device process. Exact scope is plausible but still rests on a text-only main-certificate association.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "bf64373b-54e1-5b61-a05d-9a6a9ac4c3b8",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Keep the participant HTML and issuer directions as primary scope/location support. This audit's repeat participant-page access timed out, so no fresh content verification is claimed; final review should preserve or reconfirm the previously inspected passage without repeated retries."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The directly involved construction account is facility-specific wafer-manufacturing evidence, paired with issuer directions to the reported Raheen campus. The certificate's unverified manufacturing/test columns are not needed for the bounded conclusion.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "c01c2eab-471f-5760-85ff-fcace4910db7",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No additional scope bridge identified. Preserve this record independently from candidate 201e9f72 and keep the combined source quotation budget across both."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The older foundry release itself reportedly contains the site address, avoiding dependence on later Sivers naming. The shared source supports two separate source records but does not authorize deduplication.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "c14a7ab0-088a-5c7c-908b-cd667151b00a",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Retain Villach-Auen as reported and the dated site account locator. No additional scope evidence identified for this bounded campus classification."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The issuer location entry and dated site-specific semiconductor-factory account support the Villach campus rather than a generic Austrian business. No manufacturing line or building allocation is proposed.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "c33672d4-7379-54d2-9a84-3aa3128d6e78",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Keep this Bzenec source identifier distinct from the other KYOCERA plants and retain the dedicated connector process basis."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The dedicated Bzenec page describes connector manufacture from incoming components to finished connectors, and the contact page binds Spojovaci 1613.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "c389adbc-6ec5-5f56-a1a8-6e10b0c2d443",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Retain both-plants wording plus SADY address; no merging with MESIT or Bzenec."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The issuer expressly applies its passive-capacitor description to both Uherske Hradiste plants, while the contact separately binds SADY at Za Olsavkou 303.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "ca04b41d-4ebc-547b-b14a-618d67e2e33d",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "No additional bounded scope bridge identified. Preserve the separate address section and old/new legal-name caveats; do not map specific lines or the new expansion."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The production account and exact Dresden address are joined within a dedicated location page; the other Dresden address is expressly described as logistics/laboratory/office space. The legal-form change is not resolved.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "cbb40c99-6d02-5998-8cc7-22a22e6ede48",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Use the local Fehring paragraph/technology list only; retain historical/provisional scope and reopen on actual Fehring semiconductor-substrate or bare-die evidence."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The reopened issuer location page explicitly separates Fehring's ordinary/flexible/rigid-flex/IMS PCB portfolio and Industriepark 4 from Leoben's ECP, embedded power solutions and IC-substrate work.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "d67aa2f8-1161-5751-a990-aa820307eb14",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the main Norrköping address/material scope and the remote-support separation visually. The expired stated interval is acceptable historical evidence, not current certification."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The certificate describes semiconductor material at the exact Norrköping address, an in-scope process rather than a chemicals-NACE inference. Main site versus remote-support separation still depends on a PDF-only read.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "d9079eb7-d54f-5ac0-9b60-510e79cc2095",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Retain the local manufacturing-process description and explicit ordinary-PCB interpretation."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The public process description binds Langwiesenweg 73 to copper-clad epoxy/glass board machining, patterning, plating, etching and finishing.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "defer_scope_ambiguity",
+      "candidate_id": "db84ddab-2035-58a3-8ca9-99247f380744",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Explicitly adjudicate the wider historical product/process list and tie the EEA establishment to the relevant permit operating area; distinguish ordinary board laminates from semiconductor-specific materials and lamp assembly from device fabrication."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The reopened permit genuinely binds Noorwegenstraat 3 to PCB base materials and elastomer activity, but its broader company description also lists electroluminescent lamps and power-distribution products. Page 17 combines the project area with northern Noorwegenstraat 7.",
+      "recommended_outcome": "defer"
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "db990df9-0d1c-5cbe-84ed-c2fbdeae80f5",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify which ABB activity belongs to Fabrikstrasse 3 versus 9, or obtain an equivalent primary HTML address-to-semiconductor plant source. Do not merge the two addresses."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The historical Lenzburg power-semiconductor production account is substantive. The exact Fabrikstrasse 3 bridge relies on a PDF location sheet that also describes another ABB activity at number 9.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "e3ee93c1-0faf-580a-af4e-c808a948209d",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Preserve the named manufacturing-site section locator and parent-context limits. No recruitment evidence or failed certificate snippet should enter the final decision."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The official manufacturing-site inventory names Wafer Technology substrates and the exact Milton Keynes address. This supplies a semiconductor-specific materials bridge beyond the generic NACE and company words.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "e60e689b-1ec8-5fa4-9068-3fb0c0548771",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify page 1 main-site scope or obtain exact-site primary prose. Keep remote support, individual fabs, and new SiC campus projects unassigned."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The main Catania certificate plausibly binds the numbered source address to semiconductor-product manufacture, but its identity/scope relationship remains text-only and the excerpt is identity-only.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "e9a7fd9e-d933-5039-a790-9dea01dfe086",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Verify the main certificate address and manufacturing scope visually. Preserve the source misspelling and keep this candidate distinct from ex-Micron/R2."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The matching Agrate address and main-site semiconductor scope are plausible, but admission depends on the text-read certificate. The co-addressed ex-Micron EEA record is not thereby identified with this one.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "scope_supported",
+      "candidate_id": "eab77465-d954-597e-9949-16b99e3a685d",
+      "final_outcome": "accept_in_scope",
+      "next_evidence_needed": [
+        "Record the existing-core-production subsection as the scope basis. Do not use the later opening to establish 2024 operation, identify HTB3, or allocate campus activity to a building."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "A live spot-check confirmed that the Leoben numbered-address section includes IC-substrate-core production separately from the new substrate-plant project. Dedicated IC substrate cores are a specific materials bridge, unlike ordinary PCB or IMS labels.",
+      "recommended_outcome": "accept_in_scope",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "ed2b5aaf-7dcd-5591-ada9-3f6b8429474a",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Retain the two historical source vintages and explicit ordinary-PCB interpretation."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The 2006 issuer account names the Salo PCB/HDI plant and the 2008 issuer-authored release identifies the Orninkatu 15 plant property.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "retain_bounded_rejection",
+      "candidate_id": "f3e2ce01-644e-5ed3-8c9d-012fad4f1048",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Keep local factory address and both-plants process passage; reopen only on actual local die/package/substrate manufacture evidence."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The issuer expressly describes both Dendermonde and Malville plants as PCB fabricators and binds Vosmeer 3 to Dendermonde. This is an explicit two-plant statement, not an arbitrary group-to-site transfer.",
+      "recommended_outcome": "reject_out_of_scope"
+    },
+    {
+      "admission_readiness": "hold_pdf_layout",
+      "candidate_id": "f3ecf5a5-d7a5-5e04-b051-2f7de257a99f",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Visually verify the process description and named line/address association before final acceptance. Record the narrow bare-die hybrid assembly/packaging rationale, not advanced-packaging, wafer-fabrication, or current qualification."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "Live text confirms semiconductor bare-chip integration and die interconnection in a named hermetic hybrid line, not merely finished-board assembly. The linked address is independently readable as HTML, but the process description and capability context remain PDF-only.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "hold_site_bridge",
+      "candidate_id": "f74b7a81-fee6-53e6-893c-4f8c27c0fb91",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain a site-specific primary manufacturing statement or permit for Newark Road South/KY7 4NS. Do not borrow North/KY7 4NT activity or assume both listed premises are the same facility."
+      ],
+      "original_proposed_outcome": "accept_in_scope",
+      "reason": "The live page describes two Glenrothes wafer fabs and gives a Newark Road South contact address; the research also flags a different North address in a certificate. The company-wide process paragraph does not conclusively allocate manufacturing to the exact South establishment.",
+      "recommended_outcome": "defer",
+      "recommended_readiness": null
+    },
+    {
+      "admission_readiness": "defer_scope_ambiguity",
+      "candidate_id": "fcfff9a6-a113-5a3f-b83a-a7973faec26d",
+      "final_outcome": "defer",
+      "next_evidence_needed": [
+        "Obtain an establishment/permit identifier or site-specific process account demonstrating whether this hazard branch is coextensive with the reported Werk, and evaluate any other named activities."
+      ],
+      "original_proposed_outcome": "reject_out_of_scope",
+      "reason": "The brochure really describes a Rothenbach branch at Fischbachstrasse 16-20 for hazardous-material storage/development and gives contact number 16. It does not explicitly identify the complete activity scope or boundary of EEA Werk S01331.",
+      "recommended_outcome": "defer"
+    }
+  ],
+  "review": {
+    "path": "review_plans/2026-09-07-eea-industrial-v16-scope-admission-v1.json",
+    "sha256": "fa8b87cf136f2ed04f889b916b1d333a7c5aeebcd72d91fbbafd29c4e86ee9f9"
+  }
+}

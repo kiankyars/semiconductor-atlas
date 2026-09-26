@@ -1,0 +1,42 @@
+{
+  "format": "semiconductor-atlas-ai-critical-alert-review-pilot-v1",
+  "verification_completed_at": "2026-09-07T06:42:29.282910Z",
+  "verified_code_sha256": "987d416e1b882361782a00defa1dd8f2b5b44ce5a250fde37459fafdb2399b7d",
+  "admission_review": "review_plans/2026-09-07-amkor-alert-admission.json",
+  "database": "artifacts/2026-09-07-ai-critical-alert-review-v1.sqlite",
+  "alert_id": "42c4f6abca2cdf1cac29233c5ecec05b8675ced8ef10152bc6e67780061f44df",
+  "first_admitted_at": "2026-09-07T06:35:36.225248Z",
+  "underlying_event_date": "2025-10-06",
+  "status": "acknowledged",
+  "event_count": 2,
+  "packet_count": 1,
+  "alert_count": 1,
+  "delivery_eligible_count": 0,
+  "head_event_id": "11c402b5e2a0e51dd4b8e907e87dc773669c2d567d49b8a408ad421371a90f80",
+  "export": {
+    "path": "artifacts/2026-09-07-ai-critical-alert-review-events-v1.json",
+    "bytes": 1531234,
+    "sha256": "e0ef579f0ba6b972031bf58415dca0f242b74d68016a8ca2a96bdddd6bd09e60"
+  },
+  "verified_report": {
+    "path": "artifacts/2026-09-07-ai-critical-alert-review-final-report-v1.json",
+    "sha256": "4d2da4d36606a2d706ff66fa0eed76bd21e14aae01bf82425dd757b1dbea8c50"
+  },
+  "validation": {
+    "prior_and_successor_raw_sources_and_fragments_verified": true,
+    "comparison_recomputed_against_both_releases": true,
+    "portable_export_restored_and_fully_verified": true,
+    "export_and_restored_history_exactly_equal": true,
+    "event_cutoffs_fully_replayed": 2,
+    "pre_admission_alert_count": 0,
+    "original_release_or_review_paths_accessed_during_restore": false,
+    "portability_test_method": "Restored a copied export in a fresh resolved temporary directory. Original review reads and release-directory snapshots were guarded to fail; full validation reconstructed private release copies from the export."
+  },
+  "limitations": [
+    "This is retrospective proposal review, not proof of early detection or calibrated alert quality.",
+    "Acknowledgment does not accept a new canonical fact, resolve the project, or enable delivery.",
+    "The live pilot exercises admission and acknowledgment only. Resolution, retraction, reopening and recurrence are tested on explicitly synthetic offline fixtures.",
+    "The source-text and discovery queues, monitoring configuration and publication state are unchanged.",
+    "The local export contains release derivatives and bounded evidence excerpts, not raw publisher response bodies. Its portability does not grant redistribution rights."
+  ]
+}

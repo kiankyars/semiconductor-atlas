@@ -1,0 +1,16 @@
+{
+  "format": "semiconductor-atlas-ai-critical-alert-admission-v1",
+  "purpose": "alert_review_only",
+  "reviewer": "Codex Amkor alert-lineage review",
+  "reviewed_at": "2026-09-07T06:29:05Z",
+  "reason": "The comparison was independently recomputed against both retained releases. Admit the one Amkor lifecycle proposal for accountable review of a late-ingested October 6, 2025 groundbreaking. Retain the bounded successor evidence review. Do not infer a new September 2026 event, current maximum construction stage, capacity loss, forecast accuracy or permission for automated alert delivery.",
+  "prior_manifest_sha256": "1a7da06916cc935cb8b9310ae947de491c817b7ddd4abb18472fbc5d749aab45",
+  "current_manifest_sha256": "e71158131075f70b299fae78951da4ba2c98473d4c14f791d63bf7ce47aac044",
+  "change_manifest_sha256": "26670a22d615b374a92eb5bd3e7ce39eade3dddedda98c2cdd28c5353cc767cf",
+  "supporting_reviews": [
+    {
+      "path": "2026-09-07-amkor-peoria-successor.json",
+      "sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160"
+    }
+  ]
+}

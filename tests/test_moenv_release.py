@@ -279,7 +279,7 @@ class MOENVReleaseTests(unittest.TestCase):
             connection.close()
 
     def test_non_moenv_release_retains_schema_v4_baseline_bytes(self) -> None:
-        connection, _ = initialize(":memory:")
+        connection, _ = initialize(":memory:", target_version=4)
         output = self.root / "legacy-release"
         try:
             write_release(

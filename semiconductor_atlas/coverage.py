@@ -7,6 +7,7 @@ import sqlite3
 from collections import Counter
 from typing import Any, Sequence
 
+from .database import knowledge_clock_sql
 from .models import CapacityBasis
 from .service import (
     _accepted_document_runs_sql,
@@ -377,6 +378,7 @@ def coverage_report(
         item for item in entity_view if item["entity_kind"] != "organization"
     ]
     document_runs_sql = _accepted_document_runs_sql(connection)
+    clock = knowledge_clock_sql(connection)
     source_rows = connection.execute(
         f"""
         WITH document_runs AS (
@@ -402,7 +404,7 @@ def coverage_report(
         JOIN source_families AS families ON families.id = sources.family_id
         GROUP BY families.id
         ORDER BY families.stable_key
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     namespace_counts = dict(

@@ -9,12 +9,14 @@ import json
 import shutil
 import sqlite3
 import tempfile
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
 from .adapters.moenv_ems import MOENV_ATTRIBUTION
 from .adapters.taiwan_factory_registry import TAIWAN_FACTORY_ATTRIBUTION
 from .adapters.taiwan_mof_tax_registry import TAIWAN_MOF_ATTRIBUTION
+from .database import knowledge_clock_sql, schema_version
 from .coverage import (
     REVIEWED_RELATIONSHIP_FAMILY_KEY,
     TAIWAN_FACTORY_FAMILY_KEY,
@@ -24,10 +26,12 @@ from .coverage import (
     reviewed_relationship_claim_ids_if_visible,
 )
 from .service import (
+    _admission_sql,
     claim_history_records,
     claim_records,
     export_geojson,
     materialize_entities,
+    source_claim_records,
     summarize,
     validate_semantics,
 )
@@ -226,6 +230,25 @@ def _existing_release_files(
     return stale, unknown_files
 
 
+def _validate_admission_clocks(connection: sqlite3.Connection) -> None:
+    if schema_version(connection) < 5:
+        return
+    for row in connection.execute(
+        "SELECT id, started_at, completed_at, parameters_json FROM ingestion_runs WHERE status='succeeded'"
+    ):
+        parameters = json.loads(row["parameters_json"])
+        if "accepted_at" not in parameters:
+            continue
+        try:
+            accepted = datetime.fromisoformat(parameters["accepted_at"].replace("Z", "+00:00"))
+            started = datetime.fromisoformat(row["started_at"].replace("Z", "+00:00"))
+            completed = datetime.fromisoformat(row["completed_at"].replace("Z", "+00:00"))
+            if accepted.utcoffset() is None or not started <= accepted <= completed:
+                raise ValueError("admission is outside its processing interval")
+        except (AttributeError, TypeError, ValueError) as error:
+            raise ValueError(f"ingestion run {row['id']} has invalid explicit accepted_at") from error
+
+
 def _source_inputs(
     connection: sqlite3.Connection,
     *,
@@ -285,14 +308,16 @@ def _source_inputs(
                  json_each(runs.parameters_json, '$.detail_document_ids') AS inputs
             WHERE runs.status = 'succeeded'
         """
+    accepted_at_sql = _admission_sql(connection)
+    clock = knowledge_clock_sql(connection)
     rows = connection.execute(
         f"""
         WITH document_runs AS (
             {document_runs_sql}
         ), accepted AS (
-            SELECT document_runs.*
+            SELECT document_runs.*, {accepted_at_sql} AS admitted_at
             FROM document_runs
-            WHERE julianday(started_at) <= julianday(?)
+            WHERE julianday({accepted_at_sql}) <= julianday(?)
         )
         SELECT documents.id, documents.document_url, documents.title,
                documents.published_at, documents.retrieved_at,
@@ -300,7 +325,7 @@ def _source_inputs(
                documents.metadata_json, sources.stable_key AS source_key,
                sources.publisher, families.stable_key AS source_family,
                accepted.run_id AS accepted_by_run_id,
-               accepted.started_at AS database_accepted_at,
+               accepted.admitted_at AS database_accepted_at,
                accepted.code_version AS acceptance_code_version,
                accepted.parameters_json AS acceptance_parameters_json,
                accepted.document_roles_json
@@ -309,9 +334,9 @@ def _source_inputs(
         JOIN source_families AS families ON families.id = sources.family_id
         JOIN accepted ON accepted.document_id = documents.id
         ORDER BY families.stable_key, sources.stable_key, documents.document_url,
-                 accepted.started_at, documents.retrieved_at, documents.id,
+                 accepted.admitted_at, documents.retrieved_at, documents.id,
                  accepted.run_id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     inputs: list[dict[str, Any]] = []
@@ -412,8 +437,10 @@ def _source_observations(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    accepted_at_sql = _admission_sql(connection, "runs.")
+    clock = knowledge_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT records.id AS source_record_id,
                records.source_record_key,
                records.observed_at AS source_record_observed_at,
@@ -423,7 +450,7 @@ def _source_observations(
                documents.retrieved_at,
                documents.content_sha256,
                runs.id AS ingestion_run_id,
-               runs.started_at AS database_accepted_at,
+               {accepted_at_sql} AS database_accepted_at,
                runs.code_version,
                runs.parameters_json,
                sources.stable_key AS source_key,
@@ -433,11 +460,11 @@ def _source_observations(
         JOIN source_documents AS documents ON documents.id = records.source_document_id
         JOIN sources ON sources.id = documents.source_id
         JOIN source_families AS families ON families.id = sources.family_id
-        WHERE julianday(runs.started_at) <= julianday(?)
+        WHERE julianday({accepted_at_sql}) <= julianday(?)
           AND runs.status = 'succeeded'
         ORDER BY families.stable_key, sources.stable_key,
-                 runs.started_at, records.source_record_key, records.id
-        """,
+                 database_accepted_at, records.source_record_key, records.id
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     observations = []
@@ -854,7 +881,12 @@ def _collect_release_views(
     errors = validate_semantics(connection)
     if errors:
         raise ValueError("database validation failed: " + "; ".join(errors))
+    _validate_admission_clocks(connection)
     claims = claim_records(connection, as_of=as_of, recorded_at=recorded_at)
+    source_claims = (
+        source_claim_records(connection, recorded_at=recorded_at)
+        if schema_version(connection) >= 5 else None
+    )
     reviewed_relationship_runs, required_review_claim_ids = (
         _reviewed_relationship_runs(connection, recorded_at=recorded_at)
     )
@@ -879,6 +911,7 @@ def _collect_release_views(
         recorded_at=recorded_at,
         required_claim_ids=sorted(
             required_identity_claim_ids | required_review_claim_ids
+            | {claim["id"] for claim in source_claims or []}
         ),
     )
     identity = _entity_identity_views(
@@ -935,6 +968,7 @@ def _collect_release_views(
     )
     return {
         "claims": claims,
+        "source_claims": source_claims,
         "claim_history": claim_history,
         "entities": entities,
         "summary": summary,
@@ -972,6 +1006,7 @@ def write_release(
     if output.is_symlink():
         raise ValueError(f"release output must not be a symlink: {output}")
     claims = views["claims"]
+    source_claims = views["source_claims"]
     claim_history = views["claim_history"]
     entities = views["entities"]
     summary = views["summary"]
@@ -982,6 +1017,7 @@ def write_release(
     coverage = views["coverage"]
     identity = views["identity"]
     assert isinstance(claims, list)
+    assert source_claims is None or isinstance(source_claims, list)
     assert isinstance(claim_history, list)
     assert isinstance(entities, list)
     assert isinstance(summary, dict)
@@ -1057,6 +1093,8 @@ def write_release(
     if identity is not None:
         for name, rows in identity.items():
             files[f"{name}.jsonl"] = _jsonl_bytes(rows)
+    if source_claims is not None:
+        files["source_claims.jsonl"] = _jsonl_bytes(source_claims)
     if reviewed_relationship_runs:
         files["reviewed_relationship_runs.jsonl"] = _jsonl_bytes(
             reviewed_relationship_runs
@@ -1205,6 +1243,16 @@ and `ATTRIBUTION.txt`.
             "`capacity.csv`, `atlas.geojson`, `coverage.json`, `source_inputs.json`,\n"
             "`reviewed_relationship_runs.jsonl`, ",
         )
+    if source_claims is not None:
+        readme += (
+            "\n`source_claims.jsonl` is a knowledge-time view of source statements, "
+            "not a physical-world state view. It includes statements with unknown or future "
+            "effective dates; `claims.jsonl` retains its world-state cutoff. Null confidence "
+            "means uncalibrated, and a null milestone midpoint is not an exact date. "
+            "Source-stated period bounds describe calendar precision, not a forecast "
+            "probability interval. All source-claim versions and their dependencies are "
+            "retained in `claim_history.jsonl`.\n"
+        )
     files["README.md"] = readme.encode("utf-8")
     if extra_files:
         for name, raw in extra_files.items():
@@ -1244,6 +1292,8 @@ and `ATTRIBUTION.txt`.
     if identity is not None:
         manifest["schema_version"] = summary["schema_version"]
         manifest.update({name: len(rows) for name, rows in identity.items()})
+    if source_claims is not None:
+        manifest["source_claims"] = len(source_claims)
     if reviewed_relationship_runs:
         manifest["reviewed_relationship_runs"] = len(reviewed_relationship_runs)
     _install_release_directory(output, files, manifest, preserved_files)

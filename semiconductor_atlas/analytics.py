@@ -113,6 +113,12 @@ def _production_milestones(
             continue
         if status not in ACTIVE_MILESTONE_STATUSES:
             continue
+        if (
+            claim.get("confidence") is None
+            or claim.get("valid_from") is None
+            or value.get("date_base") is None
+        ):
+            continue
         candidates[claim_id] = RampMilestone(
             date.fromisoformat(str(value["date_low"])),
             date.fromisoformat(str(value["date_base"])),
@@ -299,6 +305,13 @@ def forecast_current_capacity(
             for claim in claims
             if str(claim["id"]) in milestone_values
         }
+        unsupported_milestones = {
+            str(claim["id"]): claim for claim in claims
+            if claim["value_kind"] == "milestone"
+            and claim["value"].get("milestone_type") in PRODUCTION_MILESTONES
+            and claim["value"].get("status") in ACTIVE_MILESTONE_STATUSES
+            and str(claim["id"]) not in milestone_values
+        }
         for claim in claims:
             if claim["value_kind"] != "capacity":
                 continue
@@ -306,6 +319,12 @@ def forecast_current_capacity(
             assert isinstance(value, dict)
             capacity_claim_id = str(claim["id"])
             basis = CapacityBasis(str(value["basis"]))
+            if claim.get("confidence") is None or claim.get("valid_from") is None:
+                exclusions.append(ForecastExclusion(
+                    entity_id, capacity_claim_id, "unknown_capacity_evidence_basis",
+                    "capacity with unknown confidence or effective date is not a forecast input",
+                ))
+                continue
             if _relative_capacity(value):
                 exclusions.append(
                     ForecastExclusion(
@@ -319,6 +338,14 @@ def forecast_current_capacity(
             milestone: RampMilestone | None = None
             selected_pairing: ForecastPairing | None = None
             if basis is not CapacityBasis.ECONOMICALLY_USABLE:
+                unsupported_linked = _linked_milestones(connection, claim, unsupported_milestones)
+                if unsupported_linked:
+                    exclusions.append(ForecastExclusion(
+                        entity_id, capacity_claim_id, "unsupported_linked_production_milestone",
+                        "linked production milestone lacks a known confidence, effective date, or midpoint",
+                        tuple(sorted(unsupported_linked)),
+                    ))
+                    continue
                 linked = _linked_milestones(connection, claim, milestone_claims)
                 linked_ids = tuple(sorted(linked))
                 if len(linked_ids) == 1:

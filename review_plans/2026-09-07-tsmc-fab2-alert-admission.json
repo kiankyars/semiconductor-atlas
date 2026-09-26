@@ -1,0 +1,9 @@
+{
+  "format": "semiconductor-atlas-project-alert-admission-v1",
+  "purpose": "alert_review_only",
+  "reviewer": "codex:source-project-proposal-review",
+  "reviewed_at": "2026-09-07T09:58:07Z",
+  "reason": "Reviewed the exact derivative of the already accepted source-native NIST Fab 2 claim pair. Both narrative and timeline evidence state 2028 in the older retained document and second half of 2027 in the later document. Admit one source_target_period_revision proposal for review only. The periods are disjoint and the later document states an earlier target; no exact acceleration duration, attained production, canonical Fab 21 assignment, numeric capacity, independent corroboration, calibrated confidence, first-publication time or early-detection success is established. Preserve Amkor's existing two-event review history. This agent-authored review is not independent human adjudication or permission to deliver alerts or publish data.",
+  "packet_sha256": "fc8d579b5018e4aef6376b48ccd57ef9baf34de298c7373bd2ddb96d85c35f74",
+  "expected_head_event_id": "11c402b5e2a0e51dd4b8e907e87dc773669c2d567d49b8a408ad421371a90f80"
+}

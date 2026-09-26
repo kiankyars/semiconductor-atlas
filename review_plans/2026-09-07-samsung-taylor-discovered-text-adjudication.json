@@ -1,0 +1,70 @@
+{
+  "format": "semiconductor-atlas-samsung-taylor-discovered-text-adjudication-v1",
+  "reviewed_at": "2026-09-07T08:04:25Z",
+  "reviewer": "local:source-version-review",
+  "facility_key": "samsung:taylor-leading-edge-project",
+  "candidate_id": "d7e3fc00d45f37a9775945c8ce108eee6ec3f11e7ddb2296d123f253cb2572c3",
+  "expected_event_id": "e49ed73f14345da69215c63210440724e615bf9e1b1dfb3403435bffef5cf47c",
+  "decision": "dismiss_reviewed_text_version_without_baseline_revision",
+  "source_capture": {
+    "path": "source_snapshots/2026-09-07-samsung-taylor-discovery-handoff-v1",
+    "manifest_sha256": "77a6bb6a43dd6f23c21f0d049ccbf838315f321e7680661b81401e2f4e93ec21",
+    "body_path": "responses/nist-samsung-taylor-discovered.body",
+    "body_sha256": "28366672cb1999358c08fe1c9005283c5713aa818a1eb27d3a2d7a8a94760a19",
+    "normalization": "html_visible_text_v1",
+    "normalized_sha256": "7ffdb921a4af218b07217b2fa2336f0d244f20decce2d4dc3c151ce9b7f7f7e6",
+    "retrieved_at": "2026-09-07T08:01:57.743794Z"
+  },
+  "source_url": "https://www.nist.gov/chips/samsung-electronics-texas-taylor",
+  "related_monitored_source": {
+    "url": "https://www.nist.gov/chips/samsung-electronics-texas-austin",
+    "capture_path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-1",
+    "manifest_sha256": "f150734c0a290efed61dc2cc0bbcff951caa71876c1a40c499e3a22d75f93559",
+    "body_path": "responses/nist-samsung-texas.body",
+    "body_sha256": "851d3e738acbfd1d731f3a78d3f489776953e0ae8ede09efc06e444277a3233f",
+    "normalized_sha256": "69b114cb25d01b421d687aff3d9708a4670b5a1de5b837e053b853f770711b3c",
+    "comparison": "The normalized section from Project Summary through the project timeline is identical in both retained pages. Their locality/district headings and page metadata differ, so neither full HTML nor whole-page visible text is identical.",
+    "shared_section_characters": 4729,
+    "shared_section_utf8_sha256": "1b1c30069431446081c3811de624b66317a9cc4e5bd6abb644d6ed408f20e85a",
+    "independent_corroboration": false
+  },
+  "page_metadata": {
+    "article_published_time": "2024-07-24T23:08-04:00",
+    "article_modified_time": "2026-06-01T09:37-04:00",
+    "dcterms_date": "2024-07-24T23:08-04:00",
+    "dcterms_modified": "2026-06-01T09:37-04:00",
+    "nist_search_modified": "2026-06-01T09:37:00-04:00",
+    "qualification": "These are retained CMS page-level clocks, not verified publication/effective dates for each present assertion. The pre-acquisition review correctly retained the undated index but had not yet examined this raw metadata; its unknown publication assessment is qualified here without rewriting that historical review. A page modification does not establish construction progress or prove which sentence changed. The initial page date does not prove all current text existed then."
+  },
+  "baseline": {
+    "path": "baselines/ai_critical_manufacturing_v1.json",
+    "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958",
+    "lifecycle": "announced",
+    "lifecycle_as_of": "2024-07-24",
+    "evidence_id": "samsung-taylor-leading-edge"
+  },
+  "assessment": {
+    "baseline_comparison": "The new landing page repeats the already represented two-logic-fab plan and broad Texas award context. It supplies no attained Taylor construction, tool-installation, qualification or production milestone and no directly scoped numeric capacity. It does not justify advancing or refreshing the baseline lifecycle. This review also does not independently validate the historical effective date of every inherited baseline claim.",
+    "scope_exclusions": [
+      "The separate Taylor R&D fab",
+      "The existing Austin facility and its expansion",
+      "Award-wide funding and investment amounts as facility throughput",
+      "Job counts as chip capacity",
+      "Conditional funding milestones and Final Award administrative status as attained manufacturing milestones",
+      "The all-facilities 2030 target as an achieved or Fab-specific date",
+      "Images credited to Samsung and linked documents"
+    ],
+    "unknowns_preserved": [
+      "Current attained Taylor lifecycle beyond the baseline evidence",
+      "Numeric capacity on all five bases",
+      "Yield, utilization and qualification",
+      "Facility-safe point geometry",
+      "Claim-specific publication and effective dates for this version"
+    ],
+    "monitoring_decision": "Do not add this duplicate-content landing page to the recurring catalog. The retained acquisition is a one-off reviewed handoff, not an additional continuously monitored document.",
+    "disposition_scope": "Closes only this exact observed text version. Future changed text requires review; no canonical claim acceptance or automated delivery."
+  },
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "baseline_modified": false
+}

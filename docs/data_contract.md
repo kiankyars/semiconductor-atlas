@@ -259,7 +259,7 @@ A claim version includes:
 - valid-time and system-time ranges;
 - method and producing run;
 - review state;
-- calibrated claim confidence; and
+- calibrated claim confidence, or null when uncalibrated; and
 - evidence and upstream-claim links.
 
 Each claim version MUST have exactly one typed value representation. Supported representations are:
@@ -315,6 +315,22 @@ SQLite implementations MUST validate it before release.
 
 Source publication, acquisition, retrieval, and extraction clocks are not substitutes for either
 bitemporal clock. Event observations SHOULD preserve an explicit event time or range.
+
+From schema 5, a `source_statement` MAY retain `valid_from = null` only with `valid_to = null`:
+the statement's effective time is unknown. This MUST NOT mean that it applies at every world time.
+Physical-world `claims.jsonl` excludes such statements. The separate `source_claims.jsonl` view
+selects by knowledge time alone, including known statements with unknown or future effective dates.
+`claim_history.jsonl` retains their superseded versions and complete dependencies at the same
+knowledge cutoff. A missing confidence value MUST remain null rather than being replaced with zero,
+one, or an invented calibrated probability. Historical schemas keep their original release shape.
+
+Reviewed source-native project targets MAY use expected milestone values with `date_base = null`,
+literal source wording, and explicit calendar precision. Their low/high dates bound the stated
+calendar period, not a probabilistic forecast interval. A source-stated year or half-year MUST NOT
+receive a synthesized midpoint or enter legacy midpoint-based acceleration or ramp calculations.
+Separate retained document versions MAY have distinct source-statement series on one unassigned
+source-native project. Their simultaneous later review MUST preserve one actual admission clock,
+not fabricate a historical acceptance interval between old and new document observations.
 
 EPA FRS imports use `source_documents.retrieved_at` for archive acquisition and
 `ingestion_runs.started_at` for database acceptance. New claim `recorded_at` values and prior claim

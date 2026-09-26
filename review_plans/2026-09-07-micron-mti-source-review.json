@@ -1,0 +1,68 @@
+{
+  "format": "semiconductor-atlas-micron-mti-source-review-v1",
+  "reviewed_at": "2026-09-07T07:27:29Z",
+  "reviewer": "local:curated-source-scope-and-access-review",
+  "decision": "approve_exact_mti_document_for_local_source_text_review_only",
+  "facility_key": "micron:singapore-hbm-packaging-project",
+  "policy_capture": {
+    "path": "source_snapshots/2026-09-07-mti-policy-review-v1",
+    "manifest_sha256": "06c19b803d368a82af0e068a819e53cb0d3fe1d4c3dd8f3635d801e3e03a19e8",
+    "note": "Three successful exact policy checks with bodies, invocation receipts and a verified source-check ledger. The retained setup-error record describes a missing local Accept field before any network request, not a failed HTTP attempt. No source document was fetched in this policy packet."
+  },
+  "policies": [
+    {
+      "url": "https://www.mti.gov.sg/robots.txt",
+      "body_path": "responses/mti-robots.body",
+      "body_sha256": "f17a74a9d0658f12976745c2a2a391f96deacaa15d249f63744ae83ce6962b56",
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "f17a74a9d0658f12976745c2a2a391f96deacaa15d249f63744ae83ce6962b56",
+      "review": "The retained wildcard rules allow the root and disallow /search. The exact speech, terms and privacy paths are not excluded. No search endpoint, sitemap collection or broader crawl is approved. This is robots compatibility, not a content-reuse license."
+    },
+    {
+      "url": "https://www.mti.gov.sg/terms-of-use/",
+      "body_path": "responses/mti-terms.body",
+      "body_sha256": "58ef9d018774011afe805a7894f3daa54f920ef3c181e6f702afa0d09c1c6608",
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "f8a2dd63e2813af8c6014adc0575fda827f5751bc3e740c3ede5d410d1fba270",
+      "review": "Read the complete five-section terms, dated October 22, 2025, and linked privacy statement. They address access continuity, general-information limitations, security and hyperlinks. No affirmative open-content license or blanket automation grant was identified. The copyright footer names the Government of Singapore. This bounded internal decision covers one publicly accessible government-authored speech for local research verification, with operational metadata and original analysis as public output. It is not a license grant, does not extend to linked sites, and does not approve the issuer's restricted investor-relations route."
+    }
+  ],
+  "ancillary_privacy_review": {
+    "url": "https://www.mti.gov.sg/privacy-statement/",
+    "body_path": "responses/mti-privacy.body",
+    "body_sha256": "b6dab9ae88d3deab20d5a1c5e887b9f5b47b01b45e229a4e810601fdb6ed3b04",
+    "review": "Read the complete October 23, 2025 statement on cookies, voluntarily supplied personal data, inter-agency handling, security and third-party links. This request uses no account, submitted personal data, cookie session, analytics script, forms or third-party resources. Privacy text is retained as review context; recurring acquisition binds the robots and Terms of Use policies, not an inferred privacy-based content license."
+  },
+  "rights": {
+    "license_status": "unknown_no_open_license_identified",
+    "copyright_holder": "Government of Singapore",
+    "access_class": "public_without_login",
+    "local_use": "Bounded exact-page research observation with local retained bytes for verification; internal review decision, not publisher-granted permission.",
+    "public_output": "Operational metadata and original reviewer analysis only; no raw HTML, images, attachments or substantial publisher text.",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "document": {
+    "id": "mti-micron-singapore-hbm-groundbreaking",
+    "url": "https://www.mti.gov.sg/newsroom/speech-by-dpm-and-minister-for-trade-and-industry-gan-kim-yong-at-the-groundbreaking-ceremony-of-micron-s-hbm-manufacturing-facility/",
+    "scope": "One government-authored speech at the January 8, 2025 groundbreaking of Micron's Singapore HBM advanced packaging facility. General Singapore semiconductor context, existing NAND operations, company-wide investment and jobs do not supply capacity or readiness for this project. The January 2026 NAND-wafer-fab groundbreaking is a separate project and is not this document.",
+    "publication_date": "2025-01-08",
+    "event_date": "2025-01-08",
+    "date_review": "The displayed article date and opening ceremony language identify the historical event. A migration notice and site-wide September 2026 footer do not establish a revised article or a current physical milestone. Publication precision is day only; no exact source-availability timestamp is asserted.",
+    "manufacturing_review": "The speech identifies a historical HBM packaging groundbreaking, consistent with the existing site_preparation evidence. It does not establish a later attained stage, installed or qualified numeric capacity, yield, utilization, HVM or facility-safe geometry. A recent read is not a recent event or a current-state reaffirmation. No baseline revision is approved."
+  },
+  "acquisition_boundary": {
+    "minimum_interval_seconds": 1,
+    "timeout_seconds": 30,
+    "max_response_bytes": 2000000,
+    "redirects": false,
+    "retries": false,
+    "cookies": false,
+    "discovery": false,
+    "linked_resource_acquisition": false,
+    "claim_acceptance": false,
+    "delivery_eligible": false
+  },
+  "validity_note": "Thirty-day internal review deadline. Each recurring run must match both reviewed policy hashes before fetching the exact document. Changed or failed policy checks require review; no automatic renewal. No publisher-wide update coverage or negative manufacturing evidence is inferred.",
+  "historical_inputs_preserved": true
+}

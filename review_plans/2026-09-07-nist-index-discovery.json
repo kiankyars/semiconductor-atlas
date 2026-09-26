@@ -1,0 +1,60 @@
+{
+  "format": "semiconductor-atlas-nist-index-discovery-review-v1",
+  "reviewed_at": "2026-09-07T05:10:46Z",
+  "reviewer": "local:publisher-index-access-and-scope-review",
+  "decision": "approve_bounded_nist_index_chains_for_local_discovery_only",
+  "policy_capture": {
+    "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0",
+    "manifest_sha256": "c5e0d149b27c426fa001f8b57d04b969da17cb970e82487c566dd4abd39180bc"
+  },
+  "policies": [
+    {
+      "url": "https://www.nist.gov/robots.txt",
+      "body_path": "responses/nist-robots.body",
+      "body_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd",
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd",
+      "review": "Reviewed exact retained exclusions and current official page. The two /chips/ index roots and their single page=N query are not excluded. Search, facet and archive routes are not approved; this is not permission for unrestricted crawling."
+    },
+    {
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "body_path": "responses/nist-copyright-current.body",
+      "body_sha256": "791d1d6af0791147d44eab3ec9db9ea6fa18a5063e381952655fadf7e0f9ea5a",
+      "normalization": "html_policy_v2",
+      "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46",
+      "review": "Reviewed current NIST public-information notice and exact retained policy. Marked copyrighted material and product-specific exceptions remain excluded. Retain HTML locally; public outputs for this pilot are original operational analysis and source locators. No image, logo, linked attachment, third-party republication or blanket document rights are granted."
+    }
+  ],
+  "normalized_policy_review": {
+    "path": "review_plans/2026-09-07-nist-policy-normalization.json",
+    "sha256": "db0b4ff6109c364f080decf60e3d5f33ccba3a8dd161f3acd79360c2e28c84ca"
+  },
+  "indexes": [
+    {
+      "kind": "news",
+      "url": "https://www.nist.gov/chips/chips-news-releases",
+      "scope": "Visible nist-teaser article records and their explicit sequential pager. Publisher teaser date is preserved verbatim; footer Updated is not a news date. The separately linked archive is excluded; this current page chain is not complete historical coverage."
+    },
+    {
+      "kind": "awards",
+      "url": "https://www.nist.gov/chips/chips-program-office-awards",
+      "scope": "Visible award cards and explicit sequential pager; retain CHIPS Program Office entries, count excluded offices. Mutable project directory, not a chronological news feed. Locality and region are source-native routing context, not verified facility identity."
+    }
+  ],
+  "acquisition_boundary": {
+    "maximum_pages_per_index": 8,
+    "minimum_interval_seconds": 1,
+    "timeout_seconds": 30,
+    "max_response_bytes": 2000000,
+    "redirects": false,
+    "retries": false,
+    "cookies": false,
+    "linked_document_requests": false,
+    "raw_redistribution": false,
+    "claim_acceptance": false,
+    "delivery_eligible": false
+  },
+  "routing_note": "Retain all eligible entries. Case-insensitive bounded aliases for all seven baseline companies only prioritize review, never establish a facility match. U.S. Micron and SK hynix entries do not refresh Singapore or M15X. A Samsung Taylor directory link does not authorize Samsung-controlled newsroom collection. Existing curated document plans and queues are unchanged.",
+  "validity_note": "Thirty-day internal review deadline. Every run first checks both current normalized policy hashes. Only the exact roots and same-root single page=N links with N incrementing by one are approved. Failed, incomplete, empty or rolling-window results are never negative facility evidence.",
+  "historical_inputs_preserved": true
+}

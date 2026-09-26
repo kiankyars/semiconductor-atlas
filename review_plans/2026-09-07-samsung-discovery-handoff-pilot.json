@@ -1,0 +1,349 @@
+{
+  "format": "semiconductor-atlas-samsung-discovery-handoff-pilot-v1",
+  "recorded_at": "2026-09-07T08:33:01Z",
+  "inputs": [
+    {
+      "bytes": 3616,
+      "path": "acquisition_plans/samsung_taylor_discovered_nist_v1.json",
+      "sha256": "e668db5331c129f5ed4f3e58d7fe4489169d09fec98598fd256bb3948367fb20"
+    },
+    {
+      "bytes": 5076,
+      "path": "review_plans/2026-09-07-samsung-taylor-discovery-acquisition.json",
+      "sha256": "42313074b3b9ef449741e3305fe72b844faf18aba3728bf96d10b069aa28523d"
+    },
+    {
+      "bytes": 4856,
+      "path": "review_plans/2026-09-07-samsung-taylor-discovered-text-adjudication.json",
+      "sha256": "cfba44291e2964179d6105dc55bdcdb370973e7e28ccc5e849ef9f7f9d7203c1"
+    },
+    {
+      "bytes": 2914,
+      "path": "review_plans/2026-09-07-samsung-austin-monitored-text-adjudication.json",
+      "sha256": "02bce2dbc033c8772b464b5826fc9a81d982dc41fd1fdbfd6342d4579fc1dbe8"
+    },
+    {
+      "bytes": 3479,
+      "path": "review_plans/2026-09-07-samsung-discovery-source-handoff.json",
+      "sha256": "6fe87b2c782985e700e547184559717a86a7d5f18f67c3bc4b70419bef36eab4"
+    },
+    {
+      "bytes": 26787,
+      "path": "semiconductor_atlas/discovery_handoff.py",
+      "sha256": "18edfbedfab5cd1ab2953688e7343d1c1c8691c7dfb85222685199e5151fe179"
+    },
+    {
+      "bytes": 1476,
+      "path": "scripts/verify_discovery_handoff.py",
+      "sha256": "2ebe94653cf4a80a7be0ea0dc4ce7a064af320eae9877aaf096935e5622defa9"
+    },
+    {
+      "bytes": 37494,
+      "path": "tests/test_discovery_handoff.py",
+      "sha256": "ee7fae22a8f93345a3c2766ffa2ade59f414b77258b7823102494d4b076275f9"
+    },
+    {
+      "bytes": 9870,
+      "path": "artifacts/2026-09-07-verify-samsung-handoff.py",
+      "sha256": "d559a2b73a8bfbdf7db2c1e22ae3b917946309f71b48043a1c80f93fea3e13de"
+    },
+    {
+      "bytes": 27103,
+      "path": "artifacts/2026-09-07-samsung-handoff-final-verification-v1.json",
+      "sha256": "ea50f02633fe535ec71255f6ee6b2adc9f4bf2ab14036c5046a593d34ec34148"
+    }
+  ],
+  "handoff": {
+    "artifact": {
+      "bytes": 6682,
+      "path": "artifacts/2026-09-07-samsung-discovery-source-handoff-v1.json",
+      "sha256": "b4080de005bf4dd5ea71af24bbcf48e68f8b53c8e62c93af1914b882717fa901"
+    },
+    "exact_rebuild_equal": true,
+    "facts": {
+      "access_reviewed_at": "2026-09-07T07:59:44Z",
+      "access_reviewer": "local:discovered-document-scope-and-access-review",
+      "body_sha256": "28366672cb1999358c08fe1c9005283c5713aa818a1eb27d3a2d7a8a94760a19",
+      "discovery_admitted_at": "2026-09-07T05:39:06.449543Z",
+      "discovery_candidate_id": "5fe17c112a8053a3c1a35f5b9ab9fea1f1cd9583c295b8d716fa715b40575310",
+      "discovery_handoff_at": "2026-09-07T08:01:43.862548Z",
+      "discovery_observed_at": "2026-09-07T05:39:03.746172Z",
+      "discovery_run_id": "7e672b685420574f615cfc8469bc7828f1e17c3cf2013677cf1991d9c061484c",
+      "document_scope": "Dedicated Taylor landing URL with a Taylor locality heading, but whole-page content spans the two Taylor logic fabs, a separate Taylor R&D fab and Austin expansion. Only the two Taylor logic fabs correspond to the baseline project aggregate. Award-wide money, employment and timelines are not attributable operating capacity or achieved milestones.",
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "outcome": "no_baseline_revision",
+      "rationale": "The separately approved and captured Taylor page repeats the monitored Austin page's substantive project narrative. Its source text was explicitly reviewed and dismissed without a baseline revision. Retained CMS page dates are distinct from claim-effective dates and manufacturing milestones. Discovery, access review, acquisition, source admission, source review and final link review retain their actual knowledge-time order.",
+      "scope_limitation": "The two Taylor logic fabs remain a project aggregate. The dedicated landing URL retains broader Taylor R&D and Austin context; common publisher content is not independent corroboration. This is one manual acquired-source handoff, not a new recurring document, accepted manufacturing claim, broad publisher search or current-stage reaffirmation.",
+      "source_admitted_at": "2026-09-07T08:01:57.820033Z",
+      "source_candidate_id": "d7e3fc00d45f37a9775945c8ce108eee6ec3f11e7ddb2296d123f253cb2572c3",
+      "source_captured_at": "2026-09-07T08:01:57.743794Z",
+      "source_decision_at": "2026-09-07T08:07:07.959750Z",
+      "source_reviewed_at": "2026-09-07T08:04:25Z",
+      "source_run_id": "77a6bb6a43dd6f23c21f0d049ccbf838315f321e7680661b81401e2f4e93ec21",
+      "source_status": "dismissed",
+      "source_text_reviewer": "local:source-version-review",
+      "source_url": "https://www.nist.gov/chips/samsung-electronics-texas-taylor",
+      "text_sha256": "7ffdb921a4af218b07217b2fa2336f0d244f20decce2d4dc3c151ce9b7f7f7e6"
+    },
+    "boundaries": {
+      "absence_inference_allowed": false,
+      "baseline_modified": false,
+      "claim_acceptance": false,
+      "delivery_eligible": false,
+      "facility_scope_verified_by_discovery": false,
+      "linked_document_acquisition_allowed": false,
+      "publisher_complete": false,
+      "raw_redistribution": false
+    },
+    "self_contained": false,
+    "selection": "retrospective_target_selected_not_blind",
+    "historical_cutoffs": [
+      {
+        "label": "before_discovery_admission",
+        "as_of": "2026-09-07T05:38:17Z",
+        "discovery_status": null,
+        "source_status": null,
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "first_discovery_admission",
+        "as_of": "2026-09-07T05:38:17.908193Z",
+        "discovery_status": "pending",
+        "source_status": null,
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "access_review",
+        "as_of": "2026-09-07T07:59:44Z",
+        "discovery_status": "deferred",
+        "source_status": null,
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "discovery_handoff",
+        "as_of": "2026-09-07T08:01:43.862548Z",
+        "discovery_status": "handed_off",
+        "source_status": null,
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "source_captured_before_admission",
+        "as_of": "2026-09-07T08:01:57.743794Z",
+        "discovery_status": "handed_off",
+        "source_status": null,
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "source_admission",
+        "as_of": "2026-09-07T08:01:57.820033Z",
+        "discovery_status": "handed_off",
+        "source_status": "pending",
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "source_review_before_decision",
+        "as_of": "2026-09-07T08:04:25Z",
+        "discovery_status": "handed_off",
+        "source_status": "pending",
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "source_decision_before_final_link",
+        "as_of": "2026-09-07T08:07:07.959750Z",
+        "discovery_status": "handed_off",
+        "source_status": "dismissed",
+        "linked": false,
+        "future_link_facts_hidden": true
+      },
+      {
+        "label": "final_link_review",
+        "as_of": "2026-09-07T08:08:33Z",
+        "discovery_status": "handed_off",
+        "source_status": "dismissed",
+        "linked": true,
+        "future_link_facts_hidden": null
+      }
+    ]
+  },
+  "capture": {
+    "all_three_successful_no_redirects": true,
+    "managed_file_bytes": 199700,
+    "managed_file_count": 12,
+    "manifest_sha256": "77a6bb6a43dd6f23c21f0d049ccbf838315f321e7680661b81401e2f4e93ec21",
+    "minimum_request_gap_seconds": 1.008013,
+    "path": "source_snapshots/2026-09-07-samsung-taylor-discovery-handoff-v1",
+    "request_count": 3,
+    "response_bytes": 180792
+  },
+  "queues": [
+    {
+      "candidate_count": 8,
+      "database": "artifacts/2026-09-07-amkor-source-review.sqlite",
+      "export": {
+        "bytes": 51003,
+        "path": "artifacts/2026-09-07-samsung-handoff-source-events-v1.json",
+        "sha256": "bc59f0139e743f80647a7e5517a792f75ffaee353aae8e071acdb4fea797c90c"
+      },
+      "export_and_restored_history_identical": true,
+      "head_event_id": "145cf4bf6658fa2e33acad2bb916d9b383f74136356ef9aeea0b386baa5b69da",
+      "name": "source",
+      "pending_count": 1,
+      "recheck_count": 0,
+      "restored_event_cutoff_count": 19,
+      "run_count": 12,
+      "verified_capture_count": 12
+    },
+    {
+      "candidate_count": 64,
+      "database": "artifacts/2026-09-07-nist-discovery-review.sqlite",
+      "export": {
+        "bytes": 167108,
+        "path": "artifacts/2026-09-07-samsung-handoff-discovery-events-v1.json",
+        "sha256": "e58d0f5f67130b39b4b1f63a8798f2f2f74623471c9811f92b6f1bf6e88d4785"
+      },
+      "export_and_restored_history_identical": true,
+      "head_event_id": "6f13fab1227ef0c61b62b09825bdf6771fc42990ad72120d2e7656b04c14fe07",
+      "name": "discovery",
+      "pending_count": 13,
+      "recheck_count": 0,
+      "restored_event_cutoff_count": 5,
+      "run_count": 2,
+      "verified_capture_count": 2
+    }
+  ],
+  "historical_coverage": [
+    {
+      "byte_identical": true,
+      "catalog": "acquisition_plans/ai_critical_coverage_v1.json",
+      "report": "artifacts/2026-09-07-ai-critical-coverage-v1.json",
+      "sha256": "28cb94636f8b69d2c599414626ed50806300aea565da6f549621c235289627f6"
+    },
+    {
+      "byte_identical": true,
+      "catalog": "acquisition_plans/ai_critical_coverage_v2.json",
+      "report": "artifacts/curated-poll-v1/92260e90c9774797a92686ff516a5f5a/coverage.json",
+      "sha256": "6bb301f9d390b8f48c8e561ff32399b6c79a8f2cb13b9957f53de7affd174322"
+    },
+    {
+      "byte_identical": true,
+      "catalog": "acquisition_plans/ai_critical_coverage_v3.json",
+      "report": "artifacts/curated-poll-v1/deb403152bab4f13989629ae2b240ecc/coverage.json",
+      "sha256": "681775fe66ec6a25f6e1b05582eeef5c82fa916382d589e2bfdef826551020f3"
+    },
+    {
+      "byte_identical": true,
+      "catalog": "acquisition_plans/ai_critical_coverage_v4.json",
+      "report": "artifacts/curated-poll-v1/a118775ff9c544e792b0d0a808d59d1e/coverage.json",
+      "sha256": "7b06d49f1fdd65ad011ab9725739ef49cc29000a1afa5683eba4d839f1495bfa"
+    }
+  ],
+  "current_coverage": {
+    "as_of": "2026-09-07T08:28:24.689810Z",
+    "queue_head_event_id": "145cf4bf6658fa2e33acad2bb916d9b383f74136356ef9aeea0b386baa5b69da",
+    "summary": {
+      "cohort_facility_count": 7,
+      "configured_document_count": 7,
+      "configured_facility_count": 5,
+      "expired_plan_count": 0,
+      "fresh_document_count": 7,
+      "never_observed_document_count": 0,
+      "pending_count": 1,
+      "recheck_count": 0,
+      "stale_document_count": 0,
+      "unhealthy_document_count": 0,
+      "unmonitored_facility_count": 2
+    }
+  },
+  "shared_project_section": {
+    "bytes": 6411,
+    "equal": true,
+    "independent_corroboration": false,
+    "sha256": "89f8a5b0c7d2153d5055b9bbe113b67edbb941e1e36f866dc9adb40cc492f37f"
+  },
+  "baseline_and_pinned_inputs": [
+    {
+      "bytes": 141232,
+      "path": "semiconductor_atlas/ai_critical.py",
+      "sha256": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969"
+    },
+    {
+      "bytes": 51871,
+      "path": "baselines/ai_critical_manufacturing_v1.json",
+      "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958"
+    },
+    {
+      "bytes": 84065,
+      "path": "releases/2026-08-20-ai-critical-manufacturing-baseline-v1-r3.tar.gz",
+      "sha256": "fa3db457bd4734511dee267c13d8b2404b2f25a7b2d12f85bbf4c6f4aad542f4"
+    },
+    {
+      "bytes": 20597,
+      "path": "semiconductor_atlas/alert_evaluation.py",
+      "sha256": "d583da7cbc6656eec3dab185a13f00df987cc5a5770f48e87cdf912f9745896b"
+    },
+    {
+      "bytes": 26949,
+      "path": "semiconductor_atlas/ai_critical_alert_review.py",
+      "sha256": "987d416e1b882361782a00defa1dd8f2b5b44ce5a250fde37459fafdb2399b7d"
+    },
+    {
+      "bytes": 1202,
+      "path": "acquisition_plans/ai_critical_poll_v4.json",
+      "sha256": "f693b4b13cb68a6718d67a7c31fc660c0c96cbc5dbe616789253ae41d9103156"
+    },
+    {
+      "bytes": 2940,
+      "path": "acquisition_plans/ai_critical_coverage_v4.json",
+      "sha256": "a637612b88c3d8042714bdf3c67d065b8dce4e45905c7f4eba98e7cea2790463"
+    }
+  ],
+  "frozen_amkor_diagnostic_and_alert_export_exact": true,
+  "validation": {
+    "core_test_command": "python3 -m unittest discover -s tests -q",
+    "core_tests_passed": 793,
+    "core_elapsed_seconds": 79.213,
+    "web_test_command": "python3 -m unittest discover -s web/tests -q",
+    "web_tests_passed": 12,
+    "new_handoff_tests": 37,
+    "compileall_passed": true,
+    "independent_audit": {
+      "scope": "Read-only code audit and disposable synthetic fixture attacks, not independent manufacturing outcome adjudication or authenticated reviewer identity.",
+      "module_sha256": "18edfbedfab5cd1ab2953688e7343d1c1c8691c7dfb85222685199e5151fe179",
+      "confirmed_rejections": [
+        "Wrong discovery candidate, predecision token, capture and fingerprint in access approval",
+        "Source review binding a token unavailable at its declared review time",
+        "Supporting review mutation at the code-hash boundary"
+      ],
+      "output_preservation_checks": [
+        "Existing destination preserved",
+        "Destination appearing immediately before installation preserved",
+        "Failed newly published unchanged artifact removed",
+        "Replacement inode preserved after failure",
+        "User edits to published inode preserved"
+      ]
+    }
+  },
+  "limitations": [
+    "One manual exact-document acquisition, not an additional recurring monitor.",
+    "Substantive project text duplicates the already monitored Austin page; not independent corroboration.",
+    "No attained Samsung milestone or numeric capacity revision is supported; CMS page dates remain distinct from claim-effective dates.",
+    "Requires original local capture paths, supporting reviews, event exports and exact validator code; not a portable source archive.",
+    "Dependency checks assume a quiescent corpus; arbitrary concurrent writers are not atomically locked out.",
+    "Not a blind, preregistered or independently adjudicated detection-performance evaluation.",
+    "The TSMC candidate remains pending. A separate retained Fab 2 target-change lead needs project-scope review."
+  ],
+  "recurring_catalog_changed": false,
+  "automation_changed": false,
+  "new_data_release_published": false,
+  "raw_redistribution": false,
+  "claim_acceptance": false,
+  "baseline_modified": false,
+  "delivery_eligible": false
+}

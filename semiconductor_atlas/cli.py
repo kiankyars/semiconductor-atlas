@@ -600,7 +600,10 @@ def _ingest_eea_industrial_snapshot(args: argparse.Namespace) -> dict[str, objec
     snapshot = verify_eea_industrial_snapshot(args.snapshot)
     queue = read_eea_industrial_review_queue_file(args.candidate_queue)
     review = read_eea_industrial_review_file(args.review, queue=queue)
-    connection, installed = initialize(args.database)
+    if args.database.is_symlink() or not args.database.is_file():
+        raise ValueError("EEA admission requires an existing regular working database")
+    connection = connect(args.database)
+    installed: list[int] = []
     try:
         connection.execute("BEGIN IMMEDIATE")
         try:
@@ -621,7 +624,10 @@ def _ingest_eea_industrial_snapshot(args: argparse.Namespace) -> dict[str, objec
             connection.commit()
         return {
             "accepted_at": imported.accepted_at,
-            "acceptance_timestamp_basis": "explicit_operator_supplied",
+            "acceptance_timestamp_basis": json.loads(connection.execute(
+                "SELECT parameters_json FROM ingestion_runs WHERE id = ?",
+                (imported.ingestion_run_id,),
+            ).fetchone()[0])["acceptance_timestamp_basis"],
             "candidate_queue": str((queue.path or args.candidate_queue).resolve()),
             "candidate_queue_sha256": queue.raw_sha256,
             "database": str(args.database.resolve()),
@@ -639,6 +645,52 @@ def _ingest_eea_industrial_snapshot(args: argparse.Namespace) -> dict[str, objec
         }
     finally:
         connection.close()
+
+
+def _eea_scope_connection(path: Path, *, write: bool = False):
+    if path.is_symlink() or not path.is_file():
+        raise ValueError("EEA scope requires an existing regular working database")
+    connection = sqlite3.connect(path.absolute().as_uri() + ("?mode=rw" if write else "?mode=ro"), uri=True)
+    connection.row_factory = sqlite3.Row
+    connection.execute("PRAGMA foreign_keys = ON")
+    connection.execute("PRAGMA busy_timeout = 5000")
+    return connection
+
+
+def _accept_eea_scope_revision(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_revisions import accept_revision
+
+    connection = _eea_scope_connection(args.database, write=True)
+    try:
+        return accept_revision(connection, snapshot=args.snapshot, candidate_queue=args.candidate_queue,
+            review=args.review, expected_predecessor_run_id=args.expected_predecessor_run_id,
+            accepted_at=args.accepted_at)
+    finally:
+        connection.close()
+
+
+def _eea_scope_report(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_revisions import scope_records
+
+    connection = _eea_scope_connection(args.database)
+    try:
+        return scope_records(connection, candidate_queue=args.candidate_queue, recorded_at=args.recorded_at)
+    finally:
+        connection.close()
+
+
+def _export_eea_scope_history(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_history import write_history
+
+    return write_history(args.database, parent_database=args.parent_database,
+        candidate_queue=args.candidate_queue, recorded_at=args.recorded_at, output_file=args.output)
+
+
+def _restore_eea_scope_history(args: argparse.Namespace) -> dict[str, object]:
+    from .eea_scope_history import restore_history
+
+    return restore_history(args.parent_database, history_file=args.history,
+                           output_database=args.output_database)
 
 
 def _ingest_moenv_snapshot(args: argparse.Namespace) -> dict[str, object]:
@@ -849,6 +901,17 @@ def _validate(args: argparse.Namespace) -> dict[str, object]:
         connection.close()
 
 
+def _accept_project_targets(args: argparse.Namespace) -> dict[str, object]:
+    from .project_target_review import accept_review
+
+    connection = _existing_database(args.database)
+    try:
+        return accept_review(connection, args.review, reference_root=args.reference_root,
+                             source_queue=args.source_queue)
+    finally:
+        connection.close()
+
+
 def _summary(args: argparse.Namespace) -> dict[str, object]:
     connection = _existing_database(args.database)
     try:
@@ -983,13 +1046,54 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_eea.add_argument("--snapshot", required=True, type=Path)
     ingest_eea.add_argument("--candidate-queue", required=True, type=Path)
     ingest_eea.add_argument("--review", required=True, type=Path)
-    ingest_eea.add_argument(
+    eea_clock = ingest_eea.add_mutually_exclusive_group(required=True)
+    eea_clock.add_argument(
         "--accepted-at",
-        required=True,
         type=_timestamp,
-        help="explicit database acceptance timestamp for deterministic rebuilds",
+        help="original acceptance timestamp for exact replay only",
+    )
+    eea_clock.add_argument(
+        "--accept-now",
+        action="store_true",
+        help="sample actual admission after transaction-bound input validation",
     )
     ingest_eea.set_defaults(handler=_ingest_eea_industrial_snapshot)
+
+    revise_eea = subparsers.add_parser("accept-eea-scope-revision",
+        help="append an evidence-bound EEA scope review while preserving source history")
+    revise_eea.add_argument("--database", required=True, type=Path)
+    revise_eea.add_argument("--snapshot", required=True, type=Path)
+    revise_eea.add_argument("--candidate-queue", required=True, type=Path)
+    revise_eea.add_argument("--review", required=True, type=Path)
+    revise_eea.add_argument("--expected-predecessor-run-id", required=True)
+    revision_clock = revise_eea.add_mutually_exclusive_group(required=True)
+    revision_clock.add_argument("--accept-now", action="store_true")
+    revision_clock.add_argument("--accepted-at", type=_timestamp,
+        help="original revision clock for exact replay only")
+    revise_eea.set_defaults(handler=_accept_eea_scope_revision)
+
+    scope_eea = subparsers.add_parser("eea-scope-report",
+        help="export reviewed EEA scope and retained source statements at a knowledge cutoff")
+    scope_eea.add_argument("--database", required=True, type=Path)
+    scope_eea.add_argument("--candidate-queue", required=True, type=Path)
+    scope_eea.add_argument("--recorded-at", required=True, type=_timestamp)
+    scope_eea.set_defaults(handler=_eea_scope_report)
+
+    export_eea = subparsers.add_parser("export-eea-scope-history",
+        help="export cutoff-safe EEA source and review history bound to an exact pre-EEA parent")
+    export_eea.add_argument("--database", required=True, type=Path)
+    export_eea.add_argument("--parent-database", required=True, type=Path)
+    export_eea.add_argument("--candidate-queue", required=True, type=Path)
+    export_eea.add_argument("--recorded-at", required=True, type=_timestamp)
+    export_eea.add_argument("--output", required=True, type=Path)
+    export_eea.set_defaults(handler=_export_eea_scope_history)
+
+    restore_eea = subparsers.add_parser("restore-eea-scope-history",
+        help="restore original EEA history into a new derivative of its verified parent")
+    restore_eea.add_argument("--parent-database", required=True, type=Path)
+    restore_eea.add_argument("--history", required=True, type=Path)
+    restore_eea.add_argument("--output-database", required=True, type=Path)
+    restore_eea.set_defaults(handler=_restore_eea_scope_history)
 
     ingest_moenv = subparsers.add_parser(
         "ingest-moenv-snapshot",
@@ -1098,6 +1202,15 @@ def build_parser() -> argparse.ArgumentParser:
         complete_refresh=True,
         handler=_ingest_taiwan_mof_snapshot,
     )
+
+    project_targets = subparsers.add_parser(
+        "accept-project-targets", help="accept an explicitly reviewed source-native project target pair")
+    project_targets.add_argument("--database", type=Path, required=True,
+                                 help="existing schema-5 working database; no implicit migration")
+    project_targets.add_argument("--review", type=Path, required=True)
+    project_targets.add_argument("--reference-root", type=Path, required=True)
+    project_targets.add_argument("--source-queue", type=Path, required=True)
+    project_targets.set_defaults(handler=_accept_project_targets)
 
     validate = subparsers.add_parser(
         "validate", help="validate integrity and claim lineage"

@@ -1,0 +1,36 @@
+{
+  "format": "semiconductor-atlas-tsmc-fab2-source-text-adjudication-v1",
+  "reviewed_at": "2026-09-07T09:06:56Z",
+  "reviewer": "local:source-version-and-project-scope-review",
+  "facility_key": "tsmc:fab21-arizona",
+  "candidate_id": "ec5102edf38301365ffab5f35388d973cca27f1209196a143293ac7143c57cd1",
+  "expected_event_id": "04b5d8ed9768727fc58172ca74c77aef4eae0559f0f8894043ed22cb5c0d3fca",
+  "decision": "handoff_reviewed_text_version_for_separate_claim_review",
+  "source_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+  "source_capture": {
+    "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0",
+    "manifest_sha256": "c5e0d149b27c426fa001f8b57d04b969da17cb970e82487c566dd4abd39180bc",
+    "body_path": "responses/nist-tsmc-arizona.body",
+    "body_sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598",
+    "normalization": "html_visible_text_v1",
+    "normalized_sha256": "2dfb872d402b4edbf65d1704f5d5185dad3ab2090adee13b02188f48b3a11ea0",
+    "retrieved_at": "2026-09-07T04:48:35.222019Z"
+  },
+  "earlier_review_lead": {
+    "path": "review_plans/2026-09-07-tsmc-fab2-target-review-lead.json",
+    "sha256": "1cbc3eb87c23896df4f34b6f3624f232a4b15420cb502a89120df9eb8ad4adaa"
+  },
+  "assessment": {
+    "source_revision": "Both the narrative and Facility Summary Project Timeline revise Fab 2 planned production from 2028 in the retained July batch to second half of 2027 in both September 7 captures. Repeated captures of this one page are not independent corroboration.",
+    "identity": "Fab 2 is an explicitly identified source-native second-fab project. The candidate's monitored facility_key is routing context, not a canonical assignment. This project must remain separate from the baseline's Fab 21 / first-fab scope. No production-unit, ownership or containment assignment is accepted here.",
+    "corrected_locator": "Economic and National Security Impact, paragraph beginning TSMC Arizona is on track; and Facility Summary, Project Timeline, Fab 2. The earlier lead's Project Summary narrative locator is imprecise.",
+    "corrected_retrieval_basis": "The old 2026-07-18T01:54:47Z clock is a corrected conservative batch-completion time based on the archived Overpass response completion mtime, not an exact TSMC request clock.",
+    "time_limits": "CMS page publication and modification metadata do not establish claim-effective dates or the target revision's first publication. The change is observed relative to the retained July document, not proven subsequent to the August baseline. This is not an early-detection success.",
+    "baseline": "The unchanged first-fab H1-2025 target is stale relative to the baseline's later HVM evidence. It does not demote the first fab or establish second-fab attainment. Cluster output wording lacks a facility-specific time denominator and supplies no numeric capacity claim.",
+    "next_gate": "Separately review two document-version SOURCE_STATEMENT claims on an unassigned source-native Fab 2 PROJECT, preserving year versus half-year precision, null midpoint, unknown effective date and uncalibrated confidence. Admission must use its actual new clock.",
+    "rights": "Retain full source bodies locally. Exclude Stock Photo images, linked resources, raw redistribution and third-party content. No public release is authorized by this source-text handoff."
+  },
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "baseline_modified": false
+}

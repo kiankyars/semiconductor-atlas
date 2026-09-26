@@ -1,0 +1,46 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "micron-singapore-acquisition-deferred-2026-09-07",
+  "review_completed_at": "2026-09-07T06:26:48Z",
+  "reviewer": "Codex primary-source review",
+  "facility_key": "micron:singapore-hbm-packaging-project",
+  "decision": "durable_acquisition_not_approved",
+  "collector_enabled": false,
+  "claim_acceptance": false,
+  "review_method": "Live web reading of the issuer article and its observed Legal link, followed by the Terms of use link. This is original review metadata, not an exact-byte source packet.",
+  "observed_links": [
+    {
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore-01-26-2026/default.aspx",
+      "role": "issuer_source_lead",
+      "page_heading_date": "2026-01-26",
+      "article_dateline_date": "2026-01-27",
+      "clock_resolution": "Both printed dates are preserved. Their timezone relationship was not established.",
+      "scope_review": "The principal project is a new NAND wafer fab. A separate paragraph discusses the previously announced Singapore HBM packaging project and a future 2027 supply contribution. The NAND investment, cleanroom area, wafer-output schedule and jobs must not be allocated to HBM packaging. Neither an achieved HBM production milestone nor an installed production rate is established.",
+      "observed_legal_link": "https://www.micron.com/legal"
+    },
+    {
+      "url": "https://www.micron.com/legal",
+      "role": "observed_policy_index",
+      "observed_terms_link": "https://www.micron.com/legal/terms-of-use"
+    },
+    {
+      "url": "https://www.micron.com/legal/terms-of-use",
+      "role": "rights_policy",
+      "reviewed_sections": ["General", "User License", "Copyright Information"],
+      "review_summary": "The terms cover Micron websites and content, including downloads. The stated license is limited to temporary personal, non-commercial viewing, with restrictions on further copying and public display. The search-engine exception is purpose-specific and does not establish permission for this facility intelligence archive. No separate permission for durable project retention was found in this review.",
+      "decision_basis": "The required persistent raw-response archive is outside the limited permission established by this review. Do not activate this source without a separately reviewed applicable permission or license. Robots access alone would not resolve retention rights."
+    }
+  ],
+  "raw_http_status": null,
+  "raw_response_sha256": null,
+  "raw_response_bytes_retained_in_repository": false,
+  "exact_request_clocks_retained": false,
+  "limitations": [
+    "The review completion clock is not a document retrieval clock or source publication date.",
+    "Web-readable content does not prove direct collector access or exact-byte replay.",
+    "This decision is not a general legal determination or a statement that no other lawful source is available.",
+    "Micron remains in the full seven-facility denominator as unmonitored. No baseline fact or source record is revised.",
+    "The cross-origin policy link is recorded, not used to relax the existing same-origin collector contract."
+  ],
+  "next_action": "Seek a separately rights-reviewed official distribution route or explicit retention permission. Do not bypass denied endpoints or enable a mirrored source solely to evade these restrictions."
+}

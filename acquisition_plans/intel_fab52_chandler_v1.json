@@ -1,0 +1,73 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v1",
+  "plan_id": "intel-fab52-chandler-exact-document-v1",
+  "review_scope_id": "intel-fab52-chandler-2026-09-07",
+  "checked_facility_key": "intel:fab52-chandler",
+  "reviewed_at": "2026-09-07T06:01:00Z",
+  "expires_at": "2026-10-07T06:01:00Z",
+  "decision": "approved_exact_urls",
+  "user_agent": "SemiconductorAtlas/0.1 (+https://github.com/kiankyars/semiconductor-atlas)",
+  "minimum_interval_seconds": 1,
+  "timeout_seconds": 30,
+  "max_response_bytes": 2000000,
+  "review_record": {
+    "path": "review_plans/2026-09-07-intel-chandler-source-review.json",
+    "sha256": "62ed391baf11ab88279ba165b9dc62be76143ed94260b2194166d46659b17f3f"
+  },
+  "notes": "Bounded exact-page research observation with local retained bytes for verification; an internal review decision, not publisher-granted permission. Operational metadata and original reviewer analysis only; no raw HTML, images, attachments or substantial publisher text. The unit-specific present-tense opening/production statement is a monitoring lead. It does not establish attainment of a defined high-volume-manufacturing milestone, numeric output or capacity, qualification, yield, utilization or point geometry. The baseline remains unchanged. Whole-page changes, including navigation and unrelated companies, remain text-review candidates until scope is reconciled. Thirty-day internal review deadline. Every recurring check must match both reviewed policy hashes; changed or failed policy checks block document requests. No automatic renewal. A missing or failed page is never negative facility evidence. No open license or publisher-granted automation permission is inferred. No redirects, retries, cookies, discovery, linked resources, raw redistribution or model training.",
+  "policies": [
+    {
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "municipal-economic-development",
+      "id": "chandler-robots",
+      "url": "https://www.chandleraz.gov/robots.txt",
+      "purpose": "access_policy",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "276df65dc9860bc5e7660783698389e461699cce92c8cbf85292b192c927531d",
+      "scope": "Exact same-origin policy for the listed Chandler document only; not blanket automation authorization or an open content license."
+    },
+    {
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "municipal-economic-development",
+      "id": "chandler-privacy",
+      "url": "https://www.chandleraz.gov/security-and-privacy-notice",
+      "purpose": "rights_policy",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "2ac47266dbbead0801e059509cd8509472b410b7a3b85d1c934d1c0afc091454",
+      "scope": "Exact same-origin policy for the listed Chandler document only; not blanket automation authorization or an open content license."
+    }
+  ],
+  "documents": [
+    {
+      "company": "Intel",
+      "country_code": "US",
+      "source_family": "municipal-economic-development",
+      "id": "chandler-intel-fab52",
+      "url": "https://www.chandleraz.gov/business/economic-development/key-industries-and-employers/advanced-manufacturing",
+      "purpose": "source_document",
+      "scope": "Whole municipal advanced-manufacturing page covering multiple companies and Intel campuses. Only the paragraph explicitly naming Intel Fab 52 at Ocotillo in Chandler is relevant to the baseline unit. Other employers, two-campus employment, multi-fab investment and city-wide totals cannot be allocated to Fab 52.",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "chandler-robots",
+        "chandler-privacy"
+      ],
+      "required_text": [
+        "Advanced Manufacturing",
+        "Intel",
+        "Fab 52",
+        "Ocotillo",
+        "Chandler"
+      ]
+    }
+  ]
+}

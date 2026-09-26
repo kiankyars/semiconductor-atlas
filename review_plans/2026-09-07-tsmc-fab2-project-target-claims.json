@@ -1,0 +1,109 @@
+{
+  "format": "semiconductor-atlas-project-target-claim-review-v1",
+  "reviewed_at": "2026-09-07T09:07:56Z",
+  "reviewer": "local:reviewed-source-native-project-claim-adjudication",
+  "decision": "accept_two_source_native_project_target_statements",
+  "source_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+  "project": {
+    "label": "TSMC Arizona Fab 2 planned-production project (NIST source-native)",
+    "source_native_subject": "Fab 2",
+    "narrative_subject": "second fab",
+    "scope": "Only the explicitly named Fab 2 planned-production target within the NIST three-fab Arizona page. Source-native PROJECT; no assignment to Fab 21, first fab, canonical facility, production unit or ownership/containment relationship.",
+    "canonical_facility_assignment": null
+  },
+  "before": {
+    "body": {
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-tsmc-arizona-phoenix.html",
+      "sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c"
+    },
+    "manifest": {
+      "path": "source_snapshots/2026-07-17-open-seed/manifest.json",
+      "sha256": "4bc7aeecde774055c8dc13728588fd132152e3006adc25008b51396494b78723"
+    },
+    "retrieved_at": "2026-07-18T01:54:47Z",
+    "retrieval_timestamp_basis": "conservative batch completion correction using the archived Overpass response file completion mtime; this is later than the response's OSM base timestamp",
+    "target": {
+      "literal": "2028",
+      "precision": "year",
+      "date_low": "2028-01-01",
+      "date_high": "2028-12-31"
+    },
+    "spans": [
+      {
+        "role": "narrative",
+        "start": 81566,
+        "end": 81768,
+        "sha256": "02b640979ae2d3b64a79115ad922287d005f6f35fb0ba33b9683fbb451ced2a4",
+        "locator": "Economic and National Security Impact; paragraph beginning TSMC Arizona is on track; second-fab clause"
+      },
+      {
+        "role": "timeline",
+        "start": 85816,
+        "end": 86098,
+        "sha256": "72dc793b0a3981e5d21b095d833d66510918056e8735fe99a38e8fcbeae92787",
+        "locator": "Facility Summary; Project Timeline; Fab 2"
+      }
+    ]
+  },
+  "after": {
+    "body": {
+      "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0/responses/nist-tsmc-arizona.body",
+      "sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598"
+    },
+    "retrieved_at": "2026-09-07T04:48:35.222019Z",
+    "target": {
+      "literal": "second half of 2027",
+      "precision": "half_year",
+      "date_low": "2027-07-01",
+      "date_high": "2027-12-31"
+    },
+    "spans": [
+      {
+        "role": "narrative",
+        "start": 83588,
+        "end": 83809,
+        "sha256": "b4f0af8dfe34c331cd34fa32bd3e1a8886f195f75152c4b37564720d7adf6b61",
+        "locator": "Economic and National Security Impact; paragraph beginning TSMC Arizona is on track; second-fab clause (narrative wording uses half in 2027)"
+      },
+      {
+        "role": "timeline",
+        "start": 87858,
+        "end": 88149,
+        "sha256": "f7b1b27e15612e23397ffd72af3eecfc767049b55256ac0b6eaf7fc0f532569d",
+        "locator": "Facility Summary; Project Timeline; Fab 2"
+      }
+    ]
+  },
+  "source": {
+    "events": {
+      "path": "artifacts/2026-09-07-tsmc-fab2-source-events-v1.json",
+      "sha256": "fad0fececf99c61060c07fae2ba67fe5625f9a89c88739d9ce1f48aa0bd9a0e2"
+    },
+    "candidate_id": "ec5102edf38301365ffab5f35388d973cca27f1209196a143293ac7143c57cd1",
+    "expected_event_id": "85850f9d12b725f215225e6155912b0fdab4bd44b478d7934afeb85d2fb9fb1a",
+    "run_id": "c5e0d149b27c426fa001f8b57d04b969da17cb970e82487c566dd4abd39180bc",
+    "document_id": "nist-tsmc-arizona",
+    "plan_sha256": "9fb2f1b7fff36d30a00f22e7bc7642f5a95abfdcbf00732316acdb255c8ce63b",
+    "text_sha256": "2dfb872d402b4edbf65d1704f5d5185dad3ab2090adee13b02188f48b3a11ea0"
+  },
+  "access_review": {
+    "path": "review_plans/2026-09-07-nist-source-expansion.json",
+    "sha256": "ceb77c4872e5f4786afa2d9d5b241513b6da5e14682678bfd852ce7c2b7b316f"
+  },
+  "source_review": {
+    "path": "review_plans/2026-09-07-tsmc-fab2-source-text-adjudication.json",
+    "sha256": "82277fe35b3447f49361fac2355d4680faaae93eabc4d8414bfa434412efee70"
+  },
+  "rationale": "Accept exactly what these two retained NIST document versions state about Fab 2 planned production, supported separately by their narrative and timeline spans. Preserve both document-version assertions with the same actual new core-admission clock; neither was accepted at its old retrieval time. Calendar bounds encode the stated year/half-year precision, not a forecast probability interval or midpoint. Claim-effective time, claim-specific publication time and calibrated confidence remain null. The newer stated period is earlier than the older stated year, but exact acceleration and detection lead time are unknown. The two September observations are repeated versions of one source, not independent corroboration. Stale first-fab schedule text, cluster output totals, Stock Photo images, linked resources and third-party content are excluded. No baseline revision or manufacturing attainment follows. Raw bodies remain local; permitted derivative evidence is confined to the reviewed government project text, hashes, locators, source attribution and typed target values. No public release is requested by this review.",
+  "boundaries": {
+    "canonical_facility_assignment": false,
+    "baseline_modified": false,
+    "capacity_claim": false,
+    "manufacturing_attainment": false,
+    "delivery_eligible": false,
+    "raw_redistribution": false,
+    "independent_corroboration": false,
+    "calibrated_forecast": false,
+    "exact_acceleration": false
+  }
+}

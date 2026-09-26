@@ -1,0 +1,80 @@
+{
+  "format": "semiconductor-atlas-nist-source-expansion-review-v1",
+  "reviewed_at": "2026-09-07T04:38:20Z",
+  "reviewer": "local:curated-source-scope-and-access-review",
+  "decision": "approve_exact_nist_documents_for_source_text_review_only",
+  "policy_capture": {
+    "path": "source_snapshots/curated-poll-v1/e503ab97b62f4fe69436353b4659ec65-5",
+    "manifest_sha256": "5c59ffed01efe304a93b468e84791437587d4b8c6b8154a2b52f2e709f5c30c3"
+  },
+  "policies": [
+    {
+      "url": "https://www.nist.gov/robots.txt",
+      "body_path": "responses/nist-robots.body",
+      "body_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd",
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd",
+      "review": "The wildcard-agent exclusions do not cover either exact /chips/ URL below. This is a bounded public-page check, not permission for unrestricted crawling, search endpoints, private paths or linked resources."
+    },
+    {
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "body_path": "responses/nist-copyright-current.body",
+      "body_sha256": "7d29e37811e803fa020654ae31badf33d22750b4b5e16e273294e7cedfa7a7dc",
+      "normalization": "html_policy_v2",
+      "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46",
+      "review": "Reviewed the current public-information notice and retained bytes. Credited government information may be copied subject to marked copyrighted and third-party exceptions. This run retains raw pages locally and publishes only operational metadata and original review analysis. No image, linked attachment or third-party republication is approved."
+    }
+  ],
+  "normalized_policy_review": {
+    "path": "review_plans/2026-09-07-nist-policy-normalization.json",
+    "sha256": "db0b4ff6109c364f080decf60e3d5f33ccba3a8dd161f3acd79360c2e28c84ca"
+  },
+  "documents": [
+    {
+      "facility_key": "tsmc:fab21-arizona",
+      "company": "TSMC",
+      "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+      "scope": "Whole three-fab Phoenix award page; only explicitly first-fab/Fab 1 statements may be candidates relevant to the baseline Fab 21 scope. Fabs 2 and 3, cluster totals, and forward-looking schedules are not Fab 21 current operating evidence.",
+      "review": "The public page retains an earlier first-fab production target. Retrieving that text today does not update its event date or corroborate later HVM. Whole-page text changes require location and unit reconciliation before any manufacturing claim changes."
+    },
+    {
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "company": "Samsung",
+      "url": "https://www.nist.gov/chips/samsung-electronics-texas-austin",
+      "scope": "Whole Texas award page spanning Taylor and Austin. Only the Taylor two-logic-fab aggregate is in the baseline scope; the Taylor R&D fab, Austin expansion, award-wide amounts, and schedules are separate context.",
+      "review": "The URL contains Austin but the page explicitly separates Taylor and Austin. A change elsewhere on the page is only a source-version review candidate, never an automatically attributed Taylor facility event. Samsung-controlled newsroom collection remains disabled."
+    }
+  ],
+  "excluded": [
+    {
+      "facility_key": "intel:fab52-chandler",
+      "reason": "NIST Chandler page describes a multi-fab program, not an explicit Fab 52 unit. Keep unconfigured until a reviewed unit-identifying source is available."
+    },
+    {
+      "facility_key": "micron:singapore-hbm-packaging-project",
+      "reason": "NIST U.S. awards are not evidence for the Singapore HBM packaging project."
+    },
+    {
+      "facility_key": "sk-hynix:m15x-cheongju",
+      "reason": "NIST West Lafayette award is not evidence for M15X in Cheongju. Restricted SK hynix newsroom collection remains disabled."
+    },
+    {
+      "facility_key": "ase:kaohsiung-site",
+      "reason": "No facility-safe NIST source for the Kaohsiung campus has been identified; no new source permission is inferred."
+    }
+  ],
+  "acquisition_boundary": {
+    "minimum_interval_seconds": 1,
+    "timeout_seconds": 30,
+    "max_response_bytes": 2000000,
+    "redirects": false,
+    "retries": false,
+    "cookies": false,
+    "discovery": false,
+    "raw_redistribution": false,
+    "claim_acceptance": false,
+    "delivery_eligible": false
+  },
+  "validity_note": "Plans expire after a 30-day internal review window, not a publisher-granted permission duration. Each acquisition must first match both normalized policy hashes. Failed checks and absent text are never negative facility evidence.",
+  "historical_inputs_preserved": true
+}

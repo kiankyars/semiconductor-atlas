@@ -1,0 +1,13 @@
+{
+  "format": "semiconductor-atlas-curated-poll-config-v1",
+  "recorded_at": "2026-09-07T06:02:46Z",
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v3.json",
+    "sha256": "3142e4330e41018ad06821ff39b3f74f28d3d7b9acb50d66a40c436185856b48"
+  },
+  "queue_path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+  "capture_root": "source_snapshots/curated-poll-v1",
+  "state_root": "artifacts/curated-poll-v1",
+  "interval_seconds": 82800,
+  "notes": "Existing daily 08:00 America/Los_Angeles heartbeat with unchanged 23-hour per-plan cadence, queue, capture root and recovery state. Adds only the exact reviewed Chandler municipal page for Intel Fab 52; all prior plan hashes and due times are retained. Six documents span four of seven scopes; Micron Singapore, SK hynix M15X and ASE Kaohsiung remain unmonitored. No restricted newsroom or linked-resource acquisition is enabled. The new undated city page does not accept HVM, capacity, yield, utilization or qualification claims. The app and local workspace must remain running for scheduled operation. Historical v1/v2 configs remain intact."
+}

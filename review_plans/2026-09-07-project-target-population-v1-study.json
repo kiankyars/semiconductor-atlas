@@ -1,0 +1,14 @@
+{
+  "format": "semiconductor-atlas-project-target-study-v1",
+  "study_id": "2026-09-07-accepted-project-targets-retrospective-v1",
+  "start": "2026-09-07T09:00:00Z",
+  "end": "2026-09-07T10:00:00Z",
+  "selection": "all_accepted_project_target_reviews_before_end",
+  "reviews": [
+    {
+      "run_id": "574fa308-9352-5cf1-939e-9f7a48de055a",
+      "path": "review_plans/2026-09-07-tsmc-fab2-project-target-claims.json",
+      "sha256": "3e71100098d347ba673ef015a27268774522d62043a143acf20dd9cae7fc4e86"
+    }
+  ]
+}

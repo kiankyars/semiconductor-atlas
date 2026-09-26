@@ -1,0 +1,191 @@
+{
+  "format": "semiconductor-atlas-nist-monitoring-pilot-v1",
+  "recorded_at": "2026-09-07T04:45:52.801307Z",
+  "review_record": {
+    "path": "review_plans/2026-09-07-nist-source-expansion.json",
+    "sha256": "ceb77c4872e5f4786afa2d9d5b241513b6da5e14682678bfd852ce7c2b7b316f"
+  },
+  "catalog": {
+    "path": "acquisition_plans/ai_critical_coverage_v2.json",
+    "sha256": "eb8d11162caf613efb8e166b1caf3ff0c2799179c8bbe609d3bc026c23323937"
+  },
+  "poll_config": {
+    "path": "acquisition_plans/ai_critical_poll_v2.json",
+    "sha256": "11586ef5a065f6058c9033cee00256728c566e3ba56d9453f686dcdcdb2449bc"
+  },
+  "coverage_code_sha256": "7d9f57644eb5728ab90023dfadad1c84d00a0d472daeb44cf47df5f41d21fdc9",
+  "invocations": [
+    {
+      "path": "artifacts/curated-poll-v1/1c2936e059e34988a29be3e4d3df6e21",
+      "started_at": "2026-09-07T04:41:50.325886Z",
+      "finished_at": "2026-09-07T04:41:56.805093Z",
+      "finished_sha256": "89d2732716e882e553de8ec2ecea409f90624c9a4602ea65d7129de26ae01280",
+      "coverage_sha256": "4d44b16b0397c61e761af4707779ee13b15b326c2aa18be7caa68ceb55662ec0",
+      "queue_export_sha256": "3b29b488f6874c39541419e4dd9a40ab5d623e0b125505ef40c314d5d35e16df",
+      "statuses": [
+        "captured_imported",
+        "captured_imported",
+        "not_due"
+      ],
+      "reportable_change": true,
+      "signal_sha256": "085a7ae9940b68756d94e726895acc8bb61b823d37e79c31e6e633668302aa03",
+      "runner_sha256": "1f2e5bb6afa16ff2ded0a601687a677a01b0ed0c57a1322427d9ed66a8e15b3e"
+    },
+    {
+      "path": "artifacts/curated-poll-v1/04a4cb2149b041be8bb5798b6683b60f",
+      "started_at": "2026-09-07T04:42:11.859157Z",
+      "finished_at": "2026-09-07T04:42:12.873688Z",
+      "finished_sha256": "c416fff9773127bacf15a4f3992b0f9762ae5861bd4133f76232c2818d60fa1e",
+      "coverage_sha256": "676b274db0f994d42eb33e8c85230f0f3a41091c73b0a1b04c9831d6c7b3a0af",
+      "queue_export_sha256": "3b29b488f6874c39541419e4dd9a40ab5d623e0b125505ef40c314d5d35e16df",
+      "statuses": [
+        "not_due",
+        "not_due",
+        "not_due"
+      ],
+      "reportable_change": false,
+      "signal_sha256": "085a7ae9940b68756d94e726895acc8bb61b823d37e79c31e6e633668302aa03",
+      "runner_sha256": "1f2e5bb6afa16ff2ded0a601687a677a01b0ed0c57a1322427d9ed66a8e15b3e"
+    }
+  ],
+  "captures": [
+    {
+      "path": "source_snapshots/curated-poll-v1/1c2936e059e34988a29be3e4d3df6e21-0",
+      "manifest_sha256": "88a1c8bb8b668053416ec0d9c7d91ea6ed601d19121acf6e9df05ce589ca35fe",
+      "request_count": 3,
+      "facility_key": "tsmc:fab21-arizona",
+      "document_sha256": "b439f69008685b678a215192fd2c2aae01f0022c0b3235529f1d468a32746b66",
+      "text_sha256": "2dfb872d402b4edbf65d1704f5d5185dad3ab2090adee13b02188f48b3a11ea0",
+      "status": "first_observation_requires_review"
+    },
+    {
+      "path": "source_snapshots/curated-poll-v1/1c2936e059e34988a29be3e4d3df6e21-1",
+      "manifest_sha256": "983f8cdbdf0e9c8b471f112acbaa90fdf6e2f8f17a750961aa8c77382690db4d",
+      "request_count": 3,
+      "facility_key": "samsung:taylor-leading-edge-project",
+      "document_sha256": "74e43fc49bfa5b05d91e377bf0d4bab9b7361164961d5df38339cf68be2b17e5",
+      "text_sha256": "69b114cb25d01b421d687aff3d9708a4670b5a1de5b837e053b853f770711b3c",
+      "status": "first_observation_requires_review"
+    }
+  ],
+  "request_count": 6,
+  "forced_capture": false,
+  "coverage_summary": {
+    "cohort_facility_count": 7,
+    "configured_facility_count": 3,
+    "unmonitored_facility_count": 4,
+    "expired_plan_count": 0,
+    "configured_document_count": 5,
+    "fresh_document_count": 5,
+    "stale_document_count": 0,
+    "never_observed_document_count": 0,
+    "unhealthy_document_count": 0,
+    "pending_count": 2,
+    "recheck_count": 0
+  },
+  "queue": {
+    "path": "artifacts/2026-09-07-amkor-source-review.sqlite",
+    "head_event_id": "d538f787223017eee3acf6650f697437e9a515163d61b3a6e772ab512c640a55",
+    "event_count": 9,
+    "verified_capture_count": 6,
+    "candidate_count": 5,
+    "pending_count": 2,
+    "recheck_count": 0,
+    "restored_path": "artifacts/2026-09-07-nist-expanded-queue-replay.sqlite",
+    "restored_export_and_verified_report_equal": true
+  },
+  "prior_v1_coverage_replay": {
+    "path": "artifacts/2026-09-07-ai-critical-coverage-v1.json",
+    "sha256": "28cb94636f8b69d2c599414626ed50806300aea565da6f549621c235289627f6",
+    "byte_identical": true
+  },
+  "automation": {
+    "id": "semiconductor-atlas-source-checks",
+    "name": "Semiconductor Atlas source checks",
+    "status": "ACTIVE",
+    "target_thread_id": "01a03042-7728-74a3-8fcb-a05db52a8b9c",
+    "updated_at_unix_ms": 1788756189488,
+    "schedule": "Daily 08:00 America/Los_Angeles local task; existing identity and cadence retained",
+    "actual_scheduler_trigger_observed": false
+  },
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "continuous_operation_proven": false,
+  "scope_note": "Five recent exact-document checks across three of seven cohort scopes; four unmonitored. TSMC and Samsung whole-project pages create two pending source-version candidates, not facility state updates. Amkor next due time retained, no restricted newsroom enabled, no new data release.",
+  "pacing_followup": {
+    "verified_at": "2026-09-07T04:50:55.130746Z",
+    "initial_pilot_cross_plan_gap_seconds": 0.092528,
+    "initial_pilot_limitation": "Pacing applied only inside each plan; the first TSMC-to-Samsung boundary did not satisfy a one-second cross-plan pause. All initial receipts remain unchanged.",
+    "correction": "Runner now waits between attempted plans using the larger of both configured intervals, including after a failed capture. Skipped plans do not add delay.",
+    "runner_sha256": "052111ab982e020dd7f3421cb9a56ff789901678f265c6110a75b6019ccf7dd1",
+    "manual_force_used_for_followup": true,
+    "requests_in_followup": 13,
+    "minimum_observed_gap_seconds": 1.003697,
+    "invocations": [
+      {
+        "path": "artifacts/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7",
+        "started_at": "2026-09-07T04:48:31.453574Z",
+        "finished_at": "2026-09-07T04:48:47.856198Z",
+        "finished_sha256": "85417ec1914d76bd4c637ff2387d65b528a68622727f14651b59ec74970bb549",
+        "coverage_sha256": "e01118f954fb2dad2a3e63c442ab86dffcd38a67b35d99e75065aab2df0ad909",
+        "queue_export_sha256": "acf3de21942e729f2cd8b6ba2fa4c785fa927122442d636b205c691f17785ec3",
+        "statuses": [
+          "captured_imported",
+          "captured_imported",
+          "captured_imported"
+        ],
+        "reportable_change": false
+      },
+      {
+        "path": "artifacts/curated-poll-v1/ca39126052e74924bf519aa7e78d5207",
+        "started_at": "2026-09-07T04:49:42.297776Z",
+        "finished_at": "2026-09-07T04:49:43.867881Z",
+        "finished_sha256": "afa02e2fde3687032a9c3025b74dc9c8408f6ee8bafc9f6b56ba13a832230761",
+        "coverage_sha256": "183d4ac858588163f8e13c291f76f654f49ab8365c2e2f5b702e0331e12a9c81",
+        "queue_export_sha256": "acf3de21942e729f2cd8b6ba2fa4c785fa927122442d636b205c691f17785ec3",
+        "statuses": [
+          "not_due",
+          "not_due",
+          "not_due"
+        ],
+        "reportable_change": false
+      }
+    ],
+    "captures": [
+      {
+        "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0",
+        "manifest_sha256": "c5e0d149b27c426fa001f8b57d04b969da17cb970e82487c566dd4abd39180bc",
+        "request_count": 3,
+        "document_statuses": [
+          "raw_bytes_only"
+        ]
+      },
+      {
+        "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-1",
+        "manifest_sha256": "f150734c0a290efed61dc2cc0bbcff951caa71876c1a40c499e3a22d75f93559",
+        "request_count": 3,
+        "document_statuses": [
+          "raw_bytes_only"
+        ]
+      },
+      {
+        "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-5",
+        "manifest_sha256": "68091453880dbbcdfd0e394c300bc25b703c0877378ba095d76a822d8cd1cae6",
+        "request_count": 7,
+        "document_statuses": [
+          "unchanged",
+          "unchanged",
+          "raw_bytes_only"
+        ]
+      }
+    ],
+    "queue_head_event_id": "7a473e9b641b01fd99ffcdc26fc46d95642fa1d2102bc407225151a0e44656a9",
+    "queue_event_count": 12,
+    "verified_capture_count": 9,
+    "pending_count": 2,
+    "recheck_count": 0,
+    "restored_path": "artifacts/2026-09-07-nist-paced-queue-replay.sqlite",
+    "restored_export_and_verified_report_equal": true,
+    "note": "The one forced validation repeat refreshes all three existing plan clocks; the subsequent ordinary skip preserves those due times. No new source-text versions, manufacturing claims, or scheduler-triggered run were established."
+  }
+}

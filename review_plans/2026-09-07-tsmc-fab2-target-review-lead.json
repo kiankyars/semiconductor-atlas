@@ -1,0 +1,58 @@
+{
+  "format": "semiconductor-atlas-project-target-review-lead-v1",
+  "recorded_at": "2026-09-07T08:32:11Z",
+  "reviewer": "local:source-diff-and-scope-triage",
+  "status": "pending_separate_project_scope_review",
+  "source_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+  "monitored_facility_key": "tsmc:fab21-arizona",
+  "source_native_subject": "Fab 2, the second planned TSMC Arizona fab",
+  "canonical_facility_assignment": null,
+  "finding": "The retained NIST page changes the second fab's planned production start from 2028 to the second half of 2027 in both narrative and Project Timeline. This is a substantive source-text revision, not an attained milestone.",
+  "before": {
+    "body": {
+      "path": "source_snapshots/2026-07-17-open-seed/nist-chips-detail-tsmc-arizona-phoenix.html",
+      "sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+      "bytes": 98048
+    },
+    "retrieved_at": "2026-07-18T01:54:47Z",
+    "target": "2028",
+    "target_precision": "year",
+    "locator": "Raw HTML line 798: Project Summary second-fab production sentence and Project Timeline Fab 2 row."
+  },
+  "after": {
+    "capture_path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0",
+    "manifest_sha256": "c5e0d149b27c426fa001f8b57d04b969da17cb970e82487c566dd4abd39180bc",
+    "body": {
+      "path": "source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0/responses/nist-tsmc-arizona.body",
+      "sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598",
+      "bytes": 99980
+    },
+    "normalized_sha256": "2dfb872d402b4edbf65d1704f5d5185dad3ab2090adee13b02188f48b3a11ea0",
+    "normalization": "html_visible_text_v1",
+    "retrieved_at": "2026-09-07T04:48:35.222019Z",
+    "target": "second half of 2027",
+    "target_precision": "half_year",
+    "locator": "Raw HTML line 798: Project Summary second-fab production sentence and Project Timeline Fab 2 row."
+  },
+  "queue_binding": {
+    "events": {
+      "path": "artifacts/2026-09-07-samsung-handoff-source-events-v1.json",
+      "sha256": "bc59f0139e743f80647a7e5517a792f75ffaee353aae8e071acdb4fea797c90c"
+    },
+    "candidate_id": "ec5102edf38301365ffab5f35388d973cca27f1209196a143293ac7143c57cd1",
+    "expected_event_id": "04b5d8ed9768727fc58172ca74c77aef4eae0559f0f8894043ed22cb5c0d3fca",
+    "status": "pending",
+    "first_observed_at": "2026-09-07T04:41:53.837790Z",
+    "first_admitted_at": "2026-09-07T04:41:53.911481Z",
+    "queue_mutated": false
+  },
+  "scope_assessment": "The existing seven-company baseline explicitly scopes TSMC to Fab 21 / the first Arizona fab. This second-fab target must be preserved in a separately identified project or production-unit layer, not attributed to first-fab lifecycle or capacity. The first-fab paragraph remains stale forward-looking text and does not supersede the baseline's later operating evidence. Broad cluster output language is not a facility-specific numeric capacity rate.",
+  "temporal_assessment": "This target is newly observed relative to the July 18 retained document. It is not proven to have changed after the August 20 baseline, and page modification metadata does not establish the revision's first publication or a physical event date. It is not an early-detection success.",
+  "next_review": "Resolve source-native Fab 2 identity and its relationship to the Arizona manufacturing entity and first-fab baseline; preserve planned-date precision and source/knowledge clocks; review the changed target without treating a government source statement as a calibrated forecast.",
+  "claim_acceptance": false,
+  "baseline_modified": false,
+  "delivery_eligible": false,
+  "independent_corroboration": false,
+  "new_network_requests": 0,
+  "raw_redistribution": false
+}

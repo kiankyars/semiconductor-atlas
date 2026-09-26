@@ -1,0 +1,40 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "ase-bip-acquisition-blocked-2026-09-07",
+  "review_completed_at": "2026-09-07T06:51:10Z",
+  "facility_key": "ase:kaohsiung-site",
+  "decision": "direct_access_blocked",
+  "collector_enabled": false,
+  "claim_acceptance": false,
+  "source_lead": {
+    "url": "https://www.bip.gov.tw/info.aspx?cid=093e57e054ad1be2&pageid=5aa966ecd020763c",
+    "publication_date": "2025-10-03",
+    "review_method": "Live web reading, not exact-byte source verification",
+    "scope": "K18B new-building groundbreaking within Nanzih Technology Industrial Park. A future completion target and investment are not operating capacity. This building cannot replace the complete Kaohsiung campus aggregate's lifecycle.",
+    "source_document_archived": false
+  },
+  "rights_review": {
+    "url": "https://www.bip.gov.tw/page.aspx?pageid=2b22a8184c06e87f",
+    "method": "Live web reading of the complete published declaration, plus linked security and privacy policies",
+    "assessment": "The website declaration allows attributed reuse of covered agency material, preserving exclusions for other intellectual property, personal data, specifically restricted works and third-party rights. This does not override a denied access check. No publisher source document was fetched by the collector."
+  },
+  "access_check": {
+    "url": "https://www.bip.gov.tw/robots.txt",
+    "attempt_path": "source_snapshots/2026-09-07-bip-policy-review-v1/bip-robots-attempt.json",
+    "response_path": "source_snapshots/2026-09-07-bip-policy-review-v1/responses/bip-robots.body",
+    "started_at": "2026-09-07T06:50:20.655932Z",
+    "finished_at": "2026-09-07T06:50:22.057518Z",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 229,
+    "sha256": "8cb041aef7657490f74004455100546317f574d832b6ebb3a32ce78c386bb6e6",
+    "transport_outcome": "succeeded",
+    "content_outcome": "access_rejected_html_not_robots",
+    "assessment": "The response is a Request Rejected page, not a robots policy. HTTP 200 is not evidence of approved access. No document request, changed-user-agent retry, cookie workaround or redirect bypass followed."
+  },
+  "unacquired_lead": {
+    "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=AE602A9119D7FF04",
+    "result": "Research web open timed out. No exact response, permission decision or source claim was retained."
+  },
+  "next_action": "Keep ASE unmonitored until a separately approved official route or authorized access is available. Do not interpret failed access as lack of construction activity."
+}

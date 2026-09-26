@@ -1,0 +1,138 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v1",
+  "plan_id": "amkor-peoria-exact-documents-v1",
+  "review_scope_id": "amkor-peoria-successor-2026-09-07",
+  "checked_facility_key": "amkor:peoria-advanced-packaging-project",
+  "reviewed_at": "2026-09-07T02:38:36Z",
+  "expires_at": "2026-10-07T02:38:36Z",
+  "user_agent": "SemiconductorAtlas/0.1 (+https://github.com/kiankyars/semiconductor-atlas)",
+  "minimum_interval_seconds": 1,
+  "timeout_seconds": 30,
+  "max_response_bytes": 2000000,
+  "review_record": {
+    "path": "review_plans/2026-09-07-amkor-peoria-successor.json",
+    "sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160"
+  },
+  "notes": "This plan permits only the three listed document requests after their same-origin access and rights policies pass the recorded review boundary. It does not authorize a crawl, following article links, publisher-wide update coverage, subscriber or restricted access, raw-body redistribution, or model training. The Amkor website disclaimer is not a blanket content reuse license or unrestricted automation permission: publisher copyright remains in force, exact bytes stay local for replay, and public derivatives contain metadata, facts, attribution and minimal excerpts only. NIST public-information treatment preserves marked and third-party exceptions; this plan also keeps its raw response local. Absence, failed checks and changed policies are never evidence of a facility event. Policy hashes were derived from the previously retained reviewed bytes, not refreshed automatically from a live response. All listed response media types were observed in the retained successful requests. The expiry is an internal review deadline, not a publisher permission duration.",
+  "policies": [
+    {
+      "id": "amkor-robots",
+      "url": "https://amkor.com/robots.txt",
+      "purpose": "access_policy",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "company-newsroom",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "62b929bf9bd1f56c19b4b74e95e9c8dbed6b09a6fcd7526975366c1287510986",
+      "scope": "Exact policy URL for the listed document requests; not blanket automation authorization"
+    },
+    {
+      "id": "amkor-legal",
+      "url": "https://amkor.com/legal/",
+      "purpose": "rights_policy",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "company-newsroom",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "129bed12c7b08642dc573dcfd0a4d779949eae32acbb299ab4a3b465d21ab8ee",
+      "scope": "Exact policy URL for the listed document requests; not blanket automation authorization"
+    },
+    {
+      "id": "nist-robots",
+      "url": "https://www.nist.gov/robots.txt",
+      "purpose": "access_policy",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "nist-chips-award",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd",
+      "scope": "Exact policy URL for the listed document requests; not blanket automation authorization"
+    },
+    {
+      "id": "nist-copyright-current",
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "purpose": "rights_policy",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "nist-chips-award",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "c58539b316ad259692c43fbc5da8f57b1a449fee4fe966ad3eb43f398557ebfa",
+      "scope": "Exact policy URL for the listed document requests; not blanket automation authorization"
+    }
+  ],
+  "documents": [
+    {
+      "id": "amkor-groundbreaking",
+      "url": "https://amkor.com/blog/amkor-semiconductor-packaging-facility-peoria-arizona/",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "company-newsroom",
+      "scope": "Exact named document only; not publisher-wide coverage",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "amkor-robots",
+        "amkor-legal"
+      ],
+      "purpose": "source_document",
+      "required_text": [
+        "Amkor Technology Breaks Ground",
+        "Peoria"
+      ]
+    },
+    {
+      "id": "amkor-scope-update",
+      "url": "https://amkor.com/blog/amkor-peoria-number-one-deal-north-america/",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "company-newsroom",
+      "scope": "Exact named document only; not publisher-wide coverage",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "amkor-robots",
+        "amkor-legal"
+      ],
+      "purpose": "source_document",
+      "required_text": [
+        "Amkor’s Peoria Project",
+        "Phase One"
+      ]
+    },
+    {
+      "id": "nist-amkor-current",
+      "url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria",
+      "company": "Amkor",
+      "country_code": "US",
+      "source_family": "nist-chips-award",
+      "scope": "Exact named document only; not publisher-wide coverage",
+      "media_types": [
+        "text/html"
+      ],
+      "policy_ids": [
+        "nist-robots",
+        "nist-copyright-current"
+      ],
+      "purpose": "source_document",
+      "required_text": [
+        "Amkor Technology, Inc.",
+        "Peoria"
+      ]
+    }
+  ],
+  "decision": "approved_exact_urls"
+}

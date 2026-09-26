@@ -8,8 +8,8 @@ from collections import Counter, defaultdict
 from datetime import UTC, date, datetime
 from typing import Any, Iterable, Mapping, Sequence
 
-from .database import schema_version
-from .repository import current_claims, validate_database
+from .database import knowledge_clock_sql, schema_version
+from .repository import current_claims, known_source_claims, validate_database
 
 
 def default_as_of() -> str:
@@ -60,13 +60,17 @@ def _claim_value_from_row(value_kind: str, row: Mapping[str, Any]) -> dict[str, 
             "attributes": _json(row["attributes_json"]),
         }
     if value_kind == "milestone":
-        return {
+        result = {
             "milestone_type": row["milestone_type"],
             "status": row["status"],
             "date_low": row["date_low"],
             "date_base": row["date_base"],
             "date_high": row["date_high"],
         }
+        for field in ("date_precision", "date_literal"):
+            if field in row.keys() and row[field] is not None:
+                result[field] = row[field]
+        return result
     if value_kind == "capability":
         value = row["text_value"] if row["text_value"] is not None else row["number_value"]
         return {
@@ -246,9 +250,12 @@ def claim_history_records(
 
     Unlike :func:`claim_records`, this intentionally retains superseded and
     no-longer-current versions.  It is the audit export used to resolve alert
-    lineage and reproduce what changed over transaction time.
+    lineage and reproduce what changed over transaction time. From schema 5,
+    source statements are included solely by their knowledge cutoff, including
+    superseded statements with unknown or future effective dates.
     """
 
+    clock = knowledge_clock_sql(connection)
     available_rows = connection.execute(
         """
         SELECT versions.id, versions.series_id, versions.value_kind,
@@ -267,12 +274,15 @@ def claim_history_records(
         FROM claim_versions AS versions
         JOIN claim_series AS series ON series.id = versions.series_id
         WHERE julianday(versions.recorded_at) <= julianday(?)
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, recorded_at),
     ).fetchall()
     rows_by_id = {row["id"]: row for row in available_rows}
+    include_source_history = schema_version(connection) >= 5
     selected_ids = {
-        row["id"] for row in available_rows if row["valid_from"] <= as_of
+        row["id"] for row in available_rows
+        if row["valid_from"] is None or row["valid_from"] <= as_of
+        or (include_source_history and row["claim_kind"] == "source_statement")
     }
     for claim_id in required_claim_ids:
         if claim_id not in rows_by_id:
@@ -315,12 +325,29 @@ def claim_history_records(
             row["subject_entity_id"],
             row["predicate"],
             row["series_id"],
-            row["valid_from"],
+            row["valid_from"] or "",
             row["recorded_at"],
             row["id"],
         ),
     )
     return _hydrate_claim_rows(connection, rows, dependency_map=dependencies)
+
+
+def source_claim_records(
+    connection: sqlite3.Connection,
+    *,
+    recorded_at: str,
+    subject_entity_id: str | None = None,
+) -> list[dict[str, Any]]:
+    """Return source statements visible in knowledge time, not physical-world facts.
+
+    This view intentionally has no world-state cutoff: a statement can be known
+    while its effective date remains unknown or lies in the future.
+    """
+    rows = known_source_claims(
+        connection, recorded_at=recorded_at, subject_entity_id=subject_entity_id,
+    )
+    return _hydrate_claim_rows(connection, rows)
 
 
 def _preferred_name(entity: sqlite3.Row, claims: list[dict[str, Any]]) -> str:
@@ -357,13 +384,14 @@ def materialize_entities(
                 referenced_entity_ids.add(constrained_entity_id)
 
     records = []
+    clock = knowledge_clock_sql(connection)
     entities = connection.execute(
         """
         SELECT id, kind, stable_key, display_name, created_at
         FROM entities
         WHERE julianday(created_at) <= julianday(?)
         ORDER BY kind, id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     included_entity_ids = (
@@ -565,6 +593,7 @@ def summarize(
         sorted(Counter(entity["entity_kind"] for entity in entity_view).items())
     )
     document_runs_sql = _accepted_document_runs_sql(connection)
+    clock = knowledge_clock_sql(connection)
     document_counts = connection.execute(
         f"""
         WITH document_runs AS (
@@ -578,7 +607,7 @@ def summarize(
                COUNT(DISTINCT documents.source_id) AS source_count
         FROM accepted_documents
         JOIN source_documents AS documents ON documents.id = accepted_documents.document_id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchone()
     documents = document_counts["document_count"]
@@ -610,6 +639,13 @@ def summarize(
     }
 
 
+def _admission_sql(connection: sqlite3.Connection, qualifier: str = "") -> str:
+    if schema_version(connection) < 5:
+        return f"{qualifier}started_at"
+    return (f"CASE WHEN json_type({qualifier}parameters_json, '$.accepted_at') IS NULL "
+            f"THEN {qualifier}started_at ELSE json_extract({qualifier}parameters_json, '$.accepted_at') END")
+
+
 def _accepted_document_runs_sql(connection: sqlite3.Connection) -> str:
     """Return the cutoff-ready document/run ledger with a schema-v2 fallback."""
 
@@ -620,9 +656,10 @@ def _accepted_document_runs_sql(connection: sqlite3.Connection) -> str:
         """
     ).fetchone() is not None
     if has_ledger:
-        return """
+        admitted_at_sql = _admission_sql(connection, "runs.")
+        return f"""
             SELECT DISTINCT links.source_document_id AS document_id,
-                   runs.started_at, runs.completed_at
+                   {admitted_at_sql} AS started_at, runs.completed_at
             FROM ingestion_run_documents AS links
             JOIN ingestion_runs AS runs ON runs.id = links.ingestion_run_id
             WHERE runs.status = 'succeeded'

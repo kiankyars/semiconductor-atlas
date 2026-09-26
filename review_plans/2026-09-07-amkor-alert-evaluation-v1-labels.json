@@ -1,0 +1,35 @@
+{
+  "format": "semiconductor-atlas-alert-evaluation-labels-v1",
+  "frozen_sha256": "9ede3f6e32699e03d01e17cc97dc9f66a410a300876b506806b0556525cf2c94",
+  "adjudicator": "local:nonblind-amkor-retrospective-diagnostic-20260907",
+  "reviewed_at": "2026-09-07T07:14:01Z",
+  "blinding": "not_blinded",
+  "truth_inventory_complete": false,
+  "coverage_statement": "All seven baseline facilities and every episode admitted in the frozen window are retained, but only the previously reviewed Amkor event is adjudicated. The reviewer already knew the outcome. No complete historical event search or no-change opportunity inventory was performed for any facility. The source availability clock is the retained publisher's article metadata, not independent proof of contemporaneous collection. The 24-hour deadline is an illustrative retrospective diagnostic threshold selected after seeing the outcome, not a preregistered target or operating SLA. Other facilities' zero alert and label counts do not establish absence of changes.",
+  "truth_events": [
+    {
+      "id": "amkor-peoria-groundbreaking-2025-10-06",
+      "facility_key": "amkor:peoria-advanced-packaging-project",
+      "rule_id": "lifecycle_positive_stage_change",
+      "available_at": "2025-10-06T18:24:39Z",
+      "deadline_at": "2025-10-07T18:24:39Z",
+      "review_sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160",
+      "locator": "evidence_verification[0].published_timestamp and decisions entry decision_id=lifecycle. Rechecked exact retained source bytes and article:published_time at HTML line 24; named-project groundbreaking at line 320 and two-phase scope at line 322. Source SHA-256 d4a24d316d44923b2f4217dbb694f3fe9b2ac467d9c75c6c54cd32bc4994501b. This supports a prior-window site-preparation event, not new September 2026 activity."
+    }
+  ],
+  "adjudications": [
+    {
+      "alert_id": "42c4f6abca2cdf1cac29233c5ecec05b8675ced8ef10152bc6e67780061f44df",
+      "verdict": "supported",
+      "truth_event_id": "amkor-peoria-groundbreaking-2025-10-06",
+      "reason": "The manifest-bound comparison revises the same bounded Peoria project from announced to site_preparation using a directly supported earlier groundbreaking. Current claim eb995aa3-5c66-5e52-9dd8-6f8df0754055 links evidence amkor-peoria-groundbreaking-two-phase, fragment SHA-256 4de5f828e91a1d0231fc539a089adef6c9e9db1fa43aaeb916bd8d2297bcebc7. Project-level continuity is retained, while parcel and phase correspondence remain unresolved. Admission on September 7, 2026 is a late backfill, not early detection or proof of current operating capacity. The queue remains acknowledged; this outcome label does not resolve or otherwise mutate it.",
+      "review_sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160"
+    }
+  ],
+  "supporting_reviews": [
+    {
+      "path": "2026-09-07-amkor-peoria-successor.json",
+      "sha256": "8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160"
+    }
+  ]
+}

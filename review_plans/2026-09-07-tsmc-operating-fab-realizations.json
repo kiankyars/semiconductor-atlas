@@ -1,0 +1,187 @@
+{
+  "format": "semiconductor-atlas-realized-fab-table-review-v1",
+  "scope": "all_data_rows_in_verified_operating_fab_table",
+  "anchor_file_sha256": "687a5d015ab40375b21967fec67cc360c930108950b88d8ac30618c067bb3610",
+  "reviewed_by": "local:codex-tsmc-operating-fab-table-review",
+  "reviewed_at": "2026-09-07T20:41:54Z",
+  "prior_exposure": "The reviewing agent previously inspected this retained filing, its full operating-fab table and the AI-critical baseline, and authored the earlier Fab 21 review. The agent coordinated with the implementation team and has now independently re-read and positionally parsed all sixteen data rows from the exact retained source bytes. This is an exposed collaborative source-evidence review, not a blind evaluation, independent publisher corroboration, or independent verification of physical operations.",
+  "rationale": "Enumerate all sixteen data rows in source order from the single verified issuer operating-fab table, retaining its shared commercial-production commencement year header and blank spacer columns. Every selected row has seven direct cells with no merged-cell inheritance; source-native fab labels and commencement years occupy zero-based columns 0 and 2. The table describes the listed fabs as operating as of February 28, 2026. This creates a survivor-selected operating-facility cohort, not a census of all historical projects, starts, cancellations, delays, closures or failed construction. Accept only the issuer-reported year for each source-native facility label, with year precision and no midpoint. Carry forward the exact previously admitted Fab 21 observation without changing its admission clock or admitting it again. The other fifteen rows have unambiguous subject-year mappings under the same header and require no deferral at this limited source-report scope. No geography, canonical entity, project phase, ownership, technology at commencement, capacity, HVM alias, probability calibration or forecast score is inferred. The table's Fab 2 label is not NIST's Arizona Fab 2 project identity. All reported years are retrospective relative to the retained publication, retrieval and this actual review; none becomes an earlier system forecast or an independently observed physical event. The new source reports remain local reference-only evidence, not permission to redistribute the publisher body.",
+  "rows": [
+    {
+      "fab": "2",
+      "year": "1990",
+      "evidence": {
+        "start": 1128438,
+        "end": 1130712,
+        "sha256": "319735153ccf4353b7e8139ca7fba7a8687d22a61bf4f36760f977a311337e58"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 2 row pairs 1990 with the shared commencement-year header. This table identity is not the NIST Arizona Fab 2 project; no cross-source identity or phase is assigned."
+    },
+    {
+      "fab": "3",
+      "year": "1995",
+      "evidence": {
+        "start": 1130712,
+        "end": 1132873,
+        "sha256": "36d754c582245665405b225997a972e2089e65692ed84f65083dff9bdd797643"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 3 row unambiguously pairs 1995 with the shared commencement-year header. This does not identify an Arizona third-fab phase or independently establish physical operations."
+    },
+    {
+      "fab": "5",
+      "year": "1997",
+      "evidence": {
+        "start": 1132873,
+        "end": 1135034,
+        "sha256": "52ede05deb20d266bbbf530ce48010c2dfa9f6c9d578e51b45f4ca45aab77688"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 5 row directly pairs 1997 with the shared commencement-year header. Accept the issuer's retrospective year report only, without a project-phase or technology-at-commencement inference."
+    },
+    {
+      "fab": "6",
+      "year": "2000",
+      "evidence": {
+        "start": 1135034,
+        "end": 1137195,
+        "sha256": "fa0526de63d7e2d122392ad59c15d0b53eacefa8f4ebd88b79877761cf074073"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 6 row directly pairs 2000 with the shared commencement-year header. The table-state cutoff is separate; no exact commencement day or HVM event is supplied."
+    },
+    {
+      "fab": "8",
+      "year": "1998",
+      "evidence": {
+        "start": 1137195,
+        "end": 1139360,
+        "sha256": "61c0579d96622d01c0e39ea42e3b2b31a6e04dabc165b98fb6daed5d69516b0b"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 8 row directly pairs 1998 with the shared commencement-year header. Retain source order and year precision, not an invented midpoint or independently corroborated event."
+    },
+    {
+      "fab": "10",
+      "year": "2004",
+      "evidence": {
+        "start": 1139360,
+        "end": 1141526,
+        "sha256": "ca91ac165d35e1a7daa58e2fad5d1ad250d3815bf03bc5faa2e101253bb6b9fa"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 10 row directly pairs 2004 with the shared commencement-year header. Accept only that issuer-reported association; neither geography nor canonical facility identity is assigned."
+    },
+    {
+      "fab": "11",
+      "year": "1998",
+      "evidence": {
+        "start": 1141526,
+        "end": 1143692,
+        "sha256": "db4347046e493c597990da45c0d5168dca8dcc96e8ed7b97ebba825d0f0d99d3"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 11 row directly pairs 1998 with the shared commencement-year header. The same year appearing for another fab does not merge the source-native subjects or provide corroboration."
+    },
+    {
+      "fab": "12",
+      "year": "2001",
+      "evidence": {
+        "start": 1143692,
+        "end": 1145857,
+        "sha256": "889633b9ea1a4523de37edcb48db7032a151a5dd498dfd93beb9e29904ea08d9"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 12 row directly pairs 2001 with the shared commencement-year header. Its adjacent wafer-size and technology entries are not admitted as historical commencement attributes."
+    },
+    {
+      "fab": "14",
+      "year": "2004",
+      "evidence": {
+        "start": 1145857,
+        "end": 1148022,
+        "sha256": "93c0ce88806568e45346eb021c23201d1b23dee06f7594ccea923a470c66870c"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 14 row directly pairs 2004 with the shared commencement-year header. This is a separate row-level issuer report, not evidence of a shared project or independent physical verification."
+    },
+    {
+      "fab": "15",
+      "year": "2012",
+      "evidence": {
+        "start": 1148022,
+        "end": 1150186,
+        "sha256": "9486f86f8ee6ab373e3ef8c554c19cb364908b5bb8b3a801eaa396b86083dcca"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 15 row directly pairs 2012 with the shared commencement-year header. Accept a retrospective year interval only, without equating commercial production with HVM or a particular expansion phase."
+    },
+    {
+      "fab": "16",
+      "year": "2018",
+      "evidence": {
+        "start": 1150186,
+        "end": 1152351,
+        "sha256": "b9dd69ca30929e8f138a13e28561aada452d62c60f120fe844e5cefc7f89fa8b"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 16 row directly pairs 2018 with the shared commencement-year header. Only the table's facility label and reported year are supported by this row-level admission decision."
+    },
+    {
+      "fab": "18",
+      "year": "2020",
+      "evidence": {
+        "start": 1152351,
+        "end": 1154515,
+        "sha256": "314abbf8186961cf9b9cb38b0da2eac08b58536d7878c2296651151586e746d4"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 18 row directly pairs 2020 with the shared commencement-year header. Do not allocate the reported commencement among unreviewed phases or infer technology used at that time."
+    },
+    {
+      "fab": "20",
+      "year": "2025",
+      "evidence": {
+        "start": 1154515,
+        "end": 1156665,
+        "sha256": "c5b7eb53cff22b882a3de90173c79a9cea1a6db7298851f211a7e69afbbf7299"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 20 row directly pairs 2025 with the shared commencement-year header. The reported year is elapsed before the 2026 table-state cutoff and publication, but it supplies no exact day or forecast vintage."
+    },
+    {
+      "fab": "21",
+      "year": "2024",
+      "evidence": {
+        "start": 1156665,
+        "end": 1158829,
+        "sha256": "367dd24cb4809e48fa227e1bb36ec5d72aa63e9d9cec0925ba900de74d0e89d7"
+      },
+      "decision": "carry_forward",
+      "reason": "The exact row, source-native subject and 2024 commencement report match the verified existing Fab 21 observation. Carry it forward with its original admission clock; do not readmit it, change its event, or assign a phase alias."
+    },
+    {
+      "fab": "22",
+      "year": "2025",
+      "evidence": {
+        "start": 1158829,
+        "end": 1160979,
+        "sha256": "848a436231eadea3869d089378a17a5445a845461bd111ceaf2db249691a1e37"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 22 row directly pairs 2025 with the shared commencement-year header. Its matching year with Fab 20 does not establish a shared project, and no technology-at-commencement claim is made."
+    },
+    {
+      "fab": "23",
+      "year": "2024",
+      "evidence": {
+        "start": 1160979,
+        "end": 1163144,
+        "sha256": "a835b02f1faeac174a470ce074024c3b5b751dea7dff0027f62a473ac76b6732"
+      },
+      "decision": "accept_source_report",
+      "reason": "The source-native Fab 23 row directly pairs 2024 with the shared commencement-year header. This final data row is retained separately from Fab 21 despite the equal year; the source table provides no canonical identity or forecast pairing."
+    }
+  ]
+}

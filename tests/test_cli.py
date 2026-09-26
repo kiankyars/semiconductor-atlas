@@ -17,7 +17,7 @@ class CLITests(unittest.TestCase):
             output = io.StringIO()
             with contextlib.redirect_stdout(output):
                 self.assertEqual(0, main(["init", "--database", str(database)]))
-            self.assertEqual(4, json.loads(output.getvalue())["schema_version"])
+            self.assertEqual(5, json.loads(output.getvalue())["schema_version"])
 
             output = io.StringIO()
             with contextlib.redirect_stdout(output):

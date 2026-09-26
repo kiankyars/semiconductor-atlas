@@ -1,0 +1,57 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "ase-kcg-acquisition-deferred-2026-09-07",
+  "review_completed_at": "2026-09-07T14:53:41Z",
+  "facility_key": "ase:kaohsiung-site",
+  "decision": "missing_policy_unsupported_by_current_collector",
+  "collector_enabled": false,
+  "claim_acceptance": false,
+  "source_lead": {
+    "url": "https://invest.kcg.gov.tw/News_Content.aspx?n=8CE973AC5F6EE514&s=BA84DF962F234D8E&sms=D7173346CB507235",
+    "publisher": "Economic Development Bureau, Kaohsiung City Government",
+    "publication_date": "2025-10-03",
+    "displayed_content_update": "2026-08-14 14:25; timezone not independently verified",
+    "review_method": "Live primary municipal web reading; not exact-byte document verification",
+    "scope": "K18B building groundbreaking and a stated first-quarter 2028 completion target. Building completion is not production readiness. The source-native building must not replace the complete Kaohsiung campus aggregate or inherit its lifecycle. No canonical plant assignment, numeric capacity, utilization, yield or qualification follows.",
+    "source_document_archived": false,
+    "source_document_exact_byte_replay_available": false,
+    "date_assessment": "The page's ROC 114-10-03 publication date is distinct from its ROC 115-08-14 update label and site-wide footer. A newer CMS label alone does not establish a newly revised schedule or new physical milestone."
+  },
+  "access_check": {
+    "url": "https://invest.kcg.gov.tw/robots.txt",
+    "attempt_path": "source_snapshots/2026-09-07-ase-kcg-policy-review-v1/kcg-invest-robots.attempt.json",
+    "response_path": "source_snapshots/2026-09-07-ase-kcg-policy-review-v1/responses/kcg-invest-robots.body",
+    "finished_at": "2026-09-07T14:49:26.557026Z",
+    "http_status": 404,
+    "content_type": "text/html",
+    "bytes": 1161,
+    "sha256": "eab09f82e87641fb3e8c72b6c9e061f11684c7d8345925aad1fd7de4c05f87ab",
+    "transport_outcome": "failed",
+    "content_outcome": "not_found_html_not_robots",
+    "assessment": "A missing robots file is not an explicit access denial and not a content license. The currently pinned acquisition protocol requires a successful, reviewed same-origin robots body and does not represent HTTP 404 policy absence. The policy-only probe stopped here before further direct policy or document requests. Do not fabricate an Allow policy, hash the error HTML as robots, weaken the pinned collector, or conflate this result with the prior BIP Request Rejected response."
+  },
+  "rights_review": {
+    "security_url": "https://invest.kcg.gov.tw/cp.aspx?n=1C95EBE0D0D6C22C",
+    "privacy_url": "https://invest.kcg.gov.tw/cp.aspx?n=F415DE5DE54E5358",
+    "assessment": "The security policy was read through the research web tool; the privacy-policy read timed out. The municipal site retains copyright. No affirmative open license, complete exact-byte policy review or durable-acquisition clearance was established for this route. The prior BIP reuse declaration is not transferred to another origin.",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "distinct_project_leads_not_acquired": [
+    {
+      "url": "https://invest.kcg.gov.tw/News_Content.aspx?n=8CE973AC5F6EE514&s=7636C81342C7D241&sms=D7173346CB507235",
+      "publication_date": "2024-10-09",
+      "scope": "K28 at the two-phase Dashe site, with a stated 2026 building-completion target and separate K27 history. K28, K27 and K18B are not interchangeable; the page does not show current K28 completion."
+    },
+    {
+      "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=AE602A9119D7FF04",
+      "publication_date": "2026-03-11",
+      "scope": "Two new buildings at Nanzih Third Park, including logistics and advanced-process testing, with a stated second-quarter 2028 completion target. This is distinct from K18B and from the existing campus lifecycle.",
+      "access_status": "Research search result now exposes the municipal text; exact direct capture and policy review remain unverified."
+    }
+  ],
+  "next_action": "Complete the source-specific rights review and separately design/review any explicit missing-robots policy semantics, or use a separately approved official route. Do not modify the registered acquisition code or study configuration to force this source through. Preserve the original BIP failure record.",
+  "baseline_modified": false,
+  "registered_study_modified": false,
+  "delivery_eligible": false
+}
