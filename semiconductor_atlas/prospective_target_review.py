@@ -412,7 +412,7 @@ def _record(registration_path: str | Path, *, reference_root: str | Path) -> dic
         return {"status": "no_new_opportunities", "known_inputs": len(known), "network_requests": 0}
     path = directory / (_hash(batch) + ".json")
     written = vintage.write_new(path, batch, reference_root=root,
-        protected_directories=registration["inputs"]["protected_directories"])
+        protected_directories=registration["inputs"]["protected_directories"], stage_outside=True)
     if validate_registration(registration_path, reference_root=root)[1] != raw:
         raise ValueError("registration changed before prediction acceptance; uncommitted batch retained")
     receipt = {"format": RECEIPT_FORMAT, "registration_sha256": _hash(raw),
@@ -420,7 +420,7 @@ def _record(registration_path: str | Path, *, reference_root: str | Path) -> dic
     if _instant(receipt["accepted_at"]) < _instant(batch["recorded_at"]) or _hash(_read(path)) != written["sha256"]:
         raise ValueError("prediction durability clock or written bytes differ; uncommitted batch retained")
     acceptance = vintage.write_new(path.with_name(path.stem + ".receipt.json"), receipt, reference_root=root,
-        protected_directories=registration["inputs"]["protected_directories"])
+        protected_directories=registration["inputs"]["protected_directories"], stage_outside=True)
     return {"status": "recorded", **written, "receipt": acceptance,
         "counts": dict(sorted(Counter(row["result"] for row in batch["predictions"]).items()))}
 

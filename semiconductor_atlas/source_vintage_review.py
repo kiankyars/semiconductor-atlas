@@ -344,10 +344,12 @@ def _identities(paths) -> set:
     return {(status.st_dev, status.st_ino) for status in statuses if stat.S_ISDIR(status.st_mode)}
 
 
-def write_new(path: Path, data: dict, *, reference_root: Path, protected_directories: list[str]) -> dict:
-    """Publish complete bytes by no-replace link from a staging file in the output directory's parent.
+def write_new(path: Path, data: dict, *, reference_root: Path, protected_directories: list[str],
+              stage_outside: bool = False) -> dict:
+    """Publish complete bytes by no-replace link from a staging file, never leaving a torn output name.
 
-    A crash leaves at most an orphan staging file outside the output directory, never a torn output name.
+    Journal writers pass stage_outside so a crash orphans the staging file in the parent directory
+    rather than inside a directory whose scanner rejects foreign entries.
     """
     if ".." in path.parts:
         raise ValueError("artifact output cannot contain parent traversal")
@@ -361,7 +363,8 @@ def write_new(path: Path, data: dict, *, reference_root: Path, protected_directo
         raise ValueError("artifact exceeds 20 MB")
     _, directory = _open_real_directory_fd(output.parent, "cross-vintage output parent", create=False)
     try:
-        parent = os.open("..", os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=directory)
+        parent = (os.open("..", os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=directory)
+                  if stage_outside else os.dup(directory))
         try:
             staging = ".atlas-staging-" + secrets.token_hex(16)
             descriptor = os.open(staging, os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW, 0o644, dir_fd=parent)

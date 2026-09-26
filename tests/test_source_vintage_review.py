@@ -638,7 +638,10 @@ class SourceVintageReviewTests(unittest.TestCase):
         write = lambda data: vintage.write_new(output, data, reference_root=self.root, protected_directories=["historical"])
         with self.assertRaises(Killed), killed_during_write(b'"fixture": true'):
             write({"fixture": True})
-        self.assertEqual([], list(output.parent.iterdir()))
+        self.assertFalse(output.exists())
+        self.assertTrue(all(path.name.startswith(".atlas-staging-") for path in output.parent.iterdir()))
+        for orphan in output.parent.iterdir():
+            orphan.unlink()
         self.assertEqual({"output": str(output), "bytes": len(raw), "sha256": vintage._hash(raw)}, write({"fixture": True}))
         self.assertEqual(raw, output.read_bytes())
         entries = sorted(self.root.iterdir())
@@ -646,6 +649,21 @@ class SourceVintageReviewTests(unittest.TestCase):
             write({"fixture": False})
         self.assertEqual(raw, output.read_bytes())
         self.assertEqual(entries, sorted(self.root.iterdir()))
+
+    def test_writer_needs_only_the_output_directory_unless_staging_outside(self):
+        locked = self.root / "locked"
+        (locked / "out").mkdir(parents=True)
+        locked.chmod(0o555)
+        self.addCleanup(locked.chmod, 0o755)
+        output = locked / "out" / "report.json"
+        vintage.write_new(output, {"fixture": True}, reference_root=self.root, protected_directories=["historical"])
+        self.assertEqual([output], list(output.parent.iterdir()))
+        journal = self.root / "journal"
+        journal.mkdir()
+        with self.assertRaises(Killed), killed_during_write(b'"fixture": true'):
+            vintage.write_new(journal / "entry.json", {"fixture": True}, reference_root=self.root,
+                              protected_directories=["historical"], stage_outside=True)
+        self.assertEqual([], list(journal.iterdir()))
 
 
 if __name__ == "__main__":
