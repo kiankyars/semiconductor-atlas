@@ -605,11 +605,14 @@ class SourceStatementReviewTests(unittest.TestCase):
         packet, state = self.root / case["capture_path"], next((self.root / "poll-state").iterdir())
         (self.root / "artifacts").mkdir()
         entries = {directory: sorted(directory.iterdir()) for directory in (packet, state)}
+        frozen_sha256 = population._hash(self.frozen_path.read_bytes())
         for output in (self.root / case["capture_path"].upper() / "injected-review.json",
                        self.root / "Poll-Captures" / "injected-review.json",
                        self.root / "POLL-STATE" / state.name / "injected-review.json"):
             with self.subTest(path=output), self.assertRaises(SystemExit):
                 self.invoke_cli(output)
+            with self.subTest(path=output), self.assertRaisesRegex(ValueError, "outside retained source and polling"):
+                cli._write_report(output, b"{}", self.frozen_path, self.root, frozen_sha256)
             self.assertFalse(output.exists())
         self.assertEqual(entries, {directory: sorted(directory.iterdir()) for directory in entries})
         output = self.root / "artifacts" / "statement-report.json"

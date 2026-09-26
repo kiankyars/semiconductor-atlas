@@ -622,7 +622,7 @@ class SourceVintageReviewTests(unittest.TestCase):
         for output in (self.root / "Historical" / "injected.json", self.root / "POLL-STATE" / "injected.json",
                        self.root / "Poll-Captures" / capture.name.upper() / "injected.json"):
             with self.subTest(output=str(output)):
-                with self.assertRaises(ValueError):
+                with self.assertRaisesRegex(ValueError, "inside retained source or polling directories"):
                     vintage.write_new(output, {"fixture": True}, reference_root=self.root,
                                       protected_directories=["historical", "poll-state", "poll-captures"])
                 with self.assertRaises(SystemExit):
