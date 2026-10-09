@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "id": "cipher-black-pearl",
+  "name": "Cipher Black Pearl data center",
+  "aliases": [
+    "Black Pearl Facility",
+    "Black Pearl campus"
+  ],
+  "summary": "Cipher Digital (formerly Cipher Mining) facility on about 75 company-owned acres near Wink, Texas, with 300 MW of approved ERCOT interconnection. Cipher began bitcoin mining there in June 2025, signed a 15-year lease with Amazon Web Services for about 300 gross MW of turnkey data center capacity, which it valued at about USD 5.5 billion, and stopped mining in February 2026. Cipher said it delivered the first data center capacity and rent began in August 2026, two months ahead of the original schedule, while the remaining phase I halls were in fit-out and phase II was still being built.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Winkler County",
+    "locality": "Wink",
+    "lat": 31.7545,
+    "lon": -103.1541,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5",
+      "s6"
+    ],
+    "note": "Filings place the facility in or near Wink but give no street address. Coordinates are the Wink town point from its Wikipedia article, which also gives the county."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-08-04",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc",
+    "crypto_mining"
+  ],
+  "parties": [
+    {
+      "name": "Cipher Digital (formerly Cipher Mining)",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Formerly Cipher Mining; develops the site through wholly owned subsidiaries Cipher Black Pearl LLC and Black Pearl Compute LLC."
+    },
+    {
+      "name": "Cipher Digital (formerly Cipher Mining)",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The land is owned by a wholly owned Cipher subsidiary and the facility is described as wholly owned."
+    },
+    {
+      "name": "Amazon Web Services",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named as the Black Pearl lessee only in the 10-K (s1), which dates the 15-year lease of about 300 gross MW to both October and November 2025. The November 2025 release (s2) announces the AWS lease without naming the site, and the August 2026 updates refer to an unnamed investment-grade hyperscale tenant."
+    },
+    {
+      "name": "Quanta Services",
+      "role": "builder",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cipher names Quanta as an engineering, construction and procurement partner for sites such as Black Pearl."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-02-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Gross turnkey data center capacity leased to AWS, per the 10-K; the November 2025 release gives 300 MW. Cipher does not separate IT and facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-02-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved interconnection capacity on the ERCOT grid."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Former bitcoin mining operation (2025 to February 2026)",
+      "as_of": "2025-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Mining capacity reached by September 2025; mining stopped in February 2026 for the AWS conversion."
+    },
+    {
+      "metric": "land_area",
+      "value": 75,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-02-24",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2025-06",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bitcoin mining began at the site; this predates the AI/HPC conversion."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Retrofit and development of the 300 MW data center began in 2025."
+    },
+    {
+      "event": "announced",
+      "date": "2025-11-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Cipher announced the 15-year, roughly USD 5.5 billion AWS lease for 300 MW, without naming the site in the release."
+    },
+    {
+      "event": "other",
+      "date": "2026-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Bitcoin mining at the site ceased, and the USD 2.0 billion Black Pearl notes offering closed on 2026-02-11."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "First data center capacity delivered to the tenant and rent began, about two months ahead of the original schedule after a lease amendment."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2027-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Rent was expected to fully ramp by Q1 2027 when the final subphase is complete."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Approved for 300 MW of interconnection and set up to take part in the ERCOT market.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+      "title": "Cipher annual report on Form 10-K for fiscal year 2025",
+      "publisher": "Cipher Mining Inc. (now Cipher Digital Inc.) via SEC EDGAR",
+      "published": "2026-02-24",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260918143824/https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998925000110/nov3_earningspressreleasex.htm",
+      "title": "Cipher Mining provides third quarter 2025 business update (Form 8-K, Exhibit 99.1)",
+      "publisher": "Cipher Mining Inc. via SEC EDGAR",
+      "published": "2025-11-03",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/q226_earningsxprxdraftxvf.htm",
+      "title": "Cipher Digital Provides Second Quarter 2026 Business Update (Form 8-K Exhibit 99.1)",
+      "publisher": "Cipher Digital Inc. via SEC EDGAR",
+      "published": "2026-08-04",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
+      "title": "Cipher Digital business update presentation (Form 8-K Exhibit 99.2)",
+      "publisher": "Cipher Digital Inc. via SEC EDGAR",
+      "published": "2026-08-04",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20261006075929/https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010326001966/dp241421_8k.htm",
+      "title": "Cipher Mining Form 8-K: Black Pearl Compute LLC 6.125% senior secured notes due 2031",
+      "publisher": "Cipher Mining Inc. via SEC EDGAR",
+      "published": "2026-02-11",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20261005185914/https://www.sec.gov/Archives/edgar/data/1819989/000095010326001966/dp241421_8k.htm"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Wink,_Texas",
+      "title": "Wink, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The 10-K is the only source opened that names AWS as the Black Pearl lessee; the August 2026 releases refer to an unnamed investment-grade hyperscale tenant. Delivery moved forward: the 10-K targeted first rent by Q4 2026, and an amended lease brought first delivery to August 2026. In February 2026 subsidiary Black Pearl Compute LLC issued USD 2.0 billion of senior secured notes to fund the remaining facility cost, repay about USD 232.5 million of Cipher equity and fund reserves and fees; this is debt financing, not a disclosed project cost. The crypto_mining tag reflects the former 2025 mining use only.",
+  "last_reviewed": "2026-10-09"
+}

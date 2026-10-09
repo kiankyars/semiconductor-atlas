@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "id": "eni-khazna-ferrera-erbognone",
+  "name": "Eni and Khazna AI data center campus, Ferrera Erbognone",
+  "aliases": [
+    "Eni-Khazna AI Data Center Campus"
+  ],
+  "summary": "Planned AI data center campus of 500 MW of IT capacity at Ferrera Erbognone in the province of Pavia, Lombardy, near Milan. Eni and the UAE operator Khazna Data Centers signed heads of terms in July 2025 for a joint venture in which Khazna designs and develops a phased master plan and Eni supplies low-carbon power from a new gas-fired plant designed to capture its CO2 for storage at Ravenna. It is the first project in an Italy-UAE programme for up to 1 GW of IT capacity. The European Commission cleared the joint venture in August 2026, when the campus was described as still in design.",
+  "location": {
+    "country": "IT",
+    "admin1": "Lombardy",
+    "admin2": "Province of Pavia",
+    "locality": "Ferrera Erbognone",
+    "lat": 45.117,
+    "lon": 8.867,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Municipality centroid from the Ferrera Erbognone Wikipedia article. Sources name the municipality only."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-10",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Eni",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Joint venture partner."
+    },
+    {
+      "name": "Eni",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "To supply power from a new high-efficiency gas plant with carbon capture."
+    },
+    {
+      "name": "Khazna Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Joint venture partner appointed to design and develop the phased master plan, bringing data center design and operations expertise."
+    },
+    {
+      "name": "European Commission",
+      "role": "government",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Cleared the joint venture under the simplified merger procedure in August 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-08-10",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Total IT capacity, to be reached in phases on a modular design."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Italy-UAE strategic partnership launched, targeting up to 1 GW of IT capacity in Italy."
+    },
+    {
+      "event": "announced",
+      "date": "2025-07-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Heads of terms for the joint venture signed in Rome."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "European Commission merger clearance of the Eni-Khazna joint venture, finding no competition concerns."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Eni is to supply what it calls blue power from a new high-efficiency gas-fired plant designed to capture its CO2, which would be sent to a storage site in Ravenna. The plant's location relative to the campus is not stated.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.eni.com/en-IT/media/press-release/2025/07/pr-khazna-data-centers-eni-partner-develop-i-data-center-campus.html",
+      "title": "Khazna Data Centers and Eni partner to develop 500 MW AI Data Center Campus near Milan",
+      "publisher": "Eni",
+      "published": "2025-07-11",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261001233652/https://www.eni.com/en-IT/media/press-release/2025/07/pr-khazna-data-centers-eni-partner-develop-i-data-center-campus.html"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.g42.ai/resources/news/khazna-data-centers-and-eni-partner-develop-500-mw-ai-data-center-campus-near-milan",
+      "title": "Khazna Data Centers and Eni Partner to Develop 500 MW AI Data Center Campus Near Milan",
+      "publisher": "G42",
+      "published": "2025-07-11",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.ilsole24ore.com/art/data-centre-eu-gives-green-light-to-eni-khazna-joint-venture-lombardy-hub-to-be-accelerated-AJl2Zcj",
+      "title": "Data centres: EU gives the green light to the Eni-Khazna joint venture. Lombardy hub set to accelerate",
+      "publisher": "Il Sole 24 Ore",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.eunews.it/en/2026/08/10/eu-commission-approves-khazna-eni-joint-venture-says-it-does-not-raise-competition-concerns/",
+      "title": "EU Commission approves Khazna–ENI joint venture, says it does “not raise competition concerns”",
+      "publisher": "Eunews",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Ferrera_Erbognone",
+      "title": "Ferrera Erbognone",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260316013115/https://en.wikipedia.org/wiki/Ferrera_Erbognone"
+    }
+  ],
+  "notes": "No investment figure, phase schedule or operating date has been disclosed. Eni said development activities were under way when the heads of terms were signed, but in August 2026 Il Sole 24 Ore described the campus as still being designed; no construction start was found.",
+  "last_reviewed": "2026-10-09"
+}

@@ -411,5 +411,8 @@
     }
   ],
   "notes": "Estimates of how much of the campus is live differ: an Oracle post in April 2026 said 200 MW was operating, analyst Epoch AI estimated about 0.3 GW of facility power then and about 421 MW of IT load by mid-2026, and The Tech Capital reported six buildings delivered to OpenAI in late September 2026. Epoch figures are analyst estimates, not company disclosures. Crusoe is separately building a 900 MW data center on adjacent Lancium-owned land, which Epoch links to Microsoft; it is a different project.",
-  "last_reviewed": "2026-10-09"
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "crusoe-abilene-microsoft"
+  ]
 }

@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-talavera-de-la-reina",
+  "name": "Meta Talavera de la Reina data center campus",
+  "aliases": [
+    "Meta Torrehierro data center"
+  ],
+  "summary": "Planned Meta data center campus in the Torrehierro industrial area of Talavera de la Reina, Toledo, which would be Meta's first large owned data center in Spain. Meta's 2022 announcement put the investment at about EUR 1 billion; environmental documents later estimated EUR 750 million. Meta bought about 190 hectares from the state land agency Sepes in December 2024. After repeated delays, the regional government approved it as a project of singular interest in October 2025 and authorised the land reparcelling in summer 2026, letting Meta seek building permits. A switch to dry-air cooling cut planned water use. Construction had not been reported as started.",
+  "location": {
+    "country": "ES",
+    "admin1": "Castilla-La Mancha",
+    "admin2": "Toledo",
+    "locality": "Talavera de la Reina",
+    "lat": 39.95833,
+    "lon": -4.83278,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "Town centroid from the Talavera de la Reina Wikipedia article. Sources place the campus in the second phase of the Torrehierro industrial area, about 12 km from the town centre, but give no coordinates, so the site is not pinpointed."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-28",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Bought the land and is described as building its own data center."
+    },
+    {
+      "name": "Sepes (Entidad Pública Empresarial de Suelo)",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "State land agency that sold the Torrehierro land to Meta."
+    },
+    {
+      "name": "Junta de Comunidades de Castilla-La Mancha",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Regional government that approved the project as a plan of singular interest and authorised the reparcelling."
+    },
+    {
+      "name": "Talavera de la Reina City Council",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Will process the building licences."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2022",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Figure from Meta's 2022 announcement as relayed by iAgua; a local opposition leader cited nearly EUR 1 billion in July 2026."
+    },
+    {
+      "metric": "investment",
+      "value": 750000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-28",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Estimate in the environmental documentation, of which EUR 685 million is for construction; the mayor cited more than EUR 750 million in July 2026."
+    },
+    {
+      "metric": "land_area",
+      "value": 190,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2024-12-19",
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "note": "Bought from Sepes for EUR 20.6 million. iAgua gives 191 hectares in total, of which about 102 hectares are buildable and 50 to 60 hectares are set aside for a river park."
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-12-19",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Two data center buildings plus administration, logistics and security buildings."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 250,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-28",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Direct jobs once operating."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-12-19",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "site_acquired",
+      "date": "2024-12-19",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Sale of about 190 hectares by Sepes for EUR 20.6 million signed on 19 December 2024."
+    },
+    {
+      "event": "other",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The regional government approved the Proyecto de Singular Interés for the data center in late October 2025."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Approval of the land reparcelling. In late July 2026 Meta filed its definitive reparcelling proposal and the regional president said it would be authorised within days; by 28 August 2026 iAgua reported the reparcelling approved, allowing building permit applications. The exact approval date was not given."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "note": "In December 2024 works were expected to start in 2027 and last about ten years; starts planned for late 2023 and then 2025 slipped. Later coverage describes four phases through 2036."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Meta has committed to running the campus on 100% renewable energy; the supply arrangement is not described.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.iagua.es/noticias/redaccion-iagua/meta-ultima-en-talavera-un-centro-de-datos-de-1-000-me-que-se-abastecera-de-agua-del-tajo-por-la-red-municipal",
+      "title": "Meta ultima en Talavera un centro de datos de 1.000 M€ que se abastecerá de agua del Tajo por la red municipal",
+      "publisher": "iAgua",
+      "published": "2026-08-28",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.eldiario.es/castilla-la-mancha/provincias/toledo/page-anuncia-llegada-definitiva-centro-datos-meta-talavera-reina_1_13416975.amp.html",
+      "title": "Page anuncia la llegada “definitiva” del centro de datos de Meta a Talavera de la Reina",
+      "publisher": "elDiario.es",
+      "published": "2026-07-30",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.elespanol.com/eldigitalcastillalamancha/region/20241219/meta-compra-millones-suelo-industrial-construir-macrocentro-datos-talavera-reina/909909319_0.amp.html",
+      "title": "Meta compra por 20,6 millones el suelo industrial para construir su macrocentro de datos en Talavera de la Reina",
+      "publisher": "El Español (El Digital Castilla-La Mancha)",
+      "published": "2024-12-19",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Talavera_de_la_Reina",
+      "title": "Talavera de la Reina",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260922235227/https://en.wikipedia.org/wiki/Talavera_de_la_Reina"
+    }
+  ],
+  "notes": "No MW capacity for the campus was found in the sources opened. Investment figures differ: about EUR 1 billion in Meta's 2022 announcement versus EUR 750 million in the environmental documentation. Water figures also differ: the regional government cites about 0.2 cubic hectometres a year, while the environmental approval gives about 504,500 cubic metres a year for the whole site, mostly landscaping, and about 40,600 cubic metres for the data center itself after the move to dry-air cooling.",
+  "last_reviewed": "2026-10-09"
+}

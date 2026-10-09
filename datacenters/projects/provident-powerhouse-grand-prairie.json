@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "id": "provident-powerhouse-grand-prairie",
+  "name": "PowerHouse Grand Prairie campus (PowerHouse and Provident)",
+  "aliases": [
+    "PowerHouse Grand Prairie",
+    "AREP Power House Grand Prairie"
+  ],
+  "summary": "Hyperscale data center campus planned by a PowerHouse Data Centers and Provident Data Centers joint venture on 768 to 810 acres just outside Grand Prairie in northern Ellis County, Texas. The partners plan an on-site 1.8 GW switchyard, with a first 500 MW tranche approved through ERCOT, and 24 buildings in three phases at announcement. A state accessibility filing registered in April 2026 covers Data Center Building 1, a two-story 224,152 sq ft core and shell at 881 Miller Road with an estimated cost of about USD 72.6 million and a scheduled April 2026 to April 2028 build window.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Ellis County",
+    "locality": "Midlothian",
+    "lat": 32.5069,
+    "lon": -97.0069,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Midlothian (s5), the mailing city in the state filing for Building 1 at 881 Miller Road (s4). The developers describe the site as just outside Grand Prairie in northern Ellis County. The street address was not geocoded."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-02",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "PowerHouse Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "A division of American Real Estate Partners (AREP)."
+    },
+    {
+      "name": "Provident Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Dallas-based joint venture partner; this was the first project of the partnership."
+    },
+    {
+      "name": "Prairie Ridge Phase 1 Owner LP",
+      "role": "owner",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Owner entity named in the April 2026 state filing for Data Center Building 1."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1800,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-02-25",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Planned on-site switchyard capacity; the campus page calls it the maximum utility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "First power tranche",
+      "as_of": "2025-02-25",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Described as already approved through ERCOT at announcement."
+    },
+    {
+      "metric": "land_area",
+      "value": 768,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-02-25",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 810,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure on PowerHouse's undated campus page, which is larger than the 768 acres announced in 2025."
+    },
+    {
+      "metric": "buildings",
+      "value": 24,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-02-25",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned across three phases at announcement. The later campus page instead lists four building phases (10 buildings in each of the first two, 4 in each of the last two)."
+    },
+    {
+      "metric": "floor_area",
+      "value": 8500000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Developable area stated on the undated campus page."
+    },
+    {
+      "metric": "floor_area",
+      "value": 224152,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Data Center Building 1",
+      "as_of": "2026-04-02",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 72590278,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Data Center Building 1",
+      "as_of": "2026-04-02",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimated construction cost of the core and shell in a Texas Department of Licensing and Regulation accessibility registration; excludes fit-out and IT equipment."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-02-25",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The developers said the site had been rezoned and that all required approvals and permits were in hand."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-04-01",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Scheduled start of Building 1 in the state filing, with completion scheduled for 1 April 2028. No report confirming work under way was found."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-05",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original target for energizing the first building, given at announcement."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Later target on the campus page, which lists delivery in Q1 2027 alongside power delivery and construction delivery in Q4 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Planned on-site 1.8 GW switchyard on the ERCOT grid, with a first 500 MW tranche approved through ERCOT.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://powerhousedata.com/news/powerhouse-and-provident-rewrite-the-data-center-playbook-with-new-texas-hyperscale-campus",
+      "title": "PowerHouse and Provident Rewrite the Data Center Playbook with New Texas Hyperscale Campus",
+      "publisher": "PowerHouse Data Centers",
+      "published": "2025-02-25",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://dallasinnovates.com/dallas-provident-data-centers-virginias-powerhouse-partner-on-hyperscale-north-texas-campus/",
+      "title": "Dallas' Provident Data Centers, Virginia's PowerHouse Partner on 'Hyperscale' North Texas Campus",
+      "publisher": "Dallas Innovates",
+      "published": "2025-02-25",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://powerhousedata.com/data-center/powerhouse-grand-prairie",
+      "title": "PowerHouse Grand Prairie",
+      "publisher": "PowerHouse Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026016734",
+      "title": "TABS2026016734: AREP Power House Grand Prairie, Data Center Building 1",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "published": "2026-04-02",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Midlothian,_Texas",
+      "title": "Midlothian, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status is kept at announced because the only 2026 evidence is a state registration with scheduled dates; no report of construction under way, energization or a tenant was found. The campus page is undated (its footer and image file names point to 2025), so its figures carry the access date. Acreage and building counts differ between the 2025 announcement and the campus page.",
+  "last_reviewed": "2026-10-09"
+}

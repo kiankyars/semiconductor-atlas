@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-pecos-texas",
+  "name": "Microsoft Pecos datacenter campus",
+  "aliases": [],
+  "summary": "Microsoft campus announced in June 2026 for Pecos in Reeves County, West Texas, adding about 2 GW of capacity for AI and cloud services through a multibillion-dollar investment over five to seven years. At launch it will run behind the meter on a co-located gas plant, Chevron's Project Kilby, built with Engine No. 1 and GE Vernova and sized to reach 2.67 GW in phases under a 20-year power deal; first power is expected in 2028, subject to Chevron's final investment decision. Microsoft says it funds the generation, plans to connect to the wider grid later, and will use closed-loop cooling.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Reeves County",
+    "locality": "Pecos",
+    "lat": 31.4156,
+    "lon": -103.5,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": "Coordinates are the Pecos city coordinates from its Wikipedia page. Sources name Pecos and Reeves County but give no site or acreage."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-02",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "notes": "Microsoft gives no dollar figure beyond a multibillion-dollar investment, so no investment metric is recorded. Whether the 2 GW is IT or facility power is not stated. No report of construction start was found as of October 2026.",
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Chevron (Energy Forge One LLC)",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Energy Forge One LLC, a wholly owned Chevron subsidiary, signed a 20-year, multi-gigawatt power purchase agreement to supply the campus from the co-located Project Kilby gas plant."
+    },
+    {
+      "name": "Engine No. 1",
+      "role": "power_supplier",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Developing Project Kilby with Chevron."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 2000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-22",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Capacity Microsoft says the campus adds to its global datacenter fleet."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2670,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-06-23",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Chevron's co-located Project Kilby gas plant, to be built in modular phases and run behind the meter for the campus; subject to a final investment decision."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 6000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-22",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "At peak build-out; Microsoft also expects hundreds of permanent operational jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-06-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Project Kilby is expected to begin delivering power, subject to Chevron's final investment decision expected later in 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Co-located Project Kilby gas plant by Chevron with Engine No. 1, using GE Vernova turbines plus Solar Turbines units, designed to scale to 2.67 GW and operate behind the meter with selective catalytic reduction for nitrogen oxides; Microsoft says it funds the new generation.",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "Microsoft expects to connect the plant and campus to the wider grid over time, in coordination with utilities and local authorities; no timeline is given.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+      "title": "Powering the next wave of AI: Expanding capacity with our new datacenter in Pecos",
+      "publisher": "Microsoft",
+      "published": "2026-06-22",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.orrick.com/en/News/2026/07/Microsoft-Expands-Global-Data-Center-Capacity-with-2-GW-Data-Center-and-Co-Located-Power-Facility",
+      "title": "Microsoft Expands Global Data Center Capacity with 2 GW Data Center and Co-Located Power Facility in West Texas",
+      "publisher": "Orrick",
+      "published": "2026-07-02",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s3",
+      "url": "https://theenergymag.com/news/2026-06-22/microsoft-2-gigawatt-ai-data-center-west-texas-onsite-gas",
+      "title": "Microsoft to Build 2GW AI Data Center Campus in West Texas With Onsite Gas Power",
+      "publisher": "The Energy Mag",
+      "published": "2026-06-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://w.media/microsofts-new-dc-pecos-texas/",
+      "title": "Microsoft's upcoming data center campus in Texas to expand global capacity by 2 GW",
+      "publisher": "W.Media",
+      "published": "2026-06-23",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Pecos,_Texas",
+      "title": "Pecos, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

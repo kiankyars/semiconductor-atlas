@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-10 — second research wave
+
+- 72 new records (201 in total, 27 countries, 968 sources, 342 with Internet Archive copies):
+  US miner-to-AI conversions (Hut 8, Cipher, Core Scientific, Riot, TeraWulf, IREN, Bitdeer),
+  further Meta, Google, Microsoft and AWS campuses, US colocation and energy-park megaprojects
+  (including rejected ones), Spanish, Italian, Irish, Nordic, German and Polish builds, Johor,
+  Thai, Indian, Korean and Australian campuses, and builds in Saudi Arabia, Kenya, Morocco,
+  Canada, Mexico and Brazil. Each was drafted from sources and then re-checked against every
+  cited source; two drafts were dropped (a multi-site county program and a site with no named
+  county).
+- New coverage page with counts by region, country and status, and a public list of known gaps.
+
 ## 2026-10-09 — first public release
 
 - 129 curated records for large data center builds in 20 countries, citing 603 sources (215 with

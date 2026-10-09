@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "id": "cdc-marsden-park",
+  "name": "CDC Data Centres Marsden Park campus",
+  "aliases": [
+    "Marsden Park Data Centre",
+    "SSD-70889211"
+  ],
+  "summary": "CDC Data Centres is building a campus of six four-storey data center buildings on about 20 hectares in the Marsden Park Industrial Precinct in Sydney's north-west, within the City of Blacktown. CDC turned the first sod in October 2024 and plans 504 MW of ICT capacity, scalable toward 1 GW, with a dedicated substation of about 720 MVA. The NSW government approved it as state significant development on 27 November 2025 despite objections from Blacktown City Council; press coverage put the investment at A$3.1 billion. CDC describes the campus as in the early stages of construction.",
+  "location": {
+    "country": "AU",
+    "admin1": "New South Wales",
+    "admin2": "City of Blacktown",
+    "locality": "Marsden Park",
+    "lat": -33.6892,
+    "lon": 150.8028,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s6"
+    ],
+    "note": "Sources name the Marsden Park Industrial Precinct without a street address; the point is the Marsden Park suburb coordinate from its Wikipedia article, so it marks the suburb rather than the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "cloud",
+    "hpc",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "CDC Data Centres",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "CDC Data Centres",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "CDC Data Centres",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "NSW Department of Planning",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Assessed and approved the campus as state significant development."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 504,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-11-27",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "CDC calls this total ICT capacity; the planning portal describes it as power consumption of the data centre. W.Media reports the campus can scale toward 1 GW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 720,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-11-27",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Rating of the on-site substation: 720 MW on the planning portal and 720 MVA in CDC's release."
+    },
+    {
+      "metric": "investment",
+      "value": 3100000000,
+      "qualifier": "exact",
+      "unit": "AUD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-28",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Figure given in coverage of the approval; CDC's own release gives no amount."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-27",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 20.1,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-10-25",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-04",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Figure reported by Information Age; CDC's release instead cites more than 10,000 jobs over the life of construction."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 265,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-04",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2024-10-25",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Ceremonial sod-turning, with minor earthworks and site preparation already under way."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2025-11-27",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Approved as state significant development SSD-70889211; Blacktown City Council had objected on engineering and planning grounds."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Dedicated on-site substation of about 720 MVA.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://cdc.com/resources/news/cdc-data-centres-breaks-ground-on-new-state-of-the-art-data-centre-development-in-marsden-park-industrial-precinct/",
+      "title": "CDC Data Centres Breaks Ground on New State-of-the-Art Data Centre Development in Marsden Park Industrial Precinct",
+      "publisher": "CDC Data Centres",
+      "published": "2024-10-25",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.planningportal.nsw.gov.au/major-projects/projects/marsden-park-data-centre",
+      "title": "Marsden Park Data Centre (SSD-70889211)",
+      "publisher": "NSW Planning Portal",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260723073408/https://www.planningportal.nsw.gov.au/major-projects/projects/marsden-park-data-centre"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/nsw-govt-approves-cdcs-504-mw-campus-in-sydney/",
+      "title": "NSW govt approves CDC's 504 MW campus in Sydney",
+      "publisher": "W.Media",
+      "published": "2025-11-28",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.startupdaily.net/?p=131381",
+      "title": "NSW gives the nod to a $3 billion CDC data centre in Western Sydney",
+      "publisher": "Startup Daily (Information Age)",
+      "published": "2025-12-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://cdc.com/locations/sydney-and-regional-nsw/",
+      "title": "Sydney and regional NSW locations",
+      "publisher": "CDC Data Centres",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Marsden_Park,_New_South_Wales",
+      "title": "Marsden Park, New South Wales",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status rests on CDC's undated Sydney locations page, which described Marsden Park as in the early stages of construction when accessed on 2026-10-09, so status_as_of is the access date. An earlier DatacenterDynamics report on the filing gave a lower investment figure, but that page could not be opened. Wikipedia is cited only for the suburb coordinate.",
+  "last_reviewed": "2026-10-09"
+}

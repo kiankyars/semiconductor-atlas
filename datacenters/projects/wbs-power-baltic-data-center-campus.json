@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "id": "wbs-power-baltic-data-center-campus",
+  "name": "WBS Power Baltic Data Center Campus, Lublewo",
+  "aliases": [
+    "Baltic Data Center Campus",
+    "Baltic DC Campus"
+  ],
+  "summary": "Hyperscale campus proposed by WBS Power at Lublewo in Choczewo municipality, Pomerania, near the planned Lubiatowo-Kopalino nuclear power plant site. Announced in March 2026, it targets 3.2 GW in four 800 MW phases aimed at AI, HPC and cloud customers. WBS Power says it has grid connection conditions for the full 3.2 GW at a site next to one of Poland's largest substations, with power from conventional sources, renewables and battery storage, and nuclear in the longer term. Preparation of all phases is due by the end of 2027 and the first data center around 2028-2029. No investors, tenants or permits were named.",
+  "location": {
+    "country": "PL",
+    "admin1": "Pomeranian Voivodeship",
+    "admin2": "Wejherowo County",
+    "locality": "Lublewo (Choczewo municipality)",
+    "lat": 54.75972,
+    "lon": 17.94528,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "The press release and Gramwzielone name the site as Lublewo in Choczewo municipality; neither uses the official name Lublewo Lęborskie. Wikipedia lists Lublewo Lęborskie as the only village called Lublewo in Gmina Choczewo (the other similar name is Lublewko), so its village coordinates are used, at locality precision. County is from Wikipedia. No cited source gives site coordinates."
+  },
+  "status": "announced",
+  "status_as_of": "2026-03-24",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "WBS Power",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 3200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-03-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Target capacity; scope not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 800,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Each of four phases",
+      "as_of": "2026-03-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 3200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-03-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "WBS Power says it has secured grid connection conditions for the full capacity; the grid operator is not named."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-03-17",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Earliest report found; WBS Power's English press release followed on 24 March 2026."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Preparatory work for all four phases expected to be completed by the end of 2027."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "First data center targeted around 2028-2029."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid connection conditions secured for 3.2 GW at a site next to one of Poland's largest substations.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Battery energy storage integration is planned.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "WBS Power says power will come from conventional sources supplemented by renewables; specific generation contracts are not described.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "nuclear",
+      "description": "Nuclear power is cited only as a longer-term source; the Westinghouse AP1000 plant planned at Lubiatowo-Kopalino in Choczewo municipality targets commercial operation in 2033, with no supply agreement reported.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://tools.prnewswire.com/en-us/live/20823/release/20260324EN14682",
+      "title": "WBS Power Advances 3.2 GW Energy Infrastructure for Hyperscale Data Center Campus",
+      "publisher": "WBS Power (via PR Newswire)",
+      "published": "2026-03-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://wnn.world-nuclear.org/articles/data-centre-to-be-built-near-planned-polish-nuclear-power-plant",
+      "title": "Data centre to be built near planned Polish nuclear power plant",
+      "publisher": "World Nuclear News",
+      "published": "2026-03-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.gramwzielone.pl/?p=20353659",
+      "title": "Deweloper z rynku OZE postawi ogromne centrum danych na Pomorzu",
+      "publisher": "Gramwzielone.pl",
+      "published": "2026-03-17",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Lublewo_L%C4%99borskie",
+      "title": "Lublewo Lęborskie",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Gmina_Choczewo",
+      "title": "Gmina Choczewo",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260106053605/https://en.wikipedia.org/wiki/Gmina_Choczewo"
+    }
+  ],
+  "notes": "No investment figure, land area, investor or tenant was disclosed in the sources opened, and no zoning or environmental permit decision was found. The 3.2 GW figure is the developer's target. No update after March 2026 was found.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "id": "sdaia-hexagon-riyadh",
+  "name": "Hexagon Data Center (Riyadh)",
+  "aliases": [
+    "Hexagon Data Centre",
+    "SDAIA Hexagon"
+  ],
+  "summary": "Government data centre being built in Riyadh by the Saudi Data and Artificial Intelligence Authority (SDAIA), billed as the world's largest Tier IV government data centre. The foundation stone was laid in early January 2026 for a facility of up to 480 MW on a site of about 30 million square feet, designed to host more than 290 government systems and to seed a wider national network of centres. Reported project value is about USD 2.7 billion; a project-tracking profile names Albawani as main contractor, says construction was progressing in April 2026 and gives a Q1 2029 completion target.",
+  "location": {
+    "country": "SA",
+    "admin1": "Riyadh Province",
+    "locality": "Riyadh",
+    "lat": 24.633,
+    "lon": 46.717,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "City coordinates from the Riyadh Wikipedia page; the sources do not name a district."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-05-01",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "notes": "Coverage published on 4 and 5 January 2026 reports the foundation stone as already laid without giving the ceremony date, so only the month is recorded. The 30 million square feet is described as the total or site area and is not recorded as a floor area metric. W.Media reports LEED Gold certification and the project-tracking profile mentions direct liquid and hybrid cooling; no source gives power supply details.",
+  "workloads": [
+    "enterprise"
+  ],
+  "parties": [
+    {
+      "name": "Saudi Data and Artificial Intelligence Authority (SDAIA)",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Albawani",
+      "role": "builder",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named as main contractor in a trade project-tracking profile; not confirmed by SDAIA in sources reviewed."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 480,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-01",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Announcement coverage gives capacity of up to 480 MW without a scope; the project-tracking profile labels it IT load capacity."
+    },
+    {
+      "metric": "investment",
+      "value": 2700000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-01",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "W.Media attributes this estimate to Gulf News; the project-tracking profile lists the same project value. No official SDAIA figure was found."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Foundation stone laid at a ceremony at which SDAIA's president received senior officials."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2029-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Completion target given in a trade project-tracking profile."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://w.media/sdaia-lays-foundation-stone-for-480mw-hexagon-government-data-center-in-riyadh/",
+      "title": "SDAIA lays foundation stone for 480MW Hexagon government data center in Riyadh",
+      "publisher": "W.Media",
+      "published": "2026-01-05",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://en.sharikatmubasher.com/news/article/21526638/saudi-arabia-lays-cornerstone-for-hexagon-data-center-in-riyadh?lang=en",
+      "title": "Saudi Arabia lays cornerstone for Hexagon data center in Riyadh",
+      "publisher": "Sharikat Mubasher",
+      "published": "2026-01-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://ognnews.com/ArticleOGN/461988/sdaia-hexagon-data-centre",
+      "title": "SDAIA Hexagon Data Centre (project profile)",
+      "publisher": "Oil & Gas News",
+      "published": "2026-05-01",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260515174431/https://ognnews.com/ArticleOGN/461988/sdaia-hexagon-data-centre"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Riyadh",
+      "title": "Riyadh",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

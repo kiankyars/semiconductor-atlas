@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "id": "tcs-hypervault-hyderabad",
+  "name": "TCS HyperVault AI data center campus, Bharat Future City (Hyderabad)",
+  "aliases": [
+    "HyperVault Hyderabad",
+    "HyperVault Bharat Future City"
+  ],
+  "summary": "HyperVault AI Data Center Limited, the data center subsidiary of Tata Consultancy Services, announced on 5 September 2026 that it had secured 264 acres in Hyderabad, Telangana, for an AI campus of up to 1 GW, with HyperVault and its partners expected to invest up to Rs 70,000 crore over the build-out. The site is in Bharat Future City on Hyderabad's southern outskirts. Construction will be phased to customer demand, and Telangana's chief minister asked for the campus to open by 2 June 2028. TPG agreed in November 2025 to take a 27.5 to 49 percent stake in HyperVault.",
+  "location": {
+    "country": "IN",
+    "admin1": "Telangana",
+    "locality": "Hyderabad (Bharat Future City)",
+    "lat": 17.3617,
+    "lon": 78.4747,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources name Hyderabad and place the campus in Bharat Future City on the city's southern outskirts, without a district, address or coordinates; Bharat Future City's Wikipedia article has no coordinates. The point is the Hyderabad city coordinate from Wikipedia, so it marks the named city, and the site lies an unknown distance to its south."
+  },
+  "status": "announced",
+  "status_as_of": "2026-09-09",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference"
+  ],
+  "parties": [
+    {
+      "name": "HyperVault AI Data Center Limited",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Subsidiary of Tata Consultancy Services."
+    },
+    {
+      "name": "Tata Consultancy Services",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Parent of HyperVault; keeps board control under the TPG deal."
+    },
+    {
+      "name": "TPG",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Agreed in November 2025 to invest up to Rs 8,820 crore in HyperVault for a 27.5 to 49 percent stake; this is an investment in the company, not specifically in this site."
+    },
+    {
+      "name": "Government of Telangana",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The chief minister announced the project and assured HyperVault of the required sanctions."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-09-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Sources say up to 1 GW without stating IT or facility power; build-out will be phased to demand."
+    },
+    {
+      "metric": "investment",
+      "value": 700000000000,
+      "qualifier": "up_to",
+      "unit": "INR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-09-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Rs 70,000 crore expected from HyperVault and its partners for development and operation over several years."
+    },
+    {
+      "metric": "land_area",
+      "value": 264,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Described as land HyperVault has secured; the sources do not say whether it was bought or allotted."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-09-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-06-02",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Opening date requested by Telangana's chief minister, tied to the state's formation day; not stated as a company target."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://thearabianpost.com/tcs-commits-₹700-billion-to-hyderabad-ai-campus/",
+      "title": "TCS commits ₹700 billion to Hyderabad AI campus",
+      "publisher": "The Arabian Post",
+      "published": "2026-09-05",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260906092732/https://thearabianpost.com/tcs-commits-%e2%82%b9700-billion-to-hyderabad-ai-campus/"
+    },
+    {
+      "id": "s2",
+      "url": "https://startupfeed.in/?p=11607",
+      "title": "TCS HyperVault to Build Rs 70,000 Cr AI Data Centre in Hyderabad",
+      "publisher": "StartupFeed",
+      "published": "2026-09-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sahi.com/news/tcs-hypervault-to-set-up-70-000-crore-ai-data-center-in-telangana-2185-PE1_COR",
+      "title": "TCS HyperVault to set up ₹70,000 crore AI data center in Telangana",
+      "publisher": "Sahi",
+      "published": "2026-09-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Hyderabad",
+      "title": "Hyderabad",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s5",
+      "url": "https://w.media/tcs-adds-anakapalli-and-pune-sites-to-fuel-its-data-center-push/",
+      "title": "TCS adds Anakapalli and Pune sites to fuel its data center push",
+      "publisher": "W.Media",
+      "published": "2026-07-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "notes": "StartupFeed says HyperVault disclosed the plan in a regulatory filing but does not name the exchange; the filing itself is not cited, so the record relies on news coverage. Telangana's chief minister estimated about 7,000 jobs without saying whether they are direct or permanent, so no job metric is recorded. W.Media reports that OpenAI was announced in February 2026 as HyperVault's first customer at 100 MW, but no source ties OpenAI to this site. HyperVault's land in Anakapalli and in Bopkhel, Pune, are separate projects. Wikipedia is cited only for the city coordinate.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "id": "edgecore-mesa",
+  "name": "EdgeCore Mesa data center campus",
+  "aliases": [
+    "EdgeCore Phoenix campus",
+    "EdgeCore PH01-PH03"
+  ],
+  "summary": "Wholesale hyperscale data center campus that EdgeCore Digital Infrastructure established in Mesa, Arizona, in April 2023, with power from Salt River Project. Its first building, PH01, was operating by 2025 while PH02 and PH03 were under construction for completion in 2025 and 2026. In May 2025 EdgeCore bought another 43.87 acres, more than doubling its buildable land in Mesa, and raised planned capacity to over 450 MW. EdgeCore's campus page now describes an 84-acre, five-building campus able to support 496 MW of critical IT load in about 2.7 million square feet.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Mesa",
+    "lat": 33.3442,
+    "lon": -111.6196,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Point from the local OpenStreetMap layer (datacenters/layers/osm/features.geojson): a building footprint tagged EdgeCore at South Everton Terrace, Mesa (OSM way 808979618). It marks one existing building, not the centroid of the expanded 84-acre campus. The cited sources name Mesa but give no street address."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2025-05-21",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "EdgeCore Digital Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "EdgeCore Digital Infrastructure",
+      "role": "owner",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as a wholesale data center developer, owner and operator."
+    },
+    {
+      "name": "EdgeCore Digital Infrastructure",
+      "role": "operator",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "Salt River Project",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 496,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Critical IT load of the five-building campus on EdgeCore's undated campus page, dated here by access."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 450,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-05-20",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total announced with the May 2025 land purchase."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "43.87-acre expansion parcel",
+      "as_of": "2025-05-20",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 84,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 43.87,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "phase",
+      "phase_label": "43.87-acre expansion parcel",
+      "as_of": "2025-05-20",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 2700000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2023-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "EdgeCore dates the establishment of its first Mesa campus to April 2023."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-05-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Purchase of 43.87 more acres and expansion to over 450 MW announced."
+    },
+    {
+      "event": "other",
+      "date": "2025",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion year for one of the two buildings under construction; the sources give 2025 and 2026 for PH02 and PH03 without saying which is which."
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion year for the other building under construction (PH02 or PH03)."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Salt River Project serves the operating building and was slated to power PH02 and PH03 on completion.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://edgecore.com/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw/",
+      "title": "EdgeCore Digital Infrastructure Announces Expansion of Its Metro Phoenix Data Center Market to Over 450 MW",
+      "publisher": "EdgeCore Digital Infrastructure",
+      "published": "2025-05-20",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://inbusinessphx.com/technology-innovation/data-center-developer-announces-expansion-of-metro-phoenix-infrastructure",
+      "title": "Data Center Developer Announces Expansion of Metro Phoenix Infrastructure",
+      "publisher": "InBusiness Phoenix",
+      "published": "2025-05-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260117165151/https://inbusinessphx.com/technology-innovation/data-center-developer-announces-expansion-of-metro-phoenix-infrastructure"
+    },
+    {
+      "id": "s3",
+      "url": "https://edgecore.com/locations/phoenix-data-center",
+      "title": "Phoenix data center campus",
+      "publisher": "EdgeCore Digital Infrastructure",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Status rests on the May 2025 release; no 2026 source confirming whether PH02 and PH03 were finished was found. EdgeCore's campus page is undated and does not give per-building status, so its figures carry the access date. The May 2025 release also said 206 MW had been built and commissioned on the original Mesa land while two buildings were still under construction; that figure is left out of the metrics because it is unclear what share was operating.",
+  "last_reviewed": "2026-10-09"
+}

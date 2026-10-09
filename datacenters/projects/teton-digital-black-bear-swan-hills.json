@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "id": "teton-digital-black-bear-swan-hills",
+  "name": "Teton Digital Black Bear power and data centre campus (Swan Hills)",
+  "aliases": [
+    "Black Bear Power Project",
+    "Black Bear Power Plant Project",
+    "Black Bear"
+  ],
+  "summary": "Proposed gas-powered data centre campus on Crown land about 19 km south of Swan Hills, Alberta, in Big Lakes County. Kiwetinohk Energy first proposed the roughly 460 MW Black Bear combined-cycle plant in 2024 and received a federal decision that no impact assessment was needed; Teton Digital has since taken it up as the power source for about 1,500 acres of adjacent data centre land. Teton describes a 466 MW first phase with a path to about 3 GW, compute online as early as 2027 using grid power, and the full plant running in Q3 2028. Alberta's project inventory lists it as proposed.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Big Lakes County",
+    "locality": "About 19 km south of Swan Hills",
+    "lat": 54.532535,
+    "lon": -115.57319,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Coordinates of the south end of the power plant project area as stated in the 2024 federal project description (SW and SE quarters of Section 15-64-11-W5M). The data centre land is described only as adjacent Crown land, so its centre may differ."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-09-23",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "notes": "Status rests on Daily Hive's September 2026 report that Alberta Major Projects lists the project as proposed, plus Teton's undated project page (read 2026-10-09), which says provincial and federal permits are in hand and an AESO interconnection application was filed in April 2026. DeSmog reported Teton's federal permitting claim without verifying it, raised questions about the developer's background, and reported that the 2024 carbon capture design no longer appears in Teton's materials. Both news outlets describe it as a $1.3 billion project without stating the currency, so no investment figure is recorded.",
+  "parties": [
+    {
+      "name": "Teton Digital",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "name": "Kiwetinohk Energy Corp.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Original 2024 proponent of the power plant; DeSmog reports it exited the power business in 2025 and cancelled its planned AESO grid connection in December 2025."
+    },
+    {
+      "name": "Big Lakes County",
+      "role": "government",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reported in July 2026 to be amending bylaws to fast-track the project; the Sucker Creek First Nation asked council to wait until environmental and water questions were answered."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 460,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2024-07",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Net output of the plant's single combustion turbine generator in Kiwetinohk's 2024 federal filing, before a data centre was attached."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 466,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2026-09-23",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Teton's figure for the natural gas combined-cycle plant."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 3000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-09-23",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Teton's stated long-term pathway, split as about 2 GW behind the meter and 1 GW grid-connected, across one or more data centre campuses."
+    },
+    {
+      "metric": "land_area",
+      "value": 1500,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-23",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Adjacent Crown land being developed for data centre use."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-07-18",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Kiwetinohk filed the initial project description for the Black Bear power plant with the Impact Assessment Agency of Canada."
+    },
+    {
+      "event": "other",
+      "date": "2024-12-23",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Federal agency decided that an impact assessment of the power plant is not required."
+    },
+    {
+      "event": "other",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Teton says it filed an AESO Cluster 3 grid interconnection application."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Compute could begin as early as 2027 using temporary grid power before the plant is complete."
+    },
+    {
+      "event": "other",
+      "date": "2028-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target for full 466 MW commercial operation of the power plant."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "A natural gas combined-cycle plant of 466 MW in its first phase; Kiwetinohk's 2024 design included CO2 capture with pipeline transport to a storage hub, which Teton's materials do not mention.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "Teton plans bridge power from the grid from 2027 and has applied to AESO for an interconnection; it puts roughly 1 GW of the long-term pathway on the grid.",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iaac-aeic.gc.ca/050/documents/p88747/158276E.pdf",
+      "title": "Black Bear Power Plant: Summary of the Initial Project Description",
+      "publisher": "Kiwetinohk Energy Corp. (filed with the Impact Assessment Agency of Canada)",
+      "published": "2024-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/proj/88747",
+      "title": "Black Bear Power Plant Project (Canadian Impact Assessment Registry, reference 88747)",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://tetondigital.io/black-bear",
+      "title": "Black Bear",
+      "publisher": "Teton Digital",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://dailyhive.com/edmonton/power-plant-data-centre-swan-hills",
+      "title": "A $1.3B power plant and data centre is in the works northwest of Edmonton",
+      "publisher": "Daily Hive",
+      "published": "2026-09-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.desmog.com/2026/07/27/u-s-developer-tied-to-failed-bitcoin-venture-is-proposing-major-alberta-data-centre/",
+      "title": "U.S. Developer Tied to Failed Bitcoin Venture Is Proposing Major Alberta Data Centre",
+      "publisher": "DeSmog",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260729123620/https://www.desmog.com/2026/07/27/u-s-developer-tied-to-failed-bitcoin-venture-is-proposing-major-alberta-data-centre/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

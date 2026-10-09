@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "id": "kenya-olkaria-geothermal-campus",
+  "name": "G42 and Microsoft Olkaria geothermal data centre campus",
+  "aliases": [],
+  "summary": "Planned geothermal-powered data centre campus at Olkaria, near Lake Naivasha in Kenya's Rift Valley, announced in May 2024 by G42 and Microsoft with Kenya's ICT ministry. G42 was to build it and it was to host a new Azure East Africa cloud region, with a 100 MW first phase and potential to grow to about 1 GW; press reports call it a USD 1 billion data centre. The May 2026 opening target was missed: in 2026 the project was reported stalled over power supply limits and unapproved funding, with KenGen saying it remained at design stage, while the government said it had not been abandoned.",
+  "location": {
+    "country": "KE",
+    "locality": "Olkaria (near Lake Naivasha)",
+    "lat": -0.885737,
+    "lon": 36.269989,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5",
+      "s6"
+    ],
+    "note": "Sources name Olkaria only. Coordinates are those given for the Olkaria geothermal area on its Wikipedia page, not a data centre parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-24",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "notes": "Kept at announced: no source reports a formal halt or suspension. Semafor (May 2026) said the project was unlikely to go ahead and the National Treasury had not approved funding; Al Jazeera (August 2026) said plans stalled in May 2026 over power capacity, and KenGen, which operates the Olkaria geothermal complex, said it was still at design stage. Citizen Digital reported the government insisting it had not been abandoned and the technology envoy saying it was not suspended. President Ruto said it would need about 1,000 MW, roughly a third of national capacity. Microsoft presented USD 1 billion as an initial investment in a wider digital initiative.",
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "G42",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "To design and build the campus with local partners and lead arranging the investment."
+    },
+    {
+      "name": "Microsoft",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Microsoft and G42 were to design and operate a new Azure East Africa cloud region hosted at the campus."
+    },
+    {
+      "name": "Olkaria EcoCloud Data Centre",
+      "role": "developer",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Described as a local partner in the G42-led development."
+    },
+    {
+      "name": "Kenya Ministry of Information, Communications and the Digital Economy",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Party to the 2024 letter of intent; the government planned to use the facility for public services."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2024-05-22",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-24",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Potential eventual scale, first stated by G42's chief executive in May 2024."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-23",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Gulf News, Semafor and Citizen Digital describe a USD 1 billion data centre. Microsoft's announcement and Al Jazeera instead frame USD 1 billion as a wider digital package in which the data centre is one part, so the figure may not be campus-specific."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-05",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Original target of operation about two years after the 2024 announcement; it was missed."
+    },
+    {
+      "event": "other",
+      "date": "2026-05",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Al Jazeera reported that plans stalled in May 2026 over power capacity concerns; Semafor reported that the National Treasury had not approved funding and that ground had not been broken. No formal suspension was reported."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "geothermal",
+      "description": "The campus was planned to run entirely on renewable geothermal energy from the Olkaria area.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://news.microsoft.com/2024/05/22/microsoft-and-g42-announce-1-billion-comprehensive-digital-ecosystem-initiative-for-kenya/",
+      "title": "Microsoft and G42 announce $1 billion comprehensive digital ecosystem initiative for Kenya",
+      "publisher": "Microsoft",
+      "published": "2024-05-22",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20250503035335/https://news.microsoft.com/2024/05/22/microsoft-and-g42-announce-1-billion-comprehensive-digital-ecosystem-initiative-for-kenya/"
+    },
+    {
+      "id": "s2",
+      "url": "https://gulfnews.com/business/markets/microsoft-uaes-g42-announce-1-billion-geothermal-data-centre-in-kenya-1.102753045",
+      "title": "Microsoft, UAE's G42 announce $1 billion geothermal data centre in Kenya",
+      "publisher": "Gulf News",
+      "published": "2024-05-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://semafor.com/article/05/06/2026/energy-shortfall-problem-scuppers-kenyas-1b-microsoft-data-center",
+      "title": "Energy shortfall 'problem' scuppers Kenya's $1B Microsoft data center",
+      "publisher": "Semafor",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://citizen.digital/article/kenyas-1b-microsoft-data-centre-project-in-limbo-over-power-concerns-n383281",
+      "title": "Kenya's $1B Microsoft data centre project in limbo over power concerns",
+      "publisher": "Citizen Digital",
+      "published": "2026-05-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.aljazeera.com/economy/2026/8/24/can-kenyas-ai-ambitions-coexist-with-naivashas-water-needs",
+      "title": "Can Kenya's AI ambitions coexist with Naivasha's water needs?",
+      "publisher": "Al Jazeera",
+      "published": "2026-08-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Olkaria",
+      "title": "Olkaria",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "id": "airtrunk-hyd1-chandanvelly",
+  "name": "AirTrunk HYD1 Hyderabad",
+  "aliases": [
+    "AirTrunk HYD1",
+    "HYD1 Hyderabad"
+  ],
+  "summary": "HYD1 is AirTrunk's Hyderabad campus at Chandanvelly, Telangana, which AirTrunk lists at more than 243 MW on a 13.3-hectare site served by a 440/220 kV substation. AirTrunk entered India in April 2026 by acquiring Blackstone-backed Lumina CloudInfra, whose roughly 600 MW planned pipeline spans Mumbai, Chennai and Hyderabad. AirTrunk's site page gives no construction status or dates, and no other source describing work at the site was found.",
+  "location": {
+    "country": "IN",
+    "admin1": "Telangana",
+    "locality": "Chandanvelly",
+    "lat": 17.2327,
+    "lon": 78.1713,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "AirTrunk names Chandanvelly, Hyderabad, without an address; the point is the Chandanvelly village coordinate from its Wikipedia article, so it marks the village rather than the parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "AirTrunk",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Lists HYD1 among its India campuses after acquiring Lumina CloudInfra; the sources do not say whether the site came from Lumina's pipeline."
+    },
+    {
+      "name": "Blackstone",
+      "role": "investor",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Provides long-term capital to AirTrunk's platform alongside CPPIB; not a site-specific investment."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 243,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total capacity on AirTrunk's undated HYD1 page; the page does not say whether it is IT load or how much is built."
+    },
+    {
+      "metric": "land_area",
+      "value": 13.3,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-04-20",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "AirTrunk announced its acquisition of Lumina CloudInfra, entering the Mumbai, Chennai and Hyderabad markets with a portfolio of about 600 MW of planned capacity; the announcement does not name HYD1 or Chandanvelly."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "AirTrunk lists a 440/220 kV substation for the campus.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://airtrunk.com/location/hyd1-hyderabad/",
+      "title": "HYD1 Hyderabad",
+      "publisher": "AirTrunk",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://airtrunk.com/?p=16687",
+      "title": "AirTrunk Acquires Lumina CloudInfra",
+      "publisher": "AirTrunk",
+      "published": "2026-04-20",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/airtunk-acquires-lumina-cloudinfra-makes-foray-into-india/",
+      "title": "AirTunk acquires Lumina CloudInfra, makes foray into India",
+      "publisher": "W.Media",
+      "published": "2026-04-20",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Chandanvelly",
+      "title": "Chandanvelly",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Thinly sourced: the site name, capacity and land area come only from AirTrunk's undated HYD1 page, read on 2026-10-09, so status_as_of is the access date and the status of announced reflects the absence of any construction report. The page's floor area figure appears garbled and is not recorded. The separate CtrlS campus is also at Chandanvelly. Wikipedia is cited only for the village coordinate.",
+  "last_reviewed": "2026-10-09"
+}

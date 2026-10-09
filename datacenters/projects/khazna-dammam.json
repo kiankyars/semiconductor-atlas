@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "id": "khazna-dammam",
+  "name": "Khazna Data Centers Dammam campus",
+  "aliases": [
+    "Khazna Dammam"
+  ],
+  "summary": "Khazna Data Centers, a UAE data centre operator, announced in December 2025 that it had acquired 225,000 square metres of land in Dammam, in Saudi Arabia's Eastern Province, for its first site in the kingdom. The campus is planned for up to 200 MW of AI-ready capacity in a modular design that can be configured for GPU clusters, aimed at cloud and AI hyperscale customers and built to LEED Gold standards. Khazna named a Saudi country head to lead the launch but gave no investment figure or construction schedule.",
+  "location": {
+    "country": "SA",
+    "admin1": "Eastern Province",
+    "locality": "Dammam",
+    "lat": 26.433,
+    "lon": 50.1,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "City coordinates from the Dammam Wikipedia page; Khazna has not published the plot location."
+  },
+  "status": "announced",
+  "status_as_of": "2025-12-09",
+  "status_source_ids": [
+    "s1"
+  ],
+  "notes": "No 2026 update on the Dammam site was found. The 225,000 square metre plot size is kept in the summary only, because the record format stores land area in acres or hectares.",
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Khazna Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Khazna Data Centers",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Acquired the land for the campus."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-12-09",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Described as AI-ready capacity; the scope is not stated."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2025-12-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Date the land acquisition was announced in Riyadh."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-names-new-country-head-and-advances-expansion-plans-in-saudi-arabia-in-support-of-vision-2030/",
+      "title": "Khazna Data Centers names new country head and advances expansion plans in Saudi Arabia in support of Vision 2030",
+      "publisher": "Khazna Data Centers",
+      "published": "2025-12-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://enterpriseam.com/ksa/2025/12/10/dubai-based-khazna-data-centers-lands-in-ksa/",
+      "title": "Dubai-based Khazna Data Centers lands in KSA",
+      "publisher": "Enterprise AM",
+      "published": "2025-12-10",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Dammam",
+      "title": "Dammam",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260926035310/https://en.wikipedia.org/wiki/Dammam"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

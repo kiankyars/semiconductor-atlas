@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "id": "airtrunk-jhb4-iskandar-puteri",
+  "name": "AirTrunk JHB4 Johor Bahru",
+  "aliases": [
+    "AirTrunk JHB4",
+    "JHB4 Johor Bahru"
+  ],
+  "summary": "JHB4 is one of two new AirTrunk hyperscale campuses announced on 30 April 2026 in Iskandar Puteri, Johor, next to its JHB1 and JHB2 campuses. AirTrunk lists JHB4 at more than 142 MW across multiple buildings with eight data halls on about 5.589 hectares, fed at 275 kV from JHB2 and cooled with recycled water, aimed at high-density cloud and AI customers. AirTrunk put the combined investment for JHB4 and JHB3 at MYR12 billion (USD3 billion), with more than 3,000 construction jobs; no construction or opening dates were given.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Johor Bahru District",
+    "locality": "Iskandar Puteri",
+    "lat": 1.4222,
+    "lon": 103.65,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "AirTrunk and W.Media name Iskandar Puteri without an address; the point is the Iskandar Puteri coordinate from its Wikipedia article, so it marks the city rather than the campus."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-30",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "AirTrunk",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 142,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total capacity on AirTrunk's undated JHB4 page. The April 2026 announcement gives more than 280 MW of IT load for JHB4 and JHB3 together."
+    },
+    {
+      "metric": "land_area",
+      "value": 5.589,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 11150,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Technical data hall area across eight halls; office and storage space of 3,300 square metres is listed separately."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-04-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Permanent 275 kV dual feed from the neighbouring JHB2 campus, per AirTrunk's site page.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://airtrunk.com/airtrunk-doubles-down-in-malaysia-with-two-new-hyperscale-campuses-in-johor-bahru/",
+      "title": "AirTrunk doubles down in Malaysia with two new hyperscale campuses in Johor Bahru",
+      "publisher": "AirTrunk",
+      "published": "2026-04-30",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261001022558/https://airtrunk.com/airtrunk-doubles-down-in-malaysia-with-two-new-hyperscale-campuses-in-johor-bahru/"
+    },
+    {
+      "id": "s2",
+      "url": "https://airtrunk.com/location/jhb4-johor-bahru/",
+      "title": "JHB4 Johor Bahru",
+      "publisher": "AirTrunk",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261001022558/https://airtrunk.com/location/jhb4-johor-bahru/"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/airtrunk-to-invest-us-3-billion-in-johor-to-build-two-hyperscale-campuses-totaling-280mw-capacity/",
+      "title": "AirTrunk to invest US$ 3 billion in Johor to build two hyperscale campuses totaling 280MW capacity",
+      "publisher": "W.Media",
+      "published": "2026-04-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Iskandar_Puteri",
+      "title": "Iskandar Puteri",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The more than 280 MW of IT load, the MYR12 billion (USD3 billion) investment and the 3,000-plus construction jobs were announced for JHB4 and JHB3 together, so they are not recorded as metrics for this campus alone. AirTrunk's site page states a total capacity without saying whether it is IT load. No construction start or status update after the announcement was found. Related records: airtrunk-jhb1-johor and airtrunk-jhb2-iskandar-puteri. Wikipedia is cited only for the city coordinate.",
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "airtrunk-jhb3-iskandar-puteri"
+  ]
+}

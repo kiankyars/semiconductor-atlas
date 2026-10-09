@@ -47,8 +47,11 @@ maintainers. Sources are linked, not copied; the dataset contains no verbatim ex
 
 The first release was compiled in October 2026 by AI-assisted research agents working from public
 web sources, each record then checked against its cited sources in a separate verification pass
-before publication. Because every value links to its source, any reader can audit it. Errors
-should be reported through the issue tracker and are corrected in the open.
+before publication. Later additions follow the same two-step process: one pass drafts a record
+from sources, and an independent pass re-opens every source and corrects or removes anything it
+does not support. Because every value links to its source, any reader can audit it. Errors should
+be reported through the issue tracker and are corrected in the open. Builds known but not yet
+recorded are listed on the coverage page.
 
 ## Statuses
 

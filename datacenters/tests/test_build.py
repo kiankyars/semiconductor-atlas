@@ -42,7 +42,7 @@ class BuildTest(unittest.TestCase):
     def test_expected_files(self):
         for rel in ("index.html", "404.html", "feed.xml", "sitemap.xml", "robots.txt", "llms.txt",
                     ".nojekyll", "projects/index.html", "data/index.html",
-                    "methodology/index.html", "about/index.html",
+                    "methodology/index.html", "about/index.html", "coverage/index.html",
                     "projects/example-cloud-springfield/index.html",
                     "api/v1/index.json", "api/v1/projects.json", "api/v1/stats.json",
                     "api/v1/projects/example-ai-riverside.json",

@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "id": "data4-hanau",
+  "name": "Data4 Hanau campus",
+  "aliases": [
+    "Data4 Großauheim campus"
+  ],
+  "summary": "Data4's first German campus, on a former military base in the Großauheim district of Hanau, about 30 minutes from central Frankfurt. Data4, owned by Brookfield, plans 180 MW of power capacity for cloud and AI customers and in September 2025 doubled its planned investment from EUR 1 billion to more than EUR 2 billion when it laid the foundations. The plan includes a combined heat and power plant, a substation, decarbonised energy and waste heat for local district heating. Trade press described the campus as under construction in March 2026; no operating date has been published.",
+  "location": {
+    "country": "DE",
+    "admin1": "Hesse",
+    "admin2": "Main-Kinzig-Kreis",
+    "locality": "Hanau (Großauheim)",
+    "lat": 50.1,
+    "lon": 8.95,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Centroid of the Großauheim district of Hanau from its Wikipedia article. Data4 places the campus on the former Großauheim military base but no cited source gives coordinates for the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-03-11",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified",
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "Data4",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Data4",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Data4 says it finances, designs, builds and operates its own data centers."
+    },
+    {
+      "name": "Data4",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Acquired the site."
+    },
+    {
+      "name": "Brookfield",
+      "role": "investor",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Owner of Data4, per trade press."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 180,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-09-15",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "more_than",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-09-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Data4's release headline calls this the campus investment, doubled from EUR 1 billion to EUR 2 billion; the body says planned investment for its German location rose to over EUR 2 billion. Trade press gives EUR 2 billion (Capacity) or up to EUR 2 billion (DCD via BeBeez)."
+    },
+    {
+      "metric": "land_area",
+      "value": 25,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-09-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Data4's own figure. Trade press reports 25 acres instead."
+    },
+    {
+      "metric": "land_area",
+      "value": 25,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Trade press figure, which conflicts with Data4's 25 hectares."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2023",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Trade press gives 2023; Data4's September 2025 release says it bought the site 18 months earlier, which would point to early 2024."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-09-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Foundation-laying ceremony attended by Hesse's digital minister and Hanau's mayor."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Data4 plans an on-site combined heat and power plant (fuel not stated) and a substation, and says the campus will run on 100% decarbonised energy; waste heat is to serve local district heating.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.data4group.com/wp-content/uploads/2025/09/FINAL_ENG_Press-Release-_Data4_Event_Hanau-1.pdf",
+      "title": "Data4 lays the foundations on its first mega campus in Germany: a new gateway to AI, Cloud and Digital Sovereignty",
+      "publisher": "Data4",
+      "published": "2025-09-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://bebeez.eu/en/news/data4-breaks-ground-on-data-center-project-in-hanau-germany/",
+      "title": "Data4 breaks ground on data center project in Hanau, Germany",
+      "publisher": "BeBeez International (republishing DCD)",
+      "published": "2025-09-17",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://capacityglobal.com/news/data4-hanau-data-centre-germany-data-centre-of-the-month/",
+      "title": "Data centre of the month: Data4’s site in Hanau, Germany",
+      "publisher": "Capacity",
+      "published": "2026-03-11",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Gro%C3%9Fauheim",
+      "title": "Großauheim",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20251129092158/https://en.wikipedia.org/wiki/Gro%C3%9Fauheim"
+    }
+  ],
+  "notes": "Data4's release names no tenants and gives no phase schedule or operating date. Land area sources conflict (25 hectares from Data4, 25 acres from trade press), so both are kept.",
+  "last_reviewed": "2026-10-09"
+}

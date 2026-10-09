@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "k2-zibido-san-giacomo-lacchiarella",
+  "name": "K2 hyperscale data center campus, Zibido San Giacomo and Lacchiarella",
+  "aliases": [
+    "K2 Strategic Infrastructure Italy campus"
+  ],
+  "summary": "Hyperscale data center campus proposed by K2 Strategic Infrastructure Italy, a company held by K2 Strategic Pte. Ltd., across the municipalities of Zibido San Giacomo and Lacchiarella in the Metropolitan City of Milan. On 4 August 2026 Italy's Council of Ministers declared it a programme of preeminent national strategic interest. Press reports attribute to the Ministry of Enterprises and Made in Italy figures of up to about 400 MW and an estimated EUR 5.3 billion of investment over four years of development and construction. A government commissioner is to coordinate permits. Local groups have raised concerns about new data centers in the area over farmland, water, grid strain and noise.",
+  "location": {
+    "country": "IT",
+    "admin1": "Lombardy",
+    "admin2": "Metropolitan City of Milan",
+    "locality": "Lacchiarella",
+    "lat": 45.317,
+    "lon": 9.133,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Lacchiarella municipal centroid from its Wikipedia article. The campus spans Zibido San Giacomo and Lacchiarella; no cited source gives site coordinates, so the point only marks one of the two municipalities."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-18",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "K2 Strategic Infrastructure Italy",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Held by K2 Strategic Pte. Ltd., per MondoMobileWeb."
+    },
+    {
+      "name": "Italian Council of Ministers",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Declared the programme of preeminent national strategic interest on a proposal from the Ministry of Enterprises and Made in Italy."
+    },
+    {
+      "name": "Lombardy Region",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Consulted on compliance with its new data center law; the commissioner is to be appointed in agreement with the region."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Figure communicated by the Ministry of Enterprises and Made in Italy (MIMIT), as reported by the press; described as total capacity of up to about 400 MW, scope not stated."
+    },
+    {
+      "metric": "investment",
+      "value": 5300000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Figure communicated by the Ministry of Enterprises and Made in Italy (MIMIT), as reported by the press; Il Sole 24 Ore does not attribute it."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Figure communicated by the Ministry of Enterprises and Made in Italy (MIMIT), as reported by the press: average workers per year over the four-year development and construction period."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Figure communicated by the Ministry of Enterprises and Made in Italy (MIMIT), as reported by the press: direct jobs once operating, plus about 1,300 permanent jobs in related businesses."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-08-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Council of Ministers declared the programme of preeminent national strategic interest, with a government commissioner to coordinate the single authorisation."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.ilgiorno.it/milano/economia/data-center-lacchiarella-zibido-cz1ai1qn",
+      "title": "Data Center, avanti tutta: interesse nazionale anche per Lacchiarella-Zibido. La mappa in Lombardia",
+      "publisher": "Il Giorno",
+      "published": "2026-08-05",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260810220341/https://www.ilgiorno.it/milano/economia/data-center-lacchiarella-zibido-cz1ai1qn"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.mondomobileweb.it/?p=325209",
+      "title": "Data center, in Italia 7 investimenti strategici per oltre 25 miliardi di euro",
+      "publisher": "MondoMobileWeb",
+      "published": "2026-08-18",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.ilsole24ore.com/art/data-centre-eu-gives-green-light-to-eni-khazna-joint-venture-lombardy-hub-to-be-accelerated-AJl2Zcj",
+      "title": "Data centres: EU gives the green light to the Eni-Khazna joint venture. Lombardy hub set to accelerate",
+      "publisher": "Il Sole 24 Ore",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Lacchiarella",
+      "title": "Lacchiarella",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260101045140/https://en.wikipedia.org/wiki/Lacchiarella"
+    }
+  ],
+  "notes": "The official government or ministry communiqué was not opened; capacity, investment and job figures come from press coverage attributing them to the ministry. No site area, tenant or construction start has been published. Il Giorno reports objections from residents and groups linked to the Parco Agricolo Sud Milano to the new data center projects in the area, over farmland loss, water use, grid strain, local heating and noise.",
+  "last_reviewed": "2026-10-09"
+}

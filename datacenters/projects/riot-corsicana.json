@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "id": "riot-corsicana",
+  "name": "Riot Platforms Corsicana facility",
+  "aliases": [
+    "Corsicana Facility",
+    "Riot Corsicana"
+  ],
+  "summary": "Riot Platforms campus in Navarro County, Texas, begun in 2022 to expand bitcoin mining; its 400 MW first phase of immersion-cooled mining infrastructure was completed in 2024 and still serves mining. Riot now plans to make the site's expected total of about 1 GW of developed capacity available for high-density compute: in January 2026 it said it would convert available Corsicana power for data center use, its 2025 annual report described a first data center phase at Corsicana, and in August 2026 it disclosed a non-binding letter of intent with a single tenant for the full site. The sources opened report no signed lease.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Navarro County",
+    "lat": 32.05,
+    "lon": -96.47,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s6"
+    ],
+    "note": "Riot's 10-K places the facility in Navarro County without naming a town or address. Coordinates are the Navarro County point from its Wikipedia article, not the site."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-08-10",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "crypto_mining",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Riot Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Riot Platforms",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-10",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "Riot's expected total developed capacity at completion, now described as available for high-density compute; Riot does not say whether this is IT or facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase I (immersion-cooled bitcoin mining)",
+      "as_of": "2026-08-10",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Developed capacity currently equipped for bitcoin mining."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2022",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Riot began developing the Corsicana Facility in 2022 to expand bitcoin mining."
+    },
+    {
+      "event": "first_operational",
+      "date": "2024",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction of the 400 MW Phase I mining build was completed during 2024."
+    },
+    {
+      "event": "other",
+      "date": "2026-01-16",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Riot said it was working to convert all available power capacity at Corsicana, as at Rockdale, for data center use."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-10",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Riot disclosed a non-binding letter of intent with a single, unnamed tenant for a proposed lease of the full site and said it aims to convert it into an executed lease."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926022322/riot-20251231x10k.htm",
+      "title": "Riot Platforms, Inc. annual report on Form 10-K for fiscal year 2025",
+      "publisher": "Riot Platforms, Inc. via SEC EDGAR",
+      "published": "2026-03-02",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260825192136/https://www.sec.gov/Archives/edgar/data/1167419/000110465926022322/riot-20251231x10k.htm"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926004551/riot-20260116xex99d1.htm",
+      "title": "Riot announces fee simple acquisition of land and first data center lease with AMD at the Rockdale Site (Form 8-K, Exhibit 99.1)",
+      "publisher": "Riot Platforms, Inc. via SEC EDGAR",
+      "published": "2026-01-16",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810x8k.htm",
+      "title": "Riot Platforms Form 8-K: second quarter 2026 results and Corsicana letter of intent",
+      "publisher": "Riot Platforms, Inc. via SEC EDGAR",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093406/riot-20260810xex99d2.htm",
+      "title": "Riot Platforms Q2 2026 earnings deck (Form 8-K, Exhibit 99.2)",
+      "publisher": "Riot Platforms, Inc. via SEC EDGAR",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926093448/riot-20260630x10q.htm",
+      "title": "Riot Platforms, Inc. quarterly report on Form 10-Q for the period ended June 30, 2026",
+      "publisher": "Riot Platforms, Inc. via SEC EDGAR",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20261005041727/https://www.sec.gov/Archives/edgar/data/1167419/000110465926093448/riot-20260630x10q.htm"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Navarro_County,_Texas",
+      "title": "Navarro County, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status reflects the operating 400 MW mining phase; the AI/HPC conversion rests on a non-binding letter of intent and could change. Riot's 2025 10-K says it has completed a basis of design for its standard data center build to support the initial data center phase at Corsicana. The January 2026 release puts Riot's fully approved data center power portfolio at about 1.7 GW across Rockdale and Corsicana combined.",
+  "last_reviewed": "2026-10-09"
+}

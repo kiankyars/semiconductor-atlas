@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "id": "core-scientific-muskogee",
+  "name": "Core Scientific Muskogee data center campus",
+  "aliases": [
+    "Muskogee 1"
+  ],
+  "summary": "Core Scientific high-density colocation campus at 1525 West 43rd Street South in Muskogee, Oklahoma, served by Oklahoma Gas & Electric. A 70 MW building designed for Nvidia GB300 systems is leased to CoreWeave and was billing by mid-July 2026, and a second building of about 82 MW, now leased to AMD, is under construction for delivery from the second half of 2027. In May 2026 Core Scientific announced plans to grow the campus to about 1.5 GW of gross power, about 1.0 GW leasable, on about 250 acres, and in August 2026 it closed the purchase of Polaris DS, which holds about 440 MW of in-service OG&E grid capacity.",
+  "location": {
+    "country": "US",
+    "admin1": "Oklahoma",
+    "admin2": "Muskogee County",
+    "locality": "Muskogee",
+    "lat": 35.7433,
+    "lon": -95.3567,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s7"
+    ],
+    "note": "Core Scientific gives the street address 1525 West 43rd Street South, Muskogee. No geocoder was used, so coordinates are the Muskogee city point from its Wikipedia article, which also names the county."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-07-28",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Core Scientific",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "name": "Core Scientific",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "CoreWeave",
+      "role": "tenant",
+      "source_ids": [
+        "s4",
+        "s3"
+      ],
+      "note": "Named as tenant of the roughly 70 MW first building only in the Q2 2026 earnings presentation (s4). The May 2026 release (s3) describes that leased building, designed for the Nvidia GB300 platform, without naming the customer."
+    },
+    {
+      "name": "AMD",
+      "role": "tenant",
+      "source_ids": [
+        "s4",
+        "s8"
+      ],
+      "note": "Named for Muskogee only in the Q2 2026 earnings presentation (s4), which lists about 82 MW at this AMD direct site. The Q2 release (s8) gives the 15-year term for about 530 MW across five sites without naming them."
+    },
+    {
+      "name": "Oklahoma Gas & Electric",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Original Muskogee 1 site",
+      "as_of": "2026-03-02",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Gross utility power capacity from OG&E listed in the 10-K; the company site page also describes a 100 MW development with a substation able to support more than 500 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 70,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Building 1 (CoreWeave)",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Leased capacity reported as billing by mid-July 2026. Core Scientific does not say whether the figure is critical IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 82,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Building 2 (AMD)",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Building under construction since at least May 2026, when it was described as an unleased 82.5 MW building; leased to AMD in July 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 440,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Polaris DS capacity",
+      "as_of": "2026-08-14",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "In-service gross grid capacity held by Polaris DS LLC under electric service agreements with OG&E, acquired by Core Scientific to support the expansion."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-14",
+      "source_ids": [
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "note": "Planned gross power from a mix of grid and behind-the-meter supply, which the company equates to about 1.0 GW of leasable power. Gross power is not defined as IT or facility load."
+    },
+    {
+      "metric": "land_area",
+      "value": 65,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Muskogee 1 campus footprint",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "From the undated company site page, accessed 2026-10-09."
+    },
+    {
+      "metric": "land_area",
+      "value": 250,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Land secured for planned expansion",
+      "as_of": "2026-05-06",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Described as secured to support the planned expansion; the sources do not say whether it is owned or held under option."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "The 70 MW CoreWeave building was in final testing in May 2026 with delivery targeted for Q2 2026, and was billing by mid-July 2026."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-05-06",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Plan to scale the campus to about 1.5 GW of gross power and agreement to buy Polaris DS."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-28",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Core Scientific disclosed AMD leases including about 82 MW at Muskogee."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-14",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Acquisition of Polaris DS completed for about USD 444 million in cash."
+    },
+    {
+      "event": "other",
+      "date": "2027-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Target for initial delivery of the roughly 82 MW AMD building; the May 2026 release gave Q4 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid power from Oklahoma Gas & Electric, including about 440 MW of in-service capacity under Polaris DS service agreements; load studies for more grid capacity were due to finish in 2026.",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Core Scientific says it has a plan for a scalable behind-the-meter power solution to supplement grid supply, without naming the fuel or size.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://corescientific.com/high-density-data-centers/muskogee-ok/",
+      "title": "Muskogee 1 high-density data center",
+      "publisher": "Core Scientific",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001322/https://corescientific.com/high-density-data-centers/muskogee-ok/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm",
+      "title": "Core Scientific, Inc. Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "Core Scientific, Inc. via SEC EDGAR",
+      "published": "2026-03-02",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260303001537/https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/135/core-scientific-plans-expansion-to-1-5-gigawatts-of-gross-power-at-muskogee-oklahoma-campus",
+      "title": "Core Scientific plans expansion to 1.5 gigawatts of gross power at Muskogee, Oklahoma campus",
+      "publisher": "Core Scientific",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001640/https://investors.corescientific.com/news-events/press-releases/detail/135/core-scientific-plans-expansion-to-1-5-gigawatts-of-gross-power-at-muskogee-oklahoma-campus"
+    },
+    {
+      "id": "s4",
+      "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000012/q2fy26earningsdeck728am.htm",
+      "title": "Core Scientific Q2 2026 earnings presentation (Form 8-K, Exhibit 99.2)",
+      "publisher": "Core Scientific",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260929002832/https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000012/q2fy26earningsdeck728am.htm"
+    },
+    {
+      "id": "s5",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/142/core-scientific-completes-acquisition-of-polaris-ds-advancing-planned-muskogee-expansion-to-1-5-gw-of-gross-power",
+      "title": "Core Scientific completes acquisition of Polaris DS, advancing planned Muskogee expansion to 1.5 GW of gross power",
+      "publisher": "Core Scientific",
+      "published": "2026-08-14",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001639/https://investors.corescientific.com/news-events/press-releases/detail/142/core-scientific-completes-acquisition-of-polaris-ds-advancing-planned-muskogee-expansion-to-1-5-gw-of-gross-power"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.datacenterknowledge.com/build-design/core-scientific-bets-on-1-5-gw-ai-campus-in-oklahoma",
+      "title": "Core Scientific's Muskogee bet: can crypto-era infrastructure fuel AI?",
+      "publisher": "Data Center Knowledge",
+      "published": "2026-05-07",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Muskogee,_Oklahoma",
+      "title": "Muskogee, Oklahoma",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260930224707/https://en.wikipedia.org/wiki/Muskogee,_Oklahoma"
+    },
+    {
+      "id": "s8",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/139/core-scientific-announces-second-quarter-2026-results",
+      "title": "Core Scientific announces second quarter 2026 results",
+      "publisher": "Core Scientific",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Core Scientific's Q2 2026 presentation lists about 917 MW of further power pipeline at Muskogee in two entries without saying how much is grid or behind-the-meter. The AMD agreements are 15-year leases for about 530 MW across five Core Scientific sites; per-site splits come from the company's earnings presentation.",
+  "last_reviewed": "2026-10-09"
+}

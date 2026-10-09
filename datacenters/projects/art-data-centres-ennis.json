@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0",
+  "id": "art-data-centres-ennis",
+  "name": "Art Data Centres Ennis campus",
+  "aliases": [
+    "Ennis data centre campus",
+    "Art Data Centres Tulla Road campus"
+  ],
+  "summary": "Six-hall, 200 MW data center campus planned by Art Data Centres on about 145 acres beside the Tulla Road on the eastern edge of Ennis, County Clare, near junction 13 of the M18. The national planning board granted permission in April 2024, and in March 2026 the High Court dismissed the last judicial review challenges after years of litigation. Investment is now put at more than EUR 1.6 billion over three phases. Phase 1, with a substation and two data halls, is due for commissioning by the end of 2028; enabling works start with diverting overhead power lines.",
+  "location": {
+    "country": "IE",
+    "admin1": "County Clare",
+    "locality": "Ennis",
+    "lat": 52.8463,
+    "lon": -8.9807,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Ennis town centroid from its Wikipedia article. Clare FM places the site beside the Tulla Road on the town's eastern side near M18 junction 13, but no cited source gives coordinates."
+  },
+  "status": "announced",
+  "status_as_of": "2026-03-25",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Art Data Centres",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "An Bord Pleanála (now An Coimisiún Pleanála)",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Granted planning permission in April 2024."
+    },
+    {
+      "name": "EirGrid",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Working with the developer on diverting overhead power lines as the first enabling works."
+    },
+    {
+      "name": "ESB Networks",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Working with the developer on diverting overhead power lines as the first enabling works."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-03-13",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Industrial Info describes six data halls of slightly more than 33 MW each."
+    },
+    {
+      "metric": "investment",
+      "value": 1600000000,
+      "qualifier": "more_than",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-13",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Across three phases."
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-03-21",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Earlier reported figure, superseded by the 2026 estimate of more than EUR 1.6 billion."
+    },
+    {
+      "metric": "land_area",
+      "value": 145,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-13",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 200000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Each of six data halls",
+      "as_of": "2025-03-21",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Per-hall figure from the 2025 report; not summed into a campus total."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-13",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Six data halls built in three phases of two buildings each."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-13",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Developer figure reported by Clare FM."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "permit_approved",
+      "date": "2024-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Planning permission from An Bord Pleanála; the 2025 report says permission was first granted in 2022."
+    },
+    {
+      "event": "other",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "note": "The court found the judicial review grounds, including those concerning Leisler's bat, lacked merit; the remaining grounds were to be relisted later."
+    },
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "High Court dismissed the remaining judicial review challenges, ending almost six years of legal challenges and clearing the way for enabling works."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Phase 1 (substation, data halls 2 and 3 and site works) due for completion and commissioning by the end of 2028; the 2025 report had targeted the first halls by the end of 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "An 83 MVA connection to the Ennis substation, per Industrial Info.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "Industrial Info says an off-grid substation would be supplied by wind, solar and biogas.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Solar is one of the sources Industrial Info lists for the off-grid substation.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Biogas is one of the sources Industrial Info lists for the off-grid substation.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.clare.fm/news/high-court-clears-way-for-construction-of-e1-6bn-ennis-data-centre-project/",
+      "title": "High Court Clears Way For Construction Of €1.6bn Ennis Data Centre Project",
+      "publisher": "Clare FM",
+      "published": "2026-03-13",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260420003426/https://www.clare.fm/news/high-court-clears-way-for-construction-of-e1-6bn-ennis-data-centre-project/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.industrialinfo.com/iirenergy/industry-news/article/court-clears-way-for-major-irish-data-center--355133",
+      "title": "Court Clears Way for Major Irish Data Center",
+      "publisher": "Industrial Info Resources",
+      "published": "2026-03-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://bebeez.eu/en/news/art-data-centres-ennis-campus-judicial-review-gets-dismissed/",
+      "title": "Art Data Centres Ennis campus judicial review gets dismissed",
+      "publisher": "BeBeez International (republishing DCD)",
+      "published": "2025-03-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Ennis",
+      "title": "Ennis",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "No construction start had been reported by the sources opened; Clare FM says enabling works can now begin. Investment figures have risen across reports (EUR 1.2 billion in 2025, more than EUR 1.6 billion in 2026). Clare FM and Industrial Info give the campus as 145 acres or 1.3 million sq ft, presenting the two as equivalent although 145 acres is about 6.3 million sq ft; because neither says what the 1.3 million sq ft measures, it is not recorded as floor area. Industrial Info's six halls of slightly more than 33 MW each are not summed. The judicial review was brought by Friends of the Irish Environment, Futureproof Clare and several individuals.",
+  "last_reviewed": "2026-10-09"
+}

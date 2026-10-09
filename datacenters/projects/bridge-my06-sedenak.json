@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "id": "bridge-my06-sedenak",
+  "name": "Bridge Data Centres MY06, Sedenak Tech Park",
+  "aliases": [
+    "BDC MY06",
+    "Kidex Sedenak MY06"
+  ],
+  "summary": "Bridge Data Centres' MY06 hyperscale campus sits in Kidex Sedenak, part of the Sedenak Tech Park in Kulai District, Johor. Announced in December 2021 as a three-building, 100 MW IT campus on about 40 acres with RM2.5 billion of investment over five years, its first 20 MW building was built with prefabricated modules and opened in November 2022, with ByteDance as anchor tenant. Bridge now lists MY06 at 508 MW of IT capacity across 15 buildings, and in September 2026 described the Sedenak campus as a fully operating hyperscale site.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Kulai District",
+    "locality": "Sedenak (Sedenak Tech Park)",
+    "lat": 1.7137,
+    "lon": 103.5248,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s6",
+      "s7"
+    ],
+    "note": "Sources place the campus in Kidex Sedenak, within the Sedenak Technology Valley (Sedenak Tech Park), without an address; the point is the Sedenak coordinate from its Wikipedia article, so it marks the locality rather than the parcel."
+  },
+  "status": "operational",
+  "status_as_of": "2026-09-15",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "colocation",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Bridge Data Centres",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Described as a subsidiary of Chindata Group at announcement; later coverage says it is backed by Bain Capital."
+    },
+    {
+      "name": "Bridge Data Centres",
+      "role": "operator",
+      "source_ids": [
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "name": "ByteDance System Sdn. Bhd.",
+      "role": "tenant",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named as anchor tenant at the phase 1 opening."
+    },
+    {
+      "name": "Bain Capital",
+      "role": "investor",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Backer of Bridge's Southeast Asian hyperscale expansion."
+    },
+    {
+      "name": "Tenaga Nasional Berhad",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Listed among the agencies and utilities supporting the opening."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2021-12-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original plan for three buildings; the 2022 opening coverage gave 110 MW for the same three-building project."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 110,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2022-11-21",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "W.Media gives 110 MW of IT power; The Iskandarian gives 110 MW without a scope."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 20,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (first building)",
+      "as_of": "2022-11-21",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 508,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total IT capacity listed for MY06 on Bridge's undated Malaysia locations page; the page does not say how much of it is built."
+    },
+    {
+      "metric": "investment",
+      "value": 2500000000,
+      "qualifier": "approximately",
+      "unit": "MYR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2021-12-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Estimated investment over five years for the original 100 MW plan."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2021-12-02",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Original plan."
+    },
+    {
+      "metric": "buildings",
+      "value": 15,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Campus building count listed on Bridge's locations page; construction status of each building is not given."
+    },
+    {
+      "metric": "land_area",
+      "value": 40,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2021-12-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The Iskandarian gave 38 acres at the 2022 opening."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-12-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2021-11",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Iskandarian dates the groundbreaking to November 2021, with phase 1 finished about 314 days later."
+    },
+    {
+      "event": "first_operational",
+      "date": "2022-11",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Grand opening of the first building, handed over to the anchor tenant."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Bridge lists a 275 kV power intake for MY06; Tenaga Nasional Berhad was among the supporting parties at the opening.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.mida.gov.my/media-release/bridge-data-centres-announces-construction-of-its-fourth-hyperscale-data-centre-campus-in-johor-malaysia/",
+      "title": "Bridge Data Centres announces construction of its fourth hyperscale data centre campus in Johor, Malaysia",
+      "publisher": "Malaysian Investment Development Authority (MIDA)",
+      "published": "2021-12-02",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://theiskandarian.com/?p=21738",
+      "title": "The First Phase Hyperscale Data Centre in Johor Malaysia Commenced",
+      "publisher": "The Iskandarian",
+      "published": "2022-11-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/how-bridges-my06-is-rewriting-the-rules-of-data-centre-construction/",
+      "title": "How Bridge's MY06 is Rewriting the Rules of Data Centre Construction",
+      "publisher": "W.Media",
+      "published": "2022-11-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20221206184338/https://w.media/how-bridges-my06-is-rewriting-the-rules-of-data-centre-construction/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.bridgedatacentres.com/locations/malaysia/",
+      "title": "Malaysia locations",
+      "publisher": "Bridge Data Centres",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260609083542/https://www.bridgedatacentres.com/locations/malaysia/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.bridgedatacentres.com/powering-malaysias-digital-future/",
+      "title": "Powering Malaysia's Digital Future",
+      "publisher": "Bridge Data Centres",
+      "published": "2026-09-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.bridgedatacentres.com/building-malaysias-digital-future/",
+      "title": "Building Malaysia's Digital Future",
+      "publisher": "Bridge Data Centres",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Sedenak",
+      "title": "Sedenak",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status rests on a September 2026 Bridge staff profile describing the Sedenak campus as fully operating; it does not say whether all 15 buildings and 508 MW now listed for MY06 are complete, so the larger figure is recorded as planned. Wikipedia is cited only for the locality coordinate.",
+  "last_reviewed": "2026-10-09"
+}

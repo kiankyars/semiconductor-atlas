@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "id": "google-franklin-township-indianapolis",
+  "name": "Google Franklin Township data center proposal (Project Flo)",
+  "aliases": [
+    "Project Flo"
+  ],
+  "summary": "Proposed Google data center on about 468 acres of farmland in Franklin Township on the southeast side of Indianapolis, reported as a USD 1 billion project; tracker Baxtel says Google proposed it through an affiliate, Deep Meadow Ventures. The Metropolitan Development Commission approved the rezoning in August 2025, but the City-County Council scheduled its own public hearing amid opposition from residents worried about water use, flooding and electricity bills. Google's attorney announced the withdrawal of the rezoning petition at the council meeting on 22 September 2025. No later refiling was found.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "admin2": "Marion County",
+    "locality": "Franklin Township, Indianapolis",
+    "lat": 39.6803,
+    "lon": -86.0275,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Coordinates are the Franklin Township coordinates from its Wikipedia page. Sources name the township but give no parcel location, so the site is not pinpointed."
+  },
+  "status": "cancelled",
+  "status_as_of": "2025-09-22",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "notes": "The Metropolitan Development Commission's rules allowed Google to refile after three months; no refiling was found in the sources reviewed as of October 2026. Baxtel's undated third-party listing (accessed 2026-10-09) shows the project as withdrawn.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Deep Meadow Ventures LLC",
+      "role": "developer",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Described by Baxtel as the Google affiliate through which the proposal was made."
+    },
+    {
+      "name": "Indianapolis Metropolitan Development Commission",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the rezoning request on 20 August 2025."
+    },
+    {
+      "name": "Indianapolis City-County Council",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Scheduled a public hearing on the rezoning (Proposal No. 306); Google withdrew before a vote."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-22",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 468,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-22",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "zoning_approved",
+      "date": "2025-08-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approval by the Metropolitan Development Commission, later called up for review by the City-County Council."
+    },
+    {
+      "event": "cancelled",
+      "date": "2025-09-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Google's attorney announced the withdrawal of the rezoning petition at the City-County Council meeting."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.insideindianabusiness.com/?p=191728",
+      "title": "Google to withdraw rezoning request for data center in Franklin Township",
+      "publisher": "Inside INdiana Business (Indianapolis Business Journal)",
+      "published": "2025-09-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://mirrorindy.org/google-withdraws-southside-data-center-proposal-franklin-township/",
+      "title": "Southsiders prevail in fight against Google data center",
+      "publisher": "Mirror Indy",
+      "published": "2025-09-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.wrtv.com/news/local-news/google-withdraws-rezoning-petition-for-proposed-data-center-in-franklin-township",
+      "title": "Google withdraws rezoning petition for proposed data center in Franklin Township",
+      "publisher": "WRTV Indianapolis",
+      "published": "2025-09-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://baxtel.com/data-center/google-indianapolis-project-flo",
+      "title": "Google: Indianapolis (Project Flo) Data Center",
+      "publisher": "Baxtel",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Franklin_Township,_Marion_County,_Indiana",
+      "title": "Franklin Township, Marion County, Indiana",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

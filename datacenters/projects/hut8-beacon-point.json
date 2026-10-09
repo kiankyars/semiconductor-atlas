@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "id": "hut8-beacon-point",
+  "name": "Hut 8 Beacon Point AI data center campus",
+  "aliases": [
+    "Beacon Point AI Data Center Campus",
+    "Beacon Point DC"
+  ],
+  "summary": "Hut 8 AI data center campus on about 521 acres in Nueces County, Texas, backed by 1,000 MW of utility capacity under an AEP Texas interconnection agreement. In 2026 Hut 8 signed two 15-year leases of 352 MW of IT capacity each with one unnamed high-investment-grade tenant, for 704 MW in total, worth about USD 9.8 billion each in base-term value. Hut 8 said in July 2026 that phase 1 construction had begun and phase 2 site preparation was under way; initial energization is targeted for Q1 2027 and the first phase 2 data hall for Q2 2028.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Nueces County",
+    "lat": 27.74,
+    "lon": -97.52,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s7"
+    ],
+    "note": "Filings name Nueces County only, with no town, address or parcel. Coordinates are the Nueces County point from its Wikipedia article."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-04",
+  "status_source_ids": [
+    "s2",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Hut 8",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Develops the campus through its wholly owned subsidiary Beacon Point DC LLC, which issued the project notes."
+    },
+    {
+      "name": "AEP Texas",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Provides electric delivery service under the campus interconnection agreement."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-07-20",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Utility capacity secured under an interconnection agreement with AEP Texas; Hut 8 calls Beacon Point a 1 GW campus on this basis."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 704,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-07-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "IT capacity leased to the single tenant across both phases after the second lease."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 352,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (six data halls)",
+      "as_of": "2026-07-20",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Critical IT capacity of the first leased data center, across six data halls. The Energy Mag reports that a redesign raised the first building from 224 MW to 352 MW without more land or utility capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-05-06",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Share of the 1,000 MW utility capacity supporting the first 352 MW IT phase."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 352,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2026-07-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Second 15-year lease with the same tenant; site preparation under way and long-lead equipment procured."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2026-08-04",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Utility capacity for phase 2, which Hut 8 moved into its energy-capacity-under-construction category after 30 June 2026; it needs no capacity beyond the campus interconnection."
+    },
+    {
+      "metric": "land_area",
+      "value": 521,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06-04",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-05-06",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Hut 8 announced the first 15-year, 352 MW IT lease, commercializing phase 1 of the campus."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-09",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Hut 8 closed USD 4.25 billion of investment-grade project notes to finance construction of the Beacon Point data center."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-07-20",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Second 352 MW IT lease signed with the existing tenant, fully committing the campus utility capacity. Hut 8 said phase 1 construction had already begun."
+    },
+    {
+      "event": "other",
+      "date": "2027-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Target for initial energization of the first phase."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Target for delivery of the first data hall, as reported by The Energy Mag."
+    },
+    {
+      "event": "other",
+      "date": "2028-Q2",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target for delivery of the first phase 2 data hall."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply from AEP Texas under a 1,000 MW interconnection agreement, with a substation being built on the property as part of the phase 1 project.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926070744/tm2616926d1_ex99-1.htm",
+      "title": "Hut 8 announces pricing of $4.25 billion of investment-grade senior secured notes for Beacon Point data center project (Form 8-K, Exhibit 99.1)",
+      "publisher": "Hut 8 Corp. via SEC EDGAR",
+      "published": "2026-06-04",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926084862/tm2620835d1_ex99-1.htm",
+      "title": "Hut 8 fully commercializes 1 GW Beacon Point AI data center campus with second 352 MW IT lease, bringing campus-level base-term contract value to $19.6 billion (Form 8-K, Exhibit 99.1)",
+      "publisher": "Hut 8 Corp. via SEC EDGAR",
+      "published": "2026-07-20",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-commercializes-first-phase-of-1-gw-beacon-point-ai-data-center-campus-with-15-year-352-mw",
+      "title": "Hut 8 commercializes first phase of 1 GW Beacon Point AI data center campus with 15-year, 352 MW IT lease",
+      "publisher": "Hut 8",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.theenergymag.com/news/2026-05-06/hut-ai-beacon-point",
+      "title": "Hut 8 Surges 30% After Landing Second AI Data Center Lease Worth $9.8 Billion",
+      "publisher": "The Energy Mag",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-reports-second-quarter-2026-results",
+      "title": "Hut 8 reports second quarter 2026 results",
+      "publisher": "Hut 8",
+      "published": "2026-08-04",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261007015824/https://www.hut8.com/news-insights/press-releases/hut-8-reports-second-quarter-2026-results"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-closes-usd4-25-billion-of-investment-grade-senior-secured-notes-for-beacon-point-data",
+      "title": "Hut 8 closes $4.25 billion of investment-grade senior secured notes for Beacon Point data center project",
+      "publisher": "Hut 8",
+      "published": "2026-06-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Nueces_County,_Texas",
+      "title": "Nueces County, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The tenant is not named; Hut 8 describes it as a high-investment-grade company (rated AA- or higher in the notes offering). Leases are triple-net with 15-year base terms worth USD 19.6 billion for the campus. Phase 1 is financed with USD 4.25 billion of non-recourse project notes issued by Beacon Point DC LLC; this is debt financing, not a disclosed project cost. The Energy Mag reports the site was first underwritten for affiliated miner American Bitcoin; Hut 8's releases opened do not say so. Hut 8 names AEP, Vertiv and Jacobs as delivery-model counterparties and an NVIDIA DSX reference design. The 1 GW label refers to utility capacity, not IT load.",
+  "last_reviewed": "2026-10-09"
+}

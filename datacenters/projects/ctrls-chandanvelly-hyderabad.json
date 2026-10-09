@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "id": "ctrls-chandanvelly-hyderabad",
+  "name": "CtrlS Chandanvelly AI-ready data center park",
+  "aliases": [
+    "CtrlS Hyderabad datacenter park"
+  ],
+  "summary": "CtrlS Datacenters announced in January 2025 a 40-acre data center park at the planned Chandanvelly Industrial Park near Hyderabad, Telangana, designed for more than 600 MW of IT load at full build. CtrlS said 250 MW of power had been sanctioned for the first phase, served by a dedicated gas-insulated substation expandable to 900 MW, with buildings designed for up to 135 kW per rack and immersion cooling up to 300 kW per rack. No construction update was found.",
+  "location": {
+    "country": "IN",
+    "admin1": "Telangana",
+    "locality": "Chandanvelly",
+    "lat": 17.2327,
+    "lon": 78.1713,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources name the Chandanvelly Industrial Park near Hyderabad without an address; the point is the Chandanvelly village coordinate from its Wikipedia article, so it marks the village rather than the parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2025-01-23",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "CtrlS Datacenters Ltd",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-01-22",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Potential IT load at full development."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-01-22",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Power capacity CtrlS said was sanctioned for the first phase."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 900,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-01-22",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Expandable rating of the planned dedicated gas-insulated substation."
+    },
+    {
+      "metric": "land_area",
+      "value": 40,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-01-22",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01-21",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Dedicated gas-insulated substation expandable to 900 MW, with 250 MW sanctioned for phase 1.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Solar module facades planned on the western and southern elevations of the buildings.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://w.media/ctrls-to-build-new-ai-ready-dc-park-near-hyderabad/",
+      "title": "CtrlS to build new AI-ready DC park near Hyderabad",
+      "publisher": "W.Media",
+      "published": "2025-01-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20250723233847/https://w.media/ctrls-to-build-new-ai-ready-dc-park-near-hyderabad/"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/ctrls-signs-mou-with-telangana-govt-to-invest-rs-10000-crores-into-ai-dc-cluster/",
+      "title": "CtrlS signs MoU with Telangana gov't: To invest Rs 10,000 crores into AI DC cluster",
+      "publisher": "W.Media",
+      "published": "2025-01-23",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260829031127/https://w.media/ctrls-signs-mou-with-telangana-govt-to-invest-rs-10000-crores-into-ai-dc-cluster/"
+    },
+    {
+      "id": "s3",
+      "url": "https://apacnewsnetwork.com/2025/01/ctrls-to-establish-new-datacentre-park-near-hyderabad-to-enhance-companys-it-capabilities",
+      "title": "CtrlS to establish new datacentre park near Hyderabad to enhance company's IT capabilities",
+      "publisher": "APAC News Network",
+      "published": "2025-01-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260416111839/https://apacnewsnetwork.com/2025/01/ctrls-to-establish-new-datacentre-park-near-hyderabad-to-enhance-companys-it-capabilities/"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Chandanvelly",
+      "title": "Chandanvelly",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Two days after the announcement, CtrlS signed an MoU with the Telangana government at the World Economic Forum in Davos for more than Rs 10,000 crore of investment in a cluster of AI-ready data centers in the state; the coverage does not tie that amount to Chandanvelly, so it is not recorded as a site investment. No 2025 or 2026 construction or status update was found; status reflects the January 2025 announcement. Wikipedia is cited only for the village coordinate.",
+  "last_reviewed": "2026-10-09"
+}

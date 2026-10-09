@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0",
+  "id": "terawulf-muskie",
+  "name": "TeraWulf Muskie Data Campus",
+  "aliases": [
+    "Muskie Data Campus"
+  ],
+  "summary": "TeraWulf AI and HPC campus in the EastPark Industrial Park in northeast Kentucky, near Ashland on the Boyd and Greenup county line, bought from Industrial Equity Partners in May 2026 with about 285 acres owned or controlled (308 acres per its August release). Kentucky Power, an AEP company, is building a 765/345 kV substation to serve it. In October 2026 TeraWulf raised contracted power to 1 GW under an amended service agreement: the first 500 MW is due to start ramping in 2028 and the second 500 MW was pulled forward to 2029, subject to state regulatory approval. TeraWulf is studying up to 2 GW; no tenant has been named.",
+  "location": {
+    "country": "US",
+    "admin1": "Kentucky",
+    "admin2": "Boyd County",
+    "lat": 38.36,
+    "lon": -82.69,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5",
+      "s6",
+      "s7"
+    ],
+    "note": "Local media place the site in EastPark near Ashland and Interstate 64, spanning the Boyd and Greenup county line; TeraWulf's Q2 2026 release describes it as Grayson, Eastern Kentucky. Coordinates are the Boyd County point from its Wikipedia article, not the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "TeraWulf",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "TeraWulf",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Acquired the campus in May 2026; owns or controls about 285 acres."
+    },
+    {
+      "name": "Kentucky Power",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "AEP subsidiary; signed transmission and electric service agreements and is building the serving substation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Contracted electric service with Kentucky Power. The October 2026 release says an amended agreement raised it from 500 MW to 1 GW, with the second 500 MW still needing Kentucky Public Service Commission approval; the August 2026 release already described agreements providing for up to 1 GW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Initial phase, targeted to begin ramping in the second half of 2028."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Long-term potential TeraWulf is evaluating, subject to further utility planning and agreements; not a commitment."
+    },
+    {
+      "metric": "land_area",
+      "value": 285,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-05-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Owned or controlled within the roughly 1,000-acre EastPark Industrial Park, with optional adjacent land for expansion; local reports describe nearly 300 acres."
+    },
+    {
+      "metric": "land_area",
+      "value": 308,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Size given in TeraWulf's Q2 2026 release; the May 2026 release gave about 285 acres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2026-05-26",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "TeraWulf announced the acquisition from Industrial Equity Partners together with signed transmission and energy service agreements; the site was already zoned and permitting was under way."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-10-05",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Contracted power raised from 500 MW to 1 GW and the second phase moved up from 2030 to 2029."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "First 500 MW to start ramping; the Q2 2026 release gives initial service in Q4 2028."
+    },
+    {
+      "event": "other",
+      "date": "2029",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target for the second 500 MW, subject to Kentucky PSC approval and Kentucky Power's construction schedule."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Kentucky Power is building a 765/345 kV substation tied to the existing 765 kV transmission network to serve the campus under large-load tariff agreements.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/141/terawulf-expands-infrastructure-platform-with-acquisition-of-1-gw-eastern-kentucky-hpc-campus",
+      "title": "TeraWulf expands infrastructure platform with acquisition of 1+ GW Eastern Kentucky HPC campus",
+      "publisher": "TeraWulf",
+      "published": "2026-05-26",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261006181909/https://investors.terawulf.com/news-events/press-releases/detail/141/terawulf-expands-infrastructure-platform-with-acquisition-of-1-gw-eastern-kentucky-hpc-campus"
+    },
+    {
+      "id": "s2",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+      "title": "TeraWulf reports second quarter 2026 results",
+      "publisher": "TeraWulf",
+      "published": "2026-08-05",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261004051013/https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/146/terawulf-expands-contracted-power-capacity-at-its-muskie-data-campus-to-1-gw",
+      "title": "TeraWulf expands contracted power capacity at its Muskie Data Campus to 1 GW",
+      "publisher": "TeraWulf",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261006181437/https://investors.terawulf.com/news-events/press-releases/detail/146/terawulf-expands-contracted-power-capacity-at-its-muskie-data-campus-to-1-gw"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.weku.org/text/the-commonwealth/2026-05-26/new-data-center-project-announced-in-northeastern-kentucky",
+      "title": "New data center project announced in northeastern Kentucky",
+      "publisher": "WEKU",
+      "published": "2026-05-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.wsaz.com/2026/06/02/neighbors-ask-questions-address-concerns-data-center-town-hall/",
+      "title": "Neighbors ask questions and address concerns in data center town hall",
+      "publisher": "WSAZ",
+      "published": "2026-06-01",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260618034955/https://www.wsaz.com/2026/06/02/neighbors-ask-questions-address-concerns-data-center-town-hall/"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.weku.org/the-commonwealth/2026-08-06/terawulf-tells-investors-it-could-double-the-size-of-one-of-its-ky-data-center-projects",
+      "title": "TeraWulf tells investors it could double the size of one of its Kentucky data center projects",
+      "publisher": "WEKU",
+      "published": "2026-08-06",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Boyd_County,_Kentucky",
+      "title": "Boyd County, Kentucky",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260720100408/https://en.wikipedia.org/wiki/Boyd_County,_Kentucky"
+    }
+  ],
+  "notes": "The campus straddles Boyd and Greenup counties, so admin2 records Boyd County only as the reference point used for coordinates. Boyd County's judge-executive told a June 2026 town hall that the site would use a closed-loop water system and that the company would pay for on-site power upgrades.",
+  "last_reviewed": "2026-10-09"
+}

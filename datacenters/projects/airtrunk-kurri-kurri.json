@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "id": "airtrunk-kurri-kurri",
+  "name": "AirTrunk Kurri Kurri Data Centre",
+  "aliases": [
+    "Kurri Kurri Data Centre",
+    "SSD-128819490"
+  ],
+  "summary": "AirTrunk proposes a 540 MW data center on the former Hydro Aluminium smelter site on Hart Road, Loxford, near Kurri Kurri in the Hunter region of New South Wales. It is being assessed as state significant development; the NSW planning department issued assessment requirements by July 2026 and AirTrunk said it lodged an environmental impact statement in September 2026. Plans show a two-storey building of about 44,220 square metres with air-based cooling and a 132 kV grid connection with a new substation. Coverage puts the investment at about A$3.7 billion, and AirTrunk told local press it targets opening in 2028.",
+  "location": {
+    "country": "AU",
+    "admin1": "New South Wales",
+    "admin2": "City of Cessnock",
+    "locality": "Loxford (Kurri Kurri)",
+    "lat": -32.8167,
+    "lon": 151.4833,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s6"
+    ],
+    "note": "Sources name the former Kurri Kurri smelter site on Hart Road, Loxford, without coordinates; the point is the Kurri Kurri town coordinate from its Wikipedia article, so it marks the neighbouring town rather than the site."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-09-21",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "AirTrunk",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Proponent. Newcastle Weekly's July 2026 coverage of the scoping report named planning consultancy ADW Johnson as lodging it, without naming the developer."
+    },
+    {
+      "name": "McCloy Group",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The Newcastle Herald reports the site is on land owned by the McCloy Group."
+    },
+    {
+      "name": "NSW Department of Planning, Housing and Infrastructure",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Assessing the project as state significant development; issued the assessment requirements."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 540,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-07-15",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "The NSW planning portal describes 540 MW as total power consumption of the data center."
+    },
+    {
+      "metric": "investment",
+      "value": 3700000000,
+      "qualifier": "approximately",
+      "unit": "AUD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-21",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure reported by W.Media; AirTrunk's project page gives only community infrastructure commitments."
+    },
+    {
+      "metric": "floor_area",
+      "value": 44220,
+      "qualifier": "approximately",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-21",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Two-storey building about 16.8 m high; Newcastle Weekly describes this as gross floor area."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 350,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-21",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "AirTrunk's figure of ongoing local jobs, about 250 on site and more than 100 off site. The July 2026 scoping report coverage gave 250 ongoing jobs."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-15",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Figure from coverage of the scoping report; AirTrunk later spoke of several thousand construction jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Scoping report lodged and the planning department issued the Secretary's Environmental Assessment Requirements, as reported by mid-July 2026."
+    },
+    {
+      "event": "other",
+      "date": "2026-09",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "AirTrunk said it lodged the environmental impact statement; the portal still showed the Prepare EIS stage and public exhibition had not started."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Opening year given in Newcastle Herald reporting on AirTrunk's energy plans; Newcastle Weekly reported that construction would take about 14 months."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Connection to a 132 kV line, with AirTrunk funding the connection and a new on-site substation.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Renewable supply under negotiation with three suppliers in the Hunter Renewable Energy Zone, with about 70 to 75 percent clean energy expected at opening and 90 to 100 percent targeted by 2030; AirTrunk was also in talks with Snowy Hydro about firmed capacity from the nearby gas-fired Kurri peaking plant.",
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://airtrunk.com/kurri-kurri/",
+      "title": "Kurri Kurri Data Centre",
+      "publisher": "AirTrunk",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.planningportal.nsw.gov.au/major-projects/projects/kurri-kurri-data-centre",
+      "title": "Kurri Kurri Data Centre (SSD-128819490)",
+      "publisher": "NSW Planning Portal",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/?p=43650",
+      "title": "AirTrunk proposes AUD 3.7bn NSW data centre with AUD 37m community offer",
+      "publisher": "W.Media",
+      "published": "2026-09-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://newcastleweekly.com.au/540mw-ai-data-centre-planned-for-kurri-kurri/",
+      "title": "540MW AI data centre planned for Kurri Kurri",
+      "publisher": "Newcastle Weekly",
+      "published": "2026-07-15",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.newcastleherald.com.au/story/9328857/kurri-data-centre-energy-whale-needs-its-own-power-supply/",
+      "title": "Kurri data centre energy whale needs its own power supply",
+      "publisher": "Newcastle Herald",
+      "published": "2026-08-13",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Kurri_Kurri",
+      "title": "Kurri Kurri",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Not approved: the project awaits public exhibition and determination. A Newcastle Herald opinion column speculated about a possible tenant; no end user has been confirmed, so none is recorded. Wikipedia is cited only for the town coordinate.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-gallatin-tennessee",
+  "name": "Meta Gallatin Data Center",
+  "aliases": [
+    "Gallatin Data Center"
+  ],
+  "summary": "Multi-building Meta campus on roughly 800 acres in Gallatin, Tennessee. Construction began in August 2020 on what was first a USD 800 million commitment; by September 2022 the project was described as a nearly USD 1 billion investment, and in 2024 Meta filed plans for a further 278,000 sq ft data center that would take the campus to almost 1.9 million sq ft. In November 2024 Meta formally presented the operating campus to officials and said total investment would exceed USD 1.5 billion once the fourth data center is finished. DPR Construction is building the campus, and Meta says it planned its energy needs with the Tennessee Valley Authority.",
+  "location": {
+    "country": "US",
+    "admin1": "Tennessee",
+    "admin2": "Sumner County",
+    "locality": "Gallatin",
+    "lat": 36.4085,
+    "lon": -86.3716,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "Centroid of the area named Gallatin Data Center and tagged as Meta-operated in the local OpenStreetMap layer (way 1213758201); Meta-tagged data center buildings lie within about 500 m of it. Sources name only the city and county."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2024-11-15",
+  "status_source_ids": [
+    "s4"
+  ],
+  "notes": "In November 2024 the campus was described as operating while its fourth data center was still under construction; no later report on that building was found. Reported site size differs: about 800 acres (Nashville Business Journal, 2024) versus more than 900 acres (W.Media, 2022). Peak construction workforce also differs: 1,700 in W.Media's 2022 report versus 1,100 on Meta's fact sheet. Meta's fact sheet (s1) shows no publication date (embedded file creation date 2026-09-02), so figures that rest on it alone are dated to the access date, 2026-10-09. The Nashville Business Journal articles are cited from reposts on the Gallatin Economic Development Agency site.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "name": "DPR Construction",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Tennessee Valley Authority",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2020",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Initial commitment made when Meta was still Facebook."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2022-09-23",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described in September 2022 as a nearly USD 1 billion investment, with about USD 1 billion spent to date."
+    },
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-11-15",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Meta said the total would exceed this once the fourth data center is complete."
+    },
+    {
+      "metric": "land_area",
+      "value": 800,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-11-15",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 1900000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "About 1.6 million sq ft operating or under construction plus the 278,000 sq ft building filed in 2024, including some office space."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-11-15",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Data center buildings; the fourth was under construction in November 2024."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1700,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2022-09-23",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Peak skilled trade workforce reported in 2022, up from an earlier peak of 1,200."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1100,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Skilled trade workers on site at peak construction, per Meta's undated fact sheet; differs from the 2022 report."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-11-15",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2020-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2022-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "W.Media reported two new structures, one for cold storage of older data, with completion then expected in late 2023."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2024-04",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Plans for a further 278,000 sq ft data center went to the Gallatin planning commission."
+    },
+    {
+      "event": "other",
+      "date": "2024-11",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Meta formally presented the operating campus to state and local officials."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned the campus's energy needs with the Tennessee Valley Authority and pays the full cost of the energy used; an on-site electrical substation was finished by 2022.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Gallatin-Data-Center.pdf",
+      "title": "Meta Gallatin Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/meta-expands-gallatin-data-center-with-nearly-1b-total-investment/",
+      "title": "Meta Expands Gallatin Data Center with $1B Investment",
+      "publisher": "W.Media",
+      "published": "2022-09-23",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.gallatingetsit.com/newsroom/meta-formerly-known-as-facebook-tees-up-another-data-center-in-gallatin",
+      "title": "Meta, formerly known as Facebook, tees up another data center in Gallatin",
+      "publisher": "Nashville Business Journal (via Gallatin Economic Development Agency)",
+      "published": "2024-04-15",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260509224526/https://www.gallatingetsit.com/newsroom/meta-formerly-known-as-facebook-tees-up-another-data-center-in-gallatin"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.gallatingetsit.com/newsroom/metas-data-centers-in-gallatin-are-up-and-running",
+      "title": "Meta's data centers in Gallatin are up and running",
+      "publisher": "Nashville Business Journal (via Gallatin Economic Development Agency)",
+      "published": "2024-11-15",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

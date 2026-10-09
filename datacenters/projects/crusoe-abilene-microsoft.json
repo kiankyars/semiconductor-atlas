@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "id": "crusoe-abilene-microsoft",
+  "name": "Crusoe Abilene AI factory campus for Microsoft",
+  "aliases": [
+    "Crusoe Abilene second campus",
+    "Abilene 900 MW campus"
+  ],
+  "summary": "Crusoe's second AI campus in Abilene, Texas, on Lancium-owned land adjacent to its first Abilene campus, announced in March 2026 to support large-scale AI workloads for Microsoft. The 900 MW site has two buildings, each designed for 336 MW of critical IT load, a 900 MW behind-the-meter on-site power plant paired with medium-voltage battery storage, and closed-loop, non-evaporative liquid cooling. Land clearing and site preparation were under way at announcement, Crusoe said in July 2026 that it was building the campus, and the first building is expected to be energized in mid-2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Abilene",
+    "lat": 32.45,
+    "lon": -99.75,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": "Crusoe places the campus in Abilene, adjacent to its existing campus, without an address. Coordinates are the Abilene city point from its Wikipedia article; the city spans Taylor and Jones counties, so no county is recorded."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-15",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Crusoe",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Crusoe says the campus will support large-scale AI workloads for Microsoft; lease terms were not disclosed."
+    },
+    {
+      "name": "Lancium",
+      "role": "owner",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Crusoe describes the land as adjacent Lancium-owned land."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 900,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-15",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Crusoe's headline size for the new site; it does not say whether this is IT or facility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 336,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 1",
+      "as_of": "2026-03-27",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Each of the two buildings is designed to deliver 336 MW of critical IT load; the first is due to be energized in mid-2027."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 336,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 2",
+      "as_of": "2026-03-27",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 900,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-03-27",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Behind-the-meter on-site power plant; Crusoe did not disclose the generation technology or fuel."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-27",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-03-27",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Land clearing and site preparation were under way when the campus was announced."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "First building expected to be energized in mid-2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "A 900 MW behind-the-meter on-site power plant that Crusoe says supports grid resilience; Crusoe has not said what fuel or technology it uses.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Medium-voltage battery energy storage paired with the on-site plant.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure",
+      "title": "Crusoe announces new 900 MW AI factory campus in Abilene, Texas to support Microsoft AI infrastructure",
+      "publisher": "Crusoe",
+      "published": "2026-03-27",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261002002842/https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.theregister.com/2026/03/27/microsoft_ai_crusoe/",
+      "title": "Microsoft takes up residence next to OpenAI, Oracle at Crusoe's 900 MW Texas datacenter expansion",
+      "publisher": "The Register",
+      "published": "2026-03-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260418202620/https://www.theregister.com/2026/03/27/microsoft_ai_crusoe/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-and-lancium-announce-1-gigawatt-ai-data-center-campus-in-childress-texas",
+      "title": "Crusoe and Lancium announce 1.0 gigawatt AI data center campus in Childress, Texas",
+      "publisher": "Crusoe",
+      "published": "2026-07-15",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260928222354/https://www.crusoe.ai/resources/newsroom/crusoe-and-lancium-announce-1-gigawatt-ai-data-center-campus-in-childress-texas"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-developing-data-center-campus-in-armstrong-county-texas",
+      "title": "Crusoe developing data center campus in Armstrong County, Texas",
+      "publisher": "Crusoe",
+      "published": "2026-09-28",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Abilene,_Texas",
+      "title": "Abilene, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "This is a separate build from the eight-building Stargate Abilene campus (openai-stargate-abilene); Crusoe gives about 2.1 GW for its two Abilene campuses combined. The Register reports that Oracle and OpenAI had planned to lease this expansion before negotiations and financing fell through, and that Meta had been expected to take it before Microsoft; these are press reports, not company statements, and are not recorded as parties. In September 2026 Crusoe said it had two campuses under development in Abilene but gave no new status detail for this one.",
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "openai-stargate-abilene"
+  ]
+}
