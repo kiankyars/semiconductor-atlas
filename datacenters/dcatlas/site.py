@@ -71,7 +71,7 @@ UNIT_LABELS = {"sq_ft": "sq ft", "sq_m": "m²", "acres": "acres", "hectares": "h
                "count": "", "MW": "MW"}
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 NAV = (("", "Explore"), ("projects/", "All projects"), ("data/", "Data & API"),
-       ("methodology/", "Methodology"), ("about/", "About"))
+       ("coverage/", "Coverage"), ("methodology/", "Methodology"), ("about/", "About"))
 
 LOGO = ('<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
         '<rect x="3" y="4" width="18" height="5" rx="1.5" fill="none" stroke="currentColor" '
@@ -414,6 +414,7 @@ def build(*, root: Path, out_dir: Path, base_url: str = DEFAULT_BASE_URL,
         root / "METHODOLOGY.md", "Methodology", "methodology/", ctx,
         "How records are researched, what each field means, and what the data does not show."))
     _write(out_dir / "about" / "index.html", _about_page(root, ctx))
+    _write(out_dir / "coverage" / "index.html", _coverage_page(root, rows, ctx))
     _write(out_dir / "404.html", page(
         title="Not found", description="Page not found.", depth=0, path="404.html",
         base_url=base_url, data_as_of=data_as_of,
@@ -1021,6 +1022,56 @@ def _markdown_page(path: Path, title: str, site_path: str, ctx: dict, descriptio
                 base_url=ctx["base_url"], current=site_path, data_as_of=ctx["data_as_of"])
 
 
+def _coverage_page(root: Path, rows: list[dict[str, Any]], ctx: dict) -> str:
+    groups = ("planned", "construction", "operating", "inactive")
+    labels = {"planned": "Proposed or announced", "construction": "Under construction",
+              "operating": "Operating (any)", "inactive": "Paused or cancelled"}
+    by_country: dict[tuple[str, str], Counter] = {}
+    for r in rows:
+        key = (r["region"] or "Unknown", r["country_name"] or r["country"])
+        counts = by_country.setdefault(key, Counter())
+        counts[STATUS_GROUP[r["status"]]] += 1
+        counts["sources"] += r["source_count"]
+    body_rows = []
+    for region in sorted({k[0] for k in by_country}):
+        countries = sorted((k for k in by_country if k[0] == region),
+                           key=lambda k: (-sum(by_country[k][g] for g in groups), k[1]))
+        total = Counter()
+        for k in countries:
+            total.update(by_country[k])
+        body_rows.append(
+            f'<tr class="group-row"><th scope="rowgroup">{e(region)}</th>'
+            + "".join(f'<td class="num"><strong>{total[g]}</strong></td>' for g in groups)
+            + f'<td class="num"><strong>{sum(total[g] for g in groups)}</strong></td>'
+            f'<td class="num">{total["sources"]}</td></tr>')
+        for k in countries:
+            c = by_country[k]
+            code = next(r["country"] for r in rows if (r["country_name"] or r["country"]) == k[1])
+            body_rows.append(
+                f'<tr><td><a href="../?country={quote(code)}">{e(k[1])}</a></td>'
+                + "".join(f'<td class="num">{c[g] or ""}</td>' for g in groups)
+                + f'<td class="num">{sum(c[g] for g in groups)}</td>'
+                f'<td class="num">{c["sources"]}</td></tr>')
+    head = "".join(f'<th scope="col" class="num">{e(labels[g])}</th>' for g in groups)
+    gaps_path = root / "KNOWN_GAPS.md"
+    gaps = ""
+    if gaps_path.exists():
+        gaps = markdown.render(gaps_path.read_text(encoding="utf-8").partition("\n")[2],
+                               link=lambda u: _repo_link(u, ""), shift=1)
+    body = f"""<div class="lede"><h1>Coverage</h1>
+<p>The atlas is a curated selection of large builds, not a census. This page shows where records
+exist today and lists builds we know about but have not yet recorded, so gaps are visible rather
+than silent. Absence from the atlas says nothing about whether a project exists.</p></div>
+<section class="section"><h2>Records by region and country</h2>
+<div class="table-scroll card"><table><thead><tr><th scope="col">Region / country</th>{head}
+<th scope="col" class="num">Total</th><th scope="col" class="num">Sources</th></tr></thead>
+<tbody>{"".join(body_rows)}</tbody></table></div></section>
+<section class="section prose">{gaps}</section>"""
+    return page(title="Coverage", description="Where the Open Data Center Atlas has records, and "
+                "known builds not yet recorded.", body=body, depth=1, path="coverage/",
+                base_url=ctx["base_url"], current="coverage/", data_as_of=ctx["data_as_of"])
+
+
 def _about_page(root: Path, ctx: dict) -> str:
     about = markdown.render(
         (root / "ABOUT.md").read_text(encoding="utf-8").partition("\n")[2],
@@ -1086,7 +1137,7 @@ def _feed(records: list[dict[str, Any]], base_url: str, data_as_of: str) -> str:
 
 
 def _sitemap(records: list[dict[str, Any]], base_url: str, data_as_of: str) -> str:
-    paths = ["", "projects/", "data/", "methodology/", "about/"]
+    paths = ["", "projects/", "data/", "coverage/", "methodology/", "about/"]
     urls = [f"<url><loc>{e(base_url + p)}</loc><lastmod>{data_as_of}</lastmod></url>"
             for p in paths]
     urls += [f"<url><loc>{e(base_url)}projects/{e(r['id'])}/</loc>"

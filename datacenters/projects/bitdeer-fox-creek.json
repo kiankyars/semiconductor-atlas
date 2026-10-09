@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "id": "bitdeer-fox-creek",
+  "name": "Bitdeer Fox Creek energy and computing facility",
+  "aliases": [
+    "Bitdeer Fox Creek"
+  ],
+  "summary": "Bitdeer is building a 101 MW natural gas power plant and a data centre of about 100 MW of computing capacity on a 19-acre site about 1.5 km from Fox Creek, Alberta, in the Municipal District of Greenview. Bitdeer bought the permitted site, with a 99 MW grid interconnection approval, in an all-cash deal in February 2025 and broke ground in June 2026 on a USD 155 million project. It will start with bitcoin mining while the data centre is designed to also suit AI workloads. Energization slipped from Q4 2026 to Q2 2027 and then to Q4 2027.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Municipal District of Greenview No. 16",
+    "locality": "Fox Creek (about 1.5 km from the town)",
+    "lat": 54.395,
+    "lon": -116.80917,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": "Town coordinates from the Fox Creek Wikipedia page; Bitdeer places the site about 1.5 km from the town but gives no exact location."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-10",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "notes": "Groundbreaking in June 2026 was for the power plant; Bitdeer's August 2026 results said data centre design for both AI and crypto loads was under way and listed the site among pipeline capacity, not online sites. Calgary.Tech's February 2025 report said the site could potentially scale to 1 GW. The release places the site in the Municipal District of Greenview No. 16 but also calls it the Regional Municipality of Greenview.",
+  "workloads": [
+    "crypto_mining",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Bitdeer Technologies Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Bitdeer Technologies Group",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Acquired the site and gas power project in an all-cash deal announced in February 2025."
+    },
+    {
+      "name": "Kiwetinohk Energy Corp.",
+      "role": "developer",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named as the original developer of the site's power project before Bitdeer's acquisition."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 101,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-08-10",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "On-site natural gas power plant; ground was broken in June 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as computing capacity of the data centre; the release does not say whether this is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 99,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Approved interconnection with the Alberta Electric System Operator grid."
+    },
+    {
+      "metric": "investment",
+      "value": 155000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Stated as about CAD 214 million. The 2025 site purchase was reported at $21.7 million without a stated currency, and Bitdeer's filing shows USD 21.9 million paid for the site and gas power project in the first half of 2025."
+    },
+    {
+      "metric": "land_area",
+      "value": 19,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Also given as 7.7 hectares."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 30,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2025-02-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Date the acquisition was reported."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-06-02",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Groundbreaking ceremony for the power plant."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Energization target as of August 2026; earlier targets were Q4 2026 (February 2025) and Q2 2027 (June 2026)."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "A 101 MW on-site gas plant would power the data centre directly under Alberta's bring-your-own-generation framework; Bitdeer plans to capture and use CO2 from the plant.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "The plant keeps an approved 99 MW AESO grid connection, and at peak demand the facility can curtail computing and send power to the grid.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://calgary.tech/2025/02/04/bitdeer-acquires-101-mw-alberta-site-for-bitcoin-mining-expansion/",
+      "title": "Bitdeer acquires 101 MW Alberta site for bitcoin mining expansion",
+      "publisher": "Calgary.Tech",
+      "published": "2025-02-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260516141829/https://calgary.tech/2025/02/04/bitdeer-acquires-101-mw-alberta-site-for-bitcoin-mining-expansion/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bnnbloomberg.ca/press-releases/2026/06/02/bitdeer-breaks-ground-on-new-energy-and-digital-infrastructure-facility-in-alberta-canada/",
+      "title": "Bitdeer breaks ground on new energy and digital infrastructure facility in Alberta, Canada",
+      "publisher": "Bitdeer Technologies Group (press release via BNN Bloomberg)",
+      "published": "2026-06-02",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260603075313/https://www.bnnbloomberg.ca/press-releases/2026/06/02/bitdeer-breaks-ground-on-new-energy-and-digital-infrastructure-facility-in-alberta-canada/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390026086938/ea030131301ex99-1.htm",
+      "title": "Bitdeer Reports Unaudited Financial Results for the Second Quarter of 2026 (Form 6-K, Exhibit 99.1)",
+      "publisher": "Bitdeer Technologies Group (U.S. Securities and Exchange Commission filing)",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Fox_Creek,_Alberta",
+      "title": "Fox Creek, Alberta",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

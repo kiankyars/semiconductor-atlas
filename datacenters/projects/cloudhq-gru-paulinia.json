@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "id": "cloudhq-gru-paulinia",
+  "name": "CloudHQ GRU Campus (Paulínia)",
+  "aliases": [
+    "GRU Campus",
+    "GRU Technology Campus",
+    "CloudHQ Paulínia"
+  ],
+  "summary": "CloudHQ's first campus in Brazil, in Paulínia in the Campinas region of São Paulo state, was launched with a groundbreaking in March 2023 as a USD 3 billion project of six buildings and up to 288 MW of IT load, in two phases of three 48 MW buildings. Its on-site high-voltage substation, of about 225 to 250 MW, was energised and connected to Brazil's grid by early 2026, well after the original 2024 opening target. 2026 trade reports describe the campus as ready for tenants, with phased commissioning and first operations expected through 2027; one report gives a larger first phase of three 120 MW buildings.",
+  "location": {
+    "country": "BR",
+    "admin1": "São Paulo",
+    "admin2": "Paulínia",
+    "locality": "Paulínia",
+    "lat": -22.77089,
+    "lon": -47.10425,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Coordinates are the point published on CloudHQ's campus page; they were not checked against a parcel boundary."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-08",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "notes": "No dated CloudHQ statement on building completion or a signed tenant was found. Capacity figures conflict: CloudHQ's undated page and 2023 coverage give six 48 MW buildings (288 MW), Switchgear Magazine (citing BNamericas) gives three 120 MW buildings in phase 1, and Construction Review gives 288 to 360 MW across six buildings, with more than 210 MW expected in early operations. Construction Review's article is dated 8 April 2026 as updated from a September 2025 original.",
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "CloudHQ",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "name": "Afonso França Engenharia",
+      "role": "builder",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Civil construction contractor."
+    },
+    {
+      "name": "LZA Engenharia",
+      "role": "builder",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Engineering partner for the power infrastructure and substation."
+    },
+    {
+      "name": "WEG",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Substation equipment supplier."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 288,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2023-03-14",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Six buildings of 48 MW each in two phases; CloudHQ's undated page still lists 288 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 144,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (three 48 MW buildings)",
+      "as_of": "2026-04-08",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 360,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (three 120 MW buildings)",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Larger phase 1 configuration reported in March 2026; it conflicts with the 48 MW building plan."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 225,
+      "value_high": 250,
+      "qualifier": "range",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-04-08",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Rating of the dedicated on-site substation, which was energised and connected to the national grid by early 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1100,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total network capacity the campus grid link could support, per Switchgear Magazine."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2023-03-07",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Construction Review also cites USD 2 to 3 billion at the 2023 groundbreaking."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-08",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2023-03-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Expected civil construction jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2023-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Groundbreaking ceremony attended by Brazil's vice-president and the São Paulo governor."
+    },
+    {
+      "event": "first_operational",
+      "date": "2024-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion target reported at the 2023 groundbreaking; it was missed."
+    },
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Reported by 12 March 2026: the on-site 440 kV substation was energised and connected to the national grid."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Staged commissioning and first operations expected through 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "A dedicated on-site substation connected at high voltage (440 kV) to Brazil's national transmission network.",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://cloudhq.com/campus/gru-campus/",
+      "title": "GRU Campus",
+      "publisher": "CloudHQ",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20251012045820/https://cloudhq.com/campus/gru-campus/"
+    },
+    {
+      "id": "s2",
+      "url": "https://capacityglobal.com/news/cloudhq-breaks-ground-on-first-data-centre-campus-in-brazil/",
+      "title": "CloudHQ breaks ground on first data centre campus in Brazil",
+      "publisher": "Capacity",
+      "published": "2023-03-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260123050109/https://capacityglobal.com/news/cloudhq-breaks-ground-on-first-data-centre-campus-in-brazil/"
+    },
+    {
+      "id": "s3",
+      "url": "https://thetechcapital.com/cloudhq-breaks-ground-on-3-billion-data-centre-in-brazil-heres-the-plan/",
+      "title": "CloudHQ breaks ground on $3 billion data centre in Brazil - here's the plan",
+      "publisher": "The Tech Capital",
+      "published": "2023-03-07",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20240805160553/https://thetechcapital.com/cloudhq-breaks-ground-on-3-billion-data-centre-in-brazil-heres-the-plan/"
+    },
+    {
+      "id": "s4",
+      "url": "https://switchgear-magazine.com/tm-news/business/cloudhq-powers-sao-paulo-data-campus/",
+      "title": "CloudHQ powers São Paulo data campus",
+      "publisher": "Switchgear Magazine",
+      "published": "2026-03-12",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260414031849/https://switchgear-magazine.com/tm-news/business/cloudhq-powers-sao-paulo-data-campus/"
+    },
+    {
+      "id": "s5",
+      "url": "https://constructionreviewonline.com/cloudhq-breaks-ground-on-the-new-paulinia-hyperscale-campus-in-brazil/",
+      "title": "CloudHQ's Paulínia hyperscale campus powers up as Brazil's largest data hub enters delivery phase",
+      "publisher": "Construction Review Online",
+      "published": "2026-04-08",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

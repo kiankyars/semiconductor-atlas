@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "id": "red-admiral-rochfortbridge",
+  "name": "Red Admiral data centre campus, Rochfortbridge",
+  "aliases": [
+    "Red Admiral DC"
+  ],
+  "summary": "Proposed six-unit data centre campus with a decentralised energy resource and a solar farm on a 600-acre site near Rochfortbridge, County Westmeath, Ireland. The applicant is Red Admiral DC Ltd, and the Westmeath Examiner says the development is part of the Lumcloon Energy Group's wider plans; it reports the project at EUR 1 billion. Westmeath County Council granted a ten-year permission with 32 conditions in early June 2026 despite more than 50 submissions. Third-party appeals were lodged with An Coimisiún Pleanála, with a decision due by 27 October 2026. The energy element needs an EPA industrial emissions licence.",
+  "location": {
+    "country": "IE",
+    "admin1": "County Westmeath",
+    "locality": "Rochfortbridge",
+    "lat": 53.416,
+    "lon": -7.296,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Rochfortbridge village centroid from its Wikipedia article. The application covers several townlands around Rochfortbridge (Gneevebane, Oldtown, Farthingstown, Castlelost and Kiltotan, and Collinstown), but no cited source gives site coordinates."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Red Admiral DC Limited",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planning applicant."
+    },
+    {
+      "name": "Lumcloon Energy Group",
+      "role": "developer",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Westmeath Examiner says the development forms part of the group's wider plans; the corporate link to Red Admiral DC Limited is not stated."
+    },
+    {
+      "name": "Westmeath County Council",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planning authority that granted permission in June 2026."
+    },
+    {
+      "name": "An Coimisiún Pleanála",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Deciding third-party appeals against the permission."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported as the value of the Rochfortbridge data centre development."
+    },
+    {
+      "metric": "land_area",
+      "value": 600,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Site including the solar farm, across several townlands."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Six data centre units with data halls about 72 feet high."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 760,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Direct permanent jobs; about 1,000 indirect jobs were also cited for the five-year construction phase."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "permit_approved",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "Westmeath County Council granted ten-year permission subject to 32 conditions (council reference 2560344)."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Third-party appeals lodged with An Coimisiún Pleanála (case PL25M.501596); the case page gives 23 June 2026 as the lodged date. The Westmeath Examiner reports that one appeal was ruled invalid over its fee on 17 June."
+    },
+    {
+      "event": "other",
+      "date": "2026-10-27",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Date by which An Coimisiún Pleanála is due to decide the appeals."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "The application includes a decentralised energy resource whose operation requires an EPA industrial emissions licence; its fuel is not stated in the sources opened.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "A solar farm is part of the development.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.pleanala.ie/en-ie/case/501596",
+      "title": "Case reference PL25M.501596",
+      "publisher": "An Coimisiún Pleanála",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.westmeathexaminer.ie/?p=128147",
+      "title": "Data centre appeals to An Coimisiún Pleanála",
+      "publisher": "Westmeath Examiner",
+      "published": "2026-07-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Rochfortbridge",
+      "title": "Rochfortbridge",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status date is the access date: the appeal board's undated case page still showed the appeal as lodged and undecided on 2026-10-09. No MW figure was found in the sources opened. Objectors argued the campus would burden the national grid, questioned its climate impact and visual effect, and said no emissions statement was provided. Separately, Lumcloon plans to seek changes to an approved energy storage facility to add a reserve gas-fired generator; the Westmeath Examiner does not say whether that facility is part of this campus.",
+  "last_reviewed": "2026-10-09"
+}

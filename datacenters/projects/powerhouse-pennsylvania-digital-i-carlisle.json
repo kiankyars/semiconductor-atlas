@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "id": "powerhouse-pennsylvania-digital-i-carlisle",
+  "name": "Pennsylvania Digital I (PAX-1), Middlesex Township",
+  "aliases": [
+    "Pennsylvania Digital I",
+    "Pennsylvania Digital 1",
+    "PAX-1",
+    "PAX"
+  ],
+  "summary": "Hyperscale AI data center development on about 700 acres off Country Club Road in Middlesex Township, Cumberland County, roughly five miles northeast of Carlisle, Pennsylvania. Pennsylvania Data Center Partners and PowerHouse Data Centers announced the USD 15 billion joint venture in July 2025: three campuses of six buildings, each with its own 450 MW substation, for 1.35 GW of utility capacity expandable to 1.8 GW, connected by PPL Electric Utilities. Township supervisors approved subdivision plans in January 2026 and a 450 MW substation in March 2026, before vertical construction began. The developers target 300 MW of power by the second quarter of 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Pennsylvania",
+    "admin2": "Cumberland County",
+    "locality": "Middlesex Township",
+    "lat": 40.2167,
+    "lon": -77.1164,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Coordinates are the Wikipedia point for Middlesex Township (s4). Local reporting places the site off Country Club Road about five miles northeast of Carlisle; the parcel was not geocoded."
+  },
+  "status": "announced",
+  "status_as_of": "2026-03-05",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "PowerHouse Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "A division of American Real Estate Partners (AREP)."
+    },
+    {
+      "name": "Pennsylvania Data Center Partners",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Carlisle Development Partners LLC",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Entity named as developer in the township subdivision approval and as signatory of the water and sewer agreement."
+    },
+    {
+      "name": "PPL Electric Utilities",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Middlesex Township Board of Supervisors",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1350,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Labelled utility capacity: three campuses, each with a dedicated 450 MW substation."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1800,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Stated expansion potential."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 450,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Substation approved March 2026",
+      "as_of": "2026-03-04",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Approved unanimously by township supervisors; the master plan gives each of the three campuses its own 450 MW substation."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Near-term power delivery",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Targeted by the second quarter of 2027."
+    },
+    {
+      "metric": "investment",
+      "value": 15000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Trade press reports a split of about USD 9.8 billion for IT equipment, USD 3 billion for construction, USD 1.5 billion for power infrastructure and USD 750 million for cooling, security and land."
+    },
+    {
+      "metric": "land_area",
+      "value": 700,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 18,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-09",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Three campuses of six buildings each."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 30000,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Peak construction jobs as reported by trade press; no company source for this figure was opened."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 270,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-05",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-07-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced at the Pennsylvania Energy and Innovation Summit in Pittsburgh."
+    },
+    {
+      "event": "other",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Township supervisors approved subdivision plans, as reported on 9 January 2026 (the vote date is not stated); land development plans and decisions on power and water were still needed before construction."
+    },
+    {
+      "event": "other",
+      "date": "2026-01-15",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "USD 14.1 million agreement with the township for rights to public water and sewer service."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-03-04",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Supervisors unanimously approved the first 450 MW substation; vertical construction had not yet begun."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q2",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Target for the first 300 MW of power delivery."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "PPL Electric Utilities will connect the campuses to its transmission system through dedicated 450 MW substations.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://powerhousedata.com/news/pennsylvania-data-center-partners-and-powerhouse-data-centers-launch-joint-venture-to-build-next-gen-1-35-gw-hyperscale-data-center-campus-in-carlisle-pennsylvania",
+      "title": "Pennsylvania Data Center Partners and PowerHouse Data Centers Launch Joint Venture to Build Next-Gen 1.35 GW Hyperscale Data Center Campus in Carlisle, Pennsylvania",
+      "publisher": "PowerHouse Data Centers",
+      "published": "2025-07-15",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260617125013/https://www.powerhousedata.com/news/pennsylvania-data-center-partners-and-powerhouse-data-centers-launch-joint-venture-to-build-next-gen-1-35-gw-hyperscale-data-center-campus-in-carlisle-pennsylvania"
+    },
+    {
+      "id": "s2",
+      "url": "https://bob949.iheart.com/featured/whp580-newsroom/content/2026-01-09-plans-approved-for-18-building-data-center-in-pennsylvania/",
+      "title": "Plans Approved for 18-Building Data Center in Pennsylvania",
+      "publisher": "WHP580 Newsroom (iHeartMedia)",
+      "published": "2026-01-09",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260114083108/https://bob949.iheart.com/featured/whp580-newsroom/content/2026-01-09-plans-approved-for-18-building-data-center-in-pennsylvania/"
+    },
+    {
+      "id": "s3",
+      "url": "https://constructionreviewonline.com/450-mw-substation-approved-for-15b-pennsylvania-digital-i-pax-ai-data-center-in-carlisle/",
+      "title": "$15 Billion AI Data Center Project in Pennsylvania Clears Key Milestone",
+      "publisher": "Construction Review Online",
+      "published": "2026-03-05",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260509164158/https://constructionreviewonline.com/450-mw-substation-approved-for-15b-pennsylvania-digital-i-pax-ai-data-center-in-carlisle/"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Middlesex_Township,_Cumberland_County,_Pennsylvania",
+      "title": "Middlesex Township, Cumberland County, Pennsylvania",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Construction Review (published 5 March 2026, updated 15 June 2026) also reports that supervisors rejected adding more than 214 acres along Harrisburg Pike and signalled a pause on further data center zoning changes until the comprehensive plan is updated. No report of a construction start after March 2026 was found. WHP580 reported in January 2026 that the Middlesex water authority had committed to reserve up to 400,000 gallons a day.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0",
+  "id": "tract-buckeye",
+  "name": "Tract Buckeye data center park",
+  "aliases": [
+    "Tract Phoenix data center park"
+  ],
+  "summary": "Master-planned data center park by land developer Tract on about 2,069 acres in southwest Buckeye, Arizona, south of Interstate 10 on Johnson Road near the municipal airport, on land once planned for a large housing community. Announced in August 2024 after the city council unanimously approved a development agreement and a Buckeye Tech Corridor plan amendment, it could hold up to 40 data centers and 20 million square feet, with Tract working with APS on plans for up to 1.8 GW. The project is valued at about USD 20 billion over a phased 15-year build-out. A June 2026 trade update said it had entered engineering and horizontal infrastructure preparation.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Buckeye",
+    "lat": 33.3706,
+    "lon": -112.5908,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Buckeye (s5). Local reporting places the park in southwest Buckeye, south of Interstate 10 on Johnson Road near Buckeye Municipal Airport; the parcel was not geocoded."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-15",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Tract",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Denver-based master developer of the park, which is meant to host hyperscale and wholesale data center operators."
+    },
+    {
+      "name": "Arizona Public Service",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Tract said it was working with APS on plans to support up to 1.8 GW; no supply agreement has been reported."
+    },
+    {
+      "name": "City of Buckeye",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approved the development agreement, including reimbursement of up to USD 50 million of public infrastructure costs once the project generates USD 60 million for the city."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1800,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-08-29",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Capacity Tract said it was planning with the local utility; the mayor said securing the power could take about seven years."
+    },
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-08-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Reported total value of the park at full build-out."
+    },
+    {
+      "metric": "investment",
+      "value": 100000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Tract site infrastructure (water, power, transport)",
+      "as_of": "2024-08-12",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Tract's planned spending on water, power and transportation infrastructure for the site; reported separately from the city's development agreement terms."
+    },
+    {
+      "metric": "land_area",
+      "value": 2069,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-08-31",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Other reports round the site to nearly 2,000 or 2,100 acres."
+    },
+    {
+      "metric": "buildings",
+      "value": 40,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-08-31",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 20000000,
+      "qualifier": "up_to",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-08-31",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-08-12",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-08-12",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Full-time jobs estimated in August 2024 coverage of the council approval; Arizona's Family separately reported about 300 high-paying jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "zoning_approved",
+      "date": "2024-08-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Buckeye City Council unanimously approved the development agreement with Tract and a major plan amendment creating the Buckeye Tech Corridor."
+    },
+    {
+      "event": "announced",
+      "date": "2024-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported as having entered engineering and horizontal infrastructure preparation as of 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "APS service planned; Tract said it was working with the utility on infrastructure for up to 1.8 GW. In September 2026 APS said it had made no commitments to serve additional data centers since January 2024 because of grid constraints; the article does not mention this park.",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.azfamily.com/2024/08/30/developer-wants-power-future-ai-buckeye-with-new-data-center",
+      "title": "Developer wants to power the future of AI in Buckeye with new data center",
+      "publisher": "Arizona's Family (KTVK/KPHO)",
+      "published": "2024-08-29",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250723193452/https://www.azfamily.com/2024/08/30/developer-wants-power-future-ai-buckeye-with-new-data-center/"
+    },
+    {
+      "id": "s2",
+      "url": "https://ktar.com/arizona-news/20-billion-data-center-campus-gets-green-light-in-buckeye",
+      "title": "$20 billion data center campus gets green light in Buckeye",
+      "publisher": "KTAR News (Phoenix Business Journal)",
+      "published": "2024-08-12",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://baxtel.com/news/tract-announces-new-gigawatt-scale-data-center-park-in-phoenix-arizona",
+      "title": "Tract announces new gigawatt-scale data center park in Phoenix, Arizona",
+      "publisher": "Baxtel",
+      "published": "2024-08-31",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://constructionreviewonline.com/tract-secures-approval-for-20-billion-data-center-in-buckeye/",
+      "title": "$20bn Tract Data Center Park in Buckeye Advances to Horizontal Infrastructure Preparation Phase",
+      "publisher": "Construction Review Online",
+      "published": "2024-08-08",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260612044401/https://constructionreviewonline.com/tract-secures-approval-for-20-billion-data-center-in-buckeye/"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Buckeye,_Arizona",
+      "title": "Buckeye, Arizona",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.kjzz.org/business/2026-09-02/aps-says-it-cant-commit-to-new-data-centers-because-of-electric-grid-constraints",
+      "title": "APS says it can't commit to new data centers because of electric grid constraints",
+      "publisher": "KJZZ",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260904052909/https://www.kjzz.org/business/2026-09-02/aps-says-it-cant-commit-to-new-data-centers-because-of-electric-grid-constraints"
+    }
+  ],
+  "notes": "The Construction Review article was first published on 8 August 2024 and updated on 15 June 2026; its statement that the park entered engineering and horizontal infrastructure preparation comes from that update, so status_as_of uses the update date. Status stays at announced because no data center building is reported under construction. Whether Tract holds an APS service commitment predating the utility's January 2024 cutoff was not found.",
+  "last_reviewed": "2026-10-09"
+}

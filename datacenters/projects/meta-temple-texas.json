@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-temple-texas",
+  "name": "Meta Temple Data Center",
+  "aliases": [
+    "Temple Data Center"
+  ],
+  "summary": "Meta data center on a 393-acre site off NW H K Dodgen Loop and Industrial Boulevard in Temple, Texas. Announced in March 2022 as a USD 800 million, roughly 900,000 sq ft hyperscale campus expected to be finished in 2024, it broke ground in 2022, was redesigned with construction restarting in 2023, and opened in July 2026 as an AI data center of two buildings and more than 760,000 sq ft. Meta now gives its investment as USD 1.2 billion. Meta describes it as its second data center in Texas.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Bell County",
+    "locality": "Temple",
+    "lat": 31.1056,
+    "lon": -97.4208,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": "Coordinates are the Temple city coordinates from its Wikipedia page. Sources place the site off NW H K Dodgen Loop and Industrial Boulevard but give no parcel coordinates, so the campus itself is not pinpointed."
+  },
+  "status": "operational",
+  "status_as_of": "2026-07-22",
+  "status_source_ids": [
+    "s4"
+  ],
+  "notes": "KWTX reported the opening in July 2026 without saying whether both buildings are in service. Meta's fact sheet (s1) shows no publication date; its embedded file creation date is 2026-09-02. The investment figure rose from USD 800 million at announcement to USD 1.2 billion; sources do not explain the increase beyond the redesign.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "name": "Temple Economic Development Corporation",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Issued the announcement and, with the City of Temple, granted a partial 10-year property tax abatement."
+    },
+    {
+      "name": "City of Temple",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Granted a partial property tax abatement; Meta says it pays the full cost of the city's water and wastewater service to the site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2022-03-31",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Meta's fact sheet gives USD 1.2 billion; KWTX describes the investment as more than USD 1.2 billion once completed."
+    },
+    {
+      "metric": "land_area",
+      "value": 393,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2022-03-31",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 900000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2022-03-31",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Original 2022 plan."
+    },
+    {
+      "metric": "floor_area",
+      "value": 760000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Size of the facility as opened in July 2026."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "KWTX describes the opened facility as two buildings; it does not say whether both are already in service."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Skilled trade workers on site at peak construction; Meta's fact sheet gives 1,200, KWTX more than 1,200, and a 2022 trade report about 1,250 over two years."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-03-31",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2022",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Work was expected to begin in spring 2022."
+    },
+    {
+      "event": "other",
+      "date": "2023",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Construction restarted after the project was redesigned."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "KWTX reported the facility open and operational in July 2026; a 2022 trade report had expected completion in 2024."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Metas-Temple-Data-Center.pdf",
+      "title": "Meta Temple Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.kwtx.com/2022/03/31/facebook-parent-company-invest-800-million-central-texas/",
+      "title": "Facebook parent company to invest $800 million in Central Texas",
+      "publisher": "KWTX",
+      "published": "2022-03-31",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250721232912/https://www.kwtx.com/2022/03/31/facebook-parent-company-invest-800-million-central-texas/"
+    },
+    {
+      "id": "s3",
+      "url": "https://canada.constructconnect.com/?p=261660",
+      "title": "Meta's data centre in Temple is part of Texas' growth trend",
+      "publisher": "Daily Commercial News (ConstructConnect)",
+      "published": "2022-04-07",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.kwtx.com/2026/07/22/meta-goes-live-temple-with-12-billion-ai-data-center/",
+      "title": "Meta goes live in Temple with $1.2 billion AI data center",
+      "publisher": "KWTX",
+      "published": "2026-07-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Temple,_Texas",
+      "title": "Temple, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261001014904/https://en.wikipedia.org/wiki/Temple,_Texas"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

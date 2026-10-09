@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "id": "core-scientific-hunt-county",
+  "name": "Core Scientific Hunt County data center site",
+  "aliases": [
+    "Hunt County, TX campus"
+  ],
+  "summary": "Greenfield data center site in Hunt County, Texas, that Core Scientific bought in 2026 for about USD 233 million, with land and power expected to support about 430 MW of gross utility capacity on an approved ERCOT interconnection ramp schedule. In July 2026 Core Scientific listed it as an AMD site with about 110 MW leased under AMD's 15-year agreements, which cover roughly 530 MW across five Core Scientific sites, and estimated initial delivery in the first half of 2028.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Hunt County",
+    "lat": 33.12,
+    "lon": -96.09,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Core Scientific names Hunt County only. Coordinates are the Hunt County point from its Wikipedia article, not the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-28",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Core Scientific",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Core Scientific",
+      "role": "owner",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completed the land acquisition in 2026."
+    },
+    {
+      "name": "AMD",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Named for this site only in Core Scientific's Q2 2026 earnings presentation (s3), which lists Hunt County as an AMD direct site with about 110 MW leased. The Q2 release (s4) gives the 15-year term for about 530 MW across five sites without naming them."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 430,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Gross utility power capacity that the related electric service agreement is expected to support, per the 10-Q; the Q1 release cites an approved ERCOT interconnection ramp schedule."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 110,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "AMD lease",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Leased capacity; the presentation does not say whether this is critical IT load. It also lists about 192 MW of further power pipeline at the site."
+    },
+    {
+      "metric": "investment",
+      "value": 233000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Aggregate purchase price for the land and development rights, most of it allocated to development rights; not a construction budget."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2026-05-05",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "The 10-Q dates completion of the land acquisition, with a related electric service agreement, to 5 May 2026; the Q1 release the next day reported the purchase of land and power as closed."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-28",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Core Scientific announced its AMD partnership and listed Hunt County as an AMD site with about 110 MW leased."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Estimated initial delivery of the AMD capacity."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply on the ERCOT system under an approved interconnection ramp schedule.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/136/core-scientific-announces-first-quarter-fiscal-year-2026-results",
+      "title": "Core Scientific announces first quarter fiscal year 2026 results",
+      "publisher": "Core Scientific",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001647/https://investors.corescientific.com/news-events/press-releases/detail/136/core-scientific-announces-first-quarter-fiscal-year-2026-results"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001839341/000183934126000014/core-20260630.htm",
+      "title": "Core Scientific, Inc. quarterly report on Form 10-Q for the period ended June 30, 2026",
+      "publisher": "Core Scientific, Inc. via SEC EDGAR",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000012/q2fy26earningsdeck728am.htm",
+      "title": "Core Scientific Q2 2026 earnings presentation (Form 8-K, Exhibit 99.2)",
+      "publisher": "Core Scientific",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260929002832/https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000012/q2fy26earningsdeck728am.htm"
+    },
+    {
+      "id": "s4",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/139/core-scientific-announces-second-quarter-2026-results",
+      "title": "Core Scientific announces second quarter 2026 results",
+      "publisher": "Core Scientific",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Hunt_County,_Texas",
+      "title": "Hunt County, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status is announced because no source opened reports construction at the site; the 10-Q says Core Scientific intends to develop the land as a future data center site.",
+  "last_reviewed": "2026-10-09"
+}

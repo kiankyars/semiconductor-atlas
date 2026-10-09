@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0",
+  "id": "vermaland-la-osa-pinal-county",
+  "name": "La Osa Energy Center (Vermaland), Pinal County",
+  "aliases": [
+    "La Osa",
+    "La Osa Project",
+    "La Osa data center"
+  ],
+  "summary": "Proposed AI data center and energy campus on more than 3,000 acres of rural land outside Eloy in Pinal County, Arizona, from land developer Vermaland. First reported in mid-2025 as a USD 33 billion plan for up to 3 GW, it called for nearly 60 data center buildings with on-site gas plants and battery storage. After strong local opposition, Vermaland offered in May 2026 to cut it by about 80% to 11 buildings and 1 GW of demand; the final proposal included a 500 MW gas plant, batteries and a 600 acre-foot annual freshwater cap. On 26 August 2026 the Pinal County Board of Supervisors rejected the rezoning and site plan 4-1.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "admin2": "Pinal County",
+    "locality": "Eloy",
+    "lat": 32.7636,
+    "lon": -111.6,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s6"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Eloy (s6). Sources place the site south of Eloy along the Greene Canal (s1), off Picacho Highway (s2) and about 12 miles outside the city (s4), so the parcel lies some distance from this point."
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-08-26",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Vermaland",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Phoenix-based land developer; no data center company was officially tied to the project."
+    },
+    {
+      "name": "Pinal County Board of Supervisors",
+      "role": "government",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Rejected the rezoning and site plan by a 4-1 vote."
+    },
+    {
+      "name": "Central Arizona Irrigation and Drainage District",
+      "role": "utility",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported as planning to serve the project and named as the body that would enforce Vermaland's pledge to pay the full cost of generating and delivering its energy."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 3000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-04-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Original plan before the May 2026 scale-back."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-26",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Demand cap in the scaled-back proposal that the county rejected."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-08-26",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "On-site gas plant in the final proposal; the developer said it had secured the gas supply and turbines, and proposed meeting the other 500 MW from nearby solar or the Palo Verde nuclear plant."
+    },
+    {
+      "metric": "investment",
+      "value": 33000000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Estimated cost of the original 3 GW plan; no figure was reported for the scaled-back version."
+    },
+    {
+      "metric": "land_area",
+      "value": 3300,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-28",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "KJZZ's August 2026 preview describes the rezoning as covering more than 3,000 acres, about one-third of which would have stayed open space; an April 2026 report gives 3,000 acres."
+    },
+    {
+      "metric": "buildings",
+      "value": 59,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-28",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Original plan."
+    },
+    {
+      "metric": "buildings",
+      "value": 11,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-26",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Final, scaled-back proposal."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Baxtel's August 2025 report relays azcentral (Arizona Republic) coverage dated 30 July 2025; the rezoning application had been filed about four months earlier."
+    },
+    {
+      "event": "other",
+      "date": "2025-07-17",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "County planning and zoning commission held a non-voting informational session."
+    },
+    {
+      "event": "other",
+      "date": "2026-05",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "At a supervisors' hearing the developer offered to shrink the project by about 80% and won a continuance to August."
+    },
+    {
+      "event": "cancelled",
+      "date": "2026-08-26",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Board of Supervisors voted 4-1 to reject the rezoning and site plan requests."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Two on-site gas-fired plants in the original plan; a single 500 MW gas plant in the final proposal.",
+      "source_ids": [
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Utility-scale battery storage, which the developer offered to decommission if unused for 24 months.",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "The 2025 plan relied on upgrading Western Area Power Administration transmission lines; the final plan proposed sourcing half the 1 GW load from nearby solar or Palo Verde power.",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://baxtel.com/news/vermaland-plans-33bn-data-center-in-arizona",
+      "title": "Vermaland Plans $33bn Data Center in Arizona",
+      "publisher": "Baxtel",
+      "published": "2025-08-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://constructionreporter.com/massive-proposed-southern-arizona-data-center-business-park-moving-forward/",
+      "title": "Massive Proposed Southern Arizona Data Center Business Park Moving Forward",
+      "publisher": "Construction Reporter",
+      "published": "2026-04-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.kjzz.org/fronteras-desk/2026-05-28/largest-proposed-data-center-in-arizona-to-be-scaled-back-80-after-opposition",
+      "title": "Largest proposed data center in Arizona to be scaled back 80% after opposition",
+      "publisher": "KJZZ",
+      "published": "2026-05-28",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.kjzz.org/politics/2026-08-25/pinal-county-will-vote-on-la-osa-which-could-become-one-of-arizonas-largest-data-center-projects",
+      "title": "Pinal County will vote on La Osa, which could become one of Arizona's largest data center projects",
+      "publisher": "KJZZ",
+      "published": "2026-08-25",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.kjzz.org/politics/2026-08-26/pinal-county-rejects-massive-la-osa-data-center-residents-want-more-rules-for-future-projects",
+      "title": "Pinal County rejects massive La Osa data center. Residents want more rules for future projects",
+      "publisher": "KJZZ",
+      "published": "2026-08-26",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260908162746/https://www.kjzz.org/politics/2026-08-26/pinal-county-rejects-massive-la-osa-data-center-residents-want-more-rules-for-future-projects"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Eloy,_Arizona",
+      "title": "Eloy, Arizona",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260713151042/https://en.wikipedia.org/wiki/Eloy,_Arizona"
+    }
+  ],
+  "notes": "Recorded as cancelled because the county rejected the rezoning the project needed; no developer statement on an appeal or a new application was found. Before the board vote, the county planning and zoning commission had voted 7-2 in favour of the rezoning, per an April 2026 report. The water cap, noise studies and energy cost commitments were offered by Vermaland, not imposed by the county.",
+  "last_reviewed": "2026-10-09"
+}

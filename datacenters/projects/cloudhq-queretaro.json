@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "id": "cloudhq-queretaro",
+  "name": "CloudHQ QRO Campus (Querétaro)",
+  "aliases": [
+    "QRO Campus",
+    "CloudHQ Querétaro"
+  ],
+  "summary": "CloudHQ, a US data centre developer, plans a six-building hyperscale campus on about 52 hectares next to Querétaro's international airport in central Mexico. Presented at the Mexican president's morning press conference in September 2025, it carries USD 4.8 billion of planned investment and up to 900 MW of critical IT load, with initial power secured for a first 200 MW. CloudHQ's own campus page lists a smaller 360 MW and readiness within 2027. Reports disagree on whether a tenant lease is signed and whether building work has begun, and no 2026 progress report was found.",
+  "location": {
+    "country": "MX",
+    "admin1": "Querétaro",
+    "locality": "Querétaro (beside Querétaro Intercontinental Airport)",
+    "lat": 20.61983,
+    "lon": -100.1474,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Coordinates are the point published on CloudHQ's campus page. News reports place the 52-hectare site on the west side of the airport; the published point was not checked against a parcel boundary."
+  },
+  "status": "announced",
+  "status_as_of": "2025-09-30",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "notes": "Status rests on September 2025 announcement coverage; no 2026 construction or tenant update was found. Por Esto reported a lease already signed with an unnamed global technology tenant and works under way, Xataka reported that CloudHQ had invested USD 250 million so far and was still pursuing a long-term lease, while heise described construction as planned and Telecom Review Americas said CloudHQ was still finalising permits, site preparation and tenant contracts. CloudHQ's undated campus page lists 360 MW and six 48 MW buildings, figures that neither add up nor match the 900 MW announced in 2025.",
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "CloudHQ",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Government of the State of Querétaro",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Reported as supporting CloudHQ with land acquisition and permits; CloudHQ has worked with the state since 2021."
+    },
+    {
+      "name": "Comisión Federal de Electricidad (CFE)",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "CloudHQ says it worked with CFE and the grid operator CENACE to secure the initial power supply."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 900,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Described as critical IT load at full build-out across six buildings."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 360,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total critical IT load on CloudHQ's undated campus page (read 2026-10-09; its footer shows 2023). The same page lists six buildings of 48 MW each, which totals 288 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2025-09-26",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Reported as the initial power allocation CloudHQ has secured."
+    },
+    {
+      "metric": "investment",
+      "value": 4800000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 52,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-26",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 7200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-26",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 900,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-26",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Por Esto instead reported about 600 direct operating jobs, while quoting a post that cited 900."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09-25",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Presented at the president's morning press conference by Economy Secretary Marcelo Ebrard and CloudHQ executives."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "CloudHQ targets readiness for service within 2027; heise reported operation planned for the first half of 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "CloudHQ's page describes an on-site substation fed by 400 kV transmission; the company says it worked with CFE and CENACE on the initial supply and plans a larger switching substation of about 2 GW.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://cloudhq.com/campus/qro-campus/",
+      "title": "QRO Campus",
+      "publisher": "CloudHQ",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260920080345/https://cloudhq.com/campus/qro-campus/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.xataka.com.mx/servicios/inversion-millonaria-queretaro-cloudhq-construira-6-centros-datos-hiperescala-para-potenciar-inteligencia-artificial",
+      "title": "Inversión millonaria en Querétaro: CloudHQ construirá 6 centros de datos de hiperescala para potenciar la Inteligencia Artificial",
+      "publisher": "Xataka México",
+      "published": "2025-09-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.telecomreviewamericas.com/articles/wholesale-and-capacity/cloudhq-to-build-mexicos-largest-hyperscale-data-hub-in-queretaro/",
+      "title": "CloudHQ to Build Mexico's Largest Hyperscale Data Hub in Querétaro",
+      "publisher": "Telecom Review Americas",
+      "published": "2025-09-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://heise.de/-10678892",
+      "title": "New data centres: CloudHQ invests USD 4.8 billion in Mexico",
+      "publisher": "heise online",
+      "published": "2025-09-29",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.poresto.com/mexico/2025/9/25/cloudhq-invertira-4800-mdd-en-6-centros-de-datos-en-queretaro-900-mw-para-ia-dentro-del-plan-mexico.html",
+      "title": "CloudHQ invertirá 4,800 mdd en 6 centros de datos en Querétaro: 900 MW para IA dentro del Plan México",
+      "publisher": "Por Esto",
+      "published": "2025-09-25",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250928102318/https://www.poresto.com/mexico/2025/9/25/cloudhq-invertira-4800-mdd-en-6-centros-de-datos-en-queretaro-900-mw-para-ia-dentro-del-plan-mexico.html"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "id": "stack-berry-hill-pittsylvania-county",
+  "name": "STACK Infrastructure Berry Hill campus, Pittsylvania County",
+  "aliases": [
+    "Berry Hill Data Center",
+    "Southern Virginia Megasite at Berry Hill data center"
+  ],
+  "summary": "Hyperscale data center campus planned by STACK Infrastructure on about 2,990 acres of the Southern Virginia Megasite at Berry Hill in Pittsylvania County, Virginia. The Danville-Pittsylvania regional industrial authority approved the land sale in March 2026 at USD 238,000 an acre, about USD 720 million in all. WDBJ reported USD 73 billion of investment over 30 years in April 2026, and county supervisors backed a campus reported at USD 100 billion in July 2026. Appalachian Power will serve the site; the authority's chairman expects the first building to run by about July 2027, and full build-out could take 15 to 30 years.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "Pittsylvania County",
+    "lat": 36.82,
+    "lon": -79.4,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia point for Pittsylvania County (s5); precision is county level. Sources place the campus at the Berry Hill megasite in Pittsylvania County but give no address, and the parcel was not geocoded. The staged record used the Danville city centroid, which lies outside the county."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-27",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "STACK Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Danville-Pittsylvania Regional Industrial Facility Authority",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Approved selling the megasite land and is the county-city partnership through which the project is being developed."
+    },
+    {
+      "name": "Pittsylvania County Board of Supervisors",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Approved a resolution supporting the project in July 2026."
+    },
+    {
+      "name": "Appalachian Power",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "The county moved the megasite from Danville Utilities' service territory to Appalachian Power; a July 2026 report says power will come through AEP."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 73000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Investment over the next 30 years stated in WDBJ's April 2026 report, without attribution to a speaker."
+    },
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-21",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure in coverage of the county's July 2026 resolution of support; higher than the April 2026 figure and not reconciled by the sources."
+    },
+    {
+      "metric": "land_area",
+      "value": 2990,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Acreage under the purchase and sale agreement, at USD 238,000 a gross acre."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 2050,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Direct full-time jobs within 20 years."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 2500,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-21",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Jobs expected over the next two decades, as reported in July 2026."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "value_high": 4000,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Construction workers expected on site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-03-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The regional industrial authority unanimously approved selling the megasite land; a performance agreement was to be considered separately."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-21",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "County supervisors approved a resolution supporting the campus."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-07",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The regional industrial authority's chairman expects the first STACK building to be operating about a year after late July 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Appalachian Power (AEP) service; STACK is to pay for all needed transmission and generation improvements, according to the county's economic development director.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.wdbj7.com/2026/03/09/sale-approved-pittsylvania-county-land-data-center-developer/",
+      "title": "Sale approved of Pittsylvania County land to data center developer",
+      "publisher": "WDBJ7",
+      "published": "2026-03-09",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260314002756/https://www.wdbj7.com/2026/03/09/sale-approved-pittsylvania-county-land-data-center-developer/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wdbj7.com/2026/04/30/new-details-massive-data-center-planned-pittsylvania-county/",
+      "title": "New details out on massive data center planned in Pittsylvania County",
+      "publisher": "WDBJ7",
+      "published": "2026-04-30",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://wset.com/news/local/pittsylvania-county-advances-100b-data-center-campus-proposal-despite-resident-concerns-berry-hill-july-2026",
+      "title": "Pittsylvania supervisors back $100B Berry Hill Data Center project",
+      "publisher": "WSET",
+      "published": "2026-07-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260728041957/https://wset.com/news/local/pittsylvania-county-advances-100b-data-center-campus-proposal-despite-resident-concerns-berry-hill-july-2026"
+    },
+    {
+      "id": "s4",
+      "url": "https://wset.com/news/local/berry-hill-data-center-expected-to-be-operational-by-july-2027-stack-infrastructure-pittsylvania-county-virginia",
+      "title": "Berry Hill Data Center expected to be operational by July 2027",
+      "publisher": "WSET",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260728061244/https://wset.com/news/local/berry-hill-data-center-expected-to-be-operational-by-july-2027-stack-infrastructure-pittsylvania-county-virginia"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Pittsylvania_County,_Virginia",
+      "title": "Pittsylvania County, Virginia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261001021018/https://en.wikipedia.org/wiki/Pittsylvania_County,_Virginia"
+    }
+  ],
+  "notes": "No MW figure from STACK or local officials was found, so the record qualifies on investment. The March 2026 sale was approved to SAC III Acquisition, which shares an address with STACK; STACK was to take down the land in multiple phases, and no closing was reported in the sources. Officials said the project takes no local tax incentives and that most buildings will be dry-cooled, drawing roughly 10,000 to 20,000 gallons of water a day supplied from Eden through Danville. A resident petition against the project had more than 700 signatures in July 2026. A construction start had not been announced.",
+  "last_reviewed": "2026-10-09"
+}

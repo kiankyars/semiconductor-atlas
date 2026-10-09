@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "id": "cyrusone-bosque-county",
+  "name": "CyrusOne Bosque County data center campus (Thad Hill)",
+  "aliases": [
+    "CyrusOne DFW10",
+    "Bosque County Data Center",
+    "Thad Hill Energy Center data center"
+  ],
+  "summary": "Hyperscale data center campus that CyrusOne is building next to Calpine's Thad Hill Energy Center in Bosque County, Texas, under a powered land agreement covering power, grid connection and land. Calpine announced a 190 MW first phase in July 2025, when the project was reported as a USD 1.2 billion investment, and added 210 MW in November 2025 for 400 MW in total. Calpine then said the facility was under construction for operation by the fourth quarter of 2026. CyrusOne's campus page now lists five buildings in two phases, with phase 1 due by the third quarter of 2027 and all phases by the fourth quarter of 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Bosque County",
+    "lat": 31.9,
+    "lon": -97.63,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia point for Bosque County (s5). Sources place the campus next to the Thad Hill Energy Center in Bosque County but give no address; the site was not geocoded."
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-11-03",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "CyrusOne",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "CyrusOne",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Described as a data center developer and operator; backed by KKR and Global Infrastructure Partners."
+    },
+    {
+      "name": "Calpine",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Supplies power under the powered land agreement at its Thad Hill Energy Center; by February 2026 Calpine was a business unit of Constellation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-03",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Combined power under the two Calpine agreements."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 190,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 210,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2025-11-03",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Investment reported in July 2025, when only the 190 MW first phase had been announced; no updated figure was found after the phase 2 agreement."
+    },
+    {
+      "metric": "floor_area",
+      "value": 190000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Two buildings in phase 1 and three in phase 2, per CyrusOne's undated campus page."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-07-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Calpine announced the 190 MW agreement; the campus was already under construction."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-11-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Phase 2 agreement for another 210 MW."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target given by Calpine in 2025."
+    },
+    {
+      "event": "other",
+      "date": "2027-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Later target for completing phase 1 on CyrusOne's campus page."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2027-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Powered land agreement with Calpine at its Thad Hill Energy Center, covering power supply, grid connection and land; CyrusOne says it will pay for required transmission upgrades, and the campus is designed to respond during ERCOT grid emergencies.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.publicpower.org/periodical/article/calpine-unveils-190-mw-agreement-serve-new-texas-data-center",
+      "title": "Calpine Unveils 190-MW Agreement to Serve New Texas Data Center",
+      "publisher": "American Public Power Association",
+      "published": "2025-07-31",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.calpine.com/calpine-and-cyrusone-announce-phase-2-of-powered-land-agreement-to-support-hyperscale-data-center-at-thad-hill-energy-center-in-texas/",
+      "title": "Calpine and CyrusOne Announce Phase 2 of Powered Land Agreement to Support Hyperscale Data Center at Thad Hill Energy Center in Texas",
+      "publisher": "Calpine",
+      "published": "2025-11-03",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261007144613/https://www.calpine.com/calpine-and-cyrusone-announce-phase-2-of-powered-land-agreement-to-support-hyperscale-data-center-at-thad-hill-energy-center-in-texas/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.cyrusone.com/data-centers/north-america/bosque-county-tx",
+      "title": "Bosque County Data Center",
+      "publisher": "CyrusOne",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.cyrusone.com/resources/press-releases/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas",
+      "title": "Constellation and CyrusOne Announce Agreement to Support New Data Center Facility at Freestone Energy Center in Texas",
+      "publisher": "CyrusOne",
+      "published": "2026-02-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Bosque_County,_Texas",
+      "title": "Bosque County, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260724174458/https://en.wikipedia.org/wiki/Bosque_County,_Texas"
+    }
+  ],
+  "notes": "Status conflict: Calpine said in July and November 2025 that the facility was under construction, but CyrusOne's undated campus page (it mentions events up to June 2026) labels it in development, refers to a county review process and describes some pre-construction steps as still ahead; its delivery dates are also later than Calpine's target. Status stays at under construction from Calpine's latest statement; no 2026 source confirms any building operating. The page says operating water comes from an on-site well permitted by the Middle Trinity Groundwater Conservation District, about 250,000 gallons per building a year. CyrusOne's Freestone Energy Center campus is a separate record.",
+  "last_reviewed": "2026-10-09"
+}

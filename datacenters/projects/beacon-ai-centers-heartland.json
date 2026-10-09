@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "id": "beacon-ai-centers-heartland",
+  "name": "Beacon AI Centers Heartland campus (Sturgeon County)",
+  "aliases": [
+    "Beacon AI Centers Heartland Project",
+    "Beacon Data Centers Heartland Project",
+    "Beacon Heartland AI Hub"
+  ],
+  "summary": "Beacon AI Centers proposes a 317-acre AI data centre campus about 7 km east of Gibbons in Sturgeon County, Alberta, inside the Alberta Industrial Heartland heavy industrial zone. Filings describe four data halls rated at 200 MW each, supplied by an on-site plant of 200 gas engines totalling about 920 MW, built by the project entity Heartland Power. The federal agency decided in March 2026 that no further federal assessment was needed; the plant application filed with the Alberta Utilities Commission in December 2025 had no decision found. The proponent targeted commercial operation in Q3 2027.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Sturgeon County",
+    "locality": "About 7 km east of Gibbons",
+    "lat": 53.84032,
+    "lon": -113.192246,
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "Decimal coordinates stated in the federal project description summary, which places the project just north-northeast of Highway 643 and Range Road 223 (NW and SW quarters of Section 15-56-22-W4M)."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-03-10",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "notes": "The federal filing includes data centre details for information only; the data centre is not part of the federally reviewed power project. No Alberta Utilities Commission decision on proceeding 30518 was found, and the AUC proceeding page could not be opened. The proponent said a federal impact assessment, had one been required, would have pushed in-service to about Q3 2030.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Beacon AI Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Heartland Power Generation LP",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Project-specific entity, with general partner Northbridge Power GPC Inc., that would build and operate the on-site gas plant."
+    },
+    {
+      "name": "AltaLink",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Owner of the existing 240 kV transmission line the project would tap for its grid connection."
+    },
+    {
+      "name": "Sturgeon County",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Municipality engaged on local planning and permitting; it completed the AUC municipal engagement form."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 800,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-12-28",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Four planned data halls rated at 200 MWe each, matching the roughly 800 MWe of continuous supply the plant would deliver to them. The filings do not say whether this is IT or total facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 920,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2025-12-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Nominal capacity of 200 INNIO Jenbacher J624 gas engines of 4.6 MWe each, grouped in 40 modules."
+    },
+    {
+      "metric": "land_area",
+      "value": 317,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Data centre campus area; the power plant would occupy a 32-acre footprint within it."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Separate data hall structures, still under design."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-12-14",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Initial project description for the gas plant submitted to the Impact Assessment Agency of Canada."
+    },
+    {
+      "event": "other",
+      "date": "2025-12-19",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Power plant application filed with the Alberta Utilities Commission."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-09",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Impact Assessment Agency of Canada decided that no further federal assessment of the power plant is required; the notice was posted on 10 March 2026."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Civil works and foundations scheduled for Q3 2026 in the December 2025 filing; no source confirms a start."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Targeted commercial operation date of the power plant."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "About 920 MWe of on-site gas reciprocating engines in four generation pods, fuelled by a new lateral from the NGTL and ATCO pipeline system about 0.5 km east, running as a microgrid for the campus.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "The plant would also connect to Alberta's grid through a new on-site substation (initially listed at 400 MW) T-tapped to an existing AltaLink 240 kV line; the connection design was not finalised when the AUC application was filed.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iaac-aeic.gc.ca/050/documents/p90123/164350E.pdf",
+      "title": "Beacon AI Centers - Heartland Project: Initial Project Description Summary",
+      "publisher": "Heartland Power Generation LP (filed with the Impact Assessment Agency of Canada)",
+      "published": "2025-12-28",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.iaac-aeic.gc.ca/050/evaluations/proj/90123",
+      "title": "Beacon AI Centers Heartland Project (Canadian Impact Assessment Registry, reference 90123)",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/document/165326?culture=en-CA",
+      "title": "Notice of Early Decision with Reasons: Beacon AI Centers Heartland Project",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s4",
+      "url": "https://media.auc.ab.ca/prd-wp-uploads/Shared%20Documents/Projects/30518-BeaconAICentersHeartlandProject.pdf",
+      "title": "Beacon AI Centers - Heartland Project Thermal Power Plant Application (cover letter)",
+      "publisher": "Heartland Power Generation LP (filed with the Alberta Utilities Commission)",
+      "published": "2025-12-19",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260606010642/https://media.auc.ab.ca/prd-wp-uploads/Shared%20Documents/Projects/30518-BeaconAICentersHeartlandProject.pdf"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

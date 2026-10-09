@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "id": "prometheus-hyperscale-evanston",
+  "name": "Prometheus Hyperscale Evanston campus",
+  "aliases": [
+    "Prometheus Hyperscale flagship campus",
+    "Wyoming Hyperscale Whitebox"
+  ],
+  "summary": "Proposed AI data center campus on about 506 acres of family ranchland roughly 12 miles east of Evanston, Wyoming, south of Interstate 80 in Uinta County. Prometheus Hyperscale plans 1.25 GW in a first phase with a stated path to 5 GW, run as an islanded microgrid on on-site natural gas generation rather than the public grid. Uinta County commissioners unanimously granted a conditional use permit in June 2026; the company says construction could start within six months of final permitting and take four to five years. The county sent support letters to Meta and Microsoft, but no tenant has been confirmed.",
+  "location": {
+    "country": "US",
+    "admin1": "Wyoming",
+    "admin2": "Uinta County",
+    "locality": "Evanston",
+    "lat": 41.2683,
+    "lon": -110.9632,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Evanston (s5). Local reporting places the site about 12 miles east of Evanston on the south side of Interstate 80, so the campus lies some distance east of this point."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-22",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Prometheus Hyperscale",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Uinta County Board of Commissioners",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Granted the conditional use permit and earlier approved letters of support addressed to Meta and Microsoft at the developer's request."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2026-06-22",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Described as the initial capacity, with the first phase expected to take 48 to 60 months to build. Cowboy State Daily rounded it to 1.2 GW in February 2026. IT versus facility scope is not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 5000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-22",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Company-stated long-term development path; no schedule given."
+    },
+    {
+      "metric": "land_area",
+      "value": 506,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06-19",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Ranchland held by the founder's family."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1500,
+      "value_high": 2000,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-14",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimate given by the county economic development director."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 8000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-22",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Construction positions by 2029 claimed by Prometheus and the Build Wyoming initiative, within a total of nearly 12,000 direct and indirect jobs. Much higher than the county's February 2026 estimate."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "value_high": 400,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-14",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Initial permanent jobs estimated by the county economic development director."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The project, formerly called Wyoming Hyperscale Whitebox, was relaunched in 2024 after an original 120 MW plan in 2020."
+    },
+    {
+      "event": "other",
+      "date": "2026-02",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Uinta County approved letters of support addressed to Meta and Microsoft, written at the developer's request."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Uinta County commissioners unanimously approved a conditional use permit after the county planning commission recommended approval; reported on 19 June 2026 as a Tuesday vote."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Planned on-site natural gas generation run as an islanded microgrid instead of a grid interconnection, which the company says avoids interconnection delays. The founder has said he eventually wants to add nuclear power.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.kpcw.org/state-regional/2026-06-19/1-25gw-data-center-approved-on-ranchland-near-evanston-wyoming",
+      "title": "1.25GW data center approved on ranchland near Evanston, Wyoming",
+      "publisher": "KPCW",
+      "published": "2026-06-19",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260718111208/https://www.kpcw.org/state-regional/2026-06-19/1-25gw-data-center-approved-on-ranchland-near-evanston-wyoming"
+    },
+    {
+      "id": "s2",
+      "url": "https://townlift.com/2026/06/proposed-ai-data-center-near-evanston-advances-as-prometheus-courts-major-tech-clients/",
+      "title": "Proposed AI data center near Evanston advances as Prometheus courts major tech clients",
+      "publisher": "TownLift",
+      "published": "2026-06-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://baxtel.com/news/wyoming-approves-prometheus-hyperscale-s-gigawatt-data-center-campus",
+      "title": "Wyoming Approves Prometheus Hyperscale's Gigawatt Data Center Campus",
+      "publisher": "Baxtel",
+      "published": "2026-06-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://cowboystatedaily.com/2026/02/14/data-center-near-evanston-is-talking-to-microsoft-meta/",
+      "title": "1.2-Gigawatt Data Center Near Evanston In Talks With Meta And Microsoft",
+      "publisher": "Cowboy State Daily",
+      "published": "2026-02-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Evanston,_Wyoming",
+      "title": "Evanston, Wyoming",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Meta and Microsoft are not listed as tenants: the county's support letters were written at the developer's request, and in February 2026 the county chair said any deal was a long way off. Prometheus says its closed-loop water-glycol cooling will not draw groundwater, surface water or Bear River water, with a private on-site well for domestic plumbing. No report of final permitting or a construction start after June 2026 was found.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0",
+  "id": "samca-green-it-aragon-luceni",
+  "name": "Green IT Aragón data center campus (SAMCA), Luceni",
+  "aliases": [
+    "Green IT Aragón",
+    "PIGA Green It Aragón"
+  ],
+  "summary": "Three-building data center campus planned by the SAMCA group in Luceni, Zaragoza province, paired with renewing and expanding SAMCA's nearby wind farms to supply it. Announced in April 2025 at EUR 2,627 million including the renewable generation. Red Eléctrica has permitted 131 MW for a first phase, which could rise to 181 MW and finally 300 MW. A technical annex describes three identical buildings of 72 MW of IT load, each drawing up to 100 MW from the grid. The regional plan received initial approval in December 2025; in October 2026 site works were expected by late 2026 or in 2027, with the first phase targeted for 2028.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragon",
+    "admin2": "Zaragoza",
+    "locality": "Luceni",
+    "lat": 41.833,
+    "lon": -1.233,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s6"
+    ],
+    "note": "Luceni municipal centroid from its Wikipedia article. The technical annex places all three data centers in Luceni municipality; associated grid and wind works extend into Rueda de Jalón, Plasencia de Jalón and Pedrola. No cited source gives site coordinates."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s4",
+    "s1"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "SAMCA (Sociedad Anónima Minera Catalano-Aragonesa)",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Promotes the plan with its subsidiaries Data Center Ribera Alta del Ebro S.L. and Molinos del Ebro S.A."
+    },
+    {
+      "name": "SAMCA (Sociedad Anónima Minera Catalano-Aragonesa)",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Its nearby wind farms, to be renewed and expanded, are to supply renewable power through direct underground lines under a self-consumption arrangement."
+    },
+    {
+      "name": "Red Eléctrica",
+      "role": "utility",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Granted grid access permits for the phased capacity."
+    },
+    {
+      "name": "Government of Aragon",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Declared the project of general interest and gave the regional plan initial approval."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-04-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Final-phase capacity under the Red Eléctrica permits described at announcement."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 131,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-04-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "A second phase could rise to 181 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 72,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Each of three identical data center buildings",
+      "as_of": "2025-11",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Each of three identical data center buildings",
+      "as_of": "2025-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Maximum active power each data center would draw from the transmission grid."
+    },
+    {
+      "metric": "investment",
+      "value": 2627000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-04-28",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Includes the renewable generation; El Español says the figure rose from EUR 2,000 million when the renewable supply was added."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Named Ribera Alta del Ebro, Ribera Alta del Ebro II and Atalaya del Ebro in the plan documents."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2300,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Direct and indirect jobs during construction, per the regional government."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 320,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Direct and indirect jobs during operation, per the regional government."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-04-28",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-04-28",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Declared an investment of general interest for Aragon; published in the regional gazette on 26 May 2025."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-21",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Regional plan filed for processing."
+    },
+    {
+      "event": "other",
+      "date": "2025-12-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Initial approval of the Plan de Interés General de Aragón, after a redrawing of its boundary on 10 December 2025; public information followed."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "In March 2026 construction was planned during 2026; in October 2026 urbanisation was expected by late 2026 or during 2027."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s5",
+        "s3"
+      ],
+      "note": "First phase targeted for 2028; the announcement put start-up and operation between 2026 and 2030."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Connections to the transmission grid through 220 kV underground lines from the Jalón PRE, Bayo and Camporroyo substations to a new Ribera Alta del Ebro substation.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "SAMCA's wind farms in Luceni, Pedrola, Plasencia de Jalón and Rueda de Jalón are to be renewed and expanded to supply the campus through direct underground lines under self-consumption with surplus export.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.aragon.es/-/piga-green-it",
+      "title": "Plan de Interés General de Aragón Green It Aragón",
+      "publisher": "Gobierno de Aragón",
+      "published": "2026-07-07",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.aragon.es/documents/d/guest/vol_iv_anx_18_memoria_consumo_agua-1",
+      "title": "Memoria técnica sobre el consumo de agua del Plan Green IT Aragón (Vol. IV, anexo 18)",
+      "publisher": "Gobierno de Aragón (plan documentation filed by the promoter)",
+      "published": "2025-11",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.eldiario.es/aragon/economia/tres-centros-datos-aragon-samca-anuncia-inversion-2-627-millones-luceni_1_12252656.html",
+      "title": "Otros tres centros de datos en Aragón: Samca anuncia una inversión de 2.627 millones en Luceni",
+      "publisher": "elDiario.es",
+      "published": "2025-04-28",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260324073925/https://www.eldiario.es/aragon/economia/tres-centros-datos-aragon-samca-anuncia-inversion-2-627-millones-luceni_1_12252656.html"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.elespanol.com/aragon/actualidad/20261005/cerca-millones-invertidos-centros-datos-aragon-esperan-rampa-salida-obras/1003744406849_0.html",
+      "title": "Cerca de 6.000 millones invertidos en centros de datos en Aragón esperan en la rampa de salida para las obras",
+      "publisher": "El Español",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.elespanol.com/aragon/economia/20260322/aragon-convierte-capital-datos-nube-calendario-amazon-microsoft-proyectos/1003744178360_0.html",
+      "title": "Aragón se convierte en la capital de los datos y la nube: el calendario de Amazon, Microsoft y todos los proyectos",
+      "publisher": "El Español",
+      "published": "2026-03-22",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260527095310/https://www.elespanol.com/aragon/economia/20260322/aragon-convierte-capital-datos-nube-calendario-amazon-microsoft-proyectos/1003744178360_0.html"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Luceni",
+      "title": "Luceni",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20251220030537/https://en.wikipedia.org/wiki/Luceni"
+    }
+  ],
+  "notes": "The regional plan page shows a last-updated date of 7 July 2026, used as its published date; the water annex is dated November 2025 on its cover. Per-building figures are recorded separately and not summed. The water annex estimates total campus water use below 460,000 cubic metres a year, mostly for optional evaporative support to air-cooled chillers. No final approval of the regional plan had been reported by early October 2026.",
+  "last_reviewed": "2026-10-09"
+}

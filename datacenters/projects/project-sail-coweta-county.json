@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "id": "project-sail-coweta-county",
+  "name": "Project Sail (Prologis data center campus, Coweta County)",
+  "aliases": [
+    "Project Sail",
+    "Prologis Coweta County data center campus"
+  ],
+  "summary": "Proposed hyperscale data center campus on roughly 830 acres in rural Sargent, about 7 miles northwest of Newnan in Coweta County, Georgia, near Georgia Power's Plant Yates. Atlas Development originally proposed the project, disclosed in early 2025 as a 13-building plan reported at USD 17 billion; Prologis took over development and cut the plan to nine buildings with about 4.34 million square feet. Trade press estimates the campus could need about 900 MW; Chattahoochee Riverkeeper, an environmental group, puts peak demand at full build-out at 910 MW. Coweta County approved the rezoning 3-2 in April 2026 after a moratorium and sustained local opposition.",
+  "location": {
+    "country": "US",
+    "admin1": "Georgia",
+    "admin2": "Coweta County",
+    "locality": "Sargent",
+    "lat": 33.376,
+    "lon": -84.788,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Sargent (s5). The river group's fact sheet (s1) places the site in rural Sargent about 7 miles northwest of Newnan, with Wahoo Creek crossing the property; no parcel coordinates were found."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-09",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Prologis",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Atlas Development LLC",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Original applicant for the rezoning. In June 2025 Prologis was reported to be set to buy the site from Atlas, with the deal not yet closed; later sources describe Prologis as the developer."
+    },
+    {
+      "name": "Georgia Power",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Prologis says Georgia Power has confirmed it can serve the campus."
+    },
+    {
+      "name": "Coweta County Water & Sewerage Authority",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Water and sewer provider."
+    },
+    {
+      "name": "Coweta County",
+      "role": "government",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Approved the rezoning by a 3-2 vote; county staff had found it inconsistent with the comprehensive plan."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 900,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-04-09",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Trade press estimate of the campus's continuous power demand, first reported for the 13-building plan in 2025 and repeated at the April 2026 rezoning; neither source says whether it is IT or total load. Chattahoochee Riverkeeper's fact sheet (s1), an environmental group's figure, puts whole-campus demand at peak operation and full build-out at 910 MW. Prologis's project site gives no capacity."
+    },
+    {
+      "metric": "investment",
+      "value": 17000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-09",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Reported as the potential value of the campus, first for the 13-building plan in 2025 and again at the April 2026 rezoning. No investment figure appears on the Prologis project site."
+    },
+    {
+      "metric": "land_area",
+      "value": 830,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-26",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Sources give 829, 830 and 831 acres."
+    },
+    {
+      "metric": "buildings",
+      "value": 9,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Reduced from 13 buildings in the plan reported in 2025."
+    },
+    {
+      "metric": "floor_area",
+      "value": 4340000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-26",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Prologis says total floor area fell by 12% from the earlier plan, which trade press in 2025 put at nearly 5 million square feet."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The river group says the project was first disclosed in early 2025 and lists Atlanta press coverage of the proposal dated 3 January 2025."
+    },
+    {
+      "event": "other",
+      "date": "2025-05",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Coweta County imposed a 180-day moratorium on data center rezonings and permits while it rewrote its rules, holding up the application."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Coweta County approved the rezoning 3-2, as reported on 9 April 2026; county staff had found it inconsistent with the comprehensive plan."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Georgia Power supply; Prologis says the utility has confirmed capacity. The site lies near Georgia Power's Plant Yates, which trade press cites as a factor in choosing the land.",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://chattahoochee.org/wp-content/uploads/2026/03/Project-Sail-Fact-Sheet-March-2026.pdf",
+      "title": "Coweta County Project Sail Data Center FAQ",
+      "publisher": "Chattahoochee Riverkeeper",
+      "published": "2026-03-26",
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260825081713/https://chattahoochee.org/wp-content/uploads/2026/03/Project-Sail-Fact-Sheet-March-2026.pdf"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.cowetaprojectsail.com/coweta-lp/",
+      "title": "Project Sail, Coweta County",
+      "publisher": "Prologis",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.telecomreviewamericas.com/articles/wholesale-and-capacity/a-massive-data-center-project-near-atlanta/",
+      "title": "A Massive Data Center Project Near Atlanta",
+      "publisher": "Telecom Review Americas",
+      "published": "2025-06-11",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://propmodo.com/?p=179099",
+      "title": "Prologis Wins Approval for Massive Georgia Data Center Project",
+      "publisher": "Propmodo",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Sargent,_Georgia",
+      "title": "Sargent, Georgia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "No report after the April 2026 rezoning of a closed land purchase or construction start was found. Prologis's project site is undated; it describes closed-loop air cooling without evaporative cooling, up to about 300,000 gallons of water a day at peak, and a tax estimate that assumes full build-out in 10 years. The 910 MW figure is Chattahoochee Riverkeeper's, an environmental group, not Prologis's; the metric uses the trade press estimate of about 900 MW instead.",
+  "last_reviewed": "2026-10-09"
+}

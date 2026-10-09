@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "id": "terawulf-chesapeake-morgantown",
+  "name": "TeraWulf Chesapeake Data Campus (Morgantown)",
+  "aliases": [
+    "Chesapeake Data Campus",
+    "Chesapeake Data",
+    "Morgantown Generating Station redevelopment"
+  ],
+  "summary": "TeraWulf plan to buy the Morgantown Generating Station on the Potomac River in Charles County, Maryland, from GenOn and redevelop it as a data campus with on-site power. The former coal plant, whose coal boilers retired in 2022, now runs about 210 to 220 MW of oil-fired units. TeraWulf proposes restarting it on natural gas and adding battery storage to support up to 1 GW of data center load on about 250 buildable acres, starting with about 500 MW. FERC approved the sale in July 2026 and TeraWulf contemplates first data center operations in 2030, but Charles County zoning does not yet allow data centers.",
+  "location": {
+    "country": "US",
+    "admin1": "Maryland",
+    "admin2": "Charles County",
+    "locality": "Morgantown",
+    "lat": 38.3453,
+    "lon": -76.9711,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": "Sources name the Morgantown Generating Station in Charles County without an address. Coordinates are the Morgantown community point from its Wikipedia article, which notes the plant's smokestacks; they are not the plant site itself."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-08-05",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "TeraWulf",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Buyer of the generating station under a February 2026 agreement; the purchase price is confidential."
+    },
+    {
+      "name": "GenOn Holdings",
+      "role": "owner",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Current owner and seller of the plant; the sale awaited closing after FERC approval."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "TeraWulf describes expansion to support up to 1 GW of load, and press reports describe 1 GW of gas-fired generation for data centers; the two are not clearly separated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2026-02-02",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 210,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Existing oil-fired generation",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Existing grid-connected generation at the plant; The Banner puts it at about 220 MW from 1970s-era oil units. This supplies the grid, not a data center."
+    },
+    {
+      "metric": "land_area",
+      "value": 250,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Buildable acres included in the acquisition."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-02-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "TeraWulf announced the planned acquisition, subject to third-party consents and regulatory approvals including FERC."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-29",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "FERC authorized TeraWulf's acquisition of the Morgantown station; other closing conditions and approvals remained."
+    },
+    {
+      "event": "other",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Charles County commissioners declined to change zoning to allow data centers and chose to study the issue."
+    },
+    {
+      "event": "first_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Initial data center operations contemplated for 2030."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "TeraWulf plans to restart the plant on natural gas to power the data campus. The Banner reports that Maryland's top environmental regulator offered in a December letter to expedite approvals, including pipeline rights-of-way; the governor's office said the letter covered cleanup only.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "About 500 MW of battery storage is planned so excess generation can be exported to the grid.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "The existing plant is grid-connected in the PJM market, and TeraWulf aims for the site to remain a net energy supplier to Maryland.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/129",
+      "title": "TeraWulf expands digital and power infrastructure portfolio with strategic acquisitions in Kentucky and Maryland",
+      "publisher": "TeraWulf",
+      "published": "2026-02-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+      "title": "TeraWulf reports second quarter 2026 results",
+      "publisher": "TeraWulf",
+      "published": "2026-08-05",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261004051013/https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.thebanner.com/economy/growth-development/charles-county-coal-data-center-ZHX6HMX5BNDS7HH6X42MKV7A4A/",
+      "title": "Feds approve sale of Potomac River power plant to data center developer",
+      "publisher": "The Baltimore Banner",
+      "published": "2026-07-29",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260912050321/https://www.thebanner.com/economy/growth-development/charles-county-coal-data-center-ZHX6HMX5BNDS7HH6X42MKV7A4A/"
+    },
+    {
+      "id": "s4",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/140/terawulf-reports-first-quarter-2026-results",
+      "title": "TeraWulf reports first quarter 2026 results",
+      "publisher": "TeraWulf",
+      "published": "2026-05-08",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Morgantown,_Maryland",
+      "title": "Morgantown, Maryland",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The Q1 2026 release (s4) still listed the acquisition as subject to regulatory approvals including FERC. No source opened confirms that the sale has closed. Data center construction would also need a local zoning path, which Charles County had not provided as of July 2026. TeraWulf's releases describe the site as suited to compute-intensive uses without naming AI. Environmental and consumer groups opposed the sale at FERC over electricity price and grid concerns.",
+  "last_reviewed": "2026-10-09"
+}

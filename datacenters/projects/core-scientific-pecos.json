@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "id": "core-scientific-pecos",
+  "name": "Core Scientific Pecos data center campus",
+  "aliases": [
+    "Cottonwood 1 & 2",
+    "Pecos, Texas Data Center"
+  ],
+  "summary": "Core Scientific campus on FM 2119 in Pecos, Texas, in the Permian Basin, listed with 300 MW of gross utility power from Texas-New Mexico Power and a 100-acre footprint. In spring 2026 Core Scientific announced a plan to scale Pecos to about 1.5 GW of gross power; trade press says the plan repurposes existing bitcoin mining infrastructure. In July 2026 its earnings presentation listed AMD as tenant of about 185 MW at Pecos, part of roughly 530 MW of 15-year AMD leases across five sites, with initial delivery expected in the first half of 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Reeves County",
+    "locality": "Pecos",
+    "lat": 31.4156,
+    "lon": -103.5,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s7"
+    ],
+    "note": "Core Scientific gives the address as FM 2119, Pecos, TX 79772, which is not a point location. Coordinates are the Pecos city point from its Wikipedia article, which also names the county."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-28",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Core Scientific",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Core Scientific",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "AMD",
+      "role": "tenant",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Named for this site only in Core Scientific's Q2 2026 earnings presentation (s4), which lists Pecos as an AMD direct site with about 185 MW leased. The Q2 release (s5) gives the 15-year term for about 530 MW across five sites without naming them."
+    },
+    {
+      "name": "Texas-New Mexico Power",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Existing Pecos site",
+      "as_of": "2026-03-02",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Gross utility power capacity from Texas-New Mexico Power listed in the 10-K; the company site page gives 300 MW total power capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 185,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "AMD lease",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Leased capacity; the presentation does not say whether this is critical IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-07",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Planned gross power after expansion, not defined as IT or facility load. The Q2 2026 presentation lists about 815 MW of further power pipeline at Pecos."
+    },
+    {
+      "metric": "land_area",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Existing campus footprint",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "From the undated company site page, accessed 2026-10-09."
+    },
+    {
+      "metric": "floor_area",
+      "value": 125000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "operational",
+      "applies_to": "phase",
+      "phase_label": "Existing campus buildings",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total square footage of the existing facility listed on the undated company site page."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "expansion_announced",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Trade press dates the plan to scale Pecos to about 1.5 GW to April 2026; Core Scientific's Q1 results on 2026-05-06 restated it."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-28",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Core Scientific announced 15-year AMD leases, including about 185 MW at Pecos."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimated initial delivery of the AMD capacity."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply from Texas-New Mexico Power, 300 MW gross at the existing site.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://corescientific.com/high-density-data-centers/pecos-tx/",
+      "title": "Pecos, Texas data center (Cottonwood 1 & 2)",
+      "publisher": "Core Scientific",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001316/https://corescientific.com/high-density-data-centers/pecos-tx/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm",
+      "title": "Core Scientific, Inc. Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "Core Scientific, Inc. via SEC EDGAR",
+      "published": "2026-03-02",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260303001537/https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/136/core-scientific-announces-first-quarter-fiscal-year-2026-results",
+      "title": "Core Scientific announces first quarter fiscal year 2026 results",
+      "publisher": "Core Scientific",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001647/https://investors.corescientific.com/news-events/press-releases/detail/136/core-scientific-announces-first-quarter-fiscal-year-2026-results"
+    },
+    {
+      "id": "s4",
+      "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000012/q2fy26earningsdeck728am.htm",
+      "title": "Core Scientific Q2 2026 earnings presentation (Form 8-K, Exhibit 99.2)",
+      "publisher": "Core Scientific",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260929002832/https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000012/q2fy26earningsdeck728am.htm"
+    },
+    {
+      "id": "s5",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/139/core-scientific-announces-second-quarter-2026-results",
+      "title": "Core Scientific announces second quarter 2026 results",
+      "publisher": "Core Scientific",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.datacenterknowledge.com/build-design/core-scientific-bets-on-1-5-gw-ai-campus-in-oklahoma",
+      "title": "Core Scientific's Muskogee bet: can crypto-era infrastructure fuel AI?",
+      "publisher": "Data Center Knowledge",
+      "published": "2026-05-07",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Pecos,_Texas",
+      "title": "Pecos, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260910002024/https://en.wikipedia.org/wiki/Pecos,_Texas"
+    }
+  ],
+  "notes": "Status is set to announced because the sources opened do not say whether construction of the AMD capacity has started. The 10-K lists 300 MW of gross utility power at the existing Pecos facility. Core Scientific says it is repurposing its remaining mining facilities for colocation without naming them, and Data Center Knowledge ties the Pecos plan to existing bitcoin mining infrastructure; current use of the existing capacity is not recorded here. The AMD agreements total about 530 MW across five sites; the Pecos share comes from the company's earnings presentation.",
+  "last_reviewed": "2026-10-09"
+}

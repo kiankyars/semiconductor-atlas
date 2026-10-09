@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "id": "ecodatacenter-borlange",
+  "name": "EcoDataCenter 2 Borlänge campus",
+  "aliases": [
+    "EcoDataCenter 2",
+    "EcoDataCenter Borlänge mega campus"
+  ],
+  "summary": "EcoDataCenter campus on part of the former Kvarnsveden paper mill in Borlänge, Dalarna, near its existing Falun site. Announced in September 2024 as a 240 MW plan, it is now marketed with up to 600 MW of available power on about 20 hectares. Construction began in September 2025 and the first phase is targeted for mid-2027. In February 2026 Mistral AI announced a partnership and investment, reported at EUR 1.2 billion, for a dedicated AI data center at the site. Analyst Epoch AI saw four buildings under way in August 2026 imagery and projects modest initial IT power.",
+  "location": {
+    "country": "SE",
+    "admin1": "Dalarna County",
+    "admin2": "Borlänge Municipality",
+    "locality": "Borlänge",
+    "lat": 60.48556,
+    "lon": 15.43639,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s6"
+    ],
+    "note": "Borlänge town centroid from its Wikipedia article. EcoDataCenter gives the street address Kvarnsvedsvägen 420 on the former Kvarnsveden mill site, but no cited source gives coordinates for it."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s5",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "EcoDataCenter",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "EcoDataCenter",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Tech Insider describes EcoDataCenter as the operating partner that builds and runs the facility."
+    },
+    {
+      "name": "Mistral AI",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Announced a partnership with EcoDataCenter in February 2026 to build a dedicated AI data center at the Borlänge site. Analyst Epoch AI lists Mistral as owner and user of the AI chips; EcoDataCenter's campus page does not name tenants."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total available power on EcoDataCenter's undated campus page, read on the access date."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 240,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Rating of the campus when first announced; later superseded by the up to 600 MW figure."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 48,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Buildings 1-4 (Epoch AI projection to mid-2028)",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI projects about 24 MW of IT power by mid-2027 and 48 MW by mid-2028 from the four buildings it sees under construction."
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-18",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Mistral AI's reported long-term investment with EcoDataCenter for a dedicated AI data center in Borlänge."
+    },
+    {
+      "metric": "investment",
+      "value": 1400000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "W.Media's value for the same Mistral AI partnership, stated in US dollars."
+    },
+    {
+      "metric": "land_area",
+      "value": 20,
+      "qualifier": "more_than",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "EcoDataCenter says the plot on the former Kvarnsveden paper mill site spans over 200,000 square metres."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Analyst observation from satellite imagery, not a company figure: in August 2026 buildings 1 and 2 were roofed with equipment going in, and buildings 3 and 4 had foundations."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-09-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "EcoDataCenter said it had acquired parts of the former paper mill and planned a 240 MW campus."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2026-02-18",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s3"
+      ],
+      "note": "Mistral AI and EcoDataCenter announced their partnership for a dedicated AI data center at the site."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "EcoDataCenter targets completion of the first phase by mid-2027. Analyst Epoch AI projects buildings 1 and 2 operating by mid-2027 and buildings 3 and 4 by mid-2028; Tech Insider noted that long lead times for Nvidia accelerators could push the start of operations into 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "hydro",
+      "description": "EcoDataCenter says the campus uses fully renewable electricity from local hydropower and wind.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "Local wind power is part of the renewable supply EcoDataCenter cites.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ecodatacenter.tech/data-center/ecodatacenter2",
+      "title": "EcoDataCenter 2 - Borlänge",
+      "publisher": "EcoDataCenter",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260610065455/https://ecodatacenter.tech/data-center/ecodatacenter2"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacentrereview.com/?p=81016",
+      "title": "EcoDataCenter announces plans for mega campus in Sweden",
+      "publisher": "Data Centre Review",
+      "published": "2024-09-06",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/ecodatacenter-secures-land-for-third-swedish-data-center-campus/",
+      "title": "EcoDataCenter secures land for third Swedish data center campus",
+      "publisher": "W.Media",
+      "published": "2026-08-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://tech-insider.org/sv/mistral-ai-1-2-miljarder-sverige-ecodatacenter-borlange-2026/",
+      "title": "Mistral AI satsar €1,2 mdr i Sverige med EcoDataCenter [2026]",
+      "publisher": "Tech Insider",
+      "published": "2026-04-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261006155524/https://tech-insider.org/sv/mistral-ai-1-2-miljarder-sverige-ecodatacenter-borlange-2026/"
+    },
+    {
+      "id": "s5",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/ecodatacenter-2",
+      "title": "EcoDataCenter 2 (AI data center directory)",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Borl%C3%A4nge",
+      "title": "Borlänge",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "EcoDataCenter's campus page is undated, so figures taken from it carry the access date. EcoDataCenter's page does not disclose MW for the Mistral deployment; Tech Insider cites analyst estimates of 75 to 150 MW, which are not recorded, and Epoch AI figures are analyst estimates. W.Media reports Borlänge and Falun together will offer more than 500 MW once complete in 2027. A separate 150 MW EcoDataCenter site in Smedjebacken municipality, south of Borlänge, is a different project.",
+  "last_reviewed": "2026-10-09"
+}

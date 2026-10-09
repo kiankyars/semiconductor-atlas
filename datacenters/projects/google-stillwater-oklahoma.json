@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "id": "google-stillwater-oklahoma",
+  "name": "Google Stillwater data center campus",
+  "aliases": [],
+  "summary": "Planned Google data center campus on land Google acquired at the intersection of Perkins and Richmond Roads in Stillwater, Oklahoma, disclosed by the city in March 2025 after county economic development officials had kept the buyer's identity confidential. Local reporting describes a project of up to USD 3 billion that the mayor called a 25-year plan, with first-phase construction expected to finish as early as 2027 and Google initially making payments in lieu of property taxes. Tracker Baxtel lists the campus as planned.",
+  "location": {
+    "country": "US",
+    "admin1": "Oklahoma",
+    "admin2": "Payne County",
+    "locality": "Stillwater",
+    "lat": 36.116,
+    "lon": -97.059,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Coordinates are the Stillwater city coordinates from its Wikipedia page. Sources place the site at the intersection of Perkins and Richmond Roads but give no parcel coordinates, and no geocoder was used."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s4"
+  ],
+  "notes": "No dated 2026 report on construction could be opened; the status relies on Baxtel's undated third-party listing (accessed 2026-10-09), which shows the campus as planned. That listing also describes a USD 3 billion campus of up to six data centers on about 400 acres of state-owned land north of the former Armstrong facility; because this differs from the city's account of land Google acquired at Perkins and Richmond Roads, those site figures are not recorded. The USD 3 billion figure is a ceiling for the full build-out, not a committed first-phase cost.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Google",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Acquired the land in 2025."
+    },
+    {
+      "name": "City of Stillwater",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Announced Google as the buyer; Google is to make payments in lieu of property taxes to the city rather than paying the taxes initially."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-03-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Potential total for the full campus, which the mayor described as a 25-year project."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The city announced on 12 March 2025 that Google had acquired the land; the transaction date itself is not given."
+    },
+    {
+      "event": "announced",
+      "date": "2025-03-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Construction of the first phase was expected to be finished as early as 2027."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://stillwaterok.gov/CivicAlerts.asp?AID=332",
+      "title": "Google has Acquired Land in Stillwater",
+      "publisher": "City of Stillwater",
+      "published": "2025-03-12",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.kgou.org/science-technology-and-environment/2025-03-13/google-will-operate-massive-data-center-development-in-stillwater",
+      "title": "Google will operate massive data center development in Stillwater",
+      "publisher": "KGOU (Oklahoma Public Media Exchange)",
+      "published": "2025-03-13",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260315181744/https://www.kgou.org/science-technology-and-environment/2025-03-13/google-will-operate-massive-data-center-development-in-stillwater"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.tradeandindustrydev.com/region/oklahoma/news/ok-google-acquires-land-stillwater-development-34278",
+      "title": "OK: Google Acquires Land in Stillwater for Development of Data Center Campus",
+      "publisher": "Trade and Industry Development",
+      "published": "2025-03-18",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260123142405/https://www.tradeandindustrydev.com/region/oklahoma/news/ok-google-acquires-land-stillwater-development-34278"
+    },
+    {
+      "id": "s4",
+      "url": "https://baxtel.com/data-center/google-stillwater-id4",
+      "title": "Google: Stillwater ID4 Data Center",
+      "publisher": "Baxtel",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Stillwater,_Oklahoma",
+      "title": "Stillwater, Oklahoma",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

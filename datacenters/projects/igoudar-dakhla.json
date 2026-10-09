@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "id": "igoudar-dakhla",
+  "name": "Igoudar Dakhla green data centre complex",
+  "aliases": [
+    "Igoudar Numérique",
+    "Igoudar Dakhla"
+  ],
+  "summary": "State-led programme for a green data centre complex in Dakhla targeting 500 MW, unveiled by Morocco in November 2025 for AI and high-performance computing, to be powered by a dedicated solar and wind farm. In April 2026 two ministries, the Dakhla-Oued Ed-Dahab wilaya and regional council, the Mohammed VI Investment Fund and CDG signed an agreement launching the strategic studies that are to set its governance, economic model, phasing and financing. It is planned in two parts, a sovereign segment for national needs and a segment open to private investors. The sources give no investment figure, operator or schedule.",
+  "location": {
+    "country": "EH",
+    "admin1": "Dakhla-Oued Ed-Dahab",
+    "locality": "Dakhla",
+    "lat": 23.70806,
+    "lon": -15.94556,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "City coordinates from the Dakhla Wikipedia page; no site within Dakhla has been named. Dakhla is in Western Sahara (ISO code EH), a disputed territory administered by Morocco; the sources present the project as a Moroccan national programme."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-16",
+  "status_source_ids": [
+    "s2"
+  ],
+  "notes": "Still at the study stage: the April 2026 agreement launched the studies that precede any investment decision. A September 2026 article still described the campus as targeting 500 MW with no schedule. Coverage uses both the names Igoudar Dakhla and Igoudar Numérique for the programme.",
+  "workloads": [
+    "ai_unspecified",
+    "hpc",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Moroccan Ministry of Digital Transition and Administration Reform",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Signatory to the April 2026 agreement launching the studies."
+    },
+    {
+      "name": "Moroccan Ministry of Energy Transition and Sustainable Development",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Signatory to the April 2026 agreement launching the studies."
+    },
+    {
+      "name": "Wilaya of Dakhla-Oued Ed-Dahab",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Signatory to the April 2026 agreement launching the studies."
+    },
+    {
+      "name": "Regional Council of Dakhla-Oued Ed-Dahab",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Signatory to the April 2026 agreement launching the studies."
+    },
+    {
+      "name": "Mohammed VI Investment Fund",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "State investment fund; signatory to the April 2026 studies agreement. No investment commitment is reported."
+    },
+    {
+      "name": "Caisse de Dépôt et de Gestion (CDG)",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Public financial institution; signatory to the April 2026 studies agreement. No investment commitment is reported."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Target capacity of the complex; the scope is not stated."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Plans unveiled, with an agreement on the Igoudar programme signed in Dakhla that month; an earlier accord linking digital and energy strategies dates from July 2025."
+    },
+    {
+      "event": "other",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Agreement, reported on 16 April 2026 without a signing date, launching the strategic studies on governance, economic model, phasing and financing."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "solar",
+      "description": "Planned to run fully on green power from a dedicated solar and wind farm.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "Planned to run fully on green power from a dedicated solar and wind farm.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://w.media/morocco-plans-500-mw-green-data-center-in-dakhla/",
+      "title": "Morocco plans 500 MW green data center in Dakhla",
+      "publisher": "W.Media",
+      "published": "2025-11-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.fnh.ma/article/actualites-marocaines/datacenters-verts-dakhla-igoudar-numerique",
+      "title": "Datacenters verts à Dakhla : le Maroc lance le campus « Igoudar Numérique » de 500 MW",
+      "publisher": "Finances News Hebdo",
+      "published": "2026-04-16",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260418141606/https://fnh.ma/article/actualites-marocaines/datacenters-verts-dakhla-igoudar-numerique"
+    },
+    {
+      "id": "s3",
+      "url": "https://northafricapost.com/?p=99949",
+      "title": "Morocco's Data Center Boom Raises a Power Question",
+      "publisher": "The North Africa Post",
+      "published": "2026-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Dakhla,_Western_Sahara",
+      "title": "Dakhla, Western Sahara",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261009194514/https://en.wikipedia.org/wiki/Dakhla,_Western_Sahara"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

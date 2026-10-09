@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "id": "bridge-my07-ulu-tiram",
+  "name": "Bridge Data Centres MY07, Ulu Tiram",
+  "aliases": [
+    "BDC MY07",
+    "Dragonfly MY07"
+  ],
+  "summary": "Bridge Data Centres' MY07 is a 65-acre hyperscale campus in Ulu Tiram, Johor Bahru District. In January 2025, while it was under construction, Bridge signed an electricity supply agreement with Tenaga Nasional for the site, reported at 400 MW, and became the first partner in TNB's corporate renewable energy supply scheme. Bridge lists MY07 at 374 MW of IT capacity across eight buildings. A September 2026 Bridge article describes a campus operations team of more than 120 keeping customer-facing services running, with cooling water recycled from treated effluent rather than drawn from potable supply.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Johor Bahru District",
+    "locality": "Ulu Tiram",
+    "lat": 1.6,
+    "lon": 103.8203,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5"
+    ],
+    "note": "Sources name Ulu Tiram without an address; the point is the Ulu Tiram coordinate from its Wikipedia article, so it marks the town rather than the campus."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-09-02",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "colocation",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Bridge Data Centres",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Bain Capital-backed hyperscale data center platform."
+    },
+    {
+      "name": "Bridge Data Centres",
+      "role": "operator",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "name": "Tenaga Nasional Berhad",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed the MY07 electricity supply agreement; its subsidiary TNB Renewables drove the deal."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Electricity secured under the TNB supply agreement, per the article headline and the Baxtel listing; the article body does not restate the figure."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 374,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total IT capacity listed for MY07 on Bridge's undated Malaysia locations page; the page does not say how much is built."
+    },
+    {
+      "metric": "buildings",
+      "value": 8,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 65,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-01-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Electricity supply agreement with TNB signed, including head of terms for a bilateral energy supply contract under the corporate renewable energy supply scheme; TNB called it its fastest supply agreement delivery."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supply from Tenaga Nasional through a 275 kV intake, under an electricity supply agreement reported at 400 MW.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Head of terms for a bilateral renewable energy supply contract under TNB's Corporate Renewable Energy Supply Scheme, for which Bridge was the first partner; the generation technology is not stated.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://equalocean.com/news/2025010221264-bridge-data-centres-tnb-sign-my07-400mw-agreement-green-energy-partnership",
+      "title": "Bridge Data Centres, TNB Sign MY07 400MW Agreement and Green Energy Partnership",
+      "publisher": "EqualOcean",
+      "published": "2025-01-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bridgedatacentres.com/locations/malaysia/",
+      "title": "Malaysia locations",
+      "publisher": "Bridge Data Centres",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260609083542/https://www.bridgedatacentres.com/locations/malaysia/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.bridgedatacentres.com/building-malaysias-digital-future/",
+      "title": "Building Malaysia's Digital Future",
+      "publisher": "Bridge Data Centres",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://baxtel.com/data-center/bridge-johor-my07",
+      "title": "Bridge: Johor MY07",
+      "publisher": "Baxtel",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260214062302/https://baxtel.com/data-center/bridge-johor-my07"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Ulu_Tiram",
+      "title": "Ulu Tiram",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status is partially_operational because Bridge's September 2026 staff profile describes MY07 running mission-critical operations that customers depend on, with a 120-plus operations team and around-the-clock cooling water supply, but gives no go-live date or share of the listed 374 MW and eight buildings in service; the undated Baxtel directory listing still shows the site as under construction with 2027 as its planned year. Cooling water comes from a campus treatment plant that recycles treated effluent from Indah Water Konsortium, per Bridge. Bridge's separate Plentong land purchase and the Southville City plan are different projects. Wikipedia is cited only for the town coordinate.",
+  "last_reviewed": "2026-10-09"
+}

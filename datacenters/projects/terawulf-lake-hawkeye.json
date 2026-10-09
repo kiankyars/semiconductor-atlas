@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "id": "terawulf-lake-hawkeye",
+  "name": "TeraWulf Lake Hawkeye data campus",
+  "aliases": [
+    "Cayuga site",
+    "Lake Hawkeye"
+  ],
+  "summary": "TeraWulf plan to redevelop about 183 leased acres of the former coal-fired Cayuga power plant site on Cayuga Lake in Lansing, Tompkins County, New York, into a high-performance computing campus. Its 80-year ground lease, announced in August 2025, gives exclusive rights to develop up to 400 MW, and TeraWulf first expected 138 MW online in late 2026. That timeline slipped: the project was in town site plan review in May 2026, faced county and resident opposition, and by August 2026 TeraWulf called it a longer-term redevelopment of about 400 MW gross, 320 MW of critical IT load, with operations not expected before about 2029.",
+  "location": {
+    "country": "US",
+    "admin1": "New York",
+    "admin2": "Tompkins County",
+    "locality": "Lansing",
+    "lat": 42.5658,
+    "lon": -76.5319,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "note": "Sources place the site at the former Cayuga power plant in the town of Lansing without an address. Coordinates are the town point from the Lansing, New York Wikipedia article, not the plant site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-05",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "hpc",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "TeraWulf",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Holds an 80-year ground lease with reciprocal purchase and sale options from year 50."
+    },
+    {
+      "name": "Cayuga Operating Company",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Lessor under the 80-year ground lease; TeraWulf discloses that the Cayuga site is owned by its chief executive."
+    },
+    {
+      "name": "Tompkins County",
+      "role": "government",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "County legislators passed a resolution in January 2026 asking state regulators for a more thorough review of the project."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The lease grants exclusive rights to develop up to 400 MW; the August 2026 release gives about 400 MW gross, subject to permitting and site development."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 320,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2026-05-08",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Power available in Phase I, expanding to 300 MW in Phase II, per the Q1 2026 release. In August 2025 TeraWulf had expected 138 MW ready for service in the second half of 2026."
+    },
+    {
+      "metric": "land_area",
+      "value": 183,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-08-14",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Leased, not owned: an 80-year ground lease on part of a former coal-fired power plant site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-08-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "TeraWulf announced the long-term ground lease at the Cayuga site for high-performance computing."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TeraWulf reported the project in site plan review."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-14",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "A New York executive order paused discretionary permits for certain AI data centers for up to a year; TeraWulf said the project was still in early planning and operations would fall after the pause."
+    },
+    {
+      "event": "first_operational",
+      "date": "2029",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "TeraWulf does not expect operations until about 2029; its August 2025 target had been the second half of 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "solar",
+      "description": "TeraWulf said in August 2025 that a solar installation of about 67 MW was planned, without saying where.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "An 800 MWh battery storage system was in advanced development on adjacent parcels, per TeraWulf in August 2025.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/113",
+      "title": "TeraWulf secures long-term ground lease at Cayuga site to expand high-performance computing infrastructure",
+      "publisher": "TeraWulf",
+      "published": "2025-08-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/140/terawulf-reports-first-quarter-2026-results",
+      "title": "TeraWulf reports first quarter 2026 results",
+      "publisher": "TeraWulf",
+      "published": "2026-05-08",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+      "title": "TeraWulf reports second quarter 2026 results",
+      "publisher": "TeraWulf",
+      "published": "2026-08-05",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261004051013/https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.wbng.com/2026/01/28/tompkins-county-residents-oppose-ai-data-center-cayuga-lake/",
+      "title": "Tompkins County residents oppose AI data center on Cayuga Lake",
+      "publisher": "WBNG",
+      "published": "2026-01-28",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.fingerlakes1.com/2026/07/22/whats-next-for-lansing-data-center-after-state-moratorium/",
+      "title": "What's next for Lansing data center after state moratorium?",
+      "publisher": "FingerLakes1.com",
+      "published": "2026-07-22",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260723232153/https://www.fingerlakes1.com/2026/07/22/whats-next-for-lansing-data-center-after-state-moratorium/"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Lansing,_New_York",
+      "title": "Lansing, New York",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Capacity figures shifted across TeraWulf releases: 138 MW for 2026 (August 2025), about 150 MW then 300 MW in two phases (May 2026), and about 400 MW gross and 320 MW IT longer term (August 2026). Local reporting says TeraWulf has pledged not to use lake water for cooling but has applied to renew a water withdrawal permit. WBNG dates the original lease rights to 2019, while TeraWulf announced the ground lease in August 2025.",
+  "last_reviewed": "2026-10-09"
+}

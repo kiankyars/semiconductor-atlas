@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-mesa-arizona",
+  "name": "Meta Mesa Data Center",
+  "aliases": [
+    "Mesa Data Center"
+  ],
+  "summary": "Five-building Meta campus on 396 acres at the southeast corner of Elliot and Ellsworth Roads in Mesa, Arizona (3841 S. Ellsworth Road). Meta broke ground in August 2021 on a USD 800 million, two-building plan; in May 2022 it added three buildings, taking the campus to about 2.5 million sq ft and more than USD 1 billion. DPR Construction is the builder. The first two buildings went live in January 2025, with the rest expected around 2026, and Meta now cites a USD 1.2 billion investment. Salt River Project's 200 MW Brittlebush solar plant dedicates its full output to the campus.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "admin2": "Maricopa County",
+    "locality": "Mesa",
+    "lat": 33.4222,
+    "lon": -111.8228,
+    "precision": "locality",
+    "source_ids": [
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "note": "Coordinates are the Mesa city coordinates from its Wikipedia page, not the site. Sources give the street address (3841 S. Ellsworth Road, at the southeast corner of Elliot and Ellsworth Roads), but it was not converted to coordinates because no geocoder was used."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2025-01-31",
+  "status_source_ids": [
+    "s5"
+  ],
+  "notes": "No 2026 report was found confirming that buildings three to five are in service; Meta's fact sheet (s1) says the data center went online in 2025 but gives no building status. The fact sheet shows no publication date (embedded file creation date 2026-09-02), so figures that rest on it alone are dated to the access date, 2026-10-09. Meta bought the 396-acre site in 2021 for USD 123.2 million.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "operator",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "name": "DPR Construction",
+      "role": "builder",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "name": "Salt River Project",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "EDP Renewables North America",
+      "role": "power_supplier",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Partner with Salt River Project on the Brittlebush solar plant, whose entire output is dedicated to the Mesa data center."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2021",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Original two-building plan."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2022-05-06",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "After the expansion to five buildings."
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure on Meta's current fact sheet, given as investment in Arizona."
+    },
+    {
+      "metric": "land_area",
+      "value": 396,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-01-31",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 2500000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2023-12-06",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "About 2.5 million sq ft after the 2022 expansion; Construction Dive gives more than 2.5 million sq ft of data center and administrative space across five buildings."
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2023-12-06",
+      "source_ids": [
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-01-31",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Skilled trade workers on site at peak construction, per Meta's fact sheet."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Operational jobs once the campus is complete."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2021",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2021-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Groundbreaking in August 2021."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2022-05",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Three buildings added to the original two."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-01-30",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Meta announced that the first two buildings were serving traffic."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Builder DPR targeted completion in 2026, and Meta said the second phase would likely open that year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supplied by Salt River Project; Meta says it planned its energy needs with the utility and pays the full cost of the energy it uses.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "The 200 MW Brittlebush Solar Park near Coolidge in Pinal County, a Salt River Project collaboration with EDP Renewables North America, has all of its capacity dedicated to the Mesa data center.",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Mesa-Data-Center.pdf",
+      "title": "Meta Mesa Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.datacenterknowledge.com/hyperscalers/meta-is-adding-three-data-centers-to-already-massive-mesa-campus",
+      "title": "Meta Is Adding Three Data Centers to Already Massive Mesa Campus",
+      "publisher": "Data Center Knowledge",
+      "published": "2022-05-06",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.constructiondive.com/news/meta-dpr-arizona-data-center-mesa-phoenix/701776/",
+      "title": "Meta selects DPR for $1B Arizona data center",
+      "publisher": "Construction Dive",
+      "published": "2023-12-06",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://ktar.com/arizona-news/new-srp-solar-facility-to-provide-power-for-meta-data-center-in-mesa",
+      "title": "New SRP solar facility to provide power for Meta data center in Mesa",
+      "publisher": "KTAR News",
+      "published": "2024-08-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://ktar.com/arizona-news/mesa-data-center-mesa",
+      "title": "First phase of Meta's Mesa data center project open; more under construction",
+      "publisher": "KTAR News",
+      "published": "2025-01-31",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Mesa,_Arizona",
+      "title": "Mesa, Arizona",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261004044024/https://en.wikipedia.org/wiki/Mesa,_Arizona"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

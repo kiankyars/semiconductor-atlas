@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "id": "cyrusone-freestone-county",
+  "name": "CyrusOne Freestone County data center campus",
+  "aliases": [
+    "Freestone County Data Center",
+    "Freestone Energy Center data center"
+  ],
+  "summary": "Multiphase data center campus planned by CyrusOne next to Calpine's Freestone Energy Center in Freestone County, Texas, about 80 miles southeast of Dallas near Fairfield. In February 2026 Calpine, by then part of Constellation, signed a 380 MW agreement providing power, grid connectivity and site infrastructure, plus an exclusive agreement to serve a second 380 MW phase. CyrusOne's campus page lists the project as in development and still awaiting county approval, with more than USD 500 million of investment across phases, power from both the grid and on-site generation, and closed-loop cooling.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Freestone County",
+    "locality": "Fairfield",
+    "lat": 31.7183,
+    "lon": -96.1697,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Fairfield (s3). CyrusOne gives the Freestone Energy Center's Fairfield address (on FM 488) as the reference point and has no address for the data center itself; the site was not geocoded."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "CyrusOne",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Calpine",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Calpine LLC, a business unit of Constellation, supplies power from its Freestone Energy Center."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 380,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase (initial 380 MW agreement)",
+      "as_of": "2026-02-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The release does not name this tranche phase 1; it describes the second 380 MW block as phase 2."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 380,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2026-02-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Calpine entered an exclusive agreement to provide power, grid connectivity and site infrastructure for this phase; the release counts it within more than 1,100 MW under contract for CyrusOne in Texas."
+    },
+    {
+      "metric": "investment",
+      "value": 500000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Stated across multiple phases on CyrusOne's undated campus page."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-02-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supply and grid connection through the Calpine agreement at the Freestone Energy Center.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "CyrusOne says the campus will also use on-site generation; its type and size are not stated.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.cyrusone.com/resources/press-releases/constellation-and-cyrusone-announce-agreement-to-support-new-data-center-facility-at-freestone-energy-center-in-texas",
+      "title": "Constellation and CyrusOne Announce Agreement to Support New Data Center Facility at Freestone Energy Center in Texas",
+      "publisher": "CyrusOne",
+      "published": "2026-02-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.cyrusone.com/data-centers/north-america/freestone-county-texas",
+      "title": "Freestone County Data Center",
+      "publisher": "CyrusOne",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Fairfield,_Texas",
+      "title": "Fairfield, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260925231547/https://en.wikipedia.org/wiki/Fairfield,_Texas"
+    }
+  ],
+  "notes": "The campus page is an undated living page (it mentions events in June 2026), so status_as_of is the access date. It says the project still needs approval and gives no capacity, building count or delivery dates. Only company sources were found; no independent coverage was opened. Constellation's release puts CyrusOne's contracted Texas capacity across sites at over 1,100 MW, including 400 MW at the separate Bosque County campus.",
+  "last_reviewed": "2026-10-09"
+}

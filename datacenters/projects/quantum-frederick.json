@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0",
+  "id": "quantum-frederick",
+  "name": "Quantum Frederick data center park",
+  "aliases": [
+    "Quantum Frederick",
+    "Quantum Park",
+    "Quantum Loophole Frederick campus"
+  ],
+  "summary": "Master-planned data center park of about 2,100 acres on the former Alcoa Eastalco Works site near Frederick, Maryland. Quantum Loophole bought the land in 2021 with backing from a joint venture with TPG Real Estate, planned to start with 1 GW of transmission capacity, and announced in June 2022 that it had broken ground on shared power, water and fiber infrastructure. TPG took full control at the end of 2024 of a project reported at USD 5 billion. Aligned Data Centers plans four buildings totaling 264 MW in the park, including a 72 MW building reported topped out in March 2026, and Rowan Digital Infrastructure is developing 11 buildings on three sites.",
+  "location": {
+    "country": "US",
+    "admin1": "Maryland",
+    "admin2": "Frederick County",
+    "locality": "Frederick",
+    "lat": 39.4311,
+    "lon": -77.3972,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of the city of Frederick (s5). Baxtel's listing beside the 2021 article (s1) gives a Manor Woods Road, Frederick address for the former Eastalco site, which lies outside the city; the park was not geocoded."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-03-12",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "TPG Real Estate",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "TPG Real Estate Partners joined Quantum Loophole in a 2021 joint venture whose investment helped fund the site purchase; it took full control in December 2024 and trade press now calls the park TPG's."
+    },
+    {
+      "name": "TPG Real Estate",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Described as the park's sole developer by March 2026."
+    },
+    {
+      "name": "Quantum Loophole",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Original developer and manager of the master-planned park; after TPG sought a court order in 2024 to remove it as manager, it ended any active involvement in December 2024."
+    },
+    {
+      "name": "Aligned Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Develops its own buildings within the park; named as a first mover in 2022. It paused development in mid-2023 over Maryland's backup generator rules and said in May 2024 that it would resume."
+    },
+    {
+      "name": "Rowan Digital Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported to be developing 11 buildings across three sites within the park."
+    },
+    {
+      "name": "Turner Construction Company",
+      "role": "builder",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Builder of Aligned's IAD-06 building."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2021-06-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The 2021 announcement said the park would start with 1 GW of transmission power capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 264,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Aligned Data Centers parcel (four buildings)",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 72,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Aligned IAD-06 building",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Two-story, 450,000 sq ft building whose structural phase was completed in March 2026."
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-12-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Trade press refers to the park as a USD 5 billion project when TPG took full control."
+    },
+    {
+      "metric": "land_area",
+      "value": 2100,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2021-06-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 75,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Aligned IAD-06 site",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Campus on which the IAD-06 building sits; the source does not say whether it covers all four planned Aligned buildings."
+    },
+    {
+      "metric": "floor_area",
+      "value": 3300000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Aligned Data Centers parcel (four buildings)",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Aligned's original plan for the park, as reported in March 2026."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Aligned Data Centers parcel (four buildings)",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 11,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Rowan Digital Infrastructure sites",
+      "as_of": "2026-03-12",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2021",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Quantum Loophole had recently closed the purchase of the former Alcoa plant site when it announced the TPG Real Estate Partners joint venture in June 2021."
+    },
+    {
+      "event": "construction_started",
+      "date": "2022-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Quantum Loophole announced on 22 June 2022 that it had broken ground on park infrastructure: power distribution, water and sewer, fiber ducts and roads."
+    },
+    {
+      "event": "other",
+      "date": "2024-12",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "TPG Real Estate took full control and Quantum Loophole ended its active involvement."
+    },
+    {
+      "event": "other",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Aligned broke ground on its IAD-04 building in the park."
+    },
+    {
+      "event": "other",
+      "date": "2026-Q1",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Turner and Aligned completed the structural phase of the 72 MW IAD-06 building, as reported on 12 March 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "The park was planned around 1 GW of transmission power capacity, with power distribution and underground ducts among the first infrastructure works.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://baxtel.com/news/tpg-teams-up-with-quantum-loophole-to-redevelop-old-alcoa-plant",
+      "title": "TPG teams up with Quantum Loophole to redevelop Old Alcoa Plant",
+      "publisher": "Baxtel",
+      "published": "2021-06-28",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.cablinginstall.com/data-center/article/14279126/quantum-loophole-begins-construction-on-massive-frederick-md-data-center-campus",
+      "title": "Quantum Loophole begins construction on massive Frederick, Md. data center campus",
+      "publisher": "Cabling Installation & Maintenance",
+      "published": "2022-07-05",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://baxtel.com/news/tpg-real-estate-takes-full-control-of-quantum-frederick-project",
+      "title": "TPG Real Estate takes full control of Quantum Frederick Project",
+      "publisher": "Baxtel",
+      "published": "2024-12-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://baxtel.com/news/aligned-tops-out-new-maryland-data-center",
+      "title": "Aligned Tops out New Maryland Data Center",
+      "publisher": "Baxtel",
+      "published": "2026-03-12",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Frederick,_Maryland",
+      "title": "Frederick, Maryland",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261001150817/https://en.wikipedia.org/wiki/Frederick,_Maryland"
+    }
+  ],
+  "notes": "This record covers the whole park; buildings by Aligned, Rowan and other developers inside it are tracked here as phases rather than separate records. The site was bought in 2021 but qualifies through the June 2022 infrastructure groundbreaking and later construction. No source found states that any data center building in the park is operating, so status stays under construction. No campus-wide MW total beyond the 2021 transmission figure was found.",
+  "last_reviewed": "2026-10-09"
+}

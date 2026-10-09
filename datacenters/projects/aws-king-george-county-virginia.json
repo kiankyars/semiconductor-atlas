@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-king-george-county-virginia",
+  "name": "Amazon Web Services King George County campus (Birchwood site)",
+  "aliases": [
+    "Birchwood data center campus",
+    "Amazon Birchwood"
+  ],
+  "summary": "Proposed Amazon Web Services data center campus on about 869 acres at the former Birchwood coal power plant on State Route 3 in the Sealston area of King George County, Virginia. Rezoned in September 2023, it is planned at 7.25 to 7.5 million sq ft, with a first phase of up to eight buildings and about 4 million sq ft and nine more buildings in later phases, and is reported as a USD 6 billion project. The county approved tax incentives in December 2023, but a new board voted in January 2024 to renegotiate them; Amazon sought a vested rights review in 2025, and as of March 2026 the case was pending in circuit court with no construction reported.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "King George County",
+    "locality": "Sealston",
+    "lat": 38.2614,
+    "lon": -77.3319,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s6"
+    ],
+    "note": "Coordinates are the Sealston community coordinates from its Wikipedia page. Sources place the campus at the former Birchwood power plant on State Route 3 in the Sealston area but give no parcel coordinates."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s5"
+  ],
+  "notes": "Status comes from Baxtel's undated third-party listing (accessed 2026-10-09), which labels the project in doubt; its latest entry, for March 2026, says the case was pending in King George County Circuit Court with no ruling. No later ruling was found. Total floor area is reported as 7.5 million sq ft by Bisnow and Baxtel and 7.25 million sq ft by the rezoning counsel and local press. Baxtel gives a total of 19 buildings, which does not match its own phase breakdown of eight plus nine, so no campus building total is recorded. The site was the 258 MW Birchwood coal plant, decommissioned in 2021.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Named as Amazon Data Center Services by its rezoning counsel and as Amazon Web Services (AWS) in local press."
+    },
+    {
+      "name": "Amazon Web Services",
+      "role": "owner",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Bought nine parcels for USD 168.8 million in December 2023, per Baxtel; a county supervisor said AWS owns the land."
+    },
+    {
+      "name": "Birchwood Power Partners",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Subsidiary of J-Power that first proposed the campus at the former power plant site in July 2023."
+    },
+    {
+      "name": "King George County Board of Supervisors",
+      "role": "government",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Approved the rezoning and a December 2023 performance agreement; a reconstituted board voted in January 2024 to renegotiate it."
+    },
+    {
+      "name": "Dominion Energy",
+      "role": "utility",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Said new substations and transmission lines would be needed but it was not proposing power plants in the county."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-01-08",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Proposed investment reported when the county approved tax incentives in December 2023 and in later local coverage; the sources do not describe it as a commitment in the performance agreement."
+    },
+    {
+      "metric": "land_area",
+      "value": 869,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-01-08",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Site area; the rezoning counsel gives about 870 acres."
+    },
+    {
+      "metric": "floor_area",
+      "value": 7500000,
+      "qualifier": "up_to",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-01-08",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Full build-out over about 15 years."
+    },
+    {
+      "metric": "floor_area",
+      "value": 7250000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-03-23",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Figure given by the rezoning counsel and local press."
+    },
+    {
+      "metric": "floor_area",
+      "value": 4000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-01-08",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 8,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-01-08",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Data center buildings, plus two electrical substations."
+    },
+    {
+      "metric": "buildings",
+      "value": 9,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Later phases",
+      "as_of": "2023-08-14",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Later phases on neighbouring parcels, adding about 3.5 million sq ft."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Birchwood Power Partners proposed the campus; Amazon was identified as the intended user soon after."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2023-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2023-12-19",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "The outgoing Board of Supervisors approved a performance agreement with tax incentives for the campus."
+    },
+    {
+      "event": "site_acquired",
+      "date": "2023-12",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Amazon bought nine parcels for USD 168.8 million, per Baxtel."
+    },
+    {
+      "event": "other",
+      "date": "2024-01",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "A reconstituted board voted on 2 January to renegotiate the performance agreement; a letter from Amazon's lawyer argued the vote did not affect the agreement's enforceability."
+    },
+    {
+      "event": "other",
+      "date": "2025-04",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Amazon filed a court petition seeking a vested rights review; the county Board of Zoning Appeals denied its request in mid-2025 and the case was pending in circuit court as of March 2026, per Baxtel."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Dominion Energy said new substations and transmission lines would be needed to support data center growth in the county and that it was not proposing power plants there; the first phase plans include two on-site electrical substations.",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.bisnow.com/news/national/data-center/amazon-data-center-campus-planned-for-king-george-county-va-as-project-clears-key-hurdle-120212",
+      "title": "Amazon Data Center Campus Planned For King George County, Virginia, As Project Clears Key Hurdle",
+      "publisher": "Bisnow",
+      "published": "2023-08-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.hirschlerlaw.com/newsroom-news-historic-rezoning-massive-data-center-king-george-county",
+      "title": "Hirschler Secures Historic Rezoning for Massive Data Center Campus in King George County, Virginia",
+      "publisher": "Hirschler",
+      "published": "2023-09",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.bisnow.com/news/national/data-center/virginia-county-backtracks-on-agreement-with-amazon-for-6b-data-center-campus-122327",
+      "title": "Amazon Dealt Setback In Plan For $6B Virginia Data Center Campus",
+      "publisher": "Bisnow",
+      "published": "2024-01-08",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.fredericksburgfreepress.com/?p=107200",
+      "title": "King George supervisors ready to 'go to war' with Amazon",
+      "publisher": "Fredericksburg Free Press",
+      "published": "2024-03-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://baxtel.com/data-center/amazon-king-george-va",
+      "title": "Amazon: King George, VA Data Center",
+      "publisher": "Baxtel",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Sealston,_Virginia",
+      "title": "Sealston, Virginia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

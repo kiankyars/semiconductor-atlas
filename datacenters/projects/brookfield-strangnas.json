@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "id": "brookfield-strangnas",
+  "name": "Brookfield AI center, Strängnäs",
+  "aliases": [
+    "Gorsingeberget AI center"
+  ],
+  "summary": "Brookfield Asset Management plans a large AI data center in Strängnäs, Sweden, announced in June 2025. Brookfield said a land allocation agreement for about 350,000 square metres of extra land would let the site grow from 300 MW to 750 MW. Local press placed the site at Gorsingeberget on the edge of town, with the municipality intending to sell the land for SEK 525 million and grant two years of exclusive planning rights. Brookfield expects more than 1,000 permanent jobs and a 10 to 15 year build-out. No 2026 progress report was found.",
+  "location": {
+    "country": "SE",
+    "admin1": "Södermanland County",
+    "admin2": "Strängnäs Municipality",
+    "locality": "Strängnäs",
+    "lat": 59.367,
+    "lon": 17.033,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Town centroid from the Strängnäs Wikipedia article. Dagens PS places the site at Gorsingeberget on the outskirts of Strängnäs, but no cited source gives a parcel or coordinates, so the site itself is not pinpointed."
+  },
+  "status": "announced",
+  "status_as_of": "2025-06-04",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Brookfield Asset Management",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Strängnäs Municipality",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported in June 2025 as intending to sign a land allocation agreement selling about 350,000 square metres to Brookfield for SEK 525 million, with two years of exclusive planning rights."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 750,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-06-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Brookfield described the site as currently 300 MW, rising to 750 MW if the additional land is allocated. IT versus facility scope is not stated."
+    },
+    {
+      "metric": "land_area",
+      "value": 35,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Additional land under the planned land allocation agreement",
+      "as_of": "2025-06-04",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Reported as about 350,000 square metres of land in addition to the property already in the project."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Dagens PS gives 3,000 jobs in total, of which 1,000 permanent."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional jobs Brookfield links to the 10 to 15 year construction process."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-06-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The municipality was reported as intending to sign a land allocation agreement giving Brookfield two years of exclusive planning rights; whether it was signed was not confirmed by the sources opened."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://mfn.se/one/a/brookfield-asset-management-inc/brookfield-to-advance-ai-infrastructure-in-sweden-through-sek-95-billion-investment-884da3a0",
+      "title": "Brookfield To Advance AI Infrastructure in Sweden Through SEK 95 Billion Investment",
+      "publisher": "Brookfield Asset Management (via MFN)",
+      "published": "2025-06-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.dagensps.se/foretag/digitalisering-ai/ai-jatte-etablerar-sig-i-strangnas-tusentals-nya-jobb/",
+      "title": "AI-jätte etablerar sig i Strängnäs – tusentals nya jobb",
+      "publisher": "Dagens PS",
+      "published": "2025-06-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260219062102/https://www.dagensps.se/foretag/digitalisering-ai/ai-jatte-etablerar-sig-i-strangnas-tusentals-nya-jobb/"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Str%C3%A4ngn%C3%A4s",
+      "title": "Strängnäs",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260804205131/https://en.wikipedia.org/wiki/Str%C3%A4ngn%C3%A4s"
+    }
+  ],
+  "notes": "Brookfield announced up to SEK 95 billion (about USD 10 billion) of AI infrastructure investment in Sweden, centred on the Strängnäs AI center but also covering data transfer, chip storage and energy generation, with no breakdown for the site; it is therefore not recorded as a campus investment. The record qualifies on the 750 MW site figure. No 2026 update on the land allocation agreement, detailed planning, grid connection or construction start was found; status reflects the June 2025 announcement.",
+  "last_reviewed": "2026-10-09"
+}

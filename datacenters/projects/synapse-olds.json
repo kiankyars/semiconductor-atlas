@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "id": "synapse-olds",
+  "name": "Synapse Data Center (Olds)",
+  "aliases": [
+    "Synapse Data Center Project",
+    "Synapse AI Data Center Olds"
+  ],
+  "summary": "Synapse Real Estate Corp. proposed a 1 GW AI data centre in the Town of Olds, Alberta, at the northeast corner of Highways 2A and 27, to be the sole user of a 1.4 GW on-site combined-cycle gas plant. The Alberta Utilities Commission rejected a first, deficient plant application in March 2026, and on 17 August 2026 it denied the application in proceeding 30732, finding the site unsuitable for the development. An environmental approval application with Alberta's environment ministry was still listed as in progress, and no development permit had been filed with the town.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "locality": "Olds (northeast corner of Highways 2A and 27)",
+    "lat": 51.79278,
+    "lon": -114.10667,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "Town coordinates from the Olds Wikipedia page. The developer places the site in the town's industrial area at the northeast corner of Highways 2A and 27 (SW and NW quarters of Section 4-33-1-W5M)."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2"
+  ],
+  "notes": "Status stays proposed rather than paused: the August 2026 AUC denial covers the power plant application, and no source reports Synapse halting, withdrawing or appealing the project. It rests on the Town of Olds' undated engagement page, read 2026-10-09, which reports the AUC denial of 17 August 2026 and an Alberta environmental (EPEA) application still in progress. After the first rejection Synapse said it intended to reapply; no response to the August decision was found. The AUC regulates the power plant, not the data centre itself. The developer called it a multi-billion dollar investment without giving a figure.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Synapse Real Estate Corp.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Town of Olds",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Registered as an intervener in the AUC proceeding, commissioned peer reviews of the air quality and noise studies and filed a statement of concern on the environmental application."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-03-09",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Data centre size; the sources do not say whether this is IT or total facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Proposed natural gas-fired plant using combined-cycle gas turbines on about 10% of the site."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Synapse began public engagement in late January 2026 with a project information package for neighbours."
+    },
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported on 9 March 2026: the AUC rejected the first power plant application, citing inadequate consultation, an environmental report that looked unfinished and signs that not all planned generating equipment was included."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-17",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "AUC denied the power generation application in proceeding 30732, finding the site unsuitable for the proposed development."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "A proposed 1.4 GW combined-cycle gas plant on site, with the data centre as the sole consumer of its output; the AUC denied the plant application in August 2026.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.olds.ca/media/y3cp0anv/synapse-data-center-project-information-package.pdf",
+      "title": "Synapse Data Center Project Information Package",
+      "publisher": "Synapse Real Estate Corp. (hosted by the Town of Olds)",
+      "published": "2026-01-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://engage.olds.ca/data-centre-development",
+      "title": "Current Data Centre Projects in Olds",
+      "publisher": "Town of Olds",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://thelogic.co/briefing/alberta-regulator-rejects-proposal-for-massive-data-centre-in-olds-over-deficient-application/",
+      "title": "Alberta regulator rejects proposal for massive data centre in Olds over deficient application",
+      "publisher": "The Logic",
+      "published": "2026-03-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Olds,_Alberta",
+      "title": "Olds, Alberta",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

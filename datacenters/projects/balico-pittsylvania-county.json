@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "id": "balico-pittsylvania-county",
+  "name": "Balico gas-powered data center campus, Pittsylvania County",
+  "aliases": [
+    "Balico data center campus",
+    "Balico Chatham project"
+  ],
+  "summary": "Rejected plan by Herndon-based Balico for a data center campus with a 3,500 MW on-site natural gas power plant near Chatham in Pittsylvania County, Virginia. The first application, covering 47 parcels and about 2,233 acres with 84 data center buildings, was withdrawn in November 2024 after community meetings. A scaled-down version on about 750 acres with up to 12 buildings kept the 3,500 MW plant; the planning commission unanimously recommended denial in January 2025. On 15 April 2025 county supervisors refused Balico's request to withdraw it again and voted 6-1 against the rezoning, so a new filing had to wait a year.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "Pittsylvania County",
+    "locality": "Chatham",
+    "lat": 36.8256,
+    "lon": -79.3975,
+    "precision": "locality",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of the town of Chatham (s5). Sources place the land near Chatham (s3, s4) in the county's Banister district (s1) but name no roads; the parcels were not geocoded."
+  },
+  "status": "cancelled",
+  "status_as_of": "2025-04-16",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Balico LLC",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Pittsylvania County Board of Supervisors",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Denied the withdrawal request 5-2 and the rezoning 6-1."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 3500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2025-04-14",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Planned natural gas power plant serving the campus; WDBJ reported the same plant size for the scaled-down 2025 application."
+    },
+    {
+      "metric": "land_area",
+      "value": 2233,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-11-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "47 parcels to be rezoned to heavy industrial in the original application, withdrawn in November 2024 and superseded by the 750-acre plan."
+    },
+    {
+      "metric": "land_area",
+      "value": 750,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-16",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Scaled-down application rejected in April 2025."
+    },
+    {
+      "metric": "buildings",
+      "value": 84,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-11-04",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Original application, withdrawn in November 2024 and superseded by the 12-building plan."
+    },
+    {
+      "metric": "buildings",
+      "value": 12,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-16",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Each building planned at 396,000 square feet."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 700,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-11-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company claim for the original application; residents questioned the job promises."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Balico held community meetings on its rezoning application in late October 2024."
+    },
+    {
+      "event": "other",
+      "date": "2024-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "First application withdrawn before a planning commission hearing, with county staff recommending denial; Balico said it was revising, not abandoning, the project."
+    },
+    {
+      "event": "other",
+      "date": "2025-01",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planning commission voted unanimously to recommend denying the revised rezoning."
+    },
+    {
+      "event": "cancelled",
+      "date": "2025-04-15",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Board of Supervisors denied Balico's request to withdraw and rejected the rezoning 6-1."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "A 3,500 MW natural gas power plant on the campus, described as the largest in Virginia; a public health study commissioned by the Southern Environmental Law Center estimated at least 326.53 tons of fine particulate emissions a year.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://cardinalnews.org/2024/11/04/data-center-proposal-in-pittsylvania-withdrawn-for-now/",
+      "title": "Data center proposal in Pittsylvania withdrawn, for now",
+      "publisher": "Cardinal News",
+      "published": "2024-11-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250418131331/https://cardinalnews.org/2024/11/04/data-center-proposal-in-pittsylvania-withdrawn-for-now/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wvtf.org/news/2025-04-14/balico-withdraws-application-to-build-data-centers-in-pittsylvania-county",
+      "title": "Balico withdraws application to build data centers in Pittsylvania County",
+      "publisher": "Radio IQ (WVTF)",
+      "published": "2025-04-14",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260712161639/https://www.wvtf.org/news/2025-04-14/balico-withdraws-application-to-build-data-centers-in-pittsylvania-county"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.wdbj7.com/2025/04/14/company-withdraws-data-center-proposal-residents-express-skepticism/",
+      "title": "Company withdraws data center proposal, residents express skepticism",
+      "publisher": "WDBJ7",
+      "published": "2025-04-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://cardinalnews.org/2025/04/16/pittsylvania-rejects-data-center-project-that-has-dominated-county-conversation-for-6-months/",
+      "title": "Pittsylvania rejects data center project that has dominated county conversation for 6 months",
+      "publisher": "Cardinal News",
+      "published": "2025-04-16",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260918072731/https://cardinalnews.org/2025/04/16/pittsylvania-rejects-data-center-project-that-has-dominated-county-conversation-for-6-months/"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Chatham,_Virginia",
+      "title": "Chatham, Virginia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261003071231/https://en.wikipedia.org/wiki/Chatham,_Virginia"
+    }
+  ],
+  "notes": "Recorded as cancelled because the county rejected the rezoning after refusing Balico's request to withdraw it; the sources reviewed report no appeal or new application. After the vote Balico's attorney said it was pursuing a joint venture with Dallas developer Hillwood and weighing other uses for the land, including another data center or housing. This project is separate from the Stack Infrastructure campus at the Berry Hill megasite in the same county.",
+  "last_reviewed": "2026-10-09"
+}

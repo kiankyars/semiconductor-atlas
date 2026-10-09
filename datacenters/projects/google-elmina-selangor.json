@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "id": "google-elmina-selangor",
+  "name": "Google Malaysia data center, Elmina Business Park",
+  "aliases": [
+    "Google Elmina data centre",
+    "Google Malaysia cloud region"
+  ],
+  "summary": "Google's first data center in Malaysia is being built in Sime Darby Property's Elmina Business Park in Selangor, in Greater Kuala Lumpur. Google announced in May 2024 a US$2 billion investment covering this data center and its first Malaysian cloud region, and broke ground in October 2024. Sime Darby Property is building the facility to Google's specifications under a lease arrangement with Google, which will operate it; Google says it will be water-cooled. Completion was targeted for early 2026, but Google's location list still showed the Selangor site as in development in October 2026.",
+  "location": {
+    "country": "MY",
+    "admin1": "Selangor",
+    "admin2": "Petaling District",
+    "locality": "Elmina (Elmina Business Park)",
+    "lat": 3.1992,
+    "lon": 101.5006,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s6"
+    ],
+    "note": "Sources name Elmina Business Park in Selangor without an address; the point is the coordinate of the Elmina township from its Wikipedia article, so it marks the township rather than the parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Google",
+      "role": "operator",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Google will operate the data center once it is complete."
+    },
+    {
+      "name": "Google",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Sime Darby Property describes a lease arrangement with Google for the facility; the terms are not given."
+    },
+    {
+      "name": "Sime Darby Property Bhd",
+      "role": "builder",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Building the data center to Google's custom specifications inside its Elmina Business Park."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-05-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Google's announced amount covers both its first Malaysian data center and its first Malaysian cloud region, not the building alone."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-10-01",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Groundbreaking announced at the Mantap Malaysia Bersama AI event, with the prime minister as guest of honour; EdgeProp reports the ceremony was held in Kuala Lumpur."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Completion was targeted for early 2026; no confirmation of opening was found, and Google still listed the site as in development in October 2026."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://w.media/google-to-invest-us-2-billion-to-build-its-first-dc-and-cloud-region-in-malaysia/",
+      "title": "Google to invest US$ 2 Billion to build its first DC and Cloud Region in Malaysia",
+      "publisher": "W.Media",
+      "published": "2024-05-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260515051834/https://w.media/google-to-invest-us-2-billion-to-build-its-first-dc-and-cloud-region-in-malaysia/"
+    },
+    {
+      "id": "s2",
+      "url": "https://blog.google/intl/ms-my/company-news/inside-google/2024_10_google-breaks-ground-on-us2-billion/",
+      "title": "Google Breaks Ground on US$2 Billion Malaysia Data Center and Cloud Region, Announces Support for New Sustainability and Skilling Initiatives",
+      "publisher": "Google",
+      "published": "2024-10-01",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.mida.gov.my/mida-news/googles-hyperscale-data-centre-at-elmina-business-park-breaks-ground/",
+      "title": "Google's hyperscale data centre at Elmina Business Park breaks ground",
+      "publisher": "Malaysian Investment Development Authority (MIDA), citing New Straits Times",
+      "published": "2024-10-02",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s4",
+      "url": "https://edgeprop.my/content/1910621/sime-darby-property-commences-construction-malaysia%E2%80%99s-first-google-hyperscale-data-centre-city-elmina",
+      "title": "Sime Darby Property commences construction of Malaysia's first Google hyperscale data centre in City of Elmina",
+      "publisher": "EdgeProp Malaysia",
+      "published": "2024-10-02",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20241003083057/https://www.edgeprop.my/content/1910621/sime-darby-property-commences-construction-malaysia%E2%80%99s-first-google-hyperscale-data-centre-city-elmina"
+    },
+    {
+      "id": "s5",
+      "url": "https://datacenters.google/locations/",
+      "title": "Discover our data center locations",
+      "publisher": "Google",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261009093925/https://datacenters.google/locations/"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Elmina,_Malaysia",
+      "title": "Elmina, Malaysia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260507155140/https://en.wikipedia.org/wiki/Elmina,_Malaysia"
+    }
+  ],
+  "notes": "Status rests on Google's undated living locations page, which listed Selangor, Malaysia as in development when accessed on 2026-10-09, so status_as_of is the access date. No power capacity was found in a source that could be opened. Wikipedia is cited only for the township coordinate. Google estimates the investment will support about 26,500 jobs across the economy by 2030; that is not a site job count, so it is not recorded as a metric.",
+  "last_reviewed": "2026-10-09"
+}

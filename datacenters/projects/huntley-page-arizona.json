@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "id": "huntley-page-arizona",
+  "name": "Page, Arizona data center site (Huntley LLC)",
+  "aliases": [
+    "Page data center",
+    "Horseshoe Bend data center proposal"
+  ],
+  "summary": "Proposed data center campus on about 500 acres of city-owned recreational land on the southwest side of Page, Arizona, near Highway 98 and Horseshoe Bend. In October 2025 the city council passed Ordinance 744-25, a land sale agreement with Huntley LLC at USD 14,000 an acre with a feasibility period, milestones and a city buy-back right; it approves no construction, zoning or utilities. Press accounts of filings describe a campus of about 1 GW worth up to USD 10 billion including on-site energy work. A resident referendum petition was rejected on paperwork grounds in late 2025, and in autumn 2026 the city was holding hearings on data center zoning rules.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Page",
+    "lat": 36.9142,
+    "lon": -111.5033,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s6"
+    ],
+    "note": "Coordinates are the Wikipedia centroid of Page (s6). The city says the land lies on the southwest side of Page near Highway 98, about two miles from Horseshoe Bend, and that the exact building location is undetermined; other reports describe it as next to Horseshoe Bend."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Huntley LLC",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Buyer of the city land under the sale agreement. Hoodline, citing filings and industry reporting, links it to UK real estate interests and a developer called Rooskey, with Arup as engineering partner; the city does not confirm those ties."
+    },
+    {
+      "name": "City of Page",
+      "role": "owner",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The land is city-owned and subject to the sale agreement and its buy-back terms."
+    },
+    {
+      "name": "Page City Council",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Approved the land sale ordinance; two council members voted against it."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-21",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Campus size described in filings and industry reporting, as relayed by Hoodline; the city FAQ gives no capacity."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-21",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Hoodline attributes this figure, which includes on-site energy work, to filings and industry reporting; Arizona's Family calls it a USD 10 billion proposal without a source. Not confirmed by the city or the company."
+    },
+    {
+      "metric": "investment",
+      "value": 20000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "incentive_agreement",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Minimum spending the land sale agreement requires within two years of closing, failing which the city may buy the land back."
+    },
+    {
+      "metric": "land_area",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-21",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Agreed price of USD 14,000 an acre, about USD 7 million in total; the city says the sale cannot close until zoning and related issues are resolved."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-10-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "City council passed Ordinance 744-25 approving the land sale agreement and a feasibility period."
+    },
+    {
+      "event": "other",
+      "date": "2025-Q4",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "The city rejected a resident referendum petition against the sale over paperwork defects; reported by 17 December 2025."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-17",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The city announced public hearings in September and October 2026 on a Data Center Overlay District text amendment."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://azcir.org/news/2025/11/21/did-page-az-city-council-approve-the-sale-of-500-acres-for-a-data-center-yes/",
+      "title": "Did the Page City Council approve the sale of 500 acres for a data center?",
+      "publisher": "Arizona Center for Investigative Reporting",
+      "published": "2025-11-21",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.azfamily.com/2025/12/18/page-residents-push-back-10b-data-center-proposal-near-horseshoe-bend/",
+      "title": "Page residents push back on $10B data center proposal near Horseshoe Bend",
+      "publisher": "Arizona's Family (KTVK/KPHO)",
+      "published": "2025-12-17",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260211095322/https://www.azfamily.com/2025/12/18/page-residents-push-back-10b-data-center-proposal-near-horseshoe-bend/"
+    },
+    {
+      "id": "s3",
+      "url": "https://hoodline.com/2026/05/horseshoe-bend-uproar-page-locals-rage-over-1gw-data-hub-deal/",
+      "title": "Horseshoe Bend Uproar, Page Locals Rage Over 1GW Data Hub Deal",
+      "publisher": "Hoodline",
+      "published": "2026-05-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260522044502/https://hoodline.com/2026/05/horseshoe-bend-uproar-page-locals-rage-over-1gw-data-hub-deal/"
+    },
+    {
+      "id": "s4",
+      "url": "https://cityofpage.org/departments/economic-development/page-data-center-faq/",
+      "title": "Page Data Center FAQ",
+      "publisher": "City of Page",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260915004309/https://cityofpage.org/departments/economic-development/page-data-center-faq/"
+    },
+    {
+      "id": "s5",
+      "url": "https://cityofpage.org/proposed-data-center-overlay-district-text-amendment/",
+      "title": "Proposed Data Center Overlay District Text Amendment",
+      "publisher": "City of Page",
+      "published": "2026-09-17",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Page,_Arizona",
+      "title": "Page, Arizona",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261006125909/https://en.wikipedia.org/wiki/Page,_Arizona"
+    }
+  ],
+  "notes": "Status is proposed: the city FAQ, an undated living page labelled September 2026 and dated here by access, says no construction, zoning, utility or development approvals have been granted and no water source has been approved. The developer must secure its own water and power. The FAQ puts the full timeline at six to eight years and lists further hearings on 28 October and 17 November 2026. Capacity and investment figures come from press accounts of filings, not from the city.",
+  "last_reviewed": "2026-10-09"
+}

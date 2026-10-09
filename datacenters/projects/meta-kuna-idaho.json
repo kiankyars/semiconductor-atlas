@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-kuna-idaho",
+  "name": "Meta Kuna Data Center",
+  "aliases": [
+    "Kuna Data Center"
+  ],
+  "summary": "Meta data center in Kuna, Idaho, about 16 miles from downtown Boise. Announced in February 2022 as a USD 800 million campus with more than 960,000 sq ft of data center space expected by 2025, it broke ground in 2022 and was later paused for a redesign to support AI infrastructure and liquid cooling. Meta began serving traffic from it in the third quarter of 2026, citing a USD 1.2 billion investment and a facility of more than 750,000 sq ft. Meta says it planned its energy needs with Idaho Power, and it built a water and wastewater system that it handed to the City of Kuna.",
+  "location": {
+    "country": "US",
+    "admin1": "Idaho",
+    "admin2": "Ada County",
+    "locality": "Kuna",
+    "lat": 43.4903,
+    "lon": -116.3717,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s6"
+    ],
+    "note": "Coordinates are the Kuna city coordinates from its Wikipedia page. Sources name the city and county but give no address or parcel."
+  },
+  "status": "operational",
+  "status_as_of": "2026-09-03",
+  "status_source_ids": [
+    "s5"
+  ],
+  "notes": "Reported sizes differ: more than 960,000 sq ft in the 2022 plan versus more than 750,000 sq ft for the finished facility in 2026. Meta's water and wastewater commitment was reported as about USD 50 million in 2022; Meta's 2026 fact sheet puts it at more than USD 100 million. The fact sheet (s1) shows no publication date (embedded file creation date 2026-09-02), so figures that rest on it alone are dated to the access date, 2026-10-09. Meta's investment figures are framed as investment in Idaho; Baxtel's report ties the USD 1.2 billion to the Kuna campus.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "operator",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "name": "Idaho Power",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "State regulators expect the data center to become Idaho Power's single largest customer."
+    },
+    {
+      "name": "City of Kuna",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Owns and operates the water and wastewater treatment system that Meta built and handed over."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2022-02-16",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-09-04",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "Meta's fact sheet gives more than USD 1.2 billion; 2026 news reports give USD 1.2 billion."
+    },
+    {
+      "metric": "floor_area",
+      "value": 960000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2022-02-21",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Original 2022 plan, expected by 2025."
+    },
+    {
+      "metric": "floor_area",
+      "value": 750000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2026-09-03",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2022-02-16",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Expected peak construction workforce at announcement."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1600,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Skilled trade workers on site at peak construction, per Meta's fact sheet."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Operational jobs once completed; the 2022 announcement gave the same figure."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-02-16",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2022",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-Q3",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Reported in early September 2026 as open and serving traffic, after a construction pause for redesign; in 2022 the campus had been expected by 2025."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Idaho Power serves the site; at announcement Meta said the campus would be supported by renewable energy through Idaho Power's Clean Energy Your Way program, and Meta says it pays the full cost of the energy it uses.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Kuna-Data-Center.pdf",
+      "title": "Meta Kuna Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260922060110/https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Kuna-Data-Center.pdf"
+    },
+    {
+      "id": "s2",
+      "url": "https://nbc16.com/news/nation-world/facebook-owners-announce-new-data-center-in-kuna",
+      "title": "Facebook owners to invest $800 million in new Kuna data center",
+      "publisher": "NBC 16",
+      "published": "2022-02-16",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.bisnow.com/news/national/data-center/new-idaho-data-center-part-fits-metas-development-pattern-111978",
+      "title": "Meta Plans $800M Hyperscale Campus In Idaho As It Continues To Explore New Data Center Markets",
+      "publisher": "Bisnow",
+      "published": "2022-02-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://baxtel.com/news/meta-s-1-2b-data-center-in-kuna-idaho-goes-live",
+      "title": "Meta's $1.2B Data Center In Kuna, Idaho, Goes Live",
+      "publisher": "Baxtel",
+      "published": "2026-09-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://idahonews.com/news/local/meta-opens-new-ai-data-center-in-kuna-hopes-to-become-water-positive",
+      "title": "Meta opens new AI data center in Kuna, hopes to become \"water positive\" by 2030",
+      "publisher": "KBOI 2 (CBS2 Idaho News)",
+      "published": "2026-09-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Kuna,_Idaho",
+      "title": "Kuna, Idaho",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

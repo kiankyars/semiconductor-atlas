@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "id": "bridge-chonburi-khlong-tamru",
+  "name": "Bridge Data Centres Chonburi hyperscale campus",
+  "aliases": [
+    "BDC Chonburi campus"
+  ],
+  "summary": "Bridge Data Centres is developing a hyperscale campus on about 100 rai (16 hectares) in Khlong Tamru subdistrict, Mueang Chonburi District, Chonburi Province, Thailand. Bridge announced the project in April 2025 with about US$1.2 billion of investment over three years and up to 200 MW of power; by October 2025 Bridge and trade press described a first phase of about 200 MW and said the project had Board of Investment promotion. In October 2025 Bridge signed a 10-year industrial water supply deal with Eastwater Stecon Utilities, with supply from May 2026. No construction start or opening has been reported in the sources.",
+  "location": {
+    "country": "TH",
+    "admin1": "Chonburi",
+    "admin2": "Mueang Chonburi District",
+    "locality": "Khlong Tamru",
+    "lat": 13.3619,
+    "lon": 100.9792,
+    "precision": "admin2",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Bridge names Khlong Tamru subdistrict in Chonburi Province and W.Media adds Mueang District, without an address; the point is the district coordinate from the Mueang Chonburi district Wikipedia article, so it marks the district rather than the site."
+  },
+  "status": "announced",
+  "status_as_of": "2025-10-21",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Bridge Data Centres (Thailand) Co., Ltd.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Thai unit of Bain Capital-backed Bridge Data Centres."
+    },
+    {
+      "name": "Bain Capital",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Backer of the Bridge Data Centres platform."
+    },
+    {
+      "name": "Thailand Board of Investment",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Granted investment promotion approval for the project."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Described as the power capacity of phase 1, without saying whether it is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-04-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The April 2025 Thai-language release gives a maximum power capacity of up to 200 MW for the facilities without naming phases."
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-04-11",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Investment over three years; the October 2025 sources call it about US$1.2 billion and tie it to the Khlong Tamru campus."
+    },
+    {
+      "metric": "land_area",
+      "value": 16,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "About 100 rai."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-04-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Thai-language Bridge release announcing US$1.2 billion of investment in Chonburi, presented to the provincial governor; the page is dated 11 April 2025 while the release text carries a 15 April dateline."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-16",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Ten-year industrial water purchase agreement signed with Eastwater Stecon Utilities, with supply from May 2026; W.Media reports a cap of 3.3 million cubic metres a year. Bridge is the utility's first data center client."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.bridgedatacentres.com/bridge-data-centres-%e0%b8%a5%e0%b8%87%e0%b8%97%e0%b8%b8%e0%b8%99-1-2-%e0%b8%9e%e0%b8%b1%e0%b8%99%e0%b8%a5%e0%b9%89%e0%b8%b2%e0%b8%99%e0%b8%94%e0%b8%ad%e0%b8%a5%e0%b8%a5%e0%b8%b2%e0%b8%a3%e0%b9%8c/",
+      "title": "Bridge Data Centres to invest US$1.2 billion in Chonburi (Thai-language release)",
+      "publisher": "Bridge Data Centres",
+      "published": "2025-04-11",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260306212457/https://www.bridgedatacentres.com/bridge-data-centres-%E0%B8%A5%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99-1-2-%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%94%E0%B8%AD%E0%B8%A5%E0%B8%A5%E0%B8%B2%E0%B8%A3%E0%B9%8C/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bridgedatacentres.com/bridge-data-centres-becomes-eastwater-stecon-utilities-first-data-centre-client/",
+      "title": "Bridge Data Centres Becomes Eastwater-Stecon Utilities First Data Centre Client",
+      "publisher": "Bridge Data Centres",
+      "published": "2025-10-16",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/bridge-data-centres-inks-water-deal-for-its-data-center-in-thailand/",
+      "title": "Bridge Data Centres inks water deal for its data center in Thailand",
+      "publisher": "W.Media",
+      "published": "2025-10-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Mueang_Chonburi_district",
+      "title": "Mueang Chonburi district",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status is kept at announced because no opened source reports a construction start or opening; the October 2025 sources call the campus upcoming, and water supply was scheduled from May 2026. Bridge's undated Thailand locations page lists facilities QHI01 and QHI02 at 193 MW of IT capacity in four buildings with a 115 kV intake, but it does not give their location, so those figures are not recorded for this campus. Wikipedia is cited only for the district coordinate.",
+  "last_reviewed": "2026-10-09"
+}

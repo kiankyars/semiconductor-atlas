@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-hobart-indiana",
+  "name": "Amazon Web Services Hobart data center campus",
+  "aliases": [],
+  "summary": "Planned Amazon data center campus on hundreds of acres of undeveloped land in Hobart, Lake County, Indiana. Hobart confirmed an agreement for the campus less than a day after Amazon announced USD 15 billion for new northern Indiana campuses in November 2025. The city council approved the project, reported at USD 11 billion, in January 2026 with a ten-year tax abatement and a long IT equipment exemption; Amazon has paid the city USD 47 million, with further payments tied to construction milestones. The mayor has estimated up to 25 buildings, with work slated to start in 2026 and finish in 2028. A resident's lawsuit over the approval process was still described as ongoing in August 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "admin2": "Lake County",
+    "locality": "Hobart",
+    "lat": 41.5286,
+    "lon": -87.2675,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s6"
+    ],
+    "note": "Coordinates are the Hobart city coordinates from its Wikipedia page. The cited sources name the city but give no parcel or street location."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-25",
+  "status_source_ids": [
+    "s3",
+    "s5"
+  ],
+  "notes": "Amazon's USD 15 billion and 2.4 GW figures cover all of its new northern Indiana campuses, whose locations Amazon did not name; they are not recorded as Hobart metrics. Amazon's framework with NIPSCO's new generation subsidiary covers those campuses, but no opened source explicitly ties it to Hobart, so NIPSCO is not listed as a party. Fox 32 reports the Hobart project at USD 11 billion without saying who produced the estimate. No source opened confirms that construction had begun by October 2026; a fill permit for soil testing was approved in February 2026.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Hobart reports name the company only as Amazon; Amazon's Indiana announcement refers to AWS."
+    },
+    {
+      "name": "City of Hobart",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "The council approved the project and an economic revitalization area designation; the plan commission approved a fill permit. A resident and her group are suing the city over the approval process."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure reported for the project approved by the Hobart City Council; the source does not say who produced it."
+    },
+    {
+      "metric": "buildings",
+      "value": 25,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-08",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "The mayor's estimate; the city and Amazon had not confirmed the number or size of buildings."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 400,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-05",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Amazon's figure to the city."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The mayor's estimate of long-term jobs when the agreement was confirmed; differs from Amazon's later figure of more than 400."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-25",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Hobart confirmed an agreement for a campus less than a day after Amazon's USD 15 billion northern Indiana announcement."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "City council approval, which Fox 32 describes as re-zoning the property as an economic revitalization area, with tax abatements."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-02",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The plan commission approved a fill permit for soil testing; residents sought an injunction in Lake County court."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Targeted completion of construction."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Expected to rely on the local utility's power; Amazon's November 2025 northern Indiana announcement set up a framework with NIPSCO under which Amazon pays fees for existing lines and covers new plants and lines, though sources do not tie it to Hobart explicitly. Residents raised reliability concerns after an August 2026 storm outage.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://aboutamazon.com/news/company-news/amazon-15-billion-indiana-data-centers",
+      "title": "Amazon to invest $15 billion in Indiana for new data centers",
+      "publisher": "Amazon",
+      "published": "2025-11-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.21alivenews.com/2025/11/25/hobart-reaches-agreement-with-amazon-next-gen-data-center/",
+      "title": "Hobart reaches agreement with Amazon for next-gen data center",
+      "publisher": "21Alive News (WPTA), from Inside INdiana Business",
+      "published": "2025-11-25",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://fox32chicago.com/news/hobart-approves-11b-amazon-data-center-details-still-unclear",
+      "title": "'We want transparency before approvals happen': Residents oppose proposed $11 billion Amazon data center",
+      "publisher": "FOX 32 Chicago",
+      "published": "2026-02-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.fox32chicago.com/news/lawsuit-seeks-block-amazon-data-center-permit-hobart-ind",
+      "title": "Lawsuit seeks to block Amazon data center permit in Hobart, Ind.",
+      "publisher": "FOX 32 Chicago",
+      "published": "2026-02-08",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.wbur.org/hereandnow/2026/08/25/indiana-power-data-centers",
+      "title": "Indiana power outage raises concerns about data centers",
+      "publisher": "WBUR (Here & Now)",
+      "published": "2026-08-25",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260901054307/https://www.wbur.org/hereandnow/2026/08/25/indiana-power-data-centers"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Hobart,_Indiana",
+      "title": "Hobart, Indiana",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

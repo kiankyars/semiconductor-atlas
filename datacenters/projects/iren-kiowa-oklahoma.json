@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "id": "iren-kiowa-oklahoma",
+  "name": "IREN Kiowa data center campus",
+  "aliases": [
+    "Project Emerald",
+    "Kiowa Data Center",
+    "Emerald Data Center"
+  ],
+  "summary": "IREN plans a 1.6 GW grid-connected data center campus on a roughly 2,000-acre site just south of Kiowa in Pittsburg County, Oklahoma, between US 69 and Kiowa Lake Road. IREN announced the Oklahoma campus in February 2026, saying grid studies were complete and power would ramp from 2028; local reports say it had bought about 340 acres and would draw on Public Service Company of Oklahoma. A county tax incentive plan with an 85% property tax abatement was tabled in June 2026 for renegotiation, and in September 2026 the project still awaited county approval amid local opposition.",
+  "location": {
+    "country": "US",
+    "admin1": "Oklahoma",
+    "admin2": "Pittsburg County",
+    "locality": "Kiowa",
+    "lat": 34.7228,
+    "lon": -95.9025,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5",
+      "s7"
+    ],
+    "note": "Local reports place the site just south of Kiowa between US 69 and Kiowa Lake Road, with no exact address set. Coordinates are the Kiowa town point from its Wikipedia article, which also gives the county."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-09-08",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "IREN",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Public Service Company of Oklahoma",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Local reporting names PSO as the grid supplier; IREN's 10-K says the utility serving the Kiowa project has proposed a large-load rate subject to Oklahoma Corporation Commission review."
+    },
+    {
+      "name": "Pittsburg County",
+      "role": "government",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "County commissioners are weighing a tax increment district and economic development plan for the project."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1600,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-27",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "IREN's 10-K lists 1,600 MW of total planned gross power capacity for Kiowa, and its February 2026 release counts the campus toward its secured grid-connected power; IT versus facility load is not stated."
+    },
+    {
+      "metric": "land_area",
+      "value": 2000,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-05",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 340,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-09-08",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Bought for about USD 19 million according to property records cited by local news."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "value_high": 150,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-08",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-02-05",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "IREN announced a new 1.6 GW Oklahoma campus without naming the town; its 10-K later lists the site as Kiowa, Oklahoma."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-21",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The county tax incentive district review committee approved the project plan."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-22",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "County commissioners tabled the tax increment district decision and sent the plan back for renegotiation."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "note": "IREN said in February 2026 that power is scheduled to ramp from 2028, and in May 2026 that additional Kiowa capacity is expected to ramp from 2028. News On 6 says production could begin in 2027, with completion in 2029."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid connection via Public Service Company of Oklahoma, which local reports say will remain as backup if IREN later adds its own power system.",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000025/irenreportsq3fy26results.htm",
+      "title": "IREN business update and Q3 FY26 results (Form 8-K, Exhibit 99.1)",
+      "publisher": "IREN Ltd via SEC EDGAR",
+      "published": "2026-05-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+      "title": "IREN Ltd annual report on Form 10-K for the fiscal year ended June 30, 2026",
+      "publisher": "IREN Ltd via SEC EDGAR",
+      "published": "2026-08-27",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus",
+      "title": "IREN announces 1.6GW data center campus in Oklahoma",
+      "publisher": "IREN",
+      "published": "2026-02-05",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.newson6.com/data-centers-in-oklahoma/what-to-know-kiowa-data-center-planned-for-pittsburg-county",
+      "title": "What to know: Kiowa data center planned for Pittsburg County",
+      "publisher": "News On 6",
+      "published": "2026-09-08",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260910130104/https://www.newson6.com/data-centers-in-oklahoma/what-to-know-kiowa-data-center-planned-for-pittsburg-county"
+    },
+    {
+      "id": "s5",
+      "url": "https://okcfox.com/news/local/should-kiowa-data-center-proposal-go-to-a-vote-of-the-people",
+      "title": "Should Kiowa data center proposal go to a vote of the people?",
+      "publisher": "KOKH Fox 25",
+      "published": "2026-09-08",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://fox23.com/news/local/pittsburg-county-delays-decision-on-proposed-data-center-tax-increment-district-06-23-2026",
+      "title": "Pittsburg County delays decision on proposed data center tax increment district",
+      "publisher": "FOX23",
+      "published": "2026-06-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Kiowa,_Oklahoma",
+      "title": "Kiowa, Oklahoma",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "IREN's February 2026 announcement names only Oklahoma; the link to Kiowa comes from IREN's 10-K and from local reporting on the Pittsburg County project. Local reports mention options for Google, Microsoft and AI startups as possible customers, but no tenant has been confirmed. IREN estimates more than USD 600 million in taxes and community payments over 25 years. News On 6 lists 2028 as the operational year in one place and completion in 2029 in another.",
+  "last_reviewed": "2026-10-09"
+}

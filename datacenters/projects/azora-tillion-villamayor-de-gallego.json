@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "id": "azora-tillion-villamayor-de-gallego",
+  "name": "Tillion Aragón data center campus (Azora), Villamayor de Gállego",
+  "aliases": [
+    "Tillion Aragón",
+    "PIGA Tillion Aragón"
+  ],
+  "summary": "Data center campus planned by Azora, through its Tillion Data Centres business and the project company Tillion Aragón, near Villamayor de Gállego outside Zaragoza. Announced in March 2025 at 150 MW expandable to 300 MW, with EUR 1.1 billion for the first phase and up to about EUR 2 billion in total. Red Eléctrica approved the first 150 MW grid connection in 2024. The regional plan covers four data center buildings and a 400 kV link to the Peñaflor substation. In October 2026 El Español reported the investment had risen to about EUR 2.36 billion, with site works expected from late 2026 or in 2027.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragon",
+    "admin2": "Zaragoza",
+    "locality": "Villamayor de Gállego",
+    "lat": 41.68556,
+    "lon": -0.77389,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Town centroid from the Villamayor de Gállego Wikipedia article. Azora places the site near Villamayor de Gállego, less than 3 km from the transmission substation, but no cited source gives coordinates."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s3",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Azora",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Develops the campus through its subsidiary Tillion Data Centres."
+    },
+    {
+      "name": "Tillion Aragón, S.L.",
+      "role": "developer",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Promoter of the regional plan; formerly named Maquina Solar, S.L."
+    },
+    {
+      "name": "Red Eléctrica",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Transmission operator that approved the initial 150 MW grid connection; the plan includes a 400 kV connection to its Peñaflor substation."
+    },
+    {
+      "name": "Government of Aragon",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Declared the project of general interest and is processing its Plan de Interés General de Aragón."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-03-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expansion ceiling after the first phase; scope not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-03-13",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-03-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Red Eléctrica approved the initial 150 MW grid connection in 2024."
+    },
+    {
+      "metric": "investment",
+      "value": 1100000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-03-13",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Also the figure recorded in the initial declaration of general interest."
+    },
+    {
+      "metric": "investment",
+      "value": 1950000000,
+      "qualifier": "up_to",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-03-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Azora's investment at 300 MW, headlined as up to EUR 2 billion. Azora said end users would add about EUR 5 billion of computing equipment."
+    },
+    {
+      "metric": "investment",
+      "value": 2359900000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "El Español reports that the investment rose from EUR 1,100 million in the initial declaration of general interest to EUR 2,359.9 million; it does not say whether this covers a phase or the whole campus."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-07",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The plan documents include basic building projects for four data center buildings."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-03-13",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-03-13",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "The Government of Aragon declared the project of general interest (DIGA); published in the regional gazette on 3 April 2025."
+    },
+    {
+      "event": "other",
+      "date": "2026-02-21",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Tillion Aragón filed the Plan de Interés General de Aragón for initial approval."
+    },
+    {
+      "event": "other",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s2"
+      ],
+      "note": "El Español reported the regional plan approved in July; the regional page lists an initial-approval order dated 24 June and no final approval. Public information on the plan and its environmental documents followed."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s1"
+      ],
+      "note": "Azora targeted a 2026 start; in 2026 El Español expected urbanisation works between late 2026 and 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Planned 400 kV connection to Red Eléctrica's Peñaflor substation with 66 kV lines and on-site substations.",
+      "source_ids": [
+        "s2",
+        "s1"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Azora says the campus will run fully on renewable energy through self-consumption or long-term power purchase agreements; El Español reported a plot added to the plan for power supply.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://azora.com/en/blog/azora-to-invest-e2-billion-in-zaragoza-data-centre/",
+      "title": "Azora to invest €2 billion in Zaragoza data centre",
+      "publisher": "Azora",
+      "published": "2025-03-13",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260314023442/https://www.azora.com/en/blog/azora-to-invest-e2-billion-in-zaragoza-data-centre/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.aragon.es/-/piga-tillion-aragon",
+      "title": "Plan de Interés General de Aragón Tillion Aragón",
+      "publisher": "Gobierno de Aragón",
+      "published": "2026-07-07",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.elespanol.com/aragon/actualidad/20261005/cerca-millones-invertidos-centros-datos-aragon-esperan-rampa-salida-obras/1003744406849_0.html",
+      "title": "Cerca de 6.000 millones invertidos en centros de datos en Aragón esperan en la rampa de salida para las obras",
+      "publisher": "El Español",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.elespanol.com/aragon/economia/20260322/aragon-convierte-capital-datos-nube-calendario-amazon-microsoft-proyectos/1003744178360_0.html",
+      "title": "Aragón se convierte en la capital de los datos y la nube: el calendario de Amazon, Microsoft y todos los proyectos",
+      "publisher": "El Español",
+      "published": "2026-03-22",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260527095310/https://www.elespanol.com/aragon/economia/20260322/aragon-convierte-capital-datos-nube-calendario-amazon-microsoft-proyectos/1003744178360_0.html"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Villamayor_de_G%C3%A1llego",
+      "title": "Villamayor de Gállego",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261003063049/https://en.wikipedia.org/wiki/Villamayor_de_G%C3%A1llego"
+    }
+  ],
+  "notes": "The regional plan page shows a last-updated date of 7 July 2026, used as its published date. The date of the initial-approval order is ambiguous on that page (shown as 24 June with a 2025 order code, before the February 2026 filing), so the approval milestone follows El Español's July report. Microsoft separately plans a campus in the same municipality (microsoft-aragon-villamayor-de-gallego); this is a different project.",
+  "last_reviewed": "2026-10-09"
+}

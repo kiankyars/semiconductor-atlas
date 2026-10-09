@@ -1,0 +1,327 @@
+{
+  "schema_version": "1.0",
+  "id": "acs-la-puebla-de-alfinden",
+  "name": "ACS DC La Puebla data center campus",
+  "aliases": [
+    "ACS DC LA PUEBLA",
+    "ACS and Benbros Energy data center, La Puebla de Alfindén"
+  ],
+  "summary": "Data center campus planned by ACS with Benbros Energy on about 25.5 hectares of industrial land in La Puebla de Alfindén, Zaragoza province. Announced in June 2025 with EUR 1,254 million for the first phase and 150 MW of grid access at Red Eléctrica's Peñaflor substation; a second phase depends on a further 150 MW the developers have requested. The regional plan describes two data halls of 40 MW and 60 MW of IT load, a new 400/220 kV substation next to Peñaflor and an underground line to the site. The plan won initial approval in December 2025 and was amended in July 2026 to add the power line projects. Urbanisation works were expected from late 2026 or in 2027.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragon",
+    "admin2": "Zaragoza",
+    "locality": "La Puebla de Alfindén",
+    "lat": 41.634,
+    "lon": -0.748,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s6"
+    ],
+    "note": "Town centroid from the La Puebla de Alfindén Wikipedia article. The regional plan describes the plot but no cited source gives coordinates for it."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s4",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "ACS",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s1"
+      ],
+      "note": "The regional plan is promoted by the project company ACS DC Infra La Puebla, S.L."
+    },
+    {
+      "name": "Benbros Energy",
+      "role": "developer",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Announced as ACS's partner in the project; its specific role is not described."
+    },
+    {
+      "name": "Red Eléctrica",
+      "role": "utility",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Guaranteed the 150 MW first-phase connection at the Peñaflor substation; a second 150 MW request is pending."
+    },
+    {
+      "name": "Government of Aragon",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Declared the project of general interest and gave the regional plan initial approval."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-06-27",
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "note": "Electrical power secured at the Peñaflor access point; the regional plan describes the project as 150 MW of electrical power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 40,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 1 (four 10 MW modules)",
+      "as_of": "2026-07-06",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 60,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 2 (six 10 MW modules)",
+      "as_of": "2026-07-06",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase 2 (pending Red Eléctrica approval)",
+      "as_of": "2025-06-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Additional capacity the developers had requested; the plot reserves space for a possible second phase."
+    },
+    {
+      "metric": "investment",
+      "value": 1254000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-06-27",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Announced by Aragon's regional president; El Español describes it as committed for the first phase."
+    },
+    {
+      "metric": "land_area",
+      "value": 25.55,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-06",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "The regional plan covers 255,504.65 square metres of industrial development land."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-07-06",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1510,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-27",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 540,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Operating jobs; a further 724 induced jobs were also projected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-06-27",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-06-27",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Declared an investment of general interest for Aragon; published in the regional gazette on 23 July 2025."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-17",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Regional plan filed for initial approval."
+    },
+    {
+      "event": "other",
+      "date": "2025-12-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Initial approval of the Plan de Interés General de Aragón (Order FOM/1698/2025), followed by a 30-working-day public information period opened on 9 December 2025."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-31",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Order VFL/1184/2026 amended the initial approval to add updated 400 kV and 220 kV line and remote substation projects with their environmental studies."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "In March 2026 urbanisation was expected in 2026 and the buildings from early 2027; in October 2026 urbanisation was expected by late 2026 or during 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "About 13.5 km of underground line from Red Eléctrica's Peñaflor substation, a new remote 400/220 kV substation next to it, and a substation on the campus plot.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.aragon.es/-/piga-acs-dc-la-puebla",
+      "title": "Plan de Interés General de Aragón: Instalación de un centro de datos en el término municipal de La Puebla de Alfindén",
+      "publisher": "Gobierno de Aragón",
+      "published": "2026-07-06",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.aragon.es/-/piga-acs-modificacion%201",
+      "title": "Modificación de la aprobación inicial del PIGA del centro de datos de La Puebla de Alfindén",
+      "publisher": "Gobierno de Aragón",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.hoyaragon.es/articulo/noticias-aragon/acs/20250627135338101330.html",
+      "title": "ACS aterriza con Benbros Energy en Aragón para la construcción de otro centro de datos",
+      "publisher": "Hoy Aragón",
+      "published": "2025-06-27",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.elespanol.com/aragon/actualidad/20261005/cerca-millones-invertidos-centros-datos-aragon-esperan-rampa-salida-obras/1003744406849_0.html",
+      "title": "Cerca de 6.000 millones invertidos en centros de datos en Aragón esperan en la rampa de salida para las obras",
+      "publisher": "El Español",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.elespanol.com/aragon/economia/20260322/aragon-convierte-capital-datos-nube-calendario-amazon-microsoft-proyectos/1003744178360_0.html",
+      "title": "Aragón se convierte en la capital de los datos y la nube: el calendario de Amazon, Microsoft y todos los proyectos",
+      "publisher": "El Español",
+      "published": "2026-03-22",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260527095310/https://www.elespanol.com/aragon/economia/20260322/aragon-convierte-capital-datos-nube-calendario-amazon-microsoft-proyectos/1003744178360_0.html"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/La_Puebla_de_Alfind%C3%A9n",
+      "title": "La Puebla de Alfindén",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261003063033/https://en.wikipedia.org/wiki/La_Puebla_de_Alfind%C3%A9n"
+    }
+  ],
+  "notes": "The regional plan pages carry last-updated dates (6 July 2026 and 2 September 2026), used here as their published dates. The two data hall IT figures are recorded per building and not summed. No final approval of the regional plan had been reported by early October 2026.",
+  "last_reviewed": "2026-10-09"
+}

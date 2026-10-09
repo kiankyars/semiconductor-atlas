@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "id": "terranova-campinas",
+  "name": "Terranova Campinas data centre campus",
+  "aliases": [
+    "Terranova Campus Campinas",
+    "Campus Campinas"
+  ],
+  "summary": "Terranova, a Latin American hyperscale platform backed by investor Actis, plans an AI and cloud data centre campus on about 944,000 square metres at Fazenda Pau D'Alho in Barão Geraldo, Campinas, inside the city's PIDS innovation zone. Phase 1 is planned at 216 MW of IT load, expandable to 386 MW, with an initial investment reported locally at about BRL 5 billion that could reach BRL 20 billion. Grid access for 300 MW was authorised in December 2025 and a substation is due to be energised in December 2027. Trade press reported construction starting in August 2026, but the city said the permits issued covered only a substation; local politicians asked prosecutors to review the licensing.",
+  "location": {
+    "country": "BR",
+    "admin1": "São Paulo",
+    "admin2": "Campinas",
+    "locality": "Barão Geraldo (Fazenda Pau D'Alho)",
+    "lat": -22.82778,
+    "lon": -47.07972,
+    "precision": "locality",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "note": "Coordinates of the Barão Geraldo district from its Wikipedia page; the campus is on the Fazenda Pau D'Alho property within the PIDS innovation zone, whose exact boundary was not located."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-26",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "notes": "Set to announced as the more conservative reading of conflicting reports. W.Media (citing a city statement) and Construction Review reported construction starting after the 20 August 2026 ceremony, but the city later said the permits published on 21 August covered only a power substation, with land subdivision and the neighbourhood impact study still under review. Tax benefits went to the company Terra Nova 1500 Ltda. February 2026 reporting expected 220 to 230 MW of operational capacity at opening in 2027 and more than 500 MW of IT later. A local lawmaker cited 400 MW of demand rather than 300 MW.",
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Terranova",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Actis",
+      "role": "investor",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Sustainable infrastructure investor that launched and backs Terranova."
+    },
+    {
+      "name": "Prefeitura de Campinas",
+      "role": "government",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Issued the substation permits and environmental licence and granted 12 years of municipal tax incentives under the PIDS law."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 216,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 386,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Expansion using reserved areas of the site."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-02-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Earlier February 2026 report of IT capacity in later phases; August 2026 coverage gives 386 MW instead."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Grid access authorised by the national system operator ONS in December 2025; the dedicated substation starts at 300 MW and could scale to 1 GW."
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "approximately",
+      "unit": "BRL",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Initial investment",
+      "as_of": "2026-08-20",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "qualifier": "up_to",
+      "unit": "BRL",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-08-20",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Potential total across all phases."
+    },
+    {
+      "metric": "investment",
+      "value": 500000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Construction Review gives more than USD 500 million for phase one; W.Media gives an initial USD 500 million, attributed to the Campinas municipal government. Both are below the BRL 5 billion initial figure reported locally."
+    },
+    {
+      "metric": "land_area",
+      "value": 233,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Other sources give about 944,000 square metres, of which about 115,000 square metres would be built and about 285,000 kept green or transferred to the city."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 3000,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Direct and indirect jobs at peak construction; local press reported about 3,600 direct and indirect jobs."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 650,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Permanent roles over five years."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Brazil's grid operator ONS confirmed access to 300 MW at the site."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-07",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Twelve years of municipal tax benefits for the project company published in the official gazette."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-08-21",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "A construction permit was handed over at the 20 August ceremony; approval and execution permits were published on 21 August and, according to the city, cover a power substation. A municipal preliminary and installation environmental licence was issued on 18 August."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Trade press reported that construction had begun after the permit ceremony; the city said the permits issued cover only a power substation and did not confirm wider works."
+    },
+    {
+      "event": "other",
+      "date": "2027-12",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target energisation of the 300 MW substation."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "February 2026 report that the campus was expected to open the following year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "A dedicated Pau D'Alho substation of 300 MW initially, expandable to 1 GW, is planned by sectioning the 440 kV Replan to Santo Ângelo transmission line.",
+      "source_ids": [
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://teletime.com.br/19/02/2026/terranova-tera-megaestruturas-e-estuda-expansao-de-data-centers-no-brasil/",
+      "title": "Terranova terá megaestruturas e estuda expansão de data centers no Brasil",
+      "publisher": "TELETIME",
+      "published": "2026-02-19",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/terranova-starts-construction-on-us-500-million-data-center-campus-in-brazil/",
+      "title": "Terranova starts construction on US$ 500 million data center campus in Brazil",
+      "publisher": "W.Media",
+      "published": "2026-08-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://constructionreviewonline.com/terranova-breaks-ground-on-216-mw-data-centre-in-campinas-sao-paulo/",
+      "title": "Terranova breaks ground on 216 MW Data Centre in Campinas, São Paulo",
+      "publisher": "Construction Review Online",
+      "published": "2026-08-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.correiodamanha.com.br/nacional/sao-paulo/campinas/2026/08/312866-campinas-tera-data-center-de-rs-5-bilhoes-voltado-a-inteligencia-artificial.html",
+      "title": "Campinas terá data center de R$ 5 bilhões voltado à Inteligência Artificial",
+      "publisher": "Correio da Manhã",
+      "published": "2026-08-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.correiodamanha.com.br/nacional/sao-paulo/campinas/2026/08/314378-data-center-de-rs-5-bi-em-campinas-conti-samia-petta-e-orlando-silva-pedem-suspensao-ao-mpf-e-ao-mp-sp.html",
+      "title": "Data center de R$ 5 bilhões em Campinas vira alvo do Ministério Público Federal e Estadual",
+      "publisher": "Correio da Manhã",
+      "published": "2026-08-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Bar%C3%A3o_Geraldo",
+      "title": "Barão Geraldo",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "applied-digital-delta-forge-2",
+  "name": "Applied Digital Delta Forge 2",
+  "aliases": [
+    "Delta Forge 2 AI Factory"
+  ],
+  "summary": "Applied Digital's fifth AI factory campus, on about 160 acres of a nearly 1,300-acre site north of Brookwood Parkway in Brookwood, Tuscaloosa County, Alabama. In June 2026 the company announced a 15-year lease of 210 MW of critical IT load to an unnamed US high investment-grade hyperscaler, worth about USD 5.2 billion in base-term revenue, naming only a southern state. Applied Digital confirmed the Brookwood site in September 2026; local reports gave an initial capital investment of about USD 3.29 billion and about 1.26 million square feet of data center space. Construction was set to begin on 1 October 2026, with initial operations expected in Q1 2028.",
+  "location": {
+    "country": "US",
+    "admin1": "Alabama",
+    "admin2": "Tuscaloosa County",
+    "locality": "Brookwood",
+    "lat": 33.2397,
+    "lon": -87.3278,
+    "precision": "locality",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Local reports place the campus north of the 17000 block of Brookwood Parkway. No geocoder was used; coordinates are the Brookwood city point from its Wikipedia article."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-07",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference"
+  ],
+  "parties": [
+    {
+      "name": "Applied Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Tuscaloosa County Economic Development Authority",
+      "role": "government",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Signed off on the project in September 2026; Applied Digital committed USD 270 million in community benefit payments to the authority over 20 years."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 210,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-06-08",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Critical IT load leased for 15 years to an unnamed US high investment-grade hyperscaler; the release puts base-term revenue at about USD 5.2 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 3286500000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "incentive_agreement",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Initial capital investment figure reported with the local incentive package; reports also round it to more than USD 3.2 billion from Applied Digital and its tenant."
+    },
+    {
+      "metric": "floor_area",
+      "value": 1260000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "An earlier state environmental permit application had described about 2 million square feet."
+    },
+    {
+      "metric": "land_area",
+      "value": 160,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Campus footprint within a site of nearly 1,300 acres."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Expected peak construction workforce."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 101,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-06-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Applied Digital announced the 210 MW lease at Delta Forge 2 in an unnamed southern state."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-07-20",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Alabama's Department of Environmental Management approved a permit application for a data center in Brookwood, later confirmed as this project."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-24",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Applied Digital confirmed the Brookwood location and the county economic development authority approved the incentive package."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-10-01",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s2"
+      ],
+      "note": "Scheduled construction start reported with the incentive terms; the company's 7 October 2026 results list the campus as under construction."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Anticipated start of initial operations; local reporting gives completion by the end of 2028."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/154/applied-digital-signs-210-mw-lease-at-delta-forge-2",
+      "title": "Applied Digital signs 210 MW lease at Delta Forge 2, expanding its AI factory franchise model to a fifth campus",
+      "publisher": "Applied Digital",
+      "published": "2026-06-08",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261006090244/https://ir.applieddigital.com/news-events/press-releases/detail/154/applied-digital-signs-210-mw-lease-at-delta-forge-2"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001144879/000114487926000057/apldq127earningsrelease.htm",
+      "title": "Applied Digital reports fiscal first quarter 2027 results (Form 8-K exhibit)",
+      "publisher": "Applied Digital via SEC EDGAR",
+      "published": "2026-10-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://abc3340.com/news/local/alabama-32-billion-ai-data-center-campus-announced-in-brookwood-brookwood-mayor-joe-barger-september-2026",
+      "title": "$3.2 billion AI data center campus announced in Brookwood",
+      "publisher": "ABC 33/40",
+      "published": "2026-09-24",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20261004090303/https://abc3340.com/news/local/alabama-32-billion-ai-data-center-campus-announced-in-brookwood-brookwood-mayor-joe-barger-september-2026"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.fox10tv.com/2026/09/25/applied-digital-confirms-32-billion-data-center-campus-brookwood/",
+      "title": "Applied Digital confirms $3.2 billion data center campus in Brookwood",
+      "publisher": "FOX10 News",
+      "published": "2026-09-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Brookwood,_Alabama",
+      "title": "Brookwood, Alabama",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260910031829/https://en.wikipedia.org/wiki/Brookwood,_Alabama"
+    }
+  ],
+  "notes": "The tenant is not named; Applied Digital says it is the same US high investment-grade hyperscaler as two of its other leases. Renewal options could lift lease revenue to about USD 12.7 billion over a 30-year total term. The June 2026 release describes proprietary waterless cooling for the campus. No source opened names the utility or a dedicated power arrangement for the campus. Local reports put 20-year taxes and community payments at about USD 440.7 million, against about USD 314.5 million in tax abatements.",
+  "last_reviewed": "2026-10-09"
+}

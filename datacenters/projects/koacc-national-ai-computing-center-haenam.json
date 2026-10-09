@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "id": "koacc-national-ai-computing-center-haenam",
+  "name": "National AI Computing Center, Solaseado (Haenam)",
+  "aliases": [
+    "Korea AI Computing Center",
+    "KOACC",
+    "Solaseado National AI Computing Center"
+  ],
+  "summary": "South Korea's government-backed National AI Computing Center is being built in the Solaseado data center park in Haenam County, South Jeolla. A consortium led by Samsung SDS was the only bidder in the 2025 tender and was confirmed as operator in 2026; a public-private joint venture, Korea AI Computing Center (KOACC), formed in June 2026 to build and run it. The project is budgeted at more than 2 trillion won through 2030 and targets at least 15,000 advanced GPUs by 2028 and about 50,000 by 2030. Ground was broken on 3 August 2026, with completion targeted for 2028.",
+  "location": {
+    "country": "KR",
+    "admin1": "South Jeolla (Gwangju-Jeonnam)",
+    "admin2": "Haenam County",
+    "locality": "Sani-myeon (Solaseado)",
+    "lat": 34.5742,
+    "lon": 126.5975,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Sources place the site in the Solaseado data center park in Sani-myeon, Haenam County, without coordinates; the point is the Haenam County coordinate from its Wikipedia article, so it marks the county, not the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-03",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Korea AI Computing Center Co., Ltd. (KOACC)",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Public-private special purpose company formed in June 2026 to build and operate the center."
+    },
+    {
+      "name": "Korea AI Computing Center Co., Ltd. (KOACC)",
+      "role": "operator",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Samsung SDS",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Leads the nine-member consortium selected as the private partner; consortium members include Naver Cloud, Samsung C&T, Kakao, Samsung Electronics, KT and Clush."
+    },
+    {
+      "name": "Ministry of Science and ICT (South Korea)",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Runs the national project and co-founded the joint venture."
+    },
+    {
+      "name": "People's Growth Fund",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Policy fund under the Financial Services Commission that approved an investment and co-founded the joint venture."
+    },
+    {
+      "name": "Jeollanam-do provincial government",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Consortium member that prepared the site; the province has since become part of the Gwangju-Jeonnam integrated special city."
+    },
+    {
+      "name": "Korea Electric Power Corporation (KEPCO)",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Electricity supplier to which the joint venture applied for service."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000000,
+      "qualifier": "more_than",
+      "unit": "KRW",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-01-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total budget for the national project from 2026 to 2030, funded by private and government investment and policy loans; the project centres on securing computing resources, so the figure is not the building cost alone."
+    },
+    {
+      "metric": "investment",
+      "value": 2406500000000,
+      "qualifier": "exact",
+      "unit": "KRW",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Nocut News figure for the total to be injected by 2030, including 400 billion won of equity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 40,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Edaily reports a 40 MW supply confirmed by KEPCO and local governments after a grid review; it does not say whether this is IT or facility power."
+    },
+    {
+      "metric": "accelerators",
+      "value": 15000,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "2028 target",
+      "as_of": "2026-01-12",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Advanced GPUs targeted by 2028 (Samsung SDS says more than 15,000). Edaily says the consortium's plan was based on Nvidia B200 but the chip choice may change."
+    },
+    {
+      "metric": "accelerators",
+      "value": 50000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "GPU target for 2030, reached in stages."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The Samsung SDS consortium submitted the only bid in the government tender."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-13",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The Samsung SDS consortium was confirmed as the final participant, with Solaseado as the site."
+    },
+    {
+      "event": "other",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Joint venture Korea AI Computing Center (KOACC) incorporated to build and run the center."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-08-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Groundbreaking ceremony held by the Ministry of Science and ICT and attended by the science minister. Edaily dates it to the 3rd; Digital Today, publishing the same day, says it took place on Sunday, which would be 2 August."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Digital Today says construction is to be completed by 2028 and Nocut News targets full-scale operation in the second half of 2028; Edaily's translated text refers to completion in 2027. Some computing resources are to be offered earlier from a Samsung SDS data center in 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Power from KEPCO, to which the joint venture applied for service.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.samsungsds.com/en/news/1293056_5252.html",
+      "title": "Samsung SDS Consortium Takes Major Step Forward in National AI Computing Center Project with Its First Official Site Visit",
+      "publisher": "Samsung SDS",
+      "published": "2026-01-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://en.edaily.co.kr/news/eda202608035522/",
+      "title": "South Korea Joins the Global GPU War: Building a 2 Trillion Won AI Outpost in Haenam, South Jeolla Province",
+      "publisher": "Edaily",
+      "published": "2026-08-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.digitaltoday.co.kr/en/view/88544/groundbreaking-held-for-national-ai-computing-center-in-haenam-aims-for-2028-completion",
+      "title": "Groundbreaking held for national AI computing center in Haenam, aims for 2028 completion",
+      "publisher": "Digital Today",
+      "published": "2026-08-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.nocutnews.co.kr/news/6516549",
+      "title": "Jeonnam Province secures national AI Computing Center",
+      "publisher": "Nocut News",
+      "published": "2026-05-13",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Haenam_County",
+      "title": "Haenam County",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Qualifies on investment: the budget of more than 2 trillion won exceeded USD 1 billion at the time. Reported totals vary between 2.0 and 2.5 trillion won across outlets. The site name is romanized several ways (Solaseado, SoLaSeaDo, Solasido). Wikipedia is cited only for the county coordinate. This is separate from the stalled OpenAI and SK data center plan, for which Haenam was one reported candidate site.",
+  "last_reviewed": "2026-10-09"
+}
