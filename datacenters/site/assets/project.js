@@ -6,7 +6,10 @@ if (el) {
   const base = el.dataset.base, id = el.dataset.id;
   Promise.all([
     loadBasemap(`${base}assets/basemap.json`),
-    fetch(`${base}api/v1/projects.json`).then((r) => r.json()),
+    fetch(`${base}api/v1/projects.json`).then((r) => {
+      if (!r.ok) throw new Error(`projects.json: HTTP ${r.status}`);
+      return r.json();
+    }),
   ]).then(([basemap, api]) => {
     const points = api.projects.map((r) => {
       const [x, y] = project(r.lon, r.lat);
@@ -17,10 +20,12 @@ if (el) {
       label: el.dataset.label,
       tooltip: (p) => `<strong>${escapeHtml(p.row.name)}</strong>${escapeHtml(STATUS_LABELS[p.row.status])}${p.row.planned_power_mw != null ? ` · ${fmtMW(p.row.planned_power_mw, p.row.planned_power_mw_high, p.row.planned_power_qualifier)}` : ""}`,
       onSelect: (p) => { if (p.row.id !== id) location.href = `${base}projects/${encodeURIComponent(p.row.id)}/`; },
-      onReset: () => map.fitPoints([self], 5),
+      onReset: () => (self ? map.fitPoints([self], 5) : map.fitWorld()),
     });
     map.setPoints(points);
-    map.highlight = self;
-    map.fitPoints([self], 5);
+    if (self) {
+      map.highlight = self;
+      map.fitPoints([self], 5);
+    }
   }).catch((err) => console.error(err));
 }

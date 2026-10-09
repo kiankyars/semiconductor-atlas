@@ -116,6 +116,8 @@ def headline(record: dict[str, Any]) -> dict[str, Any]:
         out[f"{prefix}_as_of"] = statement["as_of"] if statement else None
         out[f"{prefix}_source_ids"] = statement["source_ids"] if statement else None
     out["onsite_generation_mw"] = generation["value"] if generation else None
+    out["onsite_generation_mw_high"] = generation.get("value_high") if generation else None
+    out["onsite_generation_qualifier"] = generation["qualifier"] if generation else None
     out["onsite_generation_basis"] = generation["basis"] if generation else None
     out["onsite_generation_as_of"] = generation["as_of"] if generation else None
     out["onsite_generation_source_ids"] = generation["source_ids"] if generation else None
@@ -126,6 +128,8 @@ def headline(record: dict[str, Any]) -> dict[str, Any]:
     out["investment_as_of"] = investment["as_of"] if investment else None
     out["investment_source_ids"] = investment["source_ids"] if investment else None
     out["accelerators"] = accelerators["value"] if accelerators else None
+    out["accelerators_high"] = accelerators.get("value_high") if accelerators else None
+    out["accelerators_qualifier"] = accelerators["qualifier"] if accelerators else None
     out["accelerator_model"] = accelerators.get("accelerator_model") if accelerators else None
     out["accelerators_basis"] = accelerators["basis"] if accelerators else None
     out["accelerators_source_ids"] = accelerators["source_ids"] if accelerators else None

@@ -1,5 +1,5 @@
 import { AtlasMap, loadBasemap, project, radiusFor, escapeHtml, STATUS_GROUP } from "./map.js";
-import { STATUS_LABELS, SCOPE_SHORT, fmtMW, fmtMoney, fmtDate, fmtNumber } from "./format.js";
+import { STATUS_LABELS, SCOPE_SHORT, fmtMW, fmtMoney, fmtDate, fmtNumber, dateKey } from "./format.js";
 
 const root = document.querySelector("[data-explorer]");
 const base = root.dataset.base;
@@ -8,7 +8,7 @@ const STATUS_ORDER = Object.keys(STATUS_LABELS);
 const LIST_FIELDS = ["aliases", "workloads", "developers", "owners", "operators", "tenants", "power_source_types"];
 
 const state = { q: "", status: "", region: "", country: "", workload: "", minmw: "", osm: false, wd: false, sort: "planned_power_mw", dir: "desc" };
-let projects = [], columns = [], map = null, layers = { osm: null, wd: null };
+let projects = [], columns = [], map = null, layers = { osm: null, wd: null }, lastRows = [];
 
 function readUrl() {
   const p = new URLSearchParams(location.search);
@@ -58,7 +58,7 @@ function compare(a, b) {
   let x = a[key], y = b[key];
   if (key === "location") { x = `${a.country_name} ${a.admin1 || ""} ${a.locality || ""}`; y = `${b.country_name} ${b.admin1 || ""} ${b.locality || ""}`; }
   if (key === "status") { x = STATUS_ORDER.indexOf(a.status); y = STATUS_ORDER.indexOf(b.status); }
-  if (key === "first_operational") { x = a.first_operational || a.first_operational_target; y = b.first_operational || b.first_operational_target; }
+  if (key === "first_operational") { x = dateKey(a.first_operational || a.first_operational_target); y = dateKey(b.first_operational || b.first_operational_target); }
   if (key === "investment_value") { x = a.investment_currency === "USD" ? a.investment_value : null; y = b.investment_currency === "USD" ? b.investment_value : null; }
   const xn = x == null || x === "", yn = y == null || y === "";
   if (xn || yn) return xn && yn ? a.name.localeCompare(b.name) : xn ? 1 : -1;
@@ -72,7 +72,7 @@ function statusCell(status) {
 }
 
 function powerText(r) {
-  const gen = r.onsite_generation_mw != null ? `<span class="sub">${fmtMW(r.onsite_generation_mw)} on-site gen.</span>` : "";
+  const gen = r.onsite_generation_mw != null ? `<span class="sub">${fmtMW(r.onsite_generation_mw, r.onsite_generation_mw_high, r.onsite_generation_qualifier)} on-site gen.</span>` : "";
   if (r.planned_power_mw == null) return gen;
   const scope = SCOPE_SHORT[r.planned_power_scope];
   return `${fmtMW(r.planned_power_mw, r.planned_power_mw_high, r.planned_power_qualifier)}${scope ? `<span class="scope">${scope}</span>` : ""}${gen}`;
@@ -114,22 +114,26 @@ function renderHeaders() {
 function barChart(el, items, { valueFormat = fmtNumber, href } = {}) {
   if (!items.length) { el.innerHTML = `<p class="empty">Nothing to chart for these filters.</p>`; return; }
   const max = Math.max(...items.map((d) => d.value));
-  const rowH = 26, labelW = 168, width = 560, valueW = 78, plotW = width - labelW - valueW;
+  const width = Math.max(300, Math.round(el.clientWidth || 560));
+  const rowH = 26, labelW = Math.min(168, Math.round(width * 0.36)), valueW = 78, plotW = width - labelW - valueW;
+  const maxChars = Math.max(10, Math.floor(labelW / 6.6));
   const height = items.length * rowH + 4;
   const bars = items.map((d, i) => {
     const w = Math.max(2, (d.value / max) * plotW);
     const y = i * rowH + 4;
-    const label = d.label.length > 26 ? `${d.label.slice(0, 25)}…` : d.label;
+    const label = d.label.length > maxChars ? `${d.label.slice(0, maxChars - 1)}…` : d.label;
     const rect = `<path class="bar" data-i="${i}" d="M${labelW},${y + 4}h${w - 4}a4,4 0 0 1 4,4v${rowH - 16}a4,4 0 0 1 -4,4h${-(w - 4)}z"></path>`;
-    return `<g>${href && d.href ? `<a href="${d.href}">` : ""}<text x="${labelW - 8}" y="${y + rowH / 2 + 1}" text-anchor="end" dominant-baseline="middle">${escapeHtml(label)}</text>${rect}${href && d.href ? "</a>" : ""}
-      <text class="value-label" x="${labelW + w + 6}" y="${y + rowH / 2 + 1}" dominant-baseline="middle">${escapeHtml(valueFormat(d.value, d))}</text>
-      <rect x="0" y="${y}" width="${width}" height="${rowH}" fill="transparent" data-i="${i}"></rect></g>`;
+    const linked = href && d.href;
+    return `<g><rect x="0" y="${y}" width="${width}" height="${rowH}" fill="transparent" data-i="${i}"></rect>${linked ? `<a href="${d.href}" data-i="${i}">` : ""}<text x="${labelW - 8}" y="${y + rowH / 2 + 1}" text-anchor="end" dominant-baseline="middle" data-i="${i}">${escapeHtml(label)}</text>${rect}${linked ? "</a>" : ""}
+      <text class="value-label" x="${labelW + w + 6}" y="${y + rowH / 2 + 1}" dominant-baseline="middle" data-i="${i}">${escapeHtml(valueFormat(d.value, d))}</text></g>`;
   }).join("");
-  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(el.dataset.label || "Bar chart")}">
+  const role = href ? `role="group"` : `role="img"`;
+  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" ${role} aria-label="${escapeHtml(el.dataset.label || "Bar chart")}">
     <line class="baseline" x1="${labelW}" x2="${labelW}" y1="0" y2="${height}"></line>${bars}</svg><div class="tooltip" hidden></div>`;
   const tip = el.querySelector(".tooltip");
   el.querySelector("svg").addEventListener("pointermove", (e) => {
-    const i = e.target.dataset ? e.target.dataset.i : undefined;
+    const hit = e.target.closest ? e.target.closest("[data-i]") : null;
+    const i = hit ? hit.dataset.i : undefined;
     if (i === undefined) { tip.hidden = true; return; }
     const d = items[Number(i)];
     tip.innerHTML = `<strong>${escapeHtml(d.label)}</strong>${escapeHtml(d.tip || valueFormat(d.value, d))}`;
@@ -143,7 +147,7 @@ function barChart(el, items, { valueFormat = fmtNumber, href } = {}) {
 
 function columnChart(el, items) {
   if (!items.length) { el.innerHTML = `<p class="empty">Nothing to chart for these filters.</p>`; return; }
-  const width = 560, height = 220, left = 30, bottom = 24, top = 10;
+  const width = Math.max(300, Math.round(el.clientWidth || 560)), height = 220, left = 30, bottom = 24, top = 10;
   const max = Math.max(...items.map((d) => d.value));
   const step = (width - left) / items.length;
   const bw = Math.min(42, step - 6);
@@ -157,7 +161,7 @@ function columnChart(el, items) {
       <text x="${x + bw / 2}" y="${height - bottom + 15}" text-anchor="middle">${escapeHtml(d.label)}</text>
       <rect x="${left + i * step}" y="${top}" width="${step}" height="${height - top - bottom}" fill="transparent" data-i="${i}"></rect>`;
   }).join("");
-  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(el.dataset.label || "Column chart")}">${grid}<line class="baseline" x1="${left}" x2="${width}" y1="${height - bottom}" y2="${height - bottom}"></line>${cols}</svg><div class="tooltip" hidden></div>`;
+  el.innerHTML = `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" role="img" aria-label="${escapeHtml(el.dataset.label || "Column chart")}">${grid}<line class="baseline" x1="${left}" x2="${width}" y1="${height - bottom}" y2="${height - bottom}"></line>${cols}</svg><div class="tooltip" hidden></div>`;
   const tip = el.querySelector(".tooltip");
   el.querySelector("svg").addEventListener("pointermove", (e) => {
     const i = e.target.dataset ? e.target.dataset.i : undefined;
@@ -173,6 +177,7 @@ function columnChart(el, items) {
 }
 
 function renderCharts(rows) {
+  lastRows = rows;
   const counts = STATUS_ORDER.map((s) => ({ label: STATUS_LABELS[s], value: rows.filter((r) => r.status === s).length })).filter((d) => d.value);
   barChart(document.getElementById("chart-status"), counts, { valueFormat: (v) => `${v}` });
   const top = rows.filter((r) => r.planned_power_mw != null).sort((a, b) => b.planned_power_mw - a.planned_power_mw).slice(0, 12)
@@ -193,13 +198,14 @@ function renderCharts(rows) {
 
 function csvEscape(v) {
   if (v == null) return "";
-  const s = Array.isArray(v) ? v.join("; ") : String(v);
-  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  let s = Array.isArray(v) ? v.join("; ") : String(v);
+  if (typeof v === "string" && /^[=+\-@\t\r]/.test(s)) s = `'${s}`; // keep spreadsheets from evaluating text
+  return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
 function downloadCsv(rows) {
   const lines = [columns.join(",")].concat(rows.map((r) => columns.map((c) => csvEscape(r[c])).join(",")));
-  const blob = new Blob([lines.join("\n") + "\n"], { type: "text/csv;charset=utf-8" });
+  const blob = new Blob(["\ufeff" + lines.join("\n") + "\n"], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "data-center-builds-filtered.csv";
@@ -216,6 +222,12 @@ function tooltipFor(p) {
   return `<strong>${escapeHtml(r.name)}</strong>${escapeHtml(STATUS_LABELS[r.status])} · ${escapeHtml(place)}${r.planned_power_mw != null ? `<br>${fmtMW(r.planned_power_mw, r.planned_power_mw_high, r.planned_power_qualifier)} planned${SCOPE_SHORT[r.planned_power_scope] ? ` (${SCOPE_SHORT[r.planned_power_scope]})` : ""}` : ""}`;
 }
 
+function clearSelection() {
+  const card = $("#selection");
+  if (card) card.hidden = true;
+  if (map) { map.highlight = null; map.draw(); }
+}
+
 function selectPoint(p) {
   const card = $("#selection");
   if (p.layer === "osm" || p.layer === "wikidata") {
@@ -229,14 +241,14 @@ function selectPoint(p) {
       <a href="${base}projects/${encodeURIComponent(r.id)}/">Open project page →</a>`;
   }
   card.hidden = false;
-  card.querySelector(".close").addEventListener("click", () => { card.hidden = true; map.highlight = null; map.draw(); });
+  card.querySelector(".close").addEventListener("click", clearSelection);
   map.highlight = p; map.draw();
 }
 
 async function loadLayer(name) {
   if (layers[name]) return layers[name];
   const url = `${base}assets/layers/${name === "osm" ? "osm" : "wikidata"}.json`;
-  const data = await fetch(url).then((r) => r.json());
+  const data = await getJson(url);
   layers[name] = data.points.map(([lon, lat, label, operator, ref]) => {
     const [x, y] = project(lon, lat);
     return { x, y, name: label, operator, layer: name === "osm" ? "osm" : "wikidata",
@@ -246,14 +258,29 @@ async function loadLayer(name) {
 }
 
 async function updateLayers() {
+  if (!map) return;
+  try {
+    if (state.osm) await loadLayer("osm");
+    if (state.wd) await loadLayer("wd");
+  } catch (err) {
+    console.error(err);
+  }
+  // Read the toggles again after loading, so a quick on/off cannot leave a layer drawn.
   const ctx = [];
-  if (state.osm) ctx.push(...await loadLayer("osm"));
-  if (state.wd) ctx.push(...await loadLayer("wd"));
+  if (state.osm && layers.osm) ctx.push(...layers.osm);
+  if (state.wd && layers.wd) ctx.push(...layers.wd);
   map.setContext(ctx);
+}
+
+async function getJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
+  return response.json();
 }
 
 function update({ refit = false } = {}) {
   const rows = projects.filter(matches).sort(compare);
+  if (map && map.highlight && map.highlight.row && !rows.includes(map.highlight.row)) clearSelection();
   $("#count").textContent = `${rows.length} of ${projects.length} projects`;
   renderTable(rows);
   renderHeaders();
@@ -281,26 +308,21 @@ function syncCountryOptions() {
 
 async function init() {
   readUrl();
-  const [api, basemap] = await Promise.all([
-    fetch(`${base}api/v1/projects.json`).then((r) => r.json()),
-    loadBasemap(`${base}assets/basemap.json`),
-  ]);
+  const api = await getJson(`${base}api/v1/projects.json`);
   columns = api.columns;
   projects = api.projects.map((r) => ({ ...r, _xy: (([x, y]) => ({ x, y }))(project(r.lon, r.lat)) }));
   const regions = [...new Set(projects.map((r) => r.region).filter(Boolean))].sort();
   fillSelect($("#f-region"), regions.map((r) => [r, r]), state.region);
+  state.region = $("#f-region").value;
   syncCountryOptions();
-  for (const [id, key] of [["#f-q", "q"], ["#f-status", "status"], ["#f-workload", "workload"], ["#f-minmw", "minmw"]]) $(id).value = state[key];
+  // Unknown values from a hand-edited URL fall back to "all" instead of silently hiding rows.
+  for (const [id, key] of [["#f-q", "q"], ["#f-status", "status"], ["#f-workload", "workload"], ["#f-minmw", "minmw"]]) {
+    $(id).value = state[key];
+    state[key] = $(id).value;
+  }
+  if (!columns.includes(state.sort) && !["location", "status"].includes(state.sort)) state.sort = "planned_power_mw";
+  if (!["asc", "desc"].includes(state.dir)) state.dir = "desc";
   $("#f-osm").checked = state.osm; $("#f-wd").checked = state.wd;
-
-  map = new AtlasMap($("#map"), basemap, {
-    tooltip: tooltipFor, onSelect: selectPoint,
-    onReset: () => map.fitPoints(projects.filter(matches).map((r) => r._xy), 30),
-    label: "World map of the filtered data center builds. The table below lists the same projects.",
-  });
-  const filtered = update();
-  if (state.country || state.region || state.q) map.fitPoints(filtered.map((r) => r._xy), 30);
-  if (state.osm || state.wd) updateLayers();
 
   let timer;
   $("#f-q").addEventListener("input", (e) => { clearTimeout(timer); timer = setTimeout(() => { state.q = e.target.value.trim(); update(); }, 120); });
@@ -315,7 +337,9 @@ async function init() {
     Object.assign(state, { q: "", status: "", region: "", country: "", workload: "", minmw: "" });
     for (const id of ["#f-q", "#f-status", "#f-region", "#f-workload", "#f-minmw"]) $(id).value = "";
     syncCountryOptions();
-    update(); map.fitWorld();
+    clearSelection();
+    update();
+    if (map) map.fitWorld();
   });
   $("#download").addEventListener("click", () => downloadCsv(projects.filter(matches).sort(compare)));
   root.querySelectorAll("th[data-sort] button").forEach((b) => b.addEventListener("click", () => {
@@ -324,10 +348,29 @@ async function init() {
     else { state.sort = key; state.dir = ["name", "location", "status"].includes(key) ? "asc" : "desc"; }
     update();
   }));
+  let resizeTimer;
+  new ResizeObserver(() => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => renderCharts(lastRows), 150); })
+    .observe(document.getElementById("chart-power"));
+  const filtered = update();
+
+  try {
+    const basemap = await loadBasemap(`${base}assets/basemap.json`);
+    map = new AtlasMap($("#map"), basemap, {
+      tooltip: tooltipFor, onSelect: selectPoint,
+      onReset: () => map.fitPoints(projects.filter(matches).map((r) => r._xy), 30),
+      label: "World map of the filtered data center builds. The table below lists the same projects.",
+    });
+    update();
+    if (state.country || state.region || state.q) map.fitPoints(filtered.map((r) => r._xy), 30);
+    if (state.osm || state.wd) updateLayers();
+  } catch (err) {
+    console.error(err);
+    const legend = $("#map .legend");
+    if (legend) legend.insertAdjacentHTML("beforeend", `<p class="note">The interactive map could not load. The table, filters and downloads still work.</p>`);
+  }
 }
 
 init().catch((err) => {
   console.error(err);
-  const note = $("#map .legend");
-  if (note) note.insertAdjacentHTML("beforeend", `<p class="note">The interactive map could not load. The table and downloads still work.</p>`);
+  $("#count").textContent = "Could not load the project list. Downloads on the Data & API page still work.";
 });

@@ -178,6 +178,11 @@ main { padding: 1.5rem 0 3rem; }
 }
 .tooltip strong { display: block; font-size: 0.86rem; }
 .tooltip[hidden] { display: none; }
+.tooltip.selection { background: var(--surface); color: var(--ink); border: 1px solid var(--border); display: grid; gap: 0.2rem; padding: 0.6rem 2rem 0.6rem 0.7rem; max-width: min(300px, calc(100% - 20px)); }
+.tooltip.selection[hidden] { display: none; }
+.tooltip.selection a { color: var(--link); }
+.tooltip.selection .sub { color: var(--ink-2); }
+.tooltip.selection .close { position: absolute; top: 0.35rem; right: 0.5rem; color: var(--ink-2); text-decoration: none; font-size: 1rem; }
 
 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; }
 .dot.operating { background: var(--s-operating); }
@@ -221,9 +226,11 @@ tbody tr.selected { background: color-mix(in srgb, var(--focus) 12%, transparent
 .chart .gridline { stroke: var(--grid); stroke-width: 1; }
 .chart .baseline { stroke: var(--axis); stroke-width: 1; }
 
-.section { margin-top: 2rem; display: grid; gap: 0.75rem; }
+.section { margin-top: 2rem; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
 .section > p, .prose p, .prose li { color: var(--ink-2); max-width: 75ch; }
-.prose { display: grid; gap: 0.8rem; max-width: 78ch; }
+.prose { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.8rem; max-width: 78ch; }
+.prose blockquote { margin: 0; padding: 0.4rem 0.9rem; border-left: 3px solid var(--axis); background: var(--surface); }
+p code, li code, td code, blockquote, .prose a { overflow-wrap: anywhere; }
 .prose h2 { margin-top: 1.2rem; }
 .prose ul, .prose ol { margin: 0; padding-left: 1.25rem; display: grid; gap: 0.3rem; }
 .prose table { font-size: 0.86rem; }

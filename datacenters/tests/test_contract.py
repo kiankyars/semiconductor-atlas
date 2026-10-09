@@ -113,6 +113,37 @@ class ValidateProjectTest(unittest.TestCase):
         record["summary"] = " padded"
         self.assertViolation(record, "leading or trailing whitespace")
 
+    def test_rejects_hostile_values(self):
+        record = copy.deepcopy(self.record)
+        record["metrics"][0]["value"] = float("inf")
+        self.assertViolation(record, "metrics[0].value")
+        record = copy.deepcopy(self.record)
+        record["summary"] = "bad\x0bcontrol"
+        self.assertViolation(record, "control or invalid Unicode")
+        record = copy.deepcopy(self.record)
+        record["name"] = "lone \ud800 surrogate"
+        self.assertViolation(record, "control or invalid Unicode")
+        for path, value in ((("location", "country"), "US\n"), (("metrics", 4, "unit"), "USD\n"),
+                            (("sources", 0, "id"), "s1\n"), (("status_as_of",), "2026-03-01\n")):
+            record = copy.deepcopy(self.record)
+            target = record
+            for key in path[:-1]:
+                target = target[key]
+            target[path[-1]] = value
+            self.assertTrue(validate_project(record), path)
+        record = copy.deepcopy(self.record)
+        record["aliases"] = [["nested"]]
+        self.assertViolation(record, "aliases")
+        record = copy.deepcopy(self.record)
+        record["metrics"][0]["source_ids"] = [["s1"]]
+        self.assertViolation(record, "metrics[0].source_ids")
+        record = copy.deepcopy(self.record)
+        del record["metrics"][3]["phase_label"]
+        self.assertViolation(record, "required when applies_to is 'phase'")
+        record = copy.deepcopy(self.record)
+        record["last_reviewed"] = "2099-01-01"
+        self.assertViolation(record, "last_reviewed: cannot be in the future")
+
     def test_collection_checks_identity_and_relations(self):
         a, b = load("example-cloud-springfield"), load("example-ai-riverside")
         self.assertTrue(any("duplicate project id" in e for e in validate_collection([a, a, b])))

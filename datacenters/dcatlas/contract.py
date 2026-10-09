@@ -8,6 +8,7 @@ source", not zero.
 from __future__ import annotations
 
 import datetime as _dt
+import math
 import re
 from typing import Any, Iterable
 
@@ -22,6 +23,7 @@ PARTIAL_DATE_PATTERN = re.compile(
 COUNTRY_PATTERN = re.compile(r"^[A-Z]{2}$")
 CURRENCY_PATTERN = re.compile(r"^[A-Z]{3}$")
 URL_PATTERN = re.compile(r"^https?://[^\s/$.?#][^\s]*$")
+FORBIDDEN_TEXT = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\ud800-\udfff\ufffe\uffff]")
 
 STATUSES = (
     "proposed",
@@ -160,7 +162,7 @@ class ContractError(ValueError):
 
 def partial_date_bounds(value: str) -> tuple[_dt.date, _dt.date]:
     """Return the inclusive calendar interval named by a partial date."""
-    if not PARTIAL_DATE_PATTERN.match(value):
+    if not PARTIAL_DATE_PATTERN.fullmatch(value):
         raise ContractError(f"invalid partial date {value!r}")
     year = int(value[:4])
     rest = value[5:]
@@ -200,7 +202,8 @@ def date_precision(value: str) -> str:
 
 
 def _is_number(value: Any) -> bool:
-    return isinstance(value, (int, float)) and not isinstance(value, bool) and value == value
+    return (isinstance(value, (int, float)) and not isinstance(value, bool)
+            and math.isfinite(value))
 
 
 def _check_text(errors: list[str], where: str, value: Any, *, max_len: int | None = None) -> None:
@@ -209,12 +212,19 @@ def _check_text(errors: list[str], where: str, value: Any, *, max_len: int | Non
         return
     if value != value.strip():
         errors.append(f"{where}: must not have leading or trailing whitespace")
+    if FORBIDDEN_TEXT.search(value):
+        errors.append(f"{where}: contains control or invalid Unicode characters")
     if max_len is not None and len(value) > max_len:
         errors.append(f"{where}: longer than {max_len} characters")
 
 
+def _string_list(values: Any) -> bool:
+    return (isinstance(values, list) and all(isinstance(v, str) for v in values)
+            and len(set(values)) == len(values))
+
+
 def _check_day(errors: list[str], where: str, value: Any) -> _dt.date | None:
-    if not isinstance(value, str) or not DAY_PATTERN.match(value):
+    if not isinstance(value, str) or not DAY_PATTERN.fullmatch(value):
         errors.append(f"{where}: must be a YYYY-MM-DD date")
         return None
     try:
@@ -261,7 +271,7 @@ def _check_keys(errors: list[str], where: str, obj: Any, required: Iterable[str]
 
 def _check_source_ids(errors: list[str], where: str, value: Any, known: set[str],
                       used: set[str]) -> None:
-    if not isinstance(value, list) or not value:
+    if not isinstance(value, list) or not value or not all(isinstance(v, str) for v in value):
         errors.append(f"{where}: must be a non-empty list of source ids")
         return
     if len(set(value)) != len(value):
@@ -281,11 +291,14 @@ def validate_project(record: Any) -> list[str]:
     if record.get("schema_version") != SCHEMA_VERSION:
         errors.append(f"schema_version: must be {SCHEMA_VERSION!r}")
     rid = record.get("id")
-    if not isinstance(rid, str) or not ID_PATTERN.match(rid) or len(rid) > 64:
+    if not isinstance(rid, str) or not ID_PATTERN.fullmatch(rid) or len(rid) > 64:
         errors.append("id: must be a lowercase kebab-case slug of at most 64 characters")
     _check_text(errors, "name", record.get("name"), max_len=160)
     _check_text(errors, "summary", record.get("summary"), max_len=MAX_SUMMARY)
     reviewed = _check_day(errors, "last_reviewed", record.get("last_reviewed"))
+    tomorrow = _dt.datetime.now(_dt.timezone.utc).date() + _dt.timedelta(days=1)
+    if reviewed and reviewed > tomorrow:
+        errors.append("last_reviewed: cannot be in the future")
 
     known: set[str] = set()
     used: set[str] = set()
@@ -301,14 +314,14 @@ def validate_project(record: Any) -> list[str]:
                            ("archived_url",)):
             continue
         sid = source.get("id")
-        if not isinstance(sid, str) or not SOURCE_ID_PATTERN.match(sid):
+        if not isinstance(sid, str) or not SOURCE_ID_PATTERN.fullmatch(sid):
             errors.append(f"{where}.id: must look like s1, s2, ...")
         elif sid in known:
             errors.append(f"{where}.id: duplicate source id {sid!r}")
         else:
             known.add(sid)
         url = source.get("url")
-        if not isinstance(url, str) or not URL_PATTERN.match(url):
+        if not isinstance(url, str) or not URL_PATTERN.fullmatch(url):
             errors.append(f"{where}.url: must be an http(s) URL")
         elif url in seen_urls:
             errors.append(f"{where}.url: duplicate source URL")
@@ -316,7 +329,7 @@ def validate_project(record: Any) -> list[str]:
             seen_urls.add(url)
         if "archived_url" in source and (
             not isinstance(source["archived_url"], str)
-            or not URL_PATTERN.match(source["archived_url"])
+            or not URL_PATTERN.fullmatch(source["archived_url"])
         ):
             errors.append(f"{where}.archived_url: must be an http(s) URL")
         _check_text(errors, f"{where}.title", source.get("title"), max_len=300)
@@ -334,18 +347,18 @@ def validate_project(record: Any) -> list[str]:
 
     for key in ("aliases", "tags"):
         values = record.get(key, [])
-        if not isinstance(values, list) or len(set(values)) != len(values):
-            errors.append(f"{key}: must be a list without duplicates")
+        if not _string_list(values):
+            errors.append(f"{key}: must be a list of strings without duplicates")
             continue
         for j, value in enumerate(values):
             _check_text(errors, f"{key}[{j}]", value, max_len=160)
     related = record.get("related_ids", [])
-    if not isinstance(related, list) or any(
-        not isinstance(v, str) or not ID_PATTERN.match(v) or v == rid for v in related
+    if not _string_list(related) or any(
+        not ID_PATTERN.fullmatch(v) or v == rid for v in related
     ):
-        errors.append("related_ids: must be a list of other project ids")
+        errors.append("related_ids: must be a list of other project ids without duplicates")
     workloads = record.get("workloads", [])
-    if not isinstance(workloads, list) or len(set(workloads)) != len(workloads):
+    if not _string_list(workloads):
         errors.append("workloads: must be a list without duplicates")
     else:
         for j, value in enumerate(workloads):
@@ -357,7 +370,7 @@ def validate_project(record: Any) -> list[str]:
     if _check_keys(errors, "location", location,
                    ("country", "lat", "lon", "precision", "source_ids"),
                    ("admin1", "admin2", "locality", "note")):
-        if not isinstance(location.get("country"), str) or not COUNTRY_PATTERN.match(
+        if not isinstance(location.get("country"), str) or not COUNTRY_PATTERN.fullmatch(
             location["country"]
         ):
             errors.append("location.country: must be an ISO 3166-1 alpha-2 code")
@@ -391,7 +404,7 @@ def validate_project(record: Any) -> list[str]:
             continue
         _check_text(errors, f"{where}.name", party.get("name"), max_len=160)
         _check_enum(errors, f"{where}.role", party.get("role"), PARTY_ROLES)
-        key = (party.get("name"), party.get("role"))
+        key = (str(party.get("name")), str(party.get("role")))
         if key in party_keys:
             errors.append(f"{where}: duplicate name and role")
         party_keys.add(key)
@@ -468,7 +481,7 @@ def _validate_metric(errors: list[str], where: str, metric: Any, known: set[str]
     unit = metric.get("unit")
     units = METRIC_UNITS[name]
     if units is None:
-        if not isinstance(unit, str) or not CURRENCY_PATTERN.match(unit):
+        if not isinstance(unit, str) or not CURRENCY_PATTERN.fullmatch(unit):
             errors.append(f"{where}.unit: investment must use an ISO 4217 currency code")
     else:
         _check_enum(errors, f"{where}.unit", unit, units)
@@ -483,6 +496,8 @@ def _validate_metric(errors: list[str], where: str, metric: Any, known: set[str]
         _check_text(errors, f"{where}.accelerator_model", metric["accelerator_model"], max_len=120)
     applies_to = metric.get("applies_to")
     _check_enum(errors, f"{where}.applies_to", applies_to, APPLIES_TO)
+    if applies_to == "phase" and "phase_label" not in metric:
+        errors.append(f"{where}.phase_label: required when applies_to is 'phase'")
     if "phase_label" in metric:
         if applies_to != "phase":
             errors.append(f"{where}.phase_label: only allowed when applies_to is 'phase'")

@@ -50,6 +50,8 @@ PROJECT_COLUMNS: list[Column] = [
     ("operational_power_as_of", "string", "Date of the operational-power statement."),
     ("onsite_generation_mw", "number", "Headline on-site generation capacity in MW, kept apart "
      "from demand."),
+    ("onsite_generation_mw_high", "number", "Upper bound when the statement is a range."),
+    ("onsite_generation_qualifier", "string", "Qualifier of the on-site generation statement."),
     ("onsite_generation_basis", "string", "Basis of the on-site generation statement."),
     ("onsite_generation_as_of", "string", "Date of the on-site generation statement."),
     ("investment_value", "number", "Headline announced investment, in investment_currency."),
@@ -59,6 +61,8 @@ PROJECT_COLUMNS: list[Column] = [
     ("investment_qualifier", "string", "Qualifier of the investment statement."),
     ("investment_as_of", "string", "Date of the investment statement."),
     ("accelerators", "number", "Headline accelerator (GPU/TPU/other) count."),
+    ("accelerators_high", "number", "Upper bound when the accelerator statement is a range."),
+    ("accelerators_qualifier", "string", "Qualifier of the accelerator statement."),
     ("accelerator_model", "string", "Accelerator model named by the source."),
     ("accelerators_basis", "string", "planned, installed or operational."),
     ("announced", "string", "Earliest actual announcement date (partial date)."),

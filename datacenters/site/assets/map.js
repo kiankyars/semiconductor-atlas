@@ -59,24 +59,37 @@ export class AtlasMap {
     this._bind();
     this.resize();
     new ResizeObserver(() => { this.resize(); }).observe(container);
+    this._watchPixelRatio();
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => this.draw());
   }
 
   setPoints(points) { this.points = points.slice().sort((a, b) => b.r - a.r); this.draw(); }
   setContext(points) { this.context = points; this.draw(); }
 
+  _watchPixelRatio() {
+    const query = matchMedia(`(resolution: ${window.devicePixelRatio || 1}dppx)`);
+    query.addEventListener("change", () => { this.resize(); this._watchPixelRatio(); }, { once: true });
+  }
+
+  _worldK() {
+    return Math.min(this.w / this.basemap.width, this.h / this.basemap.height) * 0.98;
+  }
+
   resize() {
-    const rect = this.container.getBoundingClientRect();
+    // The canvas fills the padding box, so size it from clientWidth/clientHeight.
+    const width = this.container.clientWidth, height = this.container.clientHeight;
     const dpr = window.devicePixelRatio || 1;
     const first = !this.w;
-    this.w = rect.width; this.h = rect.height; this.dpr = dpr;
-    this.canvas.width = Math.round(rect.width * dpr);
-    this.canvas.height = Math.round(rect.height * dpr);
-    if (first) this.fitWorld(); else this.draw();
+    this.w = width; this.h = height; this.dpr = dpr;
+    this.canvas.width = Math.round(width * dpr);
+    this.canvas.height = Math.round(height * dpr);
+    if (first) { this.fitWorld(); return; }
+    this.minK = this._worldK() * 0.9;
+    if (this.k < this.minK) this.fitWorld(); else this.draw();
   }
 
   fitWorld() {
-    const k = Math.min(this.w / this.basemap.width, this.h / this.basemap.height) * 0.98;
+    const k = this._worldK();
     this.k = k;
     this.tx = (this.w - this.basemap.width * k) / 2;
     this.ty = (this.h - this.basemap.height * k) / 2;
@@ -91,7 +104,7 @@ export class AtlasMap {
     const pad = 40;
     const kx = (this.w - 2 * pad) / Math.max(x1 - x0, 1);
     const ky = (this.h - 2 * pad) / Math.max(y1 - y0, 1);
-    const worldK = Math.min(this.w / this.basemap.width, this.h / this.basemap.height) * 0.98;
+    const worldK = this._worldK();
     this.minK = worldK * 0.9;
     this.k = Math.max(worldK, Math.min(kx, ky, maxK || 60));
     this.tx = this.w / 2 - ((x0 + x1) / 2) * this.k;
@@ -201,7 +214,7 @@ export class AtlasMap {
   _bind() {
     const c = this.canvas;
     const pointers = new Map();
-    let drag = null, pinch = null, moved = false;
+    let drag = null, pinch = null, moved = false, slop = 3;
     const local = (e) => { const r = c.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
     // Cooperative zoom: plain scrolling keeps scrolling the page until the map is clicked.
     let active = false, hintTimer = null;
@@ -227,7 +240,8 @@ export class AtlasMap {
       active = true;
       c.setPointerCapture(e.pointerId);
       pointers.set(e.pointerId, local(e));
-      moved = false;
+      slop = e.pointerType === "mouse" ? 3 : 10; // fingers jitter more than mice
+      if (pointers.size === 1) moved = false;
       if (pointers.size === 1) { drag = { p: local(e), tx: this.tx, ty: this.ty }; c.classList.add("dragging"); }
       if (pointers.size === 2) {
         const [a, b] = [...pointers.values()];
@@ -247,19 +261,24 @@ export class AtlasMap {
       }
       if (drag) {
         const dx = p[0] - drag.p[0], dy = p[1] - drag.p[1];
-        if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+        if (Math.abs(dx) + Math.abs(dy) > slop) moved = true;
         this.tx = drag.tx + dx; this.ty = drag.ty + dy; this.draw();
         this._hideTip();
         return;
       }
       if (e.pointerType === "mouse") this._hover(p);
     });
-    const end = (e) => {
+    const end = (e, cancelled = false) => {
       pointers.delete(e.pointerId);
-      if (pointers.size < 2) pinch = null;
+      if (pointers.size === 1 && pinch) {
+        // Pinch ended with one finger still down: keep panning from where it is.
+        pinch = null;
+        const [p] = [...pointers.values()];
+        drag = { p, tx: this.tx, ty: this.ty };
+      }
       if (pointers.size === 0) {
         c.classList.remove("dragging");
-        if (drag && !moved) {
+        if (drag && !moved && !cancelled) {
           const target = this.hit(...local(e));
           if (target && this.options.onSelect) this.options.onSelect(target);
           else if (target) this._hover(local(e), true);
@@ -267,8 +286,8 @@ export class AtlasMap {
         drag = null;
       }
     };
-    c.addEventListener("pointerup", end);
-    c.addEventListener("pointercancel", end);
+    c.addEventListener("pointerup", (e) => end(e));
+    c.addEventListener("pointercancel", (e) => end(e, true));
     c.addEventListener("pointerleave", () => this._hideTip());
     c.addEventListener("dblclick", (e) => { const [sx, sy] = local(e); this.zoomAt(2, sx, sy); });
     const controls = this.container.querySelector(".map-controls");

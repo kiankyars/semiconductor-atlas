@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+from decimal import ROUND_HALF_UP, Decimal
 import json
 import re
 import shutil
@@ -88,7 +89,9 @@ def e(value: Any) -> str:
 # ---------- formatting (mirrors assets/format.js) ----------
 
 def fmt_number(value: float) -> str:
-    text = f"{value:,.1f}"
+    """One decimal, rounded half up (as JavaScript's toLocaleString does), no trailing .0."""
+    rounded = Decimal(str(value)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)
+    text = f"{rounded:,.1f}"
     return text[:-2] if text.endswith(".0") else text
 
 
@@ -163,8 +166,9 @@ ASSET_VERSION = ""  # set by build(): short content hash of site/assets for cach
 
 def page(*, title: str, description: str, body: str, depth: int, path: str, base_url: str,
          current: str = "", head: str = "", scripts: tuple[str, ...] = (),
-         data_as_of: str = "") -> str:
-    rel = "../" * depth
+         data_as_of: str = "", absolute: bool = False) -> str:
+    # The 404 page is served at arbitrary paths, so it links absolutely.
+    rel = base_url if absolute else "../" * depth
     v = f"?v={ASSET_VERSION}" if ASSET_VERSION else ""
     current_attr = ' aria-current="page"'
     nav = "".join(
@@ -232,15 +236,16 @@ def load_records(projects_dir: Path) -> list[dict[str, Any]]:
     return records
 
 
-def _api_row(row: dict[str, Any]) -> dict[str, Any]:
-    out = {}
-    for key, value in row.items():
-        if key in ("aliases", "workloads", "developers", "owners", "operators", "tenants",
-                   "power_source_types"):
-            out[key] = value.split(LIST_SEP) if value else []
-        else:
-            out[key] = export._cell(value)
-    return out
+LIST_FIELDS = ("aliases", "workloads", "developers", "owners", "operators", "tenants",
+               "power_source_types")
+
+
+def _api_row(row: dict[str, Any], record: dict[str, Any]) -> dict[str, Any]:
+    derived = headline(record)
+    lists = {"aliases": record.get("aliases", []), "workloads": record.get("workloads", [])}
+    lists.update({k: derived[k] for k in LIST_FIELDS if k in derived})
+    return {key: list(lists[key]) if key in LIST_FIELDS else export._cell(value)
+            for key, value in row.items()}
 
 
 def _write(path: Path, data: bytes | str) -> None:
@@ -258,6 +263,8 @@ def build(*, root: Path, out_dir: Path, base_url: str = DEFAULT_BASE_URL,
     if out_dir.exists() and any(out_dir.iterdir()):
         raise FileExistsError(f"{out_dir} is not empty")
     records = load_records(root / "projects")
+    if not records:
+        raise ValueError(f"no project records in {root / 'projects'}")
     countries = Countries(root / "vendor" / "countries.json")
     layer_meta: dict[str, dict[str, Any]] = {}
     layer_features: dict[str, list[dict[str, Any]]] = {}
@@ -336,7 +343,8 @@ def build(*, root: Path, out_dir: Path, base_url: str = DEFAULT_BASE_URL,
     # ---- static JSON API ----
     api = out_dir / "api" / "v1"
     columns = [c for c, _, _ in tables["projects"][0]]
-    api_rows = [_api_row(r) for r in rows]
+    record_by_id = {r["id"]: r for r in records}
+    api_rows = [_api_row(r, record_by_id[r["id"]]) for r in rows]
     license_note = {"curated": export.CURATED_LICENSE, "osm_layer": export.OSM_LICENSE,
                     "wikidata_layer": export.WIKIDATA_LICENSE}
     _write(api / "projects.json", export.json_bytes({
@@ -409,9 +417,10 @@ def build(*, root: Path, out_dir: Path, base_url: str = DEFAULT_BASE_URL,
     _write(out_dir / "404.html", page(
         title="Not found", description="Page not found.", depth=0, path="404.html",
         base_url=base_url, data_as_of=data_as_of,
-        body='<div class="lede"><h1>Page not found</h1><p>Try the <a href="./">explorer</a> or '
-             'the <a href="./projects/">list of all projects</a>.</p></div>',
-        head=f'<base href="{e(base_url)}">'))
+        current="404", absolute=True,
+        body=f'<div class="lede"><h1>Page not found</h1><p>Try the <a href="{e(base_url)}">'
+             f'explorer</a> or the <a href="{e(base_url)}projects/">list of all projects</a>.'
+             '</p></div>'))
     _write(out_dir / "feed.xml", _feed(records, base_url, data_as_of))
     _write(out_dir / "sitemap.xml", _sitemap(records, base_url, data_as_of))
     _write(out_dir / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base_url}sitemap.xml\n")
@@ -497,7 +506,9 @@ def _table_row(r: dict[str, Any], rel: str) -> str:
         if scope:
             power += f'<span class="scope">{e(scope)}</span>'
     if r["onsite_generation_mw"] is not None:
-        power += f'<span class="sub">{e(fmt_mw(r["onsite_generation_mw"]))} on-site gen.</span>'
+        generation = fmt_mw(r["onsite_generation_mw"], r["onsite_generation_mw_high"],
+                            r["onsite_generation_qualifier"])
+        power += f'<span class="sub">{e(generation)} on-site gen.</span>'
     money = fmt_money(r["investment_value"], r["investment_value_high"],
                       r["investment_currency"], r["investment_qualifier"])
     lead = []
@@ -714,7 +725,9 @@ def _project_page(record: dict[str, Any], row: dict[str, Any], ctx: dict) -> str
            e(f"{SCOPE_LABELS.get(derived['operational_power_scope'], '')} · "
              f"{fmt_date(derived['operational_power_as_of'])} ")
            + _cites(derived["operational_power_source_ids"]) if operational else ""),
-        kv("On-site generation", e(fmt_mw(derived["onsite_generation_mw"]))
+        kv("On-site generation", e(fmt_mw(derived["onsite_generation_mw"],
+                                          derived["onsite_generation_mw_high"],
+                                          derived["onsite_generation_qualifier"]))
            if derived["onsite_generation_mw"] is not None else "",
            e(f"{(derived['onsite_generation_basis'] or '').replace('_', ' ')} · "
              f"{fmt_date(derived['onsite_generation_as_of'])} ")
@@ -722,7 +735,10 @@ def _project_page(record: dict[str, Any], row: dict[str, Any], ctx: dict) -> str
            if derived["onsite_generation_mw"] is not None else ""),
         kv("Investment", money, e(f"{fmt_date(derived['investment_as_of'])} ")
            + _cites(derived["investment_source_ids"]) if money else ""),
-        kv("Accelerators", e(f"{fmt_number(derived['accelerators'])}")
+        kv("Accelerators", e(fmt_metric({
+               "metric": "accelerators", "value": derived["accelerators"],
+               "value_high": derived["accelerators_high"], "unit": "count",
+               "qualifier": derived["accelerators_qualifier"]}))
            if derived["accelerators"] else "",
            e(f"{derived['accelerator_model'] or ''} {derived['accelerators_basis'] or ''} ")
            + _cites(derived["accelerators_source_ids"]) if derived["accelerators"] else ""),
@@ -874,6 +890,11 @@ def _data_page(tables, manifest, layer_meta, parquet, ctx) -> str:
     rows_html = []
     info = list(FILE_INFO) + [(name, f"{name[:-8]} table", "Parquet") for name in parquet]
     for name, description, fmt in info:
+        if name == "manifest.json":
+            rows_html.append(
+                f'<tr><td><a href="{e(name)}" download>{e(name)}</a></td><td>{e(fmt)}</td>'
+                f"<td>{e(description)}</td><td></td><td></td><td>not self-listed</td></tr>")
+            continue
         if name not in files:
             continue
         table = name.rsplit(".", 1)[0]

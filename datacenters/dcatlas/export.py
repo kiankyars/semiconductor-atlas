@@ -69,9 +69,9 @@ def csv_bytes(columns: list[Column], rows: list[dict[str, Any]]) -> bytes:
 
 def json_bytes(value: Any, *, pretty: bool = False) -> bytes:
     if pretty:
-        text = json.dumps(value, ensure_ascii=False, indent=2, sort_keys=False)
+        text = json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)
     else:
-        text = json.dumps(value, ensure_ascii=False, separators=(",", ":"), sort_keys=False)
+        text = json.dumps(value, ensure_ascii=False, separators=(",", ":"), allow_nan=False)
     return (text + "\n").encode("utf-8")
 
 
@@ -132,7 +132,8 @@ def write_sqlite(path: Path, tables: dict[str, tuple[list[Column], list[dict[str
                 con.execute(f'CREATE INDEX "{name}_country" ON "{name}" (country)')
         con.execute("CREATE TABLE records (id TEXT PRIMARY KEY, json TEXT NOT NULL)")
         con.executemany("INSERT INTO records VALUES (?, ?)", [
-            (r["id"], json.dumps(r, ensure_ascii=False, sort_keys=True)) for r in records
+            (r["id"], json.dumps(r, ensure_ascii=False, sort_keys=True, allow_nan=False))
+            for r in records
         ])
         con.commit()
         con.execute("VACUUM")
@@ -212,7 +213,7 @@ def datapackage(tables: dict[str, tuple[list[Column], list[dict[str, Any]]]],
         "description": meta["description"],
         "homepage": meta["base_url"],
         "version": meta["version"],
-        "created": meta["data_as_of"],
+        "created": f"{meta['data_as_of']}T00:00:00Z",
         "licenses": [CURATED_LICENSE, OSM_LICENSE, WIKIDATA_LICENSE],
         "sources": meta["package_sources"],
         "contributors": [{"title": "Open Data Center Atlas maintainers", "role": "author"}],

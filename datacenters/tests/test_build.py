@@ -122,6 +122,27 @@ class BuildTest(unittest.TestCase):
         methodology = (self.out / "methodology/index.html").read_text()
         self.assertIn('id="derived-headline-values"', methodology)
 
+    def test_xml_outputs_parse_and_rounding_matches_js(self):
+        from xml.etree import ElementTree
+
+        from dcatlas.site import fmt_mw, fmt_number
+
+        ElementTree.parse(self.out / "feed.xml")
+        ElementTree.parse(self.out / "sitemap.xml")
+        with zipfile.ZipFile(self.out / "data/datacenters.xlsx") as zf:
+            for name in zf.namelist():
+                if name.endswith(".xml"):
+                    ElementTree.fromstring(zf.read(name))
+        self.assertEqual(fmt_number(1.25), "1.3")  # half up, like toLocaleString
+        self.assertEqual(fmt_mw(2250, None, "up_to"), "up to 2.3 GW")
+        api = json.loads((self.out / "api/v1/projects.json").read_text())
+        self.assertEqual(api["projects"][0]["aliases"], [])
+        page = (self.out / "projects/example-ai-riverside/index.html").read_text()
+        self.assertIn("&gt; 100,000", page)
+        not_found = (self.out / "404.html").read_text()
+        self.assertNotIn("<base", not_found)
+        self.assertIn(f'href="{BASE}assets/style.css', not_found)
+
     def test_rebuild_is_byte_identical(self):
         with tempfile.TemporaryDirectory() as tmp:
             second = Path(tmp) / "out"

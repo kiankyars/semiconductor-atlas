@@ -29,7 +29,10 @@ def inline(text: str, link: Callable[[str], str] = lambda u: u) -> str:
 
     text = _INLINE_CODE.sub(stash, text)
     text = html.escape(text, quote=False)
-    text = _LINK.sub(lambda m: f'<a href="{html.escape(link(m.group(2)))}">{m.group(1)}</a>', text)
+    text = _LINK.sub(
+        lambda m: f'<a href="{html.escape(link(html.unescape(m.group(2))))}">{m.group(1)}</a>',
+        text,
+    )
     text = _BOLD.sub(r"<strong>\1</strong>", text)
     text = _ITALIC.sub(r"<em>\1</em>", text)
     return re.sub(r"\x00(\d+)\x00", lambda m: codes[int(m.group(1))], text)

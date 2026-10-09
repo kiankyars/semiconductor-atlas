@@ -55,3 +55,14 @@ export function fmtDate(value) {
   const month = MONTHS[Number(parts[0]) - 1];
   return parts.length === 1 ? `${month} ${y}` : `${Number(parts[1])} ${month} ${y}`;
 }
+
+// Sortable start-of-interval key for partial dates (YYYY, YYYY-MM, YYYY-MM-DD, YYYY-Qn, YYYY-Hn).
+export function dateKey(value) {
+  if (!value) return null;
+  const year = Number(value.slice(0, 4)), rest = value.slice(5);
+  let month = 1, day = 1;
+  if (rest.startsWith("Q")) month = (Number(rest[1]) - 1) * 3 + 1;
+  else if (rest.startsWith("H")) month = (Number(rest[1]) - 1) * 6 + 1;
+  else if (rest) { const parts = rest.split("-"); month = Number(parts[0]); if (parts[1]) day = Number(parts[1]); }
+  return Date.UTC(year, month - 1, day);
+}

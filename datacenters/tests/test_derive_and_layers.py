@@ -37,6 +37,19 @@ class HeadlineTest(unittest.TestCase):
         self.assertEqual(h["developers"], ["Example Cloud"])
         self.assertEqual(h["tenants"], ["Example AI Lab"])
 
+    def test_generation_and_accelerators_keep_qualifiers(self):
+        record = load("example-cloud-springfield")
+        record["metrics"].append({
+            "metric": "power_capacity", "value": 400, "qualifier": "up_to", "unit": "MW",
+            "basis": "permitted", "power_scope": "onsite_generation", "applies_to": "campus",
+            "as_of": "2026-01", "source_ids": ["s1"]})
+        h = headline(record)
+        self.assertEqual((h["onsite_generation_mw"], h["onsite_generation_qualifier"]),
+                         (400, "up_to"))
+        self.assertEqual(h["planned_power_mw"], 1000)  # generation never becomes demand
+        h = headline(load("example-ai-riverside"))
+        self.assertEqual((h["accelerators"], h["accelerators_qualifier"]), (100000, "more_than"))
+
     def test_it_load_used_when_it_is_the_only_scope(self):
         h = headline(load("example-ai-riverside"))
         self.assertIsNone(h["planned_power_mw"])
@@ -140,6 +153,7 @@ class MarkdownTest(unittest.TestCase):
         self.assertIn("<td>&lt;b&gt;</td>", html)
         self.assertIn("echo &lt;hi&gt;", html)
         self.assertIn("<blockquote><p>quoted</p></blockquote>", html)
+        self.assertIn('href="https://x.test/?a=1&amp;b=2"', render("[q](https://x.test/?a=1&b=2)"))
 
 
 if __name__ == "__main__":
