@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-mount-pleasant-durand-avenue",
+  "name": "Microsoft Mount Pleasant Durand Avenue datacenter campus",
+  "aliases": [
+    "Mount Pleasant Phase 3 (Durand & Hewitt Memorial Drive)"
+  ],
+  "summary": "Planned nine-building Microsoft datacenter campus near Durand Avenue in Mount Pleasant, Wisconsin, on a 791-acre parcel Microsoft says it bought in 2024. Village planning documents reported by WPR describe 5.2 million sq ft of development, including a 96,000 sq ft office and other related buildings, with an estimated taxable value of more than USD 7.97 billion. The plan commission recommended the site plan with conditions on traffic and water use, and the village board approved it unanimously in January 2026. Microsoft's construction page reports preliminary earthwork under way since March 2026 at a Phase 3 site at Durand Avenue and Hewitt Memorial Drive.",
+  "location": {
+    "country": "US",
+    "admin1": "Wisconsin",
+    "admin2": "Racine County",
+    "locality": "Mount Pleasant",
+    "lat": 42.6965,
+    "lon": -87.947,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Approximate point where Durand Avenue meets Hewitt Memorial Drive, the two roads Microsoft names for Phase 3, from Nominatim lookups of each road in Mount Pleasant. The 791-acre parcel boundary is not published in the sources."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-01",
+  "status_source_ids": [
+    "s5"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "A Microsoft spokesperson said the land was bought in 2024; a village spokesperson said it came from the village or private owners."
+    },
+    {
+      "name": "Village of Mount Pleasant",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "The plan commission recommended and the village board approved the site plan; the campus sits in a tax increment financing district."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7970000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The municipality's estimated taxable value for the development, from village planning documents reported by WPR; not a company investment figure."
+    },
+    {
+      "metric": "buildings",
+      "value": 9,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Datacenter buildings only; an office and other related buildings are additional."
+    },
+    {
+      "metric": "floor_area",
+      "value": 5200000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total development size from village planning documents reported by WPR; the office and related buildings are not broken out."
+    },
+    {
+      "metric": "land_area",
+      "value": 791,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2024",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "A Microsoft spokesperson, quoted by WPR and Spectrum News, gave 2024; Spectrum News itself said the land was bought the previous year (2025)."
+    },
+    {
+      "event": "announced",
+      "date": "2026-01-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Site plans became public ahead of the plan commission meeting; Microsoft called them preliminary."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-01-26",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Plan commission recommended approval on 2026-01-21 and the village board approved the site plan unanimously on 2026-01-26, conditional on a traffic study and compliance with water-use rules."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Microsoft's March 2026 update reports preliminary earthwork under way at Phase 3 (Durand and Hewitt Memorial Drive), starting mid-March. Epoch AI separately reports grading for a new 9-building design northwest of the first buildings by May 2026. No vertical construction timeline has been published."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.wpr.org/news/microsoft-15-more-data-centers-mount-pleasant",
+      "title": "Microsoft wants to build 15 more data centers in Mount Pleasant",
+      "publisher": "Wisconsin Public Radio",
+      "published": "2026-01-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wpr.org/news/mount-pleasant-approves-microsoft-data-center-expansion",
+      "title": "Mount Pleasant commission approves Microsoft's plans for data center expansion",
+      "publisher": "Wisconsin Public Radio",
+      "published": "2026-01-21",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/01/21/microsoft-to-expand-data-center-in-mount-pleasant-",
+      "title": "Microsoft to expand data center in Mount Pleasant",
+      "publisher": "Spectrum News 1",
+      "published": "2026-01-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260205013908/https://spectrumnews1.com/wi/milwaukee/news/2026/01/21/microsoft-to-expand-data-center-in-mount-pleasant-"
+    },
+    {
+      "id": "s4",
+      "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/01/27/mount-pleasant--microsoft--data-center-expansion--approval",
+      "title": "Mount Pleasant village board approves Microsoft data center expansion",
+      "publisher": "Spectrum News 1",
+      "published": "2026-01-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260223142131/https://spectrumnews1.com/wi/milwaukee/news/2026/01/27/mount-pleasant--microsoft--data-center-expansion--approval"
+    },
+    {
+      "id": "s5",
+      "url": "https://local.microsoft.com/blog/mount-pleasant-datacenter-project-update/",
+      "title": "Mount Pleasant datacenter project update",
+      "publisher": "Microsoft Local",
+      "published": "2026-07",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260911205220/https://local.microsoft.com/blog/mount-pleasant-datacenter-project-update/"
+    },
+    {
+      "id": "s6",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/microsoft-fairwater-wisconsin",
+      "title": "Microsoft Fairwater Wisconsin",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    }
+  ],
+  "related_ids": [
+    "microsoft-fairwater-mount-pleasant",
+    "microsoft-mount-pleasant-international-drive"
+  ],
+  "notes": "Village documents treat this as an additional campus separate from the Fairwater Phase 1 and 2 site, while Microsoft labels Durand and Hewitt Memorial Drive as Phase 3 of its Mount Pleasant work and Epoch AI folds a 9-building plan into its Fairwater Wisconsin projection; the sources do not explicitly state that these describe the same nine buildings. Spectrum News reports that part of the expansion land was originally part of the Foxconn project. status_as_of uses the first day of the month of the latest entry on Microsoft's month-dated update page. No power figure has been published; Microsoft told WPR an energy estimate was not available.",
+  "last_reviewed": "2026-10-09"
+}

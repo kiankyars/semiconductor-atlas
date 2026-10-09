@@ -1,0 +1,18 @@
+{
+  "endpoint": "https://overpass.openstreetmap.fr/api/interpreter",
+  "feature_count": 4880,
+  "features_sha256": "80a51284e197373f8acf2f9d5d25b72bcccd8f273c48566c22a88e7a8bee0eb3",
+  "layer": "osm",
+  "license": {
+    "attribution": "© OpenStreetMap contributors",
+    "attribution_url": "https://www.openstreetmap.org/copyright",
+    "id": "ODbL-1.0",
+    "name": "Open Data Commons Open Database License 1.0",
+    "url": "https://opendatacommons.org/licenses/odbl/1-0/"
+  },
+  "osm_base_timestamp": "2026-10-09T15:01:23Z",
+  "query": "[out:json][timeout:900];\n(\n  nwr[\"telecom\"=\"data_center\"];\n  nwr[\"building\"=\"data_center\"];\n);\nout center tags;\n",
+  "raw_response_bytes": 1731727,
+  "raw_response_sha256": "9a2d5185fe6edac772756eeb825ae9cfca560efe92b030a602db24376bc5f485",
+  "retrieved_at": "2026-10-09T15:03:39Z"
+}

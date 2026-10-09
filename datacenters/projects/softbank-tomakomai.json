@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0",
+  "id": "softbank-tomakomai",
+  "name": "SoftBank Hokkaido Tomakomai AI Data Center",
+  "aliases": [
+    "Core Brain",
+    "Hokkaido Tomakomai Data Center"
+  ],
+  "summary": "SoftBank Corp. and its subsidiary IDC Frontier are building a large AI data center in Tomakomai, Hokkaido, as the core site of SoftBank's Brain DataCenter concept. The plan, selected for a Japanese government regional data center subsidy in 2023, starts with a data center of about 50 MW, with receiving capacity expected to grow past 300 MW on a site of about 700,000 square meters. Ground was broken in April 2025 and SoftBank targets opening in fiscal 2026. The company intends to run the facility on renewable electricity sourced within Hokkaido.",
+  "location": {
+    "country": "JP",
+    "admin1": "Hokkaido",
+    "locality": "Tomakomai",
+    "lat": 42.6341,
+    "lon": 141.6055,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5"
+    ],
+    "note": "Sources name Tomakomai City only; coordinates are the OpenStreetMap Nominatim centroid of the city boundary."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-23",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "SoftBank Corp.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "name": "IDC Frontier Inc.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "SoftBank subsidiary; co-selected with SoftBank as development operator under the subsidy program and named as co-builder at groundbreaking."
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s5",
+        "s6"
+      ],
+      "note": "Provides a subsidy under its FY2023 regional data center program; trade press reported a maximum of 30 billion yen, about half the project cost."
+    },
+    {
+      "name": "SB Power Corp.",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "Hokkaido Electric Power Company",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phase targeted for FY2026",
+      "as_of": "2023-11-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "SoftBank describes the first stage as a data center of about 50 MW scale, without saying whether this is receiving capacity or IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (completion scheduled 2026)",
+      "as_of": "2025-04-30",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Trade press figure at groundbreaking; scope not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 10,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Initial receiving capacity (trade press)",
+      "as_of": "2023-11-07",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Dempa reported 10 MW of total initial receiving power; SoftBank's own release describes the first stage as a 50 MW-scale data center, and the reason for the difference was not found."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2023-11-07",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Projected future receiving capacity; SoftBank's 2025 groundbreaking article repeats a capacity expected to exceed 300 MW."
+    },
+    {
+      "metric": "investment",
+      "value": 65000000000,
+      "qualifier": "more_than",
+      "unit": "JPY",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2023-11-07",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total project cost reported by trade press at the subsidy announcement; the government subsidy covers about half."
+    },
+    {
+      "metric": "investment",
+      "value": 65000000000,
+      "qualifier": "approximately",
+      "unit": "JPY",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-04-30",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 70,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-05-01",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Reported as about 700,000 square meters at full build-out."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-11-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Plan announced as SoftBank and IDC Frontier were selected for the government subsidy."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-04-15",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Groundbreaking ceremony."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-03",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6"
+      ],
+      "note": "SoftBank targets opening in fiscal 2026, which ends in March 2027; the date shown is the end of that window."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Electricity to be supplied through SoftBank's retail subsidiary SB Power and Hokkaido Electric Power.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "SoftBank plans to run the facility on 100% renewable electricity procured within Hokkaido.",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.softbank.jp/corp/news/press/sbkk/2023/20231107_01/",
+      "title": "次世代社会インフラ構想の要となる大規模な計算基盤を備えたデータセンター「Core Brain」を構築",
+      "publisher": "SoftBank Corp.",
+      "published": "2023-11-07",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260926175912/https://www.softbank.jp/corp/news/press/sbkk/2023/20231107_01/"
+    },
+    {
+      "id": "s2",
+      "url": "https://dempa-digital.com/?p=492112",
+      "title": "経産省、北海道苫小牧市のデータセンターに300億円補助 ソフトバンクが建設予定",
+      "publisher": "Dempa Digital (Dempa Shimbun)",
+      "published": "2023-11-07",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.softbank.jp/business/service/platform/datacenter/tomakomai",
+      "title": "北海道苫小牧データセンター",
+      "publisher": "SoftBank Corp.",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260922002656/https://www.softbank.jp/business/service/platform/datacenter/tomakomai"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.softbank.jp/en/sbnews/entry/20250501_01",
+      "title": "Laying the Foundation for the AI Era: Construction Begins on \"Hokkaido Tomakomai AI Data Center\"",
+      "publisher": "SoftBank Corp. (SoftBank News)",
+      "published": "2025-05-01",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://w.media/softbank-breaks-ground-for-ai-data-center-in-hokkaido/",
+      "title": "SoftBank breaks ground for AI data center in Hokkaido",
+      "publisher": "W.Media",
+      "published": "2025-04-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.softbank.jp/en/sbnews/entry/20260225_01",
+      "title": "Building for the AI Era: An Inside Look at SoftBank Corp.'s Next-generation AI Data Center in Hokkaido",
+      "publisher": "SoftBank Corp. (SoftBank News)",
+      "published": "2026-02-25",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260806004530/https://www.softbank.jp/en/sbnews/entry/20260225_01"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.softbank.jp/en/sbnews/entry/20260623_01",
+      "title": "SoftBank Corp.'s 40th Annual General Meeting of Shareholders: Building on Telecommunications Foundation to Unlock Potential of AI",
+      "publisher": "SoftBank Corp. (SoftBank News)",
+      "published": "2026-06-23",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260922125049/https://www.softbank.jp/en/sbnews/entry/20260623_01"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

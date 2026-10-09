@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use the Open Data Center Atlas, please cite it as below."
+type: dataset
+title: "Open Data Center Atlas: data center builds, with every number sourced"
+authors:
+  - family-names: Kyars
+    given-names: Kian
+url: "https://kiankyars.github.io/semiconductor-atlas/"
+repository-code: "https://github.com/kiankyars/semiconductor-atlas"
+license: CC-BY-4.0
+date-released: "2026-10-09"
+keywords:
+  - data centers
+  - AI infrastructure
+  - electric power
+  - construction
+  - open data
+abstract: >-
+  An open dataset of large data center builds worldwide. Each record links planned and
+  operational power, investment, status, organizations and milestones to the public sources
+  that reported them, with explicit power basis and scope. Distributed as CSV, JSON, GeoJSON,
+  SQLite, Excel and Parquet with a static JSON API.

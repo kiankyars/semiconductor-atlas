@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-fayette-county-ohio",
+  "name": "AWS Fayette County data center site",
+  "aliases": [],
+  "summary": "Amazon Web Services named Fayette County, Ohio, in December 2024 as the first new site in a $10 billion Ohio investment plan, estimating $5 billion for new data centers in the county. Amazon said its Ohio expansion could reach up to eight new sites by the end of 2030. It gave no address, power figure, job count or schedule for the Fayette County site.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "admin2": "Fayette County",
+    "lat": 39.56,
+    "lon": -83.45,
+    "precision": "admin2",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Amazon names only the county; coordinates are the Fayette County point from its Wikipedia article (Nominatim was unavailable)."
+  },
+  "status": "announced",
+  "status_as_of": "2024-12-24",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-12-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Amazon's estimate for new data centers in Fayette County, within a $10 billion Ohio plan that could add up to eight new sites by the end of 2030."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-12-24",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Date Amazon updated its Ohio page with the $10 billion plan naming Fayette County."
+    }
+  ],
+  "power_sources": [],
+  "notes": "The only source is Amazon's own page; no independent or later source on progress, land or power was found, so the record is thinly sourced.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.aboutamazon.com/news/aws/aws-continues-to-invest-in-ohio",
+      "title": "AWS plans $10 billion infrastructure investment in Ohio, advancing the future of AI",
+      "publisher": "Amazon",
+      "published": "2024-12-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

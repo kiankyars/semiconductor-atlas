@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-fairwater-atlanta",
+  "name": "Microsoft Fairwater AI datacenter, Atlanta (Fayetteville)",
+  "aliases": [
+    "Fairwater Atlanta"
+  ],
+  "summary": "Second site in Microsoft's Fairwater family of AI datacenters, in Fayetteville, Georgia, south of Atlanta. It began operating in October 2025 and was unveiled in November 2025 as part of what Microsoft calls an AI superfactory, linked to its Wisconsin Fairwater site by a dedicated AI network. Reports describe a two-storey, liquid-cooled facility of more than 1 million sq ft on 85 acres. The AJC linked it through city records to the QTS campus in Fayetteville, and Epoch AI reports that QTS built it with Microsoft as tenant; neither company has confirmed this. Epoch AI estimates about 636 MW of IT capacity across four buildings by mid-2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Georgia",
+    "admin2": "Fayette County",
+    "locality": "Fayetteville",
+    "lat": 33.4487,
+    "lon": -84.4549,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": "Town centroid from Nominatim. A Microsoft spokesperson confirmed Fayetteville but declined to give the exact location; the AJC tied the facility to the QTS campus from permitting records, which is not company-confirmed."
+  },
+  "status": "operational",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s2",
+    "s4"
+  ],
+  "workloads": [
+    "ai_training"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Epoch AI lists Microsoft as tenant of a facility built by QTS; Microsoft presents the site as its own Fairwater AI datacenter."
+    },
+    {
+      "name": "QTS Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Reported, not confirmed by the companies: Epoch AI says QTS built the facility with Microsoft as tenant, and the AJC linked it to the QTS campus because city records show that campus as the only Fayetteville site permitted for data center occupancy. QTS says it does not disclose customers."
+    },
+    {
+      "name": "NVIDIA",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Microsoft says Fairwater clusters use NVIDIA GB200 and GB300 GPUs."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Reported, not confirmed by the companies: SiliconANGLE says OpenAI is expected to be one of the biggest customers, and Epoch AI lists it as a likely user."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 636,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-06-14",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Epoch AI modeled estimate for four operational buildings (timeline entry of 14 June 2026), not a company figure. Microsoft has not published a megawatt figure for the site."
+    },
+    {
+      "metric": "floor_area",
+      "value": 1000000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2025-11-21",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 85,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Footprint of the Microsoft facility as reported by SiliconANGLE."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "The AJC says operations began in October 2025; Epoch AI lists Buildings 1 and 2 as operational by 14 October 2025."
+    },
+    {
+      "event": "announced",
+      "date": "2025-11-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Microsoft publicly unveiled the Atlanta Fairwater site after it had begun operating."
+    },
+    {
+      "event": "other",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Epoch AI assesses from imagery that Buildings 3 and 4 were operational by its 14 June 2026 timeline entry; not a company announcement."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Microsoft says the Atlanta site relies on highly available utility grid power, which lets it forgo on-site generation, UPS systems and dual-corded distribution for the GPU fleet.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/",
+      "title": "Infinite scale: The architecture behind the Azure AI superfactory",
+      "publisher": "Official Microsoft Blog",
+      "published": "2025-11-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/",
+      "title": "Microsoft's newest AI 'superfactory' opens at sprawling Fayetteville campus",
+      "publisher": "The Atlanta Journal-Constitution",
+      "published": "2025-11-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260829020236/https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/"
+    },
+    {
+      "id": "s3",
+      "url": "https://siliconangle.com/2025/11/12/microsoft-brings-atlanta-based-ai-super-factory-online/",
+      "title": "Microsoft brings Atlanta-based AI 'super factory' online",
+      "publisher": "SiliconANGLE",
+      "published": "2025-11-12",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260308085737/https://siliconangle.com/2025/11/12/microsoft-brings-atlanta-based-ai-super-factory-online/"
+    },
+    {
+      "id": "s4",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/microsoft-fairwater-atlanta",
+      "title": "Microsoft Fairwater Atlanta",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    }
+  ],
+  "related_ids": [
+    "microsoft-fairwater-mount-pleasant",
+    "qts-fayetteville-georgia"
+  ],
+  "notes": "Likely the same physical site as any record for the QTS Fayetteville campus (unveiled by QTS in August 2022 as Project Excalibur, 615 acres, per the AJC); cross-link if such a record exists, keeping in mind that the QTS link is reported, not confirmed. Epoch AI also reports shells for two further buildings underway in May 2026 with an unknown tenant.",
+  "last_reviewed": "2026-10-09"
+}

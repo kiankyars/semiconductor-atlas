@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "id": "omnia-data-center-pecem",
+  "name": "Omnia Data Center Pecém",
+  "aliases": [
+    "Data Center Pecém"
+  ],
+  "summary": "Omnia, a hyperscale data centre platform backed by funds managed by Pátria Investimentos, is developing Data Center Pecém at the Pecém industrial and port complex in Ceará, Brazil, as its first project. In May 2026 Omnia and Casa dos Ventos announced a power purchase agreement valued at about USD 2 billion for an estimated up to 300 average MW of wind energy from projects in Ceará and Piauí, under which Omnia becomes a self-producer with equity in the generation assets. Portuguese Wikipedia, citing Reuters, reports that the facility is intended for ByteDance; the companies' announcement names no tenant, so the link is unconfirmed. No data centre IT capacity or schedule was found.",
+  "location": {
+    "country": "BR",
+    "admin1": "Ceará",
+    "locality": "Pecém",
+    "lat": -3.5467,
+    "lon": -38.8314,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "The source names the Pecém complex but no parcel. Coordinates are the Port of Pecém reference point (English Wikipedia infobox), in São Gonçalo do Amarante; the data centre's position within the industrial and port complex was not published, so the municipality is left blank."
+  },
+  "status": "announced",
+  "status_as_of": "2026-05-18",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Omnia",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Described as developer, investor and operator of the data centre and a hyperscale platform backed by Pátria Investimentos funds."
+    },
+    {
+      "name": "Pátria Investimentos",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Funds it manages back Omnia."
+    },
+    {
+      "name": "Casa dos Ventos",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Develops, operates and manages the wind generation contracted for the site."
+    },
+    {
+      "name": "ByteDance",
+      "role": "tenant",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported and unconfirmed: Portuguese Wikipedia, citing a May 2026 Reuters report, says the data centre is intended for ByteDance (the Reuters headline names TikTok). The Reuters article could not be opened, and the Casa dos Ventos announcement names no tenant."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-18",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Renewable energy contracted for the data centre, stated in average megawatts (MWm); not a stated IT or facility load."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-05-18",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Omnia and Casa dos Ventos announced a power purchase agreement of about USD 2 billion for up to 300 average MW of wind energy for the data centre."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "wind",
+      "description": "Contracted wind generation from projects in Ceará and Piauí under a self-production arrangement in which Omnia holds equity in the generation assets.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://casadosventos.com.br/cases/case-omnia",
+      "title": "Omnia e Casa dos Ventos firmam maior contrato de autoprodução de energia renovável da América Latina para data centers",
+      "publisher": "Casa dos Ventos",
+      "published": "2026-05-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://pt.wikipedia.org/wiki/Casa_dos_Ventos",
+      "title": "Casa dos Ventos",
+      "publisher": "Wikipedia (Portuguese)",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

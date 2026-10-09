@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "id": "adaniconnex-noida",
+  "name": "AdaniConneX Noida data centre campus",
+  "aliases": [],
+  "summary": "AdaniConneX, the Adani group's data centre business, lists a Noida campus in the Delhi NCR region with a potential capacity of 150 MW of IT load and a first phase live from January 2025. In June 2023 the company said a USD 213 million construction loan would fund a 50 MW Noida campus then being built, alongside its Chennai site. The company says the campus can use up to 100% renewable power. The site address and tenants have not been published.",
+  "location": {
+    "country": "IN",
+    "admin1": "Uttar Pradesh",
+    "admin2": "Gautam Buddha Nagar",
+    "locality": "Noida",
+    "lat": 28.57,
+    "lon": 77.32,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Sources name Noida only. Coordinates are the Noida city coordinates from Wikipedia (Nominatim was rate-limiting requests), not the site."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "AdaniConneX",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed by the company as potential capacity in IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Build financed in June 2023",
+      "as_of": "2023-06-23",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2023-06-23",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "AdaniConneX announced a USD 213 million construction financing facility covering the Noida campus and its Chennai 1 campus."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company lists Phase 1 as live from January 2025."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Company states up to 100% renewable energy; the supply arrangement is not described.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.adaniconnex.com/data-centers",
+      "title": "Data Centers",
+      "publisher": "AdaniConneX",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://resources.adaniconnex.com/press-release/adaniconnex-raises-usd-213-mn-construction-financing-facility",
+      "title": "AdaniConneX Seals the Largest Data Center Financing Deal in India with a USD 213 Mn Construction Financing Facility",
+      "publisher": "AdaniConneX",
+      "published": "2023-06-23",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260902153948/https://resources.adaniconnex.com/press-release/adaniconnex-raises-usd-213-mn-construction-financing-facility"
+    }
+  ],
+  "notes": "The status comes from the company's undated campus page, accessed on 2026-10-09, so status_as_of is that access date. The 2023 financing was shared with the Chennai campus and is not split by site, so no investment figure is recorded here.",
+  "last_reviewed": "2026-10-09"
+}

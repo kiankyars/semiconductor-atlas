@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "id": "tract-morris-technology-park",
+  "name": "Morris Technology Park",
+  "aliases": [
+    "Tract Morris data center park"
+  ],
+  "summary": "Data center land developer Tract, through an affiliate, bought 343 acres of vacant farmland off Interstate 80 in Morris, Grundy County, Illinois, about 65 miles from downtown Chicago, for a planned 1 GW data center campus of roughly 2.9 million square feet. The project won city approval in 2025, the site is annexed and zoned for it, and it has a transmission security agreement with ComEd. Tract targets initial energization in June 2028 and a full 1 GW load by 2032. Tract's model is to entitle and service raw land and then offer it to large data center users or developers; no end user has been named for this site.",
+  "location": {
+    "country": "US",
+    "admin1": "Illinois",
+    "admin2": "Grundy County",
+    "locality": "Morris",
+    "lat": 41.38,
+    "lon": -88.4244,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Wikipedia coordinates for Morris. Bisnow places the parcel off Interstate 80 in Morris but gives no address."
+  },
+  "status": "announced",
+  "status_as_of": "2026-01-27",
+  "status_source_ids": [
+    "s1"
+  ],
+  "parties": [
+    {
+      "name": "Tract",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bought the site through an affiliate."
+    },
+    {
+      "name": "ComEd",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Party to a transmission security agreement for the site."
+    },
+    {
+      "name": "City of Morris",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Granted city approval for the project in 2025."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Tract targets a full 1 GW load ramp by 2032."
+    },
+    {
+      "metric": "land_area",
+      "value": 343,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Purchase from an affiliate of Clarius Partners for about USD 51.5 million, per public records cited by Bisnow; the article gives no closing date."
+    },
+    {
+      "metric": "floor_area",
+      "value": 2900000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "zoning_approved",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "City approval reported without a month. The year is derived: Bisnow's January 2026 article says approval came last year."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-06",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target for initial energization."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2032",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target for reaching the full 1 GW load."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "ComEd transmission service under a transmission security agreement.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.bisnow.com/news/chicago/data-center-capital-markets/data-center-infrastructure-developer-takes-343-acre-chicago-area-swing-132919",
+      "title": "Data Center Infrastructure Developer Takes 343-Acre Chicago-Area Swing",
+      "publisher": "Bisnow",
+      "published": "2026-01-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

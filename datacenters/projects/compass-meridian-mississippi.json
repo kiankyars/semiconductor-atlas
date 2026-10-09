@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "id": "compass-meridian-mississippi",
+  "name": "Compass Datacenters Meridian campus",
+  "aliases": [
+    "Compass Lauderdale County campus"
+  ],
+  "summary": "Compass Datacenters is developing a single-tenant hyperscale campus of eight data centers in the Meridian I-20/59 Industrial Park in Meridian, Lauderdale County, Mississippi. Announced in January 2025 with Governor Tate Reeves, the project is valued at USD 10 billion at full fit-out including tenant IT equipment and is to be built over about eight years. Mississippi Power will supply about 500 MW and invested in a substation for the park, while the state granted tax exemptions and site support. Compass's market page now describes Meridian as a 320 MW site that broke ground in 2025.",
+  "location": {
+    "country": "US",
+    "admin1": "Mississippi",
+    "admin2": "Lauderdale County",
+    "locality": "Meridian",
+    "lat": 32.3747,
+    "lon": -88.7042,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Wikipedia coordinates for Meridian. Compass places the campus in the Meridian I-20/59 Industrial Park; no cited source gives site coordinates."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2"
+  ],
+  "parties": [
+    {
+      "name": "Compass Datacenters",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Mississippi Power",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Supplying power and invested in a substation for the industrial park."
+    },
+    {
+      "name": "Mississippi Development Authority",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Assisting with site preparation and certifying Compass for state data center tax exemptions."
+    },
+    {
+      "name": "Lauderdale County",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Obtained a state site grant for the industrial park."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-01-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Value at full fit-out, including future tenants' IT equipment."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-01-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Power that Mississippi Power will supply to the facility, per the announcement."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 320,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Figure on Compass's undated markets page as viewed on the access date; it is lower than the roughly 500 MW in the announcement and the page does not say which measure it uses."
+    },
+    {
+      "metric": "buildings",
+      "value": 8,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-01-09",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supply from Mississippi Power, which also invested in a substation serving the industrial park.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "notes": "Status rests on Compass's undated markets page, viewed on 2026-10-09, which says the Meridian site broke ground in 2025; no dated construction update was found.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/",
+      "title": "Compass project generates $10 billion investment in Lauderdale County",
+      "publisher": "Compass Datacenters",
+      "published": "2025-01-09",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260908030331/https://www.compassdatacenters.com/news/compass-10b-investment-lauderdale-county-mississippi/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.compassdatacenters.com/data-center-markets/",
+      "title": "Data Center Markets - Compass Datacenters",
+      "publisher": "Compass Datacenters",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

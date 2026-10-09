@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "id": "datavita-lanarkshire-ai-growth-zone",
+  "name": "DataVita Lanarkshire AI Growth Zone campus (Chapelhall)",
+  "aliases": [
+    "Lanarkshire AI Growth Zone",
+    "SAIZ Project",
+    "DataVita Chapelhall campus"
+  ],
+  "summary": "DataVita, part of HFD Group, is expanding its data centre campus at Chapelhall near Airdrie, North Lanarkshire, which the UK government named an AI Growth Zone in January 2026, Scotland's first, with GBP 8.2bn of private investment and plans for more than 500 MW of on-site power generation within four years. CoreWeave partnered with DataVita on a GBP 1.5bn AI deployment in 2025 and has contracted the full capacity of an expanded DV1 and a new DV3 building for 15 years. DV3 was under construction in 2026, backed by a roughly GBP 300m debt facility, and in September 2026 DataVita said it had applied for planning permission in principle for a further building, DV4.",
+  "location": {
+    "country": "GB",
+    "admin1": "Scotland",
+    "admin2": "North Lanarkshire",
+    "locality": "Chapelhall",
+    "lat": 55.835,
+    "lon": -3.9444,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "The UK government places the site in Airdrie; DataVita locates the DV4 expansion at Lancaster Avenue, Chapelhall, next to its existing DV1 and DV3. Coordinates are an approximate point near Lancaster Avenue; individual building plots were not identified."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-02",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "DataVita",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "DataVita",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "DataVita says it built, owns and runs DV1 at Chapelhall; DataVita is part of HFD Group."
+    },
+    {
+      "name": "DataVita",
+      "role": "operator",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "DataVita says it has run the Chapelhall campus for more than ten years."
+    },
+    {
+      "name": "CoreWeave",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Full capacity of the DV1 expansion and DV3 contracted to CoreWeave under a 15-year agreement."
+    },
+    {
+      "name": "National Wealth Fund",
+      "role": "investor",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Provided a GBP 202m guarantee supporting a roughly GBP 300m debt facility from ING, ABN AMRO, Santander, the Scottish National Investment Bank and Siemens Financial Services."
+    },
+    {
+      "name": "UK Government",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Designated the site an AI Growth Zone, conditional on delivery against agreed milestones."
+    },
+    {
+      "name": "North Lanarkshire Council",
+      "role": "government",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Planning authority for the DV4 application."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-01-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "UK government says DataVita plans more than 500 MW of on-site power generation within four years; no IT load figure is given."
+    },
+    {
+      "metric": "investment",
+      "value": 8200000000,
+      "qualifier": "exact",
+      "unit": "GBP",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-01-29",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Private investment attached to the AI Growth Zone designation."
+    },
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "qualifier": "exact",
+      "unit": "GBP",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "CoreWeave AI deployment",
+      "as_of": "2025-09-17",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Investment in AI infrastructure at the Lanarkshire campus announced by DataVita with CoreWeave; the release does not say who provides the funds."
+    },
+    {
+      "metric": "investment",
+      "value": 849600000,
+      "qualifier": "exact",
+      "unit": "GBP",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "DV4",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Construction investment over two years cited in the DV4 planning announcement."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 600,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DV1 expansion and DV3",
+      "as_of": "2026-08-18",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DV1 expansion and DV3",
+      "as_of": "2026-08-18",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 120,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DV4",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Permanent skilled roles on site, including apprenticeships."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09-17",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "DataVita and CoreWeave announced a GBP 1.5bn renewable-powered AI infrastructure deployment at the Lanarkshire campus."
+    },
+    {
+      "event": "other",
+      "date": "2026-01-29",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "UK government named the North Lanarkshire site an AI Growth Zone."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-18",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "DataVita secured a roughly GBP 300m debt facility to expand DV1 and build DV3; its managing director said work was well advanced on site."
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "DataVita's managing director said the first of the two funded facilities would complete in 2026; DV1 itself has operated for more than a decade."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-02",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "DataVita announced it had submitted an application for planning permission in principle for DV4 to North Lanarkshire Council."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "On-site renewable generation planned, more than 500 MW within four years per the UK government; the technology mix is not specified, though nearby land is described as suitable for solar and wind.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.gov.uk/government/news/more-than-3400-jobs-and-targeted-support-for-local-communities-to-help-tackle-the-cost-of-living-as-lanarkshire-named-latest-ai-growth-zone",
+      "title": "More than 3,400 jobs and targeted support for local communities to help tackle the cost of living as Lanarkshire named latest AI Growth Zone",
+      "publisher": "UK Government",
+      "published": "2026-01-29",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20261005164117/https://www.gov.uk/government/news/more-than-3400-jobs-and-targeted-support-for-local-communities-to-help-tackle-the-cost-of-living-as-lanarkshire-named-latest-ai-growth-zone"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.datavita.co.uk/lanarkshire-ai-growth-zone",
+      "title": "Lanarkshire AI Growth Zone",
+      "publisher": "DataVita",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260901124808/https://www.datavita.co.uk/lanarkshire-ai-growth-zone"
+    },
+    {
+      "id": "s3",
+      "url": "https://blog.datavita.co.uk/blog/datavita-and-coreweave-to-launch-ai-infrastructure-in-scotland-powered-by-renewable-energy-as-part-of-ps1-5bn-investment",
+      "title": "DataVita, CoreWeave launch £1.5bn renewable AI infrastructure in Scotland",
+      "publisher": "DataVita",
+      "published": "2025-09-17",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260711122150/https://blog.datavita.co.uk/blog/datavita-and-coreweave-to-launch-ai-infrastructure-in-scotland-powered-by-renewable-energy-as-part-of-ps1-5bn-investment"
+    },
+    {
+      "id": "s4",
+      "url": "https://blog.datavita.co.uk/blog/datavita-secures-funding-data-centre-expansion",
+      "title": "DataVita secures £300 million for data centre rollout in Scotland's AI Growth Zone, with backing from National Wealth Fund and major lenders",
+      "publisher": "DataVita",
+      "published": "2026-08-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://blog.datavita.co.uk/blog/datavita-submits-plans-dv4-data-centre-chapelhall",
+      "title": "DataVita submits plans for DV4, its third data centre at Chapelhall",
+      "publisher": "DataVita",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260917083924/https://blog.datavita.co.uk/blog/datavita-submits-plans-dv4-data-centre-chapelhall"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

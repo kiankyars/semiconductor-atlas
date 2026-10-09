@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-lake-anna-technology-campus-louisa-county",
+  "name": "AWS Lake Anna Technology Campus",
+  "aliases": [
+    "LATC",
+    "REB Investments site"
+  ],
+  "summary": "One of two Amazon Web Services campuses in Louisa County's Technology Overlay District, part of an $11 billion AWS plan for the county by 2040 announced in August 2023. The 153-acre campus at Kentucky Springs Road and Haley Drive, next to the North Anna nuclear station, is planned for seven standard data centers (about 1.7 million sq ft), two smaller specialty data centers and an administration building, with at least 420 MW of capacity fed by two 300 MW substations. Local reporting described permits issued and contractors preparing to break ground. Amazon in 2026 described a cooling water discharge permit for the site.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "Louisa County",
+    "lat": 38.0606,
+    "lon": -77.7894,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s3"
+    ],
+    "note": "The campus sits at Kentucky Springs Road (Route 652) and Haley Drive (Route 700), next to the North Anna Power Station. Geocoding was unavailable, so coordinates are the power station's location from its Wikipedia article; the campus lies beside it."
+  },
+  "status": "announced",
+  "status_as_of": "2026-03-16",
+  "status_source_ids": [
+    "s4"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Clark Construction",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "General contractor; Shirley Construction was named for rough grading."
+    },
+    {
+      "name": "Rappahannock Electric Cooperative",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "County says it will provide electric service; it owns one of the two planned substations."
+    },
+    {
+      "name": "Dominion Energy",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Owns the other planned 300 MW substation serving the site."
+    },
+    {
+      "name": "Louisa County",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Performance agreement with tax rebates funded from new AWS revenue; the state offered a grant fund and sales and use tax waivers."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 420,
+      "qualifier": "at_least",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as data center capacity; two substations of 300 MW each are planned to serve the site."
+    },
+    {
+      "metric": "land_area",
+      "value": 153,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 7,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Standard data centers; plans also include two smaller specialty data centers and an administration building."
+    },
+    {
+      "metric": "floor_area",
+      "value": 1700000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Combined area of the seven standard data centers."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-08-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "AWS announced $11 billion for two Louisa County campuses by 2040, part of a $35 billion Virginia plan from January 2023."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Two planned substations of 300 MW each, one owned by Dominion Energy and one by Rappahannock Electric Cooperative; grid upgrades are to be paid by the utilities and/or AWS.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "notes": "Amazon's $11 billion Louisa County figure covers this campus and the North Creek Technology Campus together and is not split by campus, so it is not recorded as a campus metric. The county FAQ projects a 15-year build-out and cooling with raw water from Northeast Creek Reservoir. Status stays announced because no opened source confirms construction start: an undated (about mid-2024) local report described issued land-disturbance and stormwater permits and a pending Army Corps permit, and Amazon's March 2026 update discussed a discharge permit without stating build progress. That report also quoted a county estimate that a first data center might come online in late 2025 or early 2026.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.louisacounty.gov/CivicAlerts.aspx?AID=363&ARC=2233",
+      "title": "Amazon Web Services announces plan to invest $11 billion in Louisa County by 2040",
+      "publisher": "Louisa County, Virginia",
+      "published": "2023-08-30",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://lakeannalife.com/amazon-planning-to-commence-work-at-lake-anna-technology-campus/",
+      "title": "Contractors Meet To Discuss Construction Plan At Lake Anna Technology Campus",
+      "publisher": "Lake Anna Life (Engage Louisa)",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260311162525/https://lakeannalife.com/amazon-planning-to-commence-work-at-lake-anna-technology-campus/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.louisacounty.gov/m/faq?cat=40",
+      "title": "Community Update/Press FAQs: AWS",
+      "publisher": "Louisa County, Virginia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260913155609/https://www.louisacounty.gov/m/faq?cat=40"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aboutamazon.com/news/aws/amazon-data-centers-locations-news",
+      "title": "Amazon data center communities: Here's what's happening near data centers across the US",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

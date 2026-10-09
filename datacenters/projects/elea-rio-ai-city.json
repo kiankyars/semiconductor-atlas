@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "elea-rio-ai-city",
+  "name": "Rio AI City (Elea Data Centers)",
+  "aliases": [
+    "Rio AI City"
+  ],
+  "summary": "Elea Data Centers is developing Rio AI City, a data centre hub in the Olympic Park area of Rio de Janeiro with institutional support from the city government. Announced in May 2025 with an initial 1.5 GW of energy capacity and potential growth to 3.2 GW, it was later targeted to reach 1.5 GW by 2027 and 3.2 GW by 2032. Elea counts its operating RJO1 facility in the first phase; RJO2 (about 80 MW) was under construction for initial delivery in 2026, and RJO3 and RJO4 would add 120 MW. Elea signed memoranda with the city and Oracle in August 2025 and with the city, energy companies and Tapestry in November 2025. I Squared Capital had completed its acquisition of Elea by June 2026.",
+  "location": {
+    "country": "BR",
+    "admin1": "Rio de Janeiro",
+    "locality": "Rio de Janeiro (Olympic Park area)",
+    "lat": -22.977,
+    "lon": -43.394,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Sources place the project in Rio de Janeiro's Olympic Park area without a parcel; coordinates are the Barra Olympic Park reference point (Wikipedia). Whether the existing RJO1 building sits inside the park was not stated."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Elea Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Elea Data Centers",
+      "role": "owner",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "I Squared Capital",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Completed its acquisition of Elea, per Elea's June 2026 release; terms not disclosed."
+    },
+    {
+      "name": "City of Rio de Janeiro",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Provides institutional support through its economic development secretariat, CCPar and Invest.Rio; party to the 2025 memoranda."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-11-06",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Described as energy capacity; the August 2025 release targets it for 2027."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 3200,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-06",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Potential capacity by 2032 per the August and November 2025 releases; a June 2026 release refers to the project as 3 GW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 80,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "RJO2",
+      "as_of": "2025-05-08",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 120,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "RJO3 and RJO4",
+      "as_of": "2025-05-08",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-05-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-08-14",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Memorandum of understanding signed by Elea, the City of Rio de Janeiro and Oracle to advance the project; Oracle's role was not specified."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-06",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Memorandum with the city, CCPar, Axia Energia, Light and Tapestry; the release presents Axia and Light as assurance of the city's ability to supply renewable energy to the project. Date is the release date."
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Initial delivery of the RJO2 building."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target for the initial 1.5 GW."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid-connected; Elea says supply will be 100% renewable, certified energy.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "notes": "Elea's investment figures are inconsistent: the May 2025 release refers both to several billion dollars and to hundreds of billions of dollars of direct and indirect investment over a decade, so no investment metric is recorded. The status also rests on Elea's undated Rio AI City page, which lists RJO1 as operating and RJO2 as under construction, so status_as_of is the date it was read (2026-10-09). Axia Energia and Light signed the November 2025 memorandum, but no source states a supply or utility role for them, so they are not listed as parties.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.prnewswire.com/news-releases/elea-announces-rio-ai-city-a-landmark-brazilian-data-center-project-with-capacity-up-to-3-2-gw-of-renewable-energy-supporting-ai-growth-302449289.html",
+      "title": "Elea announces Rio AI City, a landmark Brazilian data center project with capacity up to 3.2 GW of renewable energy supporting AI growth",
+      "publisher": "Elea Data Centers via PR Newswire",
+      "published": "2025-05-08",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260831105522/https://www.prnewswire.com/news-releases/elea-announces-rio-ai-city-a-landmark-brazilian-data-center-project-with-capacity-up-to-3-2-gw-of-renewable-energy-supporting-ai-growth-302449289.html"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.prnewswire.com/news-releases/elea-signs-mou-with-oracle-and-rio-de-janeiro-city-hall-to-advance-data-center-project-302532403.html",
+      "title": "Elea signs MoU with Oracle and Rio de Janeiro City Hall to advance data center project",
+      "publisher": "Elea Data Centers via PR Newswire",
+      "published": "2025-08-18",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20251006055127/https://www.prnewswire.com/news-releases/elea-signs-mou-with-oracle-and-rio-de-janeiro-city-hall-to-advance-data-center-project-302532403.html"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.prnewswire.com/news-releases/elea-signs-mou-with-tapestry-to-enhance-assurance-of-rio-ai-citys-1-5-gw-energy-capacity-302607345.html",
+      "title": "Elea signs MoU with Tapestry to enhance assurance of Rio AI City's 1.5 GW energy capacity",
+      "publisher": "Elea Data Centers via PR Newswire",
+      "published": "2025-11-06",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://eleadatacenters.com/rio-ai-city/",
+      "title": "Rio AI City",
+      "publisher": "Elea Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260514081519/http://eleadatacenters.com/rio-ai-city/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.prnewswire.com/news-releases/elea-data-centers-appoints-new-board-of-directors-to-accelerate-ai-ready-infrastructure-expansion-in-brazil-302790277.html",
+      "title": "Elea Data Centers appoints new board of directors to accelerate AI-ready infrastructure expansion in Brazil",
+      "publisher": "Elea Data Centers via PR Newswire",
+      "published": "2026-06-03",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

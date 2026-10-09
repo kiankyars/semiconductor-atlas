@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "id": "brookfield-cambrai",
+  "name": "Data4 Cambrai E-Valley campus",
+  "aliases": [
+    "E-Valley data center campus",
+    "Brookfield Cambrai data center"
+  ],
+  "summary": "Data4, the data center unit of Brookfield, is planning a campus of up to 1 GW at E-Valley on the former Cambrai military air base (BA 103) in northern France. Brookfield's February 2025 France pledge was reported to direct about EUR 15 billion to a Cambrai data center. A June 2026 local report cites a first 300 MW tranche, works from the second half of 2026 and first deliveries in 2027-2028. Enedis tendered about 29 km of medium-voltage cabling in April 2026 to feed four customer substations at the site, with the works set for 2027.",
+  "location": {
+    "country": "FR",
+    "admin1": "Hauts-de-France",
+    "locality": "Épinoy (E-Valley, former Cambrai air base)",
+    "lat": 50.22,
+    "lon": 3.1765,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s3"
+    ],
+    "note": "Nominatim position of the E-Valley information board on Avenue de France, Épinoy, inside the former BA 103 base; sources identify the base and E-Valley but not the data center parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-11",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Data4",
+      "role": "developer",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named as the project developer (a Brookfield subsidiary) in local news on the prefect-led steering committee; no Data4 release on Cambrai could be opened."
+    },
+    {
+      "name": "Brookfield",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Parent of Data4; early reporting (La Tribune Dimanche via TechCrunch) tied part of Brookfield's France pledge to Cambrai."
+    },
+    {
+      "name": "Enedis",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Distribution operator tendering the medium-voltage connection works for the E-Valley data center site."
+    },
+    {
+      "name": "Préfecture du Nord",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The prefecture runs the project steering committee: the then sub-prefect chaired the first meeting on 2026-02-03 and the Nord prefect the second on 2026-06-09."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-11",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First tranche",
+      "as_of": "2026-06-11",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 15000000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-02-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Media report (La Tribune Dimanche, relayed by TechCrunch); not stated in Brookfield's own release."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-02-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "TechCrunch, relaying La Tribune Dimanche, reported that about EUR 15 billion of Brookfield's EUR 20 billion French pledge would go to a Cambrai data center."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-14",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Enedis tender for about 29 km of underground HTA cabling to four customer substations, with works scheduled for 2027."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "First deliveries expected 2027-2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Medium-voltage feeds from the Haplincourt and Prémy source substations via about 29 km of new underground cable to four customer substations.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://techcrunch.com/2025/02/09/investments-in-french-ai-ecosystem-reach-85b-as-brookfield-commits-20b",
+      "title": "Investments in French AI ecosystem reach $85B as Brookfield commits $20B",
+      "publisher": "TechCrunch",
+      "published": "2025-02-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.marchesonline.com/appels-offres/avis/travaux-d-extension-electrique-hta-pour-le-raccordement/ao-9588877-1",
+      "title": "Travaux d'extension électrique HTA pour le raccordement du site Data Center EVALLEY",
+      "publisher": "Enedis (via Marchés Online)",
+      "published": "2026-04-16",
+      "accessed": "2026-10-09",
+      "type": "utility"
+    },
+    {
+      "id": "s3",
+      "url": "https://info.fr/nord-comite-pilotage-data-centers-e-valley-cambrai/",
+      "title": "Nord : le comité de pilotage des data centers d'E-Valley réuni mardi sous l'égide du préfet",
+      "publisher": "info.fr",
+      "published": "2026-06-11",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "notes": "Neither Brookfield nor Data4 published a site-specific release for Cambrai that could be opened; details rest on news reports and the Enedis tender. The info.fr report is labelled as written by an AI editorial agent. It says a significant part of a further EUR 10 billion Brookfield pledge for France is meant for E-Valley; that sum is not a campus figure and is not recorded as a metric. Local officials cite about 4,000 direct and indirect jobs. The 320 hectares often quoted refer to the whole E-Valley site, not the data center plot.",
+  "last_reviewed": "2026-10-09"
+}

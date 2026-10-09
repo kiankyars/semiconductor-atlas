@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "id": "google-fort-wayne-indiana",
+  "name": "Google Fort Wayne data center",
+  "aliases": [],
+  "summary": "Google data center near East Tillman Road and Adams Center Road in Fort Wayne, Allen County, Indiana. Google and the governor announced the $2 billion project and broke ground on 26 April 2024, projecting up to 200 jobs. The state committed a performance-based 35-year data center sales tax exemption, tied to at least $800 million of eligible capital and extendable with further investment. Google announced a collaboration with Indiana Michigan Power to add new clean energy resources to the local grid. Google's Indiana page now describes the Fort Wayne site as operational; no capacity figure has been published.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "admin2": "Allen County",
+    "locality": "Fort Wayne",
+    "lat": 41.018,
+    "lon": -85.058,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Approximate intersection of East Tillman Road and Adams Center Road, derived from OpenStreetMap geometry for the two roads named by the state announcement; the parcel itself is not mapped."
+  },
+  "status": "operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "Google",
+      "role": "operator",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "Indiana Economic Development Corporation",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Committed a 35-year data center sales tax exemption for a minimum of $800 million of eligible capital, with 5-year extensions per additional $800 million up to 50 years."
+    },
+    {
+      "name": "Indiana Michigan Power",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Google announced a collaboration with the utility to bring new clean energy resources to the local grid."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-04-26",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-04-26",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-04-26",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-04-26",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Groundbreaking held on the day of the announcement."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Served from the local grid; Google announced a collaboration with Indiana Michigan Power to add new clean energy resources to it.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "notes": "Status comes from Google's undated Indiana locations page, which lists a 2026 milestone and calls Fort Wayne an operational data center; status_as_of is therefore the access date. The state announcement said the site would support Google's AI work and cloud business. No opening date or power capacity was found in an opened source.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iedc.in.gov/events/news/details/2024/04/26/gov.-holcomb-announces-google-is-building-a-2b-data-center-in-northeast-indiana",
+      "title": "Gov. Holcomb announces Google is building a $2B Data Center in Northeast Indiana",
+      "publisher": "Indiana Economic Development Corporation",
+      "published": "2024-04-26",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260920164906/https://iedc.in.gov/events/news/details/2024/04/26/gov.-holcomb-announces-google-is-building-a-2b-data-center-in-northeast-indiana"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.google/locations/indiana/",
+      "title": "Indiana - Google Data Center Location",
+      "publisher": "Google",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260831105554/https://datacenters.google/locations/indiana/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

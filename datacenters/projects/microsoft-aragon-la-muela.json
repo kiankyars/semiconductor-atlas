@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-aragon-la-muela",
+  "name": "Microsoft La Muela datacenter campus (Aragón)",
+  "aliases": [
+    "Microsoft Centrovía La Muela campus"
+  ],
+  "summary": "Planned Microsoft datacenter campus at the Centrovía industrial estate in La Muela, west of Zaragoza, the largest by area and investment of the three campuses in Microsoft's Aragón plan. The site was declared of general interest in late 2023. The regional plan (PIGA Región MSFT), given initial approval in November 2025, assigns it 146 hectares and about EUR 2.18 billion, with 50 MW secured for a first phase and up to 300 MW sought later through a new substation. The plan still lacked final approval in August 2026, and a modified version went out for public comment in July 2026. Forbes reported first operation was expected from 2030.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragón",
+    "admin2": "Zaragoza",
+    "locality": "La Muela",
+    "lat": 41.6068,
+    "lon": -1.0832,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "Nominatim point for the Polígono Industrial Centrovía in La Muela, which sources name as the site area (the campus involves an expansion of the estate); the 146-hectare boundary is not published in the sources."
+  },
+  "status": "announced",
+  "status_as_of": "2026-09-04",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Gobierno de Aragón",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Declared the project of general interest and is processing the PIGA regional plan."
+    },
+    {
+      "name": "Ayuntamiento de La Muela",
+      "role": "government",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Agreed to sell Microsoft the land needed to complete the expansion of the Centrovía industrial estate."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2179000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Per-site figure in the PIGA as reported by elDiario.es; program-level totals are described in the record notes."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "elDiario.es says Microsoft has this power secured for the first phase at each campus."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Second-phase aspiration per campus in the PIGA, as reported by elDiario.es; Forbes gives 250-300 MW per campus over about ten years."
+    },
+    {
+      "metric": "land_area",
+      "value": 146,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2023",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Vozpópuli and EFE report that the Centrovía site in La Muela received general-interest status in the final months of 2023."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-14",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Initial approval of the PIGA Región MSFT plan covering La Muela, Villamayor de Gállego and Zaragoza, opening a public information period."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-30",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "A modification of the PIGA was published in the Boletín Oficial de Aragón for public comment."
+    },
+    {
+      "event": "first_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Forbes reported the first phase was expected to operate from 2030."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply through a new substation (named Plaza) starting at 132 kV with a later upgrade to 220 kV.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.vozpopuli.com/economia/aragon-centro-datos-microsoft-inversion-2000-millones.html",
+      "title": "Aragón da luz verde a un centro de datos de Microsoft con una inversión de 2.000 millones",
+      "publisher": "Vozpópuli",
+      "published": "2024-07-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.eldiario.es/aragon/sociedad/microsoft-avanza-red-centros-datos-zaragoza-proyecta-mayores-regiones-europa_1_12768636.html",
+      "title": "Microsoft avanza con su red de centros de datos en Zaragoza, donde proyecta una de sus mayores regiones en Europa",
+      "publisher": "elDiario.es",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://forbes.es/empresas/828243/microsoft-obtiene-luz-verde-para-su-ambicioso-proyecto-de-centros-de-datos-en-aragon/",
+      "title": "Microsoft obtiene luz verde para su ambicioso proyecto de centros de datos en Aragón",
+      "publisher": "Forbes España",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.eldiario.es/aragon/economia/prioridad-extranjera-pp-vox-aragon-expropian-suelo-centro-datos-microsoft-2-euros-metro_1_13417031.html",
+      "title": "La 'prioridad extranjera' para PP y Vox en Aragón: expropian suelo para un centro de datos de Microsoft a 2 euros el metro",
+      "publisher": "elDiario.es",
+      "published": "2026-08-02",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20261006005223/https://www.eldiario.es/aragon/economia/prioridad-extranjera-pp-vox-aragon-expropian-suelo-centro-datos-microsoft-2-euros-metro_1_13417031.html"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.eldiario.es/aragon/politica/zec-presenta-25-alegaciones-plan-microsoft-exige-alcaldesa-zaragoza-paralizar-centro-datos_1_13487405.html",
+      "title": "ZeC presenta 25 alegaciones al plan de Microsoft y exige a la alcaldesa de Zaragoza paralizar un centro de datos",
+      "publisher": "elDiario.es",
+      "published": "2026-09-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "related_ids": [
+    "microsoft-aragon-villamayor-de-gallego",
+    "microsoft-aragon-zaragoza-puerto-venecia"
+  ],
+  "notes": "Program-level figures differ by scope and date: EUR 6.6 billion across three sites in 2024 (La Cartuja, Centrovía and Villamayor de Gállego), EUR 5.356 billion across the three PIGA campuses and a wider EUR 10 billion plan including land and servers (November 2025), and EUR 2.9 billion across three campuses (August 2026). Only the per-site PIGA figure is recorded as a metric. No government primary source was opened; Boletín Oficial de Aragón entries should be added when available.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-richmond-county-north-carolina",
+  "name": "AWS Richmond County data center campus",
+  "aliases": [],
+  "summary": "Amazon Web Services campus in rural Richmond County, North Carolina, near the South Carolina line. Announced in June 2025 at an estimated $10 billion for cloud and AI infrastructure, with at least 500 jobs. The county approved 20-year cash grants tied to property taxes, contingent on job and investment targets. Amazon broke ground in October 2025, said in July 2026 that the campus would have 21 buildings, and has applied for an air permit for backup generators. County officials said water, wastewater and fiber upgrades would come at no cost to taxpayers.",
+  "location": {
+    "country": "US",
+    "admin1": "North Carolina",
+    "admin2": "Richmond County",
+    "lat": 35.0,
+    "lon": -79.76,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "The opened sources name only Richmond County (the announcement was held in Hamlet); coordinates are the county point from its Wikipedia article (Nominatim was unavailable)."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-23",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Richmond County",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Commissioners approved an incentive package of annual grants for 20 years linked to property taxes, contingent on job and investment thresholds."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-06-04",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 500,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-04",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 21,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-30",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-06-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Richmond County commissioners approved the incentive package the day before the announcement."
+    },
+    {
+      "event": "announced",
+      "date": "2025-06-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-10-17",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Date of Amazon's post reporting the groundbreaking."
+    }
+  ],
+  "notes": "In a July 2026 update Amazon said it had applied to the North Carolina Division of Air Quality for a permit for the campus backup generators; the application date was not given.",
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://abc11.com/16658676",
+      "title": "Amazon planning $10B investment in North Carolina for data center and AI campus",
+      "publisher": "ABC11 (The Associated Press)",
+      "published": "2025-06-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.witn.com/2025/06/04/amazon-planning-10b-investment-north-carolina-data-center-ai-campus/",
+      "title": "Amazon planning $10B investment in North Carolina for data center and AI campus",
+      "publisher": "WITN (The Associated Press)",
+      "published": "2025-06-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.aboutamazon.com/news/aws/aws-investment-north-carolina-ai-cloud-infrastructure",
+      "title": "Amazon plans to invest $10 billion in North Carolina to expand cloud computing infrastructure and advance AI innovation",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260831105615/https://www.aboutamazon.com/news/aws/aws-investment-north-carolina-ai-cloud-infrastructure"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aboutamazon.com/news/aws/amazon-data-centers-locations-news",
+      "title": "Amazon data center communities: Here's what's happening near data centers across the US",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

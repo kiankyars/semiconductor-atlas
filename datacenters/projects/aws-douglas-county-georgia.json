@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-douglas-county-georgia",
+  "name": "AWS Douglas County data center campuses",
+  "aliases": [],
+  "summary": "Amazon Web Services plan announced in January 2025 to invest at least $5 billion in data center campuses in Douglas County, west of Atlanta, with more than 250 full-time jobs. The county called it the largest capital investment in its history and approved a 15-year property tax break. It is part of a wider AWS plan of at least $11 billion across Douglas and Butts counties, which Amazon has not split by county. Amazon declined to disclose exact sites, citing security, and said construction would take several years.",
+  "location": {
+    "country": "US",
+    "admin1": "Georgia",
+    "admin2": "Douglas County",
+    "lat": 33.7,
+    "lon": -84.77,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Amazon did not disclose the sites; coordinates are the Douglas County point from its Wikipedia article (Nominatim was unavailable)."
+  },
+  "status": "announced",
+  "status_as_of": "2025-01-08",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Douglas County Board of Commissioners",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Co-issued the announcement and approved a 15-year property tax break; the county is also funding water infrastructure improvements."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-01-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Douglas County figure covering all AWS campuses planned in the county. Amazon's Georgia announcement gives at least $11 billion for Douglas and Butts counties combined without a breakdown."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 250,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-01-07",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "power_sources": [],
+  "notes": "The AJC reported at announcement that it was unclear whether Georgia Power or an electric membership cooperative would serve the sites. No opened source reports construction progress or a power capacity for the Douglas County campuses.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://elevatedouglas.com/wp-content/uploads/2025/01/AWS-Douglas-County-Release-01072025.pdf",
+      "title": "Amazon Web Services Plans to Invest at least $5 Billion to Establish Data Center Campuses in Douglas County",
+      "publisher": "Elevate Douglas Economic Partnership and Douglas County Board of Commissioners",
+      "published": "2025-01-07",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.ajc.com/news/amazon-plans-11-billion-data-center-expansion-in-georgia/4L34LL7RM5DTPBX67KUD5PCJUI/",
+      "title": "Amazon plans $11 billion data center expansion in Georgia",
+      "publisher": "The Atlanta Journal-Constitution",
+      "published": "2025-01-08",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.aboutamazon.com/news/aws/aws-investment-georgia-ai-cloud-infrastructure",
+      "title": "AWS plans to invest at least $11 billion in Georgia to expand infrastructure to support AI and cloud technologies",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "id": "edgecore-louisa-county",
+  "name": "EdgeCore Louisa County campus",
+  "aliases": [
+    "EdgeCore Shannon Hill campus"
+  ],
+  "summary": "EdgeCore Digital Infrastructure plans a hyperscale data center campus on 697 acres it bought from Louisa County in the Shannon Hill Regional Business Park, about 40 miles northwest of Richmond, Virginia. Announced in June 2025, the campus is planned for more than 1.1 GW, which EdgeCore's campus page describes as critical IT load, with investment of more than USD 17 billion. Rappahannock Electric Cooperative is expected to provide power. EdgeCore's announcement cited 3.9 million square feet, while its current campus page lists 3.1 million square feet in at least six single-tenant buildings.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "Louisa County",
+    "lat": 37.99,
+    "lon": -77.96,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Wikipedia coordinates for Louisa County, Virginia. EdgeCore places the campus in the Shannon Hill Regional Business Park, which no cited source locates precisely."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2",
+    "s1"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "EdgeCore Digital Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Partners Group",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Investment firm backing EdgeCore; not described as investing in this campus specifically."
+    },
+    {
+      "name": "Rappahannock Electric Cooperative",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Louisa County",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Bought the business park land in 2018, rezoned it for technology uses and sold the site to EdgeCore."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1100,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-06-25",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "The announcement gives more than 1.1 GW without a scope; EdgeCore's campus page describes the figure as critical IT load at full build-out."
+    },
+    {
+      "metric": "investment",
+      "value": 17000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-06-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bisnow describes the investment as close to USD 17 billion."
+    },
+    {
+      "metric": "land_area",
+      "value": 697,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-06-25",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Bisnow reports EdgeCore bought the site from the county for USD 42 million."
+    },
+    {
+      "metric": "floor_area",
+      "value": 3900000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure in the June 2025 announcement; Bisnow reported nearly 4 million square feet."
+    },
+    {
+      "metric": "floor_area",
+      "value": 3100000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Figure on EdgeCore's undated campus page as viewed on the access date; it is lower than the announcement's 3.9 million square feet."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Single-tenant data centers, per the undated campus page as viewed on the access date."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2019",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Louisa County rezoned the business park land, bought in 2018, for technology uses."
+    },
+    {
+      "event": "announced",
+      "date": "2025-06-25",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Rappahannock Electric Cooperative expects to work with EdgeCore and the county to power the campus; the release also names Hyperscale Energy as the cooperative's affiliate without giving it a role.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "notes": "Status rests on EdgeCore's undated campus page, viewed on 2026-10-09, which still describes the campus in planning terms and gives no construction or delivery dates.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus",
+      "title": "EdgeCore Digital Infrastructure Announces Plans to Invest $17B+ in Louisa County, VA through the Development of 1.1+ Gigawatt Data Center Campus",
+      "publisher": "EdgeCore Digital Infrastructure",
+      "published": "2025-06-25",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260807051838/https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus"
+    },
+    {
+      "id": "s2",
+      "url": "https://edgecore.com/locations/louisa-county-data-center",
+      "title": "Louisa County Data Centers",
+      "publisher": "EdgeCore Digital Infrastructure",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.bisnow.com/news/national/data-center/17b-campus-continues-data-center-surge-in-small-virginia-county-129918",
+      "title": "New $17B Project Continues Data Center Surge In Small Virginia County",
+      "publisher": "Bisnow",
+      "published": "2025-06-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

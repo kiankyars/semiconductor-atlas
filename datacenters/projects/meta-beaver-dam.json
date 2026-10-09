@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-beaver-dam",
+  "name": "Meta Beaver Dam data center",
+  "aliases": [
+    "Beaver Dam Data Center"
+  ],
+  "summary": "Meta data center campus of more than 700,000 square feet in Beaver Dam, Wisconsin, announced in November 2025 as a USD 1 billion investment and described as optimized for Meta's AI workloads. Meta's fact sheet and location list now give the investment as USD 1 billion or more, and the list gives 2025 as the groundbreaking year. Meta says it planned its energy needs with Alliant Energy and pays the full cost of the power used, and it refers readers to Mortenson for construction information. Meta has not published a power capacity or an opening date.",
+  "location": {
+    "country": "US",
+    "admin1": "Wisconsin",
+    "locality": "Beaver Dam",
+    "lat": 43.4578,
+    "lon": -88.8373,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "City point from OpenStreetMap Nominatim; Meta names the city but no site or road."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "notes": "The status rests on two undated Meta pages: the U.S. location list, which gives 2025 as the groundbreaking year, and the fact sheet, which describes the data center in the future tense. status_as_of is therefore the date both were read (2026-10-09). The fact sheet PDF shows no publication date; its embedded file creation date is 2026-09-01.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Mortenson",
+      "role": "builder",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta refers readers to Mortenson for construction information and opportunities."
+    },
+    {
+      "name": "Alliant Energy",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Meta says it planned its energy needs with Alliant Energy."
+    },
+    {
+      "name": "City of Beaver Dam",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Meta says it pays the city the full cost of water and wastewater service."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta's undated fact sheet and location list give USD 1 billion or more."
+    },
+    {
+      "metric": "floor_area",
+      "value": 700000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The fact sheet and location list give more than 1,000 skilled trade workers on site at peak."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Meta's location list gives 2025 as the groundbreaking year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned its energy needs with Alliant Energy, pays the full cost of the energy used and matches the site's use with clean and renewable energy.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/2025/11/hello-beaver-dam/",
+      "title": "Hello, Beaver Dam!",
+      "publisher": "Meta Platforms",
+      "published": "2025-11-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Beaver-Dam-Data-Center.pdf",
+      "title": "Meta Beaver Dam Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.atmeta.com/us-locations/",
+      "title": "United States - Meta Data Centers",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261007122559/https://datacenters.atmeta.com/us-locations/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

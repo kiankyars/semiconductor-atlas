@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-madison-county-mississippi",
+  "name": "AWS Madison County data center project (Canton and Ridgeland campuses)",
+  "aliases": [
+    "AWS Canton Madison County Mega Site campus",
+    "AWS Ridgeland campus"
+  ],
+  "summary": "Single Amazon Web Services project in Madison County, north of Jackson, announced in January 2024 as one $10 billion investment covering two campuses: one on the Madison County Mega Site near Canton and one in Ridgeland near West County Line Road. It broke ground in May 2024 and Amazon said its first section was running just over 14 months later. In April 2026 Amazon added $11 billion to expand its Madison County operations. By August 2026 five buildings were finished at Canton, while the Ridgeland campus had none complete. Entergy Mississippi supplies power.",
+  "location": {
+    "country": "US",
+    "admin1": "Mississippi",
+    "admin2": "Madison County",
+    "lat": 32.63,
+    "lon": -90.03,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s6"
+    ],
+    "note": "The record covers one project with two campuses announced together: the Canton mega site (off Highway 22 and Nissan Parkway) and the Ridgeland site (Highland Colony Parkway and West County Line Road). Because the campuses are apart, coordinates are the Madison County point from its Wikipedia article."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-08-18",
+  "status_source_ids": [
+    "s4",
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "name": "Entergy Mississippi",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s6"
+      ],
+      "note": "The 2026 state release credits Entergy's commitment to long-term power needs; Entergy's chief says Amazon alone covers the substation and transmission upgrade costs."
+    },
+    {
+      "name": "Madison County",
+      "role": "government",
+      "source_ids": [
+        "s5",
+        "s7"
+      ],
+      "note": "Assisting with the 2026 expansion; the project runs under a fee-in-lieu tax agreement that helps repay a $215 million state loan."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Initial 2024 program (both campuses)",
+      "as_of": "2024-01-26",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Described in 2024 as the largest capital investment in Mississippi history; a July 2024 report said it would be spent over 10 years."
+    },
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "2026 Madison County expansion",
+      "as_of": "2026-04-09",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Additional amount announced in April 2026 to expand existing Madison County operations; local TV tied the expansion to the Ridgeland site. Not added to the 2024 figure here."
+    },
+    {
+      "metric": "land_area",
+      "value": 1713,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-07-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "927 acres at the Madison County Mega Site plus 786 acres in Ridgeland."
+    },
+    {
+      "metric": "buildings",
+      "value": 16,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial 2024 program (both campuses)",
+      "as_of": "2024-07-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The report gives a 200,000 to 300,000 sq ft range without making clear whether it is per building."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial 2024 program (both campuses)",
+      "as_of": "2024-01-26",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 700,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "2026 Madison County expansion",
+      "as_of": "2026-04-09",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 6000,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-07-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Governor's estimate; he said the number could be more than double."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-05-20",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Groundbreaking ceremony attended by the governor."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Amazon said in an August 2025 update that the first section was running just over 14 months after groundbreaking."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-04-09",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "event": "fully_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "2024 press estimate for completing the sites; in April 2026 an AWS executive said construction at both sites was about halfway and full operation could take another 18 to 24 months."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid service from Entergy Mississippi; Entergy says Amazon alone pays for the substations and transmission upgrades serving its sites.",
+      "source_ids": [
+        "s6"
+      ]
+    }
+  ],
+  "notes": "Sources treat Canton and Ridgeland as one Madison County project: a single 2024 investment, one groundbreaking, and one fee-in-lieu tax agreement. Status: Amazon said the first section was running by August 2025. In April 2026 an AWS executive said construction at both Canton and Ridgeland was about half done. In August 2026 the county tax dispute covered five completed Canton buildings (about 214,500 sq ft each), and Ridgeland had none finished. AWS said in April 2026 that Canton uses recycled water for cooling and Ridgeland would use water only about 30 days a year.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://archive.vicksburgnews.com/amazon-web-services-plans-to-invest-10-billion-creating-1000-jobs-to-establish-data-center-complexes-in-mississippi/",
+      "title": "Amazon Web Services plans to invest $10 billion, creating 1,000 jobs to establish data center complexes in Mississippi",
+      "publisher": "Vicksburg Daily News (press release)",
+      "published": "2024-01-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://picayuneitem.com/?p=144178",
+      "title": "Governor Reeves Celebrates Groundbreaking of Largest Economic Development Project in Mississippi History",
+      "publisher": "Picayune Item",
+      "published": "2024-05-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://vicksburgnews.com/aws-plans-10-billion-data-center-investment-in-mississippi/",
+      "title": "AWS Plans $10 Billion Data Center Investment in Mississippi",
+      "publisher": "Vicksburg Daily News",
+      "published": "2024-07-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260519155051/https://vicksburgnews.com/aws-plans-10-billion-data-center-investment-in-mississippi/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aboutamazon.com/news/aws/amazon-data-centers-locations-news",
+      "title": "Amazon data center communities: Here's what's happening near data centers across the US",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://governorreeves.ms.gov/amazon-continues-mississippi-expansion-announcing-plans-to-invest-a-total-of-25-billion-across-the-magnolia-state/",
+      "title": "Amazon continues Mississippi expansion, announcing plans to invest a total of $25 billion across the Magnolia State",
+      "publisher": "Office of Governor Tate Reeves",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.wlox.com/2026/04/09/gov-reeves-local-leaders-announce-amazons-plans-invest-25-billion-across-mississippi/",
+      "title": "'2,000 new jobs right here in Mississippi': Gov. Reeves $12B more in investments from AWS",
+      "publisher": "WLOX",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.wlbt.com/2026/08/18/madison-county-amazon-spar-over-data-center-tax-values/",
+      "title": "Madison County, Amazon spar over data center tax values",
+      "publisher": "WLBT",
+      "published": "2026-08-18",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260820152643/https://www.wlbt.com/2026/08/18/madison-county-amazon-spar-over-data-center-tax-values/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

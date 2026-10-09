@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "id": "atnorth-haugaland-nor01",
+  "name": "atNorth NOR01 Haugaland mega site",
+  "aliases": [
+    "NOR01",
+    "Haugaland mega site"
+  ],
+  "summary": "Nordic data center operator atNorth announced in June 2026 its first Norwegian campus, NOR01, on a 36-hectare plot in Haugaland Business Park in Tysvær, western Norway. Initial phases are planned at 120 MW, ramping up to 350 MW, with power availability projected for 2028 once Statnett and regional grid company Fagne complete new substations. atNorth markets the site for high-density AI, machine learning, cloud and HPC workloads, including build-to-suit projects, and expects about 200 people to work there at full capacity. No investment figure or customers have been disclosed.",
+  "location": {
+    "country": "NO",
+    "admin1": "Rogaland",
+    "admin2": "Tysvær Municipality",
+    "locality": "Haugaland Business Park",
+    "lat": 59.3154,
+    "lon": 5.4252,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "atNorth names Haugaland Business Park in Tysvær; the business park was geocoded with OpenStreetMap, but the specific plot within it was not identified."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-09",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference",
+    "cloud",
+    "hpc",
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "atNorth",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Statnett",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Transmission system operator building one of the substations serving the site."
+    },
+    {
+      "name": "Fagne",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Regional grid company building the other substation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 350,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-03",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 120,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phases",
+      "as_of": "2026-06-03",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 36,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "People expected on site once the campus reaches full capacity."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-06-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Power availability for the site is projected for 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply via new substations being built by Statnett and Fagne; atNorth's site page says renewable supply will be backed by certificates of origin from the energy provider.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "diesel_backup",
+      "description": "Standby generators fuelled with hydrotreated vegetable oil (HVO), with fuel storage for at least 24 hours of operation.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.atnorth.com/news/atnorth-expands-to-norway-with-new-mega-site-in-haugaland/",
+      "title": "atNorth expands to Norway with new mega site in Haugaland",
+      "publisher": "atNorth",
+      "published": "2026-06-03",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.atnorth.com/nordic-data-centers/norway-data-centers/haugaland-nor01/",
+      "title": "Haugaland mega site (NOR01)",
+      "publisher": "atNorth",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260915051455/https://www.atnorth.com/nordic-data-centers/norway-data-centers/haugaland-nor01/"
+    },
+    {
+      "id": "s3",
+      "url": "https://rcrtech.com/ai-infrastructure-news/atnorth-ai-demand-norway/",
+      "title": "atNorth sees growing AI demand driving 350MW Norway DC campus",
+      "publisher": "RCRTech (RCR Wireless News)",
+      "published": "2026-06-09",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "id": "mihta-askiy-data-centre-peace-river",
+  "name": "Mihta Askiy Data Centre",
+  "aliases": [
+    "Mihta Askiy Data Center Project"
+  ],
+  "summary": "Proposed gas-powered data centre about 40 km northeast of Peace River in Northern Sunrise County, Alberta. Alberta's project inventory says the plan involves acquiring a partially completed power plant and converting it into a natural-gas-powered data centre. The proponent, Cree Ative Datacenter Corp GP, filed a federal project description for a 650 MW gas plant to serve the data centre, starting with simple-cycle turbines and later converting to combined cycle. The federal agency decided in March 2026 that no further federal assessment was required; Alberta's inventory lists the project as proposed, with work commencing in 2027.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Northern Sunrise County",
+    "locality": "Peace River (about 40 km northeast)",
+    "lat": 56.3814,
+    "lon": -116.7479,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s4",
+      "s2"
+    ],
+    "note": "Point from the Government of Alberta major projects inventory, which notes its map location is not exact; rounded to four decimals. The federal notice places the project about 40 km northeast of Peace River."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Cree Ative Datacenter Corp GP",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Federal proponent; the Alberta inventory describes it as a wholly owned subsidiary of Sovereign Digital Infrastructure."
+    },
+    {
+      "name": "Mihta Askiy Datacenter LP",
+      "role": "developer",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Listed as developer in the Alberta major projects inventory."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 650,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-01-02",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Production capacity of the gas-fired facility that would support the data centre; no separate data centre IT load was published in the sources opened."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-12-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial project description and its summary posted on the Impact Assessment Agency of Canada registry (reference 90036)."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-03",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Federal agency decided no further assessment under the Impact Assessment Act was required; notice posted March 4, 2026."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Alberta inventory lists the schedule as commencing in 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Dedicated 650 MW gas plant built in two stages: simple-cycle turbines first, later converted to combined cycle; planned 30-year operating life.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/proj/90036",
+      "title": "Mihta Askiy Data Center Project (reference 90036)",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/document/164258",
+      "title": "Public notice: Mihta Askiy Data Center Project, comments invited on the summary of the initial project description",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": "2026-01-02",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/document/165286?culture=en-CA",
+      "title": "Notice of early decision with reasons: Mihta Askiy Data Center Project",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": "2026-03-04",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s4",
+      "url": "https://majorprojects.alberta.ca/details/Mihta-Askiy-Data-Centre/12097",
+      "title": "Mihta Askiy Data Centre",
+      "publisher": "Government of Alberta, Major Projects",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Status rests partly on the undated Government of Alberta major projects entry, which lists the stage as proposed, so status_as_of is the date it was read (2026-10-09). No data centre IT load or cost estimate was published in the sources opened."
+}

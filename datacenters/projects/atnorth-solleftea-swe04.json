@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "id": "atnorth-solleftea-swe04",
+  "name": "atNorth SWE04 Sollefteå mega site",
+  "aliases": [
+    "SWE04",
+    "Sollefteå mega site",
+    "atNorth Långsele"
+  ],
+  "summary": "atNorth announced in February 2026 a 300 MW campus, SWE04, at Hamre Industrial Park in Långsele, about 7 km west of Sollefteå in northern Sweden, on a zoned plot it describes as 50 hectares, with operation expected in the first half of 2028. In June 2026 it published a consultation document for an environmental permit application to the Land and Environment Court, describing three main buildings on a property of about 16 hectares, 145 backup generators running on HVO or similar fuel with about 1,200 MW of combustion input, and a planned grid connection agreement with E.ON. Investment has not been disclosed.",
+  "location": {
+    "country": "SE",
+    "admin1": "Västernorrland County",
+    "admin2": "Sollefteå Municipality",
+    "locality": "Långsele",
+    "lat": 63.1785,
+    "lon": 17.0671,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Site is the Hamre property (Hamre 4:87 after subdivision) in Hamre Industrial Park, Långsele; the Långsele village centroid from Nominatim is used because the parcel was not geocoded."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-16",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "workloads": [
+    "colocation",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "atNorth",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "atNorth AB",
+      "role": "owner",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The consultation document lists atNorth AB as owner of the land within the site."
+    },
+    {
+      "name": "E.ON",
+      "role": "utility",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "atNorth states it will sign a grid connection agreement with E.ON."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The FAQ on atNorth's site page cites a 200 MW path to power, conflicting with the 300 MW headline on the same page."
+    },
+    {
+      "metric": "land_area",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The site page FAQ separately calls the campus 4 hectares, which conflicts with its own 50-hectare headline."
+    },
+    {
+      "metric": "land_area",
+      "value": 16,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The consultation document gives the property area as about 160,000 square metres, smaller than the 50 hectares in atNorth's announcement."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Three main buildings of roughly 160 by 130 metres, up to 26 metres high."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-02-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Consultation document published ahead of an environmental permit application to the Land and Environment Court, with Västernorrland County Administrative Board as supervisory authority."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid connection agreement to be signed with E.ON; atNorth cites renewable energy access at the park.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "diesel_backup",
+      "description": "145 backup generators running on HVO, biodiesel or similar fuel, with total installed combustion input of about 1,200 MW and fuel for up to 24 hours.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.atnorth.com/news/new-300mw-mega-site-in-solleftea-sweden/",
+      "title": "New 300MW mega site in Sollefteå, Sweden",
+      "publisher": "atNorth",
+      "published": "2026-02-23",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261005091906/https://www.atnorth.com/news/new-300mw-mega-site-in-solleftea-sweden/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.atnorth.com/nordic-data-centers/sweden-data-centers/solleftea-swe04/",
+      "title": "Sollefteå mega site (SWE04)",
+      "publisher": "atNorth",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260915182340/https://www.atnorth.com/nordic-data-centers/sweden-data-centers/solleftea-swe04/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.atnorth.com/wp-content/uploads/2026/06/SWE04-Samradsunderlag-260616.pdf",
+      "title": "Samrådsunderlag för atNorths tillståndsansökan för datacenter i Långsele, Sollefteå kommun",
+      "publisher": "atNorth AB (prepared by COWI)",
+      "published": "2026-06-16",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

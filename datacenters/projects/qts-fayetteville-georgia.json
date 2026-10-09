@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "id": "qts-fayetteville-georgia",
+  "name": "QTS Fayetteville campus",
+  "aliases": [
+    "Project Excalibur",
+    "QTS Data Center Fayetteville"
+  ],
+  "summary": "QTS is building a multi-building data center campus on about 615 acres along Georgia Highway 54 West in Fayetteville, Georgia, about 25 miles south of Atlanta. QTS bought the site from the Fayette County Development Authority in 2022, when the campus was first unveiled as Project Excalibur, and Bisnow reported it was expected to cost QTS more than USD 1 billion. City filings describe about 7 million square feet of data center and office space. The first building received a certificate of occupancy in May 2025, and by November 2025 two buildings were operating with four more under development. Microsoft has been reported, but not confirmed, as a tenant.",
+  "location": {
+    "country": "US",
+    "admin1": "Georgia",
+    "admin2": "Fayette County",
+    "locality": "Fayetteville",
+    "lat": 33.4478,
+    "lon": -84.4617,
+    "precision": "locality",
+    "source_ids": [
+      "s4",
+      "s3"
+    ],
+    "note": "Wikipedia coordinates for Fayetteville, Georgia. The campus is at 1435 Highway 54 West, bounded by Highway 54 West, Tyrone Road and Flat Creek Trail; no cited source gives site coordinates."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2025-11-21",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "QTS Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "note": "Blackstone subsidiary. The Citizen says the land was bought by QTS Fayetteville 1, LLC, and the city's 2023 development agreement names National Acquisition Company, LLC as the other party."
+    },
+    {
+      "name": "Fayette County Development Authority",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Sold the 615-acre site to QTS."
+    },
+    {
+      "name": "City of Fayetteville",
+      "role": "government",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Its planning and zoning commission approved the conceptual site plan and its council adopted a development agreement for the campus in 2023."
+    },
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Reported, not confirmed by the companies. The Citizen cites a 2024 Bloomberg report that Microsoft signed on as a tenant; the AJC infers from city records that Microsoft's Fayetteville facility is on this campus. QTS does not disclose customers and Microsoft did not give a location. Microsoft's facility is covered by the separate record microsoft-fairwater-atlanta."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "land_area",
+      "value": 615,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2022-08-15",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The 2023 city development agreement describes the site as 612 acres."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2022-09-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Bisnow's 2022 report that the project was expected to cost QTS more than USD 1 billion; the AJC later describes the investment only as billions of dollars. The separate land price was USD 153.8 million."
+    },
+    {
+      "metric": "floor_area",
+      "value": 7000000,
+      "qualifier": "up_to",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-21",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6",
+        "s2"
+      ],
+      "note": "Includes supporting office space; Bisnow's 2022 breakdown was about 6.6 million square feet of data center space plus about 400,000 square feet of offices."
+    },
+    {
+      "metric": "buildings",
+      "value": 16,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2022-09-21",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Count from the 2022 Development of Regional Impact filing."
+    },
+    {
+      "metric": "buildings",
+      "value": 9,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-15",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The Citizen's 2025 account of nine planned data center buildings conflicts with the 16 in the 2022 filing and with its own reference to a Building 10."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2025-11-15",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "campus",
+      "as_of": "2025-11-15",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Buildings 3, 5, 9 and 10 were described as under development."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 800,
+      "value_high": 1000,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-15",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4500,
+      "value_high": 5000,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-15",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Construction workers on site on a typical day in late 2025."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-08",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Campus first unveiled as Project Excalibur."
+    },
+    {
+      "event": "site_acquired",
+      "date": "2022",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Purchase of 615 acres from the Fayette County Development Authority for about USD 153.8 million, reported on 15 August 2022; the article gives no closing date."
+    },
+    {
+      "event": "other",
+      "date": "2023-02-02",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Fayetteville Planning and Zoning Commission approved the conceptual site plan. The year is derived: the June 2023 article dates the approval to 2 February earlier that year."
+    },
+    {
+      "event": "other",
+      "date": "2023-06-15",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Fayetteville City Council unanimously adopted the development agreement for the campus."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-05",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "City issued a certificate of occupancy for the first building, followed by a construction completion certificate on 25 September. The AJC, writing in November 2025, gives these dates without a year; they are read as 2025."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Completion target reported in November 2025."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2032",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Earlier build-out year in the 2022 regional impact filing."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://rebusinessonline.com/?p=324851",
+      "title": "QTS Buys 615 Acres in Fayetteville, Georgia for 'World's Largest Multi-Tenant Data Center Campus'",
+      "publisher": "REBusinessOnline",
+      "published": "2022-08-15",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bisnow.com/atlanta/news/data-center/qts-project-excalibur-to-span-7m-sf-in-fayetteville-115472",
+      "title": "QTS' 'Project Excalibur' To Span 7M SF In Fayetteville",
+      "publisher": "Bisnow",
+      "published": "2022-09-19",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20251113090555/https://www.bisnow.com/atlanta/news/data-center/qts-project-excalibur-to-span-7m-sf-in-fayetteville-115472"
+    },
+    {
+      "id": "s3",
+      "url": "https://thecitizen.com/?p=104756",
+      "title": "State reviewing massive Fayetteville data center plans",
+      "publisher": "The Citizen (Fayette County)",
+      "published": "2022-09-21",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://thecitizen.com/?p=109827",
+      "title": "Fayetteville approves development agreement for 612-acre QTS Data Center on Hwy. 54 West",
+      "publisher": "The Citizen (Fayette County)",
+      "published": "2023-06-19",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://thecitizen.com/?p=234517",
+      "title": "QTS unveils new multi-use path as part of expanding community partnership in Fayetteville",
+      "publisher": "The Citizen (Fayette County)",
+      "published": "2025-11-15",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/",
+      "title": "Microsoft's newest AI 'superfactory' opens at sprawling Fayetteville campus",
+      "publisher": "The Atlanta Journal-Constitution",
+      "published": "2025-11-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260829020236/https://www.ajc.com/business/2025/11/microsofts-newest-ai-superfactory-opens-at-sprawling-fayetteville-campus/"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "The AJC places Microsoft's Fayetteville Fairwater AI facility on this campus because city records show it as the only Fayetteville site permitted for data center occupancy; neither company has confirmed this. That facility is recorded separately as microsoft-fairwater-atlanta, and its statements are not repeated here.",
+  "related_ids": [
+    "microsoft-fairwater-atlanta"
+  ]
+}

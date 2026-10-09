@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "id": "hut8-river-bend-louisiana",
+  "name": "Hut 8 River Bend AI data center campus",
+  "aliases": [
+    "River Bend campus"
+  ],
+  "summary": "AI data center campus under construction by Hut 8 in West Feliciana Parish, Louisiana. Phase I is leased to Fluidstack for 245 MW of critical IT load under a 15-year lease valued at $7.0 billion, with Google backstopping the lease obligations; Hut 8 announced a partnership with Anthropic and Fluidstack the same day, and news reports say the capacity is for Anthropic. Entergy Louisiana is to supply an initial 330 MW, with potential to scale to 1,000 MW. Phase I investment is up to $10 billion. Local reporting in October 2026 counted about 1,200 construction workers on site and said the facility will serve Anthropic's Claude.",
+  "location": {
+    "country": "US",
+    "admin1": "Louisiana",
+    "admin2": "West Feliciana Parish",
+    "lat": 30.87,
+    "lon": -91.42,
+    "precision": "admin2",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s7",
+      "s8"
+    ],
+    "note": "Parish coordinates from Wikipedia; the sources name the parish but not a street address or town."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s7",
+    "s4"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference"
+  ],
+  "parties": [
+    {
+      "name": "Hut 8",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Fluidstack",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Phase I tenant for 245 MW of critical IT load; holds a right of first offer on expansion capacity."
+    },
+    {
+      "name": "Anthropic",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s5",
+        "s7"
+      ],
+      "note": "Reported end user of the capacity leased to Fluidstack: the Motley Fool says the infrastructure will be delivered to Anthropic and WAFB says the facility will serve Claude. Hut 8's release headline announces a partnership with Anthropic and Fluidstack, but its text could not be read, so Anthropic's role at River Bend is not confirmed by the companies in the sources reviewed."
+    },
+    {
+      "name": "Entergy Louisiana",
+      "role": "utility",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Louisiana Economic Development",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Its secretary was quoted in the announcement and it estimated the indirect jobs; Hut 8 is expected to use the state sales and use tax rebate on data center equipment and the Quality Jobs program."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 245,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase I (Fluidstack lease)",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 330,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Initial utility capacity from Entergy Louisiana."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Announcement materials say the campus could scale to 1,000 MW of utility capacity; Hut 8's August 2026 results describe 1,000 MW of potential expansion capacity at River Bend subject to added power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2295,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Motley Fool says Hut 8 and Fluidstack could deliver as much as 2,295 MW of AI data center infrastructure to Anthropic at River Bend. This exceeds the 1,000 MW utility scale-up cited by other sources, and Hut 8 material that could be read does not state it."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase I peak",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Construction workers reported on site in October 2026."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 75,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2025-12-17",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-12-17",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q2",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "Target at announcement; WAFB reported in October 2026 that the facility is expected to be operational by the end of 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Entergy Louisiana is to supply an initial 330 MW, with possible growth to 1,000 MW; WAFB reports a new on-site substation being built with Entergy and funded by the company.",
+      "source_ids": [
+        "s4",
+        "s7"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-signs-15-year-245-mw-ai-data-center-lease-at-river-bend-campus-with-total-contract-value",
+      "title": "Hut 8 Signs 15-Year, 245 MW AI Data Center Lease at River Bend Campus with Total Contract Value of $7.0 Billion",
+      "publisher": "Hut 8",
+      "published": "2025-12-17",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-announces-ai-infrastructure-partnership-with-anthropic-and-fluidstack",
+      "title": "Hut 8 Announces AI Infrastructure Partnership with Anthropic and Fluidstack",
+      "publisher": "Hut 8",
+      "published": "2025-12-17",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.expansionsolutionsmagazine.com/hut-8-selects-southeast-louisiana-for-10b-ai-data-center-campus/",
+      "title": "Hut 8 Selects Southeast Louisiana for $10B AI Data Center Campus",
+      "publisher": "Expansion Solutions Magazine",
+      "published": "2025-12-17",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.tdworld.com/smart-utility/news/55339947/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center",
+      "title": "Hut 8 Selects Entergy, Southeast Louisiana for $10 Billion Artificial Intelligence Data Center",
+      "publisher": "T&D World",
+      "published": "2025-12-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20251230201057/https://www.tdworld.com/smart-utility/news/55339947/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center"
+    },
+    {
+      "id": "s5",
+      "url": "https://finance.yahoo.com/news/why-hut-8-stock-popped-005207470.html",
+      "title": "Why Hut 8 Stock Popped Today",
+      "publisher": "The Motley Fool (via Yahoo Finance)",
+      "published": "2025-12-18",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.hut8.com/news-insights/press-releases/hut-8-reports-second-quarter-2026-results",
+      "title": "Hut 8 Reports Second Quarter 2026 Results",
+      "publisher": "Hut 8",
+      "published": "2026-08-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.wafb.com/2026/10/05/first-look-west-felicianas-data-center/",
+      "title": "First Look: West Feliciana's data center",
+      "publisher": "WAFB",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20261007003735/https://www.wafb.com/2026/10/05/first-look-west-felicianas-data-center/"
+    },
+    {
+      "id": "s8",
+      "url": "https://en.wikipedia.org/wiki/West_Feliciana_Parish,_Louisiana",
+      "title": "West Feliciana Parish, Louisiana",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

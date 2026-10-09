@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "id": "adaniconnex-navi-mumbai",
+  "name": "AdaniConneX Navi Mumbai data centre campus",
+  "aliases": [],
+  "summary": "AdaniConneX lists a planned Navi Mumbai campus with a potential capacity of 1,000 MW of IT load, which the company says has not yet launched and will connect to the main internet exchanges over OPGW fibre. The company gives a ready-for-service date of December 2026 onwards and says the campus can use up to 100% renewable power. No address, investment figure, tenant or construction progress has been published in the sources reviewed.",
+  "location": {
+    "country": "IN",
+    "admin1": "Maharashtra",
+    "locality": "Navi Mumbai",
+    "lat": 19.0308,
+    "lon": 73.0199,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "The company names Navi Mumbai only. Coordinates are the OpenStreetMap Nominatim centroid of Navi Mumbai, not the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "AdaniConneX",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed by the company as potential capacity in IT load."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2026-12",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company lists ready-for-service as December 2026 onwards."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Company states up to 100% renewable energy; the supply arrangement is not described.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.adaniconnex.com/data-centers",
+      "title": "Data Centers",
+      "publisher": "AdaniConneX",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Single source: the status comes from the company's undated campus page, accessed on 2026-10-09, so status_as_of is that access date. Status is announced because the page calls the facility soon to be launched and gives no construction details.",
+  "last_reviewed": "2026-10-09"
+}

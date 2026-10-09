@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0",
+  "id": "stargate-uae",
+  "name": "Stargate UAE / UAE-US AI Campus",
+  "aliases": [
+    "Stargate UAE",
+    "UAE-US AI Campus",
+    "UAE–U.S. AI Campus"
+  ],
+  "summary": "A planned 5 GW AI data centre campus in Abu Dhabi, unveiled in May 2025 under a US-UAE technology partnership and led by G42. Its first 1 GW block, branded Stargate UAE, is being developed by G42 unit Khazna Data Centers, with OpenAI and Oracle named as operators and NVIDIA supplying GB300 systems. Construction of an initial 200 MW (two 100 MW buildings) was under way in 2026, with handover targeted for 2026; no completion dates have been given for the rest of the 1 GW cluster or the wider campus. A UAE minister put the cost at more than USD 30 billion in January 2026.",
+  "location": {
+    "country": "AE",
+    "admin1": "Abu Dhabi",
+    "lat": 24.3438,
+    "lon": 55.1,
+    "precision": "admin1",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "Sources place the campus in Abu Dhabi without naming a district, and its exact site has not been published. Coordinates are the OpenStreetMap Nominatim centroid of the Abu Dhabi emirate, not the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-13",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s6"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "G42",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "G42 leads the consortium building the 5 GW campus and is named as the builder of the Stargate UAE cluster."
+    },
+    {
+      "name": "Khazna Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "G42 data centre company developing the Stargate UAE cluster and delivering the campus build."
+    },
+    {
+      "name": "OpenAI",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named with Oracle as an operator of the 1 GW Stargate UAE cluster."
+    },
+    {
+      "name": "Oracle",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named with OpenAI as an operator of the 1 GW Stargate UAE cluster."
+    },
+    {
+      "name": "NVIDIA",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "To supply Grace Blackwell GB300 systems."
+    },
+    {
+      "name": "Cisco",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Described as providing zero-trust security and AI-ready network connectivity."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 5000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-05-15",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned capacity of the whole UAE-US AI Campus, of which Stargate UAE is one part."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Stargate UAE cluster",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Stargate UAE first phase",
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Khazna said in August 2026 that two 100 MW buildings had been enclosed and fit-out was under way."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Capacity slated to come online in 2026 (UAE Embassy)",
+      "as_of": "2026",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "The UAE Embassy in Washington says the first 500 MW of the campus is due online in 2026. This differs from the 200 MW first phase given by G42, Khazna and Mubadala, and the sources do not reconcile the two figures."
+    },
+    {
+      "metric": "investment",
+      "value": 30000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-26",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Cost estimate given by the UAE Minister of State for AI. The report attributes it to the 5 GW project and says it is 50 percent above an early estimate in the USD 20 billion range; no phase breakdown was given."
+    },
+    {
+      "metric": "land_area",
+      "value": 1920,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-26",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Reported as 19.2 square kilometres, converted exactly to hectares."
+    },
+    {
+      "metric": "land_area",
+      "value": 6400,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-05-22",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "G42 described the campus as about 10 square miles, converted at 640 acres per square mile. This is larger than the 19.2 square kilometres reported later by The National; the conflict is unresolved."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "Stargate UAE first phase",
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Two 100 MW buildings."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 5000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Stargate UAE first phase",
+      "as_of": "2025-12-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Workers on site as of December 2025."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-05-15",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "5 GW UAE-US AI Campus unveiled in Abu Dhabi."
+    },
+    {
+      "event": "announced",
+      "date": "2025-05-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Stargate UAE 1 GW cluster launched as the first block within the campus."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-16",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "G42 reported that civil works were well advanced, all long-lead equipment had been procured and the first mechanical systems had arrived on site."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Mubadala's chief executive said in December 2025 that the first 200 MW phase would be ready in the third quarter of 2026."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Partners and Khazna have repeatedly targeted 2026 for the first 200 MW; Khazna said in August 2026 it remained on track despite regional conflict. No go-live had been confirmed in the sources reviewed."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "nuclear",
+      "description": "Partners said the campus would use nuclear power among its energy sources; the supply arrangement was not described.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Solar power is named among the campus energy sources; no project or capacity was given.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Natural gas is named among the campus energy sources; sources do not say whether generation is on site or via the grid.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+      "title": "Global Tech Alliance Launches Stargate UAE",
+      "publisher": "G42",
+      "published": "2025-05-22",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.g42.ai/resources/news/g42-lead-consortium-us-partners-build-5gw-uae-us-ai-campus",
+      "title": "G42 to lead a consortium with US partners to build 5GW UAE-US AI Campus",
+      "publisher": "G42",
+      "published": "2025-05-15",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260913154255/https://www.g42.ai/resources/news/g42-lead-consortium-us-partners-build-5gw-uae-us-ai-campus"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586430.html",
+      "title": "G42 Provides Update on Construction of Stargate UAE AI Infrastructure Cluster",
+      "publisher": "G42 via PR Newswire",
+      "published": "2025-10-16",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026",
+      "title": "Stargate UAE's first phase to be completed in third quarter of 2026",
+      "publisher": "The National",
+      "published": "2025-12-05",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260908124441/https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.thenationalnews.com/future/technology/2026/01/26/stargate-uae-data-centre-to-cost-more-than-30bn-ai-minister-says/",
+      "title": "Stargate UAE data centre to cost more than $30bn, AI minister says",
+      "publisher": "The National",
+      "published": "2026-01-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.khaleejtimes.com/uae/abu-dhabi-5gw-uae-us-ai-campus-on-track-regional-conflict",
+      "title": "Abu Dhabi's 5GW UAE-US AI Campus stays on track despite regional conflict",
+      "publisher": "Khaleej Times",
+      "published": "2026-08-13",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.uae-embassy.org/uae-us-cooperation/economic/forging-future-ai-together-uae-us-advanced-tech-cooperation",
+      "title": "The UAE-US AI & Advanced Tech Partnership",
+      "publisher": "Embassy of the United Arab Emirates, Washington DC",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    }
+  ],
+  "notes": "Sources describe Stargate UAE as the first 1 GW cluster inside the 5 GW UAE-US AI Campus, so both are kept in one record with phase-level figures to avoid double counting. Some reports (for example The National in January 2026) use the Stargate UAE name for the whole 5 GW project. Khazna said in August 2026 that construction continued through that year's regional conflict. SoftBank Group is also named as a partner, but no source reviewed states its role, so it is not listed as a party.",
+  "last_reviewed": "2026-10-09"
+}

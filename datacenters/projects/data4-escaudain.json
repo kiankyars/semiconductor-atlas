@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "id": "data4-escaudain",
+  "name": "Data4 Escaudain campus",
+  "aliases": [
+    "Parc des Soufflantes data center campus"
+  ],
+  "summary": "Data4, the Brookfield-owned European data center developer, plans a EUR 5 billion, 700 MW AI-oriented campus on the Parc des Soufflantes brownfield in Escaudain, northern France, the former Usinor steelworks. The local authority La Porte du Hainaut picked Data4 in December 2025; after feasibility studies Data4 confirmed the project in June 2026, with further studies and preliminary works over the following year and four data center buildings to follow. The site was among the French government and RTE fast-track grid sites.",
+  "location": {
+    "country": "FR",
+    "admin1": "Hauts-de-France",
+    "admin2": "Nord",
+    "locality": "Escaudain",
+    "lat": 50.3333,
+    "lon": 3.3438,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Nominatim centroid of the commune of Escaudain; the site is the Parc des Soufflantes (former Usinor plant), which could not be geocoded more precisely."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-15",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Data4",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Brookfield",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Owner of Data4 since April 2023."
+    },
+    {
+      "name": "Communauté d'Agglomération de La Porte du Hainaut",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Local authority that selected Data4 as exclusive partner to redevelop the former Usinor site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 700,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-06-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 33,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-12",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The December 2025 selection release described a 38-hectare campus project."
+    },
+    {
+      "metric": "land_area",
+      "value": 38,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-15",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Data4 says four data centers will be built to expand the campus; trade press (DCD via BeBeez) described an initial building that could be followed by up to four more."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 2400,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-12",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-12-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "La Porte du Hainaut selected Data4 and opened a 60-day exclusive negotiation and feasibility phase."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-12",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Data4 confirmed the EUR 5 billion project after feasibility studies; further studies and preliminary works planned over the next 12 months."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Site benefited from the French government and RTE fast-track procedure for ready-to-connect data center sites.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.data4group.com/wp-content/uploads/2025/12/CP-FINAL-Data4-Agglomeration-de-La-Porte-du-Hainaut.pdf",
+      "title": "Escaudain : Data4 sélectionné pour le projet de campus numérique de La Porte du Hainaut",
+      "publisher": "Data4",
+      "published": "2025-12-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.data4group.com/wp-content/uploads/2026/06/Press-release_Data4-launches-a-new-campus-in-France.pdf",
+      "title": "Data4 confirms its largest data center project in the North of France",
+      "publisher": "Data4",
+      "published": "2026-06-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://bebeez.eu/2026/06/15/data4-confirms-e5bn-plan-for-700mw-ai-data-center-in-northern-france/",
+      "title": "Data4 confirms €5bn plan for 700MW AI data center in northern France",
+      "publisher": "BeBeez International (DCD)",
+      "published": "2026-06-15",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "notes": "No construction start, permit or first-operation date had been published by the companies as of the latest source. Data4 said decontamination of the former Usinor plant would follow once project conditions were met.",
+  "last_reviewed": "2026-10-09"
+}

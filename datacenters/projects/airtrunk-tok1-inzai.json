@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "id": "airtrunk-tok1-inzai",
+  "name": "AirTrunk TOK1 Tokyo East",
+  "aliases": [
+    "TOK1"
+  ],
+  "summary": "TOK1 is AirTrunk's flagship hyperscale campus in the Inzai data center hub east of Tokyo, which AirTrunk bills as the biggest hyperscale campus in Japan measured in megawatts. The 13-hectare campus is scalable to more than 300 MW and already has facilities in service. In August 2024 AirTrunk said a 50 MW third phase was on schedule and topping out; it broke ground on a further 40 MW-plus phase in June 2025, and in March 2026 said it had recently begun building over 100 MW of additional IT load. That month it closed a JPY 191.6 billion green loan to refinance existing TOK1 facilities and fund the next phases.",
+  "location": {
+    "country": "JP",
+    "admin1": "Chiba Prefecture",
+    "locality": "Inzai",
+    "lat": 35.8323,
+    "lon": 140.1453,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "AirTrunk's TOK1 page places the campus in Inzai's data center hub without an address; coordinates are the OpenStreetMap Nominatim centroid of Inzai City."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-03-10",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "AirTrunk",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "AirTrunk",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-03-10",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "AirTrunk calls this total campus capacity without saying whether it is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 3",
+      "as_of": "2024-08-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Topping out expected in August 2024."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 40,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase begun June 2025",
+      "as_of": "2025-06-19",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Next phases under construction in 2026",
+      "as_of": "2026-03-10",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "May overlap with the phase that broke ground in June 2025; AirTrunk does not reconcile the two figures."
+    },
+    {
+      "metric": "land_area",
+      "value": 13,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Undated facility page viewed October 2026."
+    },
+    {
+      "metric": "floor_area",
+      "value": 80000,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Data hall area across 102 data halls, per the undated facility page; excludes 9,600 square meters of office and storage space."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Phase 3 (50 MW) reported on schedule and topping out."
+    },
+    {
+      "event": "other",
+      "date": "2025-06",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Groundbreaking on a 40 MW-plus phase announced 19 June 2025; earlier phases had already been built, so this is not the campus construction start."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-10",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "JPY 191.6 billion (about US$1.24 billion) green loan closed to refinance existing TOK1 facilities and fund development of the next phases."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://airtrunk.com/data-centres/tok1/",
+      "title": "TOK1 Tokyo East",
+      "publisher": "AirTrunk",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://airtrunk.com/airtrunk-tok1-phase-3-progressing-at-speed/",
+      "title": "AirTrunk TOK1 Phase 3 progressing at speed",
+      "publisher": "AirTrunk",
+      "published": "2024-08-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://airtrunk.com/airtrunk-breaks-ground-on-40mw-phase-of-tok1-japans-largest-hyperscale-data-centre-campus/",
+      "title": "AirTrunk breaks ground on 40+MW phase of TOK1, Japan's largest hyperscale data centre campus.",
+      "publisher": "AirTrunk",
+      "published": "2025-06-19",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://airtrunk.com/airtrunk-secures-largest-financing-for-a-data-centre-in-japan-with-us1-2-billion-green-loan-for-its-flagship-tokyo-campus/",
+      "title": "AirTrunk secures largest financing for a data centre in Japan with US$1.2 billion green loan",
+      "publisher": "AirTrunk",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260420024816/https://airtrunk.com/airtrunk-secures-largest-financing-for-a-data-centre-in-japan-with-us1-2-billion-green-loan-for-its-flagship-tokyo-campus/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

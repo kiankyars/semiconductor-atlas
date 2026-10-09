@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "id": "atnorth-salo-fin05",
+  "name": "atNorth FIN05 Salo mega site",
+  "aliases": [
+    "FIN05",
+    "Salo mega site"
+  ],
+  "summary": "atNorth announced on 5 October 2026 a data center campus, FIN05, on a 28.6-hectare development-ready site in Salo, southwest Finland, with about EUR 2bn of its own investment; customer-owned servers could add a further investment estimated at up to EUR 10bn. The press release describes a 75 MW first phase with secured power and a path to up to 230 MW, while the site page lists 230 MW of gross power, up to 160 MW of IT capacity and a 60 MW IT first phase with power planned for Q3 2028. The site will connect to Fingrid's transmission grid through a substation, and atNorth plans long-term power purchase agreements with local suppliers.",
+  "location": {
+    "country": "FI",
+    "admin1": "Southwest Finland",
+    "admin2": "Salo",
+    "locality": "Salo",
+    "lat": 60.3879,
+    "lon": 23.1249,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Sources name Salo without a street address; the coordinates are the Nominatim point for Salo's central district (Salon suuralue)."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "atNorth",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Fingrid",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Transmission grid operator; the site will connect through a Fingrid substation."
+    },
+    {
+      "name": "City of Salo",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Municipality that worked with atNorth and site developer Regant Oy to prepare the site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 230,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Site page gives 230 MW of gross power; the press release describes a path to up to 230 MW without stating scope."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 160,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 75,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Press release figure; the site page lists the first phase as 60 MW of IT capacity, so the two may be different scopes."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 60,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "atNorth's own investment, excluding customer-owned servers and their installation, which the company says could represent a further investment estimated at up to EUR 10bn."
+    },
+    {
+      "metric": "land_area",
+      "value": 28.6,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-10-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2028-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Power availability planned for the 60 MW IT first phase."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Connection to Fingrid's transmission grid via a substation; first-phase power described as secured, with long-term PPAs with local suppliers planned and generation sources not named.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.atnorth.com/news/atnorth-to-develop-new-data-center-in-salo-finland/",
+      "title": "atNorth to develop new data center in Salo, Finland",
+      "publisher": "atNorth",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.atnorth.com/nordic-data-centers/finland-data-centers/salo-fin05/",
+      "title": "Salo mega site (FIN05)",
+      "publisher": "atNorth",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

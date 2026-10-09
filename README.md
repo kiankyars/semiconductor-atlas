@@ -1,3 +1,40 @@
+# Open Data Center Atlas
+
+**An open, source-linked dataset of large data center builds.** Browse it at
+**<https://kiankyars.github.io/semiconductor-atlas/>**.
+
+Each record says who is building a campus, for whom, how much power is planned or operating, what
+it costs, and where it stands, and every value links to the public source that reported it. Power
+figures keep their basis (planned, contracted, permitted, under construction, operational) and
+scope (IT load, facility, grid connection) separate. Unknown values stay blank.
+
+| Get the data | URL |
+| --- | --- |
+| Projects table (CSV) | <https://kiankyars.github.io/semiconductor-atlas/data/projects.csv> |
+| Every sourced statement (CSV) | <https://kiankyars.github.io/semiconductor-atlas/data/statements.csv> |
+| Full records (JSON / JSON Lines) | <https://kiankyars.github.io/semiconductor-atlas/data/projects.json> |
+| Map layer (GeoJSON) | <https://kiankyars.github.io/semiconductor-atlas/data/projects.geojson> |
+| Everything (SQLite, Excel, Parquet, Data Package) | <https://kiankyars.github.io/semiconductor-atlas/data/> |
+| JSON API | <https://kiankyars.github.io/semiconductor-atlas/api/v1/index.json> |
+
+```python
+import pandas as pd
+projects = pd.read_csv("https://kiankyars.github.io/semiconductor-atlas/data/projects.csv")
+```
+
+Curated records are [CC BY 4.0](datacenters/LICENSE-DATA.txt); the bundled OpenStreetMap layer is
+ODbL and the Wikidata layer CC0. Records live as one JSON file per build in
+[`datacenters/projects/`](datacenters/projects/); corrections and additions are welcome through
+issues or pull requests (see [contributing](datacenters/CONTRIBUTING.md)). The
+[methodology](datacenters/METHODOLOGY.md) explains inclusion, statuses, power scopes and
+limitations; [`datacenters/`](datacenters/) documents the tooling. Cite with
+[`CITATION.cff`](CITATION.cff).
+
+The rest of this README documents **Semiconductor Atlas**, the evidence-first registry of
+semiconductor fabs in the same repository, whose provenance rules the data center atlas follows.
+
+---
+
 # Semiconductor Atlas
 
 Semiconductor Atlas is an evidence-first registry for semiconductor organizations, sites,

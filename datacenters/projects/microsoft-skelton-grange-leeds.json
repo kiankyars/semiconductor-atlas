@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-skelton-grange-leeds",
+  "name": "Microsoft Skelton Grange datacentre campus, Leeds",
+  "aliases": [
+    "Skelton Grange (Leeds) datacentre"
+  ],
+  "summary": "Planned Microsoft hyperscale datacentre campus on the former Skelton Grange power station land at Stourton, Leeds, beside the River Aire. Microsoft bought the first 27-acre plot from Harworth Group in 2024, and a second 21-acre plot is due to transfer. The application covers three data centre buildings of about 424,000 sq ft (about 500,000 sq ft with auxiliary buildings) plus power, water and energy infrastructure. Leeds planners resolved to grant consent in April 2026, subject to conditions and a Section 106 agreement. Harworth estimates about GBP 4 billion of inward investment at completion; a start on site was expected within 12 to 18 months.",
+  "location": {
+    "country": "GB",
+    "admin1": "England",
+    "admin2": "Leeds",
+    "locality": "Stourton",
+    "lat": 53.7758,
+    "lon": -1.4978,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s3"
+    ],
+    "note": "Nominatim point on Skelton Grange Road, Stourton (LS10 1RS), next to the former power station land the sources name; the exact plot boundaries are not published in the sources."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-27",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Harworth names the applicant as Microsoft entity MSFT MCIO Limited."
+    },
+    {
+      "name": "Microsoft",
+      "role": "owner",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Owns Plot 1 (27 acres) since June 2024; purchase of Plot 2 (21 acres) was still to complete as of April 2026."
+    },
+    {
+      "name": "Harworth Group",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Sold the land to Microsoft and is carrying out site remediation and enabling works for it; retains an adjoining 16-acre plot for industrial and logistics space."
+    },
+    {
+      "name": "Leeds City Council",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "qualifier": "approximately",
+      "unit": "GBP",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Harworth's estimate of inward investment once the development completes; Construction Enquirer uses the figure in its headline. Microsoft has not published a figure."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Construction Enquirer reports three buildings; Harworth and The Construction Index describe three data centre halls plus auxiliary buildings."
+    },
+    {
+      "metric": "floor_area",
+      "value": 424000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Three data centre buildings, per Construction Enquirer."
+    },
+    {
+      "metric": "floor_area",
+      "value": 500000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Harworth's figure for three data centre halls plus auxiliary buildings on Plots 1 and 2."
+    },
+    {
+      "metric": "land_area",
+      "value": 27,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "phase",
+      "phase_label": "Plot 1",
+      "as_of": "2024-06",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Bought for GBP 51.2 million gross; Plot 2 (21 acres) adds GBP 53.2 million on completion."
+    },
+    {
+      "metric": "land_area",
+      "value": 65,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Site of the whole hybrid application, which also includes industrial space on land retained by Harworth outside the Microsoft plots."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 740,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Over a build programme described as six years."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 350,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Operational roles across the data centre campus and the industrial and logistics element."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2024-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Plot 1 purchase completed; Plot 2 still pending in April 2026."
+    },
+    {
+      "event": "other",
+      "date": "2025-06-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Microsoft held a two-day public consultation on 11-12 June 2025 while preparing its planning application (later registered as 25/06139/FU)."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Leeds City Council planners resolved to grant the hybrid application, delegating final approval to the Chief Planning Officer subject to conditions and a Section 106 agreement."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Construction Enquirer reported a start on site was likely within 12 to 18 months of the April 2026 approval."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://local.microsoft.com/blog/skelton-grange-leeds-datacentre-planning-application/",
+      "title": "Skelton Grange (Leeds) Datacentre Planning Application",
+      "publisher": "Microsoft Local",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260916155404/https://local.microsoft.com/blog/skelton-grange-leeds-datacentre-planning-application/"
+    },
+    {
+      "id": "s2",
+      "url": "https://harworthgroup.com/2026/04/27/harworth-and-microsoft-receive-resolution-to-grant-planning-consent-for-hyperscale-data-centre-and-il-space-at-skelton-grange-leeds/",
+      "title": "Harworth and Microsoft receive resolution to grant planning consent for hyperscale data centre and I&L space at Skelton Grange, Leeds",
+      "publisher": "Harworth Group",
+      "published": "2026-04-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.constructionenquirer.com/2026/04/27/go-ahead-for-microsofts-4bn-leeds-data-hub-push/",
+      "title": "Go-ahead for Microsoft's £4bn Leeds data hub push",
+      "publisher": "Construction Enquirer",
+      "published": "2026-04-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261003184249/https://www.constructionenquirer.com/2026/04/27/go-ahead-for-microsofts-4bn-leeds-data-hub-push/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.theconstructionindex.co.uk/news/view/data-centre-approved-in-leeds",
+      "title": "Data centre approved in Leeds",
+      "publisher": "The Construction Index",
+      "published": "2026-04-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "notes": "No power capacity figure for the campus was found in the cited sources; Harworth's 0.8 GW figure refers to its wider powered-land portfolio, not this campus. Harworth's release footnote dates the plans panel to 23/04/2027, apparently a typo for 2026. The Construction Index page shows only day and month; the year is taken from its context alongside the same-day Harworth release.",
+  "last_reviewed": "2026-10-09"
+}

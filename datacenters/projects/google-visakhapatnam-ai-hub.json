@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "id": "google-visakhapatnam-ai-hub",
+  "name": "Google AI hub, Visakhapatnam",
+  "aliases": [
+    "Google Vizag AI hub"
+  ],
+  "summary": "Google's first AI hub in India: a gigawatt-scale data center development near Visakhapatnam (Vizag), Andhra Pradesh, announced in October 2025 as part of a roughly $15 billion, five-year (2026-2030) investment that also covers new energy, transmission and a subsea cable gateway. Reports describe three campuses with combined capacity of 1 GW on about 600 acres at Tarluvada, Adavivaram and Rambilli, with Raiden Infotech India implementing the project with Adani Infra. Google is working with AdaniConneX and Nxtra by Airtel on the facility. Google broke ground on 28 April 2026; facilities are targeted to be operational by July 2028.",
+  "location": {
+    "country": "IN",
+    "admin1": "Andhra Pradesh",
+    "admin2": "Visakhapatnam district",
+    "locality": "Tarluvada",
+    "lat": 17.9056,
+    "lon": 83.329,
+    "precision": "locality",
+    "source_ids": [
+      "s3",
+      "s4"
+    ],
+    "note": "Village centroid of Tarluvada (OpenStreetMap); Tarluvada holds the largest of the three parcels. The other parcels are at Adavivaram and Rambilli, so this point does not represent the whole hub."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-28",
+  "status_source_ids": [
+    "s2",
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Raiden Infotech India Private Limited",
+      "role": "developer",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported as the entity implementing the project, with land allocated at all three sites and special purpose vehicles for the individual data centre parks; the opened sources do not state its relationship to Google."
+    },
+    {
+      "name": "Government of Andhra Pradesh",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Signed a memorandum of understanding with Google in October 2025."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-04-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Combined capacity of the three campuses as reported; Google itself describes the hub only as gigawatt-scale."
+    },
+    {
+      "metric": "investment",
+      "value": 15000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-10-14",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Five-year commitment for 2026-2030 covering the data center campus, energy sources and an expanded fiber and subsea network, not the buildings alone."
+    },
+    {
+      "metric": "land_area",
+      "value": 601,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-06",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Officials put the three parcels at about 601 acres; a trade report gives 600 acres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-04-28",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-07",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported target for the facilities to be operational."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Google says it will invest with partners in new transmission lines, clean energy generation and energy storage in Andhra Pradesh; specific projects and capacities were not named.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/intl/en-in/company-news/our-first-ai-hub-in-india-powered-by-a-15-billion-investment/",
+      "title": "Our First AI Hub in India, Powered by a $15 Billion Investment",
+      "publisher": "Google India",
+      "published": "2025-10-14",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260831160728/https://blog.google/intl/en-in/company-news/our-first-ai-hub-in-india-powered-by-a-15-billion-investment/"
+    },
+    {
+      "id": "s2",
+      "url": "https://blog.google/intl/en-in/google-ai-hub-scaling-indias-ai-infrastructure-and-community-impact/",
+      "title": "Google AI Hub - Scaling India's AI Infrastructure and Community Impact",
+      "publisher": "Google India",
+      "published": "2026-04-28",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929183020/https://blog.google/intl/en-in/google-ai-hub-scaling-indias-ai-infrastructure-and-community-impact/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.storyboard18.com/digital/google-to-break-ground-on-15-billion-data-centre-hub-in-andhra-pradesh-on-april-28-94297.htm",
+      "title": "Google to break ground on $15 billion data centre hub in Andhra Pradesh on April 28",
+      "publisher": "Storyboard18",
+      "published": "2026-04-06",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260406125319/https://www.storyboard18.com/digital/google-to-break-ground-on-15-billion-data-centre-hub-in-andhra-pradesh-on-april-28-94297.htm"
+    },
+    {
+      "id": "s4",
+      "url": "https://w.media/google-breaks-ground-for-us-15-billion-india-ai-hub-in-vishakhapatnam/",
+      "title": "Google breaks ground for US$ 15 billion India AI hub in Vishakhapatnam",
+      "publisher": "W.Media",
+      "published": "2026-04-28",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.khaleejtimes.com/business/tech/google-breaks-ground-on-15-billion-indian-ai-megahub",
+      "title": "Google breaks ground on $15 billion Indian AI megahub",
+      "publisher": "Khaleej Times",
+      "published": "2026-04-28",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260511062858/https://www.khaleejtimes.com/business/tech/google-breaks-ground-on-15-billion-indian-ai-megahub"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Google names AdaniConneX and Nxtra by Airtel as partners on the facility, and a news report says implementer Raiden Infotech partnered with Adani Infra (India) Limited; none of the opened sources states these companies' roles, so they are not listed as parties. The $15 billion figure is tied to this hub but also covers energy, fiber and a subsea cable gateway."
+}

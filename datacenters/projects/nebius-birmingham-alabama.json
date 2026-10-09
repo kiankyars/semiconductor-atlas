@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "id": "nebius-birmingham-alabama",
+  "name": "Nebius Birmingham AI factory (Lakeshore Parkway)",
+  "aliases": [],
+  "summary": "Nebius has proposed a two-building AI factory on about 80 acres it owns off Lakeshore Parkway in Birmingham, Alabama, reusing a former bank back-office building. Local television reported in February 2026, without naming who supplied the figure, that Alabama Power would serve the 300 MW facility; it also reported an early-phase permit application with the city and a proposed six-month pause on new data centers. Nebius listed Birmingham among its US data center locations in July 2026. No investment figure, job count or schedule appears in the cited sources.",
+  "location": {
+    "country": "US",
+    "admin1": "Alabama",
+    "locality": "Birmingham",
+    "lat": 33.5175,
+    "lon": -86.8094,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "City centroid from the Wikipedia infobox for Birmingham (s3). The report places the site off Lakeshore Parkway without an address, so the point is the city centroid, not the site. Birmingham spans Jefferson and Shelby counties, so no county is given."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-02-10",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Nebius",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Nebius",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported to own about 80 acres off Lakeshore Parkway."
+    },
+    {
+      "name": "Alabama Power",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "WBRC said it was told Alabama Power would serve the facility; the source of that statement is not named."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-02-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Unattributed figure: WBRC reported it as information it was told without naming the source; Nebius is not quoted on it."
+    },
+    {
+      "metric": "land_area",
+      "value": 80,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-02-10",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-10",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-02-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "WBRC reported the proposal and an early-phase permit application with the city."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Reported to be served by Alabama Power.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.wbrc.com/2026/02/11/ai-factory-being-proposed-along-lakeshore-parkway-birmingham/",
+      "title": "'AI factory' being proposed along Lakeshore Parkway in Birmingham",
+      "publisher": "WBRC",
+      "published": "2026-02-10",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://assets.nebius.com/assets/729154ac-8d55-459f-9dd6-8f85a40da15b/NEW%20Vineland%20NJ%20Fact%20Sheet_7.10.26.pdf?cache-buster=2026-07-10T18:45:11.445Z",
+      "title": "Nebius x Vineland, NJ fact sheet",
+      "publisher": "Nebius",
+      "published": "2026-07-10",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Birmingham,_Alabama",
+      "title": "Birmingham, Alabama",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

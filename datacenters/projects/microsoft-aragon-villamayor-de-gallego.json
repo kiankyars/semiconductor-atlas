@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-aragon-villamayor-de-gallego",
+  "name": "Microsoft Villamayor de Gállego datacenter campus (Aragón)",
+  "aliases": [
+    "Microsoft Malpica campus"
+  ],
+  "summary": "Planned Microsoft datacenter campus on Villamayor de Gállego land at the Malpica industrial estate northeast of Zaragoza, the third Aragón site Microsoft disclosed. The regional government declared it of regional interest in July 2024, citing EUR 2.2 billion of total investment and EUR 365.3 million for an initial phase. The November 2025 regional plan (PIGA Región MSFT) lists 81 hectares and about EUR 1.73 billion, with 50 MW secured for a first phase and up to 300 MW sought later. A modified plan went out for public comment in July 2026, and Forbes reported first operation was expected from 2030.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragón",
+    "admin2": "Zaragoza",
+    "locality": "Villamayor de Gállego",
+    "lat": 41.6857,
+    "lon": -0.774,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Municipality centroid from Nominatim. Sources place the campus on Villamayor de Gállego land associated with the Polígono Malpica, whose named substation (Malpica) serves it; the parcel itself is not identified."
+  },
+  "status": "announced",
+  "status_as_of": "2026-09-04",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Gobierno de Aragón",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Declared the project of regional interest and is processing the PIGA regional plan."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2200000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-07-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total cited when the regional interest declaration was made; the Vozpópuli headline rounds it to EUR 2 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 365300000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Initial construction phase",
+      "as_of": "2024-07-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1733000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Per-site figure in the November 2025 PIGA as reported by elDiario.es; lower than the 2024 figure, and the sources do not explain the difference."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Second-phase aspiration per campus in the PIGA, as reported by elDiario.es; Forbes gives 250-300 MW per campus over about ten years."
+    },
+    {
+      "metric": "land_area",
+      "value": 81,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial construction phase",
+      "as_of": "2024-07-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Inspenet describes these as jobs during construction; Vozpópuli says the initial phase will employ 2,000 people."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-07-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-07-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Aragón's governing council declared the campus of regional interest."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-14",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Initial approval of the PIGA Región MSFT plan covering La Muela, Villamayor de Gállego and Zaragoza, opening a public information period."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-30",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "A modification of the PIGA was published in the Boletín Oficial de Aragón for public comment."
+    },
+    {
+      "event": "first_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Forbes reported the first phase was expected to operate from 2030."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply through a new substation (named Malpica) starting at 132 kV with a later upgrade to 220 kV.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.vozpopuli.com/economia/aragon-centro-datos-microsoft-inversion-2000-millones.html",
+      "title": "Aragón da luz verde a un centro de datos de Microsoft con una inversión de 2.000 millones",
+      "publisher": "Vozpópuli",
+      "published": "2024-07-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://inspenet.com/noticias/microsoft-abrira-centro-de-datos-en-aragon/",
+      "title": "Microsoft abrirá otro centro de datos en Aragón (el tercero)",
+      "publisher": "Inspenet",
+      "published": "2024-07-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260517054437/https://inspenet.com/noticias/microsoft-abrira-centro-de-datos-en-aragon/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.eldiario.es/aragon/sociedad/microsoft-avanza-red-centros-datos-zaragoza-proyecta-mayores-regiones-europa_1_12768636.html",
+      "title": "Microsoft avanza con su red de centros de datos en Zaragoza, donde proyecta una de sus mayores regiones en Europa",
+      "publisher": "elDiario.es",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://forbes.es/empresas/828243/microsoft-obtiene-luz-verde-para-su-ambicioso-proyecto-de-centros-de-datos-en-aragon/",
+      "title": "Microsoft obtiene luz verde para su ambicioso proyecto de centros de datos en Aragón",
+      "publisher": "Forbes España",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.eldiario.es/aragon/politica/zec-presenta-25-alegaciones-plan-microsoft-exige-alcaldesa-zaragoza-paralizar-centro-datos_1_13487405.html",
+      "title": "ZeC presenta 25 alegaciones al plan de Microsoft y exige a la alcaldesa de Zaragoza paralizar un centro de datos",
+      "publisher": "elDiario.es",
+      "published": "2026-09-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "related_ids": [
+    "microsoft-aragon-la-muela",
+    "microsoft-aragon-zaragoza-puerto-venecia"
+  ],
+  "notes": "Investment figures conflict between the 2024 declaration (EUR 2.2 billion) and the 2025 PIGA (about EUR 1.73 billion); both are kept with their dates. In 2024 the sources put Microsoft's investment across its three Aragón sites at EUR 6.6 billion. No government primary source was opened; Boletín Oficial de Aragón entries should be added when available.",
+  "last_reviewed": "2026-10-09"
+}

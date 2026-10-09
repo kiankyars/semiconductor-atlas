@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.0",
+  "id": "qts-cambois-blyth",
+  "name": "QTS Cambois Data Centre Campus",
+  "aliases": [
+    "Project Wind",
+    "Blackstone Northumberland data centre",
+    "QTS Cambois"
+  ],
+  "summary": "QTS, the Blackstone-owned data centre company, is building its first UK campus on the former Blyth Power Station site at Cambois, Northumberland, with up to GBP 10bn of investment. Plans cover ten three-storey buildings and up to 540,000 square metres, with the architect citing 720 MW of IT capacity. Northumberland County Council approved the scheme in March 2025 and phase-one reserved matters for the first two buildings in December 2025. Work on site began in October 2025, and ground improvement for the first two data centres was under way in August 2026. The site sits in the UK's North East AI Growth Zone.",
+  "location": {
+    "country": "GB",
+    "admin1": "England",
+    "admin2": "Northumberland",
+    "locality": "Cambois",
+    "lat": 55.1453,
+    "lon": -1.5309,
+    "precision": "locality",
+    "source_ids": [
+      "s6",
+      "s8"
+    ],
+    "note": "Sources place the campus on the former Blyth Power Station site at Cambois. Nominatim did not return the power station site, so the Cambois village centroid is used."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-06",
+  "status_source_ids": [
+    "s6",
+    "s8"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "QTS",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "name": "QTS",
+      "role": "operator",
+      "source_ids": [
+        "s6"
+      ]
+    },
+    {
+      "name": "Blackstone",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Owner of QTS; the UK government credited Blackstone funds with a projected GBP 10bn investment in the campus."
+    },
+    {
+      "name": "Renaissance Land",
+      "role": "investor",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Blackstone-owned entity described as financing the project."
+    },
+    {
+      "name": "Keller",
+      "role": "builder",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Ground improvement and piling subcontractor for data centres one and two."
+    },
+    {
+      "name": "Northumberland County Council",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Planning authority."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 720,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Architect Corgan lists 720 MW, with each of ten buildings providing 72 MW of IT capacity. Data Centre Review also reports about 720 MW across ten facilities if fully built, without stating scope; W.Media's description of phase one as two 720 MW facilities conflicts with both and is not recorded."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "up_to",
+      "unit": "GBP",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-03-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": "Some sources give GBP 10bn without 'up to'; the UK government describes it as projected investment by Blackstone funds."
+    },
+    {
+      "metric": "floor_area",
+      "value": 540000,
+      "qualifier": "up_to",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-03-05",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 133,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-06",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Keller's description of the site; differs slightly from Corgan's 100 hectares."
+    },
+    {
+      "metric": "buildings",
+      "value": 10,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-06",
+      "source_ids": [
+        "s5",
+        "s8"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "Phase one",
+      "as_of": "2026-08-06",
+      "source_ids": [
+        "s6",
+        "s8"
+      ],
+      "note": "Reserved matters approved in December 2025 for the first two buildings; ground improvement for data centres one and two under way in August 2026."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-27",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as construction jobs over several years; the March 2025 report gave more than 1,000."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "zoning_approved",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Northumberland County Council approved the planning application for the campus."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approval reported for preparatory works such as a site compound, vegetation clearance and earthworks."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-16",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "UK government release quoted Blackstone saying its Northumberland campus had been designated an AI Growth Zone."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Trade press reports that construction began in October 2025, after the August approval."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2025-12-02",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Council approval of reserved matters for phase one, covering the first two buildings."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Ground improvement with vibro stone columns and CFA piles for data centres one and two was under way, due to finish later in August 2026."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Corgan says phase one is projected to open in early 2028."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2035",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Campus completion and tenant onboarding expected by 2035."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.uktech.news/big-data/northumberland-council-approves-plans-for-10bn-data-centre-20250305",
+      "title": "Northumberland Council approves plans for £10bn data centre",
+      "publisher": "UKTN",
+      "published": "2025-03-05",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250724125702/https://www.uktech.news/big-data/northumberland-council-approves-plans-for-10bn-data-centre-20250305"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.acenet.co.uk/news/infrastructure-intelligence/new-milestone-reached-on-10bn-data-centre-project/",
+      "title": "New milestone reached on £10bn data centre project",
+      "publisher": "ACE Infrastructure Intelligence",
+      "published": "2025-08-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260309001235/https://www.acenet.co.uk/news/infrastructure-intelligence/new-milestone-reached-on-10bn-data-centre-project/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.gov.uk/government/news/us-uk-pact-will-boost-advances-in-drug-discovery-create-tens-of-thousands-of-jobs-and-transform-lives",
+      "title": "US-UK pact will boost advances in drug discovery, create tens of thousands of jobs and transform lives",
+      "publisher": "UK Government",
+      "published": "2025-09-16",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20261003180409/https://www.gov.uk/government/news/us-uk-pact-will-boost-advances-in-drug-discovery-create-tens-of-thousands-of-jobs-and-transform-lives"
+    },
+    {
+      "id": "s4",
+      "url": "https://w.media/qts-gained-approval-for-data-center-project-in-northumbria/",
+      "title": "QTS gained approval for data center project in Northumbria",
+      "publisher": "W.Media",
+      "published": "2025-12-09",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.corgan.com/projects/qts-data-center-campus-cambois",
+      "title": "QTS Data Center Campus Cambois",
+      "publisher": "Corgan",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.placenortheast.co.uk/qts-doubles-down-as-openai-pauses-north-east-data-centre-ambitions/",
+      "title": "QTS doubles down as OpenAI pauses North East data centre ambitions",
+      "publisher": "Place North East",
+      "published": "2026-04-13",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260521014552/https://www.placenortheast.co.uk/qts-doubles-down-as-openai-pauses-north-east-data-centre-ambitions/"
+    },
+    {
+      "id": "s7",
+      "url": "https://datacentrereview.com/2026/04/qts-reaffirms-commitment-to-north-east-ai-growth-zone/",
+      "title": "QTS reaffirms commitment to North East AI Growth Zone",
+      "publisher": "Data Centre Review",
+      "published": "2026-04-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s8",
+      "url": "https://www.keller.co.uk/news/keller-lays-foundations-huge-data-centre",
+      "title": "Keller lays foundations for huge data centre",
+      "publisher": "Keller",
+      "published": "2026-08-06",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "tbc-partners-cambois"
+  ]
+}

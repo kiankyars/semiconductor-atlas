@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-fairwater-mount-pleasant",
+  "name": "Microsoft Fairwater AI datacenter, Mount Pleasant",
+  "aliases": [
+    "Fairwater",
+    "Fairwater 1",
+    "Microsoft Mount Pleasant datacenter campus"
+  ],
+  "summary": "Microsoft AI supercomputing campus in Mount Pleasant, Wisconsin, on land originally slated for Foxconn. The first facility (Phase 1, near County Road KR and 90th Street) has three buildings with about 1.2 million sq ft on 315 acres; equipment came online in April 2026 and Microsoft declared it fully operational on 23 June 2026. A second facility of similar scale (Phase 2), immediately adjacent near KR and County Road H, has been under construction since November 2025 with completion scheduled for 2028. Microsoft pledged USD 3.3 billion for the first facility and USD 4 billion more for the second, and calls the site Fairwater.",
+  "location": {
+    "country": "US",
+    "admin1": "Wisconsin",
+    "admin2": "Racine County",
+    "locality": "Mount Pleasant",
+    "lat": 42.6761,
+    "lon": -87.9001,
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "note": "Microsoft's construction page headings place Phase 1 at 'KR & 90' and Phase 2 at 'KR & H' (County Road KR with 90th Street and County Road H); Spectrum News says the site was originally slated for Foxconn. Coordinates are the OpenStreetMap feature named Microsoft Fairwater AI Datacenter (via Nominatim); OSM maps Phase 2 slightly further west at about 42.6780, -87.9076."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-06-23",
+  "status_source_ids": [
+    "s4",
+    "s6"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "role": "owner",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Epoch AI lists Microsoft as owner."
+    },
+    {
+      "name": "Microsoft",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Microsoft reports about 550 full-time employees on site at the completed first facility."
+    },
+    {
+      "name": "Walsh Construction",
+      "role": "builder",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Named on Microsoft's construction update page for foundation work from November 2023 and as the Phase 2 contractor from November 2025."
+    },
+    {
+      "name": "Kiewit",
+      "role": "builder",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Named on Microsoft's construction update page in September and October 2024 as a main contractor working along County Road KR and County Road H."
+    },
+    {
+      "name": "We Energies",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Microsoft cites a partnership with We Energies, and its February 2024 construction update said We Energies would soon start building a substation on the western part of the parcel."
+    },
+    {
+      "name": "National Grid Renewables",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Partner on a 250 MW Wisconsin solar project announced alongside the campus; a renewable matching arrangement rather than a stated direct feed to the site."
+    },
+    {
+      "name": "NVIDIA",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Microsoft describes the cluster as built on NVIDIA GB200 servers with Blackwell GPUs."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s8"
+      ],
+      "note": "Reported, not confirmed: Microsoft says its AI datacenters power OpenAI, and Epoch AI lists OpenAI as a likely user of this site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3300000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "First datacenter (Phase 1)",
+      "as_of": "2024-05-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Announced in May 2024 for spending through the end of 2026; Microsoft later called it the initial investment pledge, with the second datacenter funded separately."
+    },
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Second datacenter (Phase 2)",
+      "as_of": "2025-09-18",
+      "source_ids": [
+        "s2",
+        "s9"
+      ],
+      "note": "Additional spend over three years on a second datacenter of similar size and scale."
+    },
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-09-18",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Microsoft framed this as its total Wisconsin datacenter investment once the second datacenter is included."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 369,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "First facility (Epoch AI Building 1)",
+      "as_of": "2026-05-15",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Epoch AI modeled estimate of current IT power (timeline entries of April and May 2026), not a company figure. Microsoft has not published a megawatt figure for the site."
+    },
+    {
+      "metric": "land_area",
+      "value": 315,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "First datacenter (Phase 1)",
+      "as_of": "2025-09-18",
+      "source_ids": [
+        "s3",
+        "s9"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "First datacenter (Phase 1)",
+      "as_of": "2025-09-18",
+      "source_ids": [
+        "s3",
+        "s9"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 1200000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "First datacenter (Phase 1)",
+      "as_of": "2025-09-18",
+      "source_ids": [
+        "s3",
+        "s9"
+      ],
+      "note": "Combined floor area under roof of the three Phase 1 buildings."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 550,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "First datacenter (Phase 1)",
+      "as_of": "2026-06-23",
+      "source_ids": [
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 800,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-23",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Expected once the second facility is fully operational."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 10000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "First datacenter (Phase 1)",
+      "as_of": "2026-06-23",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Workers over the two-year build of the first facility; Microsoft's release says nearly 10,000."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2023-07",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s8"
+      ],
+      "note": "Epoch AI dates the start of land clearing to 14 July 2023; Microsoft's update page reported permits received and grading planned from July 2023, with Walsh starting foundation work in November 2023."
+    },
+    {
+      "event": "announced",
+      "date": "2024-05-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "paused",
+      "date": "2024-12",
+      "kind": "actual",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "The Associated Press reported that in late December 2024 Microsoft disclosed it was pausing later phases of a large Wisconsin datacenter project."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-09-18",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s9"
+      ],
+      "note": "Second datacenter of similar size announced with an additional USD 4 billion."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-11-01",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Start of Phase 2 work by Walsh Construction at KR and County Road H."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s8"
+      ],
+      "note": "Microsoft says equipment came online with startup activities in April 2026; Epoch AI lists Building 1 as operational on 16 April 2026. Microsoft declared the first facility fully operational on 2026-06-23."
+    },
+    {
+      "event": "other",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Scheduled completion of the second facility (Phase 2); Microsoft's construction page says early 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply via We Energies; Microsoft said in February 2024 that We Energies would soon start a substation on the western part of the parcel.",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Microsoft is matching the site with renewable contracts, including a 250 MW solar project in Portage County, Wisconsin, developed with National Grid Renewables and expected to operate in 2027.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://news.microsoft.com/source/2024/05/08/microsoft-announces-3-3-billion-investment-in-wisconsin-to-spur-artificial-intelligence-innovation-and-economic-growth/",
+      "title": "Microsoft announces $3.3 billion investment in Wisconsin to spur artificial intelligence innovation and economic growth",
+      "publisher": "Microsoft",
+      "published": "2024-05-08",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/",
+      "title": "Made in Wisconsin: The world's most powerful AI datacenter",
+      "publisher": "Microsoft On the Issues",
+      "published": "2025-09-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/",
+      "title": "Inside the world's most powerful AI datacenter",
+      "publisher": "Official Microsoft Blog",
+      "published": "2025-09-18",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260907010407/https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/"
+    },
+    {
+      "id": "s4",
+      "url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/",
+      "title": "Microsoft completes construction on first datacenter facility in Mount Pleasant, Wisconsin",
+      "publisher": "Microsoft",
+      "published": "2026-06-23",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://local.microsoft.com/blog/mount-pleasant-datacenter-project-update/",
+      "title": "Mount Pleasant datacenter project update",
+      "publisher": "Microsoft Local",
+      "published": "2026-07",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260911205220/https://local.microsoft.com/blog/mount-pleasant-datacenter-project-update/"
+    },
+    {
+      "id": "s6",
+      "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/06/23/construction-data-center-facility-microsoft-mount-pleasant-.html",
+      "title": "Construction complete for first data center facility in Mount Pleasant",
+      "publisher": "Spectrum News 1",
+      "published": "2026-06-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.news4jax.com/business/2025/04/09/microsoft-says-its-slowing-or-pausing-some-ai-data-center-projects-including-1b-plan-for-ohio/",
+      "title": "Microsoft says it's 'slowing or pausing' some AI data center projects, including $1B plan for Ohio",
+      "publisher": "Associated Press (via News4JAX)",
+      "published": "2025-04-09",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250410023315/https://www.news4jax.com/business/2025/04/09/microsoft-says-its-slowing-or-pausing-some-ai-data-center-projects-including-1b-plan-for-ohio/"
+    },
+    {
+      "id": "s8",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/microsoft-fairwater-wisconsin",
+      "title": "Microsoft Fairwater Wisconsin",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s9",
+      "url": "https://w.media/microsoft-unveils-its-largest-ai-data-center-yet-to-spend-us-7-billion-on-wisconsin-facility/",
+      "title": "Microsoft unveils its largest AI data center yet; to spend US$ 7 billion on Wisconsin facility",
+      "publisher": "W.Media",
+      "published": "2025-09-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20251026120044/https://w.media/microsoft-unveils-its-largest-ai-data-center-yet-to-spend-us-7-billion-on-wisconsin-facility/"
+    }
+  ],
+  "related_ids": [
+    "microsoft-mount-pleasant-durand-avenue",
+    "microsoft-mount-pleasant-international-drive",
+    "microsoft-fairwater-atlanta"
+  ],
+  "notes": "Phase 1 and the adjacent Phase 2 are kept in one record because Microsoft describes them as adjacent facilities on one site; the later Durand Avenue and International Drive campuses approved in January 2026 have their own records. Epoch AI's projected figures for this site also fold in a 9-building plan (its Buildings 3-11), so they are not recorded here. The construction page carries month-dated entries only.",
+  "last_reviewed": "2026-10-09"
+}

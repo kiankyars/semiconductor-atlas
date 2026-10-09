@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "id": "aker-nscale-korgen",
+  "name": "Aker Nscale Korgen AI data center",
+  "aliases": [
+    "Nscale Korgen"
+  ],
+  "summary": "Aker Nscale, then a joint venture of Aker and Nscale, plans an AI data center at Korgen in Hemnes municipality, Nordland, possibly at Statkraft's Nedre Røssåga power station. In October 2025 an Aker investment director estimated the site would draw about 250 MW of grid capacity and said it could be as large as the Narvik project. Aker Nscale had bought out Nordkraft's position and landowner agreements for a plot zoned for commercial use in Hemnes's proposed land-use plan, and was waiting in line for a Statnett power allocation. Trade press put the project at about USD 5.4bn. Aker passed its joint-venture stake to Nscale in March 2026; no later Korgen-specific update was found.",
+  "location": {
+    "country": "NO",
+    "admin1": "Nordland",
+    "admin2": "Hemnes Municipality",
+    "locality": "Korgen",
+    "lat": 66.0766,
+    "lon": 13.8219,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Korgen village centroid from Nominatim; sources say the plot is in a designated area at Korgen, possibly at Nedre Røssåga power station, but do not give a parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2025-10-27",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Aker Nscale",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Joint venture of Aker and Nscale when the plan was reported; Aker transferred its 50% stake in the joint venture to Nscale in March 2026."
+    },
+    {
+      "name": "Statnett",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Grid operator from which the project awaits a power allocation."
+    },
+    {
+      "name": "Hemnes Municipality",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Its proposed land-use plan zones the plot for commercial use."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-10-22",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Estimate by Aker's investment director of the grid capacity the data center would use."
+    },
+    {
+      "metric": "investment",
+      "value": 5400000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-27",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure appears in the trade press article's unattributed summary; the full text is paywalled and its basis is not explained."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported that Aker Nscale had bought out Nordkraft's position, including the option on a plot next to Statkraft's facility that Nordkraft had held since 2019, and taken over the landowner agreements."
+    },
+    {
+      "event": "other",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Grid power application delayed by zoning; the project was waiting in line for a Statnett allocation."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-27",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Aker transferred its 50% stake in the Aker Nscale joint venture to Nscale; the release does not mention Korgen."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Planned grid draw of about 250 MW subject to a Statnett allocation; the site may sit at the Nedre Røssåga power station.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://en.highnorthnews.com/business/aker-nscale-planning-another-ai-data-center-in-northern-norway/118322",
+      "title": "Aker Nscale Planning Another AI Data Center in Northern Norway",
+      "publisher": "High North News",
+      "published": "2025-10-22",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260418113408/https://en.highnorthnews.com/business/aker-nscale-planning-another-ai-data-center-in-northern-norway/118322"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.datacenter-forum.com/nscale/aker-nscale-plans-to-build-large-ai-data-center-in-northern-norway",
+      "title": "Aker Nscale plans to build large AI data center in northern Norway",
+      "publisher": "Datacenter Forum",
+      "published": "2025-10",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20251214074501/https://www.datacenter-forum.com/nscale/aker-nscale-plans-to-build-large-ai-data-center-in-northern-norway"
+    },
+    {
+      "id": "s3",
+      "url": "https://thetechcapital.com/nscale-expands-ai-infrastructure-with-new-250-mw-data-centre-project-in-norway/",
+      "title": "Nscale expands AI infrastructure with new 250 MW data centre project in Norway",
+      "publisher": "The Tech Capital",
+      "published": "2025-10-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.placera.se/pressmeddelanden/aker-aker-completes-investment-in-nscales-series-c-funding-round-20260327",
+      "title": "Aker completes investment in Nscale's Series C funding round",
+      "publisher": "Aker ASA (via Placera)",
+      "published": "2026-03-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

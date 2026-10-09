@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-prometheus-new-albany",
+  "name": "Meta New Albany data center campus (Prometheus)",
+  "aliases": [
+    "Prometheus",
+    "New Albany Data Center"
+  ],
+  "summary": "Meta's campus in New Albany, Ohio, where ground was first broken in 2017, is being expanded to host Prometheus, an AI cluster that Meta says delivers more than 1 GW of compute across several buildings. Meta announced Prometheus in July 2025, and it was expected to come online in 2026. Meta planned the campus's energy needs with AEP, behind-the-meter gas plants are being built by Will-Power OH for a Meta affiliate, and Meta signed nuclear power deals in January 2026 tied to the cluster. Drone imagery reported in September 2026 indicated the southern part of the cluster was running while the northern part was not yet energized.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "locality": "New Albany",
+    "lat": 40.0812,
+    "lon": -82.8088,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "City point from OpenStreetMap Nominatim; the cited sources name New Albany but give no site address for the data center buildings."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-09-16",
+  "status_source_ids": [
+    "s7"
+  ],
+  "notes": "Meta's fact sheet (s1) is an undated PDF; its embedded file creation date is 2026-09-02. Figures taken only from it carry the date it was read (2026-10-09).",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "American Electric Power (AEP)",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta says it planned its energy needs with AEP."
+    },
+    {
+      "name": "Will-Power OH",
+      "role": "power_supplier",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Builds and operates behind-the-meter gas plants in New Albany whose output goes to Sidecat, described as a Meta affiliate."
+    },
+    {
+      "name": "Williams Companies",
+      "role": "power_supplier",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Lists the two 200 MW Socrates gas plants in New Albany as Will-Power projects; its page does not name the customer, but Socrates North is the plant approved to serve the Meta affiliate."
+    },
+    {
+      "name": "Vistra",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "20-year nuclear power purchase agreements announced in January 2026 as supporting Prometheus; the plants stay connected to the wider grid."
+    },
+    {
+      "name": "TerraPower",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Agreement to fund new Natrium reactor units, with first delivery as early as 2032; announced alongside the Prometheus deals."
+    },
+    {
+      "name": "Oklo",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Agreement to help develop a 1.2 GW power campus in Pike County, Ohio, to support Meta's data centers in the region."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Meta's undated fact sheet, read 2026-10-09, describes over 1 GW of compute capacity for the Prometheus cluster; the January 2026 AP report calls it a 1 GW cluster. Neither says whether this is IT or facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 480,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Prometheus South",
+      "as_of": "2026-09-16",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Analyst unit table listing six 80 MW units. IIR Energy, cited for status, lists five of six halls operational; August 2026 imagery showed five halls structurally complete."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Prometheus North",
+      "as_of": "2026-09-16",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Analyst unit table listing five 100 MW units. August 2026 drone imagery showed the five shells complete but not energized, although IIR Energy lists them as operational."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Socrates North gas plant",
+      "as_of": "2025-09-19",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Behind-the-meter gas plant approved by the Ohio Power Siting Board for the Meta affiliate Sidecat; Williams lists a matching 200 MW Socrates South plant, for 400 MW combined."
+    },
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta's cumulative investment figure for the New Albany data center, from its undated fact sheet."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Skilled trade workers on site at peak construction, from Meta's undated fact sheet."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2017",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Groundbreaking of the original New Albany campus."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-07",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Meta announced the 1 GW Prometheus cluster spanning multiple buildings."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "In late June the Ohio Power Siting Board approved a further 250 MW behind-the-meter gas plant with 116 MW of batteries (Socrates the Younger) for the Meta affiliate; the report does not name the data center it serves."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-31",
+      "kind": "actual",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Drone flight indicated Prometheus South and its gas plant operating; an August 19 flight showed Prometheus North not yet energized."
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target for the Prometheus cluster to come online, as reported in January 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned the campus's energy needs with AEP and pays the full cost of the energy used.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "Williams lists two 200 MW Will-Power gas plants in New Albany, Socrates North and South, targeting service in the third and fourth quarters of 2026; Socrates North is approved to run behind the meter for a Meta affiliate, and a further 250 MW plant was approved in June 2026. New Albany's mayor said Meta was building two gas plants on its site. Drone imagery in late August 2026 showed the Prometheus South gas plant running and the Prometheus North plant still under construction.",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "The 250 MW Socrates the Younger gas plant approved in June 2026 includes 116 MW of battery storage.",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "type": "nuclear",
+      "description": "Nuclear agreements with Vistra (more than 2,600 MW from existing plants and uprates), TerraPower and Oklo were announced in January 2026 in support of Prometheus; the existing plants keep supplying the grid.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/asset/new-albany-data-center-info-sheet/",
+      "title": "Meta New Albany Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://spectrumnews1.com/oh/columbus/news/2026/01/09/meta-lines-up-massive-supply-of-nuclear-power-to-energize-ai-data-centers",
+      "title": "Meta lines up massive supply of nuclear power to energize AI data centers",
+      "publisher": "Spectrum News 1 (Associated Press)",
+      "published": "2026-01-09",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260112231829/https://spectrumnews1.com/oh/columbus/news/2026/01/09/meta-lines-up-massive-supply-of-nuclear-power-to-energize-ai-data-centers"
+    },
+    {
+      "id": "s3",
+      "url": "https://spectrumnews1.com/oh/columbus/news/2025/11/13/meta-gigawatt-data-center-new-albany-",
+      "title": "Meta's next massive build could become the world's first gigawatt-scale data center",
+      "publisher": "Spectrum News 1",
+      "published": "2025-11-17",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://mountvernonnews.com/stories/675445301-ohio-approves-new-natural-gas-power-plant-for-data-center",
+      "title": "Ohio approves new natural gas power plant for data center",
+      "publisher": "Mount Vernon News",
+      "published": "2025-09-19",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20251013031006/https://mountvernonnews.com/stories/675445301-ohio-approves-new-natural-gas-power-plant-for-data-center"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.publicpower.org/node/30607",
+      "title": "Ohio Power Siting Board Approves Construction of Power Plant to Serve Load of Adjacent Data Center",
+      "publisher": "American Public Power Association",
+      "published": "2026-07-07",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.williams.com/expansion-project/socrates-power-solution-facilities/",
+      "title": "Socrates Power Solution Facilities",
+      "publisher": "Williams Companies",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://blog.synmax.com/vulcan-exclusive/drone-imagery-confirms-metas-prometheus-south-operating-prometheus-north-still-under-construction",
+      "title": "Drone Imagery Confirms Meta's Prometheus South Operating, Prometheus North Still Under Construction",
+      "publisher": "SynMax",
+      "published": "2026-09-16",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "id": "humain-al-saad-riyadh",
+  "name": "HUMAIN Al-Saad hyperscale AI data centre campus",
+  "aliases": [
+    "HUMAIN 6GW Riyadh campus"
+  ],
+  "summary": "HUMAIN, the AI company owned by Saudi Arabia's Public Investment Fund, plans a 6 GW hyperscale AI data centre campus on a 24 square kilometre site in the Al-Saad area of east Riyadh, to be built in two phases across six plots. HUMAIN tendered the campus enabling infrastructure in May 2026, covering high-voltage distribution, two substations, a 2,000 MVA bulk supply point, water, sewage, roads and fibre. In September 2026 Dammam-based Al-Yamama was reported as the selected contractor under an early contractor involvement process. Neither the contract value nor the total project cost has been disclosed.",
+  "location": {
+    "country": "SA",
+    "admin1": "Riyadh Province",
+    "locality": "Riyadh",
+    "lat": 24.6389,
+    "lon": 46.716,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources place the site in the Al-Saad area of east Riyadh. OpenStreetMap Nominatim did not resolve that district, so coordinates are the Riyadh city centroid from Nominatim."
+  },
+  "status": "announced",
+  "status_as_of": "2026-09-27",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "HUMAIN",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Client for the campus infrastructure works; supported by advisers Hatch, Egis and JLL."
+    },
+    {
+      "name": "Al-Yamama Company for Trading & Contracting",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Selected for the campus enabling infrastructure package under an early contractor involvement process. Construction Review notes that this is not yet a final appointment for all construction works."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 6000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Each of six plots",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "MEED says the campus spans six plots delivered in two phases, each with 1 GW; the figure is read as per plot because six plots of 1 GW match the 6 GW total. Enterprise AM uses similar wording."
+    },
+    {
+      "metric": "land_area",
+      "value": 2400,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Reported as 24 square kilometres, converted exactly to hectares."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "HUMAIN tendered the campus enabling infrastructure package, with proposals due on 8 May."
+    },
+    {
+      "event": "other",
+      "date": "2026-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Al-Yamama reported as winner of the enabling infrastructure contract."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Enabling works include a 380/132/33 kV distribution network, two substations of 500 MVA and 200 MVA, and a 2,000 MVA bulk supply point.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://guest.meed.com/humain-tenders-6gw-data-centre-campus-infrastructure/",
+      "title": "Humain tenders infrastructure for 6GW data centre campus",
+      "publisher": "MEED",
+      "published": "2026-05-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260512072557/https://guest.meed.com/humain-tenders-6gw-data-centre-campus-infrastructure/"
+    },
+    {
+      "id": "s2",
+      "url": "https://guest.meed.com/contractor-wins-6gw-data-centre-campus-infrastructure/",
+      "title": "Contractor wins 6GW data centre campus infrastructure",
+      "publisher": "MEED",
+      "published": "2026-09-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://enterpriseam.com/ksa/2026/09/27/al-yamama-takes-the-infrastructure-contract-for-humains-6-gw-riyadh-ai-campus/",
+      "title": "Al Yamama takes the infrastructure contract for Humain's 6 GW Riyadh AI campus",
+      "publisher": "Enterprise AM",
+      "published": "2026-09-27",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://constructionreviewonline.com/al-yamama-wins-infrastructure-contract-for-6gw-humain-ai-data-center-campus-in-riyadh/",
+      "title": "Al-Yamama Wins Infrastructure Contract for 6GW Humain AI Data Center Campus in Riyadh",
+      "publisher": "Construction Review Online",
+      "published": "2026-09-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "notes": "Status is announced because only site enabling works have been contracted; no source reviewed reports data hall construction or a delivery date. MEED coverage is partly paywalled, and the other reports appear to draw on it.",
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "humain-riyadh",
+    "humain-dammam"
+  ]
+}

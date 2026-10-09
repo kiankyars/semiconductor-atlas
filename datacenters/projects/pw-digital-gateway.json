@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0",
+  "id": "pw-digital-gateway",
+  "name": "PW Digital Gateway",
+  "aliases": [
+    "Prince William Digital Gateway",
+    "Digital Gateway"
+  ],
+  "summary": "Proposed data center corridor of roughly 2,100 acres along Pageland Lane near Gainesville in western Prince William County, Virginia, next to Manassas National Battlefield Park. In December 2023 the county board approved three rezonings (Compass, DG North and DG South) that together allowed about 22 million square feet and up to 37 data centers for QTS and Compass Datacenters. Courts later held the rezonings void because the hearing was improperly advertised. The county and Compass stopped defending them in April 2026, and QTS withdrew its last appeal and ended the project in July 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "Prince William County",
+    "locality": "Gainesville",
+    "lat": 38.7947,
+    "lon": -77.6206,
+    "precision": "locality",
+    "source_ids": [
+      "s6",
+      "s1"
+    ],
+    "note": "Wikipedia coordinates for Gainesville, Virginia. WTOP places the roughly 2,000-acre corridor along Pageland Lane near Gainesville, next to Manassas National Battlefield Park; the court describes three adjoining rezoning areas, so the site extends several kilometres from this point."
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-07-04",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s8"
+  ],
+  "parties": [
+    {
+      "name": "QTS Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s5",
+        "s8"
+      ],
+      "note": "Blackstone-owned. Converge Digest reports QTS acted through its affiliate GW Acquisition Co.; the court names GW Acquisition Co., LLC and GW Acquisition Co. I, LLC as applicants for the DG South and DG North rezonings."
+    },
+    {
+      "name": "Compass Datacenters",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "H&H Capital Acquisitions, LLC",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Applicant for the largest rezoning, known as Compass; the court groups it with the two GW entities as the developers."
+    },
+    {
+      "name": "Prince William County Board of County Supervisors",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Adopted the three rezonings in December 2023 and voted in April 2026 to stop defending them."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1700,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-04-29",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s2"
+      ],
+      "note": "Bisnow reports 1.7 GW of capacity for the whole project without saying whether it is IT load or facility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 9000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-02",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Opponent's estimate: the American Battlefield Trust, which sued to stop the project, says the data centers were expected to draw up to 9 GW. It conflicts with the 1.7 GW trade-press figure, and the Trust does not explain its basis."
+    },
+    {
+      "metric": "land_area",
+      "value": 2139,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-08",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Overall Digital Gateway area as reported by Bisnow; later coverage rounds it to 2,100 acres. The three rezonings described by the court cover 884, 534 and 342 acres."
+    },
+    {
+      "metric": "floor_area",
+      "value": 22000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-15",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 37,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Court of Appeals description of the approved rezonings; Bisnow reports 34 buildings at full build-out."
+    },
+    {
+      "metric": "buildings",
+      "value": 34,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-15",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Trade-press figure that differs from the court's figure of up to 37 data centers."
+    },
+    {
+      "metric": "land_area",
+      "value": 884,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Compass rezoning (REZ2022-00036)",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 11500000,
+      "qualifier": "up_to",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Compass rezoning (REZ2022-00036)",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 534,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DG North rezoning (REZ2022-00032)",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 7000000,
+      "qualifier": "up_to",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DG North rezoning (REZ2022-00032)",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 342,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DG South rezoning (REZ2022-00033)",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 3700000,
+      "qualifier": "up_to",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "DG South rezoning (REZ2022-00033)",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2022-11-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "County board enacted the Digital Gateway comprehensive plan amendment (CPA2021-00004) that preceded the rezoning applications."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2023-12-13",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "After a public hearing that began on 12 December, the board approved all three rezonings on 13 December by a four-to-three vote with one abstention."
+    },
+    {
+      "event": "other",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Prince William Circuit Court Judge Kimberly Irving declared the rezonings void over defective public notice."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-31",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Court of Appeals of Virginia affirmed that the Compass, DG North and DG South rezonings were void from the start."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-14",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "County board voted unanimously to drop its legal defense of the rezonings. The American Battlefield Trust gives the date as 14 April; Bisnow's Wednesday 15 April article places the vote on the preceding Tuesday."
+    },
+    {
+      "event": "other",
+      "date": "2026-04",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s7"
+      ],
+      "note": "Compass Datacenters said it could not move forward with the project; the American Battlefield Trust says Compass declined to appeal further."
+    },
+    {
+      "event": "cancelled",
+      "date": "2026-07-02",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s8"
+      ],
+      "note": "QTS withdrew its petitions to the Supreme Court of Virginia on 2 July and said it was terminating the project."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.vacourts.gov/opinions/opncavwp/1592254.pdf",
+      "title": "Board of County Supervisors of Prince William County v. Oak Valley Homeowners Association, Inc., et al. (Record Nos. 1590-25-4, 1584-25-4, 1592-25-4, 2025-24-4)",
+      "publisher": "Court of Appeals of Virginia",
+      "published": "2026-03-31",
+      "accessed": "2026-10-09",
+      "type": "court"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bisnow.com/news/washington-dc/data-center/judge-throws-out-zoning-approval-for-2100-acre-northern-virginia-data-center-project-130496",
+      "title": "Judge Throws Out Zoning Approval For 2,100-Acre Northern Virginia Data Center Project",
+      "publisher": "Bisnow",
+      "published": "2025-08-08",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.bisnow.com/news/washington-dc/data-center-development/officials-end-fight-2100-acre-data-center-rezoning-killing-one-of-worlds-largest-planned-projects-134136",
+      "title": "Officials End Efforts To Build One Of World's Largest Data Center Clusters",
+      "publisher": "Bisnow",
+      "published": "2026-04-15",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.bisnow.com/news/national/data-center-development/developer-backs-out-of-17-gw-virginia-data-center-plan-134341",
+      "title": "Developer Abandons Massive Virginia Data Center Plan After Court Ruling",
+      "publisher": "Bisnow",
+      "published": "2026-04-29",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.bisnow.com/news/washington-dc/data-center-development/blackstones-qts-abandons-digital-gateway-project-ends-lawsuit-135295",
+      "title": "Blackstone's QTS Abandons Digital Gateway Project, Ends Legal Fight",
+      "publisher": "Bisnow",
+      "published": "2026-07-03",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://wtop.com/?p=29400462",
+      "title": "Digital Gateway data center project dies after final developer withdraws appeal",
+      "publisher": "WTOP (republished from InsideNoVa)",
+      "published": "2026-07-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.battlefields.org/news/victory-manassas-prince-william-digital-gateway-project-dead-after-developer-drops-appeal",
+      "title": "Victory at Manassas! Prince William Digital Gateway Project Dead After Developer Drops Appeal",
+      "publisher": "American Battlefield Trust",
+      "published": "2026-07-02",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s8",
+      "url": "https://convergedigest.com/qts-drops-digital-gateway-data-center-campus-in-va/",
+      "title": "QTS Drops Digital Gateway Data Center Campus in VA",
+      "publisher": "Converge Digest",
+      "published": "2026-07-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

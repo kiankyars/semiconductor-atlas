@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "id": "bell-ai-fabric-sherwood-saskatchewan",
+  "name": "Bell AI Fabric Sherwood campus (Regina area)",
+  "aliases": [
+    "Bell AI Fabric Saskatchewan"
+  ],
+  "summary": "Bell Canada is building a 300 MW Bell AI Fabric data centre campus in the Rural Municipality of Sherwood, which surrounds Regina, Saskatchewan. In October 2026 Bell reported structural steel rising on all four first-phase buildings, more than 500 workers on site and the first data hall on track to operate in the first half of 2027. In September 2026 Bell and the Government of Saskatchewan signed a non-binding memorandum for up to 900 MW more, which would make the Sherwood campus the first phase of a potential 1.2 GW provincial AI hub.",
+  "location": {
+    "country": "CA",
+    "admin1": "Saskatchewan",
+    "admin2": "Rural Municipality of Sherwood No. 159",
+    "locality": "Regina area",
+    "lat": 50.473,
+    "lon": -104.627,
+    "precision": "admin2",
+    "source_ids": [
+      "s2"
+    ],
+    "note": "Bell names only the rural municipality. Coordinates are the RM's published reference point (Wikipedia infobox); because the RM surrounds Regina, this point is near the city and is not the campus site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-01",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Bell Canada",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Develops the campus under its Bell AI Fabric program."
+    },
+    {
+      "name": "Government of Saskatchewan",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Signed a non-binding memorandum with Bell and says it approved the expansion under its Data Centre Framework."
+    },
+    {
+      "name": "Dynamo Electric",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Building the high-voltage substation that connects the campus to the provincial grid."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-01",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Bell describes this campus as the first phase of a potential 1.2 GW hub; the additional up to 900 MW under the September 2026 memorandum is not tied to a named site."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-10-01",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 500,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-01",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Workers on site at the time of the update."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "expansion_announced",
+      "date": "2026-09-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Non-binding memorandum with the Government of Saskatchewan for phased development of up to 900 MW of additional capacity, which the province says it approved under its Data Centre Framework; contingent on customers, agreements and approvals."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "First data hall expected to begin operating."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "The province says the original 300 MW comes from the provincial grid; a new high-voltage substation will connect the campus.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Expansion of up to 900 MW would use Bell-arranged generation under the province's bring-your-own-power approach; Bell describes it as partner-developed natural gas generation. Siting relative to the campus was not stated.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "notes": "Bell says total capital investment across its Saskatchewan presence, including data centre infrastructure, customer compute and power generation, could exceed 50 billion dollars if fully realized; this is province-wide and not recorded as a campus metric.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.bce.ca/news-and-media/newsroom?article=bell-ai-fabric-to-expand-nation-building-project-in-saskatchewan-with-up-to-900-mw-of-additional-power",
+      "title": "Bell AI Fabric to expand nation-building project in Saskatchewan with up to 900 MW of additional power",
+      "publisher": "BCE Inc.",
+      "published": "2026-09-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bce.ca/news-and-media/newsroom?article=bell-ai-fabric-provides-construction-update-in-saskatchewan-announces-1-million-mental-health-commitment",
+      "title": "Bell AI Fabric provides construction update in Saskatchewan, announces $1 million mental health commitment",
+      "publisher": "BCE Inc.",
+      "published": "2026-10-01",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.saskatchewan.ca/government/news-and-media/2026/september/14/single-largest-private-sector-capital-investment-in-history-of-canada-through-bell-ais-saskatchewan",
+      "title": "Single Largest Private Sector Capital Investment in History of Canada Through Bell AI's Saskatchewan Expansion",
+      "publisher": "Government of Saskatchewan",
+      "published": "2026-09-14",
+      "accessed": "2026-10-09",
+      "type": "government"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "id": "iren-sweetwater",
+  "name": "IREN Sweetwater hub",
+  "aliases": [
+    "Sweetwater 1",
+    "Sweetwater 2"
+  ],
+  "summary": "Two-site, 2 GW data center hub that IREN is developing near Sweetwater in West Texas: 1,400 MW at Sweetwater 1 on 1,700 acres and 600 MW at Sweetwater 2 on 500 acres, both with direct ERCOT connections. IREN markets the hub for AI cloud use and says it could support more than 700,000 liquid-cooled GPUs. Substation energization is targeted for 2026 at Sweetwater 1 and 2027 at Sweetwater 2. IREN reported development progressing in August 2026 but warned that changes to Texas large-load interconnection rules could delay grid connection for the Sweetwater sites.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Sweetwater",
+    "lat": 32.4858,
+    "lon": -100.4083,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Coordinates of the town of Sweetwater from Wikipedia. IREN names the hub after Sweetwater but does not give addresses, and the two sites may not both be in the same county, so no county is recorded."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "IREN",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "IREN",
+      "role": "owner",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "IREN states that it develops, owns and operates its data centers, including the associated land, grid connections and substations."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 2000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "IREN states a 2,000 MW total for the hub; its 10-K lists the two sites as planned gross capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "phase",
+      "phase_label": "Sweetwater 1",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "phase",
+      "phase_label": "Sweetwater 2",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 2200,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "1,700 acres at Sweetwater 1 and 500 acres at Sweetwater 2."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Targeted substation energization at Sweetwater 1."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Targeted substation energization at Sweetwater 2."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Direct ERCOT connection; procurement and site works were under way for a 1,400 MW 345/138 kV bulk substation and 138/34.5 kV primary substations at Sweetwater 1.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "notes": "Status date is the access date of IREN's undated Sweetwater page, which labels both sites as under construction. IREN's 10-K cautions that Texas interconnection rule changes and ERCOT's batch study process may delay grid connection for the Sweetwater sites.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iren.com/data-centers/sweetwater",
+      "title": "Sweetwater Data Center | 2,000MW AI Campus in Texas",
+      "publisher": "IREN",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260925094344/https://iren.com/data-centers/sweetwater"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+      "title": "IREN Ltd Form 10-K for the fiscal year ended June 30, 2026",
+      "publisher": "U.S. Securities and Exchange Commission (IREN filing)",
+      "published": "2026-08-27",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260912074420/https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000051/irenreportsfy26results.htm",
+      "title": "IREN Reports FY26 Results",
+      "publisher": "IREN",
+      "published": "2026-08-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Sweetwater,_Texas",
+      "title": "Sweetwater, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

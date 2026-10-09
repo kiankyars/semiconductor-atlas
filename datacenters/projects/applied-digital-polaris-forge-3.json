@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "id": "applied-digital-polaris-forge-3",
+  "name": "Applied Digital Polaris Forge 3",
+  "aliases": [
+    "Polaris Forge 3 AI Factory Campus"
+  ],
+  "summary": "Applied Digital's fourth AI factory campus, in Center, Oliver County, North Dakota. In May 2026 the company announced a 15-year take-or-pay lease with an unnamed US high investment-grade hyperscaler for 300 MW of critical IT load, supported by about 430 MW of grid-connected utility power, worth about 7.5 billion US dollars over the base term. The May release withheld the state; the company's October 2026 earnings release names Center, North Dakota. The campus is under construction, with initial operations targeted for 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "North Dakota",
+    "admin2": "Oliver County",
+    "locality": "Center",
+    "lat": 47.115,
+    "lon": -101.2978,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Town centroid of Center from its Wikipedia coordinates (s4). The October 2026 earnings release (s3) names Center, Oliver County; no parcel or address has been found."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-07",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Applied Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-05-20",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Critical IT load leased to an unnamed US high investment-grade hyperscaler for 15 years, about 7.5 billion US dollars of base-term contracted revenue."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 430,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-05-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Grid-connected utility power supporting the campus."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-05-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Lease announcement; the location was described only as a northern state."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-08",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "May 2026 target; the July 2026 results release says initial operations are expected during calendar 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "About 430 MW of grid-connected utility power; the utility is not named in the cited sources.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/152/applied-digital-reaches-significant-milestone-surpassing-1",
+      "title": "Applied Digital Reaches Significant Milestone, Surpassing 1 GW of Contracted Capacity with U.S. Based High Investment-Grade Hyperscaler Lease at Fourth Campus, Polaris Forge 3",
+      "publisher": "Applied Digital",
+      "published": "2026-05-20",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260921025500/https://ir.applieddigital.com/news-events/press-releases/detail/152/applied-digital-reaches-significant-milestone-surpassing-1"
+    },
+    {
+      "id": "s2",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/159/applied-digital-reports-fiscal-fourth-quarter-and-full-year",
+      "title": "Applied Digital Reports Fiscal Fourth Quarter and Full Year 2026 Results",
+      "publisher": "Applied Digital",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001144879/000114487926000057/apldq127earningsrelease.htm",
+      "title": "Applied Digital Reports Fiscal First Quarter 2027 Results (Form 8-K exhibit)",
+      "publisher": "U.S. Securities and Exchange Commission (Applied Digital filing)",
+      "published": "2026-10-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Center,_North_Dakota",
+      "title": "Center, North Dakota",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "applied-digital-polaris-forge-1",
+    "applied-digital-polaris-forge-2"
+  ]
+}

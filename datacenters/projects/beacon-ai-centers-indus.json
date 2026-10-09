@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "id": "beacon-ai-centers-indus",
+  "name": "Beacon AI Centers Indus campus",
+  "aliases": [
+    "Beacon AI Hub",
+    "Beacon AI Centers Indus Project",
+    "Beacon AI Centers Indus"
+  ],
+  "summary": "Beacon AI Centers plans an AI data centre campus about 3 km east of Calgary and 2 km northwest of the hamlet of Indus in Rocky View County, Alberta. Federal filings describe four data halls needing 300 MW each, supplied by an on-site gas-fired plant of about 1,494 MW built by the project entity Indus Power. The county approved the area structure plan in June 2025; the plant application is before the Alberta Utilities Commission, and the federal agency decided in March 2026 that no further federal assessment was needed. The proponent targeted commercial operation in Q3 2027.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Rocky View County",
+    "locality": "Indus",
+    "lat": 50.9434,
+    "lon": -113.8072,
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "Decimal coordinates given in the proponent's initial project description (legal land description in section 11-23-28-W4M, south of Township Road 232), rounded to four decimals."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s5",
+    "s7"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Beacon AI Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The filing says Beacon develops the project through the project-specific entity Indus Power."
+    },
+    {
+      "name": "Indus Power Generation LP",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Proponent of the on-site gas plant; its general partner is Northbridge Power GPC Inc."
+    },
+    {
+      "name": "Rocky View County",
+      "role": "government",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Approved the area structure plan and land-use redesignation; participating in the provincial power plant review."
+    },
+    {
+      "name": "AltaLink",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Owner of the 240 kV line the project proposes to tap, with interconnection at the Langdon 102S substation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-12-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Four data halls with a stated power requirement of 300 MW each; the plant is designed to supply at least this much continuous power to them. The filing does not say whether the figure is IT load or total facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1494,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-01-06",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Maximum installed capacity: 100 gas reciprocating engines of about 4.6 MW each plus four combined-cycle blocks."
+    },
+    {
+      "metric": "land_area",
+      "value": 627.2,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Data centre campus area stated in the federal filing; the power plant footprint is about 45 acres within it."
+    },
+    {
+      "metric": "land_area",
+      "value": 900,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-18",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Rocky View County describes the AI hub, and the land it redesignated for data centre use, as about 900 acres; this differs from the 627.2-acre campus in the federal filing."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4500,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-29",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-29",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "zoning_approved",
+      "date": "2025-06-17",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Council approved the Beacon AI Hub area structure plan; the land was redesignated to a special data centre district."
+    },
+    {
+      "event": "other",
+      "date": "2026-01-19",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Alberta Utilities Commission posted notice of the gas plant application (proceeding 30524)."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Impact Assessment Agency of Canada decided no further federal assessment of the power plant was required."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-Q2",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Proponent schedule for civil works and foundations, before provincial approval was granted."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target commercial operation date for the plant and data halls."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Dedicated on-site plant combining gas reciprocating engines and combined-cycle gas turbines; gas supply via NGTL/ATCO or TC Energy options was still being arranged.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iaac-aeic.gc.ca/050/documents/p90121/164415E.pdf",
+      "title": "Beacon AI Centers - Indus Project: Initial Project Description",
+      "publisher": "Indus Power Generation LP via Impact Assessment Agency of Canada registry",
+      "published": "2025-12-29",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260115230355/https://iaac-aeic.gc.ca/050/documents/p90121/164415E.pdf"
+    },
+    {
+      "id": "s2",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/proj/90121",
+      "title": "Beacon AI Centers Indus Project (reference 90121)",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s3",
+      "url": "https://iaac-aeic.gc.ca/050/evaluations/document/164341",
+      "title": "Public notice: Beacon AI Centers Indus Project, comments invited on the summary of the initial project description",
+      "publisher": "Impact Assessment Agency of Canada",
+      "published": "2026-01-06",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260311013334/https://iaac-aeic.gc.ca/050/evaluations/document/164341"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.rockyview.ca/news-and-events/news/rocky-view-county-participates-alberta-utilities-commission-review-proposed",
+      "title": "Rocky View County participates in Alberta Utilities Commission review of proposed Beacon AI Hub power plant",
+      "publisher": "Rocky View County",
+      "published": "2026-02-13",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.rockyview.ca/build-plan-and-develop/planning/planning-projects-underway/beacon-ai-hub-area-structure-plan",
+      "title": "Beacon AI Hub - Thermal Power Plant Application",
+      "publisher": "Rocky View County",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.rockyview.ca/news-and-events/news/rocky-view-county-affirms-commitment-responsible-ai-data-centre-development",
+      "title": "Rocky View County Affirms Commitment to Responsible AI Data Centre Development",
+      "publisher": "Rocky View County",
+      "published": "2025-09-18",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260313101503/https://www.rockyview.ca/news-and-events/news/rocky-view-county-affirms-commitment-responsible-ai-data-centre-development"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.bnnbloomberg.ca/business/politics/2026/07/28/councillors-in-rural-county-bordering-calgary-vote-to-pause-data-centres/",
+      "title": "Councillors in rural county bordering Calgary vote to pause data centres",
+      "publisher": "The Canadian Press via BNN Bloomberg",
+      "published": "2026-07-28",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Status rests partly on Rocky View County's undated project page, which shows the gas plant application still under Alberta Utilities Commission review, so status_as_of is the date it was read (2026-10-09). The federal filing gives data centre details for information only; the data centre itself was not part of the federally reviewed power project. In July 2026 county council paused new applications to redesignate land for data centres; the report does not say whether this affects the already rezoned Beacon site."
+}

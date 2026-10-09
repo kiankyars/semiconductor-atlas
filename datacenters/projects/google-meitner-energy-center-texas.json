@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "id": "google-meitner-energy-center-texas",
+  "name": "Google Meitner Energy Center data center (Gray and Roberts counties)",
+  "aliases": [
+    "Meitner Energy Center"
+  ],
+  "summary": "Google data center being built alongside new dedicated generation at the Meitner Energy Center in Gray and Roberts counties in the Texas Panhandle; Google's location list shows a Pampa site in development. Google and Intersect, the energy developer Google closed on buying in March 2026, announced construction on 4 June 2026. The complex pairs the data center with more than 1 GW of wind, solar and battery storage, and on-site gas firming covers a minority of demand. The data center is designed for air cooling. Google has not disclosed the compute load, cost or opening date. An 800-acre Caprock Workforce Hub in Wheeler County is planned to house up to 3,500 workers.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Gray County",
+    "locality": "Pampa",
+    "lat": 35.5363,
+    "lon": -100.9602,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Town centroid of Pampa via Nominatim. The project spans Gray and Roberts counties, and Google's location list includes a Pampa, Texas site in development that matches it; no site address or parcel has been published."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-04",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Intersect",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Announced construction of the Meitner Energy Center jointly with Google; Intersect's business is pairing large loads with dedicated generation. Google closed its acquisition of Intersect in March 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-06-04",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Combined co-located wind, solar and battery storage capacity; the data center's own load has not been disclosed."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Google (Alphabet) completed its acquisition of Intersect."
+    },
+    {
+      "event": "announced",
+      "date": "2026-06-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "The 4 June 2026 announcement launched construction; no exact groundbreaking date was given."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "wind",
+      "description": "Part of more than 1 GW of co-located wind, solar and storage; no per-technology breakdown disclosed.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Part of more than 1 GW of co-located wind, solar and storage; no per-technology breakdown disclosed.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Part of more than 1 GW of co-located wind, solar and storage; no per-technology breakdown disclosed.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "On-site gas generation provides firming and meets a minority share of site demand.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/meitner-energy-center/",
+      "title": "We're announcing a new data center and energy investments in Gray and Roberts Counties, Texas",
+      "publisher": "Google",
+      "published": "2026-06-04",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260821141725/https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/meitner-energy-center/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.intersect.com/news/google-and-intersect-deepen-texas-roots-with-new-data-center-and-energy-investments-in-gray-and-roberts-counties",
+      "title": "Google and Intersect Deepen Texas Roots with New Data Center and Energy Investments in Gray and Roberts Counties",
+      "publisher": "Intersect",
+      "published": "2026-06-04",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260619112227/https://www.intersect.com/news/google-and-intersect-deepen-texas-roots-with-new-data-center-and-energy-investments-in-gray-and-roberts-counties"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.powermag.com/google-launches-1-gw-plus-co-located-data-center-and-generation-complex-in-texas-panhandle/",
+      "title": "Google Launches 1-GW-Plus Co-Located Data Center and Generation Complex in Texas Panhandle",
+      "publisher": "POWER Magazine",
+      "published": "2026-06-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260824070056/https://www.powermag.com/google-launches-1-gw-plus-co-located-data-center-and-generation-complex-in-texas-panhandle/"
+    },
+    {
+      "id": "s4",
+      "url": "https://datacenters.google/locations/",
+      "title": "Locations of Google Data Centers",
+      "publisher": "Google",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261009093925/https://datacenters.google/locations/"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Google's broader $40 billion Texas investment through 2027 is cited in the Intersect release but is statewide and is not recorded as a campus investment. The more-than-1 GW figure is co-located generation capacity, not the data center's load."
+}

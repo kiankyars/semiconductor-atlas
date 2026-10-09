@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "id": "example-ai-riverside",
+  "name": "Riverside AI campus",
+  "summary": "A fictional cancelled project used as a test fixture.",
+  "location": {
+    "country": "FR",
+    "admin1": "Île-de-France",
+    "lat": 48.85,
+    "lon": 2.35,
+    "precision": "admin1",
+    "source_ids": [
+      "s1"
+    ]
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-01-15",
+  "status_source_ids": [
+    "s1"
+  ],
+  "parties": [
+    {
+      "name": "Example AI",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2024",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "accelerators",
+      "value": 100000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "accelerator_model": "Example X1",
+      "applies_to": "campus",
+      "as_of": "2024-06",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2024-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "cancelled",
+      "date": "2026-01-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://example.net/c",
+      "title": "Cancellation",
+      "publisher": "Example Gazette",
+      "published": null,
+      "accessed": "2026-09-30",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-09-30"
+}

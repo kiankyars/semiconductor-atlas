@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "id": "nextdc-m4-port-melbourne",
+  "name": "NEXTDC M4 Melbourne",
+  "aliases": [
+    "M4 Technology Campus",
+    "Fishermans Bend AI Factory and Technology Campus"
+  ],
+  "summary": "NEXTDC plans an AI factory and technology campus, called M4, on the former Westgate Park printing complex at 127 Todd Road in Port Melbourne's Fishermans Bend precinct. Announced in June 2025 as an A$2 billion project of up to 150 MW, designed for very high-density Nvidia-class AI racks and linked with university, defence and research partners, it received development approval from the Victorian Government by January 2026, when NEXTDC cited 162 MW. Construction timing has not been published.",
+  "location": {
+    "country": "AU",
+    "admin1": "Victoria",
+    "locality": "Port Melbourne",
+    "lat": -37.833,
+    "lon": 144.9124,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "NEXTDC gives the address 127 Todd Road, Port Melbourne. OpenStreetMap Nominatim matched Todd Road but not the house number, so coordinates are a point on Todd Road near the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-01-19",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "NEXTDC",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Victorian Government",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Granted development approval."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-06-12",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 162,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-01-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Capacity stated in NEXTDC's development approval announcement; the release does not say whether the approval itself sets a power limit or whether the figure is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Undated facility page, viewed October 2026, gives a target of 150 MW of IT capacity and 26,400 square meters of technical space."
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "exact",
+      "unit": "AUD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-06-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 50000,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Area given for mission-critical facilities."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-06-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Development approval announced on 19 January 2026; the approval date itself was not stated."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.nextdc.com/news/nextdc-announces-2-billion-ai-factory-and-technology-campus-at-fishermans-bend",
+      "title": "NEXTDC Announces $2 Billion AI Factory and Technology Campus at Fishermans Bend",
+      "publisher": "NEXTDC",
+      "published": "2025-06-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.nextdc.com/news/m4-technology-campus-approved",
+      "title": "M4 Technology Campus Approved",
+      "publisher": "NEXTDC",
+      "published": "2026-01-19",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260324052816/https://www.nextdc.com/news/m4-technology-campus-approved"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.nextdc.com/data-centres/melbourne-data-centres/m4-melbourne",
+      "title": "M4 Melbourne Data Centre",
+      "publisher": "NEXTDC",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260608053007/https://www.nextdc.com/data-centres/melbourne-data-centres/m4-melbourne"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

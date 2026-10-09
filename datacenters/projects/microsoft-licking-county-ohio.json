@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-licking-county-ohio",
+  "name": "Microsoft Licking County three-site datacenter program (New Albany, Heath, Hebron)",
+  "aliases": [
+    "Microsoft Heath datacenter",
+    "Microsoft Hebron datacenter",
+    "Microsoft New Albany datacenter"
+  ],
+  "summary": "Three-site Microsoft datacenter program in Licking County, east of Columbus, Ohio, with separate campuses in New Albany, Heath and Hebron. Announced in October 2024 as an initial USD 1 billion investment for Azure cloud capacity, it included a USD 420 million, 245,000 sq ft building on 197 acres in New Albany. In April 2025 Microsoft paused the program, keeping the land and saying two sites would be made farmable. Work resumed in 2026: Heath broke ground in February, and Microsoft's Heath and Hebron pages report tree clearing, mass grading through November 2026 and planned substation work, with no vertical construction timeline. No 2026 update was found for New Albany.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "admin2": "Licking County",
+    "lat": 40.1318,
+    "lon": -82.4628,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s6",
+      "s7"
+    ],
+    "note": "County centroid from Nominatim, because the record covers a three-site program in different municipalities (New Albany, Heath and Hebron). Microsoft's pages place the Heath construction entrance on Thornwood Drive and a temporary Hebron construction entrance on Canyon Road."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-01",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "role": "owner",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "ENR and Fox 28 report that Microsoft owns the Licking County sites and will keep the land."
+    },
+    {
+      "name": "Ames Construction",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s6",
+        "s7"
+      ],
+      "note": "Contractor clearing the New Albany site before the 2025 pause (ENR) and main contractor for the Heath and Hebron site work in 2026 (Microsoft)."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-10-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Initial investment announced for the three campuses together; no per-site split was given, and POWER does not say whether the New Albany USD 420 million is part of it."
+    },
+    {
+      "metric": "investment",
+      "value": 420000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "New Albany datacenter",
+      "as_of": "2024-10",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "New Albany's city council approved a 15-year, 100 percent property tax abatement for this building."
+    },
+    {
+      "metric": "floor_area",
+      "value": 245000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "New Albany datacenter",
+      "as_of": "2025-04-10",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 197,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "New Albany datacenter",
+      "as_of": "2025-04-10",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-10-28",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "paused",
+      "date": "2025-04-07",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Microsoft said it would not move forward at that time, would keep evaluating the sites, would make land at two sites farmable (Heath and Hebron, per ENR), and would still fund road and utility upgrades under its development agreements."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-02-24",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "Ceremonial groundbreaking at the Heath site off Thornwood Drive; Microsoft's Heath and Hebron pages report mass grading from February 2026 and tree clearing in March 2026."
+    },
+    {
+      "event": "other",
+      "date": "2026-11",
+      "kind": "planned",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Target finish of mass grading at Heath and Hebron; Microsoft says early site preparation should be largely done by year-end and has not set a vertical construction timeline."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.powermag.com/microsoft-announces-1-billion-investment-in-ohio-data-centers-as-officials-ponder-power-demands",
+      "title": "Microsoft Announces $1 Billion Investment in Ohio Data Centers as Officials Ponder Power Demands",
+      "publisher": "POWER Magazine",
+      "published": "2024-10-28",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.enr.com/articles/60572-microsoft-hits-pause-button-on-1b-in-data-centers-in-ohio",
+      "title": "Microsoft Hits Pause Button on $1B in Data Centers in Ohio",
+      "publisher": "Engineering News-Record",
+      "published": "2025-04-10",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260516063141/https://www.enr.com/articles/60572-microsoft-hits-pause-button-on-1b-in-data-centers-in-ohio"
+    },
+    {
+      "id": "s3",
+      "url": "https://myfox28columbus.com/news/local/microsoft-backs-off-1b-licking-county-data-center-plans",
+      "title": "Microsoft 'not moving forward' with $1B Licking County data center plans right now",
+      "publisher": "WSYX/WTTE (Fox 28 Columbus)",
+      "published": "2025-04-08",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.news4jax.com/business/2025/04/09/microsoft-says-its-slowing-or-pausing-some-ai-data-center-projects-including-1b-plan-for-ohio/",
+      "title": "Microsoft says it's 'slowing or pausing' some AI data center projects, including $1B plan for Ohio",
+      "publisher": "Associated Press (via News4JAX)",
+      "published": "2025-04-09",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250410023315/https://www.news4jax.com/business/2025/04/09/microsoft-says-its-slowing-or-pausing-some-ai-data-center-projects-including-1b-plan-for-ohio/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.abc6onyourside.com/news/local/heath-columbus-ohio-break-ground-microsoft-data-center-expected-bring-hundreds-jobs-tech-technology-ai-artificial-intelligence-cloud-computing-digital-services",
+      "title": "Heath breaks ground on Microsoft data center expected to bring hundreds of jobs",
+      "publisher": "WSYX ABC 6",
+      "published": "2026-02-24",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260227140645/https://abc6onyourside.com/news/local/heath-columbus-ohio-break-ground-microsoft-data-center-expected-bring-hundreds-jobs-tech-technology-ai-artificial-intelligence-cloud-computing-digital-services"
+    },
+    {
+      "id": "s6",
+      "url": "https://local.microsoft.com/blog/heath-datacenter-construction-updates/",
+      "title": "Heath datacenter construction updates",
+      "publisher": "Microsoft Local",
+      "published": "2026-07",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://local.microsoft.com/blog/hebron-datacenter-construction-update/",
+      "title": "Hebron datacenter construction update",
+      "publisher": "Microsoft Local",
+      "published": "2026-07",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "This record groups three sites because the cited sources present them as one program under a single USD 1 billion announcement; split into per-site records if site-level power or investment figures are found. Status reflects site preparation at Heath and Hebron; the New Albany building was on hold as of April 2025 and no later update was found. status_as_of uses the first day of July 2026, the month of the latest entries on Microsoft's month-dated update pages.",
+  "last_reviewed": "2026-10-09"
+}

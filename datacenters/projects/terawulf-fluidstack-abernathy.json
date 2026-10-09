@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "id": "terawulf-fluidstack-abernathy",
+  "name": "Abernathy HPC campus (TeraWulf and Fluidstack joint venture)",
+  "aliases": [
+    "Abernathy HPC Campus"
+  ],
+  "summary": "AI data center campus in Abernathy, Texas, developed by a joint venture of TeraWulf and Fluidstack announced in October 2025. It is designed for 168 MW of critical IT load (up to 240 MW gross) and is fully pre-leased to a Fluidstack entity for up to 25 years, with Google backstopping about $1.3 billion of the lease obligations; the end user is described only as a global hyperscale AI platform. Project financing was priced in December 2025 and commissioning was targeted for the second half of 2026. In July 2026 TeraWulf agreed to sell its 50.1% stake to a Fluidstack-led investor group, with Fluidstack to keep leading the project.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Abernathy",
+    "lat": 33.8322,
+    "lon": -101.8431,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s6"
+    ],
+    "note": "Town coordinates from Wikipedia; the sources name Abernathy but give no address. The town spans Hale and Lubbock counties, so no county is recorded."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-02-27",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "TeraWulf",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Fluidstack",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Joint venture partner; expected to continue leading the project after its investor group buys TeraWulf's stake."
+    },
+    {
+      "name": "TeraWulf",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Holds a 50.1% interest per the 10-K and July 2026 release (the October 2025 announcement said 51%); agreed in July 2026 to sell it to a Fluidstack-led investor group for about $530 million, with closing not reported by August 2026."
+    },
+    {
+      "name": "Fluidstack",
+      "role": "owner",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Fluidstack CS I holds the other joint venture interest."
+    },
+    {
+      "name": "Fluidstack",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Fluidstack USA III pre-leased the full 168 MW under a 25-year lease that can be shortened to 20 or 15 years; Google backstops about $1.3 billion of the lease obligations."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 168,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-10-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 240,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2025-12-18",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Gross power capacity."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-28",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-12-18",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Project-level construction financing priced."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Targeted commissioning and delivery."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-06",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "TeraWulf agreed to sell its entire 50.1% interest to a Fluidstack-led investor group; the August 2026 results still described it as an agreement."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Campus is located within the Southwest Power Pool market.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/121/terawulf-expands-strategic-partnership-with-fluidstack-through-new-168-mw-ai-compute-joint-venture",
+      "title": "TeraWulf Expands Strategic Partnership with Fluidstack Through New 168 MW AI Compute Joint Venture",
+      "publisher": "TeraWulf",
+      "published": "2025-10-28",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/128/terawulf-and-fluidstack-announce-successful-pricing-of-project-financing-for-168-mw-hpc-compute-joint-venture",
+      "title": "TeraWulf and Fluidstack Announce Successful Pricing of Project Financing for 168 MW HPC Compute Joint Venture",
+      "publisher": "TeraWulf",
+      "published": "2025-12-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm",
+      "title": "TeraWulf Inc. Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "U.S. Securities and Exchange Commission (TeraWulf filing)",
+      "published": "2026-02-27",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260929023534/https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm"
+    },
+    {
+      "id": "s4",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack",
+      "title": "TeraWulf Announces Anthropic Lease at Justified Data Campus and Sale of Majority Interest in Abernathy Joint Venture to Fluidstack",
+      "publisher": "TeraWulf",
+      "published": "2026-07-06",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+      "title": "TeraWulf Reports Second Quarter 2026 Results",
+      "publisher": "TeraWulf",
+      "published": "2026-08-05",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Abernathy,_Texas",
+      "title": "Abernathy, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

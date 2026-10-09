@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0",
+  "id": "openai-stargate-shackelford-county",
+  "name": "Vantage Frontier campus (Stargate Shackelford County)",
+  "aliases": [
+    "Frontier",
+    "Project Frontier",
+    "Stargate Frontier",
+    "Vantage DC Abilene - TX3"
+  ],
+  "summary": "Vantage Data Centers is building Frontier, a 1,200-acre campus of ten single-story data centers in Shackelford County, Texas, near Abilene. It is planned at 1.4 GW and roughly $25 billion. In September 2025 it was named one of the new Stargate sites under the OpenAI and Oracle agreement. Analysts report power will come from an off-grid natural gas microgrid built and run by VoltaGrid. A groundbreaking was reported in December 2025, and state building registrations filed in mid-2026 list building start dates in 2026 and completions in 2027. Vantage targeted the first building for the second half of 2026, and trade press reports campus completion in 2028.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Shackelford County",
+    "lat": 32.7089,
+    "lon": -99.3308,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5",
+      "s8"
+    ],
+    "note": "Shackelford County centroid from OpenStreetMap Nominatim. Texas TDLR filings give a site address on Private Road 1604 with an Abilene mailing address in Shackelford County, but the road was not found in OpenStreetMap. Epoch AI places the campus just across the county line from the Abilene site, so the true site is likely west of this point."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-17",
+  "status_source_ids": [
+    "s7",
+    "s8"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Vantage Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Vantage Data Centers",
+      "role": "owner",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "TDLR filings list building-level Vantage LLCs (for example Vantage Data Centers TX301, LLC) as owners."
+    },
+    {
+      "name": "Oracle",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": "Grouped with the Stargate sites being developed by Oracle; analysts Cleanview and Epoch AI, not company disclosures, name Oracle as cloud operator and owner of the AI hardware. TDLR filings show no tenant assigned."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s7"
+      ],
+      "note": "End user through Oracle under the Stargate program."
+    },
+    {
+      "name": "VoltaGrid",
+      "role": "power_supplier",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Analyst Cleanview, citing an Oracle fact sheet, describes VoltaGrid as developer and operator of the on-site gas microgrid; not confirmed in a company source opened here."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-08-19",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Trade press gives 1.4 GW and Vantage's locations page lists 1,400 MW total, without saying whether this is IT or facility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "Analyst characterization, not a company disclosure: Cleanview calls 1.4 GW critical IT capacity and Epoch AI says Vantage reports it as IT power, while Vantage's own locations page labels the figure total."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI's projection of total facility power, derived from the reported IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2580,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-04",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Analyst report, not a company disclosure: gross capacity of the planned Jenbacher engine fleet per a state air permit filing summarized by Cleanview."
+    },
+    {
+      "metric": "investment",
+      "value": 25000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-08-19",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Reported as $25 billion in August 2025; later trade coverage describes it as more than $25 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 950000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Building TX301 (TDLR estimated cost)",
+      "as_of": "2026-06-29",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 945000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Building TX310 (TDLR estimated cost)",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-19",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 10,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-19",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 3700000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-19",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-08-19",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-09-23",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named as one of three new Stargate sites under the OpenAI and Oracle agreement."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s7"
+      ],
+      "note": "August 2025 trade coverage said construction had already begun; analyst Cleanview dates land clearing to September 2025 and a groundbreaking to December 2025, when trade press also reported Vantage had broken ground."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Target for the first building to be delivered and enter service."
+    },
+    {
+      "event": "other",
+      "date": "2027-08-11",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Completion date listed in the TDLR registration for building TX301, later than the company's second-half 2026 target for the first building."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s8"
+      ],
+      "note": "Trade press reports a 2028 completion; analyst Epoch AI separately projects Q4 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Off-grid, behind-the-meter gas microgrid of Jenbacher reciprocating engines in ten power blocks, developed and operated by VoltaGrid, with no public plans to connect to the grid, per analysts Cleanview and Epoch AI.",
+      "source_ids": [
+        "s7",
+        "s8"
+      ]
+    },
+    {
+      "type": "diesel_backup",
+      "description": "Diesel engines provide black-start capability for the microgrid, according to the air permit filing summarized by analyst Cleanview.",
+      "source_ids": [
+        "s7"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://rebusinessonline.com/vantage-data-centers-to-invest-25b-for-mega-campus-in-shackleford-county-texas/",
+      "title": "Vantage Data Centers to Invest $25B for Mega-Campus in Shackelford County, Texas",
+      "publisher": "REBusinessOnline",
+      "published": "2025-08-19",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20250819163658/https://rebusinessonline.com/vantage-data-centers-to-invest-25b-for-mega-campus-in-shackleford-county-texas/"
+    },
+    {
+      "id": "s2",
+      "url": "https://group.softbank/en/news/press/20250924",
+      "title": "OpenAI, Oracle, and SoftBank expand Stargate with five new AI data center sites",
+      "publisher": "SoftBank Group Corp.",
+      "published": "2025-09-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/vantage-data-centers-breaks-ground-on-data-center-campus-in-texas/",
+      "title": "Vantage Data Centers breaks ground on data center campus in Texas",
+      "publisher": "W.Media",
+      "published": "2025-12-16",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2026024068",
+      "title": "TABS2026024068: Vantage DC Abilene - TX3 - Project Frontier, building TX301",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "published": "2026-06-29",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026024112",
+      "title": "TABS2026024112: Vantage DC Abilene - TX3 - Project Frontier, building TX310",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "published": "2026-06-30",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s6",
+      "url": "https://vantage-dc.com/data-center-locations/north-america/",
+      "title": "Data Center Locations - North America",
+      "publisher": "Vantage Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/stargate-frontier",
+      "title": "Behind-the-meter data centers: Stargate Frontier",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s8",
+      "url": "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand",
+      "title": "OpenAI Stargate: where the US sites stand",
+      "publisher": "Epoch AI",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "analyst",
+      "archived_url": "https://web.archive.org/web/20260517184326/https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    }
+  ],
+  "notes": "TDLR registrations list planned start and completion dates per building and do not by themselves confirm progress, so status rests on April 2026 analyst imagery reviews: Cleanview reported vertical construction on five buildings and Epoch AI reported roofing on the first. These are analyst assessments, not company disclosures. No source found confirms the first building has been delivered as of October 2026.",
+  "last_reviewed": "2026-10-09"
+}

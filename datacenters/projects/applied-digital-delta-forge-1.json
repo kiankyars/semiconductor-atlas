@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "id": "applied-digital-delta-forge-1",
+  "name": "Applied Digital Delta Forge 1",
+  "aliases": [
+    "Delta Forge 1 AI Factory Campus"
+  ],
+  "summary": "Applied Digital AI factory campus in Boyce, Louisiana, on more than 500 acres, designed for an initial 430 MW of total utility power and up to 300 MW of critical IT load in two 150 MW facilities. Ground was broken in January 2026 with the state undisclosed. In April 2026 an unnamed US high investment-grade hyperscaler leased the 300 MW for about 15 years, worth about 7.5 billion US dollars. The company's July 2026 results release names Boyce, Louisiana. Initial operations are targeted for mid-2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Louisiana",
+    "admin2": "Rapides Parish",
+    "locality": "Boyce",
+    "lat": 31.3906,
+    "lon": -92.67,
+    "precision": "locality",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Town centroid of Boyce from its Wikipedia coordinates (s5), which also places Boyce in Rapides Parish. The July 2026 results release (s3) names Boyce, Louisiana; earlier releases described only a southern US state. No parcel found."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-07",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Applied Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 430,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-01-22",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Described as the initial total utility power for the campus."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-04-23",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Critical IT load leased to an unnamed US high investment-grade hyperscaler, about 7.5 billion US dollars over an estimated 15-year term."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial build",
+      "as_of": "2026-01-22",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Two 150 MW facilities, with room to scale in 2028 and beyond."
+    },
+    {
+      "metric": "land_area",
+      "value": 500,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-22",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-22",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Full-time employees expected at full operation, plus long-term contractors."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2026-01-22",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Groundbreaking announced on this date; the release gives no separate groundbreaking date."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-23",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Lease of 300 MW of critical IT load to an unnamed hyperscaler announced."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Earlier releases said mid-2027; the July 2026 results release says calendar 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Initial 430 MW of total utility power; the utility is not named in the cited sources.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/144/applied-digital-breaks-ground-on-delta-forge-1-a-430-mw-ai",
+      "title": "Applied Digital Breaks Ground on Delta Forge 1, a 430 MW AI Factory Campus in a Southern U.S. State",
+      "publisher": "Applied Digital",
+      "published": "2026-01-22",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261008211451/https://ir.applieddigital.com/news-events/press-releases/detail/144/applied-digital-breaks-ground-on-delta-forge-1-a-430-mw-ai"
+    },
+    {
+      "id": "s2",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/149/applied-digital-announces-new-u-s-based-high",
+      "title": "Applied Digital Announces New U.S. Based High Investment-Grade Hyperscaler Tenant at Delta Forge 1, a 430 MW AI Factory Campus",
+      "publisher": "Applied Digital",
+      "published": "2026-04-23",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260721210555/https://ir.applieddigital.com/news-events/press-releases/detail/149/applied-digital-announces-new-u-s-based-high"
+    },
+    {
+      "id": "s3",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/159/applied-digital-reports-fiscal-fourth-quarter-and-full-year",
+      "title": "Applied Digital Reports Fiscal Fourth Quarter and Full Year 2026 Results",
+      "publisher": "Applied Digital",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001144879/000114487926000057/apldq127earningsrelease.htm",
+      "title": "Applied Digital Reports Fiscal First Quarter 2027 Results (Form 8-K exhibit)",
+      "publisher": "U.S. Securities and Exchange Commission (Applied Digital filing)",
+      "published": "2026-10-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Boyce,_Louisiana",
+      "title": "Boyce, Louisiana",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260115055604/https://en.wikipedia.org/wiki/Boyce,_Louisiana"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

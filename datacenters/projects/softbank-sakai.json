@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "id": "softbank-sakai",
+  "name": "SoftBank Osaka Sakai AI data center",
+  "aliases": [
+    "Osaka Sakai Activation Base",
+    "Sharp Sakai Plant AI data center"
+  ],
+  "summary": "SoftBank Corp. is converting part of Sharp's former LCD panel plant in Sakai, Osaka into a large AI data center, reusing the plant's land, buildings, power and cooling infrastructure. SoftBank agreed in March 2025 to buy the land and buildings for about 100 billion yen, targeting operation of an initial phase of roughly 150 MW receiving capacity in 2026 and later expansion beyond 250 MW. In 2026 SoftBank described the site as under construction and as the planned home of GPU cloud and sovereign cloud services, alongside AI server assembly and battery manufacturing.",
+  "location": {
+    "country": "JP",
+    "admin1": "Osaka Prefecture",
+    "admin2": "Sakai-ku",
+    "locality": "Sakai",
+    "lat": 34.596,
+    "lon": 135.4333,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s7"
+    ],
+    "note": "SoftBank names Sharp's Sakai LCD plant in Sakai City; Sharp gives the plant address as 1 Takumi-cho, Sakai-ku. Coordinates are the OpenStreetMap Nominatim centroid of the Takumi-cho neighbourhood, so they approximate the plant complex rather than the exact SoftBank portion (about 60% of the plant land)."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-23",
+  "status_source_ids": [
+    "s6"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "SoftBank Corp.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "name": "SoftBank Corp.",
+      "role": "owner",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Signed a purchase agreement with Sharp Corporation in March 2025 for the land and buildings; Sharp was the seller."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "TechCrunch cited a Nikkei report that OpenAI intends to use GPUs at the Sakai site to develop models for Japan; OpenAI declined to comment, SoftBank did not confirm, and SoftBank's releases do not name OpenAI as a tenant."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phase (2024 MoU plan)",
+      "as_of": "2024-06-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial capacity stated in the June 2024 memorandum announcement."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-06-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Long-term figure from the June 2024 announcement; later SoftBank releases cite expansion beyond 250 MW instead."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Initial phase targeted for 2026",
+      "as_of": "2025-03-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "SoftBank describes this as receiving (utility intake) capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-03-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Future receiving capacity. The December 2024 release says the 250 MW-class supply was expected about four years after the purchase is completed and made the purchase conditional on it."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 240,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-03-14",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "TechCrunch's eventual figure, which differs slightly from SoftBank's own 250 MW-plus figure."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 140,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "AX Factory AI computing infrastructure",
+      "as_of": "2026-05-12",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "SoftBank's May 2026 growth strategy gives 140 MW as the power assumed for the AI computing infrastructure under development at Sakai."
+    },
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "qualifier": "approximately",
+      "unit": "JPY",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-03-14",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Purchase price for the plant land and buildings only; no total build cost has been published by SoftBank."
+    },
+    {
+      "metric": "land_area",
+      "value": 44,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-06-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported as about 440,000 square meters, roughly 60% of the plant land, in the 2024 memorandum announcement."
+    },
+    {
+      "metric": "land_area",
+      "value": 45,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-03-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Reported as about 450,000 square meters in the purchase releases."
+    },
+    {
+      "metric": "floor_area",
+      "value": 840000,
+      "qualifier": "approximately",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-03-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Total floor area of the existing plant buildings being acquired; the 2024 memorandum release gave about 750,000."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-06-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Memorandum of understanding with Sharp announced."
+    },
+    {
+      "event": "other",
+      "date": "2024-12-20",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "SoftBank board conditionally approved acquiring the land and buildings."
+    },
+    {
+      "event": "site_acquired",
+      "date": "2025-03-14",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Purchase and sale agreement signed with Sharp; the date of final closing was not found."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Target for the initial roughly 150 MW phase in the December 2024 and March 2025 releases. No 2026 source found confirms that operation has begun."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original June 2024 target for full-scale operation; later releases moved the target to 2026."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.softbank.jp/en/corp/news/press/sbkk/2024/20240607_01",
+      "title": "SoftBank Corp. to Construct Large-scale AI Data Center that Utilizes Sharp Sakai Plant",
+      "publisher": "SoftBank Corp.",
+      "published": "2024-06-07",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.softbank.jp/corp/news/press/sbkk/2024/20241220_03",
+      "title": "Resolution on acquisition of land and buildings at Sharp's Sakai Plant for an AI data center (Japanese)",
+      "publisher": "SoftBank Corp.",
+      "published": "2024-12-20",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260927010220/https://www.softbank.jp/corp/news/press/sbkk/2024/20241220_03/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.softbank.jp/corp/news/press/sbkk/2025/20250314_01",
+      "title": "AIデータセンターの構築に向けて、シャープ堺工場の土地や建物の取得に関する契約を締結",
+      "publisher": "SoftBank Corp.",
+      "published": "2025-03-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://techcrunch.com/2025/03/14/softbank-buys-676m-old-sharp-plant-for-its-openai-collab-in-japan",
+      "title": "SoftBank buys $676M old Sharp plant for its OpenAI collab in Japan",
+      "publisher": "TechCrunch",
+      "published": "2025-03-14",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260828164909/https://techcrunch.com/2025/03/14/softbank-buys-676m-old-sharp-plant-for-its-openai-collab-in-japan/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.softbank.jp/en/sbnews/entry/20260512_01",
+      "title": "Activating AI for Society: SoftBank Corp.'s New Growth Strategy to Continuously Achieve Record-High Profits",
+      "publisher": "SoftBank Corp. (SoftBank News)",
+      "published": "2026-05-12",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260922125042/https://www.softbank.jp/en/sbnews/entry/20260512_01"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.softbank.jp/en/sbnews/entry/20260623_01",
+      "title": "SoftBank Corp.'s 40th Annual General Meeting of Shareholders: Building on Telecommunications Foundation to Unlock Potential of AI",
+      "publisher": "SoftBank Corp. (SoftBank News)",
+      "published": "2026-06-23",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260922125049/https://www.softbank.jp/en/sbnews/entry/20260623_01"
+    },
+    {
+      "id": "s7",
+      "url": "https://global.sharp/corporate/news/090408_2.html",
+      "title": "New LCD Panel Plant under Construction in Sakai City to Start Operations in October 2009",
+      "publisher": "Sharp Corporation",
+      "published": "2009-04-08",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

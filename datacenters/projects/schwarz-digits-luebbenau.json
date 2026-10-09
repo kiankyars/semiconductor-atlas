@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "id": "schwarz-digits-luebbenau",
+  "name": "Schwarz Digits Lübbenau data center",
+  "aliases": [
+    "STACKIT Lübbenau"
+  ],
+  "summary": "Schwarz Digits, the IT arm of Lidl and Kaufland owner Schwarz Group, is building an EUR 11 billion AI and cloud data center on a 13-hectare former power plant site in Lübbenau (Spreewald), Brandenburg. The first phase has a 200 MW connection and the modular design allows up to 100,000 GPUs over time. Work began in November 2025; the first module is due by the end of 2027, and waste heat is to feed the town's district heating from 2028. The group's cloud unit STACKIT will run it.",
+  "location": {
+    "country": "DE",
+    "admin1": "Brandenburg",
+    "admin2": "Oberspreewald-Lausitz",
+    "locality": "Lübbenau/Spreewald",
+    "lat": 51.868,
+    "lon": 13.9689,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Nominatim centroid of Lübbenau/Spreewald; sources describe a former power plant site in the town but give no address."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-24",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud",
+    "enterprise"
+  ],
+  "parties": [
+    {
+      "name": "Schwarz Digits",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "STACKIT",
+      "role": "operator",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Schwarz Group cloud provider; the site is its fifth data center."
+    },
+    {
+      "name": "Lidl",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Group-internal workloads such as logistics, payments and customer data."
+    },
+    {
+      "name": "Kaufland",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Group-internal workloads."
+    },
+    {
+      "name": "Baden-Württemberg Police",
+      "role": "tenant",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Named as a client in a 2026 news report."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-11-18",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-12",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Reported as the connection capacity of the initial construction phase; further modules are planned."
+    },
+    {
+      "metric": "accelerators",
+      "value": 100000,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 13,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-18",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 60,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-24",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Initial staffing (about 30 security and 30 technical roles)."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-18",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-11",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Groundbreaking ceremony reported with the announcement."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "First module and server rooms due by the end of 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Company aims to run the site entirely on green electricity; supply contracts are not described.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Rooftop and campus photovoltaics expected to produce up to 520,000 kWh per year.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.esmmagazine.com/technology/schwarz-digits-invests-e11bn-in-new-data-centre-300560",
+      "title": "Schwarz Digits Invests €11bn In New Data Centre",
+      "publisher": "ESM Magazine",
+      "published": "2025-11-19",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.startbase.com/news/schwarz-digits-investiert-11-milliarden-euro-in-digitale-souveraenitaet/",
+      "title": "Schwarz Digits investiert 11 Milliarden Euro in digitale Souveränität",
+      "publisher": "Startbase",
+      "published": "2025-11-18",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260117040451/https://www.startbase.com/news/schwarz-digits-investiert-11-milliarden-euro-in-digitale-souveraenitaet/"
+    },
+    {
+      "id": "s3",
+      "url": "https://thetechcapital.com/lidl-and-kaufland-owner-advances-12-billion-data-centre-project-amid-eu-ai-infrastructure-talks/",
+      "title": "Lidl and Kaufland owner advances $12 billion data centre project amid EU AI infrastructure talks",
+      "publisher": "The Tech Capital",
+      "published": "2026-01-12",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260228082658/https://thetechcapital.com/lidl-and-kaufland-owner-advances-12-billion-data-centre-project-amid-eu-ai-infrastructure-talks/"
+    },
+    {
+      "id": "s4",
+      "url": "https://fr.euronews.com/my-europe/2026/08/24/un-des-plus-grands-centres-de-donnees-ia-deurope-a-11-milliards-deuros-ouvre-dans-le-brand",
+      "title": "Un des plus grands centres de données IA d'Europe à 11 milliards d'euros ouvre dans le Brandebourg",
+      "publisher": "Euronews",
+      "published": "2026-08-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "notes": "Despite the Euronews headline wording, the article describes active construction with first server rooms due end-2027. Reports that Schwarz Group and Deutsche Telekom discussed a joint EU AI gigafactory bid were unconfirmed by the companies and are not tied to this site.",
+  "last_reviewed": "2026-10-09"
+}

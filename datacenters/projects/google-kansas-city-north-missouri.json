@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "google-kansas-city-north-missouri",
+  "name": "Google Kansas City data center campus (Hunt Midwest Business Center)",
+  "aliases": [
+    "Project Shale",
+    "Shale 1"
+  ],
+  "summary": "Google's first Missouri data center campus, at the Hunt Midwest Business Center off NE Parvin Road in Kansas City's Northland (Clay County). Google announced the $1 billion project in March 2024, with Evergy powering the site and a 400 MW solar PPA from the Beavertail Solar farm with Ranger Power and DESRI. Google, partly through the Alphabet vehicle Shalerock LLC, had assembled more than 315 acres in the Northland by late 2021 for a project called Project Shale. Google's site now describes two new data centers in Kansas City as in development, while a third-party listing reports the first building operational since 2025 within a four-phase plan of about 1.435 million sq ft.",
+  "location": {
+    "country": "US",
+    "admin1": "Missouri",
+    "admin2": "Clay County",
+    "locality": "Kansas City",
+    "lat": 39.168,
+    "lon": -94.4788,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Approximate point on NE Parvin Road east of Interstate 435, within the Hunt Midwest Business Center that sources name as the site; the business park covers about 2,500 acres, so the data center parcel within it is not pinpointed."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Shalerock LLC",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Alphabet vehicle reported as buying the original 78.9 acres in 2019; the same report attributes a further 236.4-acre purchase in December 2021 to Google."
+    },
+    {
+      "name": "Evergy",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Ranger Power",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Counterparty with DESRI to a PPA for 400 MW of new solar capacity from Beavertail Solar in Missouri; supply is grid-delivered, not on site."
+    },
+    {
+      "name": "D. E. Shaw Renewable Investments",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Counterparty with Ranger Power to the Beavertail Solar PPA."
+    },
+    {
+      "name": "Port KC",
+      "role": "government",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "In 2019 the Port Authority of Kansas City authorized up to $25 billion of privately backed Chapter 68 bonds over 35 years with a property tax exemption for the project; officials said that ceiling did not reflect planned spending."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-03-20",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 600000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Project Shale phase 1 (2019 proposal on 78.9 acres)",
+      "as_of": "2021-12-21",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Potential investment cited for the original 2019 proposal, before the 2024 announcement."
+    },
+    {
+      "metric": "land_area",
+      "value": 315,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2021-12-21",
+      "source_ids": [
+        "s5",
+        "s7"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 1435000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Four-phase plan as described by a third-party data center listing; not confirmed by Google in an opened source."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2021-12",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Purchase of 236.4 acres reported, adding to 78.9 acres bought in 2019."
+    },
+    {
+      "event": "announced",
+      "date": "2024-03-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Third-party listing gives 2025 as the year built and marks the first building operational, but its own description still says the campus is being developed; Google's page labels the Kansas City campus as in development. Unconfirmed."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Evergy powers the site.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "PPA for 400 MW of new-to-the-grid solar capacity from the Beavertail Solar farm in Missouri, with Ranger Power and DESRI.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "notes": "Status follows Google's undated page, which labels Kansas City as in development with two new data centers being built, and an undated third-party listing that reports a building completed in 2025; status_as_of is the access date because neither page carries a publication date. The listing's claim that the first building is operational is not confirmed by Google, so the record is not marked partially operational. Google's March 2024 announcement tied the site to its AI and cloud business.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://efis.psc.mo.gov/Document/Display/881306",
+      "title": "Google announces $1 billion data center in Kansas City (exhibit ADS-D-4, Missouri PSC EFIS document 881306)",
+      "publisher": "Missouri Public Service Commission (EFIS)",
+      "published": "2024-03-20",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.kshb.com/news/local-news/google-announces-1b-data-center-in-kansas-citys-northland",
+      "title": "Google announces $1B data center in Kansas City's Northland",
+      "publisher": "KSHB 41",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.startlandnews.com/2024/03/google-data-center-kansas-city/",
+      "title": "Google to build $1B data center in Kansas City; aiming for 24/7 carbon-free energy use",
+      "publisher": "Startland News",
+      "published": "2024-03-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.kctv5.com/2024/03/20/google-build-1-billion-data-center-kansas-city/",
+      "title": "Google to build $1 billion data center in Kansas City",
+      "publisher": "KCTV5",
+      "published": "2024-03-20",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250729182201/https://www.kctv5.com/2024/03/20/google-build-1-billion-data-center-kansas-city/"
+    },
+    {
+      "id": "s5",
+      "url": "https://thetechcapital.com/google-eyes-315-acre-hyperscale-data-center-in-kansas/",
+      "title": "Google eyes 315-acre hyperscale data center in Kansas",
+      "publisher": "The Tech Capital",
+      "published": "2021-12-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20240616014903/https://thetechcapital.com/google-eyes-315-acre-hyperscale-data-center-in-kansas/"
+    },
+    {
+      "id": "s6",
+      "url": "https://datacenters.google/kansas-city-missouri/",
+      "title": "Kansas City, Missouri - Google Data Center Location",
+      "publisher": "Google",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://baxtel.com/data-center/google-project-shale-0a8fa63e-b8b8-4b88-8e64-5c693d39337c",
+      "title": "Google: Shale 1 Data Center",
+      "publisher": "Baxtel",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

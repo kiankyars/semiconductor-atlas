@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "id": "project-blue-tucson",
+  "name": "Project Blue",
+  "aliases": [
+    "Beale Infrastructure Pima County data center campus"
+  ],
+  "summary": "Beale Infrastructure is building a data center campus on about 290 acres of former county land just north of the Pima County Fairgrounds, in unincorporated Pima County outside Tucson's city limits. Tucson's council voted against the project in August 2025, ending annexation talks, so it went ahead under county jurisdiction with a redesigned air-cooled plan. The county puts total investment at USD 3.6 billion, with four buildings in the first phase and up to ten at full build-out. State regulators approved a Tucson Electric Power supply agreement for 286 MW in December 2025, and work on site was reported under way in April 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "admin2": "Pima County",
+    "locality": "Tucson",
+    "lat": 32.2219,
+    "lon": -110.9714,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s6"
+    ],
+    "note": "Wikipedia coordinates for Tucson. The site is in unincorporated Pima County immediately north of the Pima County Fairgrounds and west of Houghton Road in the Southeast Employment and Logistics Center, southeast of this point; no coordinates were found in a cited source."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-24",
+  "status_source_ids": [
+    "s6"
+  ],
+  "parties": [
+    {
+      "name": "Beale Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "name": "Humphrey's Peak Properties, LLC",
+      "role": "owner",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "Arizona Luminaria names it as the purchaser in the county land sale contract, and the county's binding memorandum of agreement is with it; AZ Capitol Times refers to the developers as Beale Infrastructure and Humphrey's Peak Power."
+    },
+    {
+      "name": "Tucson Electric Power",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Pima County",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Sold the land and approved a binding community-benefits agreement with Beale."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3600000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total capital investment planned over a multi-year build, per the county's undated Project Blue FAQ page as viewed on the access date; its newest listed document is dated April 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 286,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-12-04",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Capacity TEP is to provide by 2028 under the energy supply agreement approved by the Arizona Corporation Commission; any expansion would need a new agreement."
+    },
+    {
+      "metric": "land_area",
+      "value": 290,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-04-24",
+      "source_ids": [
+        "s1",
+        "s6"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 10,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-24",
+      "source_ids": [
+        "s1",
+        "s6"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Undated county FAQ page as viewed on the access date."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 180,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12-16",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "The county FAQ expects these jobs by the third year of operations."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 3000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Direct construction jobs expected between 2026 and 2028, per the undated county FAQ page as viewed on the access date."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-06-17",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Pima County Board of Supervisors approved the sale of the county parcel to the developer."
+    },
+    {
+      "event": "other",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Tucson City Council voted against the project, ending annexation negotiations."
+    },
+    {
+      "event": "other",
+      "date": "2025-12-03",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Arizona Corporation Commission approved the TEP energy supply agreement by a four-to-one vote."
+    },
+    {
+      "event": "other",
+      "date": "2025-12-16",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "County board approved a binding agreement with Beale by a three-to-two vote."
+    },
+    {
+      "event": "site_acquired",
+      "date": "2025-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "County lists land sale closing updates dated late December 2025."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "County FAQ says the first building could be operational as soon as 2027."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "April 2026 local coverage says the campus is expected to be running by 2028, later than the county's earliest target."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Tucson Electric Power supply under a special energy supply agreement that TEP says uses existing resources; Beale has pledged to match all of its consumption with independently verified renewable energy.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "notes": "AZ Capitol Times reported in December 2025 that Amazon Web Services, which public records first obtained by Arizona Luminaria had tied to the project, would no longer use it after the switch to air cooling, and that no replacement user had been named.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.pima.gov/3552/Project-Blue-FAQ",
+      "title": "Project Blue FAQ",
+      "publisher": "Pima County",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://azluminaria.org/2025/08/27/project-blue-data-center-pima-county-beale-infrastructure-tep/",
+      "title": "Project Blue is back: Beale moving ahead with data center on county land",
+      "publisher": "Arizona Luminaria",
+      "published": "2025-08-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20261008060825/https://azluminaria.org/2025/08/27/project-blue-data-center-pima-county-beale-infrastructure-tep/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.azfamily.com/2025/08/09/tucson-rejects-amazon-linked-data-center-amid-water-energy-concerns/",
+      "title": "Tucson rejects Amazon-linked data center amid water, energy concerns",
+      "publisher": "Arizona's Family (KTVK/KPHO)",
+      "published": "2025-08-08",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20251004134431/https://www.azfamily.com/2025/08/09/tucson-rejects-amazon-linked-data-center-amid-water-energy-concerns/"
+    },
+    {
+      "id": "s4",
+      "url": "https://azcapitoltimes.com/news/2025/12/04/acc-greenlights-energy-agreement-for-tep-to-power-project-blue-data-center/",
+      "title": "ACC greenlights energy agreement for TEP to power Project Blue data center",
+      "publisher": "Arizona Capitol Times",
+      "published": "2025-12-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260629231758/https://azcapitoltimes.com/news/2025/12/04/acc-greenlights-energy-agreement-for-tep-to-power-project-blue-data-center/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.kold.com/2025/12/16/pima-county-votes-move-forward-with-project-blue",
+      "title": "Pima County Board of Supervisors gives green light to Project Blue",
+      "publisher": "KOLD News 13",
+      "published": "2025-12-16",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260304105222/https://www.kold.com/2025/12/16/pima-county-votes-move-forward-with-project-blue/"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.kold.com/2026/04/25/construction-begins-first-hyper-scale-data-center-pima-county/",
+      "title": "Construction begins on first hyper-scale data center in Pima County",
+      "publisher": "KOLD News 13",
+      "published": "2026-04-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

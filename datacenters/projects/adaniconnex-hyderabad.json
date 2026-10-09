@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "id": "adaniconnex-hyderabad",
+  "name": "AdaniConneX Hyderabad data centre campus",
+  "aliases": [],
+  "summary": "AdaniConneX, the Adani group's data centre business, lists a Hyderabad campus with a potential capacity of 600 MW of IT load, of which a first phase went live in October 2024. The company says the campus can draw up to 100% renewable power and offers colocation, connectivity and managed services there. A February 2026 Adani group release links its Microsoft partnership to the Hyderabad and Pune campuses without describing the terms. The site address and the size of the live first phase have not been published.",
+  "location": {
+    "country": "IN",
+    "admin1": "Telangana",
+    "locality": "Hyderabad",
+    "lat": 17.3888,
+    "lon": 78.4611,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Sources name Hyderabad only. Coordinates are the OpenStreetMap Nominatim centroid of Hyderabad, not the site."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "AdaniConneX",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "AdaniConneX",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Offers colocation and managed services at the campus."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed by the company as potential capacity in IT load."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2024-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company lists Phase 1 as live from October 2024; its capacity is not given."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Company states up to 100% renewable energy; the supply arrangement is not described.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.adaniconnex.com/data-centers",
+      "title": "Data Centers",
+      "publisher": "AdaniConneX",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://resources.adaniconnex.com/press-release/adaniconnexs-hyderabad-site-gets-five-star-grading-from-british-safety-council",
+      "title": "AdaniConneX's Hyderabad Site Gets Five-Star Grading from British Safety Council",
+      "publisher": "AdaniConneX",
+      "published": "2024-03-13",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.adani.com/newsroom/media-releases/Adani-Commits-USD-100-Bn-to-Sovereign-AI-Infrastructure",
+      "title": "Adani Commits USD 100 Bn to Sovereign AI Infrastructure",
+      "publisher": "Adani Group",
+      "published": "2026-02-17",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "The status comes from the company's undated campus page, accessed on 2026-10-09, so status_as_of is that access date. Microsoft is not listed as a party because the Adani release does not state its role at the Hyderabad campus. The March 2024 safety-grading release confirms the Hyderabad site existed but gives no capacity or status.",
+  "last_reviewed": "2026-10-09"
+}

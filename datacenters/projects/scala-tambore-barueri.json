@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "id": "scala-tambore-barueri",
+  "name": "Scala Data Centers Tamboré Campus",
+  "aliases": [
+    "Tamboré Campus",
+    "Campus Tamboré"
+  ],
+  "summary": "Scala Data Centers' Tamboré Campus in Barueri, Greater São Paulo, sits beside the Rodoanel ring road and is planned to reach 600 MW across 17 data centre buildings and three substations. Scala inaugurated Phase 2 (158 MW of IT capacity, BRL 6.2 billion) in August 2024 with two hyperscale buildings in service and more under construction. By October 2025 the company reported seven buildings operating, more than BRL 10 billion invested, and a memorandum with the Municipality of Barueri for approval of the campus master plan.",
+  "location": {
+    "country": "BR",
+    "admin1": "São Paulo",
+    "admin2": "Barueri",
+    "locality": "Tamboré",
+    "lat": -23.4656,
+    "lon": -46.8419,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Releases place the campus in the Tamboré area of Barueri alongside the Rodoanel without a street address; coordinates are the Tamboré reference point (Portuguese Wikipedia), and Tamboré spans Barueri and neighbouring Santana de Parnaíba."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2025-10-30",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Scala Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Scala Data Centers",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Municipality of Barueri",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Signed a memorandum with Scala for approval of the campus master plan."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total at full development; the releases do not say whether this is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 158,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2024-08-16",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 120,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported as active capacity across seven operating buildings in October 2025. The August 2024 release had said the campus would total more than 200 MW across six operating and four under-construction buildings after Phase 2."
+    },
+    {
+      "metric": "buildings",
+      "value": 17,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 7,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 6200000000,
+      "qualifier": "exact",
+      "unit": "BRL",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2024-08-16",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Also given as USD 1.13 billion in the release."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "more_than",
+      "unit": "BRL",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Cumulative investment reported for the campus to date."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Phase 2 inaugurated with the São Paulo governor present; buildings SGRUTB08 and SGRUTB12 in operation for two hyperscale clients, with SGRUTB09, SGRUTB10, SGRUTB67 and a substation under construction."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-30",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Scala announced a memorandum with the Municipality of Barueri for approval of the 600 MW campus master plan; date is the release date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Served by three power substations; Scala says it buys 100% renewable energy through long-term power purchase agreements tied to new wind and solar farms.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.prnewswire.com/news-releases/scala-data-centers-inaugurates-phase-2-of-tambore-campus-with-governor-tarcisio-de-freitas-present-committing-1-13-billion-302224370.html",
+      "title": "Scala Data Centers inaugurates Phase 2 of Tamboré Campus with Governor Tarcísio de Freitas present, committing $1.13 billion",
+      "publisher": "Scala Data Centers via PR Newswire",
+      "published": "2024-08-16",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.prnewswire.com/news-releases/scala-data-centers-celebrates-historic-milestone-with-approval-of-the-master-plan-for-its-tambore-campus-in-sao-paulo---the-largest-and-most-advanced-in-latin-america-with-600-mw-of-capacity-302599995.html",
+      "title": "Scala Data Centers celebrates historic milestone with approval of the master plan for its Tamboré Campus in São Paulo, the largest and most advanced in Latin America with 600 MW of capacity",
+      "publisher": "Scala Data Centers via PR Newswire",
+      "published": "2025-10-30",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

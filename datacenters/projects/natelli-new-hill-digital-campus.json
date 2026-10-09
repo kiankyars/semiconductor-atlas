@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "id": "natelli-new-hill-digital-campus",
+  "name": "New Hill Digital Campus",
+  "aliases": [
+    "Apex data center (Natelli Investments)"
+  ],
+  "summary": "Maryland developer Natelli Investments proposed a 250 MW data center campus on about 189 acres of former farmland on Shearon Harris Road in the New Hill community of Wake County, North Carolina, next to Duke Energy's Shearon Harris nuclear plant. The project needed annexation into and rezoning by the Town of Apex and drew organized local opposition in 2025. In March 2026 Natelli withdrew its annexation and rezoning applications, saying it would consider next steps only if Apex amended its zoning rules to allow data centers, while town leaders weighed a one-year moratorium.",
+  "location": {
+    "country": "US",
+    "admin1": "North Carolina",
+    "admin2": "Wake County",
+    "locality": "New Hill",
+    "lat": 35.6811,
+    "lon": -78.9356,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s1"
+    ],
+    "note": "Wikipedia coordinates for the New Hill community. WRAL places the site on Shearon Harris Road beside the Shearon Harris nuclear plant, a few kilometres south of this point; no cited source gives site coordinates."
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-03-10",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "parties": [
+    {
+      "name": "Natelli Investments",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Town of Apex",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "Annexation and rezoning authority for the site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-03-10",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 189,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-10",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "A WRAL photo caption gives 190 acres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bisnow, writing in March 2026, says the developer first proposed the project in September and requested rezoning last fall, which places it in 2025. WRAL reports residents were already pushing back in August, so the proposal may have been known earlier."
+    },
+    {
+      "event": "cancelled",
+      "date": "2026-03-05",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s1",
+        "s3"
+      ],
+      "note": "Natelli withdrew its annexation and rezoning applications on 5 March, per WRAL; ABC11 reports the company's announcement on 7 March."
+    }
+  ],
+  "power_sources": [],
+  "notes": "Recorded as cancelled because the developer withdrew its applications and the coverage describes the project as scrapped; Natelli said it could decide on a further course of action if Apex later adopts a zoning amendment allowing data centers.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.bisnow.com/news/raleigh-durham/data-center/massive-raleigh-area-data-center-scrapped-133584",
+      "title": "Apex Data Center Scrapped",
+      "publisher": "Bisnow",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wral.com/news/local/natelli-withdraws-apex-data-center-project-shearon-harris-march-2026/",
+      "title": "Residents near proposed Apex data center relieved project is scrapped, says more work needed",
+      "publisher": "WRAL",
+      "published": "2026-03-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://abc11.com/post/data-center-developer-pulls-back-apex-now/18685708/",
+      "title": "Data center developer pulls back from Apex for now",
+      "publisher": "ABC11 (WTVD)",
+      "published": "2026-03-07",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20261001014120/https://abc11.com/post/data-center-developer-pulls-back-apex-now/18685708/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

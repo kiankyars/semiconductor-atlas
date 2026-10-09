@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0",
+  "id": "openai-stargate-saline-township",
+  "name": "The Barn (Stargate Michigan, Saline Township)",
+  "aliases": [
+    "The Barn",
+    "Stargate Michigan",
+    "Related Digital Saline Township"
+  ],
+  "summary": "Related Digital is building The Barn, a 250-acre campus of three single-story buildings in Saline Township, Michigan, exclusively for Oracle, serving OpenAI under the Oracle-OpenAI Stargate expansion. Announced in October 2025 at more than 1 GW, it is described in later coverage as 1.4 GW. DTE Energy is to supply all power, alongside new battery storage paid for by the project. State regulators approved DTE's contracts for the campus in December 2025. In June 2026 the partners marked construction with all buildings under way and the first nearing completion. Walbridge is general contractor; financing mixes Related Digital and Blackstone-affiliated equity with PIMCO-anchored debt.",
+  "location": {
+    "country": "US",
+    "admin1": "Michigan",
+    "admin2": "Washtenaw County",
+    "locality": "Saline Township",
+    "lat": 42.1248,
+    "lon": -83.8587,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources place the site entrance off Michigan Avenue, and news photos show the campus from West Michigan Avenue and from Braun Road on its back side. The point lies on West Michigan Avenue in Saline Township near the line of Braun Road, derived from OpenStreetMap Nominatim road geometry; the county is named in the June 2026 release. It is not a surveyed parcel location."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-02",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Related Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Related Digital",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Provides equity alongside Blackstone-affiliated funds."
+    },
+    {
+      "name": "Oracle",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The campus is being developed exclusively for Oracle, and the first buildings are slated for delivery to Oracle."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Oracle's Stargate partner; the campus is described as purpose-built for Oracle and OpenAI."
+    },
+    {
+      "name": "Walbridge",
+      "role": "builder",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "General contractor."
+    },
+    {
+      "name": "Blackstone",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Equity through affiliated funds."
+    },
+    {
+      "name": "PIMCO",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "PIMCO-managed funds and accounts anchor the fixed-rate, long-term debt financing."
+    },
+    {
+      "name": "DTE Energy",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Michigan Public Service Commission",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approved DTE's energy contracts to serve the campus."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure given at announcement."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-02",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Figure used in news coverage of the DTE contract approval and later construction; the articles do not say whether it is IT load or total demand."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI's projection of total facility power."
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-06-01",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Planned site construction spending cited by the project team; the overall project is described only as multi-billion-dollar."
+    },
+    {
+      "metric": "investment",
+      "value": 43000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-02",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Spectrum News reported that an original $4.8 billion cost estimate had risen and the project was now valued at more than $43 billion; the article does not attribute the figure to a named source, and no company source opened here confirms it."
+    },
+    {
+      "metric": "land_area",
+      "value": 250,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Related Digital also plans to preserve more than 750 adjacent acres as open space, farmland and wetlands."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "campus",
+      "as_of": "2026-06-01",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 550000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "Each of the three buildings",
+      "as_of": "2026-06-01",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 2500,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Union construction jobs; more than 700 Michigan tradespeople were on site in June 2026."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 450,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "On-site jobs; the developers also project more than 1,500 county-wide jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-12-18",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Michigan Public Service Commission unanimously approved DTE's energy contracts to serve the campus, reviewing them on an ex parte basis."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-Q4",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Analyst estimate from imagery by Epoch AI, not a company disclosure; the developer had said construction would begin in early 2026 after regulatory approval."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-01",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Construction celebration with the governor; all buildings under construction and the first nearing completion."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Analyst estimate by Epoch AI, not a company date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "DTE Energy is to supply all of the campus's electricity from existing resources under long-term contracts approved by state regulators.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "New battery storage financed entirely by the project supplements DTE's supply.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site",
+      "title": "OpenAI, Oracle and Related Digital announce Stargate data center site in Michigan",
+      "publisher": "Related Companies",
+      "published": "2025-10-30",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260428234555/https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site"
+    },
+    {
+      "id": "s2",
+      "url": "https://spectrumlocalnews.com/mi/michigan/news/2025/12/20/mpsc-approves-dte-contracts",
+      "title": "Michigan Public Service Commission approves DTE contracts for proposed Saline Township data center",
+      "publisher": "Spectrum News",
+      "published": "2025-12-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.webwire.com/ViewPressRel.asp?aId=355624",
+      "title": "Oracle, Related Digital, Blackstone, OpenAI, Walbridge and Governor Whitmer Celebrate Construction of Stargate Campus in Saline Township",
+      "publisher": "Oracle, Related Digital, Blackstone, OpenAI and Walbridge (via WebWire)",
+      "published": "2026-06-02",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260610135039/https://www.webwire.com/ViewPressRel.asp?aId=355624"
+    },
+    {
+      "id": "s4",
+      "url": "https://spectrumlocalnews.com/mi/michigan/news/2026/08/02/related-digital-saline-township-data-center-construction-progress",
+      "title": "PHOTOS: Construction continues on Related Digital's Saline Township data center",
+      "publisher": "Spectrum News",
+      "published": "2026-08-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand",
+      "title": "OpenAI Stargate: where the US sites stand",
+      "publisher": "Epoch AI",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "analyst",
+      "archived_url": "https://web.archive.org/web/20260517184326/https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    }
+  ],
+  "notes": "Local residents have continued to oppose the project at township and state regulator meetings. Cost figures in the record differ widely and may reflect different scopes. Epoch AI figures and dates are analyst estimates, not company disclosures.",
+  "last_reviewed": "2026-10-09"
+}

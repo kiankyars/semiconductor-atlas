@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "id": "fermi-america-hypergrid-amarillo",
+  "name": "Fermi America Project Matador campus",
+  "aliases": [
+    "Private Power HyperGrid",
+    "Project Matador"
+  ],
+  "summary": "Fermi Inc. is developing a private-power AI campus in Carson County, Texas, near Amarillo, mostly on land leased from the Texas Tech University System. Its filing describes about 11 GW of planned on-site generation, potentially expandable to about 17 GW, and about 15 million square feet of AI infrastructure space. Gas turbines come first, with nuclear units planned from 2033 and limited grid supply at the start. In August 2026 Fermi signed its first tenant lease, with TensorWave, for 222 MW of facility power. At mid-2026 it reported 1.54 billion US dollars of construction in progress and going-concern doubts that management said its plans alleviate.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Carson County",
+    "lat": 35.3116,
+    "lon": -101.5597,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Coordinates of the Pantex Plant from Wikipedia (s5). Fermi says its campus is next to the Pantex complex (s2), in Carson County (s1, s4) and near Amarillo (s3); the campus covers thousands of acres, so the point is only approximate."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-28",
+  "status_source_ids": [
+    "s1",
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Fermi Inc.",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Also styled Fermi America."
+    },
+    {
+      "name": "TensorWave",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Lease dated August 9, 2026; closing was expected by September 30, 2026, subject to conditions."
+    },
+    {
+      "name": "Siemens Energy",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Supplier of SGT-800 and SGT6-5000F gas turbines."
+    },
+    {
+      "name": "NAES Corporation",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Selected to operate and maintain the natural gas generation fleet, which Fermi continues to own."
+    },
+    {
+      "name": "CBRE",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Selected to operate and maintain Fermi's first data center on the campus."
+    },
+    {
+      "name": "Southwestern Public Service Company",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expected to supply about 200 MW of grid power for the initial load."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 11000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Private-grid generation planned for the campus."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 17000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Expansion case, subject to pending land acquisitions and additional state air permits."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 6000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Generation the company website describes as already permitted; the page is undated and was accessed on this date."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "Initial 1 GW of load",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Grid power from Southwestern Public Service Company supporting the first gigawatt of load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 222,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "facility",
+      "applies_to": "phase",
+      "phase_label": "TensorWave premises",
+      "as_of": "2026-08-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total facility power under the TensorWave lease, delivered in phases from late 2027 into early 2028."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 650,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "phase",
+      "phase_label": "TensorWave premises with expansion option",
+      "as_of": "2026-08-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Facility power if TensorWave exercises its option for two more buildings."
+    },
+    {
+      "metric": "investment",
+      "value": 1540000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction in progress on Fermi's balance sheet, not a total project budget; the filing also expects about 2 billion US dollars of capital spending over the following twelve months for Phases 0 and 1."
+    },
+    {
+      "metric": "land_area",
+      "value": 5236,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Land held or to be held under a long-term lease from the Texas Tech University System."
+    },
+    {
+      "metric": "land_area",
+      "value": 8400,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Expected total site including other acquired, contracted or optioned land, subject to closings."
+    },
+    {
+      "metric": "floor_area",
+      "value": 15000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 311496,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "TensorWave premises",
+      "as_of": "2026-08-09",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Preliminary site development began in 2025; vertical construction was to follow the first tenant lease."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Lease signed with TensorWave for 222 MW of facility power over a 15-year initial term."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-18",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "First Siemens Energy SGT6-5000F gas turbines reported delivered to the site."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target year for commercial operations of the first campus; the company website says first power was planned for 2026."
+    },
+    {
+      "event": "other",
+      "date": "2033",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target for the first of four planned Westinghouse nuclear units, one per year through 2036; the filing says the first unit slipped about a year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Siemens SGT-800 and SGT6-5000F gas turbines plus leased GE TM2500 mobile units forming a private grid.",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "type": "nuclear",
+      "description": "Four Westinghouse reactor units planned for commissioning between 2033 and 2036.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Solar described as bridge capacity alongside battery storage.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Battery storage described as bridge capacity alongside solar.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "About 200 MW of grid power from Southwestern Public Service Company for the initial load.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/2071778/000207177826000051/frmi-20260630.htm",
+      "title": "Fermi Inc. Form 10-Q for the quarter ended June 30, 2026",
+      "publisher": "U.S. Securities and Exchange Commission (Fermi Inc. filing)",
+      "published": "2026-08-14",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://fermiamerica.com/",
+      "title": "Fermi America home page",
+      "publisher": "Fermi America",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://fermiamerica.com/first-power-generation-assets-arrive-at-project-matador/",
+      "title": "First Power Generation Assets Arrive at Project Matador",
+      "publisher": "Fermi America",
+      "published": "2026-09-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://fermiamerica.com/fermi-selects-naes-to-operate-project-matadors-natural-gas-fleet/",
+      "title": "Fermi Selects NAES to Operate Project Matador's Natural Gas Fleet",
+      "publisher": "Fermi America",
+      "published": "2026-09-28",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Pantex_Plant",
+      "title": "Pantex Plant",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260601100312/https://en.wikipedia.org/wiki/Pantex_Plant"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "The June 2026 10-Q says only preliminary site development had begun and that vertical construction of data center facilities was to follow a definitive tenant lease; the status reflects site work and generation equipment arriving, not data center building construction. The TensorWave lease was subject to closing conditions, including project-level financing, with closing expected by September 30, 2026; no source confirming the closing was opened."
+}

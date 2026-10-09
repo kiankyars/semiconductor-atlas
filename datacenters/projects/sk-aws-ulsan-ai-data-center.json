@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-aws-ulsan-ai-data-center",
+  "name": "SK AI Data Center Ulsan",
+  "aliases": [
+    "SK-AWS Ulsan AI data center",
+    "Ulsan AI data center"
+  ],
+  "summary": "SK Telecom and other SK Group companies are building an AI data center with Amazon Web Services on a former SK Chemicals site in the Mipo National Industrial Complex in Ulsan, South Korea. Plans call for a first phase of about 41 MW by November 2027 and about 103 MW by February 2029, with up to 60,000 GPUs and a longer-term aim of gigawatt scale. Power is to come from a nearby LNG-fuelled cogeneration plant. Construction began with an August 2025 groundbreaking. In August 2026 SK Telecom agreed to move SK Broadband's data center business, including the Ulsan build, into a new company, SK Horizon, backed by KKR and an IMM-Stonebridge consortium, subject to approvals.",
+  "location": {
+    "country": "KR",
+    "admin1": "Ulsan",
+    "locality": "Ulsan",
+    "lat": 35.5392,
+    "lon": 129.3119,
+    "precision": "admin1",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s6"
+    ],
+    "note": "Sources place the site in the Mipo National Industrial Complex in Ulsan without an address, and the complex could not be geocoded; coordinates are the OpenStreetMap Nominatim centroid of Ulsan Metropolitan City."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-14",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "SK Telecom",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "name": "SK Broadband",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "note": "Named alongside SK Telecom as leading the project and as co-purchaser of the site."
+    },
+    {
+      "name": "SK Ecoplant",
+      "role": "builder",
+      "source_ids": [
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "name": "Amazon Web Services",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Described as SK's partner in the project and expected to invest about USD 4 billion, according to reports citing industry sources; the companies' own figures were not found."
+    },
+    {
+      "name": "SK Multi-Utility",
+      "role": "power_supplier",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "SK Gas",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Supplies LNG to the nearby cogeneration plant."
+    },
+    {
+      "name": "Ulsan Metropolitan City",
+      "role": "government",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Signed an MoU with SK Telecom on regional revitalization and expanding the site."
+    },
+    {
+      "name": "SK Horizon",
+      "role": "operator",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "Planned spin-off of SK Broadband's data center business that is to run the Ulsan AI data center under construction; SK Telecom targets establishing it in the first quarter of 2027, pending shareholder and government approvals."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 41,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (target November 2027)",
+      "as_of": "2025-06-16",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "A September 2026 report gives about 40 MW for this phase."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 103,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-06-16",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "note": "Full initial build targeted for February 2029."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-08-29",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "TelecomTV's rounded figure at groundbreaking; other reports give 103 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Long-term gigawatt-scale aim without a timeline, first reported in June 2025 and restated by SK Telecom in July 2026. In September 2026 SK's chairman said planned capacity at Ulsan was approaching 900 MW."
+    },
+    {
+      "metric": "accelerators",
+      "value": 60000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-16",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 7000000000000,
+      "qualifier": "approximately",
+      "unit": "KRW",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-08-29",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "TelecomTV attributes the 7 trillion won figure to South Korea's ICT ministry."
+    },
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-06-16",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "AWS's expected contribution, per reports citing industry sources; TelecomTV describes it as part of the 7 trillion won total, so the two figures should not be added."
+    },
+    {
+      "metric": "land_area",
+      "value": 3.6,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-06-16",
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "Reported as about 36,000 square meters bought from SK Chemicals for 28.3 billion won."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2025-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "event": "announced",
+      "date": "2025-06",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Plans first reported by Korean media citing industry sources in mid-June 2025."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-08-29",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Groundbreaking ceremony attended by SK, AWS and city officials."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-11",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "note": "Target for the roughly 41 MW first phase."
+    },
+    {
+      "event": "other",
+      "date": "2029-02",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "note": "Target for expanding the site to about 103 MW in a second phase; SK has since signalled a much larger build-out."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-27",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "SK Telecom signed agreements to spin SK Broadband's data center business, including the Ulsan AI data center under construction, into SK Horizon with 3.08 trillion won of equity from KKR and an IMM Investment-Stonebridge consortium; completion is targeted for the first quarter of 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Power from a nearby LNG-fuelled cogeneration plant run by SK Multi-Utility with fuel from SK Gas, with LNG cold energy proposed for cooling.",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s6"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://amchamkorea.org/pp/latest_news/members_news/read/?idx=2451",
+      "title": "SK, AWS to build South Korea's largest AI data center in Ulsan (reprint of The Chosun Daily)",
+      "publisher": "AMCHAM Korea / The Chosun Daily",
+      "published": "2025-06-17",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.itnews.asia/news/sk-group-and-aws-to-build-south-koreas-largest-ai-data-centre-in-ulsan-617900",
+      "title": "SK Group and AWS to build South Korea's largest AI data centre in Ulsan",
+      "publisher": "iTnews Asia",
+      "published": "2025-06-16",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.koreajoongangdaily.com/business/sk-group-breaks-ground-on-ai-only-data-center-in-ulsan/12451117",
+      "title": "SK Group breaks ground on AI-only data center in Ulsan",
+      "publisher": "Korea JoongAng Daily",
+      "published": "2025-08-29",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260714114045/https://www.koreajoongangdaily.com/business/sk-group-breaks-ground-on-ai-only-data-center-in-ulsan/12451117"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.telecomtv.com/content/ai/under-the-hood-of-skt-s-ulsan-ai-datacentre-53720/",
+      "title": "Under the hood of SKT's Ulsan AI datacentre",
+      "publisher": "TelecomTV",
+      "published": "2025-08-29",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.lightreading.com/data-centers/sk-telecom-creates-sk-horizon-in-2-2b-data-center-spin-off-deal",
+      "title": "SK Telecom creates SK Horizon in $2.2B data center spin-off deal",
+      "publisher": "Light Reading",
+      "published": "2026-08-28",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260906000318/https://www.lightreading.com/data-centers/sk-telecom-creates-sk-horizon-in-2-2b-data-center-spin-off-deal"
+    },
+    {
+      "id": "s6",
+      "url": "https://constructionreviewonline.com/sk-ai-data-center-ulsan-chairman-says-site-nearing-900-megawatts/",
+      "title": "SK AI Data Center Ulsan: Chairman Says Site Nearing 900 Megawatts",
+      "publisher": "Construction Review Online",
+      "published": "2026-09-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s7",
+      "url": "https://news.sktelecom.com/en/3290",
+      "title": "SK Telecom Launches AI Data Center Infrastructure Company 'SK Horizon' and Secures Investments from KKR and IMM",
+      "publisher": "SK Telecom",
+      "published": "2026-08-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

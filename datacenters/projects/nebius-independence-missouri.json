@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "nebius-independence-missouri",
+  "name": "Nebius Independence AI factory",
+  "aliases": [
+    "Nebius Independence, Missouri AI factory"
+  ],
+  "summary": "Nebius is building what it calls its first gigawatt-scale AI infrastructure project in the US on about 400 acres in eastern Independence, Missouri, near Route 78 and Little Blue Parkway. The project page describes up to 1.2 GW across four buildings built over five to seven years, with 800 MW from Independence Power & Light and 400 MW of possible on-site generation still under evaluation. Nebius bought the land in December 2025, the City Council approved a Chapter 100 incentive in March 2026, and ground was broken in May 2026 with ARCO as general contractor.",
+  "location": {
+    "country": "US",
+    "admin1": "Missouri",
+    "locality": "Independence",
+    "lat": 39.0925,
+    "lon": -94.4139,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "City centroid from the Wikipedia infobox for Independence (s3). The groundbreaking release places the roughly 400-acre site in eastern Independence and the project page puts it at Route 78 and Little Blue Parkway, but no geocoder was used, so the point is the city centroid rather than the site. The city spans Jackson and Clay counties, so no county is given."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Nebius",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Nebius",
+      "role": "owner",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The project page says Nebius bought the land from Northpoint in December 2025."
+    },
+    {
+      "name": "ARCO National Construction",
+      "role": "builder",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "General contractor for phase 1."
+    },
+    {
+      "name": "Independence Power & Light",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "To supply 800 MW through the Southwest Power Pool grid and deliver initial power in the second half of 2026."
+    },
+    {
+      "name": "City of Independence",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "City Council approved the Chapter 100 industrial development incentive in March 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total capacity on the undated project page, accessed on this date; the groundbreaking release calls the project gigawatt-scale without a figure."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 800,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Share of the 1.2 GW the project FAQ attributes to Independence Power & Light; a further study for additional utility power is expected in early 2029."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "On-site generation share in the FAQ; the same page says on-site generation is still being evaluated for a future phase."
+    },
+    {
+      "metric": "land_area",
+      "value": 400,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-05-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The project page says more than 1,000."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 130,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2025-12",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Land purchased from Northpoint."
+    },
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Independence City Council approved the Chapter 100 industrial development incentive application."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-05-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Groundbreaking; construction of the first phase underway."
+    },
+    {
+      "event": "other",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Independence Power & Light expected to deliver initial power."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Power from Independence Power & Light, a city utility in the Southwest Power Pool, with Nebius paying full costs; a privately financed plant by Independence Power Partners at the retired Blue Valley plant site is described as part of the supply plan.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Possible on-site generation of about 400 MW for a future phase, technology not specified and still under evaluation.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "diesel_backup",
+      "description": "Two diesel emergency generators per building.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://nebius.com/newsroom/nebius-breaks-ground-on-gigawatt-scale-ai-factory-in-independence-missouri",
+      "title": "Nebius breaks ground on gigawatt-scale AI factory in Independence, Missouri",
+      "publisher": "Nebius",
+      "published": "2026-05-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://nebius.com/independencemo",
+      "title": "Nebius in Independence, Missouri project page",
+      "publisher": "Nebius",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260806031252/https://nebius.com/independencemo"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Independence,_Missouri",
+      "title": "Independence, Missouri",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "The Independence project page is undated; status_as_of and the as_of dates of figures taken only from it are the date it was accessed, when it said construction had begun."
+}

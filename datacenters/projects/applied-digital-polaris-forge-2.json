@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "id": "applied-digital-polaris-forge-2",
+  "name": "Applied Digital Polaris Forge 2",
+  "aliases": [
+    "Polaris Forge 2 AI Factory Campus",
+    "Applied Digital Harwood AI campus"
+  ],
+  "summary": "Applied Digital AI data center campus near Harwood in Cass County, North Dakota, on more than 900 acres. Announced in August 2025 as a 3 billion US dollar, 280 MW project, it was later described as a 1 GW campus. An unnamed US investment-grade hyperscaler leased the first 200 MW of critical IT load in two buildings for about 15 years and holds a right of first refusal on 800 MW more. Construction is funded partly by 2.15 billion US dollars of senior secured notes issued in March 2026; the company expects initial operations by the end of 2026 and the full 200 MW in 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "North Dakota",
+    "admin2": "Cass County",
+    "locality": "Harwood",
+    "lat": 46.9769,
+    "lon": -96.8811,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s6"
+    ],
+    "note": "Town centroid of Harwood from its Wikipedia coordinates (s6), which also places Harwood in Cass County; company sources say only that the campus is near Harwood and give no parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-07",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Applied Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Cass County Electric Cooperative",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Named as the power provider; in August 2025 the cooperative said it was finalizing an agreement."
+    },
+    {
+      "name": "Oracle",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported by Valley News Live in March 2026 without attribution; Applied Digital describes the tenant only as an unnamed US investment-grade hyperscaler, so this is not confirmed by the companies."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-08-18",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure given with the original 280 MW plan."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 280,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-08-18",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial size at announcement; the release said the campus could scale beyond this."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Initial two buildings",
+      "as_of": "2025-10-22",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Critical IT load leased to an unnamed hyperscaler for an estimated 15 years, about 5 billion US dollars of contracted revenue."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-22",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as a 1 GW campus; the tenant holds a right of first refusal on a further 800 MW of critical IT load representing the full expansion."
+    },
+    {
+      "metric": "land_area",
+      "value": 900,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-08-18",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Land the company says it has contracted."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial two buildings",
+      "as_of": "2025-10-22",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-18",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Full-time employees expected at full operation, plus long-term contractors."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-08-18",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-09",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Groundbreaking target given at announcement; by October 2025 the company described the campus as under construction."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-22",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Lease of 200 MW of critical IT load to an unnamed US investment-grade hyperscaler announced."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-10",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Closing of 2.15 billion US dollars of 6.75 percent senior secured notes due 2031 to fund the 200 MW build."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "In October 2026 the company said initial operations here would bring its delivered North Dakota capacity to 300 MW by the end of calendar 2026."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target for reaching the full initial 200 MW."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Power secured through Cass County Electric Cooperative, with Minnkota Power Cooperative also working toward a final agreement as of August 2025.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/127/applied-digital-to-break-ground-on-3-billion-polaris-forge",
+      "title": "Applied Digital to Break Ground on $3 Billion Polaris Forge 2 Campus in September 2025",
+      "publisher": "Applied Digital",
+      "published": "2025-08-18",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260801091137/https://ir.applieddigital.com/news-events/press-releases/detail/127/applied-digital-to-break-ground-on-3-billion-polaris-forge"
+    },
+    {
+      "id": "s2",
+      "url": "https://markets.financialcontent.com/franklincredit/article/gnwcq-2025-10-22-applied-digital-announces-5-billion-ai-factory-lease-with-us-based-investment-grade-hyperscaler-at-polaris-forge-2-nd-campus",
+      "title": "Applied Digital Announces $5 Billion AI Factory Lease with U.S. Based Investment Grade Hyperscaler at Polaris Forge 2 ND Campus",
+      "publisher": "Applied Digital via GlobeNewswire (FinancialContent)",
+      "published": "2025-10-22",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.valleynewslive.com/2026/03/10/applied-digital-closes-215b-deal-build-out-harwood-ai-campus/",
+      "title": "Applied Digital closes $2.15B deal to build out Harwood AI campus",
+      "publisher": "Valley News Live",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260310230902/https://www.valleynewslive.com/2026/03/10/applied-digital-closes-215b-deal-build-out-harwood-ai-campus/"
+    },
+    {
+      "id": "s4",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/159/applied-digital-reports-fiscal-fourth-quarter-and-full-year",
+      "title": "Applied Digital Reports Fiscal Fourth Quarter and Full Year 2026 Results",
+      "publisher": "Applied Digital",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001144879/000114487926000057/apldq127earningsrelease.htm",
+      "title": "Applied Digital Reports Fiscal First Quarter 2027 Results (Form 8-K exhibit)",
+      "publisher": "U.S. Securities and Exchange Commission (Applied Digital filing)",
+      "published": "2026-10-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Harwood,_North_Dakota",
+      "title": "Harwood, North Dakota",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "applied-digital-polaris-forge-1",
+    "applied-digital-polaris-forge-3"
+  ]
+}

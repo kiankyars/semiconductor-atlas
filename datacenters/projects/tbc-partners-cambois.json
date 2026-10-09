@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "id": "tbc-partners-cambois",
+  "name": "TBC Partners Cambois data centre campus",
+  "aliases": [
+    "TBC Partners Blyth data centre"
+  ],
+  "summary": "TBC Partners, a UK joint family office focused on energy transition and impact investments, said in January 2025 it had started developing data centres at Blyth and Didcot, describing them as two 300 MW projects with procured demand connections. In August 2026 it asked Northumberland County Council for a screening opinion on whether an environmental impact assessment is needed for a campus of about 12 hectares on Factory Road, Cambois, near the QTS campus. Construction would take about two years, with occupation and operation intended between 2030 and 2035. A full planning application had not been filed.",
+  "location": {
+    "country": "GB",
+    "admin1": "England",
+    "admin2": "Northumberland",
+    "locality": "Cambois",
+    "lat": 55.1453,
+    "lon": -1.5309,
+    "precision": "locality",
+    "source_ids": [
+      "s2"
+    ],
+    "note": "The site is on Factory Road, Cambois, beside the A189 just south of the River Wansbeck. Nominatim did not resolve Factory Road, so the Cambois village centroid is used."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-08-18",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "TBC Partners",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Northumberland County Council",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planning authority asked for the screening opinion."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "TBC Partners describes two 300 MW projects, at Blyth and Didcot, and says both have procured 300 MW demand connections."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-18",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Trade report says the Cambois campus could total 300 MW, citing TBC's website; full project details had not been published."
+    },
+    {
+      "metric": "land_area",
+      "value": 12,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-18",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "A January 2025 news item on TBC Partners' website says it had begun developing two UK data centres, at Didcot and Blyth."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Request to Northumberland County Council for an EIA screening opinion; no full planning application yet."
+    },
+    {
+      "event": "first_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Occupation and operation intended from 2030 to 2035 after about 24 months of construction."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.tbcpartners.co.uk/",
+      "title": "TBC Partners",
+      "publisher": "TBC Partners",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20251010131544/https://tbcpartners.co.uk/"
+    },
+    {
+      "id": "s2",
+      "url": "https://bebeez.eu/2026/08/18/application-filed-for-data-center-campus-near-qts-site-in-northumberland-uk/",
+      "title": "Application filed for data center campus near QTS' site in Northumberland, UK",
+      "publisher": "BeBeez International (republishing DatacenterDynamics)",
+      "published": "2026-08-18",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "qts-cambois-blyth"
+  ]
+}
