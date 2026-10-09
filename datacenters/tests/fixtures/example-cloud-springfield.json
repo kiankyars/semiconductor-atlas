@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "id": "example-cloud-springfield",
+  "name": "Example Cloud Springfield campus",
+  "aliases": [
+    "Project Maple"
+  ],
+  "summary": "A fictional multi-building campus used as a test fixture.",
+  "location": {
+    "country": "US",
+    "admin1": "Illinois",
+    "admin2": "Sangamon County",
+    "locality": "Springfield",
+    "lat": 39.8,
+    "lon": -89.64,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Town centroid."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-03-01",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [
+    "ai_training"
+  ],
+  "parties": [
+    {
+      "name": "Example Cloud",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "Example AI Lab",
+      "role": "tenant",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported tenant."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-05-01",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-03-01",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Upsized."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-04",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-03-01",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_high": 12000000000,
+      "qualifier": "range",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-05-01",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-05-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-Q3",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Later target."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Utility supply.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://example.com/a",
+      "title": "Announcement",
+      "publisher": "Example Cloud",
+      "published": "2025-05-01",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://example.org/b",
+      "title": "Update <script>",
+      "publisher": "Example News",
+      "published": "2026-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "related_ids": [
+    "example-ai-riverside"
+  ],
+  "last_reviewed": "2026-10-09"
+}

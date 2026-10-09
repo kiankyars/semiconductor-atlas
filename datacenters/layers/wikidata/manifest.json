@@ -1,0 +1,17 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "feature_count": 84,
+  "features_sha256": "07452ae80a8273286914faa67822f8ac6aa89459d914b8aff1b6a85108b7b174",
+  "layer": "wikidata",
+  "license": {
+    "attribution": "Wikidata",
+    "attribution_url": "https://www.wikidata.org/",
+    "id": "CC0-1.0",
+    "name": "Creative Commons CC0 1.0 Universal",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "query": "SELECT ?item ?label ?coord ?country ?inception ?website ?operators ?owners WHERE {\n  {\n    SELECT ?item (SAMPLE(?c) AS ?coord) (SAMPLE(?cc) AS ?country) (MIN(?inc) AS ?inception)\n           (SAMPLE(?site) AS ?website)\n           (GROUP_CONCAT(DISTINCT ?opLabel; separator=\"; \") AS ?operators)\n           (GROUP_CONCAT(DISTINCT ?owLabel; separator=\"; \") AS ?owners)\n    WHERE {\n      ?item wdt:P31/wdt:P279* wd:Q671224 .\n      OPTIONAL { ?item wdt:P625 ?c . }\n      OPTIONAL { ?item wdt:P17 ?countryItem . ?countryItem wdt:P297 ?cc . }\n      OPTIONAL { ?item wdt:P571 ?inc . }\n      OPTIONAL { ?item wdt:P856 ?site . }\n      OPTIONAL { ?item wdt:P137 ?op . ?op rdfs:label ?opLabel . FILTER(LANG(?opLabel) = \"en\") }\n      OPTIONAL { ?item wdt:P127 ?ow . ?ow rdfs:label ?owLabel . FILTER(LANG(?owLabel) = \"en\") }\n    }\n    GROUP BY ?item\n  }\n  OPTIONAL { ?item rdfs:label ?label . FILTER(LANG(?label) = \"en\") }\n}\nORDER BY ?item\n",
+  "raw_response_bytes": 127937,
+  "raw_response_sha256": "05db3b2687458ba142d4a5f8022f372d85c877a288b85aacb6be3e273a4d81f4",
+  "retrieved_at": "2026-10-09T15:07:44Z"
+}

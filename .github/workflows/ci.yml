@@ -27,13 +27,24 @@ jobs:
           python -m pip install --editable .
 
       - name: Check Python syntax
-        run: python -m compileall -q semiconductor_atlas scripts tests web
+        run: python -m compileall -q semiconductor_atlas scripts tests web datacenters
 
       - name: Run core tests
         run: python -m unittest discover -s tests -v
 
       - name: Run web tests
         run: python -m unittest discover -s web/tests -v
+
+      - name: Validate data center records and run atlas tests
+        working-directory: datacenters
+        run: |
+          python -m dcatlas validate
+          python -m dcatlas schema --check
+          python -m unittest discover -s tests -t . -v
+
+      - name: Build the data center atlas site
+        working-directory: datacenters
+        run: python -m dcatlas build --output "$RUNNER_TEMP/site" --commit "$GITHUB_SHA"
 
       - name: Build distributions
         run: python -m build

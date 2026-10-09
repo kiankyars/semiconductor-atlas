@@ -1,0 +1,65 @@
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Install optional Parquet writer
+        run: python -m pip install pyarrow==25.0.1
+
+      - id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Validate records and run data center tests
+        working-directory: datacenters
+        run: |
+          python -m dcatlas validate
+          python -m dcatlas schema --check
+          python -m unittest discover -s tests -t . -v
+
+      - name: Build site and data release
+        working-directory: datacenters
+        run: >
+          python -m dcatlas build
+          --output "$GITHUB_WORKSPACE/_site"
+          --base-url "${{ steps.pages.outputs.base_url }}/"
+          --commit "$GITHUB_SHA"
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
