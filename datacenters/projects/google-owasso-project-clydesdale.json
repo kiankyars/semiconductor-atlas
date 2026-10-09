@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "id": "google-owasso-project-clydesdale",
+  "name": "Project Clydesdale data center campus (Google, Tulsa County)",
+  "aliases": [
+    "Project Clydesdale"
+  ],
+  "summary": "Beale Infrastructure is building a 506-acre data center campus in unincorporated Tulsa County, Oklahoma, just west of Owasso near Cherokee Industrial Park. Tulsa County commissioners approved the economic development plan and tax incentives in September 2025, and ground was broken on 30 October 2025 for what was billed as a USD 1 billion project. Plans call for at least one phase of about 200,000 sq ft, with up to three more possible, and construction expected to take at least five years. In August 2026 Google was identified as the operator of the campus, which Public Service Company of Oklahoma will power through a new Beale-funded on-site substation.",
+  "location": {
+    "country": "US",
+    "admin1": "Oklahoma",
+    "admin2": "Tulsa County",
+    "locality": "Owasso",
+    "lat": 36.2878,
+    "lon": -95.8311,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s6"
+    ],
+    "note": "Sources place the campus in unincorporated Tulsa County just west of Owasso, on land bounded by East 76th Street North, East 86th Street North, North Yale Avenue and North Sheridan Road. No coordinates are published, so the point is the Owasso town coordinate from its Wikipedia article and marks the neighbouring town, not the parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-01",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Beale Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Also funds the new on-site electrical substation."
+    },
+    {
+      "name": "Google",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "ConstructConnect reported that Google will operate the campus, following the 19 August 2026 announcement; other coverage presents the campus as joining Google's data center network without naming an operator."
+    },
+    {
+      "name": "Public Service Company of Oklahoma",
+      "role": "utility",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "name": "Tulsa County Board of Commissioners",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Approved the project's economic development plan and tax incentives in September 2025; the Tulsa Flyer reports the vote was unanimous."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-10-30",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Beale's planned investment as announced at groundbreaking. ConstructConnect (August 2026) describes the USD 1 billion as backing the initial phase rather than the full build-out; no total for all phases was found."
+    },
+    {
+      "metric": "land_area",
+      "value": 506,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-21",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Groundbreaking coverage by the Tulsa Flyer rounded this to about 500 acres."
+    },
+    {
+      "metric": "floor_area",
+      "value": 200000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Each phase (at least one, with up to three more possible)",
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2026-08-21",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Technical jobs that ConstructConnect ties to the five-year build-out of the initial phase."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Tulsa County commissioners approved the economic development plan and tax incentives."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-10-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Groundbreaking ceremony attended by state and local officials."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-19",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Google and Beale announced the campus as part of Google's data center network; ConstructConnect identified Google as the operator."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supplied by Public Service Company of Oklahoma through a new on-site substation paid for by Beale; the project is also described as improving the utility's regional transmission and distribution reliability.",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://tulsaflyer.org/2025/10/30/government/post/developers-break-ground-on-1b-data-center-near-tulsa/",
+      "title": "Developers break ground on $1B data center near Tulsa",
+      "publisher": "Tulsa Flyer",
+      "published": "2025-10-30",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.constructionequipmentguide.com/beale-breaks-ground-on-project-clydesdale-data-campus/69597",
+      "title": "Beale Breaks Ground On Project Clydesdale Data Campus",
+      "publisher": "Construction Equipment Guide",
+      "published": "2025-11-12",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.news9.com/data-centers-in-oklahoma/google-data-center-campus-tulsa-county-oklahoma",
+      "title": "Google begins construction on 506-acre data center campus in Tulsa County",
+      "publisher": "News 9",
+      "published": "2026-08-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://news.constructconnect.com/google-idd-as-operator-of-tulsa-area-data-center",
+      "title": "Google ID'd as Operator of Tulsa Area Data Center",
+      "publisher": "ConstructConnect",
+      "published": "2026-08-21",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.constructionequipmentguide.com/google-beale-infrastructure-announce-okla-data-center/72160",
+      "title": "Google, Beale Infrastructure Announce Okla. Data Center",
+      "publisher": "Construction Equipment Guide",
+      "published": "2026-09-01",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Owasso,_Oklahoma",
+      "title": "Owasso, Oklahoma",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "No megawatt figure for this campus was found. Google's statewide figures (a USD 9 billion Oklahoma commitment announced in 2025, more than USD 15 billion invested in Oklahoma since 2011, and power agreements supporting more than 2.5 GW) are not campus figures. A Tulsa County commissioner said the campus would yield about USD 2 million a year in local tax revenue once running. The project also funds about 1.5 miles of new water lines for Washington County Rural Water District No. 3. The Tulsa Flyer describes the intended use as cloud storage.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "id": "sify-chennai-02-siruseri",
+  "name": "Sify Chennai 02 data center campus, Siruseri",
+  "aliases": [
+    "Chennai 02",
+    "Sify Siruseri campus"
+  ],
+  "summary": "Sify Infinit Spaces' hyperscale and AI-ready campus at Siruseri, Chennai, is planned as three towers over a shared basement, with an on-site subsea cable landing station and a 230 kV GIS substation. Tamil Nadu's chief minister inaugurated the first tower in April 2025, when Sify said the campus would eventually reach 130 MW and that it and its partners planned to invest INR 10,000 crore over five years. Sify's October 2025 prospectus reported 25.92 MW of built IT capacity in Tower B, of which 4.32 MW was installed, planned another 26 MW there by the year to March 2028, and said work on towers A and C had not begun.",
+  "location": {
+    "country": "IN",
+    "admin1": "Tamil Nadu",
+    "admin2": "Chengalpattu district",
+    "locality": "Siruseri",
+    "lat": 12.835,
+    "lon": 80.2,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources name Siruseri, Chennai, without an address. The point is the Siruseri coordinate from its Wikipedia article (which also gives the district), so it marks the locality rather than the site."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2025-10-16",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "colocation",
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Sify Infinit Spaces Limited",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Sify Infinit Spaces Limited",
+      "role": "operator",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 130,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-04-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Eventual IT power of the three-tower campus as given on Sify's website (130+ MW). W.Media (s2) reported an eventual capacity of 130 MW without stating the scope."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 4.32,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Tower B (installed capacity)",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Installed IT capacity of Tower B at 30 June 2025; none was installed at 31 March 2025. The prospectus defines built capacity as the maximum IT load a facility is engineered to support on its present design, and installed capacity as the part that is equipped, powered and commissioned."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 25.92,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Tower B (built capacity)",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Built IT capacity of Tower B at 30 June 2025. The prospectus defines built capacity as the maximum IT load a facility is engineered to support on its present design, and installed capacity as the part that is equipped, powered and commissioned. Only 4.32 MW was installed, so this figure is recorded as planned rather than operational."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 26,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Completion of Tower B (additional capacity)",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Additional built IT capacity planned by the financial year ending March 2028."
+    },
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "qualifier": "exact",
+      "unit": "INR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-04-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "INR 10,000 crore planned over five years by Sify together with partners (hyperscalers, enterprises and public sector companies), up from an original INR 2,500 crore commitment."
+    },
+    {
+      "metric": "investment",
+      "value": 18820000000,
+      "qualifier": "exact",
+      "unit": "INR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2025-04-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "W.Media reports that the first phase was developed at a cost of INR 1,882 crore; how this relates to the prospectus estimate for Tower B is not explained."
+    },
+    {
+      "metric": "investment",
+      "value": 12020070000,
+      "qualifier": "exact",
+      "unit": "INR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Tower B",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Estimated cost of Tower B excluding land, certified by an independent chartered engineer; about INR 4.41 billion had been spent by 31 August 2025."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2025-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Inauguration of the first tower by Tamil Nadu's chief minister, reported on 2025-04-30 without an event date. The prospectus shows no installed capacity at 31 March 2025 and 4.32 MW at 30 June 2025."
+    },
+    {
+      "event": "other",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Completion of Tower B, adding 26 MW of built IT capacity, targeted by the financial year ending March 2028; towers A and C had not started."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "On-site 230 kV GIS substation.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "About 60% of power came from renewable sources in April 2025, with a stated aim of 80-90% and eventually fully renewable supply; the generation types were not given.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sifytechnologies.com/europe/data-centre/",
+      "title": "Data centre",
+      "publisher": "Sify Technologies",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/sify-and-partners-to-invest-rs-10000-crores-in-chennai-dc-over-next-five-years-mp-vijaykumar/",
+      "title": "Sify and partners to invest Rs 10,000 crores in Chennai DC over next five years: MP Vijaykumar",
+      "publisher": "W.Media",
+      "published": "2025-04-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://nsearchives.nseindia.com/corporate/Registration_17102025141743_DRHP_Fillingversion.pdf",
+      "title": "Sify Infinit Spaces Limited: Draft Red Herring Prospectus (filing version)",
+      "publisher": "Sify Infinit Spaces Limited (filed with SEBI; hosted by National Stock Exchange of India)",
+      "published": "2025-10-16",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Siruseri",
+      "title": "Siruseri",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Sify's undated website (s1) still describes the Siruseri campus as becoming operational soon, which is older than the prospectus position; the status rests on the October 2025 prospectus, and no 2026 campus-level update was found. The prospectus places Tower B on a 4.90-acre plot in the SIPCOT Industrial Park, Siruseri, leased from SIPCOT. The INR 10,000 crore figure includes partners' spending and is a five-year plan, not Sify's own committed budget. Tamil Nadu's chief minister inaugurated the first tower; the state has no other stated role, so it is not listed as a party. Siruseri coordinates and the district come from Wikipedia (s4), used only for the location.",
+  "last_reviewed": "2026-10-09"
+}

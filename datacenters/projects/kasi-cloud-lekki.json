@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "id": "kasi-cloud-lekki",
+  "name": "Kasi Cloud LOS campus (Lekki, Lagos)",
+  "aliases": [
+    "Kasi LOS1",
+    "Kasi Cloud Lagos campus"
+  ],
+  "summary": "Hyperscale, AI-ready data centre campus of Kasi Cloud on about 4 hectares in the Maiyegun area of Lekki, Lagos, Nigeria, along the Lagos-Calabar coastal highway. Kasi broke ground in April 2022 on the USD 250 million project and major construction began in the second quarter of 2023. A May 2026 press report says Kasi commissioned the first phase, a 5.5 MW data hall and a 7.5 MW shared ecosystem floor in LOS1, the first of four planned buildings, although Kasi's own website still listed the campus as coming soon in October 2026. LOS1 has four floors of up to 8 MW of critical load each, and a dedicated 132 kV substation can scale the campus to about 100 MW of IT load.",
+  "location": {
+    "country": "NG",
+    "admin1": "Lagos State",
+    "locality": "Lekki",
+    "lat": 6.493394,
+    "lon": 3.720668,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5"
+    ],
+    "note": "Coordinates of Lekki from its Wikipedia article. Capacity Media places the site in the Maiyegun area of Lekki, ThisDay along the Lagos-Calabar coastal highway, and Kasi's website lists the campus in Lekki, Lagos; no exact point is published."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-05-19",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud",
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "Kasi Cloud",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Kasi Cloud",
+      "role": "operator",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "name": "Nigeria Sovereign Investment Authority",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Capacity Media names the authority's chief executive among Kasi's key investors attending the groundbreaking."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-05-19",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The dedicated substation can scale to about 100 MW of IT load; the campus is to grow progressively to this size."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-18",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 32,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "LOS1 building (four floors)",
+      "as_of": "2026-05-18",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "ThisDay gives 8 MW per floor and 32 MW for the four floors; Brand Spur says each floor is designed for up to 8 MW of critical load and that a single building could scale beyond 30 MW."
+    },
+    {
+      "metric": "investment",
+      "value": 250000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-05-19",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 4,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2022-04-20",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 4.2,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-18",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-18",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "LOS1 is described as the first of four facilities."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2022-04-19",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Groundbreaking ceremony with the Lagos State governor as guest of honour; Capacity Media, published on 20 April 2022, dates it to the previous day."
+    },
+    {
+      "event": "other",
+      "date": "2023-Q2",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Major construction works began."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-05",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Brand Spur reports the first phase of LOS1 as commissioned: a 5.5 MW data hall and a 7.5 MW ecosystem floor where customers can lease from a single server to a full aisle. Kasi's website still showed the campus as coming soon in October 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Dedicated 132 kV substation for the campus.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://capacityglobal.com/article/29zq9ki6a4ua8k9zv0q9s/data-economy/kasi-cloud-breaks-ground-on-first-nigeria-campus",
+      "title": "Kasi Cloud breaks ground on first Nigeria campus",
+      "publisher": "Capacity Media",
+      "published": "2022-04-20",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.thisdaylive.com/2026/05/18/kasi-set-to-launch-hyperscale-ai-ready-data-centres-in-lagos/",
+      "title": "Kasi Set to Launch Hyperscale AI-ready Data Centres in Lagos",
+      "publisher": "ThisDay",
+      "published": "2026-05-18",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://brandspurng.com/?p=191649",
+      "title": "Kasi Cloud Commissions First Phase Of 100MW AI-Ready Hyperscale Data Centre In Lagos",
+      "publisher": "Brand Spur Nigeria",
+      "published": "2026-05-19",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.kasicloud.com/",
+      "title": "Kasi Cloud",
+      "publisher": "Kasi Cloud",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Lekki",
+      "title": "Lekki",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Sources conflict on whether the campus is in service. Brand Spur (19 May 2026) reports that Kasi commissioned the first phase of LOS1, ThisDay (18 May 2026) only said the launch was due the next day, and Kasi's own website still listed the LOS campus (LOS1 and LOS5) under coming soon when read on 2026-10-09. The partially operational status therefore rests on a single press report. ThisDay's publication date comes from its URL. The 5.5 MW and 7.5 MW first-phase figures are kept separate and not added together.",
+  "last_reviewed": "2026-10-09"
+}

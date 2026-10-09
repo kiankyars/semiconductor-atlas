@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "id": "dayone-chonburi-tech-park",
+  "name": "DayOne Chonburi Tech Park (CTP) data center campus",
+  "aliases": [
+    "Chonburi Tech Park",
+    "CTP1",
+    "CTP2",
+    "DayOne Chonburi"
+  ],
+  "summary": "DayOne Data Centers, a Singapore-based operator, is building the Chonburi Tech Park hyperscale campus in the AMATA City area of Chonburi province, southeast of Bangkok. Groundbreaking was reported in March 2025 for a design of 180 MW of grid capacity in two phases, which trade press tied to a US$1 billion multi-year investment. In November 2025 DayOne added adjacent land that lifts the first site (CTP1) to 300 MW and signed an MoU with Amata for a second plot (CTP2) aimed at a 1 GW platform, plus a floating-solar supply deal. In April 2026 DayOne said more than 100 MW of IT capacity was expected to go live during 2026.",
+  "location": {
+    "country": "TH",
+    "admin1": "Chonburi",
+    "locality": "AMATA City Chonburi industrial estate",
+    "lat": 13.217,
+    "lon": 101.183,
+    "precision": "admin1",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Sources place the campus in the AMATA City estate in Chonburi province but give no district or address. The point is the province coordinate from the Chonburi province Wikipedia article, so it marks the province, not the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-26",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "DayOne Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Singapore-headquartered developer and operator of the campus."
+    },
+    {
+      "name": "Amata B.Grimm Renewable Energy (AMBRE)",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Signed a private power purchase agreement to supply floating-solar electricity to the campus."
+    },
+    {
+      "name": "Provincial Electricity Authority (PEA)",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Part of the three-way arrangement that delivers the solar power over its grid."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 180,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-03-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Grid capacity of the campus as designed at groundbreaking, to be built in two phases; later raised for CTP1 (see the 300 MW figure)."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "CTP1 with November 2025 land expansion",
+      "as_of": "2025-11-10",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "note": "Site power capacity of the first plot after adding adjacent land; the sources do not say whether this is IT or grid capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-10",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Target for a combined 1 GW power platform across CTP1 and the future CTP2 plot; CTP2 was covered only by an MoU."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Capacity due to go live in 2026",
+      "as_of": "2026-04-26",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "IT capacity DayOne expected to bring online during 2026 as part of a multi-phase rollout."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-03-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Intelligent CIO ties a US$1 billion investment, committed over the next few years, to this campus. DayOne's April 2026 release (s4) instead describes US$1 billion as the commitment it made on entering Thailand, without tying it to the campus; the conflict is unresolved."
+    },
+    {
+      "metric": "land_area",
+      "value": 12.2,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-03-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported as 122,000 square metres for the campus at groundbreaking, before the November 2025 additions."
+    },
+    {
+      "metric": "land_area",
+      "value": 16.3,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "CTP1 adjacent land added in November 2025",
+      "as_of": "2025-11-10",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Reported as 41.3 rai of adjacent land."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-11",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "DayOne announced its entry into Thailand."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Groundbreaking reported by Intelligent CIO on 2025-03-19 without a ceremony date; DayOne's April 2026 release gives only the year 2025."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-11-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "MoU with Amata for CTP2 and adjacent CTP1 land, lifting CTP1 to 300 MW and targeting a 1 GW platform; solar PPA signed the same day."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "More than 100 MW of IT capacity expected to go live in 2026; DayOne's market page lists a 2026 ready-for-service date."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Expected commercial operation of the floating-solar plant and start of renewable integration."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "The campus was designed around 180 MW of grid capacity; solar power is delivered through the Provincial Electricity Authority grid.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Private power purchase agreement with AMBRE for a 22 kV floating-solar plant in the AMATA City estate, initially 42.5 MWp, expected to start commercial operation in 2027.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.intelligentcio.com/apac/?p=43549",
+      "title": "DayOne breaks ground on hyperscale data center pioneering Thailand's digital future",
+      "publisher": "Intelligent CIO APAC",
+      "published": "2025-03-19",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://dayonedc.com/news/dayone-strengthens-thailands-digital-hub-with-amata-as-chonburi-campus-expands-toward-the-countrys-first-1gw-power-platform",
+      "title": "DayOne Strengthens Thailand's Digital Hub with Amata as Chonburi Campus Expands Toward the Country's First 1GW Power Platform",
+      "publisher": "DayOne Data Centers",
+      "published": "2025-11-10",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20251213220716/https://dayonedc.com/news/dayone-strengthens-thailands-digital-hub-with-amata-as-chonburi-campus-expands-toward-the-countrys-first-1gw-power-platform/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.bernama.com/en/news.php?id=2489483",
+      "title": "DayOne, Amata In Deal To Build Thailand's First 1GW Power Platform",
+      "publisher": "Bernama",
+      "published": "2025-11-11",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aap.com.au/aapreleases/cision20260425ae43618/",
+      "title": "DayOne Launches Inaugural Tech & AI Career Expo in Thailand, Showcasing Commitment to Digital Infrastructure and Talent Development",
+      "publisher": "DayOne Data Centers (via AAP / Cision)",
+      "published": "2026-04-26",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Chonburi_province",
+      "title": "Chonburi province",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s6",
+      "url": "https://dayonedc.com/market/greater-bangkok",
+      "title": "Our markets: Greater Bangkok",
+      "publisher": "DayOne Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260912081922/https://dayonedc.com/market/greater-bangkok"
+    }
+  ],
+  "notes": "Amata Corporation signed the November 2025 MoU covering CTP2 and the land added to CTP1 and is called a strategic partner, but no formal ownership or development role is stated, so it is not listed as a party. The US$1 billion rests on one trade-press report (s1); DayOne's April 2026 release frames it as a Thailand-entry commitment. That release describes the campus as under development with capacity due in 2026; no source confirms capacity was live by October 2026. Only Intelligent CIO places the campus in AMATA City; DayOne's pages name Chonburi province. Province coordinates come from Wikipedia (s5), used only for the map point.",
+  "last_reviewed": "2026-10-09"
+}

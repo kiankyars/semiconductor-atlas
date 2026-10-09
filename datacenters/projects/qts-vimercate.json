@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "id": "qts-vimercate",
+  "name": "QTS Vimercate data center campus",
+  "aliases": [
+    "QTS Vimercate/Milan",
+    "Velasca data center"
+  ],
+  "summary": "Proposed first Italian campus of Blackstone-owned QTS Data Centers on the former IBM industrial site at Velasca in Vimercate (Monza and Brianza). QTS's page calls it a proposed development of up to EUR 2.3 billion. At a June 2026 open day QTS presented three buildings and an on-site substation linked to a planned Terna station; local press reported 156 MW (two 60 MW buildings and one of 36 MW), while other reports give about 220 MW or 300 MW. In July 2026 QTS awaited the national environmental assessment before a building permit, aiming to prepare the site by end-2026 and open the first building in the second half of 2028.",
+  "location": {
+    "country": "IT",
+    "admin1": "Lombardia",
+    "admin2": "Monza e Brianza",
+    "locality": "Vimercate",
+    "lat": 45.617,
+    "lon": 9.367,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s7"
+    ],
+    "note": "Town coordinates from the Vimercate Wikipedia article. Sources place the site on the former IBM area at Velasca, a frazione of Vimercate, near the boundary with Burago; the site is not mapped in the local OpenStreetMap layer."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s4"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "QTS Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Kryalos SGR",
+      "role": "developer",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Il Giorno names Kryalos alongside QTS; Cloudnews says Blackstone holds a stake in Kryalos and that it is linked to the project, without describing its role."
+    },
+    {
+      "name": "Terna",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Is to build a new electrical station near the Burago boundary that would serve this and two other planned Vimercate data centers."
+    },
+    {
+      "name": "Comune di Vimercate",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Expects about EUR 5 million in development charges plus refurbishment of the Oreno sports ground; objections were also lodged on its planning-code revision."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2300000000,
+      "qualifier": "up_to",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Inward investment figure on QTS's undated campus page, read on 2026-10-09."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 156,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Reported after QTS's open day as two buildings of 60 MW and one of 36 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 220,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-24",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Undated trade article written after the 24 June 2026 presentation; it describes three buildings."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-11",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Il Giorno reports 300 MW of electrical power in its account of residents' objections."
+    },
+    {
+      "metric": "land_area",
+      "value": 19,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "QTS's page and Il Giorno give a 277,800 square metre site instead."
+    },
+    {
+      "metric": "floor_area",
+      "value": 100000,
+      "qualifier": "approximately",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Buildable area reported as a little under 100,000 square metres."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-12",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Data center buildings; annex buildings and a substation are also planned."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 600,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-12",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-07",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "QTS's executive vice-president said the approval process began in July of the previous year."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-24",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Public open day at which QTS presented the project to residents, businesses and local officials."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Site preparation planned by the end of 2026, after the environmental assessment and building permit."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "First building expected in the second half of 2028; the report places the formal opening between then and 2029."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "On-site substation linked by underground cable to a new station Terna is to build near the Burago boundary.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "133 emergency generators are planned (fuel not stated), which Il Giorno puts at about 1,000 MW thermal in total.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://q.com/data-centers/vimercate-en/",
+      "title": "Vimercate",
+      "publisher": "QTS Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://primamonza.it/attualita/il-primo-data-center-della-citta-si-svela/",
+      "title": "Il primo data center della città si svela",
+      "publisher": "Prima Monza",
+      "published": "2026-07-12",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.ciai.it/wp-content/uploads/2026/07/Giornale-Vimercate-30-6-26.pdf",
+      "title": "Su il sipario sul nuovo Data center",
+      "publisher": "Giornale di Vimercate (press clipping hosted by CIAI)",
+      "published": "2026-06-30",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.ilgiorno.it/monza-brianza/cronaca/il-campus-data-center-fa-6bad3cb1",
+      "title": "Il Campus Data Center fa paura: \"Diciamo no al deserto di cemento\"",
+      "publisher": "Il Giorno",
+      "published": "2026-07-11",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://cloudnews.tech/qts-prepares-a-220-mw-campus-near-milan-and-accelerates-its-expansion/",
+      "title": "QTS prepares a 220 MW campus near Milan and accelerates its expansion",
+      "publisher": "Cloudnews.tech",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Vimercate",
+      "title": "Vimercate",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Capacity figures conflict: 156 MW (Prima Monza, Giornale di Vimercate), about 220 MW (Cloudnews, citing Il Cittadino) and 300 MW (Il Giorno); site size is 19 hectares in local press but 277,800 square metres on QTS's undated page, which calls the development proposed (status_as_of is the access date). Giornale di Vimercate was read as a PDF clipping hosted by CIAI, a charity QTS sponsors; Prima Monza's own site carries the same text. A sponsored MBNews piece, also hosted by CIAI, said old sheds were being demolished; this is unconfirmed and not recorded. Opponents asked for heat recovery, generator-test limits and buried power lines. No ministry environmental decision was found.",
+  "last_reviewed": "2026-10-09"
+}

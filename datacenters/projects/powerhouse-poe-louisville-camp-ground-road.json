@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "id": "powerhouse-poe-louisville-camp-ground-road",
+  "name": "PowerHouse Louisville hyperscale campus (Camp Ground Road)",
+  "aliases": [
+    "PowerHouse Louisville",
+    "Camp Ground Road data center",
+    "Campground Road data center"
+  ],
+  "summary": "Hyperscale data center campus on Camp Ground Road in southwest Louisville, Kentucky, developed by a joint venture of PowerHouse Data Centers and Louisville-based Poe Companies and billed as the state's first hyperscale campus. Announced in January 2025 as a 400 MW campus with 335 MW of initial LG&E power secured and the first 130 MW due in October 2026, it sits on about 150 acres with zoning already in place. PowerHouse's campus page now lists up to 525 MW of utility power and up to six buildings. Local reporting in mid-2026 described seven warehouse-sized buildings under construction, with the first phase expected online as soon as October 2026; no tenant has been named.",
+  "location": {
+    "country": "US",
+    "admin1": "Kentucky",
+    "admin2": "Jefferson County",
+    "locality": "Louisville",
+    "lat": 38.2561,
+    "lon": -85.7514,
+    "precision": "locality",
+    "source_ids": [
+      "s3",
+      "s5",
+      "s6",
+      "s7"
+    ],
+    "note": "Local sources place the campus on Camp Ground Road in southern or southwest Louisville without coordinates. The point is the Louisville city coordinate from its Wikipedia article, not the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-13",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "PowerHouse Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Joint venture partner; a division of American Real Estate Partners."
+    },
+    {
+      "name": "Poe Companies",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Louisville-based joint venture partner, described in July 2026 coverage as building the campus."
+    },
+    {
+      "name": "Louisville Gas and Electric (LG&E)",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Announced the campus as its first hyperscale data center customer and is building a new switching station."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-01-16",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Campus size given at announcement; scope not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 335,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-01-16",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Initial utility power capacity secured from LG&E, with near-term expansion to up to 402 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 130,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "First power delivery (October 2026)",
+      "as_of": "2025-01-16",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 525,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Maximum utility power shown on PowerHouse's undated campus page, accessed 2026-10-09; higher than the 400 MW announced in 2025."
+    },
+    {
+      "metric": "land_area",
+      "value": 154,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "News reports describe 150 acres (2025) or more than 150 acres (2026)."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "July 2026 local reporting instead described seven warehouse-sized buildings."
+    },
+    {
+      "metric": "floor_area",
+      "value": 1800000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Developable floor area listed on the campus page as 1.8M sq ft."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-01-16",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Operational jobs; hundreds of construction jobs were also expected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01-16",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "note": "The January 2025 announcement scheduled construction to begin in 2025 with zoning already in place. Local reporting in July and August 2026 described the campus as under construction; no exact start date was found."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "First building targeted for Q4 2026 and the first 130 MW for October 2026; the company website, as reported in July 2026, said the first phase could come online as soon as October."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "LG&E supply through a new utility switching station due for completion in September 2026 and a dedicated on-site substation.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Backup generators on site, per local reporting; their fuel is not stated.",
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://news.pplweb.com/2025-01-16-LG-E-announces-first-major-data-center-electric-customer",
+      "title": "LG&E announces first major data center electric customer",
+      "publisher": "PPL Corporation / Louisville Gas and Electric",
+      "published": "2025-01-16",
+      "accessed": "2026-10-09",
+      "type": "utility"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55263723/lets-go-build-some-data-centers-powerhouse-drives-hyperscale-and-ai-infrastructure-across-north-america",
+      "title": "Let's Go Build Some Data Centers: PowerHouse Drives Hyperscale and AI Infrastructure Across North America",
+      "publisher": "Data Center Frontier",
+      "published": "2025-01-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.wdrbwave.com/2025/01/17/louisville-welcome-kentuckys-first-hyperscale-data-center/",
+      "title": "Louisville to welcome Kentucky's first Hyperscale Data Center",
+      "publisher": "WAVE",
+      "published": "2025-01-16",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://powerhousedata.com/data-center/ph-louisville",
+      "title": "PowerHouse Louisville",
+      "publisher": "PowerHouse Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261008172715/https://www.powerhousedata.com/data-center/ph-louisville"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.wdrbwave.com/2026/07/18/louisville-data-center-opponents-rally-metro-hall-push-stronger-regulations/",
+      "title": "Louisville data center opponents rally at Metro Hall, push for stronger regulations",
+      "publisher": "WAVE",
+      "published": "2026-07-18",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.lpm.org/news/2026-08-13/louisville-metro-council-approves-data-center-moratorium-as-new-proposal-sparks-controversy",
+      "title": "Louisville Metro Council approves data center moratorium as new proposal sparks controversy",
+      "publisher": "Louisville Public Media",
+      "published": "2026-08-13",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260923161021/https://www.lpm.org/news/2026-08-13/louisville-metro-council-approves-data-center-moratorium-as-new-proposal-sparks-controversy"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Louisville,_Kentucky",
+      "title": "Louisville, Kentucky",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261006020319/https://en.wikipedia.org/wiki/Louisville,_Kentucky"
+    }
+  ],
+  "notes": "No investment figure was found. The LG&E release names the joint venture but not the street; WAVE's January 2025 report ties it to 150 acres on Camp Ground Road, and the 2026 local reports, which do not mention PowerHouse (one names Poe as the builder), describe the Camp Ground Road campus as under construction. In January 2025 Poe's president said a large technology company would establish a significant presence there without naming it; WAVE suggested Meta or Microsoft as likely, which is unconfirmed. Louisville Metro Council's six-month data center moratorium of August 2026 applies to new proposals. Whether the October 2026 first-phase target was met was not confirmed by 2026-10-09.",
+  "last_reviewed": "2026-10-09"
+}

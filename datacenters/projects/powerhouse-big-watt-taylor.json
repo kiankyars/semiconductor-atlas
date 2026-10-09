@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "id": "powerhouse-big-watt-taylor",
+  "name": "Taylor Technology Campus (Big Watt Digital and PowerHouse)",
+  "aliases": [
+    "Taylor Technology Campus",
+    "Project Mustang"
+  ],
+  "summary": "Proposed 664-acre data center campus with an on-site power plant at 3301 Farm to Market Road 112, just outside Taylor in unincorporated Williamson County, Texas, developed by Big Watt Digital and PowerHouse Data Centers. Bisnow describes 500 MW of data center load with behind-the-meter generation and, citing the Austin Business Journal, says an unnamed tenant could add 500 MW. After withdrawing their annexation and zoning request in September 2026, the developers struck a deal letting the city regulate water use, noise and air quality, with reclaimed-water closed-loop cooling and about USD 28.2 million in community investments; the City Council approved it unanimously on 8 October 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Williamson County",
+    "locality": "Taylor",
+    "lat": 30.5725,
+    "lon": -97.4167,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Bisnow gives the address 3301 Farm to Market Road 112; KUT places the site just outside Taylor's city limits in unincorporated Williamson County, pending annexation. The point is the Taylor city coordinate from its Wikipedia article, not the site."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Big Watt Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "PowerHouse Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "City of Taylor",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Negotiated an annexation agreement letting it set standards on water use, noise, setbacks and air quality; the council approved it unanimously."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bisnow describes the campus as encompassing 500 MW of data center load alongside behind-the-meter on-site generation, without naming a source. Whether this is IT or facility load is not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Potential addition by an unnamed tenant",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported second-hand: Bisnow attributes this to the Austin Business Journal."
+    },
+    {
+      "metric": "land_area",
+      "value": 664,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Bisnow, citing the Austin Business Journal, reported that the developers did not yet own the site."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 320,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Full-time jobs estimated in a report commissioned for the project, as cited by Bisnow."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Developers withdrew their annexation and zoning application to negotiate further on noise, water use, setbacks and community benefits, about two weeks after the planning and zoning commission delayed the item for 90 days in August."
+    },
+    {
+      "event": "other",
+      "date": "2026-10-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Taylor City Council unanimously approved the agreement to annex the planned development at its Thursday meeting, which KUT had said was scheduled for 8 October."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Behind-the-meter on-site power plant intended to meet the campus's electricity needs; the fuel is not stated by the developers or the city in the cited sources, though a resident opposing the deal referred to gas power plants.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.bisnow.com/news/austin-san-antonio/data-center/taylor-deciding-annexation-zoning-data-center-campus-powerhouse",
+      "title": "Austin Suburb Set To Decide On Annexation, Zoning For Data Center Campus",
+      "publisher": "Bisnow",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261006121233/https://www.bisnow.com/news/austin-san-antonio/data-center/taylor-deciding-annexation-zoning-data-center-campus-powerhouse"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.kut.org/energy-environment/2026-10-02/taylor-annexing-data-center-development",
+      "title": "Taylor has struck a deal on a nearby data center, allowing it to annex the site and set conditions",
+      "publisher": "KUT News",
+      "published": "2026-10-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.kut.org/energy-environment/2026-10-09/taylor-tx-annex-data-center-power-plant",
+      "title": "Taylor City Council approves deal to clear the way for a nearby data center and power plant",
+      "publisher": "KUT News",
+      "published": "2026-10-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Taylor,_Texas",
+      "title": "Taylor, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status stays proposed: the approval clears annexation, but no construction start, tenant or site purchase was reported. Per a city press release cited by Bisnow, cooling is closed-loop with reclaimed water (initial fill about 1.6 million gallons, no potable water), and the developers pay for utility improvements and landscaping buffers. KUT reports about USD 28.2 million in community investments, including more than USD 10 million for Taylor ISD and local students. A commissioned report cited by Bisnow estimated about USD 1.4 billion of gross tax revenue for Taylor from 2027 to 2046; no capital investment figure was found. Taylor projects by KDC and Blueprint Projects are different builds.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "id": "sify-noida-02",
+  "name": "Sify Noida 02 data center campus",
+  "aliases": [
+    "Noida 02"
+  ],
+  "summary": "Sify Infinit Spaces' second campus in Noida, Uttar Pradesh, within a kilometre of its Noida 01 facility, is planned as three towers with a dedicated on-site 220 kV substation. Uttar Pradesh's chief minister inaugurated it in March 2025 as North India's largest AI-ready data center campus, with total capacity of more than 130 MW. Sify's October 2025 prospectus said only Tower B was operating, with 25.92 MW of built IT capacity of which 4.32 MW was installed at 30 June 2025; a July 2024 term loan funded development work.",
+  "location": {
+    "country": "IN",
+    "admin1": "Uttar Pradesh",
+    "admin2": "Gautam Buddha Nagar district",
+    "locality": "Noida",
+    "lat": 28.57,
+    "lon": 77.32,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Sify says Noida 02 is within 1 km of Noida 01, whose address is Plot B7, Sector 132, Noida; no address is given for Noida 02 itself. The point is the Noida city coordinate from its Wikipedia article, so it marks the city rather than the site near Sector 132."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2025-10-16",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "colocation",
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Sify Infinit Spaces Limited",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Sify Infinit Spaces Limited",
+      "role": "operator",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 130,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-03-11",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Launch coverage gives total capacity above 130 MW without a scope; Sify's website calls it more than 130 MW of IT power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 4.32,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Tower B (installed capacity)",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Installed IT capacity of Tower B, the same at 31 March and 30 June 2025. The prospectus defines built capacity as the maximum IT load a facility is engineered to support on its present design, and installed capacity as the part that is equipped, powered and commissioned."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 25.92,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Tower B (built capacity)",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Built IT capacity of Tower B at 30 June 2025, also listed on Sify's Noida page. The prospectus defines built capacity as the maximum IT load a facility is engineered to support on its present design, and installed capacity as the part that is equipped, powered and commissioned. Only 4.32 MW was installed, so this figure is recorded as planned rather than operational."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 1,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-07-04",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Term loan obtained for development works at Noida 02."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Inaugurated by Uttar Pradesh's chief minister, reported on 2025-03-11 without an event date; the industry report in the prospectus says Sify launched Noida 02 in March 2025."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Dedicated on-site 220 kV substation.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://indianinfrastructure.com/2025/03/11/sify-launches-north-indias-largest-ai-ready-data-centre-campus-in-noida/",
+      "title": "Sify launches North India's largest AI-ready data centre campus in Noida",
+      "publisher": "Indian Infrastructure",
+      "published": "2025-03-11",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261001011356/https://indianinfrastructure.com/2025/03/11/sify-launches-north-indias-largest-ai-ready-data-centre-campus-in-noida/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sifytechnologies.com/europe/data-centre/",
+      "title": "Data centre",
+      "publisher": "Sify Technologies",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://nsearchives.nseindia.com/corporate/Registration_17102025141743_DRHP_Fillingversion.pdf",
+      "title": "Sify Infinit Spaces Limited: Draft Red Herring Prospectus (filing version)",
+      "publisher": "Sify Infinit Spaces Limited (filed with SEBI; hosted by National Stock Exchange of India)",
+      "published": "2025-10-16",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sifytechnologies.com/data-center/noida-data-center/",
+      "title": "Noida data center",
+      "publisher": "Sify Technologies",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Noida",
+      "title": "Noida",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The prospectus (s3) describes the campus as located in 'Noida, Delhi'; Uttar Pradesh is the state given elsewhere in the same filing. No 2026 campus-level status update was found. Sify's Noida page cites 130+ MW of IT capacity while listing Noida 01 at 10.96 MW and Noida 02 at 25.92 MW, so the larger figure describes planned build-out. Uttar Pradesh's chief minister inaugurated the campus; the state has no other stated role, so it is not listed as a party. Noida coordinates and the district come from Wikipedia (s5), used only for the location.",
+  "last_reviewed": "2026-10-09"
+}

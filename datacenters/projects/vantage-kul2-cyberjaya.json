@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "id": "vantage-kul2-cyberjaya",
+  "name": "Vantage Data Centers Cyberjaya II campus (KUL2)",
+  "aliases": [
+    "KUL2",
+    "Cyberjaya II Data Center Campus"
+  ],
+  "summary": "Vantage Data Centers' second hyperscale campus in Cyberjaya, Selangor, next to its existing KUL1 campus. Announced in May 2023 as a 256 MW IT campus of 10 facilities on nearly 35 acres, with the first facility planned for Q4 2025, it broke ground in August 2024 alongside a supply agreement with Tenaga Nasional Berhad for 500 MVA through a dedicated 275 kV substation. Vantage's campus page, viewed in October 2026, now describes a larger plan of 436 MW of critical IT load in six data centers on 52 acres. No source found confirms whether the first facility has opened.",
+  "location": {
+    "country": "MY",
+    "admin1": "Selangor",
+    "admin2": "Sepang District",
+    "locality": "Cyberjaya",
+    "lat": 2.9225,
+    "lon": 101.655,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Vantage places KUL2 next to its KUL1 campus in Cyberjaya without an address. The point is the Cyberjaya coordinate from its Wikipedia article (which also gives the district), so it marks the township rather than the parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2024-08-06",
+  "status_source_ids": [
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Vantage Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Tenaga Nasional Berhad (TNB)",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Electricity supply agreement for 500 MVA via a dedicated 275 kV substation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 256,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2024-08-06",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "IT capacity at full build-out as announced in 2023 and restated at groundbreaking."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 436,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Critical IT load once fully developed, from Vantage's undated campus page viewed on the access date; it supersedes the 256 MW plan without an announced explanation."
+    },
+    {
+      "metric": "land_area",
+      "value": 35,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-08-06",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 52,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Campus page figure (21 hectares), larger than the 35 acres given in 2023 and 2024."
+    },
+    {
+      "metric": "floor_area",
+      "value": 256000,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2023-05-16",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Given as 2.75 million square feet."
+    },
+    {
+      "metric": "floor_area",
+      "value": 445000,
+      "qualifier": "approximately",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Given as 4.8 million square feet (445,000 square metres) once fully developed."
+    },
+    {
+      "metric": "buildings",
+      "value": 10,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2023-05-16",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Campus page count of data centers once fully developed."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-05-16",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-08-06",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Groundbreaking ceremony, at which the TNB supply agreement was disclosed."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target set in the May 2023 announcement; no source found confirms whether it was met."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Electricity supply agreement with TNB for 500 MVA through a dedicated 275 kV high-voltage substation on campus; the campus page lists a 500 MVA on-campus substation.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Vantage's campus page says solar panels will power non-critical areas such as offices and amenity spaces.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://vietnamnews.vn/media-outreach/1536601/vantage-data-centers-announces-second-campus-in-cyberjaya.html",
+      "title": "Vantage Data Centers Announces Second Campus in Cyberjaya",
+      "publisher": "Vantage Data Centers (press release via Media OutReach, Viet Nam News)",
+      "published": "2023-05-16",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://vantage-dc.com/news/vantage-data-centers-breaks-ground-on-256mw-cyberjaya-campus/",
+      "title": "Vantage Data Centers Breaks Ground on 256MW Cyberjaya Campus",
+      "publisher": "Vantage Data Centers",
+      "published": "2024-08-06",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260511172529/https://vantage-dc.com/news/vantage-data-centers-breaks-ground-on-256mw-cyberjaya-campus/"
+    },
+    {
+      "id": "s3",
+      "url": "https://vantage-dc.com/data-center-locations/apac/cyberjaya-ii-malaysia/",
+      "title": "Cyberjaya II, Malaysia Campus",
+      "publisher": "Vantage Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Cyberjaya",
+      "title": "Cyberjaya",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Vantage's May 2023 release presented an additional US$3 billion for building the campus, but its 2024 release calls the same sum investment into Malaysia, so it is kept out of the metrics as a country-level figure. Vantage signed an agreement with Cyberview Sdn Bhd, Cyberjaya's tech-hub developer, to secure the land; its formal role is not stated. The undated campus page (s3), read on 2026-10-09, gives the 436 MW plan in future tense without saying which buildings are live, so the status rests on the 2024 groundbreaking. KUL1 next door is a separate campus; in 2023 Vantage said both together would deliver 287 MW of IT capacity. Coordinates and district come from Wikipedia (s4).",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "id": "cavour-trino",
+  "name": "Cavour Hyperscale Campus (Trino)",
+  "aliases": [
+    "Cavour Hyperscale Campus"
+  ],
+  "summary": "Proposed data processing and AI campus on the site of the former Galileo Ferraris power station at Trino in the province of Vercelli, Piedmont, associated with the Italian engineering and construction group TechBau. On 24 July 2026 Italy's Council of Ministers declared it a programme of preeminent national strategic interest, citing about EUR 4 billion of investment and 300 to 400 MW of power. The site would reuse an existing 380 kV substation and an operating 87.5 MW solar plant, with 100 to 120 MW of battery storage. The timetable calls for the permitting conference to open by the end of 2026, a single authorisation in 2027 and a first lot in service in 2028.",
+  "location": {
+    "country": "IT",
+    "admin1": "Piemonte",
+    "admin2": "Vercelli",
+    "locality": "Trino",
+    "lat": 45.25206,
+    "lon": 8.19393,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Coordinates of the former Galileo Ferraris thermoelectric plant (frazione Leri Cavour, Trino) from its Italian Wikipedia article; the campus boundary has not been published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-27",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "TechBau",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "ItaliaOggi names TechBau as the group behind the project; the regional government says it worked with TechBau on the investment."
+    },
+    {
+      "name": "Government of Italy (Council of Ministers)",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Declared the programme of preeminent national strategic interest on a proposal from the industry minister, allowing an extraordinary commissioner to coordinate the single authorisation."
+    },
+    {
+      "name": "Regione Piemonte",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-07-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "value_high": 400,
+      "qualifier": "range",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-24",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Average construction workforce, with peaks above 2,000."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "value_high": 350,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Highly qualified operating jobs; sources add about 1,000 indirect jobs, and ItaliaOggi speaks of more than 2,000 jobs at full operation."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-07-24",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Council of Ministers declared the programme of preeminent national strategic interest under article 13 of the Decreto Asset."
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Services conference for permitting to begin by the end of 2026."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Target for the single authorisation (autorizzazione unica)."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "First lot to enter service."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Use of an existing 380 kV substation at the former power station site.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "An 87.5 MW photovoltaic plant already in operation would be used.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Electrochemical storage of 100 to 120 MW and 200 to 240 MWh.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.regione.piemonte.it/web/node/22790",
+      "title": "Un data center nell'ex centrale di Trino",
+      "publisher": "Regione Piemonte (Piemonteinforma)",
+      "published": "2026-07-24",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://corrierecomunicazioni.it/digital-economy/data-center-dal-cdm-ok-a-investimenti-per-8-miliardi-urso-italia-hub-europeo-del-digitale",
+      "title": "Data center, dal Cdm ok a investimenti per 8 miliardi. Urso: \"Italia hub europeo del digitale\"",
+      "publisher": "CorCom (Corriere Comunicazioni)",
+      "published": "2026-07-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.punto-informatico.it/data-center-lombardia-piemonte-via-libera-cdm/",
+      "title": "Data center in Lombardia e Piemonte: via libera dal Cdm",
+      "publisher": "Punto Informatico",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.italiaoggi.it/economia-e-politica/economia-e-finanza/piemonte-4-miliardi-per-il-nuovo-cavour-hyperscale-campus-norkj7yw",
+      "title": "Piemonte, 4 miliardi per il nuovo Cavour Hyperscale Campus",
+      "publisher": "ItaliaOggi",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260728004340/https://www.italiaoggi.it/economia-e-politica/economia-e-finanza/piemonte-4-miliardi-per-il-nuovo-cavour-hyperscale-campus-norkj7yw"
+    },
+    {
+      "id": "s5",
+      "url": "https://it.wikipedia.org/wiki/Centrale_termoelettrica_Galileo_Ferraris",
+      "title": "Centrale termoelettrica \"Galileo Ferraris\"",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The Council of Ministers decision covered two programmes totalling about EUR 8 billion; the other is an Equinix programme in Lombardy and is not part of this record. No Council of Ministers or ministry release was opened, and no later report on the permitting conference or the appointment of a commissioner was found. ItaliaOggi attributes the EUR 4 billion figure to La Stampa. The regional release describes the campus as a hub for data processing and artificial intelligence; none of the opened sources states cloud workloads. The Italian Wikipedia article on the former plant is used for coordinates only.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "id": "vantage-jhb1-sedenak",
+  "name": "Vantage Data Centers Johor campus (JHB1), Sedenak Tech Park",
+  "aliases": [
+    "JHB1",
+    "Yondr Johor campus"
+  ],
+  "summary": "Hyperscale campus of nearly 73 acres in Sedenak Tech Park, Johor, inside the Johor-Singapore Special Economic Zone. Developed by Yondr Group with green-loan financing, it is planned for more than 300 MW of IT capacity across three data centers. Vantage Data Centers agreed in September 2025 to buy it, alongside a US$1.6 billion investment in its Asia-Pacific platform that partly funded the deal, and completed the purchase in November 2025. Vantage's campus page, viewed in October 2026, says the first facility is operational and the rest are under development.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Kulai District",
+    "locality": "Sedenak (Sedenak Tech Park)",
+    "lat": 1.713667,
+    "lon": 103.524778,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources name Sedenak Tech Park in Johor without an address. The point is the Sedenak coordinate from its Wikipedia article (which also gives Kulai District), so it marks the locality rather than the parcel."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Yondr Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Original developer, which sold the campus to Vantage in 2025."
+    },
+    {
+      "name": "Vantage Data Centers",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Bought the campus from Yondr; the deal closed in November 2025."
+    },
+    {
+      "name": "Vantage Data Centers",
+      "role": "operator",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "name": "Tenaga Nasional Berhad (TNB)",
+      "role": "utility",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "IT capacity across three data centers once fully developed; the campus page gives 300MW+ of critical IT load."
+    },
+    {
+      "metric": "land_area",
+      "value": 73,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "The campus page gives 73 acres (30 hectares)."
+    },
+    {
+      "metric": "floor_area",
+      "value": 930000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Given as more than 930,000 square feet (87,000 square metres)."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-09-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Vantage announced it would acquire the campus from Yondr Group."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-24",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Acquisition completed, with more than 30 Yondr staff joining Vantage."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supplied by TNB through dedicated dual 275 kV feeds, with multiple 33 kV feeds per building.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://vantage-dc.com/news/vantage-data-centers-secures-1-6b-investment-in-apac-platform-from-gic-and-adia/",
+      "title": "Vantage Data Centers Secures $1.6B Investment in APAC Platform from GIC and ADIA",
+      "publisher": "Vantage Data Centers",
+      "published": "2025-09-10",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/vantage-data-centers-completes-purchase-of-yondrs-300mw-data-center-in-johor-closes-us1-6b-investment-in-apac/",
+      "title": "Vantage Data Centers completes purchase of Yondr's 300MW data center in Johor; closes US$1.6B investment in APAC",
+      "publisher": "W.Media",
+      "published": "2025-11-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://vantage-dc.com/data-center-locations/apac/johor-malaysia",
+      "title": "Johor, Malaysia Data Center Campus",
+      "publisher": "Vantage Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260920080346/https://vantage-dc.com/data-center-locations/apac/johor-malaysia"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Sedenak",
+      "title": "Sedenak",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20251231122840/https://en.wikipedia.org/wiki/Sedenak"
+    }
+  ],
+  "notes": "The partially operational status rests on Vantage's undated campus page (s3), read on 2026-10-09, which says the first facility is operational; no dated source gives when it opened or its capacity. The price paid for the campus was not disclosed. The US$1.6 billion was raised for Vantage's whole Asia-Pacific platform, led by an affiliate of GIC with a subsidiary of the Abu Dhabi Investment Authority, and only part of it went to this acquisition, so it is not a campus figure and those investors are not listed as campus parties. When Yondr began building the campus was not found in the sources opened. Sedenak coordinates and Kulai District come from Wikipedia (s4), used only for the location.",
+  "last_reviewed": "2026-10-09"
+}

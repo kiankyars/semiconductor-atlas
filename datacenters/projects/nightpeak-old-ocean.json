@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "id": "nightpeak-old-ocean",
+  "name": "Old Ocean Data Center (Nightpeak Energy)",
+  "aliases": [
+    "Old Ocean Datacenter"
+  ],
+  "summary": "Nightpeak Energy proposes a hyperscale data center campus with co-located gas turbine generation on a 158-acre site outside Sweeny in Brazoria County, Texas, about 65 miles southwest of Houston. County meeting documents, as reported by Bisnow, describe two 310 MW data centers at USD 1.5 billion each and two 310 MW combustion turbine plants at USD 250 million each, while Public Citizen describes one data center and one gas plant. On 10 March 2026 the commissioners court unanimously rejected a reinvestment zone and four ten-year, 100% tax abatements; the county judge expected the project to proceed anyway. Nightpeak's website, as quoted by Bisnow, said the campus could energize from 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Brazoria County",
+    "locality": "Old Ocean (near Sweeny)",
+    "lat": 29.0797,
+    "lon": -95.7494,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Bisnow, citing county meeting documents, places the 158-acre site outside Sweeny, and the campus is named after Old Ocean, an unincorporated community about 5 miles northwest of Sweeny. The point is Old Ocean's coordinate from its Wikipedia article, not the parcel."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-03-11",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Nightpeak Energy",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Developer of the data center campus; Public Citizen spells the name Night Peak Energy. Bisnow cites Nightpeak's website for the timelines of both the campus and the co-located Bulldog Power turbine plant but does not state who develops the plant."
+    },
+    {
+      "name": "Brazoria County Commissioners Court",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Rejected the reinvestment zone and tax abatements in March 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 310,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Each planned hyperscale data center",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Bisnow, citing county meeting documents, describes two 310 MW data centers; Public Citizen describes a single 310 MW data center. No campus total is recorded."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 310,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Each planned combustion turbine plant (Bulldog Power)",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Bisnow, citing county meeting documents, reports two 310 MW turbine plants; Public Citizen describes one 310 MW gas plant built to power the data center. No campus total is recorded."
+    },
+    {
+      "metric": "investment",
+      "value": 3500000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Bisnow's own headline total for the data centers and power plants together; it is not attributed to a document and matches the per-facility figures Bisnow attributes to county meeting documents. Public Citizen describes only one data center and one plant, so this total is uncertain."
+    },
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Each planned hyperscale data center",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "From county meeting documents as reported by Bisnow; each turbine plant was put at USD 250 million."
+    },
+    {
+      "metric": "land_area",
+      "value": 158,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "From county meeting documents as reported by Bisnow."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 30,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported by Bisnow alongside figures it attributes to meeting documents; several hundred construction jobs were also expected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-03-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Brazoria County commissioners unanimously rejected a reinvestment zone for the site and power plant and denied four ten-year, 100% tax abatements, amid concerns about noise, water and power use and the small number of permanent jobs."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Nightpeak's website, as quoted by Bisnow, said the campus could energize beginning in 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Co-located Bulldog Power combustion turbine plant, which Bisnow, citing Nightpeak's website, says has been in development since 2023 and targets operation in 2028 or earlier; sources differ on whether one or two 310 MW plants are planned.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.citizen.org/news/public-citizen-applauds-brazoria-county-for-rejecting-tax-break-for-massive-data-center/",
+      "title": "Public Citizen Applauds Brazoria County for Rejecting Tax Break for Massive Data Center",
+      "publisher": "Public Citizen",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.bisnow.com/houston/news/data-center-development/houston-area-county-rejects-tax-abatement-for-35b-data-center-development-133616",
+      "title": "Houston-Area County Rejects Tax Break For $3.5B Data Center Project",
+      "publisher": "Bisnow",
+      "published": "2026-03-11",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Old_Ocean,_Texas",
+      "title": "Old Ocean, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Public Citizen, an advocacy group that opposed the incentives, put the requested tax break at USD 10.5 million. The county judge said he expected the project to proceed regardless of the vote; Bisnow attributes the point that the county has little power to stop it to reporting by The Facts. Nightpeak's own website could not be opened, so its claims are recorded only as relayed by Bisnow. No later 2026 status update was found in an openable source. A smaller data center that recently opened in the nearby city of Brazoria, mentioned at the same meeting, is a different build.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "id": "qts-eemshaven",
+  "name": "QTS Eemshaven data center campus",
+  "aliases": [
+    "QTS Eemshaven",
+    "EEMSDC1"
+  ],
+  "summary": "Data center campus of Blackstone-backed QTS Data Centers at Huibertgatweg 2 in the Eemshaven port area of Groningen, the Netherlands. QTS bought the existing, then vacant 20 gross MW building in 2019 and in July 2025 was reported to be investing EUR 1.4 billion to expand the campus and double its regional capacity. QTS's campus page now describes up to 18 hectares, three facilities and 200 MW of planned capacity delivered in phases: the first building is operational, the second is in phased delivery and the third is under construction.",
+  "location": {
+    "country": "NL",
+    "admin1": "Groningen",
+    "locality": "Eemshaven",
+    "lat": 53.437501,
+    "lon": 6.858112,
+    "precision": "site",
+    "source_ids": [
+      "s5"
+    ],
+    "note": "Point for the 'QTS Eemshaven Netherlands Data Center' building (OSM way 455499803, Huibertgatweg) from the local OpenStreetMap layer, matching the address on QTS's campus page. The layer also maps a QTS new build about 350 m to the north-west; the full 18-hectare campus boundary is not published."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "QTS Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "name": "QTS Data Centers",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Acquired the Eemshaven and Groningen facilities from TCN SIG Telehousing in 2019."
+    },
+    {
+      "name": "Blackstone (managed funds)",
+      "role": "investor",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as backing QTS; Blackstone-managed funds own QTS rather than this site directly."
+    },
+    {
+      "name": "Zentrys Group",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Provided on-site operations, maintenance and customer support under a partnership announced in 2019; its current role was not checked."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "QTS describes this as planned gross renewable capacity delivered in phases; the undated campus page was read on 2026-10-09."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 20,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Existing building at 2019 acquisition",
+      "as_of": "2019-04-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Built-out capacity of about 20 gross MW in the building QTS bought, which was vacant at the time."
+    },
+    {
+      "metric": "investment",
+      "value": 1400000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Expansion reported in July 2025",
+      "as_of": "2025-07-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Tech Capital also gives USD 1.5 billion as the equivalent."
+    },
+    {
+      "metric": "land_area",
+      "value": 18,
+      "qualifier": "up_to",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Development scope including associated works and structures."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1400,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Peak construction workforce."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2019-04-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "QTS closed the purchase of the Eemshaven and Groningen data centers for about USD 44 million including closing costs."
+    },
+    {
+      "event": "other",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Groningen Seaports' March 2025 newsletter listed construction of a new QTS data center among port projects."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-07",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "EUR 1.4 billion expansion reported; Structure Research cited local media saying a second data center was under construction."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "On-site substation; QTS says renewable-sourced power is available.",
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://q.com/news/qts-expands-international-platform-with-the-strategic-acquisition-of-two-data-centers-in-the-netherlands/",
+      "title": "QTS Expands International Platform with the Strategic Acquisition of Two Data Centers in the Netherlands",
+      "publisher": "QTS Data Centers",
+      "published": "2019-04-29",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://thetechcapital.com/qts-data-centers-invests-1-5-billion-in-dutch-hyperscale-expansion/",
+      "title": "QTS Data Centers invests $1.5 billion in Dutch hyperscale expansion",
+      "publisher": "The Tech Capital",
+      "published": "2025-07-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.structureresearch.net/?p=100674",
+      "title": "QTS doubling down in northern Netherlands",
+      "publisher": "Structure Research",
+      "published": "2025-07-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.groningen-seaports.com/wp-content/uploads/Website_Ommelander_ADV_GSP_maart2025.pdf",
+      "title": "Ommelander advertorial Groningen Seaports, maart 2025",
+      "publisher": "Groningen Seaports",
+      "published": "2025-03",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.q.com/data-centers/netherlands-eemshaven",
+      "title": "Eemshaven, Netherlands data center",
+      "publisher": "QTS Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Status, the 200 MW, 18-hectare and three-building figures and job counts come from QTS's undated campus page, so status_as_of is the access date. The EUR 1.4 billion figure comes from the visible lede of a paywalled Tech Capital article; Dutch press coverage of the expansion (including a 2029 timeline and the name EEMSDC2) could not be opened, so it is not recorded. QTS's 2019 release said the site neighbours a 500+ MW campus of a hyperscale cloud provider. The campus page also mentions a partnership with WarmteStad to share residual heat from QTS's Netherlands data centers, without saying it covers Eemshaven.",
+  "last_reviewed": "2026-10-09"
+}
