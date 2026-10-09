@@ -166,8 +166,9 @@ def page(*, title: str, description: str, body: str, depth: int, path: str, base
          data_as_of: str = "") -> str:
     rel = "../" * depth
     v = f"?v={ASSET_VERSION}" if ASSET_VERSION else ""
+    current_attr = ' aria-current="page"'
     nav = "".join(
-        f'<a href="{rel}{href}"{" aria-current=\"page\"" if href == current else ""}>{label}</a>'
+        f'<a href="{rel}{href}"{current_attr if href == current else ""}>{label}</a>'
         for href, label in NAV
     )
     nav += f'<a href="{REPO_URL}">GitHub</a>'

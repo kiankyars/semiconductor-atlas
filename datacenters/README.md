@@ -31,7 +31,8 @@ python3 -m dcatlas schema                      # regenerate the JSON Schema afte
 ```
 
 `build` writes Parquet files too when `pyarrow` is installed (the Pages workflow installs it).
-Builds are deterministic: the same commit and base URL produce byte-identical files.
+Builds are deterministic: the same commit, base URL and Python/SQLite versions produce
+byte-identical files (the SQLite file header records the library version).
 
 ## Publishing
 
