@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "id": "pdg-jc4-bekasi",
+  "name": "Princeton Digital Group JC4 Greater Jakarta",
+  "aliases": [
+    "JC4",
+    "PDG JC4"
+  ],
+  "summary": "Princeton Digital Group announced in April 2026 that it had acquired powered land for JC4, a planned 240 MW campus of four 60 MW buildings on about 106,000 square meters in the Greenland International Industrial Center in Bekasi Regency, Greater Jakarta. The site is about 1.7 km from PDG's JC3 campus, allowing shared power and connectivity infrastructure, and PDG said construction had already begun. No investment figure or completion date has been published.",
+  "location": {
+    "country": "ID",
+    "admin1": "West Java",
+    "admin2": "Bekasi Regency",
+    "lat": -6.3836,
+    "lon": 107.1911,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "PDG places JC4 in the Greenland International Industrial Center (GIIC), Bekasi Regency, without a street address; coordinates are the OpenStreetMap Nominatim centroid of the GIIC industrial estate and are shared with the nearby JC3 record."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-30",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Princeton Digital Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Princeton Digital Group",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Acquired the powered land."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 240,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Four buildings of 60 MW each."
+    },
+    {
+      "metric": "land_area",
+      "value": 10.6217,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported as 106,217 square meters."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2026-04-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Acquisition of 240 MW of powered land announced; PDG said construction had already commenced."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-07",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "PDG referred to the recently announced launch of JC4 among its Indonesian milestones."
+    }
+  ],
+  "power_sources": [],
+  "related_ids": [
+    "pdg-jc3-bekasi"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://princetondg.com/press-releases/pdg-acquires-240-mw-of-powered-land-in-jakarta-advancing-its-rapid-expansion-across-asia/",
+      "title": "PDG Acquires 240 MW of Powered Land in Jakarta, Advancing Its Rapid Expansion Across Asia",
+      "publisher": "Princeton Digital Group",
+      "published": "2026-04-30",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://princetondg.com/press-releases/pdg-raising-usd-856-million-debt-for-its-hyperscale-data-center-expansion-in-indonesia/",
+      "title": "PDG Raising ~USD 856 Million Debt for its Hyperscale Data Center Expansion in Indonesia",
+      "publisher": "Princeton Digital Group",
+      "published": "2026-05-07",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261004132014/https://princetondg.com/press-releases/pdg-raising-usd-856-million-debt-for-its-hyperscale-data-center-expansion-in-indonesia/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

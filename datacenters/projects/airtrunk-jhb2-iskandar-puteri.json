@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "id": "airtrunk-jhb2-iskandar-puteri",
+  "name": "AirTrunk JHB2",
+  "aliases": [
+    "JHB2 Johor"
+  ],
+  "summary": "JHB2 is AirTrunk's second hyperscale campus in Malaysia, announced in February 2025 in Iskandar Puteri, Johor, and scalable to more than 270 MW on a site of over 11 hectares. It is designed for high-density AI loads with liquid cooling and a grid connection from Tenaga Nasional Berhad on an accelerated schedule, with AirTrunk providing land for a new substation. In April 2026 AirTrunk said JHB1 and JHB2 were almost fully contracted, and in July 2026 it secured US$2.325 billion of green project financing for JHB2. The cited sources give no opening date.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Johor Bahru District",
+    "locality": "Iskandar Puteri",
+    "lat": 1.4523,
+    "lon": 103.6145,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "AirTrunk names Iskandar Puteri without an address; coordinates are the OpenStreetMap Nominatim centroid of Iskandar Puteri."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-29",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "AirTrunk",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Tenaga Nasional Berhad",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Providing the grid connection under its Green Lane Pathway; AirTrunk is providing land for a new TNB substation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 270,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-02-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "AirTrunk's facility page calls this total capacity without saying whether it is IT load. AirTrunk separately gives more than 420 MW of IT load across JHB1 and JHB2 combined."
+    },
+    {
+      "metric": "land_area",
+      "value": 11,
+      "qualifier": "more_than",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Undated facility page viewed October 2026."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-02-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "AirTrunk said the announcement brought its Malaysia investment to RM 9.7 billion, without a JHB2-specific figure."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-30",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "AirTrunk said JHB1 and JHB2 were almost 100% contracted."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-29",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "US$2.325 billion (RM 9.5 billion) green project financing from 30 lenders including IFC secured to support JHB2's development."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid connection from Tenaga Nasional Berhad, targeted on an accelerated 12-month timeframe.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "related_ids": [
+    "airtrunk-jhb1-johor"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://airtrunk.com/airtrunk-scales-up-in-malaysia-with-announcement-of-second-malaysia-hyperscale-data-centre-jhb2/",
+      "title": "AirTrunk grows Malaysia platform with second cloud and AI-ready data centre in Johor",
+      "publisher": "AirTrunk",
+      "published": "2025-02-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://airtrunk.com/data-centres/jhb2/",
+      "title": "JHB2 Johor Bahru",
+      "publisher": "AirTrunk",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://airtrunk.com/airtrunk-doubles-down-in-malaysia-with-two-new-hyperscale-campuses-in-johor-bahru/",
+      "title": "AirTrunk doubles down in Malaysia with two new hyperscale campuses in Johor Bahru",
+      "publisher": "AirTrunk",
+      "published": "2026-04-30",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://airtrunk.com/airtrunk-secures-us2-325b-green-financing-to-support-sustainable-digital-infrastructure-growth-in-malaysia/",
+      "title": "AirTrunk secures US$2.325b green financing to support sustainable digital infrastructure growth in Malaysia",
+      "publisher": "AirTrunk",
+      "published": "2026-07-29",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -28,6 +28,11 @@ DERIVATION_RULES = {
         "Campus-level power_capacity statements with basis operational, same scope preference and "
         "selection order as planned_power_mw."
     ),
+    "onsite_generation_mw": (
+        "Campus-level power_capacity statements with scope onsite_generation, any basis; the "
+        "most recent as_of wins, then the largest value. Reported separately because generation "
+        "capacity is not data center demand."
+    ),
     "investment": (
         "Campus-level investment statements; the most recent as_of wins, then the largest value. "
         "Values stay in the reported currency and are never converted or summed."
@@ -79,6 +84,8 @@ def headline(record: dict[str, Any]) -> dict[str, Any]:
     power = [m for m in campus if m["metric"] == "power_capacity"]
     planned = _pick([m for m in power if m["basis"] in PLANNED_BASES], prefer_demand=True)
     operational = _pick([m for m in power if m["basis"] == "operational"], prefer_demand=True)
+    generation = _pick([m for m in power if m.get("power_scope") == "onsite_generation"],
+                       prefer_demand=False)
     investment = _pick([m for m in campus if m["metric"] == "investment"], prefer_demand=False)
     accelerators = _pick([m for m in campus if m["metric"] == "accelerators"],
                          prefer_demand=False)
@@ -108,6 +115,10 @@ def headline(record: dict[str, Any]) -> dict[str, Any]:
         out[f"{prefix}_basis"] = statement["basis"] if statement else None
         out[f"{prefix}_as_of"] = statement["as_of"] if statement else None
         out[f"{prefix}_source_ids"] = statement["source_ids"] if statement else None
+    out["onsite_generation_mw"] = generation["value"] if generation else None
+    out["onsite_generation_basis"] = generation["basis"] if generation else None
+    out["onsite_generation_as_of"] = generation["as_of"] if generation else None
+    out["onsite_generation_source_ids"] = generation["source_ids"] if generation else None
     out["investment_value"] = investment["value"] if investment else None
     out["investment_value_high"] = investment.get("value_high") if investment else None
     out["investment_currency"] = investment["unit"] if investment else None

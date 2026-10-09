@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "id": "atnorth-varde-den02",
+  "name": "atNorth DEN02 Varde mega site",
+  "aliases": [
+    "DEN02",
+    "Varde mega site",
+    "atNorth Ølgod"
+  ],
+  "summary": "atNorth plans its second Danish campus, DEN02, on a greenfield site of about 171-175 hectares at Krageris north of Ølgod in Varde Municipality, western Denmark. The company lists 500 MW of campus power with an initial 250 MW. Local press in November 2025 put the budget for the data center together with about 40 hectares of greenhouses to be developed by Wa3rm at about DKK 37bn, with a first stage due to start operating at the end of 2027 and a second stage in 2029, while the location still needed approval. Surplus heat is to feed Ølgod's district heating, and in August 2026 atNorth named Selected Group to use it for greenhouses next to the campus.",
+  "location": {
+    "country": "DK",
+    "admin1": "Region of Southern Denmark",
+    "admin2": "Varde Municipality",
+    "locality": "Ølgod",
+    "lat": 55.8058,
+    "lon": 8.6181,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3"
+    ],
+    "note": "Local press places the site at Krageris, north and northeast of Ølgod; Krageris was not found in Nominatim, so the Ølgod village centroid is used."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-11",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "atNorth",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Campus power capacity on atNorth's undated site page, which also cites scalability potential for several hundred additional MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial capacity",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "November 2025 local press described the planned data center at about 250 MW, matching atNorth's initial-capacity figure rather than its 500 MW campus figure."
+    },
+    {
+      "metric": "investment",
+      "value": 37000000000,
+      "qualifier": "approximately",
+      "unit": "DKK",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Local press figure for the total budget, which includes about 40 hectares of greenhouses by Wa3rm, not only the data center."
+    },
+    {
+      "metric": "land_area",
+      "value": 171,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 174,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Site size given in the November 13 local press article."
+    },
+    {
+      "metric": "land_area",
+      "value": 175,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Total project area including about 40 hectares of greenhouses, per the November 20 local press article."
+    },
+    {
+      "metric": "floor_area",
+      "value": 250000,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-20",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Expected data center employees only; the greenhouses are expected to employ 400 more."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-11-20",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported to be in the planning phase, with the proposed location still requiring approval by the authorities."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-13",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Plan reported for Ølgod Tekniske Værker to take the data center's surplus heat into the local district heating network via a pipeline of about 3.5 km; atNorth describes a letter of intent."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-11",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "atNorth named Selected Group to use surplus heat from DEN02 for greenhouses, whose first phase is expected in Q3 2028."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Stage 1 (data center and two greenhouses) expected to start operating at the end of 2027."
+    },
+    {
+      "event": "other",
+      "date": "2029",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Stage 2 expected to be operational in 2029."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "diesel_backup",
+      "description": "Local press reports 60 to 200 chimneys, each 25 metres high, for backup power systems; atNorth says generators are backup only with fuel for at least 48 hours.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.atnorth.com/nordic-data-centers/denmark-data-centers/varde-mega-site/",
+      "title": "Varde mega site (DEN02)",
+      "publisher": "atNorth",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.atnorth.com/in-the-news/atnorths-data-center-to-supply-district-heating/",
+      "title": "atNorth data center to supply district heating",
+      "publisher": "JydskeVestkysten (republished by atNorth)",
+      "published": "2025-11-13",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260608151158/https://www.atnorth.com/in-the-news/atnorths-data-center-to-supply-district-heating/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.atnorth.com/in-the-news/local-firms-prepare-for-major-project-in-varde/",
+      "title": "Local firms prepare for major project in Varde",
+      "publisher": "JydskeVestkysten (republished by atNorth)",
+      "published": "2025-11-20",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260510115327/https://www.atnorth.com/in-the-news/local-firms-prepare-for-major-project-in-varde/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.atnorth.com/news/selected-group-will-utilize-surplus-heat-from-atnorths-den02-data-center/",
+      "title": "Selected Group will utilize surplus heat from atNorth's DEN02 data center",
+      "publisher": "atNorth",
+      "published": "2026-08-11",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-sturgeon-county",
+  "name": "Meta Sturgeon data centre",
+  "aliases": [
+    "Sturgeon Data Centre"
+  ],
+  "summary": "Meta's first data centre in Canada, a 1 GW campus optimized for its AI workloads in Sturgeon County, Alberta, in the Edmonton region, with more than CA$13 billion of planned investment. Meta announced the groundbreaking in July 2026. Meta says it is fully funding new generation and grid infrastructure in Alberta and names Greenlight Limited Partnership, AltaLink, Capital Power and the Alberta Electric System Operator as energy-planning partners. Frost Collective, a joint venture of Clark Builders and PCL Construction, is the general contractor. The project website's page description cites 1.6 GW, which differs from Meta's 1 GW figure.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Sturgeon County",
+    "lat": 53.8422,
+    "lon": -113.5407,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "County point from OpenStreetMap Nominatim; Meta names Sturgeon County but no specific site, and the project website places it in the Edmonton region."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-08",
+  "status_source_ids": [
+    "s1"
+  ],
+  "notes": "Meta's fact sheet PDF (s3) shows no publication date; its embedded file creation date is in early September 2026. The project website (s4) is undated; its 1.6 GW figure carries the date it was read (2026-10-09).",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Frost Collective",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "General contractor; a joint venture of Clark Builders and PCL Construction."
+    },
+    {
+      "name": "Clark Builders",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "PCL Construction",
+      "role": "builder",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "AltaLink",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Named by Meta as an energy-planning partner; supply terms not disclosed."
+    },
+    {
+      "name": "Greenlight Limited Partnership",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Named by Meta as an energy-planning partner; supply terms not disclosed."
+    },
+    {
+      "name": "Capital Power",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Named by Meta as an energy-planning partner (spelled Capitol Power in the newsroom post); supply terms not disclosed."
+    },
+    {
+      "name": "Sturgeon County",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Meta says it pays the county the full cost of water and wastewater service."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1600,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Appears only in the project website's page description metadata, not its visible text, as read on 2026-10-09; conflicts with Meta's 1 GW announcement."
+    },
+    {
+      "metric": "investment",
+      "value": 13000000000,
+      "qualifier": "more_than",
+      "unit": "CAD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-07-08",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 3000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-08",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Peak construction workforce. The fact sheet also says the general contractor will manage more than 3,000 workers at peak, and the project website gives more than 3,000."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Meta's fact sheet gives about 300."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Meta described it as its first data center in Canada."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta announced the groundbreaking on 2026-07-08; the exact start of site works is not given."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned its energy needs with Greenlight Limited Partnership, AltaLink, Capital Power and the Alberta Electric System Operator, is fully funding new generation and grid infrastructure in Alberta, and will match the site's electricity use with clean energy. The generation type is not specified.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/",
+      "title": "Breaking Ground on Meta's First Data Center in Canada",
+      "publisher": "Meta Platforms",
+      "published": "2026-07-08",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261004070212/https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.atmeta.com/2026/07/hello-sturgeon-county/",
+      "title": "Hello, Sturgeon County!",
+      "publisher": "Meta Platforms",
+      "published": "2026-07-08",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Metas-Sturgeon-Data-Center.pdf",
+      "title": "Meta Sturgeon Data Centre fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://sturgeondatacentre.com",
+      "title": "Sturgeon Data Centre",
+      "publisher": "Sturgeon Data Centre project website",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

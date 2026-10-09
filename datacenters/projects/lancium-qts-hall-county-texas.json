@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "id": "lancium-qts-hall-county-texas",
+  "name": "QTS and Lancium Hall County data center campus",
+  "aliases": [
+    "Hall County Clean Campus"
+  ],
+  "summary": "Lancium and QTS announced in July 2026 a data center campus near Turkey in Hall County, Texas, with more than 10 billion US dollars of planned capital investment. Lancium owns the campus and provides electrical and civil infrastructure, planning to bring its own power through battery storage and solar; QTS will design, build and operate the data center buildings. The companies said they would fund all needed energy infrastructure upgrades. Up to 7,000 construction jobs at peak and about 350 permanent jobs were projected. No capacity figure, tenant or construction dates were disclosed.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Hall County",
+    "locality": "Turkey",
+    "lat": 34.3939,
+    "lon": -100.8953,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Town centroid of Turkey from Wikipedia (s2); the announcement says only that the campus is near Turkey in Hall County."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-13",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Lancium",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Owns the campus and provides electrical and civil infrastructure."
+    },
+    {
+      "name": "QTS",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Will design and build the data center buildings."
+    },
+    {
+      "name": "QTS",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 7000,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Estimated at peak construction."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 350,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Includes QTS staff, maintenance, security and tenant roles."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-13",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "solar",
+      "description": "Lancium plans to bring its own power to the site using solar resources.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Lancium plans battery storage as part of its own power supply for the site.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "Lancium and QTS will fund all energy infrastructure improvements, described as modernizing the grid for existing customers.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://lancium.com/2026/07/13/qts-and-lancium-announce-data-center-campus-in-hall-county-texas/",
+      "title": "QTS and Lancium Announce Data Center Campus in Hall County, Texas",
+      "publisher": "Lancium",
+      "published": "2026-07-13",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://en.wikipedia.org/wiki/Turkey,_Texas",
+      "title": "Turkey, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

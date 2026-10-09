@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "id": "google-journey-haskell-county-texas",
+  "name": "Google Journey data center campus (Haskell County)",
+  "aliases": [
+    "Journey campus",
+    "Haskell County Journey Reinvestment Zone"
+  ],
+  "summary": "Data center campus on a 300-acre tract along Red Creek Road, south of US Highway 380 in Haskell County, Texas, owned by Homebound Group LLC. Haskell County labels the Journey abatement as a Google project, and Google named new Haskell County campuses in its November 2025 Texas program. The June 2025 county tax abatement expects Phase 1 capital costs of about $1 billion, allows up to four phases, and requires at least 50 permanent jobs. 2026 state registrations list two buildings at 1362 Red Creek Rd, JNR1A (285,282 sq ft) and JNR2A (210,420 sq ft), each estimated at $400 million, with completion targets in August and October 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Haskell County",
+    "locality": "Haskell",
+    "lat": 33.1564,
+    "lon": -99.5683,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": "OpenStreetMap geometry of Red Creek Road in Haskell County. The abatement exhibit places the 300-acre tract on the west side of Red Creek Road about two miles south of US Highway 380; the registered address is 1362 Red Creek Rd, which could not be resolved to a point."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-25",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Homebound Group LLC",
+      "role": "owner",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Delaware LLC named as project entity in the abatement and as owner in state building registrations."
+    },
+    {
+      "name": "Homebound Group LLC",
+      "role": "developer",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Haskell County's abatement listing labels the Journey agreement as a Google project, and Google announced new data center campuses in Haskell County. Neither source spells out Google's corporate relationship with Homebound Group LLC, and the state registrations list no tenant."
+    },
+    {
+      "name": "Haskell County",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Granted a 10-year, 100% county property tax abatement per phase (excluding the debt-service rate), with payments in lieu of taxes."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "incentive_agreement",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-06-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Anticipated initial capital cost of Phase 1; the agreement also sets a $1 billion minimum capital investment for the abatement."
+    },
+    {
+      "metric": "investment",
+      "value": 400000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Building JNR1A",
+      "as_of": "2026-06-25",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimated cost in the state building registration."
+    },
+    {
+      "metric": "investment",
+      "value": 400000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Building JNR2A",
+      "as_of": "2026-06-25",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Estimated cost in the state building registration."
+    },
+    {
+      "metric": "floor_area",
+      "value": 285282,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "Building JNR1A",
+      "as_of": "2026-06-25",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 210420,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "Building JNR2A",
+      "as_of": "2026-06-25",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-06-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Area of the reinvestment zone tract described in the abatement exhibit."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 50,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-24",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-06-24",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Haskell County designated the Journey reinvestment zone and approved the tax abatement agreement with Homebound Group LLC."
+    },
+    {
+      "event": "announced",
+      "date": "2025-11-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Google announced new Haskell County campuses without naming the sites."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-04-01",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimated start date for building JNR1A in a state registration filed on 2026-06-25, after that date had passed."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-23",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Estimated start date for building JNR2A in a state registration filed on 2026-06-25."
+    },
+    {
+      "event": "other",
+      "date": "2027-08-21",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Registered construction completion date for building JNR1A."
+    },
+    {
+      "event": "other",
+      "date": "2027-10-27",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Registered construction completion date for building JNR2A."
+    }
+  ],
+  "power_sources": [],
+  "notes": "Haskell County also lists Google-labelled abatements for Homebound's Thelma and Quest projects and for Ascendant Site Solutions' Ranger project; those are separate sites and are not part of this record. Google's $40 billion Texas figure is statewide and is not recorded as a campus investment. Status is inferred from the June 2026 state registrations, which list new construction with estimated start dates of April 1 and June 23, 2026; no opened source reports work on site directly.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/inside-google/company-announcements/google-american-innovation-texas/",
+      "title": "Google's investments run deep in the heart of Texas",
+      "publisher": "Google",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.haskellcountytx.gov/upload/page/9220/docs/Homebound%20Group%20LLC.pdf",
+      "title": "Tax Abatement Agreement between Haskell County and Homebound Group LLC (Journey)",
+      "publisher": "Haskell County, Texas",
+      "published": "2025-06",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260105124830/https://www.haskellcountytx.gov/upload/page/9220/docs/Homebound%20Group%20LLC.pdf"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.haskellcountytx.gov/page/haskell.Abatement",
+      "title": "Tax Abatement Information",
+      "publisher": "Haskell County, Texas",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20261004093445/https://www.haskellcountytx.gov/page/haskell.Abatement"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2026023821",
+      "title": "TABS project TABS2026023821: Journey 1A (JNR1A)",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "published": "2026-06-25",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2026023839",
+      "title": "TABS project TABS2026023839: Journey 2A (JNR2A)",
+      "publisher": "Texas Department of Licensing and Regulation",
+      "published": "2026-06-25",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

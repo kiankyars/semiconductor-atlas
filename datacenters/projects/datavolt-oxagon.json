@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "id": "datavolt-oxagon",
+  "name": "DataVolt Oxagon AI data centre campus (NEOM)",
+  "aliases": [
+    "NEOM net-zero AI factory campus",
+    "Oxagon AI data center campus"
+  ],
+  "summary": "Saudi developer DataVolt plans a 1.5 GW AI data centre campus at Oxagon, NEOM's industrial city on the Red Sea coast, on land leased from Oxagon. Under the February 2025 agreement DataVolt committed an initial USD 5 billion to the first phase, which is meant to run on renewable power. In August 2026 DataVolt and HUMAIN broke ground on a jointly developed 100 MW block within a 360 MW first phase, with the first 100 MW expected in service in 2028. Semafor reported in September 2026 that the initial facility would cost about USD 1 billion, and DataVolt's chief executive said the compute would be sold to customers abroad.",
+  "location": {
+    "country": "SA",
+    "admin1": "Tabuk Province",
+    "locality": "Oxagon, NEOM",
+    "lat": 27.5679,
+    "lon": 35.546,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Sources name Oxagon in NEOM but not a parcel. Coordinates are the OpenStreetMap Nominatim result for Oxagon (a construction land-use area in Duba governorate, Tabuk region)."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-07",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "DataVolt",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Develops the campus under its 2025 agreement with NEOM and will also operate it."
+    },
+    {
+      "name": "DataVolt",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "DataVolt",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Committed an initial USD 5 billion for the first phase."
+    },
+    {
+      "name": "HUMAIN",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Co-develops the first 100 MW block with DataVolt and contributes its AI technology stack; advised by Hogan Lovells Cadwalader on the first phase."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-31",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 360,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-08-31",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial HUMAIN-DataVolt block",
+      "as_of": "2026-09-07",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2025-02-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial DataVolt investment announced to fund the first phase, before the first phase was sized at 360 MW."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Initial HUMAIN-DataVolt block",
+      "as_of": "2026-09-07",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Cost of the initial 100 MW facility as reported by Semafor; the article does not attribute the figure to DataVolt."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-02-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "DataVolt and NEOM signed the campus agreement, including a land lease at Oxagon."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-08-31",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Groundbreaking announced at LEAP for the 360 MW first phase, starting with the 100 MW block."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Ready-for-service target for the first 100 MW. Semafor reported in September 2026 that DataVolt plans to finish the first 100 MW facility within 13 months, which would be earlier than 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "The 2025 agreement says the campus is to run on renewable energy and operate at net zero, and the 2026 releases say it will integrate renewable sources; Oxagon is promoted as offering cost-competitive renewables and green hydrogen, but no specific supply has been named.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.neom.com/en-us/newsroom/datavolt-signs-agreement-with-neom",
+      "title": "DataVolt signs agreement with NEOM to design and develop the region's first truly sustainable, net-zero AI factory campus in Oxagon",
+      "publisher": "NEOM",
+      "published": "2025-02-10",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.neom.com/en-us/newsroom/HUMAIN-and-DataVolt-to-develop-AI-data-center-in-NEOM",
+      "title": "HUMAIN partners with DataVolt to jointly develop 100MW of a 360MW AI data center project in NEOM",
+      "publisher": "NEOM",
+      "published": "2026-08-31",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://data-volt.com/media/breaking-news/humain-partners-datavolt-develop-100mw-of-a-360mw-ai-datacenter-in-neom/",
+      "title": "HUMAIN Partners with DataVolt to Jointly Develop 100MW of a 360MW AI Data Center Project in NEOM",
+      "publisher": "DataVolt",
+      "published": "2026-08-31",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.semafor.com/article/09/07/2026/saudi-arabian-data-center-firm-races-to-export-compute-from-neom",
+      "title": "Saudi Arabian data center firm races to export compute from NEOM",
+      "publisher": "Semafor",
+      "published": "2026-09-07",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260907210848/https://www.semafor.com/article/09/07/2026/saudi-arabian-data-center-firm-races-to-export-compute-from-neom"
+    },
+    {
+      "id": "s5",
+      "url": "https://hlc.com/en/news/hogan-lovells-cadwalader-advises-humain-on-ai-data-center-development-in-saudi-arabia",
+      "title": "Hogan Lovells Cadwalader advises HUMAIN on AI data center development in Saudi Arabia",
+      "publisher": "Hogan Lovells Cadwalader",
+      "published": "2026-09-07",
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Customer plans differ by source: DataVolt's release says the campus will serve international and domestic customers, while its chief executive told Semafor all capacity would be sold abroad. The August 2026 company releases disclose no investment figure for the 100 MW block; the only figure is Semafor's own estimate. DataVolt's chief executive also said project financing for the first facility was close to being secured.",
+  "last_reviewed": "2026-10-09"
+}

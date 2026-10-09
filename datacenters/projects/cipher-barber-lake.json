@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "id": "cipher-barber-lake",
+  "name": "Cipher Barber Lake data center",
+  "aliases": [
+    "Barber Lake"
+  ],
+  "summary": "AI hosting data center under construction by Cipher Mining, since renamed Cipher Digital, at its Barber Lake site in Colorado City, Texas. In September 2025 Fluidstack leased 168 MW of critical IT load, supported by up to 244 MW of gross capacity, for an initial 10 years; Google backstopped $1.4 billion of Fluidstack's lease obligations and received warrants in Cipher. In September 2026 the lease was extended to 20 years, backed by an added 10-year commitment from an unnamed AI lab, lifting contracted revenue to more than $9 billion. The tenant had begun partial occupancy by August 2026, and data halls are due from the fourth quarter of 2026 through the first quarter of 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Colorado City",
+    "lat": 32.3961,
+    "lon": -100.8622,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5"
+    ],
+    "note": "Town coordinates from Wikipedia; Cipher places the Barber Lake site in Colorado City but gives no address or county."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-25",
+  "status_source_ids": [
+    "s4",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Cipher Digital (formerly Cipher Mining)",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Announced the lease as Cipher Mining in 2025; the 2026 filings under the same SEC registrant use the name Cipher Digital."
+    },
+    {
+      "name": "Fluidstack",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Lessee under the Barber Lake lease; Google backstops $1.4 billion of its obligations. The September 2026 extension adds a binding 10-year commitment from an unnamed leading AI lab."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 168,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 244,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Maximum gross capacity supporting the leased IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Potential expansion",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cipher cites potential for a 500 MW capacity expansion at the site; not leased or scheduled."
+    },
+    {
+      "metric": "land_area",
+      "value": 587,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Described as surrounding land at the site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09-25",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Fluidstack lease, Google backstop and warrants announced."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Cipher reported that the tenant had begun beneficial use, including partial occupancy and network rack deployment."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-25",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Lease extended from 10 to 20 years with an added commitment from an unnamed AI lab."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s4",
+        "s3"
+      ],
+      "note": "First data hall delivery and rent commencement; the August 2026 update had targeted initial delivery in September 2026."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2027-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Last data halls expected."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+      "title": "Cipher Mining Signs 168 MW, 10-Year AI Hosting Agreement with Fluidstack (Form 8-K Exhibit 99.1)",
+      "publisher": "Cipher Mining",
+      "published": "2025-09-25",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260714071123/https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/q226_earningsxprxdraftxvf.htm",
+      "title": "Cipher Digital Provides Second Quarter 2026 Business Update (Form 8-K Exhibit 99.1)",
+      "publisher": "Cipher Digital",
+      "published": "2026-08-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
+      "title": "Cipher Digital business update presentation (Form 8-K Exhibit 99.2)",
+      "publisher": "Cipher Digital",
+      "published": "2026-08-04",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261006075929/https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000043/barberlakeleaseamendmentpr.htm",
+      "title": "Cipher Digital Expands Barber Lake Lease Term to 20 Years, Increasing Revenue to Over $9 Billion (Form 8-K Exhibit 99.1)",
+      "publisher": "Cipher Digital",
+      "published": "2026-09-25",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Colorado_City,_Texas",
+      "title": "Colorado City, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

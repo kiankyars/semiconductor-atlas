@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.0",
+  "id": "coreweave-kenilworth-new-jersey",
+  "name": "CoreWeave Kenilworth NEST 11 AI data center",
+  "aliases": [
+    "Kenilworth NEST 11",
+    "CoreWeave Kenilworth AI Data Center"
+  ],
+  "summary": "CoreWeave is converting a 1982 pharmaceutical research building (11 NEST) on the former Merck campus, now the Northeast Science and Technology Center on Galloping Hill Road in Kenilworth, New Jersey, into an AI data center. It leased the building in October 2024, bought it with 27 adjacent acres for 322 million US dollars in August 2025, and started construction in September 2025. In November 2025 the state EDA approved a 250 million US dollar tax credit for the roughly 1.76 billion US dollar project, reported at 250 MW. CoreWeave's own site page lists 40 MW of planned load. Opening is targeted for early 2027 amid growing local opposition.",
+  "location": {
+    "country": "US",
+    "admin1": "New Jersey",
+    "admin2": "Union County",
+    "locality": "Kenilworth",
+    "lat": 40.6781,
+    "lon": -74.2881,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s6"
+    ],
+    "note": "Borough centroid from the Wikipedia infobox for Kenilworth (s6), which also gives Union County. Sources place the building at 2000 Galloping Hill Road on the roughly 108-acre NEST campus, but no geocoder was used, so the point is the borough centroid rather than the building."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "CoreWeave",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "CoreWeave",
+      "role": "owner",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Bought the building and 27 adjacent acres in August 2025 after first leasing it from a venture of Onyx Equities and Machine Investment Group."
+    },
+    {
+      "name": "PSE&G",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Said in 2024 it would begin preparing local electrical infrastructure for the facility."
+    },
+    {
+      "name": "New Jersey Economic Development Authority",
+      "role": "government",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Approved a 250 million US dollar tax credit under the Next New Jersey Program - AI on November 12, 2025."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-10-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure the article's headline gives for the data center at the lease announcement; the body says the conversion is part of a planned 1.2 billion US dollar CoreWeave investment without giving a site breakdown."
+    },
+    {
+      "metric": "investment",
+      "value": 1760000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "incentive_agreement",
+      "applies_to": "campus",
+      "as_of": "2025-11-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Project cost cited by the state EDA with the tax credit award; reported as nearly 1.8 billion US dollars."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Figure reported with the EDA award; conflicts with the 40 MW on CoreWeave's own site page."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 40,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Planned load listed on CoreWeave's undated NEST 11 page, accessed on this date; the sources do not explain the gap with the 250 MW figure."
+    },
+    {
+      "metric": "floor_area",
+      "value": 392600,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "campus",
+      "as_of": "2025-11-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Retrofit of the existing 284,500 sq ft 11 NEST building plus 108,100 sq ft of new construction."
+    },
+    {
+      "metric": "floor_area",
+      "value": 280000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-10-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Size of the existing lab and manufacturing building as described at the 2024 lease announcement."
+    },
+    {
+      "metric": "land_area",
+      "value": 27,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-11-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Adjacent acreage bought with the building."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 143,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Jobs committed under the state tax credit; CoreWeave's page says more than 140."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1500,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Union construction and skilled trade jobs cited on CoreWeave's undated site page, accessed on this date."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-10-24",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Long-term lease of the building and conversion plan announced."
+    },
+    {
+      "event": "site_acquired",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Purchase of the building and 27 adjacent acres for 322 million US dollars."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Mid-September 2025, according to the EDA."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-12",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "EDA approved a five-year, 250 million US dollar tax credit, the first award under the Next New Jersey Program - AI."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Operations expected in early 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Utility supply prepared by PSE&G; CoreWeave says it is funding about 150 million US dollars of new substation and electrical infrastructure.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://re-nj.com/ai-startup-coreweave-to-build-1-billion-data-center-at-onyxs-nest-campus-in-kenilworth/",
+      "title": "A.I. cloud startup CoreWeave to build $1 billion data center at Onyx's NEST campus in Kenilworth",
+      "publisher": "Real Estate NJ",
+      "published": "2024-10-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://re-nj.com/coreweave-begins-1-8-billion-data-center-project-in-kenilworth-landing-first-award-under-new-eda-tax-credit-program/",
+      "title": "CoreWeave begins $1.8 billion data center project in Kenilworth, landing first award under new EDA tax credit program",
+      "publisher": "Real Estate NJ",
+      "published": "2025-11-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260828124916/https://re-nj.com/coreweave-begins-1-8-billion-data-center-project-in-kenilworth-landing-first-award-under-new-eda-tax-credit-program/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.njeda.gov/wp-content/uploads/2026/08/NextNJAI-1.pdf",
+      "title": "Next NJ Program - AI approvals table",
+      "publisher": "New Jersey Economic Development Authority",
+      "published": "2026-08",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.coreweave.com/ai-data-center-development/kenilworth-new-jersey",
+      "title": "Kenilworth, NJ AI Data Center",
+      "publisher": "CoreWeave",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://abc7ny.com/post/community-rallies-giant-data-center-being-built-kenilworth-new-jersey/19053270/",
+      "title": "Community rallies against construction of giant data center in small NJ town",
+      "publisher": "ABC7 New York",
+      "published": "2026-05-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Kenilworth,_New_Jersey",
+      "title": "Kenilworth, New Jersey",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "CoreWeave's Kenilworth page is undated; status_as_of is the date it was accessed, when it still described the facility as being built. Capacity figures conflict: trade press reported 250 MW with the state tax credit award, while CoreWeave's page lists a planned 40 MW load for NEST 11."
+}

@@ -1,0 +1,349 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-project-rainier-new-carlisle",
+  "name": "AWS New Carlisle data center campus (Project Rainier)",
+  "aliases": [
+    "Project Rainier",
+    "AWS Indiana Enterprise Center campus"
+  ],
+  "summary": "Amazon Web Services campus in the Indiana Enterprise Center near New Carlisle, St. Joseph County, announced in April 2024 as an $11 billion build over roughly a decade. It is one of the sites of Project Rainier, the Trainium2 cluster Anthropic uses to build and deploy Claude, which AWS activated in October 2025. Amazon's utility filings describe a 2,250 MW load. In July 2026 AWS said it had invested $13.8 billion, with about 18 of a planned 30 or so buildings running and construction continuing.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "admin2": "St. Joseph County",
+    "locality": "New Carlisle",
+    "lat": 41.7006,
+    "lon": -86.4964,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5",
+      "s6"
+    ],
+    "note": "Sources place the campus in the Indiana Enterprise Center near New Carlisle but give no parcel or address; coordinates are the New Carlisle town point from its Wikipedia article (Nominatim was unavailable)."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-07-23",
+  "status_source_ids": [
+    "s6"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Amazon says Anthropic uses Project Rainier, which spans several US data centers including this one, to build and deploy Claude; trade press says the site's chips are dedicated to Anthropic's models."
+    },
+    {
+      "name": "Indiana Michigan Power",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Indiana Economic Development Corporation",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Offered performance-based tax credits, training grants and a 50-year data center sales tax exemption."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-04-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original announced plan, described by the state as its largest capital investment announcement."
+    },
+    {
+      "metric": "investment",
+      "value": 13800000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-23",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Amount an AWS director said had been invested by July 2026, above the original $11 billion goal, while construction continued."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-04-23",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Capacity stated in Amazon filings with the Indiana Utility Regulatory Commission as reported by The Times; the filings also cite a possible 90% load factor. Whether this is IT or total load is not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2200,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Trade press figure for the expected draw of the full site at build-out."
+    },
+    {
+      "metric": "buildings",
+      "value": 30,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-23",
+      "source_ids": [
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 7,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2025-10-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Buildings complete and in use at the October 2025 activation."
+    },
+    {
+      "metric": "buildings",
+      "value": 18,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2026-07-23",
+      "source_ids": [
+        "s6"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Trade press figure; a June 2026 local TV report gives 800 acres. The sources do not explain the difference."
+    },
+    {
+      "metric": "land_area",
+      "value": 800,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-06-03",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Conflicts with the 1,200-acre trade press figure."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-04-25",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-23",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "People hired to date as of July 2026, per the South Bend chamber president."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4000,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-23",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Peak on-site construction workforce cited by the South Bend chamber president."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 9000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Trade press total for construction jobs; not comparable to the peak on-site headcount."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-04-25",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Local TV said in July 2026 that construction had begun about two years earlier; no exact date given."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Trade press reported AWS's activation of Project Rainier on 29 October 2025, with seven buildings at this site complete and in use; Amazon called the cluster fully operational. Earlier partial use is not dated in the sources."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-03",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Campus administration building opened, housing workforce development programs."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Served by Indiana Michigan Power, which expects new data center load to double its demand by 2030; a consumer group says the utility has proposed adding gas-fired generation.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.iedc.in.gov/events/news/details/2024/04/25/gov.-holcomb-announces-amazon-web-services-plans-to-invest-11b-to-create-a-new-data-center-campus-in-northern-indiana",
+      "title": "Gov. Holcomb announces Amazon Web Services plans to invest $11B to create a new data center campus in Northern Indiana",
+      "publisher": "Indiana Economic Development Corporation",
+      "published": "2024-04-25",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20261007105124/https://iedc.in.gov/events/news/details/2024/04/25/gov.-holcomb-announces-amazon-web-services-plans-to-invest-11b-to-create-a-new-data-center-campus-in-northern-indiana"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.govtech.com/artificial-intelligence/indiana-data-center-could-bring-significant-power-use",
+      "title": "Indiana data center could bring significant power use",
+      "publisher": "GovTech (The Times, Munster, via Tribune Content Agency)",
+      "published": "2025-04-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://convergedigest.com/aws-activates-project-rainier-data-center-campus/",
+      "title": "AWS activates Project Rainier data center campus",
+      "publisher": "Converge Digest",
+      "published": "2025-10-29",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster",
+      "title": "AWS activates Project Rainier: One of the world's largest AI compute clusters comes online",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://wsbt.com/news/local/first-look-at-amazons-new-carlisle-data-centers-administration-building-campus-11-billion-dollar-investment-recruit-workers-technical-careers-multiple-buildings",
+      "title": "First look at Amazon's New Carlisle data center's administration building, campus",
+      "publisher": "WSBT",
+      "published": "2026-06-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.wndu.com/2026/07/23/amazon-web-services-investment-st-joseph-county-data-center-campus-surpasses-138-billion/",
+      "title": "Amazon Web Services investment in St. Joseph County data center campus surpasses $13.8 billion",
+      "publisher": "WNDU",
+      "published": "2026-07-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Amazon describes Project Rainier as spread across several US data centers and names St. Joseph County as one of them, so the cluster-wide chip counts are not recorded here."
+}

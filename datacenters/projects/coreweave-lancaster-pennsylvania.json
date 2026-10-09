@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0",
+  "id": "coreweave-lancaster-pennsylvania",
+  "name": "CoreWeave Lancaster AI data center (Lancaster AI Hub)",
+  "aliases": [
+    "Lancaster AI Hub",
+    "Lancaster East data center"
+  ],
+  "summary": "AI data center development in Lancaster, Pennsylvania, on former LSC Communications printing plant sites, co-developed by Chirisa Technology Parks and Machine Investment Group with CoreWeave as tenant. In July 2025 CoreWeave said it intended to commit about 6 billion US dollars to equip an initial 100 MW facility expandable to 300 MW. Phase one reuses the plant at 216 Greenfield Road and was under construction by October 2025, targeting summer 2027. A new-build phase two of about 735,000 sq ft needed city land development approval; a site at 1375 Harrisburg Pike is also planned. A 4 billion US dollar joint venture with Blue Owl funds the campus.",
+  "location": {
+    "country": "US",
+    "admin1": "Pennsylvania",
+    "admin2": "Lancaster County",
+    "locality": "Lancaster",
+    "lat": 40.0397,
+    "lon": -76.3044,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": "City centroid from Wikipedia (s5). Sources give addresses at 216 Greenfield Road and 1375 Harrisburg Pike, but these were not geocoded, so the point is the city centroid rather than either site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-10-19",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Chirisa Technology Parks",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Machine Investment Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Named as co-developer in CoreWeave's announcement."
+    },
+    {
+      "name": "Machine Investment Group",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Joint venture partner in the 4 billion US dollar funding."
+    },
+    {
+      "name": "Blue Owl Capital",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Funds managed by Blue Owl are joint venture partners."
+    },
+    {
+      "name": "CoreWeave",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "CoreWeave",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Described as having invested in the campus."
+    },
+    {
+      "name": "PPL",
+      "role": "utility",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "A new PPL substation and switchyard are proposed next to the phase two building."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "CoreWeave's intent to commit funds to equip the data center, as worded in its newsroom copy of the announcement."
+    },
+    {
+      "metric": "investment",
+      "value": 6000000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "The investor-relations copy of the same July 15, 2025 announcement words the commitment as up to 6 billion US dollars rather than more than 6 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-16",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Joint venture funding from Blue Owl-managed funds and affiliates of Chirisa Technology Parks and Machine Investment Group."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-19",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total cost of the Lancaster AI Hub across the Greenfield Road and Harrisburg Pike sites as reported by LNP."
+    },
+    {
+      "metric": "investment",
+      "value": 2500000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase two",
+      "as_of": "2025-10-19",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Cost to build and equip, including computer equipment."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial capacity",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Potential expansion."
+    },
+    {
+      "metric": "floor_area",
+      "value": 450000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase one (216 Greenfield Road)",
+      "as_of": "2025-08-08",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 735128,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase two",
+      "as_of": "2025-10-19",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Two-story new building."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 600,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 175,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-07-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "About 70 at launch, growing to about 175 over time."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-07-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced at the Pennsylvania Energy and Innovation Summit in Pittsburgh."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Demolition at the Greenfield Road phase one site was underway by early August 2025, and phase one was described as under construction in October 2025; it needed no land development plan because it reuses an existing building footprint."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-16",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "4 billion US dollar joint venture with Blue Owl-managed funds announced."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Phase one completion targeted for summer 2027."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Developer said phase two could be online by mid to late 2027, pending city planning commission land development approval."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply from PPL with a proposed new substation and switchyard; the developer says it is spending 200 million US dollars on grid upgrades.",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Backup generators for power outages, located mainly between the two Greenfield Road buildings; the fuel is not stated.",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://coreweave.com/news/coreweave-announces-multi-billion-dollar-commitment-to-ai-infrastructure-in-pennsylvania",
+      "title": "CoreWeave Announces Multi-Billion Dollar Commitment to AI Infrastructure in Pennsylvania",
+      "publisher": "CoreWeave",
+      "published": "2025-07-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.govtech.com/products/lancaster-pa-hearing-to-revisit-data-center-zoning-decision",
+      "title": "Lancaster, Pa., Hearing to Revisit Data Center Zoning Decision",
+      "publisher": "Government Technology (LNP via Tribune Content Agency)",
+      "published": "2025-08-08",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.hklaw.com/en/news/pressreleases/2025/09/hk-advises-chirisa-technology-parks-in-4-billion-joint-venture",
+      "title": "Holland & Knight Advises Chirisa Technology Parks in $4 Billion Joint Venture Partnership for Lancaster Campus",
+      "publisher": "Holland & Knight",
+      "published": "2025-09-16",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.witf.org/2025/10/19/data-centers-second-phase-expected-to-cost-up-to-2-5-billion-in-lancaster-county/",
+      "title": "Data center's second phase expected to cost up to $2.5 billion in Lancaster County",
+      "publisher": "WITF (LNP | LancasterOnline)",
+      "published": "2025-10-19",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260911180724/https://www.witf.org/2025/10/19/data-centers-second-phase-expected-to-cost-up-to-2-5-billion-in-lancaster-county/"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Lancaster,_Pennsylvania",
+      "title": "Lancaster, Pennsylvania",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s6",
+      "url": "https://investors.coreweave.com/news/news-details/2025/CoreWeave-Announces-Multi-Billion-Dollar-Commitment-to-AI-Infrastructure-in-Pennsylvania/default.aspx",
+      "title": "CoreWeave Announces Multi-Billion Dollar Commitment to AI Infrastructure in Pennsylvania",
+      "publisher": "CoreWeave",
+      "published": "2025-07-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "CoreWeave's two published copies of its July 15, 2025 announcement differ: the newsroom copy says more than 6 billion US dollars and the investor-relations copy says up to 6 billion; both are recorded. LNP puts the whole Lancaster AI Hub at 10 billion US dollars, a figure that may include equipment and both sites."
+}

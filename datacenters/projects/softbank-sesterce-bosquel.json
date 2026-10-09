@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "id": "softbank-sesterce-bosquel",
+  "name": "SoftBank-Sesterce Bosquel AI data center",
+  "aliases": [
+    "Bosquel AI campus"
+  ],
+  "summary": "A joint venture majority-owned by SoftBank Group and formed with Sesterce was selected to develop and operate a 1 GW AI data center campus in Bosquel, Somme, in the Hauts-de-France region. Announced on 2026-05-30 as part of the 2026 Choose France summit, it is one of three named Hauts-de-France sites in SoftBank's 5 GW France plan. No investment figure, construction schedule or permit status has been published for the site; SoftBank cites about 400 long-term jobs once it operates.",
+  "location": {
+    "country": "FR",
+    "admin1": "Hauts-de-France",
+    "admin2": "Somme",
+    "locality": "Bosquel",
+    "lat": 49.7391,
+    "lon": 2.2179,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Nominatim centroid of the commune of Bosquel (Somme); sources name the commune only."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-01",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "SoftBank Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Majority owner of the joint venture."
+    },
+    {
+      "name": "Sesterce",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Joint venture partner; the venture as a whole was selected to develop and operate the campus."
+    },
+    {
+      "name": "Communauté de communes Somme Sud-Ouest",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named as a partner; the Somme prefect refers to a call for expressions of interest launched by the CC2SO, the community of communes' abbreviation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-31",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 400,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-31",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-05-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Announced in Paris alongside SoftBank's 5 GW France plan at Choose France 2026."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://group.softbank/en/news/press/20260531",
+      "title": "SoftBank Group and Sesterce to Develop 1 GW AI Data Center in Bosquel, France",
+      "publisher": "SoftBank Group",
+      "published": "2026-05-31",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sesterce.com/newsroom/softbank-group-sesterce-1gw-ai-data-center-bosquel-france",
+      "title": "SoftBank Group and Sesterce to Develop 1 GW AI Data Center in Bosquel, France",
+      "publisher": "Sesterce",
+      "published": "2026-06-01",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260719180330/https://www.sesterce.com/newsroom/softbank-group-sesterce-1gw-ai-data-center-bosquel-france"
+    },
+    {
+      "id": "s3",
+      "url": "https://group.softbank/en/news/press/20260531_0",
+      "title": "SoftBank Group to Build 5 GW of AI Data Center Capacity in France",
+      "publisher": "SoftBank Group",
+      "published": "2026-05-31",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "SoftBank's France plan gives an initial EUR 45 billion for 3.1 GW across Dunkirk (Loon-Plage), Bosquel and Bouchain by 2031, without a per-site split, so no investment is attributed to Bosquel. The campus design is by architecture firm Patriarche.",
+  "last_reviewed": "2026-10-09"
+}

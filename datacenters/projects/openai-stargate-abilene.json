@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0",
+  "id": "openai-stargate-abilene",
+  "name": "Stargate Abilene (Crusoe campus on Lancium land)",
+  "aliases": [
+    "Stargate Abilene",
+    "Lancium Clean Campus",
+    "Crusoe Abilene"
+  ],
+  "summary": "Crusoe-developed eight-building AI campus in Abilene, Texas, planned at about 1.2 GW and leased to Oracle, which runs it for OpenAI as the flagship Stargate site. Construction began in mid-2024; the first buildings came online in September 2025 and the last building was topped out in November 2025. The build is funded through a Crusoe, Blue Owl and Primary Digital joint venture on Lancium-owned land. A potential 600 MW expansion nearby was floated in 2025, but reports in March 2026 said it had been dropped, which Oracle disputed. In late September 2026 trade press reported six buildings delivered to OpenAI, and analyst Epoch AI projected all eight running by November 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Abilene",
+    "lat": 32.4465,
+    "lon": -99.7476,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s7"
+    ],
+    "note": "Abilene city centroid from an OpenStreetMap Nominatim lookup. Cited sources name the city but give no street address or parcel, so the campus itself is not pinpointed."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s7",
+    "s8"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference"
+  ],
+  "parties": [
+    {
+      "name": "Crusoe",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s9"
+      ],
+      "note": "Crusoe develops, builds and operates the campus and leases it to Oracle for OpenAI."
+    },
+    {
+      "name": "Blue Owl Capital",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Co-sponsor of the $15 billion joint venture, investing through funds managed by its Real Assets platform."
+    },
+    {
+      "name": "Primary Digital Infrastructure",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Co-sponsor of the joint venture funding construction."
+    },
+    {
+      "name": "Lancium",
+      "role": "owner",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Crusoe describes the Abilene campus land as Lancium-owned."
+    },
+    {
+      "name": "Oracle",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": "Leases the buildings and runs Oracle Cloud Infrastructure capacity there for OpenAI. Analyst Epoch AI, not a company disclosure, lists Oracle as owner of the AI chips."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": "End user of the compute, served through Oracle Cloud Infrastructure."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-05-21",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Full eight-building campus. Sources do not say whether this is IT or facility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (buildings 1-2)",
+      "as_of": "2025-11-18",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The first two buildings, reported operational since September 2025, provide more than 200 MW of IT capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 421,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI's estimate of operating IT power with four buildings running, built from satellite imagery, filings and cooling models. Epoch projects about 843 MW of IT power by Q4 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 360,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-04",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Analyst report, not a company disclosure: Cleanview gives this initial combined gas turbine capacity from permit documents and estimates from satellite imagery that the plant was finished in January 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Potential expansion near Abilene (reported dropped in 2026)",
+      "as_of": "2025-09-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Announced in September 2025 as a potential expansion near the flagship site. In March 2026 Industrial Info relayed a Bloomberg report that the expansion was off; OpenAI said it put the capacity elsewhere and Oracle called the reports false."
+    },
+    {
+      "metric": "investment",
+      "value": 15000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-05-21",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Size of the Crusoe, Blue Owl and Primary Digital joint venture funding the campus."
+    },
+    {
+      "metric": "buildings",
+      "value": 8,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-05-21",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 980000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "operational",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (buildings 1-2)",
+      "as_of": "2025-11-18",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 4000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-18",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 7000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-18",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Workers Crusoe said come to Abilene every day to build the campus, cited at the final topping out. In May 2025 the joint venture reported about 3,000 daily workers, expected to approach 5,000."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2024-06",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s9"
+      ],
+      "note": "Crusoe dates the start of phase 1 to June 2024; one trade article gives July 2024."
+    },
+    {
+      "event": "other",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction of phase 2 (six more buildings) began."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s6",
+        "s7"
+      ],
+      "note": "Crusoe announced the first phase live in September 2025. Analyst Epoch AI judges only building 1 fully operational then and building 2 by December 2025."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-09-23",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "A potential 600 MW expansion near Abilene was announced alongside five new Stargate sites."
+    },
+    {
+      "event": "other",
+      "date": "2025-11",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Eighth and final building topped out."
+    },
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Bloomberg reported, as relayed by Industrial Info, that plans to expand the campus were dropped; Oracle called the reports false. Analyst Epoch AI also describes OpenAI as having reversed a plan to expand the site."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Crusoe targeted energizing phase 2 by mid-2026. Analyst Epoch AI, not a company source, projects buildings 5 to 8 operational around November 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Connected to the ERCOT grid, per analyst Cleanview. Analyst Epoch AI reports a 200 MW substation serving the first buildings and a larger 1 GW substation that looked complete in July 2026 imagery.",
+      "source_ids": [
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "On-site gas turbines, including GE Vernova LM2500XPRESS and Solar Titan 350 units, per permit records summarized by analyst Cleanview; analyst Epoch AI saw the on-site plant looking complete by March 2026.",
+      "source_ids": [
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "Crusoe cited the region's low-cost wind power as a major factor in choosing the site; analyst Epoch AI notes the grid supply includes local wind.",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-blue-owl-capital-and-primary-digital-infrastructure-enter-joint-venture",
+      "title": "Crusoe, Blue Owl Capital and Primary Digital Infrastructure Enter Second Phase of $15 Billion Joint Venture",
+      "publisher": "Crusoe",
+      "published": "2025-05-21",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://group.softbank/en/news/press/20250924",
+      "title": "OpenAI, Oracle, and SoftBank expand Stargate with five new AI data center sites",
+      "publisher": "SoftBank Group Corp.",
+      "published": "2025-09-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://w.media/crusoe-tops-off-final-ai-data-center-in-abilene-texas/",
+      "title": "Crusoe tops off final AI data center in Abilene, Texas",
+      "publisher": "W.Media",
+      "published": "2025-11-18",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.industrialinfo.com/iirenergy/industry-news/article/flagship-stargate-data-center-campus-expansion-in-texas-is-questioned--354568",
+      "title": "Flagship Stargate Data Center Campus Expansion in Texas is Questioned",
+      "publisher": "Industrial Info Resources",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand",
+      "title": "OpenAI Stargate: where the US sites stand",
+      "publisher": "Epoch AI",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "analyst",
+      "archived_url": "https://web.archive.org/web/20260517184326/https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    },
+    {
+      "id": "s6",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/stargate-abilene",
+      "title": "Behind-the-meter data centers: Stargate Abilene",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s7",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-abilene",
+      "title": "OpenAI Stargate Abilene (AI data center directory)",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s8",
+      "url": "https://thetechcapital.com/abilene-stargate-data-centre-update/",
+      "title": "An Abilene update: What's happening at the first Stargate data centre?",
+      "publisher": "The Tech Capital",
+      "published": "2026-09-29",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261006030644/https://thetechcapital.com/abilene-stargate-data-centre-update/"
+    },
+    {
+      "id": "s9",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-and-lancium-announce-1-gigawatt-ai-data-center-campus-in-childress-texas",
+      "title": "Crusoe and Lancium Announce 1.0 Gigawatt AI Data Center Campus in Childress, Texas",
+      "publisher": "Crusoe",
+      "published": "2026-07-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Estimates of how much of the campus is live differ: an Oracle post in April 2026 said 200 MW was operating, analyst Epoch AI estimated about 0.3 GW of facility power then and about 421 MW of IT load by mid-2026, and The Tech Capital reported six buildings delivered to OpenAI in late September 2026. Epoch figures are analyst estimates, not company disclosures. Crusoe is separately building a 900 MW data center on adjacent Lancium-owned land, which Epoch links to Microsoft; it is a different project.",
+  "last_reviewed": "2026-10-09"
+}

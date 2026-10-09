@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "id": "xai-colossus-memphis",
+  "name": "xAI Colossus 1 (Memphis)",
+  "aliases": [
+    "Colossus",
+    "Colossus 1",
+    "Gigafactory of Compute"
+  ],
+  "summary": "AI supercomputer that xAI built in 2024 inside the former Electrolux manufacturing plant on Paul R. Lowry Road in southwest Memphis. Grid power comes from MLGW and TVA through an existing MLGW substation and a new one paid for by xAI, supplemented by permitted on-site gas turbines and battery storage. Anthropic now describes Colossus 1 as SpaceX's data center, and in May 2026 it agreed to use all of the site's compute capacity, stated as more than 300 MW and over 220,000 NVIDIA GPUs.",
+  "location": {
+    "country": "US",
+    "admin1": "Tennessee",
+    "admin2": "Shelby County",
+    "locality": "Memphis",
+    "lat": 35.0599,
+    "lon": -90.1563,
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s7"
+    ],
+    "note": "Center of the OpenStreetMap building tagged 'xAI Colossus' at 3231 Paul R. Lowery Road, taken from this project's OpenStreetMap data center layer (no geocoder call). The address comes from Cleanview and from Memphis Business Journal reporting cited by WMC; MLGW places the facility in the former Electrolux plant in Frank C. Pidgeon Industrial Park. Shelby County is the jurisdiction of the health department that permitted the site's turbines."
+  },
+  "status": "operational",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference"
+  ],
+  "parties": [
+    {
+      "name": "xAI",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "SpaceX",
+      "role": "owner",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Anthropic's May 2026 announcement refers to Colossus 1 as SpaceX's data center, and Epoch AI (analyst) lists the owner as SpaceXAI; no company filing reviewed states ownership."
+    },
+    {
+      "name": "Anthropic",
+      "role": "tenant",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Agreed in May 2026 to use all of the compute capacity at Colossus 1."
+    },
+    {
+      "name": "Memphis Light, Gas and Water",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "Tennessee Valley Authority",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TVA's board approved the first 150 MW of grid service; MLGW said a decision on a second 150 MW was pending in May 2025."
+    },
+    {
+      "name": "Shelby County Health Department",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Approved the July 2025 air permit for 15 permanent on-site gas turbines."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-05-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Delivered through an existing MLGW substation (8 MW) and a new substation funded by xAI (142 MW)."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-05-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total of two successive 150 MW requests; MLGW expected to supply the second 150 MW by December 2025 if TVA approved it."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-06",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Capacity covered by Anthropic's agreement; the announcement does not say whether this is IT load or total power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 340,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-06-15",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Epoch AI analyst estimate, not a company disclosure, based on satellite imagery and public information. Epoch shows this level from July 22, 2025 through its latest observation on June 15, 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 198,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-05",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Cleanview count of 12 Solar SMT-130 gas turbines of about 16.5 MW each in May 2026 imagery; Cleanview says temporary turbines are being removed. This is an analyst estimate, not a company disclosure."
+    },
+    {
+      "metric": "accelerators",
+      "value": 220000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "installed",
+      "applies_to": "campus",
+      "as_of": "2026-05-06",
+      "accelerator_model": "NVIDIA GPUs (models not specified)",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Count from Anthropic. Epoch AI estimates about 230,000 chips: 150,000 H100, 50,000 H200 and 30,000 B200 in GB200 configuration (analyst estimate, not a company disclosure)."
+    },
+    {
+      "metric": "investment",
+      "value": 12900000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Epoch AI capital cost estimate (analyst estimate, not a company disclosure); the page does not say what the figure includes."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2024-04",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Epoch AI dates the start of work at the former Electrolux building, when a road was added on site, to April 24, 2024 from satellite imagery (analyst estimate, not a company disclosure)."
+    },
+    {
+      "event": "announced",
+      "date": "2024-06-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The Greater Memphis Chamber announced the project without naming the site."
+    },
+    {
+      "event": "first_operational",
+      "date": "2024-08",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Epoch AI reports the first training workload, on about 25,000 H100 GPUs, on August 11, 2024 (analyst estimate, not a company disclosure)."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2025-07",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Shelby County Health Department approved an air permit for 15 permanent natural gas turbines; WMC reported it on July 2, 2025 without an exact approval date, and Cleanview confirms the site was permitted for 15 turbines."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-06",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Anthropic announced an agreement to use all of the compute capacity at Colossus 1."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "MLGW and TVA grid service of 150 MW in May 2025 via an existing and a new xAI-funded substation, with a second 150 MW requested; xAI agreed to curtail grid use during peak demand.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "Shelby County permitted 15 permanent gas turbines in July 2025; Cleanview estimated about 198 MW from 12 turbines in May 2026 imagery (analyst estimate).",
+      "source_ids": [
+        "s3",
+        "s7"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Cleanview counts roughly 119 Tesla Megapack units, about 120 MW, from satellite imagery (analyst estimate).",
+      "source_ids": [
+        "s7"
+      ]
+    }
+  ],
+  "related_ids": [
+    "xai-colossus-2-memphis",
+    "xai-macrohardrr-southaven"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.actionnews5.com/2024/06/05/elon-musk-build-multi-billion-dollar-ai-supercomputer-project-memphis/",
+      "title": "Elon Musk's xAI to build multi-billion-dollar supercomputer project in Memphis",
+      "publisher": "WMC Action News 5",
+      "published": "2024-06-05",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260708100208/https://www.actionnews5.com/2024/06/05/elon-musk-build-multi-billion-dollar-ai-supercomputer-project-memphis/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
+      "title": "MLGW update regarding utility support for xAI",
+      "publisher": "Memphis Light, Gas and Water",
+      "published": "2025-05-05",
+      "accessed": "2026-10-09",
+      "type": "utility"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.actionnews5.com/2025/07/02/health-dept-grants-permit-xai-turbines/",
+      "title": "Health dept. grants permit for xAI turbines",
+      "publisher": "WMC Action News 5",
+      "published": "2025-07-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.actionnews5.com/2026/01/07/xai-raises-billions-dollars-expansion-amid-rapid-growth-memphis-metro",
+      "title": "xAI raises billions of dollars for expansion amid rapid growth in Memphis metro",
+      "publisher": "WMC Action News 5",
+      "published": "2026-01-07",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260228134904/https://www.actionnews5.com/2026/01/07/xai-raises-billions-dollars-expansion-amid-rapid-growth-memphis-metro/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "publisher": "Anthropic",
+      "published": "2026-05-06",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261003122220/https://www.anthropic.com/news/higher-limits-spacex"
+    },
+    {
+      "id": "s6",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/colossus-1",
+      "title": "Colossus 1 | AI data centers",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s7",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/colossus",
+      "title": "Colossus 1 & 2 | Behind-the-Meter Data Centers",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

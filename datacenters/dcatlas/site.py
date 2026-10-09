@@ -495,6 +495,8 @@ def _table_row(r: dict[str, Any], rel: str) -> str:
                        r["planned_power_qualifier"])
         if scope:
             power += f'<span class="scope">{e(scope)}</span>'
+    if r["onsite_generation_mw"] is not None:
+        power += f'<span class="sub">{e(fmt_mw(r["onsite_generation_mw"]))} on-site gen.</span>'
     money = fmt_money(r["investment_value"], r["investment_value_high"],
                       r["investment_currency"], r["investment_qualifier"])
     lead = []
@@ -711,6 +713,12 @@ def _project_page(record: dict[str, Any], row: dict[str, Any], ctx: dict) -> str
            e(f"{SCOPE_LABELS.get(derived['operational_power_scope'], '')} · "
              f"{fmt_date(derived['operational_power_as_of'])} ")
            + _cites(derived["operational_power_source_ids"]) if operational else ""),
+        kv("On-site generation", e(fmt_mw(derived["onsite_generation_mw"]))
+           if derived["onsite_generation_mw"] is not None else "",
+           e(f"{(derived['onsite_generation_basis'] or '').replace('_', ' ')} · "
+             f"{fmt_date(derived['onsite_generation_as_of'])} ")
+           + _cites(derived["onsite_generation_source_ids"])
+           if derived["onsite_generation_mw"] is not None else ""),
         kv("Investment", money, e(f"{fmt_date(derived['investment_as_of'])} ")
            + _cites(derived["investment_source_ids"]) if money else ""),
         kv("Accelerators", e(f"{fmt_number(derived['accelerators'])}")

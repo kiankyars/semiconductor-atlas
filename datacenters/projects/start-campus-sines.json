@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0",
+  "id": "start-campus-sines",
+  "name": "Start Campus SINES data center campus",
+  "aliases": [
+    "SINES DC",
+    "SINES Data Campus",
+    "Sines 4.0"
+  ],
+  "summary": "Start Campus is building a six-building data center campus in Sines, Portugal, on a site with a decommissioned power plant, using seawater cooling. Grid power secured from REN gives the campus about 1.2 GW of IT capacity. The first building (SIN01) is in service and full; the much larger second building (SIN02) is under construction and is to be fully occupied by Nscale, which is deploying Nvidia systems for Microsoft. The full campus is targeted around 2030-2031.",
+  "location": {
+    "country": "PT",
+    "admin1": "Setúbal District",
+    "admin2": "Sines",
+    "locality": "Sines",
+    "lat": 37.9349,
+    "lon": -8.8132,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Nominatim (OpenStreetMap) geocode of the industrial land-use area tagged Start Campus in Sines; sources name the campus in Sines but give no street address."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-08-03",
+  "status_source_ids": [
+    "s1",
+    "s5"
+  ],
+  "workloads": [
+    "colocation",
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Start Campus",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Start Campus",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "Davidson Kempner",
+      "role": "owner",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Reported as majority owner of the campus; it and Pioneer Point fund the project through private equity vehicles."
+    },
+    {
+      "name": "Pioneer Point Partners",
+      "role": "investor",
+      "source_ids": [
+        "s3",
+        "s6"
+      ]
+    },
+    {
+      "name": "Nscale",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s7"
+      ],
+      "note": "Direct customer and build partner for SIN02; also deployed GPUs for Microsoft in SIN01."
+    },
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "Rents capacity through Nscale; reported to occupy part of SIN01 and all of SIN02."
+    },
+    {
+      "name": "NVIDIA",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "name": "REN",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Portuguese transmission operator that awarded the additional grid power."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2024-08-15",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Secured IT capacity after REN raised the grid allocation from an initial 495 MW (per the company site)."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 37.5,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "SIN01",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Earlier reports gave 14 MW expanding to 26 MW (2024) and 31 MW (January 2026) for this building."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 180,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "SIN02",
+      "as_of": "2026-01-13",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Lusa reported about 180 MW of IT load for the second building before its construction began."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 180,
+      "value_high": 240,
+      "qualifier": "range",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "SIN02",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The article body gives 180-240 MW of IT capacity; its introduction says 180-200 MW and the first suite for Nscale is described as 200 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "SIN02",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company site lists SIN02 as the next planned facility at 200 MW; the page is undated, so as_of is the access date."
+    },
+    {
+      "metric": "investment",
+      "value": 8500000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-01-13",
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "Total for the six-building campus."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-11-11",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Microsoft's announced AI infrastructure spend tied to the Sines campus; separate from and not additive with the developer's figure."
+    },
+    {
+      "metric": "investment",
+      "value": 465000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "SIN02",
+      "as_of": "2026-05-05",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Amount the article says is earmarked for SIN02 development, alongside about EUR 230 million that Nscale plans for shared infrastructure; the article does not clearly name who spends the EUR 465 million."
+    },
+    {
+      "metric": "accelerators",
+      "value": 12600,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "installed",
+      "applies_to": "phase",
+      "phase_label": "SIN01",
+      "accelerator_model": "NVIDIA GB300 (Blackwell Ultra)",
+      "as_of": "2026-05-05",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s7"
+      ]
+    },
+    {
+      "metric": "accelerators",
+      "value": 66000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "SIN02",
+      "accelerator_model": "NVIDIA Vera Rubin",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s7"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-02",
+      "source_ids": [
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1500,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "SIN02",
+      "as_of": "2026-01-13",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Typical workforce; peaks of about 2,500 expected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-08-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "REN awarded additional grid power, lifting secured IT capacity to 1.2 GW."
+    },
+    {
+      "event": "first_operational",
+      "date": "2024-Q4",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "SIN01 reported operational at the end of 2024; the company lists its inauguration on 2025-04-04."
+    },
+    {
+      "event": "other",
+      "date": "2025-04-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Official inauguration of SIN01."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-14",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Microsoft agreed to rent Nscale GPU capacity at the campus."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-Q1",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Start of SIN02 construction; preparatory works had run since late 2025."
+    },
+    {
+      "event": "other",
+      "date": "2027-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Delivery of a first 200 MW SIN02 suite to Nscale; Lusa reported first SIN02 clients expected by mid-2027."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "2024 target for all buildings; a 2026 report gives 2031 for project completion."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2031",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid connection secured from REN; the second-building works include a high-voltage substation and a 400/150 kV substation north of the campus. The company says the site uses 100% renewable energy and has an agreement with EDP on new renewable capacity.",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s6"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.startcampus.pt/",
+      "title": "SINES Data Campus",
+      "publisher": "Start Campus",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenterfrontier.com/colocation/article/55133589/fresh-start-sines-dc-eyes-sustainable-12-gw-it-capacity-as-europes-largest-colocation-campus",
+      "title": "Fresh Start: SINES DC Eyes Sustainable 1.2 GW IT Capacity as Europe's Largest Colocation Campus",
+      "publisher": "Data Center Frontier",
+      "published": "2024-08-15",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.datacenterknowledge.com/deals/microsoft-to-rent-nscale-ai-data-center-capacity-in-portugal",
+      "title": "Microsoft to Rent Nscale AI Data Center Capacity in Portugal",
+      "publisher": "Data Center Knowledge (Bloomberg)",
+      "published": "2025-10-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20251016142807/https://www.datacenterknowledge.com/deals/microsoft-to-rent-nscale-ai-data-center-capacity-in-portugal"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.essential-business.pt/2026/03/02/start-campus-in-e2bn-deal-to-build-microsoft-centre-in-sines/",
+      "title": "Start Campus in €2Bn deal to build Microsoft centre in Sines",
+      "publisher": "Essential Business",
+      "published": "2026-03-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://capacityglobal.com/news/data-centre-of-the-month-start-campus-sines-portugal-interview/",
+      "title": "Data centre of the month: Start Campus SINES development in Portugal",
+      "publisher": "Capacity",
+      "published": "2026-08-03",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://executivedigest.sapo.pt/?p=704935",
+      "title": "Start Campus avança em fevereiro com segundo edifício do centro de dados de Sines",
+      "publisher": "Executive Digest (Lusa)",
+      "published": "2026-01-13",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://portalerp.com/pt/noticia/start-campus-reforca-posicao-de-portugal-na-infraestrutura-europeia-de-ia-com-expansao-em-sines",
+      "title": "Start Campus reforça posição de Portugal na infraestrutura europeia de IA com expansão em Sines",
+      "publisher": "Portal ERP",
+      "published": "2026-05-05",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "notes": "SIN01 capacity figures differ across sources (14-26 MW in 2024, 31 MW in January 2026, 37.5 MW in 2026). Microsoft's USD 10 billion pledge and the developer's EUR 8.5 billion estimate describe different spenders and should not be summed.",
+  "last_reviewed": "2026-10-09"
+}

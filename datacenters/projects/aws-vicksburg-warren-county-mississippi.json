@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-vicksburg-warren-county-mississippi",
+  "name": "AWS Vicksburg data center campus",
+  "aliases": [
+    "AWS Warren County data center campus"
+  ],
+  "summary": "Amazon announced in November 2025 that it would spend at least $3 billion on a new data center campus in Vicksburg, Warren County, with at least 200 full-time jobs. Officials said construction would start in 2026 and the local mayor expected a five-to-seven-year build-out. Amazon said the campus will support AI and cloud computing. Entergy Mississippi agreed to meet its long-term power needs and is building a gas plant at the former Baxter Wilson site to serve the campus and other industrial projects. The April 2026 statewide update still listed it as planned.",
+  "location": {
+    "country": "US",
+    "admin1": "Mississippi",
+    "admin2": "Warren County",
+    "locality": "Vicksburg",
+    "lat": 32.3525,
+    "lon": -90.8775,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "No site, parcel or road has been published; coordinates are the Vicksburg city point from its Wikipedia article (Nominatim was unavailable)."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-09",
+  "status_source_ids": [
+    "s1",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Entergy Mississippi",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Warren County",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The county is contributing to the project; state incentives passed for the Madison County campuses also apply."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-11-20",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-20",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Officials also project more than 300 additional positions in the wider county."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target year given at announcement; no source opened confirms that work has begun."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Entergy Mississippi committed to the campus's long-term power needs and is building a roughly $1.2 billion gas-fired station at the retired Baxter Wilson plant site to serve this and other industrial load.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://governorreeves.ms.gov/governor-tate-reeves-announces-amazon-plans-to-invest-3-billion-in-vicksburg/",
+      "title": "Governor Tate Reeves announces Amazon plans to invest $3 billion in Vicksburg",
+      "publisher": "Office of Governor Tate Reeves",
+      "published": "2025-11-20",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260909125457/https://governorreeves.ms.gov/governor-tate-reeves-announces-amazon-plans-to-invest-3-billion-in-vicksburg/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.mpbonline.org/blogs/news/amazon-web-services-to-build-3-billion-data-center-in-warren-county-expanding-tech-footprint-in-mi/",
+      "title": "Amazon to build $3 billion data center in Warren County, expanding tech footprint in Mississippi",
+      "publisher": "Mississippi Public Broadcasting",
+      "published": "2025-11-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260831160715/https://www.mpbonline.org/blogs/news/amazon-web-services-to-build-3-billion-data-center-in-warren-county-expanding-tech-footprint-in-mi/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.mississippifreepress.org/amazon-to-build-3b-ai-data-center-in-vicksburg-as-gov-reeves-proclaims-arrival-of-the-digital-delta/",
+      "title": "Amazon to Build $3B AI Data Center in Vicksburg, as Gov. Reeves Proclaims Arrival of the 'Digital Delta'",
+      "publisher": "Mississippi Free Press",
+      "published": "2025-11-20",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260928223038/https://www.mississippifreepress.org/amazon-to-build-3b-ai-data-center-in-vicksburg-as-gov-reeves-proclaims-arrival-of-the-digital-delta/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aboutamazon.com/md/news/company-news/amazon-3-billion-mississippi-data-center-investment",
+      "title": "Amazon plans to invest at least $3 billion in Warren County, Mississippi, for next-generation data center campus",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://governorreeves.ms.gov/amazon-continues-mississippi-expansion-announcing-plans-to-invest-a-total-of-25-billion-across-the-magnolia-state/",
+      "title": "Amazon continues Mississippi expansion, announcing plans to invest a total of $25 billion across the Magnolia State",
+      "publisher": "Office of Governor Tate Reeves",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "government"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "The Vicksburg mayor described a five-to-seven-year build-out at the November 2025 announcement (Mississippi Public Broadcasting). The governor's release gives $3 billion while Amazon says at least $3 billion."
+}

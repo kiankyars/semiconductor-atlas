@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "id": "xai-macrohardrr-southaven",
+  "name": "xAI MACROHARDRR data center (Southaven)",
+  "aliases": [
+    "MACROHARDRR",
+    "Macroharder",
+    "Macro-harder"
+  ],
+  "summary": "Third xAI data center in the Memphis area, made by retrofitting a warehouse of roughly 800,000 square feet that xAI bought in late 2025 in Southaven, Mississippi, just south of Colossus 2 across the state line. Mississippi's governor announced it in January 2026 as an investment of more than $20 billion, the largest economic development project in state history, supported by a state sales and use tax exemption and local fee-in-lieu agreements. Musk said it would lift Colossus training compute to about 2 GW, and a July 2026 report relaying his comments said it holds 220,000 NVIDIA GB300 GPUs.",
+  "location": {
+    "country": "US",
+    "admin1": "Mississippi",
+    "admin2": "DeSoto County",
+    "locality": "Southaven",
+    "lat": 34.9935,
+    "lon": -90.0342,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Center of the OpenStreetMap building tagged 'xAI Macrohardrr' on Stateline Road West, taken from this project's OpenStreetMap data center layer (no geocoder call), about 0.5 km south of the Colossus 2 building. This matches Cleanview's address of 2400 Stateline Road, Southaven, and WREG's description of the warehouse as just south of Colossus 2."
+  },
+  "status": "operational",
+  "status_as_of": "2026-07-31",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [
+    "ai_training"
+  ],
+  "parties": [
+    {
+      "name": "xAI",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Mississippi Development Authority",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the project for the state Data Center Incentive sales and use tax exemption."
+    },
+    {
+      "name": "City of Southaven",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Supports the project through a fee-in-lieu agreement."
+    },
+    {
+      "name": "DeSoto County",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Supports the project through a fee-in-lieu agreement."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-01-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 810000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "under_construction",
+      "applies_to": "campus",
+      "as_of": "2026-01-08",
+      "source_ids": [
+        "s3",
+        "s5",
+        "s2"
+      ],
+      "note": "Size of the warehouse being retrofitted; Converge Digest and Cleanview give about 810,000 square feet and WREG gives 800,000."
+    },
+    {
+      "metric": "accelerators",
+      "value": 220000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "installed",
+      "applies_to": "campus",
+      "as_of": "2026-07-31",
+      "accelerator_model": "NVIDIA GB300",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Elon Musk's figure as relayed by WMC in July 2026; not confirmed in a company filing. No Colossus 2 figure is repeated here."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2025-12",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "Musk disclosed the purchase of an 800,000-square-foot Southaven warehouse on December 30, 2025; the governor's release says xAI bought an existing building for the project."
+    },
+    {
+      "event": "announced",
+      "date": "2026-01-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-02",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Target stated at the January 2026 announcement; no source reviewed confirms the actual start date."
+    }
+  ],
+  "power_sources": [],
+  "related_ids": [
+    "xai-colossus-memphis",
+    "xai-colossus-2-memphis"
+  ],
+  "notes": "Status is inferred from a July 2026 WMC report that calls Macro-harder an existing site equipped with 220,000 GB300 GPUs, relaying Elon Musk; no source reviewed confirms when operations began. Converge Digest labels the building 'Colossus 2 (MACROHARDRR)', and analyst estimates for Colossus 2 (xai-colossus-2-memphis) may include it; no Colossus 2 figure is repeated here. The 2 GW figure in the announcements refers to xAI's combined Colossus compute, not this building alone.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://governorreeves.ms.gov/tech-leader-xai-investing-more-than-20-billion-in-southaven/",
+      "title": "Tech leader xAI investing more than $20 billion in Southaven",
+      "publisher": "Office of Governor Tate Reeves",
+      "published": "2026-01-08",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.yahoo.com/news/articles/ms-governor-confirms-major-announcement-173629625.html",
+      "title": "xAI investing $20B in Southaven, Mississippi facility, governor says",
+      "publisher": "WREG (via Yahoo News)",
+      "published": "2026-01-08",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://convergedigest.com/xai-commits-20b-to-2-gw-ai-data-center-in-mississippi/",
+      "title": "xAI Commits $20B to 2-GW AI Data Center in Mississippi",
+      "publisher": "Converge Digest",
+      "published": "2026-01-08",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260109084929/https://convergedigest.com/xai-commits-20b-to-2-gw-ai-data-center-in-mississippi/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.actionnews5.com/2026/07/31/xai-announces-fourth-data-center-turbines-be-removed-southaven-site/",
+      "title": "xAI announces fourth data center; turbines to be removed from Southaven site",
+      "publisher": "WMC Action News 5",
+      "published": "2026-07-31",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/colossus",
+      "title": "Colossus 1 & 2 | Behind-the-Meter Data Centers",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

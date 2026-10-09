@@ -1,0 +1,480 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-hyperion-richland-parish",
+  "name": "Meta Richland Parish data center (Hyperion)",
+  "aliases": [
+    "Hyperion",
+    "Richland Parish Data Center",
+    "Holly Ridge"
+  ],
+  "summary": "Meta campus on the former Franklin Farm megasite in Richland Parish, northeast Louisiana, built to house Hyperion, which Meta calls its largest AI cluster. Announced in December 2024 as a USD 10 billion project, it was placed in late 2025 in a joint venture 80% owned by Blue Owl-managed funds and expanded in July 2026 to a planned 5 GW of IT capacity and more than USD 50 billion of investment. Entergy Louisiana is adding gas-fired generation, batteries and transmission upgrades to serve the site under a 20-year agreement. Construction began in December 2024, and officials expect full build-out around 2036.",
+  "location": {
+    "country": "US",
+    "admin1": "Louisiana",
+    "admin2": "Richland Parish",
+    "locality": "Holly Ridge",
+    "lat": 32.4676,
+    "lon": -91.6268,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5"
+    ],
+    "note": "Sources place the campus on the former Franklin Farm megasite between Rayville and Delhi; the 2026 state release is datelined Holly Ridge and WRKF refers to the Holly Ridge site. Coordinates are the Holly Ridge community point from OpenStreetMap Nominatim, not a surveyed site boundary."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-14",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "notes": "Meta's fact sheet PDF (s6) shows no publication date; its embedded file creation date is 2026-09-01. The KTVE article (s7) shows only a relative date.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "owner",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Holds 20% of the joint venture that owns the campus and keeps the development and property-management role."
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Anchor tenant leasing the facilities from the joint venture."
+    },
+    {
+      "name": "Blue Owl Capital (managed funds)",
+      "role": "owner",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Funds managed by Blue Owl hold 80% of the joint venture formed in late 2025."
+    },
+    {
+      "name": "PIMCO",
+      "role": "investor",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Led the debt placements that helped finance the joint venture."
+    },
+    {
+      "name": "Entergy Louisiana",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Turner Construction Company",
+      "role": "builder",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named as a general contractor."
+    },
+    {
+      "name": "DPR Construction",
+      "role": "builder",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named as a general contractor."
+    },
+    {
+      "name": "Mortenson",
+      "role": "builder",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named as a general contractor."
+    },
+    {
+      "name": "Louisiana Economic Development",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 5000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "The state release calls this IT capacity; Meta's fact sheet describes the same 5 GW as compute capacity to house Hyperion, which it calls its largest AI cluster."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial build targeted by 2030",
+      "as_of": "2025-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported before the 2026 expansion as the initial capacity target, with possible growth toward 5 GW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Power requirement cited in coverage of the August 2025 utility approval, before the 5 GW expansion."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 27000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-05",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Expected total development cost of the Meta and Blue Owl joint venture, covering buildings and long-lived power, cooling and connectivity infrastructure."
+    },
+    {
+      "metric": "investment",
+      "value": 50000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s4",
+        "s6"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 4000000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 10000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Described as nearly 10 million square feet after the 2026 expansion."
+    },
+    {
+      "metric": "land_area",
+      "value": 2250,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 3200,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07-14",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Eventual footprint reported after the 2026 expansion."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 5000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Peak construction workforce projected at announcement."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 7500,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Peak construction workforce projected after the expansion."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 500,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s4",
+        "s6"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-12-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-12",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "The state said site work would begin in December; later reporting dates the groundbreaking to December 2024."
+    },
+    {
+      "event": "other",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Louisiana Public Service Commission voted 4-1 to approve Entergy Louisiana's three new gas plants tied to the campus, as reported on 2025-08-20."
+    },
+    {
+      "event": "other",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Meta announced the joint venture with Blue Owl-managed funds at the end of October 2025 and on 21 October cited a development cost of about USD 27 billion."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-07-13",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Expansion to 5 GW of IT capacity and more than USD 50 billion of investment."
+    },
+    {
+      "event": "other",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target for roughly 2 GW of initial capacity, as reported before the 2026 expansion."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2036",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Officials expect the full build-out of both phases by 2036."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supplied by Entergy Louisiana under a 20-year agreement. Regulators approved three new combined-cycle gas units in 2025 (two in Richland Parish, one at Waterford) along with transmission upgrades; the 2026 state release refers to seven new gas plants, while WRKF reports Entergy sought approval for ten. These are utility plants rather than on-site generation.",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Three grid-scale battery systems are part of the Entergy arrangement announced with the 2026 expansion.",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "type": "nuclear",
+      "description": "The 2026 arrangement includes possible nuclear development, including an output increase at Entergy's Waterford 3 plant.",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Entergy was cleared to fast-track up to 1,500 MW of solar; Meta earlier pledged to help bring at least 1,500 MW of new renewables to the grid and in 2026 committed to fund up to 2.5 GW of clean energy.",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://opportunitylouisiana.gov/news/meta-selects-northeast-louisiana-as-site-of-10-billion-artificial-intelligence-optimized-data-center-governor-jeff-landry-calls-investment-a-new-chapter-for-state",
+      "title": "Meta Selects Northeast Louisiana as Site of $10 Billion Artificial Intelligence Optimized Data Center; Governor Jeff Landry Calls Investment 'A New Chapter' for State",
+      "publisher": "Louisiana Economic Development",
+      "published": "2024-12-04",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.kalb.com/2025/08/21/la-regulators-approve-entergy-power-plants-metas-ai-data-center/",
+      "title": "La. regulators approve Entergy power plants for Meta's AI data center",
+      "publisher": "KALB",
+      "published": "2025-08-20",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20250821033352/https://www.kalb.com/2025/08/21/la-regulators-approve-entergy-power-plants-metas-ai-data-center/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/55325337/metas-27b-hyperion-campus-a-new-blueprint-for-ai-infrastructure-finance",
+      "title": "Meta's $27B Hyperion Campus: A New Blueprint for AI Infrastructure Finance",
+      "publisher": "Data Center Frontier",
+      "published": "2025-11-05",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.opportunitylouisiana.gov/news/meta-commits-more-than-50-billion-for-north-louisiana-project-becoming-one-of-the-largest-data-centers-in-history",
+      "title": "Meta Commits More Than $50 Billion for North Louisiana Project, Becoming One of the Largest Data Centers in History",
+      "publisher": "Louisiana Economic Development",
+      "published": "2026-07-13",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260911184712/https://www.opportunitylouisiana.gov/news/meta-commits-more-than-50-billion-for-north-louisiana-project-becoming-one-of-the-largest-data-centers-in-history?"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.wrkf.org/2026-07-14/meta-is-investing-40b-more-to-expand-richland-parish-data-center-project",
+      "title": "Meta is investing $40B more to expand Richland Parish data center project",
+      "publisher": "WRKF",
+      "published": "2026-07-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Richland-Parish-Data-Center.pdf",
+      "title": "Meta Richland Parish Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260911180758/https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Richland-Parish-Data-Center.pdf"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.myarklamiss.com/news/as-development-continues-the-cost-of-metas-data-center-in-richland-parish-will-be-3x-more-than-originally-projected/amp",
+      "title": "As development continues, the cost of Meta's data center in Richland Parish will be 3x more than originally projected",
+      "publisher": "KTVE (myarklamiss.com)",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20251106093133/https://www.myarklamiss.com/news/as-development-continues-the-cost-of-metas-data-center-in-richland-parish-will-be-3x-more-than-originally-projected/amp/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

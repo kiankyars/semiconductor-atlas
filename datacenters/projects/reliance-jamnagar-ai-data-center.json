@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "id": "reliance-jamnagar-ai-data-center",
+  "name": "Reliance Jamnagar AI-enabled data centre for Meta",
+  "aliases": [],
+  "summary": "Reliance Industries agreed in June 2026 to develop a 168 MW AI-enabled data centre in Jamnagar, Gujarat, built to suit Meta, which will lease capacity there to support its global infrastructure and AI compute. Reliance is to handle design, construction, utilities, renewable power, network connectivity and managed operations, with delivery targeted within two years and an option to expand. The facility is to be cooled with desalinated seawater. Reliance described it as Meta's first built-to-suit data centre capacity in India.",
+  "location": {
+    "country": "IN",
+    "admin1": "Gujarat",
+    "admin2": "Jamnagar",
+    "locality": "Jamnagar",
+    "lat": 22.4732,
+    "lon": 70.0552,
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "The release names Jamnagar, Gujarat only. Coordinates are the OpenStreetMap Nominatim centroid of Jamnagar city, not the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-10",
+  "status_source_ids": [
+    "s1"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Reliance Industries Limited",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "Reliance Industries Limited",
+      "role": "builder",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Responsible for design and construction."
+    },
+    {
+      "name": "Reliance Industries Limited",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "To provide managed operational services, utilities management and network connectivity."
+    },
+    {
+      "name": "Reliance Industries Limited",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "To manage the renewable power supply."
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "tenant",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Will lease capacity from the facility."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 168,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The release adds that there is an option to scale beyond this."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-06-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reliance said the capacity would be delivered within two years of the June 2026 announcement."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "To be powered by renewable energy managed by Reliance; the technology mix was not specified.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.ril.com/sites/default/files/2026-06/10062026_MR_Reliance_and_Meta_to_Develop_AI-Enabled_Data_Centre_in_Jamnagar_Gujarat.pdf",
+      "title": "Reliance and Meta to Develop AI-Enabled Data Centre in Jamnagar, Gujarat",
+      "publisher": "Reliance Industries Limited",
+      "published": "2026-06-10",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260831105528/https://www.ril.com/sites/default/files/2026-06/10062026_MR_Reliance_and_Meta_to_Develop_AI-Enabled_Data_Centre_in_Jamnagar_Gujarat.pdf"
+    }
+  ],
+  "notes": "Only the company release was available for this record; no construction progress had been reported in the sources reviewed. The power figure is not labelled as IT load or facility power.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "id": "airtrunk-jhb1-johor",
+  "name": "AirTrunk JHB1",
+  "aliases": [
+    "JHB1 Johor"
+  ],
+  "summary": "JHB1 is AirTrunk's first hyperscale data center campus in Malaysia, located in Johor Bahru on more than 10 hectares. It opened in July 2024 with initial phases of over 50 MW for large technology customers, and the following month AirTrunk began a 100 MW expansion to take the campus past 150 MW, with remaining phases due over about 18 months. AirTrunk said in April 2026 that JHB1 and its sister campus JHB2 were almost fully contracted. Renewable supply includes a solar-ready roof and a 30 MW virtual power purchase agreement with ib vogt.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Johor Bahru District",
+    "lat": 1.5367,
+    "lon": 103.7206,
+    "precision": "admin2",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "AirTrunk places JHB1 in Johor Bahru without an address; coordinates are the OpenStreetMap Nominatim centroid of the Johor Bahru administrative area, which includes Iskandar Puteri."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2024-08-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "AirTrunk",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "AirTrunk",
+      "role": "operator",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "ib vogt",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Counterparty to a 30 MW renewable virtual power purchase agreement cited in the opening announcement."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phases at opening",
+      "as_of": "2024-07-30",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "2024 expansion",
+      "as_of": "2024-08-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Remaining phases to be delivered over about 18 months, with an initial tranche by mid-2025."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-07-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The opening announcement describes JHB1 as a 150 MW campus; later releases say more than 150 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-02-12",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Given as total campus capacity after the 100 MW expansion; AirTrunk does not say whether it is IT load."
+    },
+    {
+      "metric": "land_area",
+      "value": 10.3,
+      "qualifier": "more_than",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-07-30",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2024-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Opening ceremony announced 30 July 2024."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2024-08-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "100 MW expansion underway."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-30",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "AirTrunk said JHB1 and JHB2 were almost 100% contracted; it did not say whether all JHB1 phases were complete."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "solar",
+      "description": "Solar-ready roof able to provide over 1 MW for the opening phase.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "30 MW renewable virtual power purchase agreement with ib vogt under Malaysia's Corporate Green Power Programme.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "related_ids": [
+    "airtrunk-jhb2-iskandar-puteri"
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/",
+      "title": "AirTrunk opens AI-ready data centre in Malaysia, accelerating innovation and the energy transition",
+      "publisher": "AirTrunk",
+      "published": "2024-07-30",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260611075647/https://airtrunk.com/airtrunk-opens-ai-ready-data-centre-in-malaysia-accelerating-innovation-and-the-energy-transition/"
+    },
+    {
+      "id": "s2",
+      "url": "https://airtrunk.com/airtrunk-jhb1100mw-expansion-underway/",
+      "title": "100MW expansion underway at AirTrunk JHB1",
+      "publisher": "AirTrunk",
+      "published": "2024-08-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://airtrunk.com/airtrunk-scales-up-in-malaysia-with-announcement-of-second-malaysia-hyperscale-data-centre-jhb2/",
+      "title": "AirTrunk grows Malaysia platform with second cloud and AI-ready data centre in Johor",
+      "publisher": "AirTrunk",
+      "published": "2025-02-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://airtrunk.com/airtrunk-doubles-down-in-malaysia-with-two-new-hyperscale-campuses-in-johor-bahru/",
+      "title": "AirTrunk doubles down in Malaysia with two new hyperscale campuses in Johor Bahru",
+      "publisher": "AirTrunk",
+      "published": "2026-04-30",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

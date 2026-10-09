@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "id": "openai-stargate-milam-county",
+  "name": "Stargate Milam County (SB Energy campus)",
+  "aliases": [
+    "Stargate Milam County"
+  ],
+  "summary": "A fast-build Stargate AI campus in Milam County, Texas, about 70 miles northeast of Austin, developed by SoftBank in partnership with OpenAI, with SoftBank's SB Energy providing the powered infrastructure. It was announced in September 2025 as one of two SoftBank sites that together could scale to 1.5 GW within about 18 months, and SoftBank said then that it was breaking ground. Analyst Epoch AI projects about 1.2 GW for this site, saw steel framing and roofing on the first building in March 2026 imagery, and cites state filings pointing to delivery of that building by October 2026. SB Energy plans to fund and build new generation and storage for most of the campus power.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Milam County",
+    "lat": 30.7627,
+    "lon": -96.9982,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Milam County centroid from OpenStreetMap Nominatim. Sources name only the county, which Epoch AI places about 70 miles northeast of Austin; no site address was found."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-17",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "SoftBank Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Develops the site in partnership with OpenAI. Analyst Epoch AI, not a company disclosure, lists SoftBank as owner of the AI hardware."
+    },
+    {
+      "name": "OpenAI",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named with SoftBank as partner for the two SoftBank Stargate sites."
+    },
+    {
+      "name": "SB Energy",
+      "role": "developer",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Analyst Epoch AI, not a company disclosure, says the SoftBank subsidiary is building and operating the site."
+    },
+    {
+      "name": "SB Energy",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Provides the powered infrastructure; Epoch AI (analyst) reports it plans new generation and storage for most of the campus load."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI's projection of total facility power. SoftBank only gave 1.5 GW as the combined scale for this site and Lordstown, Ohio."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Announced with Lordstown, Ohio as the two SoftBank Stargate sites, together able to scale to 1.5 GW over about 18 months."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "SoftBank said at the announcement that it was breaking ground; analyst Epoch AI separately dates the start to Q3 2025."
+    },
+    {
+      "event": "other",
+      "date": "2026-10",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Analyst Epoch AI, not a company disclosure, cites regulatory filings indicating the first building would be delivered to the tenant by October 2026; delivery is not full operation."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Analyst estimate by Epoch AI, not a company date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "SB Energy provides the powered infrastructure; analyst Epoch AI reports it plans to fund and build new generation and storage to supply most of the campus's power, with the generation type not disclosed.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://group.softbank/en/news/press/20250924",
+      "title": "OpenAI, Oracle, and SoftBank expand Stargate with five new AI data center sites",
+      "publisher": "SoftBank Group Corp.",
+      "published": "2025-09-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.datacenterknowledge.com/data-center-site-selection/openai-expands-stargate-with-five-new-data-center-sites-across-us",
+      "title": "OpenAI Expands Stargate With Five New Data Center Sites Across US",
+      "publisher": "Data Center Knowledge (Bloomberg)",
+      "published": "2025-09-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260313130748/https://www.datacenterknowledge.com/data-center-site-selection/openai-expands-stargate-with-five-new-data-center-sites-across-us"
+    },
+    {
+      "id": "s3",
+      "url": "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand",
+      "title": "OpenAI Stargate: where the US sites stand",
+      "publisher": "Epoch AI",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "analyst",
+      "archived_url": "https://web.archive.org/web/20260517184326/https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    }
+  ],
+  "notes": "No 2026 company or local news source on this site was opened in this review; the newest status evidence is analyst Epoch AI's April 2026 imagery review, which is an analyst assessment rather than a company disclosure.",
+  "last_reviewed": "2026-10-09"
+}

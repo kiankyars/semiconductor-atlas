@@ -72,9 +72,10 @@ function statusCell(status) {
 }
 
 function powerText(r) {
-  if (r.planned_power_mw == null) return "";
+  const gen = r.onsite_generation_mw != null ? `<span class="sub">${fmtMW(r.onsite_generation_mw)} on-site gen.</span>` : "";
+  if (r.planned_power_mw == null) return gen;
   const scope = SCOPE_SHORT[r.planned_power_scope];
-  return `${fmtMW(r.planned_power_mw, r.planned_power_mw_high, r.planned_power_qualifier)}${scope ? `<span class="scope">${scope}</span>` : ""}`;
+  return `${fmtMW(r.planned_power_mw, r.planned_power_mw_high, r.planned_power_qualifier)}${scope ? `<span class="scope">${scope}</span>` : ""}${gen}`;
 }
 
 function partiesText(r) {

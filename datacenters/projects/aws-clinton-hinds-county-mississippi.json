@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-clinton-hinds-county-mississippi",
+  "name": "AWS Clinton data center (former Delphi plant)",
+  "aliases": [
+    "AWS Hinds County data center"
+  ],
+  "summary": "Amazon is converting the former Delphi Packard plant in Clinton, Hinds County, into a data center. The governor announced the $1 billion project in April 2026 with about 100 jobs; Amazon says the plant closed in 2009 and then sat empty for years. At a June 2026 ribbon-cutting held to mark the investment, Amazon said this was its first full retrofit of an existing industrial building into a functioning data center, but it gave no in-service date or capacity. AWS says the site will use no water, and the mayor says day-to-day power will come from the grid.",
+  "location": {
+    "country": "US",
+    "admin1": "Mississippi",
+    "admin2": "Hinds County",
+    "locality": "Clinton",
+    "lat": 32.3583,
+    "lon": -90.3556,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Coordinates are the Clinton city point from its Wikipedia article (Nominatim was unavailable). One local TV report places the site on Industrial Park Drive but calls it the former Milwaukee Tool factory, which conflicts with the Delphi identification, so no site point is used."
+  },
+  "status": "operational",
+  "status_as_of": "2026-06-09",
+  "status_source_ids": [
+    "s4"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Hinds County Economic Development Authority",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Co-hosted the June 2026 ribbon-cutting; the governor's release lists Hinds County and the City of Clinton among those assisting the project."
+    },
+    {
+      "name": "City of Clinton",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Entergy Mississippi",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named for its commitment to Amazon's long-term Mississippi power needs; the release does not single out this site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-04-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-09",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-04-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2026-06-09",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Ribbon-cutting held to celebrate the investment and jobs; Amazon's post describes the plant as fully retrofitted into a functioning data center but gives no in-service date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "The Clinton mayor said day-to-day power will come from the grid, with backup generators on site; the city amended its noise ordinance in October 2025 so such generators can run uninterrupted during emergencies.",
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "notes": "Site identity conflict: the governor's release and Amazon describe the building as the former Delphi plant, while an April 2026 local TV report calls it the former Milwaukee Tool factory on Industrial Park Drive. Status: Amazon's June 2026 post says the plant was fully retrofitted into a functioning data center, but the same post frames the ribbon-cutting as celebrating the investment and job creation and gives no in-service date or operating capacity, so the operational status rests on that one statement.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://governorreeves.ms.gov/amazon-continues-mississippi-expansion-announcing-plans-to-invest-a-total-of-25-billion-across-the-magnolia-state/",
+      "title": "Amazon continues Mississippi expansion, announcing plans to invest a total of $25 billion across the Magnolia State",
+      "publisher": "Office of Governor Tate Reeves",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wlox.com/2026/04/09/gov-reeves-local-leaders-announce-amazons-plans-invest-25-billion-across-mississippi/",
+      "title": "'2,000 new jobs right here in Mississippi': Gov. Reeves $12B more in investments from AWS",
+      "publisher": "WLOX",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-25-billion-mississippi-data-centers",
+      "title": "Amazon plans to invest $25 billion in Mississippi data centers, create 2,000 jobs",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.aboutamazon.com/news/aws/amazon-data-centers-locations-news",
+      "title": "Amazon data center communities: Here's what's happening near data centers across the US",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.mississippifreepress.org/amazon-is-expanding-data-centers-in-central-mississippi-governor-announces/",
+      "title": "Amazon Is Expanding Data Centers in Central Mississippi, Governor Announces",
+      "publisher": "Mississippi Free Press",
+      "published": "2026-04-10",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

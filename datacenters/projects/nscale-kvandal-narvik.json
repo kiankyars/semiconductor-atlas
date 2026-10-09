@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0",
+  "id": "nscale-kvandal-narvik",
+  "name": "Nscale Kvandal AI data center (Narvik)",
+  "aliases": [
+    "Stargate Norway",
+    "Kvandal North Campus",
+    "Aker Nscale Narvik"
+  ],
+  "summary": "AI data center campus at Kvandal outside Narvik in northern Norway, announced in July 2025 as Stargate Norway by Nscale, Aker and OpenAI with 230 MW planned and ambitions for 290 MW more. The Aker-Nscale joint venture signed a five-year Microsoft contract worth about USD 6.2bn in September 2025, and in April 2026 Microsoft took the capacity first linked to OpenAI, adding more than 30,000 NVIDIA Rubin GPUs for 2027. Aker transferred its half of the joint venture to Nscale in March 2026. Nscale raised USD 790m of debt in May 2026, and in September 2026 contractor HENT held contracts for three buildings totalling 100 MW, with construction under way and completion expected in 2027.",
+  "location": {
+    "country": "NO",
+    "admin1": "Nordland",
+    "admin2": "Narvik Municipality",
+    "locality": "Kvandal",
+    "lat": 68.2899,
+    "lon": 17.0865,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s8",
+      "s9"
+    ],
+    "note": "Sources place the site at Kvandal, just outside Narvik, and Nscale says the operator's main office is on site in Bjerkvik. Kvandal itself was not resolved to a point, so a Narvik municipality centroid is used."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-02",
+  "status_source_ids": [
+    "s9"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Nscale",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Nscale leads design and build; the April 2026 release says the project is solely managed by Nscale."
+    },
+    {
+      "name": "Nscale",
+      "role": "owner",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Owns the former Aker Nscale joint venture after Aker transferred its 50% stake in March 2026."
+    },
+    {
+      "name": "Aker ASA",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "50% owner of the Aker Nscale joint venture from its formation until it transferred the stake to Nscale on 27 March 2026."
+    },
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Five-year customer agreement of about USD 6.2bn signed in September 2025, expanded in April 2026 with more than 30,000 NVIDIA Rubin GPUs for 2027."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s10"
+      ],
+      "note": "Named as initial offtaker in July 2025; reported in April 2026 to have dropped out, with Microsoft taking the capacity."
+    },
+    {
+      "name": "NVIDIA",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "name": "HENT",
+      "role": "builder",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Sentia subsidiary holding civil, structural and architectural contracts for three buildings."
+    },
+    {
+      "name": "Nordscale Operations AS",
+      "role": "operator",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Operating company owned 51% by Nscale Norway AS and 49% by Nordkraft AS."
+    },
+    {
+      "name": "Vattenfall",
+      "role": "power_supplier",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Power purchase agreement covering a significant share of first-phase demand from 2027 to 2031; volume not disclosed."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 230,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-04-14",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s10"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 290,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Possible expansion",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Stated as an ambition for additional capacity beyond the 230 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 20,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 115,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Accordion-funded expansion",
+      "as_of": "2026-05-11",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "An uncommitted USD 790m accordion could fund this further expansion."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "HENT-contracted buildings",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Combined capacity of the three buildings HENT is contracted to build, including two added in September 2026 totalling 75 MW; the release says construction is under way but does not relate this to the 230 MW figure."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Initial 20 MW phase",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Committed by Nscale and Aker, including upwards of USD 250m of equity shared equally."
+    },
+    {
+      "metric": "accelerators",
+      "value": 100000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "accelerator_model": "NVIDIA GPUs (model not specified)",
+      "applies_to": "campus",
+      "as_of": "2025-07-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original target of 100,000 GPUs by end of 2026 under the Stargate Norway plan."
+    },
+    {
+      "metric": "accelerators",
+      "value": 52000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "accelerator_model": "NVIDIA GB300",
+      "applies_to": "campus",
+      "as_of": "2025-10-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "GPUs to be delivered to Microsoft from the Narvik campus under a multi-year agreement."
+    },
+    {
+      "metric": "accelerators",
+      "value": 30000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "accelerator_model": "NVIDIA Rubin",
+      "applies_to": "campus",
+      "as_of": "2026-04-14",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Expansion of the Microsoft deal for 2027 delivery."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "under_construction",
+      "applies_to": "phase",
+      "phase_label": "HENT-contracted buildings",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s9"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-07-31",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Nscale and Aker said they were beginning preparatory work and mobilising for construction."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-17",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Nscale, Aker and Microsoft signed a binding five-year customer agreement worth about USD 6.2bn, with staged deployments from 2026."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-27",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Aker completed the transfer of its 50% stake in the Aker Nscale joint venture to Nscale as part of Nscale's Series C."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-14",
+      "kind": "actual",
+      "source_ids": [
+        "s5",
+        "s10"
+      ],
+      "note": "Microsoft expanded its deal with more than 30,000 Rubin GPUs for 2027; OpenAI was reported to have dropped out."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-11",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "USD 790m debt financing from ABN AMRO, DNB, Eksfin, Nordea and SEB."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-09-02",
+      "kind": "actual",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "HENT contracted for two additional buildings totalling 75 MW."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s7",
+        "s9"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Secured grid capacity with entirely renewable electricity; a Vattenfall PPA covers a significant share of first-phase demand from 2027 to 2031, generation assets not disclosed.",
+      "source_ids": [
+        "s2",
+        "s7"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.mfn.se/ob/a/aker/nscale-aker-and-openai-to-establish-stargate-norway-a-100-000-nvidia-gpu-ai-gigafactory-powered-by-renewable-energy-in-northern-norway-bb68d573",
+      "title": "Nscale, Aker and OpenAI to establish Stargate Norway: a 100,000 NVIDIA GPU AI gigafactory powered by renewable energy in Northern Norway",
+      "publisher": "Aker ASA",
+      "published": "2025-07-31",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://mfn.se/ob/a/aker/aker-aker-nscale-jv-signs-multi-billion-dollar-ai-infrastructure-agreement-with-microsoft-cad81224",
+      "title": "Aker-Nscale JV signs multi-billion dollar AI infrastructure agreement with Microsoft",
+      "publisher": "Aker ASA",
+      "published": "2025-09-17",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://nscale.com/press-releases/nscale-microsoft-2025",
+      "title": "Nscale Contracts Approximately 200,000 NVIDIA GB300 GPUs with Microsoft to Deliver NVIDIA AI Infrastructure Across Europe and the U.S.",
+      "publisher": "Nscale",
+      "published": "2025-10-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.placera.se/pressmeddelanden/aker-aker-completes-investment-in-nscales-series-c-funding-round-20260327",
+      "title": "Aker completes investment in Nscale's Series C funding round",
+      "publisher": "Aker ASA (via Placera)",
+      "published": "2026-03-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.nscale.com/press-releases/nscale-microsoft-norway",
+      "title": "Nscale announces expanded deal with Microsoft in Norway",
+      "publisher": "Nscale",
+      "published": "2026-04-14",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929093618/https://www.nscale.com/press-releases/nscale-microsoft-norway"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.nscale.com/press-releases/nscale-secures-790-million-norway",
+      "title": "Nscale Secures $790 Million in Financing to Support AI Infrastructure Buildout in Norway",
+      "publisher": "Nscale",
+      "published": "2026-05-11",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260707185336/https://www.nscale.com/press-releases/nscale-secures-790-million-norway"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.datacenter-forum.com/nscale/nscale-signs-ppa-with-vattenfall-for-kvandal-data-center-norway",
+      "title": "Nscale signs PPA with Vattenfall for Kvandal data center Norway",
+      "publisher": "Datacenter Forum",
+      "published": "2026-06",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261002113335/https://www.datacenter-forum.com/nscale/nscale-signs-ppa-with-vattenfall-for-kvandal-data-center-norway"
+    },
+    {
+      "id": "s8",
+      "url": "https://www.nscale.com/press-releases/nordscale",
+      "title": "Nscale and Nordkraft Enter Strategic Partnership to Support Data Center Operations in Narvik",
+      "publisher": "Nscale",
+      "published": "2026-07-06",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260707185255/https://www.nscale.com/press-releases/nordscale"
+    },
+    {
+      "id": "s9",
+      "url": "https://www.inderes.se/releases/hent-a-subsidiary-of-sentia-has-signed-a-contract-for-the-expansion-of-nscales-data-center-in-the-narvik-region",
+      "title": "HENT, a subsidiary of Sentia, has signed a contract for the expansion of Nscale's data center in the Narvik region",
+      "publisher": "Sentia (via Inderes)",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s10",
+      "url": "https://amcham.no/microsoft-contracts-30000-gpus-from-nscale-at-norway-data-center-as-openai-drops-out-of-latest-stargate/",
+      "title": "Microsoft contracts 30,000 GPUs from Nscale at Norway data center as OpenAI drops out of latest Stargate",
+      "publisher": "AmCham Norway",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

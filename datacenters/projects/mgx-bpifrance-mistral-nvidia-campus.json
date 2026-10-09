@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.0",
+  "id": "mgx-bpifrance-mistral-nvidia-campus",
+  "name": "Campus AI Fouju",
+  "aliases": [
+    "Campus IA",
+    "Campus AI",
+    "Campus IA Fouju"
+  ],
+  "summary": "Campus AI, a joint venture of the UAE fund MGX, French public bank Bpifrance, Mistral AI and NVIDIA, is developing a 1.4 GW AI data center campus at Fouju in Seine-et-Marne, about 40 km southeast of Paris. Plans call for roughly eleven data center buildings plus a training building on about 89 hectares, fed by a dedicated 400 kV substation. Environmental authorizations and the phase-one building permit were granted in summer 2026, phase-one works were scheduled from September 2026, and the first three data centers are targeted for early 2028. Local opponents have said they will appeal.",
+  "location": {
+    "country": "FR",
+    "admin1": "Île-de-France",
+    "admin2": "Seine-et-Marne",
+    "locality": "Fouju",
+    "lat": 48.5864,
+    "lon": 2.7785,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Nominatim centroid of the commune of Fouju; sources name the commune but not a parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-01",
+  "status_source_ids": [
+    "s3",
+    "s5"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_inference",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Campus AI",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Joint venture that acquires land, builds high-voltage and shared infrastructure, and co-invests with data center developers; site companies Campus AI SPV1, SPV2 and SPV4 are authorized to operate DC1, DC2 and DC4."
+    },
+    {
+      "name": "MGX",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Bpifrance",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Mistral AI",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "NVIDIA",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Mistral AI",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Described as the founding client, securing up to 200 MW of compute capacity with Campus AI (announced 2026-06-01; the source does not say all of it is at Fouju)."
+    },
+    {
+      "name": "Eiffage",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "General contractor (consortium led by Eiffage Énergie Systèmes) for the 400/33 kV substation and shared infrastructure, contract above EUR 120 million."
+    },
+    {
+      "name": "RTE",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Signed a fast-track grid connection agreement with Campus AI on 2026-01-26 and was authorized to build a substation at the site."
+    },
+    {
+      "name": "Préfecture de Seine-et-Marne",
+      "role": "government",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Issued the environmental authorizations on 2026-07-29."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-06-02",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Final output rating of the 400/33 kV substation Eiffage is building; same headline figure as the campus capacity, not additional."
+    },
+    {
+      "metric": "investment",
+      "value": 50000000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "News report attributing the sum to MGX, NVIDIA, Mistral AI and Bpifrance; no company source opened for this figure."
+    },
+    {
+      "metric": "land_area",
+      "value": 89,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Of which 73 hectares to be built on."
+    },
+    {
+      "metric": "buildings",
+      "value": 11,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Data center buildings; a training center is additional."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "First three data centers, plus a reception and training building and the substation, due early 2028."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-05-19",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Joint venture announced at the Choose France summit for an Île-de-France campus."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-13",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Start of the voluntary public pre-consultation under the CNDP framework (ran to 2025-11-23)."
+    },
+    {
+      "event": "other",
+      "date": "2026-01-26",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Fast-track grid connection agreement signed with RTE."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-30",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Single public inquiry opened (to 2026-05-30) covering environmental authorizations, local plan change and building permit."
+    },
+    {
+      "event": "other",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "At Choose France 2026 the joint venture said it plans up to 3 GW in France through a second, not yet named site that will complement the Fouju campus."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-02",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Eiffage named general contractor for the substation and shared infrastructure."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-07-23",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Approval of the Fouju local plan (PLU) amendment."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-07-29",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Prefectoral environmental authorizations for data centers and an RTE substation."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-08-28",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Building permit for phase 1."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-09",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Start of phase-1 works as listed in the local authority's project timeline; archaeological excavations on 15 hectares were also under way from May 2026."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Early 2028 delivery of the first phase per the local timeline; the 2025 announcement targeted service by 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Fast-track connection to the RTE transmission grid through a new 400/33 kV substation rated for 1.4 GW at full build-out.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.polytechnique.edu/sites/default/files/content/communiques/fichiers/2025-05/Communique%20Presse%20-%20MGX%2C%20Bpifrance%2C%20Mistral%20AI%20et%20NVIDIA%20annoncent%20la%20cre%CC%81ation%20d%E2%80%99une%20JV%20pour%20de%CC%81velopper%20en%20France%20le%20plus%20grand%20campus%20IA%20d%27Europe.pdf",
+      "title": "MGX, Bpifrance, Mistral AI et NVIDIA annoncent la création d'une joint-venture pour développer en France le plus grand campus IA d'Europe",
+      "publisher": "MGX, Bpifrance, Mistral AI and NVIDIA (via École polytechnique)",
+      "published": "2025-05-19",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260108033608/https://www.polytechnique.edu/sites/default/files/content/communiques/fichiers/2025-05/Communique%20Presse%20-%20MGX%2C%20Bpifrance%2C%20Mistral%20AI%20et%20NVIDIA%20annoncent%20la%20cre%CC%81ation%20d%E2%80%99une%20JV%20pour%20de%CC%81velopper%20en%20France%20le%20plus%20grand%20campus%20IA%20d'Europe.pdf"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.privacy.eiffage.com/files/live/sites/metal/files/publications/PR_Eiffage_Campus%2520AI%2520enters%2520the%2520implementation%2520phase_20260602.pdf",
+      "title": "Campus AI enters the implementation phase: Eiffage selected for deployment of shared infrastructure on the Fouju Campus",
+      "publisher": "Eiffage",
+      "published": "2026-06-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.briedesrivieresetchateaux.fr/wp-content/uploads/2026/09/Calendrier_du_projet_Campus_IA_.pdf",
+      "title": "Calendrier du projet Campus IA",
+      "publisher": "Communauté de communes Brie des Rivières et Châteaux",
+      "published": "2026-09-01",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s4",
+      "url": "https://next.ink/brief-article/la-prefecture-de-seine-et-marne-autorise-linstallation-de-campus-ia-a-fouju/",
+      "title": "La préfecture de Seine-et-Marne autorise l'installation de Campus IA à Fouju",
+      "publisher": "Next",
+      "published": "2026-08-13",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.mac4ever.com/ia/196474-campus-ai-mistral-bpifrance-et-mgx-prevoient-jusqu-a-3-gw-de-puissance-ia-en-france",
+      "title": "Campus AI : Mistral, Bpifrance et MGX prévoient jusqu'à 3 GW de puissance IA en France",
+      "publisher": "Mac4Ever",
+      "published": "2026-06-02",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260610131134/https://www.mac4ever.com/ia/196474-campus-ai-mistral-bpifrance-et-mgx-prevoient-jusqu-a-3-gw-de-puissance-ia-en-france"
+    }
+  ],
+  "notes": "Investment figures for the campus vary widely in public reporting; only the EUR 50 billion figure from an opened news source is recorded. A June 2026 announcement raised the joint venture's national target to up to 3 GW with an unnamed second site, which is not part of this record. Opponents (collective Stop IA à Fouju) said they would file an appeal against the authorizations.",
+  "last_reviewed": "2026-10-09"
+}

@@ -48,6 +48,10 @@ PROJECT_COLUMNS: list[Column] = [
     ("operational_power_scope", "string", "Scope of the operational-power statement."),
     ("operational_power_basis", "string", "Always operational when present."),
     ("operational_power_as_of", "string", "Date of the operational-power statement."),
+    ("onsite_generation_mw", "number", "Headline on-site generation capacity in MW, kept apart "
+     "from demand."),
+    ("onsite_generation_basis", "string", "Basis of the on-site generation statement."),
+    ("onsite_generation_as_of", "string", "Date of the on-site generation statement."),
     ("investment_value", "number", "Headline announced investment, in investment_currency."),
     ("investment_value_high", "number", "Upper bound when the statement is a range."),
     ("investment_currency", "string", "ISO 4217 currency of the investment value (not "

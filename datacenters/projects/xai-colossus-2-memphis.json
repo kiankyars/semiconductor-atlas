@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "id": "xai-colossus-2-memphis",
+  "name": "xAI Colossus 2 (Memphis)",
+  "aliases": [
+    "Colossus II"
+  ],
+  "summary": "Second xAI supercomputer campus, in a building of about one million square feet on Tulane Road in the Whitehaven area of Memphis, near the Mississippi line, which xAI bought in 2025. The site has drawn little or no grid power and runs mainly on gas turbines at a former Duke Energy plant site about 1.5 miles away in Southaven, Mississippi. Mississippi regulators permitted 41 permanent turbines there in March 2026, and environmental and civil rights groups appealed the permit in April 2026. Analyst estimates put its IT load near 1 GW by mid-2026. Anthropic says it has GPU capacity here under an agreement with SpaceX.",
+  "location": {
+    "country": "US",
+    "admin1": "Tennessee",
+    "locality": "Memphis",
+    "lat": 34.998,
+    "lon": -90.0349,
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s9"
+    ],
+    "note": "Center of the OpenStreetMap building tagged 'xAI Macrohard Colossus 2' at 5420 Tulane Road, taken from this project's OpenStreetMap data center layer (no geocoder call); Cleanview gives the same address. MLGW describes the facility as on Tulane Road very near the Tennessee-Mississippi line."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s8",
+    "s7"
+  ],
+  "workloads": [
+    "ai_training"
+  ],
+  "parties": [
+    {
+      "name": "xAI",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "SpaceX",
+      "role": "owner",
+      "source_ids": [
+        "s8",
+        "s7",
+        "s6"
+      ],
+      "note": "Epoch AI (analyst) lists the owner as SpaceXAI and WMC's July 2026 report refers to SpaceXAI; Anthropic describes its Colossus 2 capacity agreement as being with SpaceX. No company filing reviewed states ownership."
+    },
+    {
+      "name": "Anthropic",
+      "role": "tenant",
+      "source_ids": [
+        "s6",
+        "s8"
+      ],
+      "note": "Anthropic's May 2026 funding announcement cites an agreement with SpaceX for GPU capacity in Colossus 1 and Colossus 2; the share of Colossus 2 involved is not stated."
+    },
+    {
+      "name": "Cursor",
+      "role": "tenant",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Listed as a user by Epoch AI (analyst); reported but not confirmed by Cursor, xAI or SpaceX in the sources reviewed."
+    },
+    {
+      "name": "MZX Tech LLC",
+      "role": "power_supplier",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "xAI affiliate that bought the former Duke Energy site at 2875 Stanton Road South, Southaven, and holds the Mississippi air permit for the turbines that power Colossus 2."
+    },
+    {
+      "name": "Memphis Light, Gas and Water",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Serves the site with water and limited gas; as of May 2025 xAI had not filed a final request for grid power at Tulane Road."
+    },
+    {
+      "name": "Mississippi Environmental Quality Permit Board",
+      "role": "government",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Approved the Southaven turbine air permit on March 10, 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 946,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-06-15",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Epoch AI analyst estimate, not a company disclosure, from its June 15, 2026 satellite observation. Epoch projects about 1,531 MW of IT load in the first quarter of 2027, with a third building estimated to be complete in February 2027."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1300,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-05",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Cleanview count of about 59 temporary turbines totaling about 1.3 GW in mid-May 2026 imagery of the Southaven generation site (analyst estimate, not a company disclosure). Cleanview reports no utility power at Colossus 2."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-03-10",
+      "source_ids": [
+        "s9",
+        "s7",
+        "s4"
+      ],
+      "note": "41 permanent gas turbines permitted in March 2026 at the Southaven plant site. The 1.2 GW figure comes from Cleanview (analyst) and WMC; the permit coverage reviewed gives no capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 260,
+      "value_high": 1100,
+      "qualifier": "range",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-05-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MLGW received an initial, unstudied request for 260 MW and had discussed options from 260 MW to 1.1 GW; xAI had not filed a final request as of May 2025."
+    },
+    {
+      "metric": "accelerators",
+      "value": 550000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "installed",
+      "applies_to": "campus",
+      "as_of": "2026-05",
+      "accelerator_model": "NVIDIA GB200 and GB300",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Cleanview figure (analyst estimate, not a company disclosure)."
+    },
+    {
+      "metric": "accelerators",
+      "value": 440000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "installed",
+      "applies_to": "campus",
+      "as_of": "2026-06-15",
+      "accelerator_model": "NVIDIA B200 and B300",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Epoch AI analyst estimate, not a company disclosure: about 110,000 B200 and 330,000 B300 chips. It differs from Cleanview's figure; both are kept."
+    },
+    {
+      "metric": "investment",
+      "value": 35800000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Epoch AI current capital cost estimate (analyst estimate, not a company disclosure); the page does not say what the figure includes."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2025-02-28",
+      "kind": "actual",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Epoch AI dates land clearing next to the existing building from satellite imagery (analyst estimate, not a company disclosure)."
+    },
+    {
+      "event": "site_acquired",
+      "date": "2025-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "WMC reported in March 2025 that xAI was buying about one million square feet of property in southwest Memphis; by May 2025 MLGW said xAI had secured the Tulane Road facility."
+    },
+    {
+      "event": "other",
+      "date": "2025-07",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s9"
+      ],
+      "note": "xAI affiliate MZX Tech bought the former Duke Energy plant site in Southaven, Mississippi; Cleanview identifies it as the generation site for Colossus 2."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Approximate. Epoch AI's first nonzero compute estimate for the site, about 239 MW of IT load, is dated October 19, 2025 from satellite imagery (analyst estimate, not a company disclosure)."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-03-10",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Mississippi permit board approved 41 gas turbines at the Southaven plant site."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-09",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "SELC filed an appeal of the Southaven turbine air permit on behalf of the NAACP, Young Gifted & Green and the Safe and Sound Coalition."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "planned",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Planned start of removing the 69 temporary Southaven turbines, to finish by July 2027 as a permanent 41-turbine plant replaces them."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Behind-the-meter gas turbines at the former Duke Energy site in Southaven, Mississippi. Regulators permitted 41 permanent units in March 2026; WMC reported 69 turbines on site in July 2026, all to be removed by July 2027.",
+      "source_ids": [
+        "s4",
+        "s7",
+        "s9"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Epoch AI observed a battery facility connected to the building by September 2025 (analyst observation).",
+      "source_ids": [
+        "s8"
+      ]
+    }
+  ],
+  "related_ids": [
+    "xai-colossus-memphis",
+    "xai-macrohardrr-southaven"
+  ],
+  "notes": "MACROHARDRR, the adjacent xAI building just across the state line in Southaven, is tracked separately as xai-macrohardrr-southaven. Some coverage labels it as part of Colossus 2, and the analyst sources cited here do not say whether their Colossus 2 estimates include it, so analyst figures for the two may overlap. Capacity, GPU and cost figures from Epoch AI and Cleanview are analyst estimates, not company disclosures.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.actionnews5.com/2025/03/07/xai-purchasing-1-million-square-feet-property-southwest-memphis-expansion",
+      "title": "xAI purchasing 1 million square feet of property in Southwest Memphis for expansion",
+      "publisher": "WMC Action News 5",
+      "published": "2025-03-07",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.mlgw.com/images/content/files/pdf/new/5-5-25%20xAI%20Update.pdf",
+      "title": "MLGW update regarding utility support for xAI",
+      "publisher": "Memphis Light, Gas and Water",
+      "published": "2025-05-05",
+      "accessed": "2026-10-09",
+      "type": "utility"
+    },
+    {
+      "id": "s3",
+      "url": "https://desotocountynews.com/desoto-county-news/xai-buys-southaven-property/",
+      "title": "xAI buys Southaven property",
+      "publisher": "DeSoto County News",
+      "published": "2025-07-18",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.mississippifreepress.org/mississippi-permit-board-grants-xais-request-for-41-southaven-gas-turbines-to-power-memphis-data-center/",
+      "title": "Mississippi permit board grants xAI's request for 41 Southaven gas turbines to power Memphis data center",
+      "publisher": "Mississippi Free Press",
+      "published": "2026-03-10",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260909173956/https://www.mississippifreepress.org/mississippi-permit-board-grants-xais-request-for-41-southaven-gas-turbines-to-power-memphis-data-center/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.selc.org/press-release/groups-appeal-air-permit-for-xais-personal-power-plant/",
+      "title": "Groups appeal air permit for xAI's personal power plant in North Mississippi",
+      "publisher": "Southern Environmental Law Center",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.anthropic.com/news/series-h",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "publisher": "Anthropic",
+      "published": "2026-05-28",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261006212841/https://www.anthropic.com/news/series-h"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.actionnews5.com/2026/07/31/xai-announces-fourth-data-center-turbines-be-removed-southaven-site/",
+      "title": "xAI announces fourth data center; turbines to be removed from Southaven site",
+      "publisher": "WMC Action News 5",
+      "published": "2026-07-31",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s8",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/colossus-2",
+      "title": "Colossus 2 | AI data centers",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s9",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/colossus",
+      "title": "Colossus 1 & 2 | Behind-the-Meter Data Centers",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

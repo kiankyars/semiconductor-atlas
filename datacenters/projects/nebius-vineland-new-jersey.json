@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "id": "nebius-vineland-new-jersey",
+  "name": "Nebius Vineland AI factory",
+  "aliases": [
+    "Nebius x Vineland"
+  ],
+  "summary": "AI data center in Vineland, New Jersey, designed, built, owned and operated by DataOne with Nebius as tenant owning the servers and GPUs, and Vineland-based Northeast Precast as builder. A May 2025 Nebius filing describes a phased development scalable up to 300 MW, with construction begun in early 2025. Nebius named the site in its September 2025 agreement to supply Microsoft with dedicated GPU capacity, valued at about 17.4 billion US dollars through 2031. Power is to come from on-site, off-grid Bloom Energy fuel cells. Nebius's project page says construction is ongoing and the AI factory is expected to be operational by 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "New Jersey",
+    "admin2": "Cumberland County",
+    "locality": "Vineland",
+    "lat": 39.465,
+    "lon": -75.0064,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s7"
+    ],
+    "note": "City centroid from the Wikipedia infobox for Vineland (s7), which also gives Cumberland County. No street address or parcel appears in the cited sources."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "DataOne",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Described as the AI factory designer and builder under a build-to-suit arrangement."
+    },
+    {
+      "name": "DataOne",
+      "role": "owner",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "DataOne",
+      "role": "operator",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "name": "Nebius",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Owns and operates the servers and GPUs."
+    },
+    {
+      "name": "Northeast Precast",
+      "role": "builder",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Vineland-based construction partner."
+    },
+    {
+      "name": "Bloom Energy",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Supplier of the on-site fuel cells."
+    },
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "End customer buying dedicated GPU capacity from Nebius delivered from the Vineland site, rather than a direct lessee of the building."
+    },
+    {
+      "name": "City of Vineland",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "City Council and mayor approved a five-year payment-in-lieu-of-taxes ordinance in January 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-05-02",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The filing describes the New Jersey site as a phased development scalable up to this amount; it gives no figure for the initial phase."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-10",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-10",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2025-H1",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The May 2025 filing says construction of the build-to-suit facility began in early 2025."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Nebius signed a five-year agreement to provide Microsoft dedicated GPU capacity from the new Vineland data center, about 17.4 billion US dollars through 2031 and up to about 19.4 billion with options."
+    },
+    {
+      "event": "other",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Vineland approved a five-year payment-in-lieu-of-taxes ordinance for the project."
+    },
+    {
+      "event": "other",
+      "date": "2026-08-12",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Nebius reported it had delivered all capacity tranches under the Microsoft contract; the letter does not name the site."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Nebius says the AI factory is expected to be operational by 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "fuel_cell",
+      "description": "On-site Bloom Energy fuel cells described as off-grid generation, with Nebius saying it will bring and pay for its own power.",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://nebius.com/newsroom/nebius-announces-multi-billion-dollar-agreement-with-microsoft-for-ai-infrastructure",
+      "title": "Nebius announces multi-billion dollar agreement with Microsoft for AI infrastructure",
+      "publisher": "Nebius",
+      "published": "2025-09-08",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261005120903/https://nebius.com/newsroom/nebius-announces-multi-billion-dollar-agreement-with-microsoft-for-ai-infrastructure"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465925088312/tm2525580d1_6k.htm",
+      "title": "Nebius Group N.V. Form 6-K filed September 8, 2025",
+      "publisher": "U.S. Securities and Exchange Commission (Nebius Group filing)",
+      "published": "2025-09-08",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://nebius.com/vinelandnj",
+      "title": "Nebius in Vineland, NJ project page",
+      "publisher": "Nebius",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://assets.nebius.com/assets/729154ac-8d55-459f-9dd6-8f85a40da15b/NEW%20Vineland%20NJ%20Fact%20Sheet_7.10.26.pdf?cache-buster=2026-07-10T18:45:11.445Z",
+      "title": "Nebius x Vineland, NJ fact sheet",
+      "publisher": "Nebius",
+      "published": "2026-07-10",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465925044092/tm2513807-3_f3asr.htm",
+      "title": "Nebius Group N.V. Form F-3ASR registration statement",
+      "publisher": "U.S. Securities and Exchange Commission (Nebius Group filing)",
+      "published": "2025-05-02",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s6",
+      "url": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11:54:46.695Z",
+      "title": "Nebius Q2 2026 letter to shareholders",
+      "publisher": "Nebius",
+      "published": "2026-08-12",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260919171250/https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11%3A54%3A46.695Z"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Vineland,_New_Jersey",
+      "title": "Vineland, New Jersey",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260928153206/https://en.wikipedia.org/wiki/Vineland,_New_Jersey"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "The Vineland project page is undated; status_as_of is the date it was accessed, when it said construction was ongoing. Microsoft buys GPU capacity from Nebius rather than leasing the building."
+}

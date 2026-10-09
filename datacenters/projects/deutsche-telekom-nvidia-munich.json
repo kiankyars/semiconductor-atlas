@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "id": "deutsche-telekom-nvidia-munich",
+  "name": "Deutsche Telekom Industrial AI Cloud, Munich Tucherpark",
+  "aliases": [
+    "Industrial AI Cloud",
+    "Telekom AI factory Munich",
+    "KI-Fabrik München"
+  ],
+  "summary": "Deutsche Telekom and NVIDIA converted an existing underground data center in Munich's Tucherpark into an AI factory branded the Industrial AI Cloud, at a reported cost of about EUR 1 billion from Telekom and its partners. It is designed for about 10,000 NVIDIA Blackwell GPUs (around 0.5 exaflops) and uses water from the Eisbach stream for cooling. The site officially opened on 2026-02-04 with first customers live, though trade press reported the four GPU halls were still far from complete.",
+  "location": {
+    "country": "DE",
+    "admin1": "Bavaria",
+    "admin2": "Munich",
+    "locality": "Munich (Tucherpark)",
+    "lat": 48.1527,
+    "lon": 11.5991,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s3"
+    ],
+    "note": "Nominatim geocode of the street Am Tucherpark in Munich; sources name the Tucherpark complex beside the Eisbach but give no street address."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-02-04",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_inference",
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Deutsche Telekom",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Provides the physical infrastructure; its subsidiary T-Systems runs the infrastructure and platform layer."
+    },
+    {
+      "name": "Deutsche Telekom",
+      "role": "operator",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Telekom states that it operates the AI factory."
+    },
+    {
+      "name": "Polarise",
+      "role": "operator",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Telekom's data center partner that built the site with NVIDIA; heise reports that Polarise installs and operates the hardware."
+    },
+    {
+      "name": "NVIDIA",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Agile Robots",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named by Telekom as an example user of the cloud; TechCrunch also said its robots would install server racks at the site."
+    },
+    {
+      "name": "PhysicsX",
+      "role": "tenant",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Early customer."
+    },
+    {
+      "name": "Perplexity",
+      "role": "tenant",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named in the November 2025 announcement as planning in-country AI inference at the facility."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-11-04",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Heise reports Telekom's statement that the sum was invested by Telekom and its partners."
+    },
+    {
+      "metric": "accelerators",
+      "value": 10000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "accelerator_model": "NVIDIA Blackwell (DGX B200 and RTX PRO servers)",
+      "as_of": "2026-02-04",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "The November 2025 announcement gave up to 10,000 Blackwell GPUs."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 15,
+      "value_high": 20,
+      "qualifier": "range",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-02-04",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Trade press estimate of total supply and cooling capacity; not a company figure."
+    },
+    {
+      "metric": "floor_area",
+      "value": 10700,
+      "qualifier": "approximately",
+      "unit": "sq_m",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2026-02-04",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Area of the former data center that was gutted and modernized."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Trade press says work had been under way since mid-2025."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-02-04",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Official opening; Telekom said existing customers already used more than a third of its capacity."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Telekom says the facility runs entirely on renewable energy; the supply arrangement is not described. Cooling uses Eisbach stream water, and waste heat is to heat the Tucherpark quarter.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://techcrunch.com/2025/11/04/nvidia-deutsche-telekom-strike-e1b-partnership-for-a-data-center-in-munich",
+      "title": "Nvidia, Deutsche Telekom strike €1B partnership for a data center in Munich",
+      "publisher": "TechCrunch",
+      "published": "2025-11-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20251127060716/https://techcrunch.com/2025/11/04/nvidia-deutsche-telekom-strike-e1b-partnership-for-a-data-center-in-munich/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.telekom.com/de/newsroom/aktuelles/medieninformationen/2026/02/deutschlands-erste-ki-fabrik-fuer-die-industrie",
+      "title": "Deutschlands erste KI-Fabrik für die Industrie geht in München offiziell in Betrieb",
+      "publisher": "Deutsche Telekom",
+      "published": "2026-02-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://heise.de/-11165327",
+      "title": "Telekom data center to boost German AI performance by half",
+      "publisher": "heise online",
+      "published": "2026-02-04",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.gtai.de/en/invest/service/publications/markets-germany/industrial-strength-meets-ai-infrastructure-2011304",
+      "title": "Industrial strength meets AI infrastructure",
+      "publisher": "Germany Trade & Invest",
+      "published": "2026-07-15",
+      "accessed": "2026-10-09",
+      "type": "government"
+    }
+  ],
+  "notes": "Qualifies on investment (about EUR 1 billion); reported power is far below 100 MW. Status is partially operational because the opening press reported the halls far from fully fitted out, while Telekom described the site as officially in operation. Germany Trade & Invest reports Telekom plans to double to 20,000 GPUs without naming a site.",
+  "last_reviewed": "2026-10-09"
+}

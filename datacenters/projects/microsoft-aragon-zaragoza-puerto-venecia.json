@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-aragon-zaragoza-puerto-venecia",
+  "name": "Microsoft Zaragoza (Puerto Venecia) datacenter campus",
+  "aliases": [],
+  "summary": "Planned Microsoft datacenter campus in the city of Zaragoza beside the Puerto Venecia shopping area, one of three campuses in the PIGA Región MSFT regional plan. The November 2025 plan assigns it 57 hectares and about EUR 1.44 billion, with 50 MW secured for a first phase and up to 300 MW sought later via the Torrero-Valdeconsejo substation. The regional government declared it of general interest in September 2025 and began expropriating about 16.5 hectares of private land. Landowners and the ZeC party contested the project in 2026. Microsoft says only land clearing is authorized until the plan receives final approval.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragón",
+    "admin2": "Zaragoza",
+    "locality": "Zaragoza",
+    "lat": 41.6088,
+    "lon": -0.8872,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Nominatim point for Puerto Venecia (Torrero-La Paz district); sources place the campus next to Puerto Venecia and Parque Venecia, but the parcel boundary is not published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-09-04",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Gobierno de Aragón",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Declared the campus of general interest, started expropriation and is processing the PIGA regional plan."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1443000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Per-site figure in the November 2025 PIGA as reported by elDiario.es."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 50,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Second-phase aspiration per campus in the PIGA, as reported by elDiario.es; Forbes gives 250-300 MW per campus over about ten years."
+    },
+    {
+      "metric": "land_area",
+      "value": 57,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "elDiario.es reported in August 2026 that about 16.5 hectares of private land at the site were being expropriated."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Regional government declared the campus of general interest and opened expropriation of private land."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Initial approval of the PIGA Región MSFT plan covering La Muela, Villamayor de Gállego and Zaragoza, opening a public information period."
+    },
+    {
+      "event": "other",
+      "date": "2026-07-30",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "A modification of the PIGA was published in the Boletín Oficial de Aragón for public comment; the ZeC party filed 25 objections citing trees, flood risk and water and energy use."
+    },
+    {
+      "event": "first_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Forbes reported the first phase was expected to operate from 2030; Microsoft's plan foresees about four years for the first phase after final approval."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid supply through the Torrero-Valdeconsejo substation, starting at 132 kV with a later upgrade to 220 kV.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.eldiario.es/aragon/sociedad/microsoft-avanza-red-centros-datos-zaragoza-proyecta-mayores-regiones-europa_1_12768636.html",
+      "title": "Microsoft avanza con su red de centros de datos en Zaragoza, donde proyecta una de sus mayores regiones en Europa",
+      "publisher": "elDiario.es",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://forbes.es/empresas/828243/microsoft-obtiene-luz-verde-para-su-ambicioso-proyecto-de-centros-de-datos-en-aragon/",
+      "title": "Microsoft obtiene luz verde para su ambicioso proyecto de centros de datos en Aragón",
+      "publisher": "Forbes España",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.eldiario.es/aragon/economia/prioridad-extranjera-pp-vox-aragon-expropian-suelo-centro-datos-microsoft-2-euros-metro_1_13417031.html",
+      "title": "La 'prioridad extranjera' para PP y Vox en Aragón: expropian suelo para un centro de datos de Microsoft a 2 euros el metro",
+      "publisher": "elDiario.es",
+      "published": "2026-08-02",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20261006005223/https://www.eldiario.es/aragon/economia/prioridad-extranjera-pp-vox-aragon-expropian-suelo-centro-datos-microsoft-2-euros-metro_1_13417031.html"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.eldiario.es/aragon/politica/zec-presenta-25-alegaciones-plan-microsoft-exige-alcaldesa-zaragoza-paralizar-centro-datos_1_13487405.html",
+      "title": "ZeC presenta 25 alegaciones al plan de Microsoft y exige a la alcaldesa de Zaragoza paralizar un centro de datos",
+      "publisher": "elDiario.es",
+      "published": "2026-09-04",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "related_ids": [
+    "microsoft-aragon-la-muela",
+    "microsoft-aragon-villamayor-de-gallego"
+  ],
+  "notes": "Landowners facing expropriation say work has begun, which Microsoft disputes, saying only land clearing is permitted before the plan is finally approved. 2026 coverage also mentions a second large data centre planned on rural land at Cartuja Baja in Zaragoza without naming its developer; it is not part of this record. No government primary source was opened; Boletín Oficial de Aragón entries should be added when available.",
+  "last_reviewed": "2026-10-09"
+}

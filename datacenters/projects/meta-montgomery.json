@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-montgomery",
+  "name": "Meta Montgomery data center",
+  "aliases": [
+    "Montgomery Data Center"
+  ],
+  "summary": "Meta data center campus in Montgomery, Alabama. Announced in May 2024 as a 715,000-square-foot campus worth more than USD 800 million, it was expanded in September 2025 with two more buildings, bringing the campus to nearly 1.3 million square feet and the investment to more than USD 1.5 billion; Meta says it will be optimized for AI workloads. Meta's location list gives 2024 as the groundbreaking year. Meta names Alabama Power as its energy-planning partner and refers readers to Hensel Phelps for construction information. Meta's undated fact sheet gives job estimates well above those in its earlier posts.",
+  "location": {
+    "country": "US",
+    "admin1": "Alabama",
+    "locality": "Montgomery",
+    "lat": 32.3777,
+    "lon": -86.3091,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "City point from OpenStreetMap Nominatim; Meta gives no site address."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "notes": "The status rests on two undated Meta pages: the U.S. location list, which gives 2024 as the groundbreaking year, and the fact sheet, which describes the data center in the future tense. status_as_of is therefore the date both were read (2026-10-09). The fact sheet PDF shows no publication date; its embedded file creation date is 2026-09-02.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Hensel Phelps",
+      "role": "builder",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta refers readers to Hensel Phelps for construction information."
+    },
+    {
+      "name": "Alabama Power",
+      "role": "utility",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named in Meta's fact sheet as its energy-planning partner."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-05-02",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-09-23",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 715000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Original campus",
+      "as_of": "2024-05-02",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 1300000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-23",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as nearly 1.3 million square feet after the expansion."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-23",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "From Meta's undated fact sheet, read 2026-10-09; conflicts with the more than 1,000 given in Meta's posts and location list."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-23",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "From Meta's undated fact sheet, read 2026-10-09; conflicts with the more than 100 given in Meta's 2025 post and location list."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Meta's location list gives 2024 as the groundbreaking year."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-09-23",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Two additional buildings, nearly doubling the investment."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned its energy needs with Alabama Power, pays the full cost of the energy used and matches its use with clean and renewable energy; its 2025 post cites Meta-supported clean energy projects adding 227 MW in Alabama.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/2024/05/hello-montgomery/",
+      "title": "Hello, Montgomery!",
+      "publisher": "Meta Platforms",
+      "published": "2024-05-02",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260616180446/https://datacenters.atmeta.com/2024/05/hello-montgomery/"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/",
+      "title": "Montgomery, we're growing!",
+      "publisher": "Meta Platforms",
+      "published": "2025-09-23",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Montgomery-Data-Center.pdf",
+      "title": "Meta Montgomery Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://datacenters.atmeta.com/us-locations/",
+      "title": "United States - Meta Data Centers",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261007122559/https://datacenters.atmeta.com/us-locations/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

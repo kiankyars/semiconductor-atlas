@@ -1,0 +1,260 @@
+{
+  "schema_version": "1.0",
+  "id": "rowan-project-temple",
+  "name": "Rowan Project Temple",
+  "aliases": [
+    "Project Temple",
+    "Rowan Temple data center campus"
+  ],
+  "summary": "Rowan Digital Infrastructure is building a 300 MW hyperscale data center campus on about 700 acres in east Temple, Bell County, Texas, roughly 70 miles north of Austin. Temple's council gave final approval to annex and zone the land in 2025, and in January 2026 Rowan reported construction under way, with power secured through Oncor and an unnamed large technology company as the long-term customer. In May 2026 Rowan announced it had closed nearly USD 3 billion of debt financing, and it expects operations in 2027. A third and final building, the Lasso Building, is now planned on adjacent land, and Rowan has offered USD 38 million for city water programs and a planned community center.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Bell County",
+    "locality": "Temple",
+    "lat": 31.1056,
+    "lon": -97.4208,
+    "precision": "locality",
+    "source_ids": [
+      "s4",
+      "s1",
+      "s3"
+    ],
+    "note": "Wikipedia coordinates for Temple, Texas. Bisnow places the 707-acre campus near Bob White Road and Lorraine Avenue, and Rowan places it in east Temple, so the site lies east of this point."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-05-29",
+  "status_source_ids": [
+    "s2",
+    "s4"
+  ],
+  "parties": [
+    {
+      "name": "Rowan Digital Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Oncor",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "City of Temple",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "City council approved annexation and zoning and is party to Rowan's water infrastructure contribution."
+    },
+    {
+      "name": "Bell County",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Commissioners Court approved the project unanimously, per Rowan."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-05-27",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 700000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Rowan's stated minimum investment in Central Texas when construction began."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05-27",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Debt financing announced as closed for the Temple campus, not a total project cost."
+    },
+    {
+      "metric": "land_area",
+      "value": 707,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-29",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Rowan describes the site as roughly 700 acres."
+    },
+    {
+      "metric": "floor_area",
+      "value": 1000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-05-29",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-17",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Rowan calls the Lasso Building the third and final building of Project Temple."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 600,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 40,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "zoning_approved",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Temple City Council gave final approval to annex and zone the land. The year is derived: Bisnow's May 2026 article says the approval came last year."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Rowan's 5 January 2026 release reported construction under way; its May 2026 release says it broke ground earlier in the year."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-27",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Rowan announced it had closed nearly USD 3 billion of green debt financing for the campus; the release gives no separate closing date."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Rowan expects operations in 2027; Bisnow, writing in May 2026, expects construction to finish the following year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Power secured through a partnership with Oncor.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://rowan.com/rowan-powers-texas-growth-as-construction-begins-on-300-mw-temple-data-center/",
+      "title": "Rowan Powers Texas Growth as Construction Begins on 300 MW Temple Data Center",
+      "publisher": "Rowan Digital Infrastructure",
+      "published": "2026-01-05",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://rowan.com/rowan-closes-3b-green-financing-for-turnkey-hyperscale-campus-in-high-growth-texas-market/",
+      "title": "Rowan Closes $3B Green Financing for Turnkey Hyperscale Campus in High-Growth Texas Market",
+      "publisher": "Rowan Digital Infrastructure",
+      "published": "2026-05-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://rowan.com/rowan-to-invest-38-million-in-temple-water-infrastructure-and-sammons-community-center/",
+      "title": "Rowan to Invest $38 Million in Temple Water Infrastructure and Sammons Community Center",
+      "publisher": "Rowan Digital Infrastructure",
+      "published": "2026-09-17",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.bisnow.com/news/austin-san-antonio/data-center/sustainable-developer-bringing-data-center-campus-to-temple-134759",
+      "title": "Colorado Developer Secures $3B For Data Center Campus North Of Austin",
+      "publisher": "Bisnow",
+      "published": "2026-05-29",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

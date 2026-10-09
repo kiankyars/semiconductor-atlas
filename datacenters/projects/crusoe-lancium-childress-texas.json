@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "crusoe-lancium-childress-texas",
+  "name": "Crusoe and Lancium Childress AI data center campus",
+  "aliases": [
+    "Childress County Clean Campus"
+  ],
+  "summary": "Crusoe and Lancium announced in July 2026 a grid-connected AI data center campus of 1.0 GW on 270 acres owned by Lancium in Childress, Texas, repeating the partnership model used at Abilene. Lancium owns the land, secures the interconnection and develops the energy infrastructure, including behind-the-meter solar and storage; Crusoe designs, builds and operates the data center for an unnamed hyperscale technology company. Construction was expected to start in the third quarter of 2026, using closed-loop liquid cooling.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Childress County",
+    "locality": "Childress",
+    "lat": 34.4281,
+    "lon": -100.215,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "City centroid of Childress from Wikipedia (s3); the announcements name the city and county but give no address for the 270-acre site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-15",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Crusoe",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Designs and builds the data center."
+    },
+    {
+      "name": "Crusoe",
+      "role": "operator",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Lancium",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Owns the 270-acre site; secures the power interconnection and develops and manages the energy infrastructure."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-15",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Grid-connected capacity at full scale; IT versus total not stated."
+    },
+    {
+      "metric": "land_area",
+      "value": 270,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-07-15",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-15",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid-connected campus with the interconnection secured by Lancium.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Behind-the-meter solar described in Lancium's release.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Energy storage resources at the campus, described as supporting grid reliability and efficiency.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-and-lancium-announce-1-gigawatt-ai-data-center-campus-in-childress-texas",
+      "title": "Crusoe and Lancium Announce 1.0 Gigawatt AI Data Center Campus in Childress, Texas",
+      "publisher": "Crusoe",
+      "published": "2026-07-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://lancium.com/2026/07/15/crusoe-and-lancium-announce-1-0-gigawatt-ai-data-center-campus-in-childress-texas/",
+      "title": "Crusoe and Lancium Announce 1.0 Gigawatt AI Data Center Campus in Childress, Texas",
+      "publisher": "Lancium",
+      "published": "2026-07-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Childress,_Texas",
+      "title": "Childress, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260828090738/https://en.wikipedia.org/wiki/Childress,_Texas"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

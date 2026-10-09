@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "id": "google-cedar-rapids-iowa",
+  "name": "Google Cedar Rapids data center campus (Big Cedar Industrial Center)",
+  "aliases": [],
+  "summary": "Google's second Iowa data center campus, under construction at Alliant Energy's Big Cedar Industrial Center in Cedar Rapids, Linn County, where QTS has also announced a data center. Google confirmed the campus in May 2025 alongside a $7 billion two-year Iowa investment that also funds expansion in Council Bluffs; Google has not said how much goes to Cedar Rapids. Trade reporting said the first building would be finished in 2026, with four more planned and over 1,200 construction workers. Epoch AI, using satellite imagery and permit data, projects three buildings with about 261 MW of IT power and a capital cost near $9.9 billion by Q2 2027; these are analyst projections, not company figures.",
+  "location": {
+    "country": "US",
+    "admin1": "Iowa",
+    "admin2": "Linn County",
+    "locality": "Cedar Rapids",
+    "lat": 41.9172,
+    "lon": -91.7254,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2"
+    ],
+    "note": "OpenStreetMap point for the Big Cedar Industrial Center in Cedar Rapids, which the site owner names as the campus location; the Google parcel within the industrial center is not pinpointed."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s4"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "name": "Google",
+      "role": "owner",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 261,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst projection of IT power for three buildings by Q2 2027, derived from satellite imagery, permits and equipment counts; Google has not published a capacity figure."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 87,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 1",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst projection for the first building, which the analyst expects online around the end of 2026."
+    },
+    {
+      "metric": "investment",
+      "value": 9900000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst projection of total capital cost by Q2 2027; the page does not say what the figure includes and it is not a company-announced figure."
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "A first building plus four more planned in later phases."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-06",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-06-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Operational employees expected once the campus runs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2024-06-14",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Date land clearing began, per analyst review of satellite imagery."
+    },
+    {
+      "event": "announced",
+      "date": "2025-05-30",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Google confirmed the Cedar Rapids campus with its $7 billion Iowa investment announcement."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Trade press reported first-building completion expected in 2026; the analyst projection puts Building 1 online around the end of 2026."
+    }
+  ],
+  "power_sources": [],
+  "notes": "The $7 billion figure is an Iowa-wide two-year commitment shared with the Council Bluffs expansion and is not recorded as a campus investment. Power and cost figures here are Epoch AI estimates (projections from satellite imagery, permits and grid data), not company figures, and should be replaced if Google or regulators publish figures. Status rests on the analyst page, last updated 2026-10-05.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/feed/new-7-billion-investment-iowa/",
+      "title": "How Google is driving a new era of American innovation in Iowa",
+      "publisher": "Google",
+      "published": "2025-05-30",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.alliantenergy.com/news/news-center/2025/06/060425-googlebigcedarannouncement",
+      "title": "Google Announces Data Center Project at Big Cedar Industrial Center",
+      "publisher": "Alliant Energy",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "utility",
+      "archived_url": "https://web.archive.org/web/20261007051134/https://www.alliantenergy.com/news/news-center/2025/06/060425-googlebigcedarannouncement"
+    },
+    {
+      "id": "s3",
+      "url": "https://news.constructconnect.com/google-doubles-down-on-iowa-with-7-billion-data-center-investment",
+      "title": "Google Doubles Down on Iowa with $7 Billion Data Center Investment",
+      "publisher": "ConstructConnect",
+      "published": "2025-06-06",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260613145840/https://news.constructconnect.com/google-doubles-down-on-iowa-with-7-billion-data-center-investment"
+    },
+    {
+      "id": "s4",
+      "url": "https://epoch.ai/data/ai-data-centers/directory/google-cedar-rapids",
+      "title": "Google Cedar Rapids | AI data centers",
+      "publisher": "Epoch AI",
+      "published": "2026-10-05",
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s5",
+      "url": "https://datacenters.google/locations/iowa/",
+      "title": "Iowa - Google Data Center Location",
+      "publisher": "Google",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260918215012/https://datacenters.google/locations/iowa/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

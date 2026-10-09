@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.0",
+  "id": "aws-salem-township-pennsylvania",
+  "name": "AWS Salem Township Innovation Campus (Susquehanna)",
+  "aliases": [
+    "Cumulus data center campus",
+    "Salem Township Innovation Campus"
+  ],
+  "summary": "Amazon Web Services campus next to Talen Energy's Susquehanna nuclear plant in Salem Township, Luzerne County. AWS bought Talen's Cumulus campus, planned at up to 960 MW, in March 2024 and won township rezoning in May 2024. In June 2025 Talen agreed to supply Amazon 1,920 MW from Susquehanna through 2042, moving delivery onto the grid after a spring 2026 reconfiguration. The site was one of the first two named in Amazon's plan to invest at least $20 billion in Pennsylvania. Amazon says it operates a data center campus there and shows active construction since October 2025 toward 20 data centers.",
+  "location": {
+    "country": "US",
+    "admin1": "Pennsylvania",
+    "admin2": "Luzerne County",
+    "locality": "Salem Township",
+    "lat": 41.0889,
+    "lon": -76.1489,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Sources place the campus adjacent to the Susquehanna Steam Electric Station but give no address; coordinates are the plant location from its Wikipedia article, so the campus point is approximate."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s6",
+    "s2"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Amazon Web Services",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "name": "Amazon Web Services",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Bought the campus from Talen Energy in March 2024."
+    },
+    {
+      "name": "Talen Energy",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Original developer of the Cumulus campus and seller to AWS; supplies power from Susquehanna."
+    },
+    {
+      "name": "PPL Electric Utilities",
+      "role": "utility",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Handles transmission and delivery once supply moves in front of the meter."
+    },
+    {
+      "name": "Salem Township",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approved an industrial zoning district for the project and earlier agreed to a 10-year, 70% tax abatement."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 960,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-03-04",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Planned campus size when Talen sold Cumulus to AWS."
+    },
+    {
+      "metric": "land_area",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Size on Amazon's undated campus page (date accessed); the same site's projects overview gives about 1,062 acres acquired in 2024."
+    },
+    {
+      "metric": "land_area",
+      "value": 1062,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Undated project overview page; the date is when it was accessed."
+    },
+    {
+      "metric": "land_area",
+      "value": 1600,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-05-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Area Amazon sought to rezone in 2024."
+    },
+    {
+      "metric": "buildings",
+      "value": 20,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s6",
+        "s2"
+      ],
+      "note": "Count on Amazon's undated campus page (date accessed). In 2024 local reporting described plans for 15 more data center buildings beyond the existing one."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Undated campus page (date accessed); a 2024 Amazon estimate reported up to 600 jobs."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 600,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-05-30",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2024-03-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Talen announced the sale of the Cumulus campus to AWS for $650 million; this is a purchase price, not a build-out budget."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2024-05",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Township approved an industrial district enabling the campus."
+    },
+    {
+      "event": "other",
+      "date": "2025-06-11",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Talen and Amazon signed an expanded nuclear power purchase agreement."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Per the timeline on Amazon's campus project page."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "A news item dated 31 March 2026 on Amazon's campus page reports that an agency approved a data center water permit; the page names neither the agency nor the exact approval date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "nuclear",
+      "description": "Talen agreed in June 2025 to supply 1,920 MW from the Susquehanna nuclear plant through 2042, reaching full volume by 2032 at the latest, for AWS data centers in the region, possibly including other Pennsylvania sites. The earlier co-located arrangement shifts to grid (front-of-the-meter) delivery after transmission work timed for spring 2026. FERC had rejected a bid to raise the load the plant could serve directly.",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "After the reconfiguration, Susquehanna output flows to the PJM grid and PPL Electric Utilities delivers power, with Talen as Amazon's retail supplier.",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "notes": "Status: Amazon's 2024 purchase included an existing data center at the site, and Amazon's campus page says it operates a data center campus there while labelling the site as under active construction; its timeline lists commissioning and operation of the new buildings as to be determined, so the record uses partially operational. Amazon's project pages carry no publication date, so statements from them use the date accessed (2026-10-09). Amazon's at least $20 billion Pennsylvania figure covers several campuses and is not assigned to this site. Amazon and Talen also plan to explore small modular reactors.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://local21news.com/news/local/talen-energy-announces-sale-of-data-center-campus-to-amazon",
+      "title": "Talen Energy announces sale of data center campus to Amazon",
+      "publisher": "local21news (WHP)",
+      "published": "2024-03-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20240305032144/https://local21news.com/news/local/talen-energy-announces-sale-of-data-center-campus-to-amazon"
+    },
+    {
+      "id": "s2",
+      "url": "https://phillyvoice.com/amazon-pennsylvania-data-center-salem-luzerne-county",
+      "title": "Amazon gets zoning approval for massive data center campus in Luzerne County",
+      "publisher": "PhillyVoice",
+      "published": "2024-05-30",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260419105326/https://www.phillyvoice.com/amazon-pennsylvania-data-center-salem-luzerne-county/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.publicpower.org/periodical/article/talen-energy-expands-nuclear-energy-relationship-with-amazon",
+      "title": "Talen Energy expands nuclear energy relationship with Amazon",
+      "publisher": "American Public Power Association",
+      "published": "2025-06-11",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260512223622/https://www.publicpower.org/periodical/article/talen-energy-expands-nuclear-energy-relationship-with-amazon"
+    },
+    {
+      "id": "s4",
+      "url": "https://wnn.world-nuclear.org/articles/new-supply-agreement-expands-talen-amazon-partnership",
+      "title": "New supply agreement expands Talen-Amazon partnership",
+      "publisher": "World Nuclear News",
+      "published": "2025-06-12",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.aboutamazon.com/news/aws/amazon-pennsylvania-investment-cloud-infrastructure-ai-innovation",
+      "title": "Amazon plans to invest $20 billion in Pennsylvania to expand cloud computing infrastructure and advance AI innovation",
+      "publisher": "Amazon",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.amazoninnovationinpa.com/salem-township-innovation-campus/",
+      "title": "Salem Township Innovation Campus",
+      "publisher": "Amazon Innovation in PA (project website)",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260829150855/https://www.amazoninnovationinpa.com/salem-township-innovation-campus/"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.amazoninnovationinpa.com/projects-across-pennsylvania/",
+      "title": "Projects Across Pennsylvania",
+      "publisher": "Amazon Innovation in PA (project website)",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260829150902/https://www.amazoninnovationinpa.com/projects-across-pennsylvania/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

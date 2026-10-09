@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-bowling-green",
+  "name": "Meta Bowling Green data center",
+  "aliases": [
+    "Bowling Green Data Center"
+  ],
+  "summary": "Meta data center campus of 715,000 square feet in Middleton Township, Wood County, Ohio, near Bowling Green, announced in April 2025 as an investment of more than USD 800 million and described as optimized for Meta's AI workloads. Meta's location list gives 2025 as the groundbreaking year. In February 2026 the Ohio Power Siting Board approved, without public hearings, a 350 MW behind-the-meter gas plant with about 120 MW of batteries next to the data center, to be built and run by Will-Power OH. Meta names Toledo Edison, FirstEnergy and Williams as energy-planning partners and refers readers to JE Dunn Construction for construction information.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "admin2": "Wood County",
+    "locality": "Middleton Township",
+    "lat": 41.4743,
+    "lon": -83.6661,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Township point from OpenStreetMap Nominatim. BG Independent places the adjacent power plant at the northeast corner of Ohio 582 and Mercer Road, but no source gives the data center parcel itself."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "notes": "The status rests on two undated Meta pages: the U.S. location list, which gives 2025 as the groundbreaking year, and the fact sheet, which describes the data center in the future tense. status_as_of is therefore the date both were read (2026-10-09). The fact sheet PDF shows no publication date; its embedded file creation date is 2026-09-01.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "JE Dunn Construction",
+      "role": "builder",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta refers readers to JE Dunn Construction for construction information."
+    },
+    {
+      "name": "Toledo Edison",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Meta says it planned the site's energy needs with Toledo Edison from the start."
+    },
+    {
+      "name": "FirstEnergy",
+      "role": "utility",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named in Meta's fact sheet as an energy-planning partner."
+    },
+    {
+      "name": "Williams",
+      "role": "power_supplier",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Named in Meta's fact sheet as an energy-planning partner; its specific role is not described there."
+    },
+    {
+      "name": "Will-Power OH",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Will build and operate the adjacent behind-the-meter gas plant."
+    },
+    {
+      "name": "Ohio Power Siting Board",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approved the adjacent gas plant in February 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 350,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-02-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Net output of the behind-the-meter Apollo gas plant approved to serve only the adjacent Meta data center; the article gives no figure for the data center's own load."
+    },
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-04-09",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 715000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-09",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-09",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Meta's fact sheet gives 1,000 without a qualifier."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-04-09",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-04-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Meta's location list gives 2025 as the groundbreaking year."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-02-03",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Ohio Power Siting Board approval, under its expedited process, of the adjacent 350 MW Apollo gas plant."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "The Apollo Power Generation Facility, a 350 MW gas plant on 147 acres next to the data center, is approved to serve only the data center with no physical grid connection. Will-Power OH will build and run it, with part of the output expected by mid-2027 and the rest by late 2027.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "About 120 MW of battery storage approved as part of the same plant.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "Meta says it planned the site's energy needs with Toledo Edison, and names FirstEnergy and Williams as planning partners in its fact sheet; it says it pays the full cost of the energy used.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/2025/04/hello-bowling-green/",
+      "title": "Hello, Bowling Green!",
+      "publisher": "Meta Platforms",
+      "published": "2025-04-09",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929221639/https://datacenters.atmeta.com/2025/04/hello-bowling-green/"
+    },
+    {
+      "id": "s2",
+      "url": "https://bgindependentmedia.org/?p=115392",
+      "title": "Power plant for Meta data center in Wood County fast tracked – approved by state with no public hearings",
+      "publisher": "BG Independent News",
+      "published": "2026-02-03",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Bowling-Green-Data-Center.pdf",
+      "title": "Meta Bowling Green Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://datacenters.atmeta.com/us-locations/",
+      "title": "United States - Meta Data Centers",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261007122559/https://datacenters.atmeta.com/us-locations/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

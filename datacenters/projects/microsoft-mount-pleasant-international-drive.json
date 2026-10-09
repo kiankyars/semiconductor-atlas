@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-mount-pleasant-international-drive",
+  "name": "Microsoft Mount Pleasant International Drive datacenter campus",
+  "aliases": [],
+  "summary": "Planned six-building Microsoft datacenter campus along International Drive in Mount Pleasant, Wisconsin, on about 530 acres Microsoft says it bought in 2024. Village planning documents reported by WPR describe more than 3.5 million sq ft of development, including a 74,000 sq ft office and other buildings, with an estimated taxable value of more than USD 5.3 billion. The plan commission recommended the site plan with conditions including a traffic impact analysis and water-use compliance, and the village board approved it unanimously in January 2026. Microsoft called the plans preliminary and gave no construction timeline or energy estimate.",
+  "location": {
+    "country": "US",
+    "admin1": "Wisconsin",
+    "admin2": "Racine County",
+    "locality": "Mount Pleasant",
+    "lat": 42.7112,
+    "lon": -87.9339,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Nominatim point for International Drive in Mount Pleasant, the road the sources name for the campus; the parcel boundary is not published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-01-27",
+  "status_source_ids": [
+    "s4"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "A Microsoft spokesperson said the land was bought in 2024; a village spokesperson said it came from the village or private owners."
+    },
+    {
+      "name": "Village of Mount Pleasant",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "The plan commission recommended and the village board approved the site plan; the campus sits in a tax increment financing district."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 5300000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The municipality's estimated taxable value for the development, from village planning documents reported by WPR; not a company investment figure."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-27",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Datacenter buildings only; an office and other buildings are additional."
+    },
+    {
+      "metric": "floor_area",
+      "value": 3500000,
+      "qualifier": "more_than",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total development size from village planning documents reported by WPR; the office and other buildings are not broken out."
+    },
+    {
+      "metric": "land_area",
+      "value": 530,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2024",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "announced",
+      "date": "2026-01-20",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Site plans became public ahead of the plan commission meeting; Microsoft called them preliminary."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2026-01-26",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Plan commission recommended approval on 2026-01-21; the village board approved the site plan unanimously on 2026-01-26, allowing engineering plans and building permit applications to follow."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.wpr.org/news/microsoft-15-more-data-centers-mount-pleasant",
+      "title": "Microsoft wants to build 15 more data centers in Mount Pleasant",
+      "publisher": "Wisconsin Public Radio",
+      "published": "2026-01-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wpr.org/news/mount-pleasant-approves-microsoft-data-center-expansion",
+      "title": "Mount Pleasant commission approves Microsoft's plans for data center expansion",
+      "publisher": "Wisconsin Public Radio",
+      "published": "2026-01-21",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/01/21/microsoft-to-expand-data-center-in-mount-pleasant-",
+      "title": "Microsoft to expand data center in Mount Pleasant",
+      "publisher": "Spectrum News 1",
+      "published": "2026-01-21",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260205013908/https://spectrumnews1.com/wi/milwaukee/news/2026/01/21/microsoft-to-expand-data-center-in-mount-pleasant-"
+    },
+    {
+      "id": "s4",
+      "url": "https://spectrumnews1.com/wi/milwaukee/news/2026/01/27/mount-pleasant--microsoft--data-center-expansion--approval",
+      "title": "Mount Pleasant village board approves Microsoft data center expansion",
+      "publisher": "Spectrum News 1",
+      "published": "2026-01-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260223142131/https://spectrumnews1.com/wi/milwaukee/news/2026/01/27/mount-pleasant--microsoft--data-center-expansion--approval"
+    }
+  ],
+  "related_ids": [
+    "microsoft-fairwater-mount-pleasant",
+    "microsoft-mount-pleasant-durand-avenue"
+  ],
+  "notes": "Approved together with the nine-building Durand Avenue campus; the two campuses' combined estimated taxable value was reported as more than USD 13 billion. Microsoft told WPR that an energy-use estimate was not available.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "id": "openai-stargate-dona-ana-county",
+  "name": "Project Jupiter (Stargate New Mexico, Doña Ana County)",
+  "aliases": [
+    "Project Jupiter",
+    "Stargate New Mexico",
+    "Stargate Project Jupiter"
+  ],
+  "summary": "Project Jupiter is a four-building AI campus in Doña Ana County, New Mexico, named in September 2025 as one of the new Oracle-linked Stargate sites serving OpenAI. Analysts report STACK Infrastructure and BorderPlex Digital Assets as developers and an 18-year Oracle lease. The campus is off-grid: it was first planned around two gas microgrids, but in April 2026 Oracle and BorderPlex withdrew those air permit applications in favor of up to 2.45 GW of Bloom fuel cells, per analyst Cleanview. Analyst Epoch AI projects about 2.2 GW at completion around late 2028. Foundations were under way by early 2026, and in September 2026 more than 700 New Mexico residents were working on site.",
+  "location": {
+    "country": "US",
+    "admin1": "New Mexico",
+    "admin2": "Doña Ana County",
+    "lat": 32.3282,
+    "lon": -106.8494,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": "Doña Ana County centroid from OpenStreetMap Nominatim. Sources name only the county; a September 2026 community release about the project was datelined Santa Teresa and focused on Santa Teresa and Sunland Park, but no site address was found."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-03",
+  "status_source_ids": [
+    "s3",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "STACK Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Role reported by analysts Epoch AI and Cleanview; not confirmed in a company source opened here."
+    },
+    {
+      "name": "BorderPlex Digital Assets",
+      "role": "developer",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Role reported by analyst Cleanview; not confirmed in a company source opened here."
+    },
+    {
+      "name": "Oracle",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Analyst reporting, not a company disclosure: Cleanview reports an 18-year Oracle lease from BorderPlex, and Epoch AI lists Oracle as owner of the AI hardware. SoftBank's release groups the site with the Stargate sites being developed by Oracle."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Ultimate customer through Oracle under the Stargate program."
+    },
+    {
+      "name": "Bloom Energy",
+      "role": "power_supplier",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst Cleanview reports Bloom as the planned sole supplier of on-site fuel cells after the April 2026 switch away from gas turbines."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 2200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI's projection of total facility power at completion."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2450,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-04",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Planned Bloom fuel cell microgrid as reported by analyst Cleanview, not a company disclosure. It replaced an earlier design of two gas microgrids totaling about 2,210 MW whose air permit applications were withdrawn."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Reported by analysts Epoch AI and Cleanview, not a company disclosure."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 700,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-03",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "New Mexico residents working on site to build the campus."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named as one of three new Stargate sites under the OpenAI and Oracle agreement."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Analyst dates, not company disclosures: Cleanview dates the start to September 2025, while Epoch AI places it in Q4 2025 and saw foundation work in February 2026 imagery."
+    },
+    {
+      "event": "other",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The New Mexico State Land Office denied permits to route a proposed gas supply pipeline across state trust land, as reported by analyst Cleanview."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-27",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Oracle and BorderPlex announced a switch from gas turbines to Bloom fuel cells after withdrawing the turbine air permit applications; a new application restarted review. Reported by analyst Cleanview."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst estimate, not a company target: Cleanview judges the first buildings unlikely to come online before mid-2027."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Analyst estimate by Epoch AI, not a company date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "fuel_cell",
+      "description": "Single off-grid microgrid of Bloom solid oxide fuel cells of up to 2.45 GW, the plan after April 2026 as reported by analyst Cleanview.",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "Originally planned as two on-site natural gas microgrids, per analysts Epoch AI and Cleanview; the turbine design was dropped in April 2026, while a proposed gas supply pipeline still faces federal and state challenges.",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Developers committed to 500 MW of renewable energy by 2028 and another 500 MW by 2032, per analyst Cleanview.",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://group.softbank/en/news/press/20250924",
+      "title": "OpenAI, Oracle, and SoftBank expand Stargate with five new AI data center sites",
+      "publisher": "SoftBank Group Corp.",
+      "published": "2025-09-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.datacenterknowledge.com/data-center-site-selection/openai-expands-stargate-with-five-new-data-center-sites-across-us",
+      "title": "OpenAI Expands Stargate With Five New Data Center Sites Across US",
+      "publisher": "Data Center Knowledge (Bloomberg)",
+      "published": "2025-09-24",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260313130748/https://www.datacenterknowledge.com/data-center-site-selection/openai-expands-stargate-with-five-new-data-center-sites-across-us"
+    },
+    {
+      "id": "s3",
+      "url": "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand",
+      "title": "OpenAI Stargate: where the US sites stand",
+      "publisher": "Epoch AI",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "analyst",
+      "archived_url": "https://web.archive.org/web/20260517184326/https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    },
+    {
+      "id": "s4",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/stargate-jupiter",
+      "title": "Behind-the-meter data centers: Stargate Project Jupiter",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.bloomenergy.com/news/oracle-and-bloom-energy-announce-400000-in-support-for-roadrunner-food-bank-to-expand-food-access-in-santa-teresa-and-sunland-park/",
+      "title": "Oracle and Bloom Energy Announce $400,000 in Support for Roadrunner Food Bank to Expand Food Access in Santa Teresa and Sunland Park",
+      "publisher": "Bloom Energy",
+      "published": "2026-09-03",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260911192503/https://www.bloomenergy.com/news/oracle-and-bloom-energy-announce-400000-in-support-for-roadrunner-food-bank-to-expand-food-access-in-santa-teresa-and-sunland-park/"
+    }
+  ],
+  "notes": "Developer, lease, capacity and timing details come mainly from analysts Cleanview and Epoch AI and are not company disclosures. No primary source for the project's total investment was opened, so no investment figure is recorded. The September 2026 release attributes about $80 million in state and local tax revenue for January through June and more than $4.7 billion of expected economic impact to the project; these are not investment figures.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "id": "oracle-vantage-port-washington",
+  "name": "Vantage Lighthouse campus (Stargate Port Washington)",
+  "aliases": [
+    "Lighthouse",
+    "Project Lighthouse",
+    "Stargate Wisconsin"
+  ],
+  "summary": "Vantage Data Centers is building Lighthouse, a four-building campus on 672 acres on Port Washington's north side in Wisconsin, for Oracle and OpenAI under the Stargate program. OpenAI, Oracle and Vantage announced it as a Stargate site in October 2025, with close to 1 GW of capacity and completion targeted for 2028. Vantage now lists 902 MW, while local reporting and analyst Epoch AI cite 1.3 GW. The investment is reported at about $15 billion. Two buildings had topped out by mid-2026. We Energies supplies power; an Oracle subsidiary sued state regulators in June 2026 over financial-security rules, and in October 2026 We Energies proposed an Oracle share of nuclear output, pending approval.",
+  "location": {
+    "country": "US",
+    "admin1": "Wisconsin",
+    "admin2": "Ozaukee County",
+    "locality": "Port Washington",
+    "lat": 43.3886,
+    "lon": -87.8693,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s7",
+      "s8"
+    ],
+    "note": "Port Washington city centroid from OpenStreetMap Nominatim. Sources place the campus on the city's north side, just west of Interstate 43, without giving an address or parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-11",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Vantage Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Vantage Data Centers",
+      "role": "owner",
+      "source_ids": [
+        "s6"
+      ]
+    },
+    {
+      "name": "Oracle",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s6",
+        "s8"
+      ],
+      "note": "Named as a tenant with OpenAI, providing Oracle Cloud Infrastructure capacity for the project. Wisconsin Watch describes Oracle as co-developing the campus with OpenAI, and an Oracle subsidiary challenged state utility financial-security rules in court."
+    },
+    {
+      "name": "OpenAI",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "End user under the Stargate program."
+    },
+    {
+      "name": "We Energies",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s8"
+      ]
+    },
+    {
+      "name": "Whiting-Turner Contracting",
+      "role": "builder",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Contractor on the second building to top out."
+    },
+    {
+      "name": "The Weitz Co.",
+      "role": "builder",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Contractor on another of the data center buildings."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-23",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Announced as close to a gigawatt of AI capacity across four data centers."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 902,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Vantage's locations page lists the campus at 902 MW total without saying whether this is IT or facility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1300,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Local reporting on the 2025 city approval said the campus would use 1.3 GW of power; it does not reconcile this with the 902 MW figure."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1300,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI's projection of total facility power."
+    },
+    {
+      "metric": "investment",
+      "value": 8000000000,
+      "qualifier": "at_least",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure given by Vantage when the city approved the developer's agreement; Vantage said it was likely to grow."
+    },
+    {
+      "metric": "investment",
+      "value": 15000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-11",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 1900,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total land Vantage bought on the city's north side; only the southern 672 acres are being developed."
+    },
+    {
+      "metric": "land_area",
+      "value": 672,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-01",
+      "source_ids": [
+        "s1",
+        "s6"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-23",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 2500000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-01",
+      "source_ids": [
+        "s1",
+        "s6",
+        "s7"
+      ],
+      "note": "The 2025 plan described two buildings of about 560,000 sq ft and two of about 719,000 sq ft."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-23",
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "Mostly union jobs. In mid-2026 about 1,700 workers were on site, expected to reach about 5,000 going into winter."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-23",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s7"
+      ],
+      "note": "Figure from the October 2025 announcement and repeated in September 2026 coverage; in August 2025 Vantage spoke of about 300 long-term employees."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Port Washington approved a developer's agreement with Vantage for the campus."
+    },
+    {
+      "event": "announced",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "OpenAI, Oracle and Vantage announced the campus as a Stargate site."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-Q1",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Analyst estimate, not a company disclosure: Epoch AI dates the start from satellite imagery showing foundation work by February 2026; ground preparation may have begun earlier."
+    },
+    {
+      "event": "other",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "An Oracle subsidiary sued Wisconsin utility regulators in Ozaukee County court over tightened financial-security requirements for data center customers of We Energies."
+    },
+    {
+      "event": "other",
+      "date": "2026-06",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Second of four buildings topped out; the project was reported to be about 12 to 15 percent complete."
+    },
+    {
+      "event": "other",
+      "date": "2026-10-02",
+      "kind": "actual",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "We Energies proposed letting Oracle subscribe to 10 to 20 percent of Point Beach nuclear plant output to help serve the campus, pending regulatory approval."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s7"
+      ]
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supplied by We Energies, with Vantage saying no cost of acquiring the energy will be passed on to other utility customers.",
+      "source_ids": [
+        "s1",
+        "s8"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Roughly 70 percent of the campus supply is to come from zero-emission sources, which analyst Epoch AI lists as solar, wind and battery storage, with the rest offset through purchased credits.",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "Wind is part of the 70 percent clean supply mix described for the campus by analyst Epoch AI.",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Battery storage is part of the 70 percent clean supply mix described for the campus by analyst Epoch AI.",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "type": "nuclear",
+      "description": "Proposed subscription by Oracle to 10 to 20 percent of Point Beach nuclear plant generation through We Energies, awaiting Public Service Commission approval.",
+      "source_ids": [
+        "s8"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ozaukeepress.com/content/vantage-chief-calls-complex-large-even-its-standards",
+      "title": "Vantage chief calls complex large even by its standards",
+      "publisher": "Ozaukee Press",
+      "published": "2025-08-20",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20251007204317/https://ozaukeepress.com/content/vantage-chief-calls-complex-large-even-its-standards"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+      "title": "OpenAI, Oracle and Vantage Data Centers announce Stargate data center site in Wisconsin",
+      "publisher": "W.Media",
+      "published": "2025-10-23",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260520191926/https://w.media/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/"
+    },
+    {
+      "id": "s3",
+      "url": "https://vantage-dc.com/data-center-locations/north-america/",
+      "title": "Data Center Locations - North America",
+      "publisher": "Vantage Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand",
+      "title": "OpenAI Stargate: where the US sites stand",
+      "publisher": "Epoch AI",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "analyst",
+      "archived_url": "https://web.archive.org/web/20260517184326/https://epoch.ai/blog/openai-stargate-where-the-us-sites-stand"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.wpr.org/news/oracle-sues-wisconsin-utility-regulators-psc-financial-requirements-data-centers",
+      "title": "Oracle sues Wisconsin utility regulators over financial requirements for data centers",
+      "publisher": "Wisconsin Public Radio",
+      "published": "2026-06-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://ozaukeepress.com/node/113525",
+      "title": "Another data center tops out",
+      "publisher": "Ozaukee Press",
+      "published": "2026-07-01",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260708013759/https://ozaukeepress.com/node/113525"
+    },
+    {
+      "id": "s7",
+      "url": "https://fox11online.com/news/state/port-washington-data-center-project-lighthouse-construction-open-house-neighbor-concerns-companies-representatives-vantage-oracle-openai",
+      "title": "Companies behind Port Washington data centers meet with neighbors",
+      "publisher": "FOX 11 News",
+      "published": "2026-09-11",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s8",
+      "url": "https://wisconsinwatch.org/2026/10/wisconsin-we-energies-deal-oracle-data-center-nuclear-energy-power-point-beach-plant/",
+      "title": "We Energies strikes deal to power Oracle data center with nuclear energy",
+      "publisher": "Wisconsin Watch",
+      "published": "2026-10-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "notes": "Capacity figures differ by source and basis: close to 1 GW at announcement, 902 MW on Vantage's site, 1.3 GW of power in local reporting, and a 1.3 GW facility-power projection from analyst Epoch AI that is not a company disclosure. Reported investment rose from at least $8 billion in August 2025 to about $15 billion by mid-2026. Related-story headlines on news pages suggest Oracle later dropped its lawsuit, but no article opened here reports that.",
+  "last_reviewed": "2026-10-09"
+}

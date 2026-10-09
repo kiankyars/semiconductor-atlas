@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "id": "humain-dammam",
+  "name": "HUMAIN Dammam AI data centre",
+  "aliases": [],
+  "summary": "One of the first two data centres of HUMAIN, the Public Investment Fund's AI company, under construction in Dammam in the Eastern Province as of August 2025. HUMAIN's chief executive said each of the two initial sites, in Riyadh and Dammam, would open with up to 100 MW, using US chips including NVIDIA's latest accelerators, with launch targeted for the second quarter of 2026 (headlines said early 2026). The sources reviewed give no district, building details or investment figure, and no later progress report was found.",
+  "location": {
+    "country": "SA",
+    "admin1": "Eastern Province",
+    "locality": "Dammam",
+    "lat": 26.433,
+    "lon": 50.1,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Sources name Dammam only. Coordinates are the Dammam city coordinates from Wikipedia (Nominatim was rate-limiting requests), not the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-08-26",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "HUMAIN",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial capacity",
+      "as_of": "2025-08-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reuters, citing Bloomberg, gives up to 100 MW of initial capacity for each of the Riyadh and Dammam sites. Capacity's write-up of the same interview does not split the figure by site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2026-Q2",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Reports of the August 2025 interview give both early 2026 and the second quarter of 2026 as the launch target."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.arabnews.com/node/2613050/business-economy",
+      "title": "Saudi Arabia's Humain to launch data centers with US chips in early 2026, Bloomberg News reports",
+      "publisher": "Arab News (Reuters)",
+      "published": "2025-08-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://capacityglobal.com/news/humain-data-centre-construction-saudi-arabia/",
+      "title": "How Humain plans to use US chips in new Saudi Arabia AI data centres",
+      "publisher": "Capacity",
+      "published": "2025-08-26",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260218143715/https://capacityglobal.com/news/humain-data-centre-construction-saudi-arabia/"
+    }
+  ],
+  "notes": "Both sources report the same Bloomberg interview with HUMAIN's chief executive. The second-quarter 2026 launch target has passed, and no source opened for this record confirms whether the site is operating.",
+  "related_ids": [
+    "humain-riyadh",
+    "humain-al-saad-riyadh"
+  ],
+  "last_reviewed": "2026-10-09"
+}

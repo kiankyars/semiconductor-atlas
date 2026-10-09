@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "id": "compass-hoffman-estates",
+  "name": "Compass Datacenters Hoffman Estates campus",
+  "aliases": [
+    "Compass Chicago campus",
+    "Former Sears headquarters data center campus"
+  ],
+  "summary": "Compass Datacenters is redeveloping the former Sears headquarters site, nearly 200 acres in Hoffman Estates about 30 miles west of Chicago, into a hyperscale campus of five data centers. Compass closed on the site in September 2023 and held a kickoff in June 2024, saying demolition of the old Sears buildings would start that summer and data center construction would follow in 2025. Compass put local investment at about USD 10 billion once operational, a figure the village mayor called preliminary, and its markets page lists the campus at 200 MW. In October 2026 Compass still described the campus as being developed.",
+  "location": {
+    "country": "US",
+    "admin1": "Illinois",
+    "admin2": "Cook County",
+    "locality": "Hoffman Estates",
+    "lat": 42.0639,
+    "lon": -88.1469,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Wikipedia coordinates for Hoffman Estates. The campus occupies the former Sears headquarters site in the village; no cited source gives site coordinates."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-06",
+  "status_source_ids": [
+    "s3",
+    "s1"
+  ],
+  "parties": [
+    {
+      "name": "Compass Datacenters",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "ComEd",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named as a partner at the 2024 kickoff; the release does not describe its role further."
+    },
+    {
+      "name": "Village of Hoffman Estates",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Host municipality, named as a partner at the 2024 kickoff."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Figure on Compass's undated markets page as viewed on the access date."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-06-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Local investment once the campus is operational; the village mayor said the investment was still preliminary."
+    },
+    {
+      "metric": "land_area",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2024-06-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Described as nearly 200 acres."
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-06-13",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-06-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Local construction jobs cited at the 2024 kickoff."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2023-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-06-13",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Kickoff ceremony celebrating the start of work to redevelop the site; structural demolition of the Sears buildings was to begin that summer and take more than a year."
+    },
+    {
+      "event": "other",
+      "date": "2025",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Start of data center construction after demolition, as planned in June 2024; no cited source confirms that it began."
+    }
+  ],
+  "power_sources": [],
+  "notes": "Status rests on the start of site work (demolition) announced at the June 2024 kickoff and on Compass's October 2026 statement that it is developing the campus; no cited source confirms that vertical data center construction has begun.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.compassdatacenters.com/news/compass-kicks-off-development-of-its-first-hyperscale-campus-in-illinois/",
+      "title": "Compass Kicks Off Development Of Its First Hyperscale Data Center Campus in Illinois",
+      "publisher": "Compass Datacenters",
+      "published": "2024-06-13",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260510090040/https://www.compassdatacenters.com/news/compass-kicks-off-development-of-its-first-hyperscale-campus-in-illinois/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.compassdatacenters.com/data-center-markets/",
+      "title": "Data Center Markets - Compass Datacenters",
+      "publisher": "Compass Datacenters",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.compassdatacenters.com/news/village-of-hoffman-estates/",
+      "title": "Compass Datacenters Funds New Community Wellness Space at Hoffman Estates Health and Human Services",
+      "publisher": "Compass Datacenters",
+      "published": "2026-10-06",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

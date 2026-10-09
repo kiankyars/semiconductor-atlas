@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "id": "blackstone-calatorao",
+  "name": "QTS Calatorao data center campus",
+  "aliases": [
+    "Proyecto Rodes",
+    "Project Rodes",
+    "Blackstone Aragon data center"
+  ],
+  "summary": "Blackstone, through its data center company QTS, proposes a 224-hectare data center campus on industrial land beside the A-2 motorway near Calatorao in Zaragoza province, Aragon. Announced in October 2024 at up to EUR 7.5 billion and reported at 300 MW of electrical capacity at full build-out, it received a regional general-interest declaration (DIGA) in October 2024 and initial approval of its regional general-interest plan (PIGA) in August 2025. QTS describes it as a proposed development and has not published a construction schedule.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragón",
+    "admin2": "Zaragoza",
+    "locality": "Calatorao",
+    "lat": 41.5222,
+    "lon": -1.3464,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Nominatim centroid of the municipality of Calatorao; sources place the site on industrial land beside the A-2 about 7 km from the town centre, without a parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2025-08-27",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "QTS Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "name": "QTS Data Centers",
+      "role": "operator",
+      "source_ids": [
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "name": "Blackstone",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5",
+        "s6"
+      ],
+      "note": "Funds managed by Blackstone affiliates finance the project; QTS is a Blackstone portfolio company."
+    },
+    {
+      "name": "Gobierno de Aragón",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Granted the DIGA declaration and the initial PIGA approval."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7500000000,
+      "qualifier": "up_to",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-10-14",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Investment Monitor, citing Reuters, reported that half the site would be developed first and a further EUR 7.5 billion invested later for the remainder; that second tranche is not added here."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-10-16",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported electrical capacity when fully operational; not confirmed on the QTS page."
+    },
+    {
+      "metric": "land_area",
+      "value": 224,
+      "qualifier": "exact",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-10-14",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-10-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced by Aragon's regional president."
+    },
+    {
+      "event": "other",
+      "date": "2024-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Aragon's cabinet approved a declaration of regional general interest (DIGA), starting the planning process."
+    },
+    {
+      "event": "other",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Initial (not final) approval of the regional general-interest plan (PIGA), published in the Boletín Oficial de Aragón in late August 2025."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://brainsre.news/blackstone-7500-millones-data-center-aragon/",
+      "title": "Blackstone invertirá hasta 7.500 millones en un data center en Aragón",
+      "publisher": "Brainsre.news",
+      "published": "2024-10-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260606020551/https://brainsre.news/blackstone-7500-millones-data-center-aragon/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.investmentmonitor.ai/news/blackstone-to-make-8-2bn-data-centre-investment-in-spain",
+      "title": "Blackstone to make $8.2bn data centre investment in Spain",
+      "publisher": "Investment Monitor",
+      "published": "2024-10-16",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260613090146/https://www.investmentmonitor.ai/news/blackstone-to-make-8-2bn-data-centre-investment-in-spain/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.merca2.es/2024/10/15/aragon-centros-datos-blackstone-2029461/",
+      "title": "Aragón, la mina de oro española de los centros de datos: Microsoft, AWS, Meta y Blackstone",
+      "publisher": "Merca2",
+      "published": "2024-10-15",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20241202150640/https://www.merca2.es/2024/10/15/aragon-centros-datos-blackstone-2029461/"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.eldiario.es/aragon/politica/explosion-centros-datos-aragon-opacidad-choque-institucional-riesgo-colapso_1_12559021.amp.html",
+      "title": "La explosión de los centros de datos en Aragón: entre la opacidad, el choque institucional y el riesgo de colapso",
+      "publisher": "elDiario.es",
+      "published": "2025-08-27",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260815160219/https://www.eldiario.es/aragon/politica/explosion-centros-datos-aragon-opacidad-choque-institucional-riesgo-colapso_1_12559021.amp.html"
+    },
+    {
+      "id": "s5",
+      "url": "https://q.com/data-centers/calatorao-en/",
+      "title": "Calatorao data centre campus",
+      "publisher": "QTS Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://q.com/data-centers/calatorao/",
+      "title": "Campus de centros de datos de Calatorao",
+      "publisher": "QTS Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260420152346/https://q.com/data-centers/calatorao/"
+    }
+  ],
+  "notes": "Aragon cites up to 1,400 direct jobs in technology, construction and other sectors, and QTS about 1,400 direct plus up to 2,000 indirect jobs; these are not split by phase, so no jobs metric is recorded. No 2026 status update could be found; QTS's undated pages describe a proposed development worth several billion euros.",
+  "last_reviewed": "2026-10-09"
+}

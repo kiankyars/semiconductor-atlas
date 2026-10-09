@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "id": "wonder-valley-alberta",
+  "name": "Wonder Valley AI data centre park (Alberta)",
+  "aliases": [
+    "Wonder Valley",
+    "Wonder Valley AI Data Centre Park",
+    "Wonder Valley Alberta"
+  ],
+  "summary": "Proposed off-grid AI data centre park in the Greenview Industrial Gateway south of Grande Prairie, Alberta, announced in December 2024 by O'Leary Ventures with the Municipal District of Greenview and now led by O'Leary Digital. Backers describe up to 7.5 GW of on-site gas and geothermal generation built in phases, starting with 1.4 GW. O'Leary Digital said in February 2026 that Alberta permitting was underway; a December 2025 report said the site was undeveloped and construction might not start until late 2028. Sturgeon Lake Cree Nation lost an appeal of the gateway's water licence in April 2026; in August 2026 a judge refused an O'Leary-backed bid to halt a Nation challenge.",
+  "location": {
+    "country": "CA",
+    "admin1": "Alberta",
+    "admin2": "Municipal District of Greenview No. 16",
+    "locality": "Greenview Industrial Gateway (south of Grande Prairie)",
+    "lat": 54.8119,
+    "lon": -118.6834,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s3",
+      "s1",
+      "s8"
+    ],
+    "note": "Point taken from the Government of Alberta major projects inventory entry for Phase 1 and rounded; the developer's FAQ places the site in the Greenview Industrial Gateway about 42 km south of Grande Prairie. Parcel boundaries were not published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s4",
+    "s7",
+    "s3",
+    "s8"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "O'Leary Digital Limited",
+      "role": "developer",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s8"
+      ],
+      "note": "Named proponent in the Alberta inventory and in the February 2026 release."
+    },
+    {
+      "name": "O'Leary Ventures",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Named as the lead company when the project was announced in December 2024; later materials use O'Leary Digital."
+    },
+    {
+      "name": "Municipal District of Greenview No. 16",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s5",
+        "s6"
+      ],
+      "note": "Host municipality and partner; it owns the industrial gateway land and holds the area's Water Act licence."
+    },
+    {
+      "name": "PCL Construction",
+      "role": "builder",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Named as construction manager for the Alberta site."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 7500,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-02-18",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Described as off-grid generation to be delivered to hyperscale data centres over roughly a decade; the 2026 release calls it power generation capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-12-09",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "First-phase off-grid power system using natural gas and geothermal resources."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Undated developer FAQ (2026 copyright) gives a larger Phase 1 figure than the 2024 announcement and says it would support up to ten facilities of roughly 100 MW of IT load each."
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-12-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cost cited for the first 1.4 GW of power. Lifetime spending above 70 billion dollars was also cited without a currency, and the Alberta inventory lists a 12.0 billion dollar Phase 1 estimate without a currency code; neither is recorded as a metric."
+    },
+    {
+      "metric": "land_area",
+      "value": 13000,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Developer FAQ figure. The December 2024 announcement referred to a letter of intent for thousands of acres within and south of the gateway."
+    },
+    {
+      "metric": "floor_area",
+      "value": 35000000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-12-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Full build-out figure reported at announcement."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-12-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-04-07",
+      "kind": "actual",
+      "source_ids": [
+        "s6",
+        "s8"
+      ],
+      "note": "Alberta issued the Municipal District of Greenview a Water Act licence for up to 6 million cubic metres a year from the Smoky River for industrial use in the gateway; the developer FAQ cites this licence as the project's water access."
+    },
+    {
+      "event": "other",
+      "date": "2026-04-17",
+      "kind": "actual",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Alberta's Environmental Appeals Board dismissed Sturgeon Lake Cree Nation's appeal of the gateway water licence, finding the Nation not directly affected."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Original target for a first phase, as described in December 2025 reporting; the schedule has since slipped."
+    },
+    {
+      "event": "construction_started",
+      "date": "2028-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "A Greenview official said in late 2025 that construction might start in late 2028, versus an original plan to start by 2026."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Western Standard reported on 2026-08-14 that a judge rejected a bid backed by the O'Leary data centre side to halt a Sturgeon Lake Cree Nation challenge; the court, ruling date and subject of the challenge were not stated."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Off-grid generation fuelled by local natural gas is the primary planned supply.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "geothermal",
+      "description": "Geothermal energy is named as a complementary or backstop supply for the off-grid system.",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://calgary.tech/2024/12/09/kevin-oleary-leads-visionary-70-billion-ai-data-centre-project-in-alberta/",
+      "title": "Kevin O'Leary leads visionary $70 billion AI data centre project in Alberta",
+      "publisher": "Calgary.Tech",
+      "published": "2024-12-09",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260421012811/https://calgary.tech/2024/12/09/kevin-oleary-leads-visionary-70-billion-ai-data-centre-project-in-alberta/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.naturalgasworld.com/vc-unveils-plan-for-7.5-gw-data-centre-in-alberta-118787",
+      "title": "VC unveils plan for 7.5 GW data centre in Alberta",
+      "publisher": "Natural Gas World",
+      "published": "2024-12-09",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://majorprojects.alberta.ca/details/Wonder-Valley-AI-Data-Centre-Park/11477",
+      "title": "Wonder Valley AI Data Centre Park (Phase 1)",
+      "publisher": "Government of Alberta, Major Projects",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260929183026/https://majorprojects.alberta.ca/details/Wonder-Valley-AI-Data-Centre-Park/11477"
+    },
+    {
+      "id": "s4",
+      "url": "https://tools.prnewswire.com/en-us/live/20823/release/20260217EN90212",
+      "title": "O'Leary Digital Forms Joint Venture to Advance 7.5 GW Wonder Valley Utah Campus; Alberta Permitting Underway",
+      "publisher": "O'Leary Digital Limited via PR Newswire",
+      "published": "2026-02-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.geothermalcanada.org/news/2025/12/17/the-truth-about-wonder-valley",
+      "title": "The truth about Wonder Valley, Kevin O'Leary's data-centre dream",
+      "publisher": "The Logic (republished by Geothermal Canada)",
+      "published": "2025-12-10",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260706172634/https://www.geothermalcanada.org/news/2025/12/17/the-truth-about-wonder-valley"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.eab.gov.ab.ca/media/r2slqi1d/eab-25-014-md-of-greenview-final.pdf",
+      "title": "Standing Decision: Sturgeon Lake Cree Nation v Designated Director under the Water Act, re: Municipal District of Greenview No. 16, 2026 ABEAB 9",
+      "publisher": "Alberta Environmental Appeals Board",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "government",
+      "archived_url": "https://web.archive.org/web/20260518035010/https://www.eab.gov.ab.ca/media/r2slqi1d/eab-25-014-md-of-greenview-final.pdf"
+    },
+    {
+      "id": "s7",
+      "url": "https://waterportal.ca/water-news/wonder-valley-licence/",
+      "title": "First Nation's appeal on Wonder Valley water dismissed",
+      "publisher": "Hamilton Spectator (republished by Canada WaterPortal)",
+      "published": "2026-05-15",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s8",
+      "url": "https://www.olearydigital.ai/faq",
+      "title": "Wonder Valley FAQ",
+      "publisher": "O'Leary Digital",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s9",
+      "url": "https://www.westernstandard.news/news/judge-rejects-kevin-oleary-backed-data-centre-bid-to-halt-first-nation-challenge/75984",
+      "title": "Judge rejects Kevin O'Leary-backed data centre bid to halt First Nation challenge",
+      "publisher": "Western Standard",
+      "published": "2026-08-14",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260816183217/https://www.westernstandard.news/news/judge-rejects-kevin-oleary-backed-data-centre-bid-to-halt-first-nation-challenge/75984"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Status rests partly on two undated pages, the Government of Alberta major projects entry (stage: proposed) and the developer's FAQ (pre-construction, development stage), so status_as_of is the date they were read (2026-10-09)."
+}

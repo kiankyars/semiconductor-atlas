@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0",
+  "id": "applied-digital-polaris-forge-1",
+  "name": "Applied Digital Polaris Forge 1",
+  "aliases": [
+    "Polaris Forge 1 AI Factory Campus",
+    "Applied Digital Ellendale AI campus"
+  ],
+  "summary": "Applied Digital's AI data center campus in Ellendale, North Dakota, leased entirely to CoreWeave under roughly 15-year leases covering 400 MW of critical IT load. The first 100 MW building came online in two 50 MW phases in October and November 2025, and the 150 MW second building came online in two 75 MW phases by October 2026, for 250 MW operating. A third 150 MW building (ELN-04) is under construction, financed through a bridge loan later refinanced with senior secured notes in June 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "North Dakota",
+    "admin2": "Dickey County",
+    "locality": "Ellendale",
+    "lat": 46.0042,
+    "lon": -98.5253,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s6",
+      "s7",
+      "s9"
+    ],
+    "note": "Town centroid of Ellendale from its Wikipedia coordinates (s9), which also places the town in Dickey County; the company sources name the town but give no street address or parcel."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-07",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Applied Digital",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s7"
+      ]
+    },
+    {
+      "name": "CoreWeave",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": "Two leases for 250 MW of critical IT load were announced in June 2025 with an option on a further 150 MW; by October 2025 the company described the full 400 MW of critical IT load as leased to CoreWeave."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 400,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-10-27",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "note": "Critical IT load fully leased to CoreWeave at full buildout."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-01",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Critical IT load operating across two buildings and 10 data halls after the second 75 MW phase of Building 2."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 1",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building 2",
+      "as_of": "2026-10-01",
+      "source_ids": [
+        "s6",
+        "s7"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Third HPC building (ELN-04)",
+      "as_of": "2026-10-07",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s7"
+      ],
+      "note": "The May 2026 bridge-loan release and the October 2026 results call this the third AI data center at the campus, while the June 2026 notes release calls it the fourth building (ELN-04); the notes were to repay the bridge loan, so both refer to the same building."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-06-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Long-term design ambition for the campus; the same release says more than 1 GW of power was in various stages of load study."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Number of buildings contracted to CoreWeave at the time of the release."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-06-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Two leases with CoreWeave for 250 MW of critical IT load announced, with an option on 150 MW more; the release already described the second building as under construction."
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-10-27",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "First 50 MW phase of Building 1 reached ready for service."
+    },
+    {
+      "event": "other",
+      "date": "2025-11-24",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Second 50 MW phase brought Building 1 to its full 100 MW."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-04",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Closing of a 300 million US dollar bridge facility to fund construction of the third AI building."
+    },
+    {
+      "event": "other",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "First 75 MW phase of Building 2 reached ready for service; company materials give June 30 and July 1, 2026 for this step."
+    },
+    {
+      "event": "other",
+      "date": "2026-10-01",
+      "kind": "actual",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Second 75 MW phase completed Building 2, bringing the campus to 250 MW operating."
+    },
+    {
+      "event": "other",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target year given in June 2025 for the third 150 MW building to be ready for service."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/123/applied-digital-announces-250mw-ai-data-center-lease-with",
+      "title": "Applied Digital Announces 250MW AI Data Center Lease With CoreWeave in North Dakota",
+      "publisher": "Applied Digital",
+      "published": "2025-06-02",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261001152010/https://ir.applieddigital.com/news-events/press-releases/detail/123/applied-digital-announces-250mw-ai-data-center-lease-with"
+    },
+    {
+      "id": "s2",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at",
+      "title": "Applied Digital Achieves Ready for Service for Phase 1 at Polaris Forge 1 Building 1 for CoreWeave",
+      "publisher": "Applied Digital",
+      "published": "2025-10-27",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260828124810/https://ir.applieddigital.com/news-events/press-releases/detail/133/applied-digital-achieves-ready-for-service-for-phase-1-at"
+    },
+    {
+      "id": "s3",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/137/applied-digital-completes-phase-ii-ready-for-service-at",
+      "title": "Applied Digital Completes Phase II Ready for Service at Polaris Forge 1, Fully Energizing First 100 MW Building",
+      "publisher": "Applied Digital",
+      "published": "2025-11-24",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260921080658/https://ir.applieddigital.com/news-events/press-releases/detail/137/applied-digital-completes-phase-ii-ready-for-service-at"
+    },
+    {
+      "id": "s4",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/150/applied-digital-announces-300-million-senior-secured",
+      "title": "Applied Digital Announces $300 Million Senior Secured Bridge Facility",
+      "publisher": "Applied Digital",
+      "published": "2026-05-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://ir.applieddigital.com/_assets/_f6377ac165e571402492e7df82cea1ee/appliedblockchaininc/news/2026-06-09_Applied_Digital_Announces_Pricing_of_1_59_Billion__156.pdf",
+      "title": "Applied Digital Announces Pricing of $1.59 Billion of Senior Secured Notes to fund the Fourth Building at Polaris Forge 1",
+      "publisher": "Applied Digital",
+      "published": "2026-06-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/161/applied-digital-brings-an-additional-75-mw-of-ai",
+      "title": "Applied Digital Brings an Additional 75 MW of AI Infrastructure Online at Polaris Forge 1",
+      "publisher": "Applied Digital",
+      "published": "2026-10-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001144879/000114487926000057/apldq127earningsrelease.htm",
+      "title": "Applied Digital Reports Fiscal First Quarter 2027 Results (Form 8-K exhibit)",
+      "publisher": "U.S. Securities and Exchange Commission (Applied Digital filing)",
+      "published": "2026-10-07",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s8",
+      "url": "https://ir.applieddigital.com/news-events/press-releases/detail/159/applied-digital-reports-fiscal-fourth-quarter-and-full-year",
+      "title": "Applied Digital Reports Fiscal Fourth Quarter and Full Year 2026 Results",
+      "publisher": "Applied Digital",
+      "published": "2026-07-27",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s9",
+      "url": "https://en.wikipedia.org/wiki/Ellendale,_North_Dakota",
+      "title": "Ellendale, North Dakota",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260908075941/https://en.wikipedia.org/wiki/Ellendale,_North_Dakota"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "related_ids": [
+    "applied-digital-polaris-forge-2",
+    "applied-digital-polaris-forge-3"
+  ]
+}

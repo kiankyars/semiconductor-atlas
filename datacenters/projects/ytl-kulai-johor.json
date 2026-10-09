@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "id": "ytl-kulai-johor",
+  "name": "YTL Green Data Center Park, Kulai",
+  "aliases": [
+    "YTL Green Data Center Park",
+    "YTL AI Cloud Johor"
+  ],
+  "summary": "YTL Power International is developing a large data center park in Kulai, Johor, paired with a solar plant of about 500 MW and backup supply from the national grid. The park was first described as a 500 MW campus; GDS agreed in 2022 to co-develop part of it, and YTL announced an AI infrastructure collaboration with Nvidia in December 2023. YTL said in late 2025 that an Nvidia GB200-based AI data center at the park was operational, with about 300 MW being built and commissioned. In August 2026 it was reported to be bringing capacity online progressively and planning to raise the park's ceiling from 600 MW to 1,000 MW.",
+  "location": {
+    "country": "MY",
+    "admin1": "Johor",
+    "admin2": "Kulai District",
+    "locality": "Kulai",
+    "lat": 1.6569,
+    "lon": 103.6059,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Sources place the park in Kulai, Johor, about 30 km from Johor Bahru, without an address; coordinates are the OpenStreetMap Nominatim point for Kulai town."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-08-20",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "YTL Power International Berhad",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "name": "YTL Data Center Holdings Pte. Ltd.",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Wholly owned YTL Power subsidiary described as the initiator of the park."
+    },
+    {
+      "name": "GDS Holdings Limited",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed a 2022 partnership to co-develop 168 MW across eight facilities at the park; later status of this arrangement was not found."
+    },
+    {
+      "name": "YTL Communications Sdn Bhd",
+      "role": "operator",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "YTL's telecom subsidiary, named as owner and manager of the Nvidia-based AI infrastructure rather than of the whole park."
+    },
+    {
+      "name": "Nvidia",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "H100 GPUs were named in 2023; the AI data center reported operational in 2025 uses liquid-cooled GB200 NVL72 systems."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2023-12-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Original description of the park as a 500 MW campus matched by an equivalent amount of on-site solar."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 168,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "GDS co-development (eight facilities)",
+      "as_of": "2022-05-19",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 600,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-10-31",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "The Edge/EdgeProp refer to a 600 MW park; W.Media instead attaches 600 MW to backup grid supply, so the basis of this figure is unclear."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-08-20",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Planned increase of the Kulai park ceiling from 600 MW to 1,000 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-11-03",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "YTL's managing director described 300 MW as being built and commissioned on the site."
+    },
+    {
+      "metric": "land_area",
+      "value": 1640,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-31",
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2022-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "GDS disclosed a recently signed partnership with YTL Power to co-develop data center capacity at the park, with the first phase expected in service in 2024."
+    },
+    {
+      "event": "other",
+      "date": "2023-12-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "YTL and Nvidia announced an AI infrastructure collaboration to be hosted at the park, with a first phase targeted for mid-2024."
+    },
+    {
+      "event": "other",
+      "date": "2025-10-31",
+      "kind": "actual",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "YTL announced its Nvidia GB200-based AI data center at the park was complete and operational, with global hyperscalers among its customers."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reported plan to raise the park's planned capacity from 600 MW to 1,000 MW."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "solar",
+      "description": "A solar plant of about 500 MW supplies the park; earlier plans paired data center capacity with an equal amount of on-site solar.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "About 600 MW of backup supply from the national grid, per W.Media.",
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1526125/000110465922062648/tm2215932d2_ex99-1.htm",
+      "title": "GDS Holdings Limited Reports First Quarter 2022 Results",
+      "publisher": "GDS Holdings Limited (SEC Form 6-K exhibit)",
+      "published": "2022-05-19",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.ytlpowerinternational.com/press-releases/ytl-to-advance-ai-development-in-malaysia-in-collaboration-with-nvidia/",
+      "title": "YTL to Advance AI Development in Malaysia in Collaboration with NVIDIA",
+      "publisher": "YTL Power International Berhad",
+      "published": "2023-12-08",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://api.edgeprop.my/content/1914263/ytl-power-completes-first-nvidia-powered-ai-data-centre-johor-ytl-ai-cloud-now-operational",
+      "title": "YTL Power completes first Nvidia-powered AI data centre in Johor, YTL AI Cloud now operational",
+      "publisher": "EdgeProp Malaysia (The Edge)",
+      "published": "2025-10-31",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://w.media/ytl-power-completes-nvidia-powered-ai-data-centre-in-johor/",
+      "title": "YTL Power completes Nvidia-powered AI data centre in Johor",
+      "publisher": "W.Media",
+      "published": "2025-11-03",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260928115216/https://w.media/ytl-power-completes-nvidia-powered-ai-data-centre-in-johor/"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.edgeprop.my/content/1917178/ytl-power-develop-new-gigawatt-data-centre-campus-johor",
+      "title": "YTL Power to develop new gigawatt data centre campus in Johor",
+      "publisher": "EdgeProp Malaysia (The Edge)",
+      "published": "2026-08-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0",
+  "id": "terawulf-lake-mariner",
+  "name": "TeraWulf Lake Mariner data campus",
+  "aliases": [
+    "Lake Mariner Data Campus"
+  ],
+  "summary": "TeraWulf campus on the site of a retired coal-fired power plant in Barker, New York, that began operating in 2022, has hosted bitcoin mining and is being expanded for high-performance computing for AI. TeraWulf has leased 60 MW of critical IT load to Core42 and about 378 MW to Fluidstack, whose lease obligations carry Google credit support. About 102 MW of HPC capacity was earning revenue after building CB-3 was delivered in July 2026, while CB-4 and CB-5 (336 MW combined) were under construction. TeraWulf cites about 500 MW of near-term gross capacity and potential to reach about 750 MW.",
+  "location": {
+    "country": "US",
+    "admin1": "New York",
+    "admin2": "Niagara County",
+    "locality": "Barker",
+    "lat": 43.3275,
+    "lon": -78.5536,
+    "precision": "locality",
+    "source_ids": [
+      "s4",
+      "s7"
+    ],
+    "note": "Village coordinates from Wikipedia. The 10-K places the campus on a retired coal-fired plant site in Barker, on about 157 leased acres in Niagara County, but the sources reviewed give no exact site position."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-08-05",
+  "status_source_ids": [
+    "s6"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc",
+    "crypto_mining"
+  ],
+  "parties": [
+    {
+      "name": "TeraWulf",
+      "role": "developer",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "name": "TeraWulf",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "name": "Fluidstack",
+      "role": "tenant",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Leases for about 378 MW of critical IT load entered in August 2025; Google provides credit support for Fluidstack's lease obligations."
+    },
+    {
+      "name": "Core42",
+      "role": "tenant",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Lease for 60 MW of critical IT load entered in December 2024."
+    },
+    {
+      "name": "New York Power Authority",
+      "role": "power_supplier",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "90 MW allocation under an agreement executed in February 2022, with a ten-year term from NYPA's initial power delivery."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 60,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Core42 leases",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 378,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Fluidstack leases",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Per the 10-K; TeraWulf's February 2026 results list Fluidstack at 380 MW."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 102,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Revenue-generating HPC capacity after CB-3 was delivered in early July 2026."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 336,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "CB-4 and CB-5",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s6"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Near-term gross capacity as described in the 10-K."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 750,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "facility",
+      "applies_to": "campus",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Potential gross capacity after expansion, subject to further NYISO approvals."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 245,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4",
+        "s1"
+      ],
+      "note": "Legacy bitcoin mining capacity at the campus as of December 31, 2025; TeraWulf reported 245 MW of total Lake Mariner capacity in May 2025."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2022-03",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Operations at the campus commenced."
+    },
+    {
+      "event": "other",
+      "date": "2024-12",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Core42 lease for 60 MW of critical IT load entered."
+    },
+    {
+      "event": "other",
+      "date": "2025-08-14",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Fluidstack signed two 10-year HPC colocation agreements for more than 200 MW of critical IT load, with Google backstopping $1.8 billion of lease obligations."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2025-08-18",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "A CB-5 lease raised Fluidstack's commitment to about 360 MW of critical IT load; the Google backstop rose to about $3.2 billion."
+    },
+    {
+      "event": "other",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "CB-3 delivered, meeting the conditions for $600 million of Google credit support to take effect."
+    },
+    {
+      "event": "other",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Phased delivery and rent commencement for CB-4."
+    },
+    {
+      "event": "other",
+      "date": "2027-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "CB-5 targeted to begin phased delivery in early 2027."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Connection to the NYISO Zone A grid over dual 345 kV lines, with power described as predominantly zero-carbon and a 90 MW New York Power Authority allocation.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/107/terawulf-reports-first-quarter-2025-results",
+      "title": "TeraWulf Reports First Quarter 2025 Results",
+      "publisher": "TeraWulf",
+      "published": "2025-05-09",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/112/terawulf-signs-200-mw-10-year-ai-hosting-agreements-with-fluidstack",
+      "title": "TeraWulf Signs 200+ MW, 10-Year AI Hosting Agreements with Fluidstack",
+      "publisher": "TeraWulf",
+      "published": "2025-08-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
+      "title": "TeraWulf Announces Fluidstack Expansion with 160 MW CB-5 Lease at Lake Mariner",
+      "publisher": "TeraWulf",
+      "published": "2025-08-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm",
+      "title": "TeraWulf Inc. Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "U.S. Securities and Exchange Commission (TeraWulf filing)",
+      "published": "2026-02-27",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing",
+      "archived_url": "https://web.archive.org/web/20260929023534/https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm"
+    },
+    {
+      "id": "s5",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/132/terawulf-reports-fourth-quarter-and-full-year-2025-results",
+      "title": "TeraWulf Reports Fourth Quarter and Full Year 2025 Results",
+      "publisher": "TeraWulf",
+      "published": "2026-02-26",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+      "title": "TeraWulf Reports Second Quarter 2026 Results",
+      "publisher": "TeraWulf",
+      "published": "2026-08-05",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Barker,_Niagara_County,_New_York",
+      "title": "Barker, Niagara County, New York",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

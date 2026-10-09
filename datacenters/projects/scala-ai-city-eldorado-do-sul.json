@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0",
+  "id": "scala-ai-city-eldorado-do-sul",
+  "name": "Scala AI City (Eldorado do Sul)",
+  "aliases": [
+    "Scala AI City"
+  ],
+  "summary": "Scala Data Centers plans a data centre city in Eldorado do Sul, in the Porto Alegre metropolitan region of Rio Grande do Sul, Brazil. It signed an agreement with the state government in September 2024 for a first phase of 54 MW of IT capacity, about BRL 3 billion, with potential growth to 4,750 MW and total investment the company puts as high as BRL 500 billion. Eldorado do Sul passed a law in December 2024 adding the site to the urban perimeter, and in May 2025 Brazil's Ministry of Mines and Energy authorized a phased grid connection of up to 5 GW. No construction start had been reported in the sources reviewed.",
+  "location": {
+    "country": "BR",
+    "admin1": "Rio Grande do Sul",
+    "locality": "Eldorado do Sul",
+    "lat": -30.0839,
+    "lon": -51.6158,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Municipal reference point for Eldorado do Sul (Wikipedia infobox); the releases name the municipality but not the parcel."
+  },
+  "status": "announced",
+  "status_as_of": "2025-05-14",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Scala Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Government of Rio Grande do Sul",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed a letter of intent with Scala through its economic development department."
+    },
+    {
+      "name": "Municipality of Eldorado do Sul",
+      "role": "government",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Enacted Municipal Law 5.949/2024 expanding the urban perimeter to include the site."
+    },
+    {
+      "name": "Brazil Ministry of Mines and Energy",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Authorized a phased connection of up to 5 GW to the national grid."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 54,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-05-14",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 4750,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-05-14",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Described as potential capacity at full build-out; the releases do not say whether it is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 5000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "permitted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-05-14",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Ramp-up connection to the national interconnected system authorized by the Ministry of Mines and Energy."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "approximately",
+      "unit": "BRL",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-12-18",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "The September 2024 release gave the same phase as USD 500 million."
+    },
+    {
+      "metric": "investment",
+      "value": 500000000000,
+      "qualifier": "up_to",
+      "unit": "BRL",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-05-14",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Potential total at full build-out. The releases also cite USD figures that differ (USD 90 billion in September 2024, USD 80 billion in December 2024)."
+    },
+    {
+      "metric": "land_area",
+      "value": 1730,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-09-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Later releases give the site as more than 7 million square metres (December 2024) and 10 million square metres (May 2025), so stated areas vary."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-09-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Letter of intent signed with the Rio Grande do Sul government."
+    },
+    {
+      "event": "zoning_approved",
+      "date": "2024-12-18",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Mayor signed Municipal Law 5.949/2024 bringing the site into the urban perimeter; date is the release date."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2025-05-14",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Federal authorization for a phased grid connection of up to 5 GW; date is the release date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Connection to Brazil's national interconnected system; Scala says the campus will use 100% renewable, certified energy.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.prnewswire.com/news-releases/with-an-initial-investment-of-usd-500-million-scala-data-centers-and-rio-grande-do-sul-government-sign-agreement-for-largest-digital-infrastructure-project-in-the-state-of-southern-brazil-302245667.html",
+      "title": "With an initial investment of USD 500 million, Scala Data Centers and Rio Grande do Sul government sign agreement for largest digital infrastructure project in the state of southern Brazil",
+      "publisher": "Scala Data Centers via PR Newswire",
+      "published": "2024-09-11",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.prnewswire.com/news-releases/mayor-of-eldorado-do-sul-brazil-approves-law-enabling-the-construction-of-latin-americas-first-data-center-city-302335569.html",
+      "title": "Mayor of Eldorado do Sul, Brazil, Approves Law Enabling the Construction of Latin America's First Data Center City",
+      "publisher": "Scala Data Centers via PR Newswire",
+      "published": "2024-12-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.prnewswire.com/news-releases/scala-ai-city-brazils-ministry-of-mines-and-energy-approves-5-gw-power-connection-for-data-center-city-in-rio-grande-do-sul-302455610.html",
+      "title": "Scala AI City: Brazil's Ministry of Mines and Energy approves 5 GW power connection for data center city in Rio Grande do Sul",
+      "publisher": "Scala Data Centers via PR Newswire",
+      "published": "2025-05-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

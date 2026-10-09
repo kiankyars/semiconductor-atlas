@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0",
+  "id": "crusoe-tallgrass-cheyenne",
+  "name": "Crusoe and Tallgrass AI data center campus near Cheyenne (Project Jade)",
+  "aliases": [
+    "Project Jade",
+    "Crusoe Wyoming campus"
+  ],
+  "summary": "Crusoe and Tallgrass announced in July 2025 an AI data center campus in southeast Wyoming, starting at 1.8 GW and designed to scale to 10 GW, powered mainly by natural gas from Tallgrass's Wyoming assets and sited near Tallgrass's CO2 sequestration hub. Analyst Cleanview identifies it as Project Jade in Laramie County outside Cheyenne and reports a 900 MW fuel cell air permit application, county approval of the Switchgrass Industrial Park, unanimous site plan approval in January 2026, and phase 1 on-site generation since raised to 2.7 GW. Cleanview gives targets of early 2026 for construction and Q2 2027 for first energization. No tenant has been named.",
+  "location": {
+    "country": "US",
+    "admin1": "Wyoming",
+    "admin2": "Laramie County",
+    "lat": 41.2737,
+    "lon": -104.7268,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Laramie County centroid from OpenStreetMap Nominatim. The announcement says only southeast Wyoming near Tallgrass's CO2 sequestration hub; analyst Cleanview places the project in Laramie County outside Cheyenne. No address or parcel was found."
+  },
+  "status": "announced",
+  "status_as_of": "2025-07-24",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Crusoe",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Tallgrass",
+      "role": "power_supplier",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Contributes its Wyoming natural gas, water and CO2 assets; analyst Cleanview describes the Blackstone-backed company as developing the adjacent power generation facility."
+    },
+    {
+      "name": "American Electric Power",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Analyst report, not a company disclosure: Cleanview says AEP appears to be involved, citing AEP's purchase of up to 900 MW of Bloom fuel cells and a 20-year offtake with an unnamed customer. No company has confirmed the link to this campus."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1800,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial campus",
+      "as_of": "2025-07-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The announcement does not say whether this is IT or facility power."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 10000,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-07-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Design scale at full build-out."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 2700,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-01",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Analyst report, not a company disclosure: Cleanview says phase 1 on-site generation grew from 1.8 GW to 2.7 GW by January 2026, combining up to 900 MW of fuel cells with roughly 1.8 GW of gas turbines."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-07-24",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-09-25",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "BFC Power LLC applied to the Wyoming Department of Environmental Quality for a fuel cell facility of up to 900 MW, as reported by analyst Cleanview rather than disclosed by the companies."
+    },
+    {
+      "event": "other",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Laramie County approved the Switchgrass Industrial Park, per analyst Cleanview's project timeline; the source does not say whether this was a zoning decision."
+    },
+    {
+      "event": "permit_approved",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Laramie County commissioners unanimously approved the site plans on January 5-6, 2026, as reported by analyst Cleanview rather than disclosed by the companies."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-15",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Tallgrass and Mitsubishi Power announced turbines for a gas-fired Cheyenne Power Hub dedicated to a large data center in the Switchgrass Industrial Park. The release does not name Crusoe."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target reported by analyst Cleanview, not a company disclosure; no confirmation of a start was found."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-Q2",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target for energizing the first buildings as reported by analyst Cleanview, not a company disclosure."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "On-site gas generation drawing on Tallgrass's Wyoming natural gas assets, with roughly 1.8 GW of turbines reported by analyst Cleanview. Tallgrass separately announced a Cheyenne Power Hub (about 1,150 MW in phase 1, over $7 billion) for an unnamed data center in the same industrial park.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "fuel_cell",
+      "description": "Bloom Energy solid oxide fuel cells of up to 900 MW, per a state air quality application summarized by analyst Cleanview rather than a company disclosure.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Future regional renewable projects are expected to supplement gas, and the site's proximity to Tallgrass's CO2 sequestration hub is meant to allow carbon capture.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://tallgrass.com/newsroom/press-releases/Crusoe",
+      "title": "Crusoe and Tallgrass Announce AI Data Center in Wyoming",
+      "publisher": "Tallgrass",
+      "published": "2025-07-24",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://cleanview.co/reports/behind-the-meter-data-centers/full-report/project-jade",
+      "title": "Behind-the-meter data centers: Project Jade",
+      "publisher": "Cleanview",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "analyst"
+    },
+    {
+      "id": "s3",
+      "url": "https://tallgrass.com/newsroom/press-releases/tallgrass-and-mitsubishi-power-americas-announce-turbine-allocation-for-cheyenne-power-hub-051526",
+      "title": "Tallgrass and Mitsubishi Power Americas Announce Turbine Allocation for Cheyenne Power Hub",
+      "publisher": "Tallgrass",
+      "published": "2026-05-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Linking the Cheyenne Power Hub to this campus rests on analyst Cleanview naming the hub as the project's power facility and listing the Switchgrass Industrial Park approval in its timeline; neither Tallgrass release opened here ties the two explicitly. Cleanview's figures and dates are analyst reporting, not company disclosures. No source confirming that data center construction has started was found, so status remains announced.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-lebanon-indiana",
+  "name": "Meta Lebanon data center campus",
+  "aliases": [
+    "Lebanon Data Center"
+  ],
+  "summary": "Meta campus of more than USD 10 billion in the LEAP Innovation and Research District in Lebanon, Indiana, Meta's second data center in the state. The state describes a 1,500-acre site with 13 buildings, 10 of them data centers, built in up to six phases; Meta gives a campus size of roughly 4 million square feet. Ground was broken on 11 February 2026, and local reporting expected operations in 2027 or early 2028. Meta planned its power needs with Wabash Valley Power Alliance and Boone Power, and Citizens Energy Group has said it plans to supply water. Indiana granted a performance-based 35-year sales tax exemption tied to at least USD 1 billion of investment in the first six years.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "locality": "Lebanon",
+    "lat": 40.0484,
+    "lon": -86.4692,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "City point from OpenStreetMap Nominatim; sources place the campus in Lebanon's LEAP district but give no parcel or address."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-02-11",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "notes": "Meta's fact sheet PDF (s5) shows no publication date; its embedded file creation date is 2026-09-02.",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Mortenson",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named among Meta's partners on a page that refers readers to the project's general contractors for construction information."
+    },
+    {
+      "name": "Turner Construction Company",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named among Meta's partners on a page that refers readers to the project's general contractors for construction information."
+    },
+    {
+      "name": "Faith Technologies",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named among Meta's partners on a page that refers readers to the project's general contractors for construction information."
+    },
+    {
+      "name": "Wabash Valley Power Alliance",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Named by Meta as an energy-planning partner; Meta says it pays the full cost of the energy used."
+    },
+    {
+      "name": "Boone Power",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Named by Meta as an energy-planning partner."
+    },
+    {
+      "name": "Citizens Energy Group",
+      "role": "utility",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Water utility that said it plans to supply the site."
+    },
+    {
+      "name": "Indiana Economic Development Corporation",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Committed a performance-based 35-year data center sales tax exemption that requires at least USD 1 billion of investment within six years and can be extended to as many as 50 years with further investment."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-02-11",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "To be invested across up to six phases."
+    },
+    {
+      "metric": "land_area",
+      "value": 1500,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-11",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 4000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-11",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 13,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Ten data center buildings plus buildings for logistics and warehousing, network and administrative support."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-11",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Meta's announcement post says about 4,000 at peak."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-11",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Meta's announcement post says more than 300; its fact sheet gives 300."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-02-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Meta described it as its second data center in Indiana."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026-02-11",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Groundbreaking attended by Gov. Mike Braun and Meta executives."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported expectation of operations in 2027 or early 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned its energy needs with Wabash Valley Power Alliance and Boone Power and will pay the full cost of its energy, including any upgrades needed to power the site.",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://iedc.in.gov/events/news/details/2026/02/11/gov.-braun-breaks-ground-on-10b-meta-data-center-campus-at-leap-district",
+      "title": "Gov. Braun Breaks Ground on $10B Meta Data Center Campus at LEAP District",
+      "publisher": "Indiana Economic Development Corporation",
+      "published": "2026-02-11",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.atmeta.com/2026/02/hello-lebanon/",
+      "title": "Hello, Lebanon!",
+      "publisher": "Meta Platforms",
+      "published": "2026-02-11",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.wrtv.com/news/local-news/meta-breaks-ground-on-10b-data-center-campus-in-lebanon",
+      "title": "Meta breaks ground on $10B data center campus in Lebanon",
+      "publisher": "WRTV",
+      "published": "2026-02-11",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260307115356/https://www.wrtv.com/news/local-news/meta-breaks-ground-on-10b-data-center-campus-in-lebanon"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.yahoo.com/news/articles/meta-pledges-responsible-water-energy-101838480.html",
+      "title": "Meta pledges responsible water, energy use at $10B Lebanon data center",
+      "publisher": "Indianapolis Star (via Yahoo News)",
+      "published": "2026-02-12",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Lebanon-Data-Center.pdf",
+      "title": "Meta Lebanon Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-kansas-city",
+  "name": "Meta Kansas City data center",
+  "aliases": [
+    "Kansas City Data Center"
+  ],
+  "summary": "Meta data center in Kansas City, Missouri, announced in March 2022 as an investment of more than USD 800 million and reported to be serving traffic in August 2025. Meta later put its Missouri investment at more than USD 1 billion and, in its fact sheet, USD 1.2 billion. Construction began in 2022, with an average of 1,500 skilled trade workers on site at peak. Evergy is the utility; Meta says it worked with Evergy on a tariff that lets customers contract for new renewable energy, and it reports three Missouri clean energy projects totaling 599 MW. No power capacity for the data center itself has been published.",
+  "location": {
+    "country": "US",
+    "admin1": "Missouri",
+    "locality": "Kansas City",
+    "lat": 39.1001,
+    "lon": -94.5781,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "City point from OpenStreetMap Nominatim; Meta names Kansas City but not the site. Meta's local funding goes to Clay County, Platte County and Kansas City-area groups, but no parcel is published."
+  },
+  "status": "operational",
+  "status_as_of": "2025-08-20",
+  "status_source_ids": [
+    "s2"
+  ],
+  "notes": "Meta's fact sheet PDF (s3) shows no publication date; its embedded file creation date is 2026-09-02. Figures taken only from it carry the date it was read (2026-10-09).",
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Evergy",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Meta calls Evergy its utility partner."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2022-03-24",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Stated as Meta's investment in the state of Missouri."
+    },
+    {
+      "metric": "investment",
+      "value": 1200000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "From Meta's undated fact sheet, read 2026-10-09; labeled as data center investment in Missouri."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1300,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2022-03-24",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1500,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Meta describes this as the average number of skilled trade workers on site at peak construction."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-08-20",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Meta's 2022 announcement gave about 100."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-03-24",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2022",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Meta announced on 2025-08-20 that the data center was serving traffic; no earlier go-live date is given."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Served by Evergy. Meta says it worked with Evergy on a market-based tariff that lets customers contract for new renewable energy, pays the full cost of its energy, and reports three Missouri projects adding 599 MW of clean energy.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/2022/03/hello-kansas-city/",
+      "title": "Hello, Kansas City!",
+      "publisher": "Meta Platforms",
+      "published": "2022-03-24",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260616183749/https://datacenters.atmeta.com/2022/03/hello-kansas-city/"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.atmeta.com/2025/08/kansas-city-we-are-online/",
+      "title": "Kansas City, we are online!",
+      "publisher": "Meta Platforms",
+      "published": "2025-08-20",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Metas-Kansas-City-Data-Center.pdf",
+      "title": "Meta Kansas City Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

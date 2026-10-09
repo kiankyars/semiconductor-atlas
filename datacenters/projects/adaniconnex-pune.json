@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "id": "adaniconnex-pune",
+  "name": "AdaniConneX Pune data centre campus",
+  "aliases": [],
+  "summary": "AdaniConneX, the Adani group's data centre business, lists a Pune campus with a potential capacity of 250 MW of IT load and a first phase live from October 2025. Adani reported in July 2026 that 9.6 MW of the campus's second phase had been handed over to a customer. The company says the campus can use up to 100% renewable power, and a February 2026 Adani group release links its Microsoft partnership to the Pune and Hyderabad campuses without describing the terms. The site address has not been published.",
+  "location": {
+    "country": "IN",
+    "admin1": "Maharashtra",
+    "admin2": "Pune",
+    "locality": "Pune",
+    "lat": 18.5211,
+    "lon": 73.8553,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Sources name Pune only. Coordinates are the Pune city coordinates from Wikipedia (Nominatim was rate-limiting requests), not the site."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-07-29",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "AdaniConneX",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 250,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed by the company as potential capacity in IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 9.6,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase II capacity handed over to customer",
+      "as_of": "2026-07-29",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_operational",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company lists Phase 1 as live from October 2025, although the same page also describes the Pune facility as soon to be launched."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Company states up to 100% renewable energy; the supply arrangement is not described.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.adaniconnex.com/data-centers",
+      "title": "Data Centers",
+      "publisher": "AdaniConneX",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.adani.com/newsroom/media-releases/adani-enterprises-ltd-announces-q1-fy27-results",
+      "title": "Adani Enterprises Ltd announces Q1-FY27 results",
+      "publisher": "Adani Group",
+      "published": "2026-07-29",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.adani.com/newsroom/media-releases/Adani-Commits-USD-100-Bn-to-Sovereign-AI-Infrastructure",
+      "title": "Adani Commits USD 100 Bn to Sovereign AI Infrastructure",
+      "publisher": "Adani Group",
+      "published": "2026-02-17",
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "Microsoft is not listed as a party because the Adani release does not state its role at the Pune campus, and the customer that received the Phase II capacity is not named. The capacity of Phase 1 is not published. The July 2026 results release also gives an operational capacity of 65.4 MW after the handover without saying whether that figure covers Pune alone or all AdaniConneX sites, so it is not recorded.",
+  "last_reviewed": "2026-10-09"
+}

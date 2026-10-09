@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "id": "core-scientific-denton",
+  "name": "Core Scientific Denton data center (CoreWeave)",
+  "aliases": [
+    "Denton 1"
+  ],
+  "summary": "Core Scientific campus at 8171 Jim Christal Road in Denton, Texas, with 394 MW of gross utility power capacity from Denton Municipal Electric, being fitted out as high-density colocation for CoreWeave as Core Scientific converts its facilities from digital asset mining to HPC colocation. A February 2025 expansion added 70 MW of contracted power and raised CoreWeave's critical IT load at the site to about 260 MW, adding $1.2 billion of contracted revenue. The campus covers 78 acres, and Core Scientific says it is expected to host one of North America's largest supercomputers.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Denton",
+    "lat": 33.2164,
+    "lon": -97.1292,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": "City coordinates from Wikipedia. Core Scientific gives the address 8171 Jim Christal Rd, Denton, TX 76207, but it was not geocoded in this review."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s4",
+    "s1",
+    "s3"
+  ],
+  "workloads": [
+    "hpc",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Core Scientific",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Core Scientific",
+      "role": "operator",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "CoreWeave",
+      "role": "tenant",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Colocation customer for about 260 MW of critical IT load at Denton. The release cites 12-year contract terms across Core Scientific's CoreWeave agreements and two five-year renewal options for the added 70 MW."
+    },
+    {
+      "name": "Denton Municipal Electric",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 394,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Gross utility power capacity from Denton Municipal Electric per the 10-K; the company site lists 394 MW of total power capacity."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 260,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2025-02-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Critical IT load for CoreWeave after the February 2025 expansion of 70 MW of contracted power."
+    },
+    {
+      "metric": "land_area",
+      "value": 78,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "From Core Scientific's undated Denton page, as accessed."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "expansion_announced",
+      "date": "2025-02-26",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Core Scientific and CoreWeave announced a $1.2 billion contracted-revenue expansion at Denton; Core Scientific funds $104 million of the added capex and CoreWeave the rest."
+    },
+    {
+      "event": "other",
+      "date": "2027-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Company-wide target to deliver about 590 MW to CoreWeave by early 2027; Denton-specific timing is not stated."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Denton Municipal Electric supplies 394 MW of gross utility power capacity.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "notes": "Status date is the access date of Core Scientific's undated Denton page, which still describes the supercomputer as expected. The sources reviewed do not state how much of the Denton conversion is energized. In March 2026 Core Scientific reported about 350 MW energized across its CoreWeave sites, and its 10-K says a portion of the converted facilities was operating at the end of 2025 without naming them, so the site may already be partly operational.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/110/core-scientific-and-coreweave-announce-1-2-billion-expansion-at-denton-tx-site",
+      "title": "Core Scientific and CoreWeave Announce $1.2 Billion Expansion at Denton, TX Site",
+      "publisher": "Core Scientific",
+      "published": "2025-02-26",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1839341/000162828026013305/core-20251231.htm",
+      "title": "Core Scientific, Inc. Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "U.S. Securities and Exchange Commission (Core Scientific filing)",
+      "published": "2026-03-02",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://investors.corescientific.com/news-events/press-releases/detail/127/core-scientific-announces-fourth-quarter-fiscal-year-2025-results",
+      "title": "Core Scientific Announces Fourth Quarter Fiscal Year 2025 Results",
+      "publisher": "Core Scientific",
+      "published": "2026-03-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://corescientific.com/high-density-data-centers/denton-texas/",
+      "title": "Denton, TX Data Center | High-Density at Scale",
+      "publisher": "Core Scientific",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929001323/https://corescientific.com/high-density-data-centers/denton-texas/"
+    },
+    {
+      "id": "s5",
+      "url": "https://en.wikipedia.org/wiki/Denton,_Texas",
+      "title": "Denton, Texas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

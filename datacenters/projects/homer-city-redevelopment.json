@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0",
+  "id": "homer-city-redevelopment",
+  "name": "Homer City Energy Campus",
+  "aliases": [
+    "Homer City Redevelopment",
+    "Homer City Generation"
+  ],
+  "summary": "Redevelopment of the retired Homer City coal-fired generating station in Indiana County, Pennsylvania, into a gas-fired power and data center campus of more than 3,200 acres. Seven GE Vernova 7HA.02 turbines are planned to deliver up to 4.4 GW for multiple large data center customers, with some power also supplied to the local grid. The developer projects more than 10 billion US dollars for power infrastructure and site readiness, with data centers adding more. Pennsylvania regulators issued an air permit in November 2025; by September 2026 more than 1,800 workers were on site, with power production targeted for 2027. No data center tenant has been named.",
+  "location": {
+    "country": "US",
+    "admin1": "Pennsylvania",
+    "admin2": "Indiana County",
+    "locality": "Center Township",
+    "lat": 40.5108,
+    "lon": -79.1936,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s6"
+    ],
+    "note": "Coordinates of the former Homer City Generating Station from Wikipedia (s6), which places it in Center Township near the borough of Homer City; the campus is built on the former station site, which covers a large area, so the point is approximate."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-04",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified",
+    "hpc"
+  ],
+  "parties": [
+    {
+      "name": "Homer City Redevelopment",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "name": "Kiewit Power Constructors Co.",
+      "role": "builder",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Engineering, procurement and construction contractor."
+    },
+    {
+      "name": "GE Vernova",
+      "role": "hardware_supplier",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Supplier of the seven gas turbines."
+    },
+    {
+      "name": "Knighthead Capital Management",
+      "role": "investor",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named on the project FAQ as providing financing."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 4400,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2025-12-11",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Gas-fired generation capacity intended to power the data centers on the campus, with surplus to the grid."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-04-02",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure cited by the Pennsylvania Senate majority leader on the announcement date."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Developer FAQ projects initial capital for power infrastructure and site readiness to exceed this amount, with data center development adding billions more. The page is undated and was accessed on this date."
+    },
+    {
+      "metric": "land_area",
+      "value": 3200,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-12-11",
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 10000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-04",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Direct on-site construction jobs expected over about five years."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-04",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Total direct and indirect permanent positions once operating."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-04-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "event": "permit_approved",
+      "date": "2025-11-18",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Air-quality permit issued by the Pennsylvania Department of Environmental Protection."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-04",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Developer reported more than 1,800 workers on site and site-readiness milestones completed."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Target for power production; turbine deliveries were expected to begin in 2026."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "Seven GE Vernova 7HA.02 hydrogen-enabled gas turbines on site, burning Marcellus Shale gas; EQT is reported as the gas supplier.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "The site keeps the former plant's connections to PJM and NYISO, and the campus is expected to supply some power to the local grid.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.homercityredevelopment.com/project-overview",
+      "title": "Project Overview",
+      "publisher": "Homer City Redevelopment",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.homercityredevelopment.com/faq",
+      "title": "FAQ",
+      "publisher": "Homer City Redevelopment",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261002183713/https://www.homercityredevelopment.com/faq"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.pasenategop.com/news/pittman-hails-new-wave-of-energy-advancement-in-pennsylvania/",
+      "title": "Pittman Hails New Wave of Energy Advancement in Pennsylvania",
+      "publisher": "Pennsylvania Senate Republicans",
+      "published": "2025-04-02",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s4",
+      "url": "https://e360.yale.edu/features/pennsylvania-data-centers-natural-gas",
+      "title": "To Feed Data Centers, Pennsylvania Faces a New Fracking Surge",
+      "publisher": "Yale Environment 360",
+      "published": "2025-12-11",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.homercityredevelopment.com/post/homer-city-energy-campus-workforce-grows-to-more-than-1-800-workers-including-members-of-9-building",
+      "title": "Homer City Energy Campus Workforce Grows to More Than 1,800 Workers, Including Members of 9 Building and Construction Trade Unions",
+      "publisher": "Homer City Redevelopment",
+      "published": "2026-09-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Homer_City_Generating_Station",
+      "title": "Homer City Generating Station",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260421060149/https://en.wikipedia.org/wiki/Homer_City_Generating_Station"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

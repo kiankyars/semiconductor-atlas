@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-tulsa",
+  "name": "Meta Tulsa data center",
+  "aliases": [
+    "Tulsa Data Center"
+  ],
+  "summary": "Meta AI data center in East Tulsa, Oklahoma, announced in April 2026 as an investment of more than USD 1 billion. Fortis Construction is building a campus of roughly 2 million square feet for Meta, and Meta's location list gives 2026 as the groundbreaking year. Meta names Public Service Company of Oklahoma as its energy-planning partner and reports five Oklahoma clean energy projects totaling 1,273 MW. Meta has not published a power capacity or opening date for the site.",
+  "location": {
+    "country": "US",
+    "admin1": "Oklahoma",
+    "locality": "Tulsa",
+    "lat": 36.1563,
+    "lon": -95.9928,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "City point from OpenStreetMap Nominatim; Meta places the site in East Tulsa but names no road or parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "notes": "The status rests on two undated Meta pages: the U.S. location list, which gives 2026 as the groundbreaking year, and the fact sheet, which describes the data center in the future tense. status_as_of is therefore the date both were read (2026-10-09). The fact sheet PDF shows no publication date; its embedded file creation date is 2026-09-02.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "name": "Fortis Construction",
+      "role": "builder",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "The project website says Fortis Construction is building the campus for Meta."
+    },
+    {
+      "name": "Public Service Company of Oklahoma",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named in Meta's fact sheet as its energy-planning partner."
+    },
+    {
+      "name": "Tulsa Metropolitan Utility Authority",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Water and wastewater provider; Meta says it pays the full cost of service."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-04-21",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Meta also said it is investing more than USD 25 million in local road and water infrastructure."
+    },
+    {
+      "metric": "floor_area",
+      "value": 2000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "From the undated project website, read 2026-10-09."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-21",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Meta's location list gives 1,000 without a qualifier."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-04-21",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2026",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Meta's location list gives 2026 as the groundbreaking year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it will plan its energy needs with Public Service Company of Oklahoma, pay the full cost of the energy used and match it with clean energy. It cited more than 1,500 MW of new clean energy under contract in Oklahoma in April 2026, and its fact sheet lists five Oklahoma projects totaling 1,273 MW.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://datacenters.atmeta.com/2026/04/hello-tulsa/",
+      "title": "Hello, Tulsa!",
+      "publisher": "Meta Platforms",
+      "published": "2026-04-21",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-Tulsa-Data-Center.pdf",
+      "title": "Meta Tulsa Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.atmeta.com/us-locations/",
+      "title": "United States - Meta Data Centers",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20261007122559/https://datacenters.atmeta.com/us-locations/"
+    },
+    {
+      "id": "s4",
+      "url": "https://tulsaokdatacenter.com/",
+      "title": "Tulsa Data Center",
+      "publisher": "Tulsa Data Center project website",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

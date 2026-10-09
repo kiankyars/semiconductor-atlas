@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "id": "google-waltham-cross-uk",
+  "name": "Google Waltham Cross data centre",
+  "aliases": [],
+  "summary": "Google data centre on a 33-acre site in Waltham Cross, Hertfordshire, England. Google announced a $1 billion investment in the new facility in January 2024, describing air-based cooling with provision for off-site heat recovery to nearby homes and businesses. Chancellor Rachel Reeves opened the data centre in September 2025, when Google also announced a two-year GBP 5 billion UK investment covering capital spending, R&D and engineering. Google says the site supports AI services, Google Cloud, Search and Maps. Power capacity has not been disclosed.",
+  "location": {
+    "country": "GB",
+    "admin1": "England",
+    "admin2": "Hertfordshire",
+    "locality": "Waltham Cross",
+    "lat": 51.6858,
+    "lon": -0.033,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Town centroid of Waltham Cross via Nominatim; Google's sources name the town but not the street address."
+  },
+  "status": "operational",
+  "status_as_of": "2025-09-16",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "name": "Google",
+      "role": "operator",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-01-18",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 33,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-01-18",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-01-18",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "first_operational",
+      "date": "2025-09-16",
+      "kind": "actual",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Opening by the Chancellor reported in Google's post of this date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "wind",
+      "description": "Google's 2022 offshore wind PPA with ENGIE for the Moray West farm in Scotland, adding 100 MW to the grid, covers its UK operations rather than this site alone.",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Shell manages Google's UK carbon-free energy portfolio and is to deploy battery technology that stores surplus clean energy for the grid; the arrangement is UK-wide, not specific to this site.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "notes": "The GBP 5 billion figure announced at the opening is a two-year UK-wide programme covering capital spending, R&D and engineering, including Google DeepMind research, so it is not recorded as a campus investment. Google's location page says the facility uses air cooling that limits water use to domestic needs.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/around-the-globe/google-europe/united-kingdom/google-1-billion-investment-in-a-new-uk-data-centre/",
+      "title": "Our $1 billion investment in a new UK data centre",
+      "publisher": "Google",
+      "published": "2024-01-18",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://blog.google/around-the-globe/google-europe/united-kingdom/waltham-cross-data-centre/",
+      "title": "Our new Waltham Cross data center is part of our two-year, £5 billion investment to help power the UK's AI economy",
+      "publisher": "Google",
+      "published": "2025-09-16",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://datacenters.google/locations/waltham-cross/",
+      "title": "Waltham Cross, United Kingdom - Google Data Center Location",
+      "publisher": "Google",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260920080314/https://datacenters.google/locations/waltham-cross/"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "id": "meta-el-paso",
+  "name": "Meta El Paso data center campus",
+  "aliases": [
+    "El Paso Data Center",
+    "Wurldwide Data Center"
+  ],
+  "summary": "AI-oriented Meta campus on roughly 1,000 acres in northeast El Paso, Texas, off Stan Roberts Sr. Avenue near US 54. Announced in October 2025 as a USD 1.5 billion project able to scale to 1 GW, it rose to USD 10 billion or more of Meta investment in 2026. In July 2026 Meta placed it in a joint venture 80% owned by BlackRock-managed funds, with a total development cost of about USD 14 billion and capacity due to start coming online in 2028. El Paso Electric has proposed a 366 MW modular gas plant beside the campus; in September 2026 state judges recommended approving it only if ratepayers do not bear its costs.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "El Paso County",
+    "locality": "El Paso",
+    "lat": 31.9868,
+    "lon": -106.426,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": "Sources place the campus in northeast El Paso off Stan Roberts Sr. Avenue and US 54. Coordinates are a Nominatim point on Stan Roberts Sr. Avenue near that junction, not the parcel centroid."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-24",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "notes": "Meta's joint venture release (s5) displays both 27 and 28 July 2026, so only the month is recorded. Meta's fact sheet PDF (s7) shows no publication date; its embedded file creation date is 2026-09-01.",
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Meta Platforms",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Provides construction management, administrative and property management services to the joint venture."
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Retains a 20% stake in the joint venture."
+    },
+    {
+      "name": "Meta Platforms",
+      "role": "tenant",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Initial sole occupant, with leases of a four-year initial term and four extension options for a potential 20-year term."
+    },
+    {
+      "name": "BlackRock (managed funds)",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Funds managed by BlackRock hold 80% of the joint venture announced in July 2026."
+    },
+    {
+      "name": "El Paso Electric",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s7"
+      ]
+    },
+    {
+      "name": "City of El Paso",
+      "role": "government",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Approved tax abatement and economic development agreements for the project."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 1000,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Meta first said the site could scale to 1 GW; later reporting and the joint venture release describe 1 GW of compute capacity. IT versus facility scope is not stated."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 366,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "El Paso Electric's proposed McCloud gas plant on an adjacent site, still awaiting a Public Utility Commission of Texas decision."
+    },
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-10-15",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported as Meta's planned spending after the increase from USD 1.5 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s5",
+        "s7"
+      ],
+      "note": "Meta's own investment commitment."
+    },
+    {
+      "metric": "investment",
+      "value": 14000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Total development cost of the Meta and BlackRock joint venture for buildings and long-lived power, cooling and connectivity infrastructure."
+    },
+    {
+      "metric": "land_area",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-01-20",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1800,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial phase",
+      "as_of": "2025-10-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Peak construction workforce for the initial phase."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 4000,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s3",
+        "s5",
+        "s7"
+      ],
+      "note": "Peak construction workforce; the July 2026 release said more than 2,300 workers were already on site."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-15",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07",
+      "source_ids": [
+        "s3",
+        "s5",
+        "s7"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-15",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-H2",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported as breaking ground in late 2025."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported on 2026-03-30: Meta's planned investment raised from USD 1.5 billion to USD 10 billion."
+    },
+    {
+      "event": "other",
+      "date": "2026-07",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Joint venture with BlackRock-managed funds announced to develop and own the campus."
+    },
+    {
+      "event": "other",
+      "date": "2026-09",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Administrative law judges proposed that the Public Utility Commission of Texas approve the McCloud gas plant only if ratepayers do not bear its capital and operating costs; no commission vote had been scheduled."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Capacity is expected to begin coming online in 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Meta says it planned its energy needs with El Paso Electric and pays the full cost of the energy and infrastructure needed to serve the data center.",
+      "source_ids": [
+        "s7"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "El Paso Electric proposed the 366 MW McCloud plant on about 31 acres next to the campus, made up of 813 modular 450 kW gas generators supplied by Enchanted Rock; it would serve only Meta for its first five years. Reported cost estimates differ (USD 473 million in January 2026, USD 499 million in September 2026), and a state utility commission vote was still pending in late September 2026.",
+      "source_ids": [
+        "s2",
+        "s6"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.fox26houston.com/news/meta-ai-data-center-texas-el-paso",
+      "title": "Meta to spend $1.5 billion on AI data center in Texas",
+      "publisher": "FOX 26 Houston",
+      "published": "2025-10-15",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20251113051159/https://www.fox26houston.com/news/meta-ai-data-center-texas-el-paso"
+    },
+    {
+      "id": "s2",
+      "url": "https://constructionreporter.com/el-paso-electric-announces-plans-for-366-megawatt-electric-plant-to-support-meta-data-center/",
+      "title": "El Paso Electric Announces Plans for 366 Megawatt Electric Plant to Support Meta Data Center",
+      "publisher": "Construction Reporter",
+      "published": "2026-01-20",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260418042719/https://constructionreporter.com/el-paso-electric-announces-plans-for-366-megawatt-electric-plant-to-support-meta-data-center/"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.silicon.co.uk/cloud/datacenter/meta-data-centre-el-paso-629273",
+      "title": "Meta Ramps Spending On El Paso Data Centre To $10bn",
+      "publisher": "Silicon UK",
+      "published": "2026-03-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://kfoxtv.com/news/local/el-paso-leaders-get-update-on-meta-data-center-project-city-cites-enforceable-agreements",
+      "title": "El Paso leaders get update on Meta data center project, city cites enforceable agreements",
+      "publisher": "KFOX14",
+      "published": "2026-04-13",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260731200901/https://kfoxtv.com/news/local/el-paso-leaders-get-update-on-meta-data-center-project-city-cites-enforceable-agreements"
+    },
+    {
+      "id": "s5",
+      "url": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+      "title": "Meta Announces New Strategic Venture With BlackRock to Develop Data Center in El Paso",
+      "publisher": "Meta Platforms",
+      "published": "2026-07",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://insideclimatenews.org/news/24092026/el-paso-electric-only-considered-gas-to-power-meta-data-center/",
+      "title": "Texas Electric Utility Only Considered Gas to Power $10 Billion Meta Data Center",
+      "publisher": "Inside Climate News",
+      "published": "2026-09-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-El-Paso-Data-Center.pdf",
+      "title": "Meta El Paso Data Center fact sheet",
+      "publisher": "Meta Platforms",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260923214153/https://datacenters.atmeta.com/wp-content/uploads/2026/09/Meta_s-El-Paso-Data-Center.pdf"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

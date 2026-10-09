@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "id": "google-west-memphis-arkansas",
+  "name": "Google West Memphis data center campus",
+  "aliases": [
+    "Groot LLC West Memphis data center"
+  ],
+  "summary": "Google's first Arkansas data center campus, under construction at the south end of Bollinger Road in West Memphis, Crittenden County, on a property reported at 1,000 to 1,200 acres. Google announced it in October 2025 as part of a $4 billion Arkansas commitment running through 2027. The developer of record, Groot LLC, filed plans with the US Army Corps of Engineers in late 2024; earlier reporting described a proposed $10 billion campus with five data center buildings and a substation. Construction began in October 2025 on an 18-24 month schedule. Entergy Arkansas is supplying power under a contract with Google, which is paying part of the cost of a new Entergy solar and storage project.",
+  "location": {
+    "country": "US",
+    "admin1": "Arkansas",
+    "admin2": "Crittenden County",
+    "locality": "West Memphis",
+    "lat": 35.1163,
+    "lon": -90.2115,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s4",
+      "s6",
+      "s7"
+    ],
+    "note": "OpenStreetMap geometry of the southern end of Bollinger Road in West Memphis; sources place the campus at the south end of Bollinger Road. One source also gives 1500 South Loop Drive, which could not be resolved to a point. The campus parcel itself is not mapped here."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-02-26",
+  "status_source_ids": [
+    "s6"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Google",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "name": "Groot LLC",
+      "role": "developer",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Named as the developer of record in local filings. Before Google confirmed the project in September 2025, reports described Groot as widely believed to be backed by Google."
+    },
+    {
+      "name": "Entergy Arkansas",
+      "role": "power_supplier",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Holds the power contract with Google for the project and partnered with Google on the announcement. Trade press notes that West Memphis Utilities, not Entergy Arkansas, is the local utility serving the city."
+    },
+    {
+      "name": "Turner Construction",
+      "role": "builder",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reported in May 2025 as a lead contractor based on site signage."
+    },
+    {
+      "name": "Yates Construction",
+      "role": "builder",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reported in May 2025 as a lead contractor based on site signage."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-05-30",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Proposed campus cost reported before Google confirmed its involvement; it differs from the other reported figures."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Local reporting described the data center as a $1 billion project at the time Google confirmed it; no phase breakdown or source for the figure was given, and it differs from the $10 billion reported earlier."
+    },
+    {
+      "metric": "floor_area",
+      "value": 900000,
+      "qualifier": "exact",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Size given for the data center in local reporting at the time Google confirmed it; no phase breakdown was given."
+    },
+    {
+      "metric": "land_area",
+      "value": 1100,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-26",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Sources differ on the property size: about 1,000, 1,100, 1,178 and almost 1,200 acres have all been reported."
+    },
+    {
+      "metric": "land_area",
+      "value": 1178,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-05-30",
+      "source_ids": [
+        "s5"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 1000,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-10-02",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 1200,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Described as almost 1,200 acres."
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "s5",
+        "s7"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 300,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-26",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Reported as about 300 positions expected, with Google hiring electrical engineers and facilities technicians."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-12",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Groot LLC submitted site plans to the US Army Corps of Engineers Memphis office for water-mitigation review."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-05",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Google and Entergy Arkansas confirmed the project in a joint statement."
+    },
+    {
+      "event": "announced",
+      "date": "2025-10-02",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-10",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Reported schedule of 18 to 24 months to complete."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-02",
+      "kind": "actual",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Released records showed Google paying Entergy $526 million upfront toward a $1.6 billion solar project tied to the data center, with the remainder recovered from ratepayers; a federal judge declined Entergy's request to force newspapers to remove stories on the deal."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Entergy Arkansas is to supply power under its contract with Google, using solar and existing generation; earlier reports said Entergy was considering a 500/230 kV substation. Google says it will cover the facility's energy costs and reduce its workload during peak demand.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "The Google-Entergy contract includes investment in Cypress Solar, a 600 MW solar facility near Pine Bluff in Jefferson County; unlike Google's earlier solar PPAs, the money supports construction directly.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "The Cypress Solar project includes a 350 MW battery energy storage facility to be built by Entergy Arkansas.",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/inside-google/company-announcements/google-american-innovation-arkansas/",
+      "title": "Google announces new $4 billion investment in Arkansas",
+      "publisher": "Google",
+      "published": "2025-10-02",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://talkbusiness.net/2025/10/google-announces-plan-to-build-4-billion-data-center-in-west-memphis/",
+      "title": "Google announces plan to build $4 billion data center in West Memphis",
+      "publisher": "Talk Business & Politics",
+      "published": "2025-10-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.powermag.com/entergy-will-power-4-billion-google-data-center-in-arkansas/",
+      "title": "Entergy Will Power $4-Billion Google Data Center in Arkansas",
+      "publisher": "POWER Magazine",
+      "published": "2025-10-03",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260412122631/https://www.powermag.com/entergy-will-power-4-billion-google-data-center-in-arkansas/"
+    },
+    {
+      "id": "s4",
+      "url": "https://dailymemphian.com/section/businessreal-estate/article/54862/google-west-memphis-data-center-entergy-arkansas-groot",
+      "title": "Google confirms West Memphis data center",
+      "publisher": "The Daily Memphian",
+      "published": "2025-09-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.constructionbriefing.com/news/google-linked-to-us10bn-data-centre-campus-in-us/8062290.article",
+      "title": "Google linked to US$10bn data centre campus in US",
+      "publisher": "Construction Briefing",
+      "published": "2025-05-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.actionnews5.com/2026/02/26/google-hiring-new-west-memphis-data-center/",
+      "title": "Google hiring for new West Memphis data center",
+      "publisher": "Action News 5 (WMC)",
+      "published": "2026-02-26",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.actionnews5.com/2026/09/02/docs-reveal-plans-6-utility-rate-hike-help-fund-googles-data-center-project-west-memphis/",
+      "title": "Docs reveal plans for $6 utility rate hike to help fund Google's data center project in West Memphis",
+      "publisher": "Action News 5 (WMC)",
+      "published": "2026-09-02",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Google's $4 billion figure is an Arkansas-wide commitment through 2027 that includes the West Memphis data center along with other cloud and AI infrastructure and local programs, so it is not recorded as a campus investment, although some news reports describe it as the cost of the West Memphis project. Reported campus cost and size figures conflict and are kept as separate statements."
+}

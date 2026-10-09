@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "id": "nextdc-s7-eastern-creek",
+  "name": "NEXTDC S7 Sydney",
+  "aliases": [
+    "S7 Sydney",
+    "S7 Eastern Creek"
+  ],
+  "summary": "NEXTDC plans a hyperscale data center campus of about 550 MW on roughly 258,000 square meters of land it agreed to buy in Eastern Creek, western Sydney, in October 2024, subject to development approval. In December 2025 NEXTDC signed a memorandum of understanding with OpenAI to collaborate on planning, developing and operating the S7 campus and a large GPU supercluster as part of OpenAI's program for countries, with a first phase expected in the second half of 2027 if approvals are secured. NEXTDC's site still lists S7 as in planning.",
+  "location": {
+    "country": "AU",
+    "admin1": "New South Wales",
+    "locality": "Eastern Creek",
+    "lat": -33.8059,
+    "lon": 150.85,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "NEXTDC names the suburb of Eastern Creek, about 45 km west of the Sydney CBD, without a street address; coordinates are the OpenStreetMap Nominatim centroid of the suburb."
+  },
+  "status": "announced",
+  "status_as_of": "2025-12-05",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "NEXTDC",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "NEXTDC",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Agreed in October 2024 to buy the land for about A$353 million before taxes and costs, with parcels to settle progressively across FY25; the December 2025 release refers to it as NEXTDC's S7 site."
+    },
+    {
+      "name": "OpenAI",
+      "role": "developer",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Under a December 2025 memorandum of understanding, OpenAI and NEXTDC would collaborate on planning, developing and operating the campus and a GPU supercluster; the release does not describe a definitive agreement."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 550,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-10-17",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Subject to development approval."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 550,
+      "qualifier": "at_least",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Undated NEXTDC facility page, viewed October 2026, lists 550MW+ of IT capacity."
+    },
+    {
+      "metric": "land_area",
+      "value": 25.8,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2024-10-17",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported as about 258,000 square meters of developable land."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2024-10-17",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Purchase agreement announced at about A$353 million before taxes and costs, with land parcels to settle progressively across FY25 subject to conditions."
+    },
+    {
+      "event": "other",
+      "date": "2025-12-05",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "NEXTDC and OpenAI signed a memorandum of understanding for the S7 campus and a GPU supercluster."
+    },
+    {
+      "event": "first_operational",
+      "date": "2027-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "First phase expected in the second half of calendar 2027, subject to approvals."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.nextdc.com/news/nextdc-acquires-new-sydney-data-centre-s7",
+      "title": "NEXTDC Announces Massive Expansion Plans with Acquisition of S7 Data Centre Site in Sydney",
+      "publisher": "NEXTDC",
+      "published": "2024-10-17",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260608052956/https://www.nextdc.com/news/nextdc-acquires-new-sydney-data-centre-s7"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.nextdc.com/news/building-the-next-generation-of-sovereign-ai-infrastructure-in-australia",
+      "title": "NEXTDC to Join OpenAI in Australia as an Infrastructure Partner",
+      "publisher": "NEXTDC",
+      "published": "2025-12-05",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260912152241/https://www.nextdc.com/news/building-the-next-generation-of-sovereign-ai-infrastructure-in-australia"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.nextdc.com/data-centres/sydney-data-centres/s7-sydney",
+      "title": "S7 Sydney Data Centre",
+      "publisher": "NEXTDC",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260929101338/https://www.nextdc.com/data-centres/sydney-data-centres/s7-sydney"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}

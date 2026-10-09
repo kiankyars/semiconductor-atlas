@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "id": "qscale-q01-levis",
+  "name": "QScale Q01 campus (Lévis)",
+  "aliases": [
+    "Q01",
+    "QScale Q01"
+  ],
+  "summary": "QScale's Q01 campus in Lévis, in the Quebec City area, is a liquid- and air-cooled colocation and AI campus that the company says is powered by 142 MW of renewable energy. Launched in 2021 as an eight-phase project, it was later costed at CAD 1.05 billion; Hewlett Packard Enterprise became its first anchor tenant in 2023. Goldman Sachs Alternatives closed its acquisition of QScale in May 2026, and in June 2026 QScale said construction of a second building adding 60 MW of IT capacity was well underway.",
+  "location": {
+    "country": "CA",
+    "admin1": "Quebec",
+    "locality": "Lévis",
+    "lat": 46.6761,
+    "lon": -71.3251,
+    "precision": "site",
+    "source_ids": [
+      "s7"
+    ],
+    "note": "QScale's Q01 campus page gives the address 2280 Albert-Dion St, Lévis; coordinates were geocoded from that address to an OpenStreetMap building tagged QScale."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "workloads": [
+    "colocation",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "QScale",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "name": "QScale",
+      "role": "operator",
+      "source_ids": [
+        "s3",
+        "s7"
+      ]
+    },
+    {
+      "name": "Hewlett Packard Enterprise",
+      "role": "tenant",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Announced as first anchor tenant in May 2023; deployed its AI cloud at the campus."
+    },
+    {
+      "name": "Goldman Sachs Alternatives",
+      "role": "owner",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Its infrastructure business acquired QScale; founders and management reinvested."
+    },
+    {
+      "name": "Government of Quebec",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Provided a loan and bought shares for the first phase in 2021."
+    },
+    {
+      "name": "Hydro-Québec",
+      "role": "utility",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Agreement for the use of 140 MW reported at the 2021 launch."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 142,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2023-05-22",
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Power capacity listed on the campus page; the 2023 release says the campus is powered by 142 MW of renewable energy. Neither says whether the figure is contracted or how it relates to the 114 MW IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 140,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2021-07-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Agreement with Hydro-Québec for the use of 140 MW, reported at the 2021 launch."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 114,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Protected customer IT load stated on the undated campus page."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 60,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Building B",
+      "as_of": "2026-06-04",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Second building; the release gives its cost as 700 million dollars without a currency code."
+    },
+    {
+      "metric": "investment",
+      "value": 1050000000,
+      "qualifier": "exact",
+      "unit": "CAD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2022-09-21",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total for all eight phases. The 2021 launch release gave 867 million dollars, with 195 million for phase 1."
+    },
+    {
+      "metric": "floor_area",
+      "value": 930000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Total building space on the undated campus page; white space about 313,000 sq ft."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-07-13",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Launch and financing of the first phase; phase 1 backbone infrastructure was targeted for completion by the end of 2022."
+    },
+    {
+      "event": "other",
+      "date": "2022-09-21",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Phase 2 construction reported well underway, a year ahead of schedule."
+    },
+    {
+      "event": "other",
+      "date": "2023-05-22",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Hewlett Packard Enterprise announced as first anchor tenant."
+    },
+    {
+      "event": "other",
+      "date": "2024-11-20",
+      "kind": "actual",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Credit facility of up to 320 million dollars arranged to fund phases 3 and 4."
+    },
+    {
+      "event": "other",
+      "date": "2026-05-13",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Goldman Sachs Alternatives announced that it had closed its acquisition of QScale."
+    },
+    {
+      "event": "expansion_announced",
+      "date": "2026-06-04",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Construction of Building B (60 MW IT) reported well underway."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Supplied by Hydro-Québec through a QScale-owned 120 kV substation; the company describes the supply as 100% renewable.",
+      "source_ids": [
+        "s1",
+        "s7"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.qscale.com/news/from-data-processing-to-food-self-sufficiency-financing",
+      "title": "QScale: From Data Processing to Food Self-Sufficiency",
+      "publisher": "QScale",
+      "published": "2021-07-13",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.qscale.com/news/qscale-accelerates-its-expansion-and-growth",
+      "title": "QScale Accelerates Its Expansion and Growth",
+      "publisher": "QScale",
+      "published": "2022-09-21",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.qscale.com/news/hewlett-packard-enterprise-hpe-q01-campus",
+      "title": "QScale Welcomes Hewlett Packard Enterprise as First Anchor Tenant at Q01 Campus",
+      "publisher": "QScale",
+      "published": "2023-05-22",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.qscale.com/news/320m-financing-growth",
+      "title": "QScale Secures Up to $320 Million Funding to Accelerate Growth",
+      "publisher": "QScale",
+      "published": "2024-11-20",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260514194651/https://www.qscale.com/news/320m-financing-growth"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.qscale.com/news/goldman-sachs-alternatives-to-acquire-qscale",
+      "title": "Goldman Sachs Alternatives to Acquire QScale, a Leading Canadian Data Center Platform",
+      "publisher": "QScale",
+      "published": "2026-05-13",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://www.qscale.com/news/q01-building-b-60mw-ai-ready-infrastructure",
+      "title": "QScale Begins Construction of Its Second Building at the Q01 Campus, Adding 60 MW of AI-Ready Infrastructure in Quebec",
+      "publisher": "QScale",
+      "published": "2026-06-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.qscale.com/q01-campus",
+      "title": "Q01 Campus",
+      "publisher": "QScale",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "last_reviewed": "2026-10-09",
+  "notes": "Status rests on the June 2026 release, which describes the existing campus in operation while Building B is built, and on QScale's undated campus page, which reports HPE's deployment; status_as_of is the date that page was read (2026-10-09), as are the as_of dates of figures taken from it. Building B's 700 million dollar cost is given without a currency and is not recorded as a metric."
+}

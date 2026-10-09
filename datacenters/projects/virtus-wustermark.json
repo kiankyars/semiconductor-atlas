@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "id": "virtus-wustermark",
+  "name": "VIRTUS Wustermark campus",
+  "aliases": [
+    "Berlin Data Centres Wustermark Campus",
+    "Wustermark Megacampus"
+  ],
+  "summary": "VIRTUS Data Centres, part of ST Telemedia Global Data Centres, is developing a EUR 3 billion data center megacampus on more than 35 hectares in Wustermark, Havelland, about 12 km from Berlin's city limits. The campus is planned for up to nine data centers and 204 MW of IT load, with an initial 300 MW of power delivered through a dedicated substation with dual direct connections to the 50Hertz 380 kV grid, the first such connection for a Berlin-Brandenburg data center campus. Two 185 MVA super-grid transformers had been installed by June 2026; VIRTUS now projects operations from early 2028.",
+  "location": {
+    "country": "DE",
+    "admin1": "Brandenburg",
+    "admin2": "Havelland",
+    "locality": "Wustermark",
+    "lat": 52.5463,
+    "lon": 12.9404,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Nominatim centroid of the municipality of Wustermark; sources name the municipality and the 50Hertz Wustermark substation but give no address."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-01",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "VIRTUS Data Centres",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "ST Telemedia Global Data Centres",
+      "role": "owner",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Parent group of VIRTUS."
+    },
+    {
+      "name": "Macquarie Asset Management",
+      "role": "investor",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Holds a significant minority stake via Macquarie European Infrastructure Fund 7, per the 2023 release."
+    },
+    {
+      "name": "50Hertz",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Transmission operator; dual direct 380 kV connections integrated with its Wustermark substation."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2023-09-04",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-06-01",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Initial capacity, designed to scale; the 2023 release described 300 MW of incoming power across two campus locations in Wustermark."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 204,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Undated company campus page; as_of is the access date."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-06-01",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Rating of the dedicated substation delivering power to the campus."
+    },
+    {
+      "metric": "land_area",
+      "value": 35,
+      "qualifier": "more_than",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2023-09-04",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Sources state more than 350,000 square metres."
+    },
+    {
+      "metric": "buildings",
+      "value": 9,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-09-04",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2026-H1",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "VIRTUS announced on 2026-06-01 that two 185 MVA super-grid transformers for the 380 kV connection had been delivered and installed."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original 2023 target for Phase I; superseded by the later target below."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-H1",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Company page projects operations in early 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Dual direct connections to the 50Hertz 380 kV transmission network through a dedicated substation at the Wustermark grid node.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "The developer describes an electrical coupling to some of Germany's largest contiguous onshore wind farms beside the site.",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://virtusdatacentres.com/press-releases/virtus-unveils-3bn-300mw-wustermark-megacampus-project",
+      "title": "VIRTUS Unveils €3BN, 300MW Wustermark Megacampus Project",
+      "publisher": "VIRTUS Data Centres",
+      "published": "2023-09-04",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://virtusdatacentres.com/press-releases/virtus-installs-two-of-europes-largest-super-grid-transformers-at-wustermark-campus-in-brandenburg",
+      "title": "VIRTUS installs two of Europe's largest super-grid transformers at Wustermark campus in Brandenburg",
+      "publisher": "VIRTUS Data Centres",
+      "published": "2026-06-01",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://virtusdatacentres.com/locations/germany/berlin-data-centres-wustermark-campus",
+      "title": "Berlin Data Centres | Wustermark Campus",
+      "publisher": "VIRTUS Data Centres",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    }
+  ],
+  "notes": "All sources are developer materials; no independent coverage could be opened this session. The 2023 release covered two campus locations within Wustermark, treated here as one record because they share the name and power arrangement.",
+  "last_reviewed": "2026-10-09"
+}

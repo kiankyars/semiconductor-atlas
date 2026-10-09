@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.0",
+  "id": "google-armstrong-county-texas",
+  "name": "Google Armstrong County data center campus (Crusoe Goodnight)",
+  "aliases": [
+    "Goodnight campus",
+    "Project Goodnight"
+  ],
+  "summary": "AI data center campus near Claude, Armstrong County, in the Texas Panhandle, being developed by Crusoe on about 1,300 acres beside the Goodnight wind farms. Google named Armstrong County as a new campus site in its November 2025 Texas program ($40 billion statewide through 2027), and Crusoe confirmed Google as the end user in September 2026. County tax abatement materials described a first phase of four buildings drawing up to 530 MW, within a two-phase 1,030 MW design. State filings in 2026 added two buildings of about 805,000 sq ft each, together estimated at $1 billion. Amended filings added gas turbines and battery storage, and one report says Crusoe agreed to sell the project to Google.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "admin2": "Armstrong County",
+    "locality": "Claude",
+    "lat": 35.1081,
+    "lon": -101.3627,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": "Town centroid of Claude via Nominatim. Sources place the roughly 1,300-acre site near Claude but give no street address."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-01",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Crusoe",
+      "role": "developer",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "name": "GN DC1 LLC",
+      "role": "owner",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Crusoe affiliate listed as owner in 2026 Texas Department of Licensing and Regulation filings for two new buildings; those filings name no tenant."
+    },
+    {
+      "name": "Google",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "note": "Described as the tenant or end user. Google names Armstrong County as a new campus location in its Texas investment program. New Project Media reported that Crusoe agreed to sell the project to Google; Google did not respond and Crusoe declined to comment, so the sale is unconfirmed."
+    },
+    {
+      "name": "Serena",
+      "role": "power_supplier",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Owner of the operating Goodnight 1 wind farm, one of the two adjacent wind farms the campus is linked to."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 530,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 1 (four buildings)",
+      "as_of": "2026-07-31",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "From an Armstrong County tax abatement agreement, which also describes four 25 MW data halls per building."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 500,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Phase 2 (three buildings)",
+      "as_of": "2025-12-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "From earlier tax abatement materials as summarized by New Project Media; newer amended filings omit project details."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 1030,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-12-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Two-phase campus total from earlier tax abatement materials as summarized by New Project Media; the layout may be redrawn."
+    },
+    {
+      "metric": "investment",
+      "value": 29000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-12-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Figure from earlier tax abatement materials and prior New Project Media reporting, not from the amended filings."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Two new buildings (Buildings 3 and 4) in 2026 state filings",
+      "as_of": "2026-07-31",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimated construction cost of about $500 million per building, each roughly 805,000 sq ft; estimates may change."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "at_least",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-07-31",
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 1300,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 80,
+      "value_high": 100,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-11-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The county judge said the facility is expected to employ 80 to 100 people once running."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 5500,
+      "qualifier": "more_than",
+      "unit": "count",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-01",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Workers on site daily, per Crusoe."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2025-05",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Local TV reported that Crusoe had been building since May 2025."
+    },
+    {
+      "event": "construction_started",
+      "date": "2025-06",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Crusoe's account dates the groundbreaking to June 2025, a month later than the local report."
+    },
+    {
+      "event": "announced",
+      "date": "2025-11-14",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Google named Armstrong County as a new campus location in its Texas investment announcement."
+    },
+    {
+      "event": "other",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Permit application for a 933 MW natural gas plant to serve two buildings behind the meter; Google said it had not agreed to buy the plant's output."
+    },
+    {
+      "event": "other",
+      "date": "2026-09-28",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Crusoe publicly confirmed Google as the campus end user."
+    },
+    {
+      "event": "fully_operational",
+      "date": "2028-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion expected in late 2028 or early 2029 per the county judge."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "wind",
+      "description": "Linked to the adjacent Goodnight wind farms: Goodnight 1 (265.5 MW, operating) and Goodnight 2 (similar size, under construction), about 531 MW combined; surplus output returns to the grid.",
+      "source_ids": [
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "type": "natural_gas_onsite",
+      "description": "Amended abatement filings added gas turbines; a January 2026 application sought a 933 MW gas plant serving two buildings without a grid tie. It is a proposal, and Google has not agreed to buy its power.",
+      "source_ids": [
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Battery storage was added to the power plan in amended Armstrong County tax abatement filings.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "type": "grid",
+      "description": "The county judge said the data center would draw from the ERCOT grid, although the county itself is served through the Southwest Power Pool.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "notes": "Google's $40 billion Texas figure runs through 2027 and covers new campuses in Armstrong and Haskell Counties among other spending; it is not recorded here as a campus investment. Phase and campus MW figures come from tax abatement materials and are not added together. One state filing gave Building 3 an August 1 completion date (year not stated, presumably 2026) and Building 4 a March 2027 date. New Project Media's article was first published for subscribers; the date used is that of its public posting.",
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://blog.google/inside-google/company-announcements/google-american-innovation-texas/",
+      "title": "Google's investments run deep in the heart of Texas",
+      "publisher": "Google",
+      "published": "2025-11-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.abc7amarillo.com/news/local/google-announces-new-data-center-in-armstrong-county-texas-judge-adam-ensey-crusoe-energy-ercot-southwest-power-pool-claude-texas",
+      "title": "Google announces new data center in Armstrong County, Texas",
+      "publisher": "ABC 7 Amarillo",
+      "published": "2025-11-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://newprojectmedia.com/origination-crusoe-adds-natural-gas-storage-to-texas-panhandle-energy-mix-as-project-shifts-to-google-ownership/",
+      "title": "ORIGINATION: Crusoe adds natural gas, storage to Texas Panhandle energy mix as project shifts to Google ownership",
+      "publisher": "New Project Media",
+      "published": "2025-12-15",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260514080205/https://newprojectmedia.com/origination-crusoe-adds-natural-gas-storage-to-texas-panhandle-energy-mix-as-project-shifts-to-google-ownership/"
+    },
+    {
+      "id": "s4",
+      "url": "https://theenergymag.com/news/2026-07-31/crusoe-texas-ai-data-center-goodnight",
+      "title": "Crusoe Plans $1B Texas AI Data Center Expansion, Pursues Nuclear Power",
+      "publisher": "TheEnergyMag",
+      "published": "2026-07-31",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260927131459/https://theenergymag.com/news/2026-07-31/crusoe-texas-ai-data-center-goodnight"
+    },
+    {
+      "id": "s5",
+      "url": "https://baxtel.com/news/crusoe-confirms-google-ai-campus-in-texas-with-531mw-wind-link",
+      "title": "Crusoe Confirms Google AI Campus In Texas With 531MW Wind Link",
+      "publisher": "Baxtel",
+      "published": "2026-10-01",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20261003152915/https://baxtel.com/news/crusoe-confirms-google-ai-campus-in-texas-with-531mw-wind-link"
+    },
+    {
+      "id": "s6",
+      "url": "https://thetechcapital.com/google-taps-crusoe-for-new-texas-ai-data-centre-campus/",
+      "title": "Google taps Crusoe for new Texas AI data centre campus",
+      "publisher": "The Tech Capital",
+      "published": "2026-10-01",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "last_reviewed": "2026-10-09"
+}
