@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-union-city-georgia",
+  "name": "Microsoft Union City data center campus (EdgeConneX)",
+  "aliases": [
+    "EdgeConneX Union City campus",
+    "4810 Stonewall Tell Road"
+  ],
+  "summary": "Data center campus on 136 acres at 4810 Stonewall Tell Road in Union City, Fulton County, on metro Atlanta's Southside. In July 2024 Microsoft was confirmed as the company seeking a USD 75 million, ten-year property tax break for three planned buildings, and a regional-impact filing described about 2.1 million sq ft in a project a trade report, crediting the Atlanta Journal-Constitution, headlined at USD 1.8 billion. In August 2026 the Atlanta Journal-Constitution described it as an EdgeConneX-developed campus, still under construction, in which Microsoft leases space, with a price tag of nearly USD 2 billion.",
+  "location": {
+    "country": "US",
+    "admin1": "Georgia",
+    "admin2": "Fulton County",
+    "locality": "Union City",
+    "lat": 33.605,
+    "lon": -84.4936,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "The July 2024 regional-impact report gives the street address 4810 Stonewall Tell Road but no coordinates. The point is the Union City coordinate from its Wikipedia article, so it marks the city rather than the parcel."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-06",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "EdgeConneX",
+      "role": "developer",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The August 2026 report (which spells it EdgeConnex) says the company developed the campus; it does not say who owns it."
+    },
+    {
+      "name": "Microsoft",
+      "role": "tenant",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Described in August 2026 as leasing space at the campus, which it does not own. The July 2024 report (s1) instead described three buildings that Microsoft would own and operate."
+    },
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Role as reported in July 2024, when a Microsoft executive said the company had purchased additional Fulton County property to support data center construction already under way. Later reporting (s3) describes the campus as EdgeConneX-developed and leased."
+    },
+    {
+      "name": "Development Authority of Fulton County (Develop Fulton)",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Was scheduled to discuss the USD 75 million ten-year tax abatement in July 2024. The 2026 report says the break was ultimately granted by Union City's development authority after Develop Fulton first considered it."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1800000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2024-07-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Appears only in the headline of a Southern Business & Development report that credits the Atlanta Journal-Constitution as its source; the figure is not attributed to the company or a filing."
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "qualifier": "approximately",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Given in a photo caption as a price tag of nearly USD 2 billion."
+    },
+    {
+      "metric": "buildings",
+      "value": 3,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-07-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned buildings as reported by the Atlanta Business Chronicle and relayed by Southern Business & Development."
+    },
+    {
+      "metric": "floor_area",
+      "value": 2100000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-07-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "From the Development of Regional Impact filing, as reported by Southern Business & Development crediting the Atlanta Journal-Constitution."
+    },
+    {
+      "metric": "land_area",
+      "value": 136,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-06",
+      "source_ids": [
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2024-07",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Microsoft was confirmed, per the Atlanta Business Chronicle as relayed by Southern Business & Development, as the company seeking a USD 75 million, ten-year property tax abatement from the Development Authority of Fulton County."
+    },
+    {
+      "event": "other",
+      "date": "2024-07",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "A Development of Regional Impact filing describing the roughly 2.1 million sq ft campus was made public."
+    },
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "When Microsoft moved to unwind tax incentives for its own metro Atlanta projects in East Point, Palmetto and Douglasville, tax breaks tied to leased facilities such as the Union City campus were reported as unaffected."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://southernbusiness.com/?p=644089",
+      "title": "Microsoft confirmed as company seeking tax break for Fulton County, Ga. data center",
+      "publisher": "Southern Business & Development (via Atlanta Business Chronicle)",
+      "published": "2024-07-02",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://southernbusiness.com/?p=644448",
+      "title": "New details revealed about Microsoft's $1.8B data center near Atlanta",
+      "publisher": "Southern Business & Development (via The Atlanta Journal-Constitution)",
+      "published": "2024-07-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.ajc.com/business/2026/08/microsoft-aims-to-void-property-tax-breaks-for-its-data-centers-near-atlanta/",
+      "title": "Microsoft works to unwind tax breaks for its metro Atlanta data centers",
+      "publisher": "The Atlanta Journal-Constitution",
+      "published": "2026-08-06",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260811000026/https://www.ajc.com/business/2026/08/microsoft-aims-to-void-property-tax-breaks-for-its-data-centers-near-atlanta/"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Union_City,_Georgia",
+      "title": "Union City, Georgia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "No megawatt figure was found in the sources that could be opened. Ownership is described differently over time: in July 2024 the buildings were to be Microsoft owned and operated (s1), while in August 2026 the campus is EdgeConneX-developed with Microsoft leasing space (s3); each framing is kept with its own source and date. The July 2024 report put site development costs at about USD 43.5 million. The July 2024 regional-impact report said Microsoft had paid at least USD 171 million that year for more than 480 acres on Atlanta's Southside, including the Union City site; that is a multi-site figure, not a campus figure.",
+  "last_reviewed": "2026-10-09"
+}

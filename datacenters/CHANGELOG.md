@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-10 — third research wave
+
+- 30 new records (231 in total, 31 countries, 1,109 sources, 376 with Internet Archive copies):
+  PowerHouse, STACK and Amazon, Bitdeer, Nightpeak, Google and Microsoft campuses in the US; QTS,
+  Microsoft, Vantage, Box2Bit, Cavour, Herbata and Khazna builds in Europe and the Middle East;
+  Kasi Cloud (Nigeria) and Iozera (Morocco); Sify, NTT, EdgeConneX, STT GDC, DayOne and Vantage
+  in Asia; KIO and Terranova in Latin America. Same research-then-verify process; every record
+  was corrected by the verification pass before publication.
+- Known-gaps list updated with the leads this wave surfaced.
+
 ## 2026-10-10 — second research wave
 
 - 72 new records (201 in total, 27 countries, 968 sources, 342 with Internet Archive copies):

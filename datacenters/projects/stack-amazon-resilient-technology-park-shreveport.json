@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0",
+  "id": "stack-amazon-resilient-technology-park-shreveport",
+  "name": "Amazon and STACK campus at Resilient Technology Park, Shreveport",
+  "aliases": [
+    "Resilient Technology Park",
+    "Resilient Tech Park",
+    "7340 Greenwood Road"
+  ],
+  "summary": "Data center campus that STACK Infrastructure is to develop, own and lease to Amazon at the 313-acre Resilient Technology Park off Greenwood Road in west Shreveport, Louisiana, next to Interstate 20. The City Council approved it after the planning commission had blocked it, and residents sued in January 2026 seeking judicial review. In February 2026 local radio described a USD 10 billion site plan of seven two-story buildings and nearly 3 million sq ft, though other outlets said the site was left out of Amazon's USD 12 billion regional announcement because of the lawsuit. In August 2026 the state announced USD 6 billion for this third campus, raising Amazon's regional plan to USD 18 billion.",
+  "location": {
+    "country": "US",
+    "admin1": "Louisiana",
+    "admin2": "Caddo Parish",
+    "locality": "Shreveport",
+    "lat": 32.4639,
+    "lon": -93.7944,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s6"
+    ],
+    "note": "Local radio gives 7340 Greenwood Road, and the Shreveport-Bossier Journal places the park off Greenwood Road in west Shreveport next to I-20, but no coordinates are published. The point is the Shreveport city coordinate from its Wikipedia article, not the park."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-27",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "STACK Infrastructure",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ],
+      "note": "Leads construction and development of Amazon's northwest Louisiana campuses."
+    },
+    {
+      "name": "STACK Infrastructure",
+      "role": "owner",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s7"
+      ]
+    },
+    {
+      "name": "Amazon (Amazon Web Services)",
+      "role": "tenant",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s7"
+      ],
+      "note": "The Shreveport-Bossier Journal says STACK will lease the campuses to Amazon; KSLA calls Amazon the customer and end user, and local radio names AWS as the primary tenant or operator."
+    },
+    {
+      "name": "Amazon",
+      "role": "investor",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The USD 6 billion is presented by the state as Amazon's planned investment; Amazon also funds grid and water upgrades."
+    },
+    {
+      "name": "Southwestern Electric Power Company (SWEPCO)",
+      "role": "utility",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s7"
+      ]
+    },
+    {
+      "name": "Shreveport City Council",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Approved the development after the Shreveport Metropolitan Planning Commission had initially blocked it; residents' January 2026 suit seeks judicial review of that decision."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-08-18",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Investment announced by the state for the third northwest Louisiana campus at Resilient Technology Park, on top of the USD 12 billion announced in February for other campuses."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Local radio coverage of the February announcement described the Greenwood Road site as a USD 10 billion AI data center. This conflicts with the state's later USD 6 billion figure and with KSLA and the Shreveport-Bossier Journal, which said this site was not part of the February announcement; it is kept for transparency."
+    },
+    {
+      "metric": "land_area",
+      "value": 313,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-27",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Size of Resilient Technology Park as a whole."
+    },
+    {
+      "metric": "land_area",
+      "value": 250,
+      "qualifier": "more_than",
+      "unit": "acres",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Area covered by the campus site plan as reported in February 2026, before the 14% footprint reduction reported in August."
+    },
+    {
+      "metric": "buildings",
+      "value": 7,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Two-story buildings in the February 2026 site plan."
+    },
+    {
+      "metric": "floor_area",
+      "value": 3000000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported as nearly 3 million sq ft."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 210,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-18",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Direct new jobs attributed to the third campus; the state estimates 499 more indirect jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-01",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The mayor of Mooringsport and two Caddo Parish residents sued the city seeking judicial review of the City Council's approval; a district court hearing was set for 20 April 2026."
+    },
+    {
+      "event": "other",
+      "date": "2026-02-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s7"
+      ],
+      "note": "Amazon's USD 12 billion northwest Louisiana plan was announced. Local radio listed the Greenwood Road site among its campuses, while KSLA and the Shreveport-Bossier Journal said this site was left out of the USD 12 billion because of the pending litigation."
+    },
+    {
+      "event": "announced",
+      "date": "2026-08-18",
+      "kind": "actual",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "The state announced a USD 6 billion third campus at Resilient Technology Park; trade press reported that the development footprint had been cut by 14% to keep more green space and buffers."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Served by SWEPCO, with Amazon funding new energy infrastructure and grid upgrades so costs are not passed to existing ratepayers.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://710keel.com/northwest-louisiana-data-centers/",
+      "title": "Historic $12 Billion Dollar Investment in Shreveport by Amazon for New Data Centers",
+      "publisher": "News Radio 710 KEEL",
+      "published": "2026-02-23",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.wafb.com/2026/02/23/more-data-centers-reportedly-coming-northwest-louisiana-major-announcement-coming-monday/",
+      "title": "Amazon building $12 billion data center in Caddo & Bossier parishes, Gov. Landry announces",
+      "publisher": "WAFB (KSLA report)",
+      "published": "2026-02-23",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260225172233/https://www.wafb.com/2026/02/23/more-data-centers-reportedly-coming-northwest-louisiana-major-announcement-coming-monday/"
+    },
+    {
+      "id": "s3",
+      "url": "https://shreveportbossierjournal.com/2026/04/09/court-hearing-set-april-20-in-challenge-to-shreveport-amazon-data-center/",
+      "title": "Court hearing set April 20 in challenge to Shreveport Amazon data center",
+      "publisher": "Shreveport-Bossier Journal",
+      "published": "2026-04-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.opportunitylouisiana.gov/news/amazon-grows-northwest-louisiana-planned-investment-to-18-billion-with-new-shreveport-campus",
+      "title": "Amazon Grows Northwest Louisiana Planned Investment to $18 Billion With New Shreveport Campus",
+      "publisher": "Louisiana Economic Development",
+      "published": "2026-08-18",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s5",
+      "url": "https://irei.com/news/amazon-earmarks-6b-for-third-data-center-campus-in-northwest-louisiana/",
+      "title": "Amazon earmarks $6b for third data center campus in northwest Louisiana",
+      "publisher": "Institutional Real Estate, Inc.",
+      "published": "2026-08-27",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Shreveport,_Louisiana",
+      "title": "Shreveport, Louisiana",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s7",
+      "url": "https://www.ksla.com/2026/02/24/campuses-newly-announced-amazon-data-center-spanning-bossier-caddo-parishes-confirmed/",
+      "title": "Campuses for newly announced Amazon data center spanning Bossier & Caddo parishes confirmed",
+      "publisher": "KSLA News 12",
+      "published": "2026-02-24",
+      "accessed": "2026-10-09",
+      "type": "news"
+    }
+  ],
+  "notes": "Covers only the Resilient Technology Park campus. Amazon's February 2026 USD 12 billion plan covers STACK campuses north of Blanchard on State Line Road (Caddo Parish) and north of Benton near LA 3 (Bossier Parish), with no site-level figures found. Program-wide figures (up to USD 400 million for water, up to 2,250 construction jobs, up to 750 direct jobs) are not campus figures. No megawatt figure was found. The outcome of the April 2026 court hearing could not be confirmed from an independent openable source, so it is not recorded. Sources do not say whether the USD 6 billion replaces the earlier USD 10 billion radio description of this site. IREI's article is partly paywalled.",
+  "last_reviewed": "2026-10-09"
+}

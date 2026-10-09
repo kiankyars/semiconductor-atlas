@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "id": "bitdeer-shalersville-portage-county",
+  "name": "Bitdeer and Geis Shalersville AI data center campus",
+  "aliases": [
+    "Turnpike Commerce Center data center",
+    "Bitdeer Shalersville"
+  ],
+  "summary": "Proposed 15-building AI data center campus by Bitdeer Technologies Group and Geis Development at the Turnpike Commerce Center, just north of the Ohio Turnpike in Shalersville Township, Portage County, Ohio. Plans made public in May 2026 start with two data halls of about 48,000 sq ft each plus an office building and 150 MW of initial power capacity, with a potential 750 MW at full build-out over about five years; construction was put at more than USD 300 million, excluding computing equipment. A township moratorium is in place, and on 6 October 2026 trustees required uses of 25 MW or more to sit on heavy industrial land, which the township lacks; Geis's lawyers threatened to sue.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "admin2": "Portage County",
+    "locality": "Shalersville Township",
+    "lat": 41.2456,
+    "lon": -81.2603,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "note": "Sources place the site at the Turnpike Commerce Center just north of the Ohio Turnpike in Shalersville Township, without coordinates. The point is the township coordinate from its Wikipedia article, not the site."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-10-07",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Bitdeer Technologies Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Reported in May 2026 to be under contract to buy about 257 acres for the campus."
+    },
+    {
+      "name": "Geis Development",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Streetsboro-based business park developer partnering with Bitdeer."
+    },
+    {
+      "name": "Shalersville Holdings (Geis Companies)",
+      "role": "owner",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Geis affiliate described as owning the land in August 2026; the October 2026 report also calls it Geis-owned land."
+    },
+    {
+      "name": "Shalersville Township",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Has a data center moratorium in place and in October 2026 redefined its industrial zoning categories."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 750,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-10-07",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Potential capacity if the full campus is built; the sources do not say whether this is IT or facility load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial capacity",
+      "as_of": "2026-05",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 300000000,
+      "qualifier": "more_than",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction cost excluding the company's computing equipment."
+    },
+    {
+      "metric": "land_area",
+      "value": 257,
+      "qualifier": "approximately",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-08-14",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "The October 2026 Portager report instead describes the campus as sitting on just over 150 acres of Geis-owned land."
+    },
+    {
+      "metric": "buildings",
+      "value": 15,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-08-14",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Phase 1 is two data halls plus a 51,500 sq ft office building; phase 2 adds 12 data halls."
+    },
+    {
+      "metric": "floor_area",
+      "value": 48000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Each phase 1 data hall",
+      "as_of": "2026-05",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 400,
+      "qualifier": "approximately",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-17",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Local construction jobs over five years, as presented at the June 2026 public meeting."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 150,
+      "value_high": 200,
+      "qualifier": "range",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-06-17",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "At full build-out; phase 1 alone was put at 30 to 50 long-term jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Plans became public in late May 2026, ahead of a township residents' open house that the article links to 29 May."
+    },
+    {
+      "event": "other",
+      "date": "2026-06-16",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Public meeting at Shalersville Town Hall drew about 200 people inside and dozens more outside."
+    },
+    {
+      "event": "other",
+      "date": "2026-10-06",
+      "kind": "actual",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Trustees amended zoning definitions so that uses of 25 MW or more belong on heavy industrial land, which the township lacks; Geis's lawyer called the change unlawful and said the firm would sue unless it was tabled or rejected. The moratorium runs to the first week of November, and trustees said they would extend it if needed."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Bitdeer said it would pay for the electricity it needs and for any transmission and distribution upgrades; the utility is not named.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.news5cleveland.com/news/local-news/local-developer-global-tech-firm-plan-major-data-center-project-in-portage-county",
+      "title": "Local developer, global tech firm plan major data center project in Portage County",
+      "publisher": "News 5 Cleveland (WEWS)",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260819033708/https://www.news5cleveland.com/news/local-news/local-developer-global-tech-firm-plan-major-data-center-project-in-portage-county"
+    },
+    {
+      "id": "s2",
+      "url": "https://theportager.com/asian-crypto-mining-company-and-geis-partner-to-bring-data-center-to-shalersville",
+      "title": "Asian crypto mining company and Geis partner to bring data center to Shalersville",
+      "publisher": "The Portager",
+      "published": "2026-06-05",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://theenergymag.com/news/2026-06-17/bitdeer-ohio-ai-pushback",
+      "title": "Bitdeer's 750MW Ohio AI Data Center Plan Draws Local Scrutiny",
+      "publisher": "TheEnergyMag",
+      "published": "2026-06-17",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260927132914/https://theenergymag.com/news/2026-06-17/bitdeer-ohio-ai-pushback"
+    },
+    {
+      "id": "s4",
+      "url": "https://theportager.com/shalersville-holds-off-on-zoning-changes-to-allow-a-data-center",
+      "title": "Shalersville weighs zoning changes to block data center",
+      "publisher": "The Portager",
+      "published": "2026-08-14",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://theportager.com/shalersville-redefines-industrial-zoning-adding-obstacles-to-data-center-proposal",
+      "title": "Shalersville redefines industrial zoning, adding obstacles to data center proposal",
+      "publisher": "The Portager",
+      "published": "2026-10-07",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Shalersville_Township,_Portage_County,_Ohio",
+      "title": "Shalersville Township, Portage County, Ohio",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The News 5 Cleveland article (s1) shows no publication date; its images are dated 27 May 2026 and it links to a 29 May 2026 open house, so its figures are dated 2026-05. The Portager's June report (s2) relays the land-contract detail from News 5. Bitdeer says it is not seeking tax abatements and put phase 1 property tax revenue at about USD 2.17 million a year. The first buildings would use closed-loop liquid cooling with about 350 gallons of water a day and no wells. The August 2026 Portager article is partly paywalled; only its opening could be read. Further planning commission, zoning commission and trustee meetings were scheduled for 14 to 20 October 2026.",
+  "last_reviewed": "2026-10-09"
+}

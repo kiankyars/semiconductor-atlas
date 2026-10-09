@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-middenmeer-campus-west",
+  "name": "Microsoft Middenmeer Campus West expansion (Agriport Plot B)",
+  "aliases": [
+    "Uitbreiding Campus West Microsoft",
+    "Microsoft Middenmeer Plot B"
+  ],
+  "summary": "Proposed expansion of Microsoft's datacenters at the Agriport A7 business park in Middenmeer, Hollands Kroon, North Holland. Announced in September 2025, it would add six double-storey datacenter buildings on Plot B, a site of about 53 hectares west of the A7 next to Microsoft's AMS13-14 datacenters, plus a 10-hectare public nature area, forming one eight-building campus. Microsoft has published no capacity figure; in March 2026 the national EIA commission put the planned emergency generator capacity at about 535 MWe and used it as a proxy for electrical demand. Microsoft's indicative timeline targets a permit application in September 2026 and construction from late 2027.",
+  "location": {
+    "country": "NL",
+    "admin1": "Noord-Holland",
+    "admin2": "Hollands Kroon",
+    "locality": "Middenmeer",
+    "lat": 52.78304,
+    "lon": 5.025355,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Point of OSM way 1428523639 in the local OpenStreetMap layer, a Microsoft area tagged as a proposed datacenter expansion west of Microsoft's existing Agriport buildings; it is consistent with Microsoft's description of Plot B west of the A7 but is not confirmed by Microsoft."
+  },
+  "status": "announced",
+  "status_as_of": "2026-03-25",
+  "status_source_ids": [
+    "s1",
+    "s3"
+  ],
+  "workloads": [
+    "cloud"
+  ],
+  "parties": [
+    {
+      "name": "Microsoft",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Provincie Noord-Holland (Gedeputeerde Staten)",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Competent authority for the environmental permit; the Omgevingsdienst Noordzeekanaalgebied runs the EIA procedure on its behalf."
+    },
+    {
+      "name": "Gemeente Hollands Kroon",
+      "role": "government",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Described by Microsoft as a cooperation partner for the new phase."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 535,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "onsite_generation",
+      "applies_to": "campus",
+      "as_of": "2026-03-25",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Commission estimate derived from backup generator capacity, not planned datacenter demand published by Microsoft: the Commissie m.e.r. read the scoping document as planning 160 emergency generators of 3.3 MWe and six of about 1.1 MWe, and, assuming the power needed equals that installed generator capacity, put continuous electrical demand at about 535 MWe. It is not a permitted or contracted capacity."
+    },
+    {
+      "metric": "land_area",
+      "value": 53,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Size of Plot B; the plan includes a 10-hectare publicly accessible nature area."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-25",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "New double-storey datacenter buildings, joining the two existing AMS13-14 buildings to form an eight-building campus."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2025-12-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Public information market in Middenmeer; Microsoft's indicative timeline put the start of the EIA process in December 2025."
+    },
+    {
+      "event": "other",
+      "date": "2026-03-25",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Commissie m.e.r. issued its scoping advice on the environmental impact report, which is required because the emergency generators exceed 300 MW thermal."
+    },
+    {
+      "event": "other",
+      "date": "2026-09",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Indicative date for submitting the permit application."
+    },
+    {
+      "event": "construction_started",
+      "date": "2027",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Indicative start at the end of 2027, dependent on permitting."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "Emergency generators (120 to 150 in the commission's background text, 160 of 3.3 MWe plus six smaller units in its reading of the scoping document) and two substations; fuel is not stated, and Microsoft says it aims to stop using diesel for backup power by 2030.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://local.microsoft.com/blog/microsoft-bouwt-aan-toekomstbestendige-datacentercampus-in-middenmeer/",
+      "title": "Microsoft bouwt aan toekomstbestendige datacentercampus in Middenmeer",
+      "publisher": "Microsoft",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://local.microsoft.com/wp-content/uploads/2026/01/Information-market-3-december-2025.pdf",
+      "title": "Information market 3 December 2025: new datacentre development in Middenmeer",
+      "publisher": "Microsoft",
+      "published": "2025-12",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://pas.commissiemer.nl/files/nl/4021/a4021rd.pdf",
+      "title": "Uitbreiding Campus West Microsoft, provincie Noord-Holland: advies over reikwijdte en detailniveau van het milieueffectrapport",
+      "publisher": "Commissie voor de milieueffectrapportage",
+      "published": "2026-03-25",
+      "accessed": "2026-10-09",
+      "type": "government"
+    }
+  ],
+  "notes": "Covers only the new six-building phase and its link to AMS13-14 (Westlanderweg 50); the EIA commission says Microsoft already has nine datacenters in Middenmeer, not recorded here. The only power figure is the commission's 535 MWe estimate, which assumes continuous demand equals the planned emergency generator capacity; its background text mentions 120 to 150 generators. Microsoft's living campus page has no entry newer than 17 February 2026 (first trees planted on Plot B), so status rests on the March 2026 advice. No evidence of the planned September 2026 permit application was found; a July 2026 report of a further land purchase was not opened.",
+  "last_reviewed": "2026-10-09"
+}

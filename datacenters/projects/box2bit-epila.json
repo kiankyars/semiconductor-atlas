@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0",
+  "id": "box2bit-epila",
+  "name": "Box2Bit Epilon data center campus (Épila)",
+  "aliases": [
+    "Epilon",
+    "Epsilon"
+  ],
+  "summary": "AI-focused data center campus proposed by the Spanish company Box2Bit in Épila, Zaragoza, beside the A-2 motorway. On 28 January 2026 the Aragón government declared it an investment of regional and general interest, citing EUR 3.9 billion in total: EUR 1.125 billion for a first phase due in 2029 and EUR 2.775 billion for later phases. The first phase covers about 33 hectares, two data buildings and 150 MW with guaranteed grid access; later phases could take the site to about 100 hectares and 520 MW, but the additional power is not yet secured. The move followed the exclusion of Box2Bit's earlier Cariñena site from national grid planning.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragón",
+    "admin2": "Zaragoza",
+    "locality": "Épila",
+    "lat": 41.6,
+    "lon": -1.283,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s6"
+    ],
+    "note": "Town coordinates from the Épila Wikipedia article. Aragón Digital says the site has two accesses from the A-2 near the bonÀrea development; no parcel boundary is published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-06-15",
+  "status_source_ids": [
+    "s1",
+    "s4",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Box2Bit",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Aragón Digital describes the promoter as an independent Spanish company within a group whose parent is Quantum Global Assets."
+    },
+    {
+      "name": "Gobierno de Aragón",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Declared the project an investment of regional interest with general interest of Aragón in January 2026."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3900000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 1125000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 2775000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Later phases",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Aragón Digital says the first phase has guaranteed grid access for 150 MW; the government spokesperson said the first phase is secured and the second is still pending."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 520,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Capacity the later phases could reach; the additional supply has not been secured."
+    },
+    {
+      "metric": "land_area",
+      "value": 33,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Expansion area available if needed."
+    },
+    {
+      "metric": "floor_area",
+      "value": 66100,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "metric": "floor_area",
+      "value": 227300,
+      "qualifier": "up_to",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Floor area once all phases are complete."
+    },
+    {
+      "metric": "buildings",
+      "value": 2,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Data processing buildings; the first phase also includes an access-control building."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 550,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Direct construction jobs; the government adds 1,000 indirect jobs. The regional president cited about 1,500 construction jobs in total."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 63,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Direct operating jobs; the government adds 200 indirect jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-01-28",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The Aragón Governing Council approved the regional-interest declaration the same day the regional president announced the investment."
+    },
+    {
+      "event": "first_operational",
+      "date": "2029",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Target for completing the first phase."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Hoy Aragón says supply is guaranteed through the Calatorao substation, where Red Eléctrica's expansion was in its final phase; Aragón Digital says the campus can run on up to 100% renewable energy.",
+      "source_ids": [
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.aragonhoy.es/consejos-de-gobierno/respaldo-gobierno-aragon-proyecto-box2bit-creara-1-800-puestos-epila-103723",
+      "title": "Respaldo del Gobierno de Aragón al proyecto de Box2Bit que creará más de 1.800 puestos de trabajo en Épila",
+      "publisher": "Gobierno de Aragón (Aragón Hoy)",
+      "published": "2026-01-28",
+      "accessed": "2026-10-09",
+      "type": "government"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.aragondigital.es/articulo/economia/dga-precisa-detalles-centro-datos-box2bit-epila-primera-fase-1125-millones/20260128124944963318.html",
+      "title": "La DGA precisa los detalles del centro de datos de Box2Bit en Épila: primera fase de 1.125 millones",
+      "publisher": "Aragón Digital",
+      "published": "2026-01-28",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.eldiario.es/aragon/economia/empresa-box2bit-invertira-3-900-millones-euros-centro-datos-epila-renunciar-carinena_1_12942482.html",
+      "title": "La empresa Box2Bit invertirá 3.900 millones de euros en un centro de datos en Épila tras renunciar al de Cariñena",
+      "publisher": "elDiario.es",
+      "published": "2026-01-28",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.hoyaragon.es/articulo/noticias-aragon/box2bit-epila-centro-datos-carinena/20260129112439121735.html",
+      "title": "El motivo real por el que Box2Bit abandona Cariñena y se va a Épila con 3.900 millones",
+      "publisher": "Hoy Aragón",
+      "published": "2026-01-29",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://forbes.es/?p=956076",
+      "title": "Morgan Stanley eleva un 55% su previsión de capacidad de centros de datos en España, impulsada por Aragón",
+      "publisher": "Forbes España",
+      "published": "2026-06-15",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/%C3%89pila",
+      "title": "Épila",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Hoy Aragón reports that Box2Bit's earlier EUR 3.4 billion Cariñena plan was left out of Red Eléctrica's 2025-2030 grid planning; the government spokesperson called Épila complementary to Cariñena (Aragón Digital), while elDiario.es said the company had given Cariñena up. Hoy Aragón says the declaration lets the campus be processed through a PIGA, that it could not advance with certainty before the end of 2027, and that it lies a few hundred metres from Blackstone's planned site (record blackstone-calatorao). Forbes España (June 2026) repeats the EUR 3.9 billion, 150 MW, 520 MW and 2029 figures without naming the town; status_as_of uses that report.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0",
+  "id": "powerhouse-95-spotsylvania",
+  "name": "PowerHouse 95 data center campus",
+  "aliases": [
+    "PowerHouse 95",
+    "PH95",
+    "PH 95"
+  ],
+  "summary": "Campus aimed at hyperscale users, planned by PowerHouse Data Centers, a unit of American Real Estate Partners, along the I-95 corridor in Spotsylvania County, Virginia, through a joint venture with Harrison Street. PowerHouse completed the purchase of 145 acres in January 2024 and described an 800 MW campus served by three 300 MW substations, the first meant to deliver 150 MW. Its current campus page lists 227 acres, up to 900 MW of utility power, up to 12 buildings of up to two stories and about 3.6 million sq ft, with power delivery targeted for Q3 2027.",
+  "location": {
+    "country": "US",
+    "admin1": "Virginia",
+    "admin2": "Spotsylvania County",
+    "lat": 38.18,
+    "lon": -77.65,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Sources say only that the campus is in Spotsylvania along the I-95 corridor near existing electrical infrastructure. The point is the Spotsylvania County coordinate from its Wikipedia article, not the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "PowerHouse Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Wholly owned by American Real Estate Partners (AREP)."
+    },
+    {
+      "name": "Harrison Street",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Investment management firm and PowerHouse's joint venture partner; the land was acquired through the joint venture."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 800,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-01-25",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Campus size as reported with the land purchase. The same reports describe three 300 MW substations, which would exceed this figure; they do not reconcile the two."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 900,
+      "qualifier": "up_to",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Maximum utility power listed on PowerHouse's undated campus page, accessed 2026-10-09."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 150,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "phase",
+      "phase_label": "First substation (initial delivery)",
+      "as_of": "2024-01-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expected by October 2025 according to Converge Digest; Lightwave gave October 2024 for the first substation coming online. The current campus page targets power delivery in Q3 2027."
+    },
+    {
+      "metric": "land_area",
+      "value": 145,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2024-01-23",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 227,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Acreage shown on the current campus page; the sources do not explain the increase from 145 acres."
+    },
+    {
+      "metric": "buildings",
+      "value": 12,
+      "qualifier": "up_to",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Up to two stories each. In January 2024 Converge Digest described a design for four to eight powered shells."
+    },
+    {
+      "metric": "floor_area",
+      "value": 3600000,
+      "qualifier": "approximately",
+      "unit": "sq_ft",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Developable floor area listed on the campus page as 3.6M sq ft."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_acquired",
+      "date": "2024-01-23",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "PowerHouse announced on this date that it had completed the purchase of 145 acres through the Harrison Street joint venture."
+    },
+    {
+      "event": "other",
+      "date": "2027-Q3",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Power delivery target on the campus page, which also lists construction and delivery running from Q2 2024 to Q4 2027 and, inconsistently, a Q3 2026 delivery date."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Utility power through substations: three 300 MW substations were planned in 2024; the utility is not named in the cited sources.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://convergedigest.com/powerhouse-plans-800-mw-data-center-campus-in-spotsylvania-va/",
+      "title": "PowerHouse plans 800 MW data center campus in Spotsylvania, VA",
+      "publisher": "Converge Digest",
+      "published": "2024-01-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20240301025938/https://convergedigest.com/powerhouse-plans-800-mw-data-center-campus-in-spotsylvania-va/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.lightwaveonline.com/data-center/article/14304356/powerhouse-data-centers-announces-purchase-of-145-acres-in-spotsylvania-va-for-powerhouse-95-campus",
+      "title": "PowerHouse Data Centers announces purchase of 145 acres in Spotsylvania, Va. for PowerHouse 95 campus",
+      "publisher": "Lightwave",
+      "published": "2024-01-30",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://powerhousedata.com/data-center/powerhouse-95",
+      "title": "PowerHouse 95",
+      "publisher": "PowerHouse Data Centers",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260918144226/https://www.powerhousedata.com/data-center/powerhouse-95"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Spotsylvania_County,_Virginia",
+      "title": "Spotsylvania County, Virginia",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260822162111/https://en.wikipedia.org/wiki/Spotsylvania_County,_Virginia"
+    }
+  ],
+  "notes": "Status rests on PowerHouse's undated living campus page, so status_as_of is the access date. The page's construction window starting Q2 2024 suggests site work may have begun, but no dated source confirming a construction start or a tenant could be opened, so the status is kept at announced. The 2024 reports describe the campus as aimed at hyperscale users in northern Virginia.",
+  "last_reviewed": "2026-10-09"
+}

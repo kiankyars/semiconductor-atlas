@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "id": "ntt-gdc-tokyo-tky12-shiroi",
+  "name": "NTT Global Data Centers Tokyo TKY12 campus, Shiroi",
+  "aliases": [
+    "Tokyo TKY12",
+    "TKY12",
+    "東京TKY12データセンター"
+  ],
+  "summary": "NTT DATA Group and its data center arm NTT Global Data Centers announced in April 2026 that they had begun developing Tokyo TKY12, a six-building hyperscale campus in Shiroi City, Chiba Prefecture, in the Inzai-Shiroi data center cluster east of Tokyo. It is planned for about 200 MW of total IT capacity on a flat site about 20 m above sea level, near NTT's 50 MW TKY11 facility, which is due to open in April 2027. The first building is to enter service in 2030 or later, once the utility supplies power. No investment figure or construction start date has been disclosed.",
+  "location": {
+    "country": "JP",
+    "admin1": "Chiba Prefecture",
+    "locality": "Shiroi",
+    "lat": 35.791472,
+    "lon": 140.056306,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "NTT names Shiroi City, Chiba Prefecture, without an address. The point is the Shiroi city coordinate from its Wikipedia article, so it marks the city rather than the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-22",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "NTT Global Data Centers Corporation",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Data center subsidiary of NTT DATA Group, which co-issued the announcement."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total IT capacity of TKY12. NTT's headline figure of about 250 MW for the Inzai-Shiroi development matches TKY12 plus the nearby 50 MW TKY11, a separate facility, though the release does not break it down."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-04-17",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-04-17",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "NTT DATA and NTT GDC announced the start of development."
+    },
+    {
+      "event": "first_operational",
+      "date": "2030",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "First building to start service in 2030 or later, after power is received from the utility."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Service at the first building depends on power being supplied by the local utility, which is not named.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.nttdata.com/global/ja/news/release/2026/041700/",
+      "title": "国内最大級、千葉県印西・白井エリアで約250メガワット（MW）のデータセンターキャンパス開発を始動",
+      "publisher": "NTT DATA Group / NTT Global Data Centers",
+      "published": "2026-04-17",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260518175110/https://www.nttdata.com/global/ja/news/release/2026/041700/"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/ntt-data-plans-a-200-mw-data-center-campus-in-japan/",
+      "title": "NTT Data plans a 200 MW data center campus in Japan",
+      "publisher": "W.Media",
+      "published": "2026-04-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Shiroi",
+      "title": "Shiroi",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260816121335/https://en.wikipedia.org/wiki/Shiroi"
+    }
+  ],
+  "notes": "The status is 'announced' because NTT described the start of development but gave no construction start date. TKY11, the nearby 50 MW facility due in April 2027, is not part of this record. Shiroi coordinates come from Wikipedia (s3), used only for the map point.",
+  "last_reviewed": "2026-10-09"
+}

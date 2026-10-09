@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "id": "bitdeer-weathersfield-ohio",
+  "name": "Bitdeer Weathersfield (Niles) development site",
+  "aliases": [
+    "Bitdeer Niles",
+    "Niles, Ohio site"
+  ],
+  "summary": "Bitdeer development site on 41.8 owned acres at the former Niles Generating Station, demolished in 2013, in Weathersfield, Ohio, near Niles. Bitdeer launched it in September 2025 as a 300 MW grid-interconnected power pipeline under an interconnection agreement with FirstEnergy, which first scheduled energization for Q1 2029. Bitdeer's Q2 2026 results, with data as of 31 July 2026, target energization in Q4 2028, cite a transmission line extension agreement with a local utility, and list planned usage as colocation and AI cloud; the site is still described as a development site.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "admin2": "Trumbull County",
+    "locality": "Weathersfield Township (Niles)",
+    "lat": 41.1783,
+    "lon": -80.7578,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "Bitdeer names the site Niles and later Weathersfield, Ohio, without an address. The point is the Weathersfield Township coordinate from its Wikipedia article, which lists much of the city of Niles among the township's populated places; it is not the site."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-10",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [
+    "colocation",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Bitdeer Technologies Group",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Bitdeer Technologies Group",
+      "role": "owner",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Owns the 41.8 acres of land."
+    },
+    {
+      "name": "FirstEnergy",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Party to the interconnection agreement and set the original energization schedule. The 2026 results refer only to a transmission line extension agreement with an unnamed local utility company."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 300,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2026-07-31",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Listed as the capacity of a grid-interconnected development site in Bitdeer's power pipeline. Bitdeer's 2025 updates footnote their capacity figures as total available electrical capacity."
+    },
+    {
+      "metric": "land_area",
+      "value": 41.8,
+      "qualifier": "exact",
+      "unit": "acres",
+      "basis": "acquired",
+      "applies_to": "campus",
+      "as_of": "2026-07-31",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bitdeer said it officially launched the 300 MW Niles power pipeline in September 2025."
+    },
+    {
+      "event": "other",
+      "date": "2028-Q4",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target energization (ready-for-service) as of July 2026. The 2025 updates gave Q1 2029 as scheduled by FirstEnergy."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Grid interconnection under an agreement with FirstEnergy, plus a transmission line extension agreement with a local utility.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390025098957/ea026118901ex99-1_bitdeer.htm",
+      "title": "Bitdeer Announces September 2025 Production and Operations Update (Form 6-K exhibit 99.1)",
+      "publisher": "Bitdeer Technologies Group via SEC EDGAR",
+      "published": "2025-10-14",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001899123/000121390025107866/ea026473802ex99-1_bitdeer.htm",
+      "title": "Bitdeer Announces October 2025 Production and Operations Update (Form 6-K exhibit 99.1)",
+      "publisher": "Bitdeer Technologies Group via SEC EDGAR",
+      "published": "2025-11-10",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1899123/000121390026086938/ea030131301ex99-1.htm",
+      "title": "Bitdeer Reports Unaudited Financial Results for the Second Quarter of 2026 (Form 6-K exhibit 99.1)",
+      "publisher": "Bitdeer Technologies Group via SEC EDGAR",
+      "published": "2026-08-10",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Weathersfield_Township,_Trumbull_County,_Ohio",
+      "title": "Weathersfield Township, Trumbull County, Ohio",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "The September and October 2025 updates do not state an intended use; the Q2 2026 results list planned usage as colocation and AI cloud. Bitdeer's separate 570 MW Clarington, Ohio site (planned for colocation and crypto) and its Massillon, Ohio mining site are different builds.",
+  "last_reviewed": "2026-10-09"
+}

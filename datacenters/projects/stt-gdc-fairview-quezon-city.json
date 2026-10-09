@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "id": "stt-gdc-fairview-quezon-city",
+  "name": "STT Fairview data center campus",
+  "aliases": [
+    "STT Fairview",
+    "STT Fairview 1"
+  ],
+  "summary": "STT GDC Philippines, a joint venture of Globe Telecom, Ayala Corporation and ST Telemedia Global Data Centres, is building a four-building carrier-neutral campus on Regalado Avenue in Fairview, Quezon City. Announced in May 2023, it is planned at 124 MW of IT load and over 83,000 square metres of floor space. The first building, STT Fairview 1, was designed for 28 MW of IT load and targeted for service in 2025, but in April 2026 the Philippine Star reported the campus would partly open during 2026 with an initial 12 MW and put the project's cost at USD 1 billion. A 10-year MPower renewable supply deal signed in April 2026 covers Fairview and the Cavite data center.",
+  "location": {
+    "country": "PH",
+    "admin1": "Metro Manila",
+    "admin2": "Quezon City",
+    "locality": "Fairview (Regalado Avenue)",
+    "lat": 14.65,
+    "lon": 121.0475,
+    "precision": "admin2",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s6"
+    ],
+    "note": "STT's factsheet gives the address as Regalado Avenue, Fairview, Quezon City. The point is the Quezon City coordinate from its Wikipedia article, so it marks the city centre, several kilometres south of the Fairview area; precision is therefore given at city level."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-20",
+  "status_source_ids": [
+    "s5"
+  ],
+  "workloads": [
+    "colocation"
+  ],
+  "parties": [
+    {
+      "name": "STT GDC Philippines (Globe STT GDC Inc.)",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Joint venture of Globe Telecom, Ayala Corporation and ST Telemedia Global Data Centres."
+    },
+    {
+      "name": "STT GDC Philippines (Globe STT GDC Inc.)",
+      "role": "operator",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "STT GDC Philippines presents STT Fairview 1 as its flagship data centre."
+    },
+    {
+      "name": "Globe Telecom",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Joint venture partner in STT GDC Philippines."
+    },
+    {
+      "name": "Ayala Corporation",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Joint venture partner in STT GDC Philippines."
+    },
+    {
+      "name": "ST Telemedia Global Data Centres",
+      "role": "investor",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Singapore-based joint venture partner in STT GDC Philippines."
+    },
+    {
+      "name": "Leighton Asia",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Awarded the contract for the first phase of STT Fairview 1 in November 2023, together with First Balfour."
+    },
+    {
+      "name": "First Balfour",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "MPower (Meralco)",
+      "role": "power_supplier",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Meralco's retail electricity arm; 10-year deal for up to 40.5 MW of clean energy covering the Fairview and Cavite data centers."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 124,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2024-10",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "IT load at full build-out across four buildings. The power section of STT's 2024 factsheet gives a campus total of 128 MW instead, without explanation. STT's October 2025 release and the April 2026 Philippine Star report also give 124 MW, without saying whether it is IT load."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 28,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "STT Fairview 1 (first building)",
+      "as_of": "2024-10",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 12,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "Initial opening capacity (2026)",
+      "as_of": "2026-04-20",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Initial capacity the Philippine Star said would open during 2026."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-04-20",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Single news source: the Philippine Star states the project costs USD 1 billion without attributing the figure, and does not say whether it covers only Fairview. No company source opened for this record gives it."
+    },
+    {
+      "metric": "floor_area",
+      "value": 83000,
+      "qualifier": "more_than",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-10",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Gross floor area across four buildings."
+    },
+    {
+      "metric": "floor_area",
+      "value": 24918,
+      "qualifier": "exact",
+      "unit": "sq_m",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "STT Fairview 1 (first building)",
+      "as_of": "2024-10",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Gross floor area; the factsheet gives 8,619 square metres of net lettable area."
+    },
+    {
+      "metric": "buildings",
+      "value": 4,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2024-10",
+      "source_ids": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-05-19",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "event": "other",
+      "date": "2023-11",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Leighton Asia and First Balfour awarded the contract for the first phase of STT Fairview 1."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Earlier targets slipped: the 2024 factsheet gave ready-for-service in Q2 2025 and STT said in October 2025 that Fairview 1 was on track for full operations in Q4 2025; in April 2026 the Philippine Star said the campus would partly open during 2026 with 12 MW."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "STT Fairview 1 is designed with two diverse 115 kV utility feeds and up to 48 hours of on-site fuel storage for backup.",
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Renewable electricity bought under a 10-year retail supply deal with MPower for up to 40.5 MW across the Fairview and Cavite data centers; STT described Fairview 1 as powered by 100% renewable energy. The generation types were not disclosed.",
+      "source_ids": [
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://w.media/stt-gdc-announces-plans-to-build-sustainable-carrier-neutral-data-center-in-the-philippines/",
+      "title": "STT GDC Announces Plans to Build Sustainable Carrier-Neutral Data Center in the Philippines",
+      "publisher": "W.Media",
+      "published": "2023-05-19",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/sttgdc-awards-contract-for-stt-fairview-1-data-center-development-the-philippines/",
+      "title": "STT GDC Selects Leighton Asia and First Balfour for Hyperscale DC Development in the Philippines",
+      "publisher": "W.Media",
+      "published": "2023-11-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://assets.sttelemediagdc.com/sttgdc/global_en/public/2024-11/STT_Fairview_1_Factsheet_vOct2024.pdf",
+      "title": "STT Fairview 1 factsheet (version October 2024)",
+      "publisher": "ST Telemedia Global Data Centres",
+      "published": "2024-10",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.sttgdc.com/ph-en/newsroom/stt-gdc-philippines-advances-country-digital-readiness-welcomes-globe-radius-source-telecoms-connectivity-partners",
+      "title": "STT GDC Philippines Advances the Country's Digital Readiness, Welcomes Globe, Radius and Source Telecoms as Connectivity Partners",
+      "publisher": "ST Telemedia Global Data Centres (Philippines)",
+      "published": "2025-10-15",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.philstar.com/business/2026/04/20/2522112/ayala-led-data-center-builder-inks-supply-deal-meralco",
+      "title": "Ayala-led data center builder inks supply deal with Meralco",
+      "publisher": "The Philippine Star",
+      "published": "2026-04-20",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260420180559/https://www.philstar.com/business/2026/04/20/2522112/ayala-led-data-center-builder-inks-supply-deal-meralco"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Quezon_City",
+      "title": "Quezon City",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261005010001/https://en.wikipedia.org/wiki/Quezon_City"
+    }
+  ],
+  "notes": "Whether STT Fairview 1 was operating by October 2026 is unconfirmed: STT said in October 2025 that it was on track for full operations in Q4 2025, but the April 2026 Philippine Star report described the campus as only partly opening during 2026. The USD 1 billion cost comes from that single news report. A third-party report that Fairview 1 opened in 2025 could not be opened and is not used. The factsheet file sits in a 2024-11 folder and is labelled October 2024. Quezon City coordinates come from Wikipedia (s6), used only for the map point.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "id": "edgeconnex-kyotanabe-greater-osaka",
+  "name": "EdgeConneX Greater Osaka campus (Kagoya Tatara Campus, Kyotanabe)",
+  "aliases": [
+    "ITM01",
+    "Kagoya Tatara Campus",
+    "EdgeConneX Greater Osaka"
+  ],
+  "summary": "EdgeConneX, a data center developer backed by EQT Infrastructure, began building a 200 MW AI-ready hyperscale campus in March 2026 on a site of about 130,000 square metres at the Kagoya Tatara Campus in Kyotanabe City, roughly 30 km from central Osaka. The company calls it its first data center campus in Japan. It is being developed in partnership with Kagoya Asset Management; the groundbreaking was for a first building named ITM01, and the first phase is targeted to be ready for service in the first quarter of 2028. EdgeConneX said it plans about 350 MW in total across Greater Osaka, including a second project announced in August 2025.",
+  "location": {
+    "country": "JP",
+    "admin1": "Kyoto Prefecture",
+    "locality": "Kyotanabe",
+    "lat": 34.81444,
+    "lon": 135.76778,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "The releases name the Kagoya Tatara Campus and place it in Kyotanabe City through a quote from the city's mayor; no address is given. The point and the prefecture come from the Kyotanabe Wikipedia article, so the point marks the city rather than the site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-03-18",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "EdgeConneX",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Backed by EQT Infrastructure, part of the investment organisation EQT."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 200,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-03-17",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Described as 200 MW of power capacity; neither release says whether this is IT or facility power."
+    },
+    {
+      "metric": "land_area",
+      "value": 13,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-17",
+      "source_ids": [
+        "s2",
+        "s1"
+      ],
+      "note": "The Japanese release gives about 130,000 square metres as the site area; the English release says the campus spans 130,000 square metres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_started",
+      "date": "2026-03",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Groundbreaking for the first building, ITM01, reported in releases dated 17 and 18 March 2026."
+    },
+    {
+      "event": "first_operational",
+      "date": "2028-Q1",
+      "kind": "planned",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Ready-for-service target for the first phase."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.edgeconnex.com/news/press-releases/edgeconnex-commences-construction-of-200mw-ai-ready-hyperscale-campus-in-greater-osaka/",
+      "title": "EdgeConneX Commences Construction of 200MW AI-Ready Hyperscale Campus in Greater Osaka",
+      "publisher": "EdgeConneX",
+      "published": "2026-03-17",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260617074318/https://www.edgeconnex.com/news/press-releases/edgeconnex-commences-construction-of-200mw-ai-ready-hyperscale-campus-in-greater-osaka/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.edgeconnex.com/news/press-releases/edgeconnex%e3%80%81%e9%96%a2%e8%a5%bf%e3%82%a8%e3%83%aa%e3%82%a2%e3%81%ab200mw%e3%81%aeai%e5%af%be%e5%bf%9c%e3%83%8f%e3%82%a4%e3%83%91%e3%83%bc%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%ab%e3%82%ad%e3%83%a3/",
+      "title": "EdgeConneX、関西エリアに200MWのAI対応ハイパースケールキャンパスの開発に着手",
+      "publisher": "EdgeConneX",
+      "published": "2026-03-18",
+      "accessed": "2026-10-09",
+      "type": "company",
+      "archived_url": "https://web.archive.org/web/20260410204401/https://www.edgeconnex.com/news/press-releases/edgeconnex%E3%80%81%E9%96%A2%E8%A5%BF%E3%82%A8%E3%83%AA%E3%82%A2%E3%81%AB200mw%E3%81%AEai%E5%AF%BE%E5%BF%9C%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%82%AD%E3%83%A3/"
+    },
+    {
+      "id": "s3",
+      "url": "https://en.wikipedia.org/wiki/Ky%C5%8Dtanabe",
+      "title": "Kyōtanabe",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Only EdgeConneX's own English and Japanese releases were found for this campus; they carry different dates (17 and 18 March 2026). Kagoya Asset Management is described as EdgeConneX's partner on the project without a stated ownership or development role, and Kyotanabe's mayor is quoted congratulating the parties on the groundbreaking, so neither is listed as a party. The roughly 350 MW Greater Osaka (Kansai) total includes a separate second project and is not a figure for this campus. No investment amount, utility or power arrangement was disclosed. Kyotanabe coordinates and the prefecture come from Wikipedia (s3), used only for the location.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "id": "sify-rabale-navi-mumbai",
+  "name": "Sify Rabale data center campus (Mumbai 03), Navi Mumbai",
+  "aliases": [
+    "Rabale Data Center campus",
+    "Mumbai 03",
+    "MUM03"
+  ],
+  "summary": "Sify Infinit Spaces' Rabale campus in the TTC Industrial Area, Navi Mumbai, one of its largest, is designed for 12 towers, of which five are operating. Sify's campus page gives 96.94 MW of IT power for them, the figure its October 2025 prospectus reports as built capacity at mid-2025. The hyperscale and AI-ready Tower 5, designed for 43.2 MW, came into service in the 2023-24 financial year and had 30.24 MW installed by June 2025. Sify's website gives more than 377 MW of IT power for the full campus. Towers 11 and 12 (38.88 MW together) were under construction in October 2025 at an estimated INR 11.3 billion, targeted for the year to March 2028.",
+  "location": {
+    "country": "IN",
+    "admin1": "Maharashtra",
+    "admin2": "Thane district",
+    "locality": "Rabale, Navi Mumbai (TTC Industrial Area)",
+    "lat": 19.14417,
+    "lon": 73.00861,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sify gives the address as Plot R-847, TTC Industrial Area, Rabale, Navi Mumbai, and the prospectus places towers 11 and 12 on Plot R-978 in the same industrial area. The point is the Rabale coordinate from its Wikipedia article (which also gives Thane district), so it marks the neighbourhood rather than the plots."
+  },
+  "status": "partially_operational",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "colocation",
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Sify Infinit Spaces Limited",
+      "role": "developer",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Data center subsidiary of Sify Technologies, which is one of its promoters."
+    },
+    {
+      "name": "Sify Infinit Spaces Limited",
+      "role": "operator",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 377,
+      "qualifier": "more_than",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Design capacity across 12 towers from Sify's undated website, read on the access date."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 96.94,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Towers 1-5",
+      "as_of": "2026-10-09",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Sify's undated campus page, read on the access date, gives 96.94 MW of IT power with five of 12 towers fully operational. The prospectus gives the same figure as the built capacity of towers 1-5 at 30 June 2025, when Tower 5 had only 30.24 MW of its 43.2 MW installed, so commissioned capacity at that date was lower."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 43.2,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Tower 5 (design / built capacity)",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Sify's campus page says Tower 5 is designed for 43.2 MW of IT power; the prospectus gives the same figure as its built capacity. The prospectus defines built capacity as the maximum IT load a facility is engineered to support on its present design, and installed capacity as the part that is equipped, powered and commissioned."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 30.24,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "operational",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Tower 5 (installed capacity)",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Installed IT capacity of Tower 5 at 30 June 2025, up from 6.48 MW at 31 March 2024."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 38.88,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "it_load",
+      "applies_to": "phase",
+      "phase_label": "Towers 11 and 12",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "19.44 MW in each tower, with operations targeted by the financial year ending March 2028."
+    },
+    {
+      "metric": "investment",
+      "value": 11276930000,
+      "qualifier": "exact",
+      "unit": "INR",
+      "basis": "announced",
+      "applies_to": "phase",
+      "phase_label": "Towers 11 and 12",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Estimated cost of towers 11 and 12 excluding land, certified by an independent chartered engineer; INR 8.6 billion was to come from IPO proceeds and the rest from borrowing."
+    },
+    {
+      "metric": "buildings",
+      "value": 12,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-10-16",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "buildings",
+      "value": 5,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "operational",
+      "applies_to": "campus",
+      "as_of": "2025-06-30",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2025-10-16",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Prospectus reports towers 11 and 12 under construction, to be part-funded by the planned IPO of Sify Infinit Spaces."
+    },
+    {
+      "event": "other",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Sify's campus page says towers 6, 7, 11 and 12 are slated to be operational by 2026; the October 2025 prospectus targets towers 11 and 12 for the year ending March 2028."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Towers 1 to 3 are served by an on-site 110 kV substation and the later towers by an on-site 220 kV GIS substation (towers 4 and 5 in the prospectus, towers 4 to 6 on Sify's campus page).",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "Renewable power from solar and wind, bought through power purchase agreements, covers up to 70% of campus operations; Sify's campus page cites 99 MW of green power.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "Wind generation is part of the renewable supply bought through power purchase agreements.",
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.sifytechnologies.com/europe/data-centre/",
+      "title": "Data centre",
+      "publisher": "Sify Technologies",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.sifytechnologies.com/data-center/mumbai-data-center/",
+      "title": "Mumbai data center",
+      "publisher": "Sify Technologies",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s3",
+      "url": "https://nsearchives.nseindia.com/corporate/Registration_17102025141743_DRHP_Fillingversion.pdf",
+      "title": "Sify Infinit Spaces Limited: Draft Red Herring Prospectus (filing version)",
+      "publisher": "Sify Infinit Spaces Limited (filed with SEBI; hosted by National Stock Exchange of India)",
+      "published": "2025-10-16",
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Rabale",
+      "title": "Rabale",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20260720155305/https://en.wikipedia.org/wiki/Rabale"
+    }
+  ],
+  "notes": "The partially operational status and the 2026 tower schedule come from Sify's undated campus page (s2), read on 2026-10-09; it says towers 6, 7, 11 and 12 are slated for 2026 and towers 8 to 10 are in planning, while the October 2025 prospectus targets towers 11 and 12 for the year ending March 2028. The prospectus shows no Tower 5 capacity in the year to March 2023 and 43.2 MW built by March 2024. Towers 11 and 12 stand on Plot R-978, sub-leased from Gargantuan Industrial Space Solutions, which is to deliver the buildings built-to-suit. Rabale coordinates and the district come from Wikipedia (s4), used only for the location.",
+  "last_reviewed": "2026-10-09"
+}

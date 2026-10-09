@@ -30,16 +30,13 @@ Additions are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Leads not yet researched
 
-- United States: Microsoft Union City (Georgia), Person County (North Carolina) and Goodyear/El
-  Mirage (Arizona); Google "Project Clydesdale" (Owasso, Oklahoma) and Columbus-area sites;
-  Oracle-owned campuses; Bitdeer Niles (Ohio); PowerHouse Spotsylvania (Virginia) and Big Watt
-  (Taylor, Texas); the Stack and Amazon campus in northwest Louisiana; Nightpeak Old Ocean
-  (Brazoria County, Texas).
-- Europe: Microsoft Middenmeer (Netherlands), QTS Vimercate (Italy) and Eemshaven (Netherlands),
-  AWS Aragon campuses, EU AI gigafactories once selected, Box2Bit Épila, Merlin Muel, Vantage
-  Villanueva de Gállego (Spain), Cavour Trino (Italy), Echelon Arklow and Herbata Naas (Ireland).
-- Asia-Pacific: Microsoft Hyderabad, AWS Maharashtra, Yotta and Sify campuses (India); Japan,
-  Taiwan and Singapore hyperscaler sites; China.
-- Middle East, Africa and the Americas: Khazna Ajman, Iozera Tetouan, Qatar, Kuwait, Egypt,
-  Nigeria and South Africa; Terranova Praia Grande and KIO QRO3; a status update for
-  `omnia-data-center-pecem` (reported 2026 construction start and lawsuit).
+- United States: PowerHouse Charlotte (University City Blvd, 380 MW on the company page) and the
+  PowerHouse/Poe campus in Carroll County, Kentucky; Microsoft Person County (North Carolina) and
+  Goodyear/El Mirage (Arizona) once site figures are published; Google Columbus-area sites; Amazon
+  and STACK campuses at Blanchard and Bossier (Louisiana).
+- Europe: AWS Aragon campuses (only annual energy figures published), Merlin Muel, Echelon
+  Arklow's newer Kish site, QTS Forssa (Finland), EU AI gigafactories once selected.
+- Asia-Pacific: Microsoft Hyderabad (only region-wide figures), AWS Maharashtra, Yotta Panvel,
+  Foxconn Kaohsiung, Singapore, China.
+- Middle East, Africa and the Americas: Qatar, Kuwait, Egypt and South Africa; Chile and Colombia;
+  a status update for `omnia-data-center-pecem` (reported 2026 construction start and lawsuit).

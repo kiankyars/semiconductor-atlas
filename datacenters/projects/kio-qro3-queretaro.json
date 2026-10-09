@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "id": "kio-qro3-queretaro",
+  "name": "KIO Data Centers QRO3, Querétaro",
+  "aliases": [
+    "QRO3"
+  ],
+  "summary": "QRO3 is a proposed next phase of KIO Data Centers' technology campus in the El Marqués Industrial Park in Querétaro, Mexico. In August 2026, around an event at which Mexico's Economy Ministry gave KIO the Hecho en México designation, KIO outlined QRO3 as an expansion of about 100 MW that would be its largest data center, with an investment of up to USD 1.3 billion through 2030. Two of the three trade reports describe the investment as under evaluation or dependent on the project going ahead, and no construction schedule has been disclosed. KIO linked the plan to demand for cloud and AI services.",
+  "location": {
+    "country": "MX",
+    "admin1": "Querétaro",
+    "locality": "El Marqués Industrial Park",
+    "lat": 20.56636,
+    "lon": -100.256724,
+    "precision": "approximate_site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Mexico Business News places QRO3 on KIO's campus in the El Marqués Industrial Park. The point is the existing building tagged 'Centro de datos KIO QRO1 y QRO2' in the local OpenStreetMap layer (datacenters/layers/osm/features.geojson, OSM way 741133962); exactly where QRO3 would sit on or near that campus is not reported."
+  },
+  "status": "proposed",
+  "status_as_of": "2026-08-17",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "cloud",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "KIO Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "approximately",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "phase",
+      "phase_label": "QRO3",
+      "as_of": "2026-08-17",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Sources do not say whether this is IT or facility capacity; W.Media and Mexico Industry present it as conditional on the project going ahead."
+    },
+    {
+      "metric": "investment",
+      "value": 1300000000,
+      "qualifier": "up_to",
+      "unit": "USD",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "QRO3",
+      "as_of": "2026-08-17",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Potential investment through 2030 that KIO was described as evaluating rather than committing. Mexico Business News (s1) gives about USD 1.3 billion and does not mention 2030."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "other",
+      "date": "2026-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "KIO presented QRO3 as a project under consideration, alongside an event at which the Economy Ministry gave KIO the Hecho en México designation. Recorded as a proposal rather than a formal announcement."
+    }
+  ],
+  "power_sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://mexicobusiness.news/trade-and-investment/news/kio-plans-us13-billion-data-center-queretaro",
+      "title": "KIO Plans US$1.3 Billion Data Center in Queretaro",
+      "publisher": "Mexico Business News",
+      "published": "2026-08-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s2",
+      "url": "https://w.media/kio-data-centers-considering-100-mw-expansion-in-mexico/",
+      "title": "KIO Data Centers considering 100 MW expansion in Mexico",
+      "publisher": "W.Media",
+      "published": "2026-08-14",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://mexicoindustry.com/noticia/kio-data-centers-supera-los-900-millones-de-dolares-invertidos-proyecta-expansion-hacia-2030",
+      "title": "KIO Data Centers supera los 900 millones de dólares invertidos; proyecta expansión hacia 2030",
+      "publisher": "Mexico Industry",
+      "published": "2026-08-17",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    }
+  ],
+  "notes": "Status is 'proposed': W.Media says KIO is considering the expansion, and Mexico Industry says KIO is evaluating the investment. Mexico Business News calls the event an announcement, but no opened source reports a formal commitment, and KIO's own release was not opened. The estimate of more than 8,100 direct and indirect jobs is tied to QRO3 by Mexico Business News but to KIO's wider 2030 strategy by Mexico Industry, so it is not a metric. W.Media says KIO's existing QRO2 building in Querétaro is a 12 MW Tier III facility; it is not part of QRO3. W.Media notes grid capacity is a constraint in Querétaro; no power arrangement for QRO3 has been reported.",
+  "last_reviewed": "2026-10-09"
+}

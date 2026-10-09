@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "id": "khazna-ajman",
+  "name": "Khazna QAJ1 AI data center (Ajman)",
+  "aliases": [
+    "QAJ1",
+    "QAJ01"
+  ],
+  "summary": "AI-optimised, liquid-cooled data center being built by Khazna Data Centers in Ajman, United Arab Emirates, with 20 data halls of 5 MW each for 100 MW of IT load, the largest facility in Khazna's portfolio. Construction by Laing O'Rourke began in October 2024 with a 15-month target, and power is to come from Etihad Water and Electricity. By April 2025 the steel structure was complete and the first phase was rescheduled to December 2026 from an earlier 3Q 2025 date. In February 2026 the Uptime Institute awarded the design documents Tier III certification.",
+  "location": {
+    "country": "AE",
+    "admin1": "Ajman",
+    "lat": 25.41361,
+    "lon": 55.44556,
+    "precision": "admin1",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s7"
+    ],
+    "note": "Sources name only Ajman. Coordinates are the Ajman city point from its Wikipedia article and stand in for the emirate; the plot location is not published."
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-10-14",
+  "status_source_ids": [
+    "s3",
+    "s5"
+  ],
+  "workloads": [
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Khazna Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5",
+        "s6"
+      ]
+    },
+    {
+      "name": "Laing O'Rourke",
+      "role": "builder",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "name": "Etihad Water and Electricity",
+      "role": "utility",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "under_construction",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2024-10-18",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Reported as 20 data halls of 5 MW each; these reports do not state the scope."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 100,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "it_load",
+      "applies_to": "campus",
+      "as_of": "2026-02-25",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "The Uptime Institute release describes 100 MW of total IT load, with 5 MW of IT capacity in each of 20 halls."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-10",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced by Khazna in a LinkedIn post reported on 15 October 2024."
+    },
+    {
+      "event": "construction_started",
+      "date": "2024-10",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Laing O'Rourke started construction; completion was then expected within 15 months."
+    },
+    {
+      "event": "other",
+      "date": "2025-04",
+      "kind": "actual",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Khazna said the steel structures were complete."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-12",
+      "kind": "planned",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Initial phase target as of April 2025, a delay from an earlier 3Q 2025 completion date."
+    },
+    {
+      "event": "other",
+      "date": "2026-02",
+      "kind": "actual",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Uptime Institute Tier III Certification of Design Documents awarded; the design certification does not cover a built facility."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "Electricity primarily from Etihad Water and Electricity.",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://w.media/khazna-announces-construction-of-100-mw-ai-optimised-data-center-in-ajman/",
+      "title": "Khazna announces construction of 100 MW AI optimised Data Center in Ajman",
+      "publisher": "W.Media",
+      "published": "2024-10-15",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20250724204654/https://w.media/khazna-announces-construction-of-100-mw-ai-optimised-data-center-in-ajman/"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.meed.com/construction-begins-on-khazna-data-centre-in-ajman",
+      "title": "Construction begins on Khazna data centre in Ajman",
+      "publisher": "MEED",
+      "published": "2024-10-18",
+      "accessed": "2026-10-09",
+      "type": "trade_press",
+      "archived_url": "https://web.archive.org/web/20260116201938/https://www.meed.com/construction-begins-on-khazna-data-centre-in-ajman"
+    },
+    {
+      "id": "s3",
+      "url": "https://guest.meed.com/?p=12676",
+      "title": "Khazna breaks ground on new UAE data centre projects",
+      "publisher": "MEED",
+      "published": "2025-04-22",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s4",
+      "url": "https://enterpriseam.com/logistics/2025/04/22/khazna-to-boost-uae-data-center-infrastructure-with-60-mw-projects/",
+      "title": "Khazna to boost UAE data center infrastructure with 60 MW projects",
+      "publisher": "Enterprise AM",
+      "published": "2025-04-22",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s5",
+      "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-to-add-over-1gw-hyperscale-capacity-across-multiple-countries-by-2030/",
+      "title": "Khazna Data Centers to Add Over 1GW Hyperscale Capacity Across Multiple Countries By 2030",
+      "publisher": "Khazna Data Centers",
+      "published": "2025-10-14",
+      "accessed": "2026-10-09",
+      "type": "company"
+    },
+    {
+      "id": "s6",
+      "url": "https://itweb.africa/article/khazna-awarded-uptime-tier-iii-certification-of-design-documents-for-ajman-uae-facility-largest-in-companys-portfolio/lLn147mQVWz7J6Aa",
+      "title": "Khazna Awarded Uptime Tier III Certification of Design Documents for Ajman, UAE Facility, Largest in Company's Portfolio",
+      "publisher": "ITWeb Africa (Uptime Institute release via Business Wire)",
+      "published": "2026-02-25",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s7",
+      "url": "https://en.wikipedia.org/wiki/Ajman",
+      "title": "Ajman",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261003225448/https://en.wikipedia.org/wiki/Ajman"
+    }
+  ],
+  "notes": "Status rests on Khazna saying in October 2025 that it was developing hyperscale facilities in Ajman and on MEED's April 2025 report of completed steel structures; the February 2026 certification release speaks of performance once the facility is constructed, and no later construction or opening report was found. MEED reported in October 2024 a multibillion-dirham cost with no exact figure, and a project area of 100,000 square metres without saying whether that is floor or land area, so neither is recorded as a metric.",
+  "last_reviewed": "2026-10-09"
+}

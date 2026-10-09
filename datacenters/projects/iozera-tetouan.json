@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "id": "iozera-tetouan",
+  "name": "Iozera Tetouan AI data center and hub",
+  "aliases": [],
+  "summary": "Proposed 386 MW data center and artificial-intelligence hub in Tetouan, northern Morocco, announced in May 2024 by the US start-up Iozera during a Moroccan government roadshow in North America, with a planned investment of about USD 500 million and renewable power. Plans included AI computing, AI training and data-labelling units, conventional data storage and a start-up incubation centre. Reports from January and July 2026 still describe it as announced; a BMI note summarised by Le360 in July 2026 put commissioning in the second half of 2026, but no source found confirms construction.",
+  "location": {
+    "country": "MA",
+    "admin1": "Tanger-Tetouan-Al Hoceima",
+    "locality": "Tetouan",
+    "lat": 35.567,
+    "lon": -5.367,
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "City coordinates from the Tétouan Wikipedia article; the opened sources name only the city, not a site within it."
+  },
+  "status": "announced",
+  "status_as_of": "2026-07-09",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "workloads": [
+    "ai_training",
+    "ai_unspecified"
+  ],
+  "parties": [
+    {
+      "name": "Iozera",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "The North Africa Post describes it as a US-based technology start-up."
+    },
+    {
+      "name": "Kingdom of Morocco",
+      "role": "government",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Le360 describes the project as a partnership with the Moroccan state without naming an agency."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "power_capacity",
+      "value": 386,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2026-07-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "metric": "investment",
+      "value": 500000000,
+      "qualifier": "exact",
+      "unit": "USD",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2024-05-06",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Announced during a North American roadshow organised by the Moroccan government."
+    },
+    {
+      "event": "first_operational",
+      "date": "2026-H2",
+      "kind": "planned",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Commissioning window cited from a BMI (Fitch Solutions) note; no construction progress was reported."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "other",
+      "description": "The project is to run on renewable energy; the opened sources do not name the plants or technologies.",
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://northafricapost.com/?p=77106",
+      "title": "Artificial Intelligence: U.S. firm Iozera to Invest $500 Mln in Data-center and AI Hub in Morocco",
+      "publisher": "The North Africa Post",
+      "published": "2024-05-06",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://dabafinance.com/en/news/morocco-data-centers-ai-energy-europe",
+      "title": "Morocco Attracts Data Center Investments Despite Power, Demand Gaps",
+      "publisher": "Daba Finance",
+      "published": "2026-01-10",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260501124841/https://dabafinance.com/en/news/morocco-data-centers-ai-energy-europe"
+    },
+    {
+      "id": "s3",
+      "url": "https://fr.le360.ma/economie/data-centers-au-maroc-une-nouvelle-vague-dinvestissements-portee-par-lia-et-la-souverainete_5AWWI6OH7FFILPLGYDSUGMU2IA/",
+      "title": "Data centers au Maroc: une nouvelle vague d'investissements portée par l'IA et la souveraineté numérique",
+      "publisher": "Le360",
+      "published": "2026-07-09",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Tetouan",
+      "title": "Tétouan",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Daba Finance (January 2026) says Naver's separate 500 MW AI data center plan, unveiled in 2025 with Nvidia, is at the same Tetouan site, whereas Le360 (July 2026) places the Naver Cloud-led 500 MW hub near Casablanca; that project is not covered by this record. Iozera's own website did not mention the Morocco project when checked. Earlier reports of a specific Tetouan site, floor area and an original Q2 2026 opening target come from pages that could not be opened, so they are not recorded.",
+  "last_reviewed": "2026-10-09"
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0",
+  "id": "vantage-villanueva-de-gallego",
+  "name": "Vantage Data Centers Villanueva de Gállego campus",
+  "aliases": [
+    "Vantage Zaragoza"
+  ],
+  "summary": "Planned hyperscale data center campus by US operator Vantage Data Centers with the Aragonese company Desarrollos Ecoindustriales La Cartuja, on roughly 40 to 48 hectares of industrial land south of Villanueva de Gállego (Zaragoza), beside the A-23 motorway near Universidad San Jorge. The partners asked for regional general-interest status in May 2025, and the Aragón government approved it in September 2025 for a EUR 3.2 billion investment over ten years in five phases, with 90 MW of supply already granted through Endesa. In March 2026 the project was still seeking authorisation, with initial documents filed with the regional environmental agency (Inaga) and eight data buildings planned.",
+  "location": {
+    "country": "ES",
+    "admin1": "Aragón",
+    "admin2": "Zaragoza",
+    "locality": "Villanueva de Gállego",
+    "lat": 41.767,
+    "lon": -0.817,
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Town coordinates from the Villanueva de Gállego Wikipedia article. Sources place the site south of the town along the A-23 (Huesca motorway), opposite the San Miguel industrial estate and close to the Universidad San Jorge campus; no parcel boundary is published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-03-20",
+  "status_source_ids": [
+    "s3"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Vantage Data Centers",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "name": "Desarrollos Ecoindustriales La Cartuja",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Aragonese partner company promoting the project with Vantage; elDiario.es says it is made up of Atalaya Generación Eólica and Posidonia Inversiones, and Libertad Digital describes the campus as part of an eco-industrial park it promotes."
+    },
+    {
+      "name": "Endesa",
+      "role": "utility",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported to have granted 90 MW of electricity supply for the project."
+    },
+    {
+      "name": "Gobierno de Aragón",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Received the general-interest request in May 2025 and approved a Declaración de Interés General de Aragón (DIGA) for the project in September 2025."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3200000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "announced",
+      "applies_to": "campus",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Announced by the president of Aragón when the DIGA was approved; elDiario.es had reported in May 2025 a joint investment above this amount."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 90,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "contracted",
+      "power_scope": "grid_connection",
+      "applies_to": "campus",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Electricity supply reported as already granted through Endesa; no planned full build-out capacity in MW was found."
+    },
+    {
+      "metric": "land_area",
+      "value": 40,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "metric": "land_area",
+      "value": 48,
+      "qualifier": "approximately",
+      "unit": "hectares",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-03-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Later figure from El Español's account of the environmental filing; it differs from the 40 hectares reported in 2025."
+    },
+    {
+      "metric": "buildings",
+      "value": 8,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2026-03-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Data buildings; work would begin with site urbanisation, the substation and the first building, with the rest in later phases."
+    },
+    {
+      "metric": "jobs_construction",
+      "value": 1200,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First three years of construction",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Libertad Digital adds 600 to 750 workers a year from the fourth year to the end of the decade."
+    },
+    {
+      "metric": "jobs_permanent",
+      "value": 520,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Direct jobs at full operation, starting from about 180 in the first three years."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-05",
+      "kind": "actual",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The project became public in May 2025, when the promoters asked the Aragón government on 14 May to declare it of general interest."
+    },
+    {
+      "event": "other",
+      "date": "2025-09",
+      "kind": "actual",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Aragón Governing Council approved a DIGA (declaration of general interest) for the project."
+    },
+    {
+      "event": "construction_started",
+      "date": "2026",
+      "kind": "planned",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "In May 2025 elDiario.es reported construction was planned to start in summer 2026; in March 2026 the project was still awaiting authorisation."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "grid",
+      "description": "90 MW of supply reported as granted through Endesa.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "wind",
+      "description": "The promoters plan to integrate local wind generation.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "The promoters plan to integrate local photovoltaic generation.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Energy storage systems are part of the stated plan.",
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.eldiario.es/aragon/politica/gigante-data-centers-amigo-trump-desembarca-zaragoza-aliado-empresarios-aragoneses_1_12301095.html",
+      "title": "Un gigante de los 'data centers' ligado a un amigo de Trump desembarca en Zaragoza aliado con empresarios aragoneses",
+      "publisher": "elDiario.es",
+      "published": "2025-05-15",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260211144613/https://www.eldiario.es/aragon/politica/gigante-data-centers-amigo-trump-desembarca-zaragoza-aliado-empresarios-aragoneses_1_12301095.html"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.libertaddigital.com/espana/2025-09-12/azcon-anuncia-una-inversion-de-3-200-millones-para-un-centro-de-datos-de-vantage-en-aragon-7294927/",
+      "title": "Vantage levantará un centro de datos de hiperescala en Aragón con 3.200 millones de inversión",
+      "publisher": "Libertad Digital",
+      "published": "2025-09-12",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.elespanol.com/aragon/economia/20260320/sacara-vantage-metros-cubicos-agua-necesita-centros-datos-villanueva-gallego/1003744176774_0.html",
+      "title": "¿De dónde sacará Vantage los 5.000 metros cúbicos de agua que necesita para sus centros de datos en Villanueva de Gállego?",
+      "publisher": "El Español",
+      "published": "2026-03-20",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s4",
+      "url": "https://en.wikipedia.org/wiki/Villanueva_de_G%C3%A1llego",
+      "title": "Villanueva de Gállego",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other",
+      "archived_url": "https://web.archive.org/web/20261003063012/https://en.wikipedia.org/wiki/Villanueva_de_G%C3%A1llego"
+    }
+  ],
+  "notes": "Accounts of the layout differ: elDiario.es (May 2025) described three data centers, while El Español (March 2026) describes one campus of eight data buildings to reach full operation in about a decade. El Español reports the initial filing estimates about 5,000 cubic metres of water a year, mostly for staff, with closed-loop cooling. Amazon Web Services already runs a campus in the same town. No Vantage or government primary release was opened; the DIGA should be checked in the Boletín Oficial de Aragón.",
+  "last_reviewed": "2026-10-09"
+}

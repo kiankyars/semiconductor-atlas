@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "herbata-naas",
+  "name": "Herbata data centre campus (Naas)",
+  "aliases": [
+    "Herbata Data Centre"
+  ],
+  "summary": "Proposed EUR 3 billion data centre campus by Herbata Ltd beside the M7 motorway at Naas, County Kildare, Ireland, in the townlands of Halverstown, Jigginstown and Newhall. The plan has six data halls of 30 MW each, 180 MW in total, and would not draw from the national grid: half its power would come from renewable purchase agreements and the rest from on-site gas turbines, gas engines and batteries. Kildare County Council granted permission in August 2025. An Taisce and two environmental groups appealed, as did Herbata over some conditions; in September 2026 the appeals still awaited a decision by An Coimisiún Pleanála.",
+  "location": {
+    "country": "IE",
+    "admin1": "Kildare",
+    "locality": "Naas",
+    "lat": 53.217,
+    "lon": -6.663,
+    "precision": "locality",
+    "source_ids": [
+      "s4",
+      "s5",
+      "s6"
+    ],
+    "note": "Town coordinates from the Naas Wikipedia article. The appeal case lists the townlands of Halverstown, Jigginstown and Newhall, and reports place the site next to the M7 and a business park; no parcel point is published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "workloads": [],
+  "parties": [
+    {
+      "name": "Herbata Ltd",
+      "role": "developer",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "The Kildare Nationalist says the plans were lodged by a co-owner of the forklift maker Combilift."
+    },
+    {
+      "name": "Kildare County Council",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Granted planning permission (reference 2460787 per the appeals board case page) in August 2025; the Irish Times says dozens of conditions were attached, many on energy use."
+    },
+    {
+      "name": "An Coimisiún Pleanála",
+      "role": "government",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Planning appeals board handling case PL09.323677."
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "qualifier": "exact",
+      "unit": "EUR",
+      "basis": "reported",
+      "applies_to": "campus",
+      "as_of": "2026-09-04",
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    },
+    {
+      "metric": "power_capacity",
+      "value": 180,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-09-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Six data halls of 30 MW each at completion."
+    },
+    {
+      "metric": "power_capacity",
+      "value": 240,
+      "qualifier": "exact",
+      "unit": "MW",
+      "basis": "planned",
+      "power_scope": "unspecified",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Continuous electricity demand cited by the appellants, who say it would roughly triple metered demand in County Kildare; not a developer figure."
+    },
+    {
+      "metric": "buildings",
+      "value": 6,
+      "qualifier": "exact",
+      "unit": "count",
+      "basis": "planned",
+      "applies_to": "campus",
+      "as_of": "2025-09-25",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Large two-storey data hall buildings."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "permit_approved",
+      "date": "2025-08",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Kildare County Council granted permission with conditions, many relating to energy use according to the Irish Times; the grant was then appealed."
+    },
+    {
+      "event": "other",
+      "date": "2025-09-16",
+      "kind": "actual",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Appeals lodged with An Coimisiún Pleanála by An Taisce, by Friends of the Irish Environment and Friends of the Earth Ireland, and by Herbata against conditions on hedgerows, bats and watercourses."
+    },
+    {
+      "event": "other",
+      "date": "2026-01-28",
+      "kind": "planned",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Decision due date shown on the appeals board case page; the Irish Times (September 2026) said a ruling was expected by January, without giving a year."
+    }
+  ],
+  "power_sources": [
+    {
+      "type": "natural_gas_onsite",
+      "description": "On-site gas turbines and gas engines to supply about half of demand; appellants dispute the emissions estimates and the planned later move to hydrogen.",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "type": "battery_storage",
+      "description": "Battery energy storage systems on site.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "solar",
+      "description": "About 1.5 MW of rooftop solar from some 3,000 panels.",
+      "source_ids": [
+        "s2"
+      ]
+    },
+    {
+      "type": "other",
+      "description": "Renewable power purchase agreements for about half of demand; Herbata says the campus will not draw electricity from the national grid.",
+      "source_ids": [
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "url": "https://www.kildare-nationalist.ie/news/plans-for-3bn-data-centre-campus-stalled_arid-72032.html",
+      "title": "Plans for €3bn data centre campus stalled",
+      "publisher": "Kildare Nationalist",
+      "published": "2025-09-25",
+      "accessed": "2026-10-09",
+      "type": "news"
+    },
+    {
+      "id": "s2",
+      "url": "https://www.industrialinfo.com/news/article/green-light-for-us3-billion-data-campus-in-kildare--345564",
+      "title": "Green Light for US$3 Billion Data Campus in Kildare",
+      "publisher": "Industrial Info Resources",
+      "published": "2025-09-09",
+      "accessed": "2026-10-09",
+      "type": "trade_press"
+    },
+    {
+      "id": "s3",
+      "url": "https://www.friendsoftheearth.ie/news/campaigners-appeal-herbata-data-centre-decision-in-naas/",
+      "title": "Campaigners appeal Herbata Data Centre decision in Naas",
+      "publisher": "Friends of the Earth Ireland",
+      "published": "2025-09-25",
+      "accessed": "2026-10-09",
+      "type": "other"
+    },
+    {
+      "id": "s4",
+      "url": "https://www.pleanala.ie/en-ie/case/323677",
+      "title": "Case reference PL09.323677",
+      "publisher": "An Coimisiún Pleanála",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "regulatory_filing"
+    },
+    {
+      "id": "s5",
+      "url": "https://www.irishtimes.com/ireland/2026/09/04/naas-has-a-message-for-the-bond-villains-we-dont-want-your-data-centres/",
+      "title": "'We just don't want them': Hundreds gather in a Kildare town over data centre plans",
+      "publisher": "The Irish Times",
+      "published": "2026-09-04",
+      "accessed": "2026-10-09",
+      "type": "news",
+      "archived_url": "https://web.archive.org/web/20260926000805/https://www.irishtimes.com/ireland/2026/09/04/naas-has-a-message-for-the-bond-villains-we-dont-want-your-data-centres/"
+    },
+    {
+      "id": "s6",
+      "url": "https://en.wikipedia.org/wiki/Naas",
+      "title": "Naas",
+      "publisher": "Wikipedia",
+      "published": null,
+      "accessed": "2026-10-09",
+      "type": "other"
+    }
+  ],
+  "notes": "Status is announced because the permission is not in force while appeals are pending. The undated appeals board case page showed no decision when read on 2026-10-09, though its 28 January 2026 due date had passed, so status_as_of is that access date. Industrial Info gives US$3 billion where Irish reports give EUR 3 billion, likely the same figure with a different currency label; it is not recorded as a separate metric. Industrial Info quotes Herbata's chief executive saying a redesign cut lifetime emissions from about 28 to 4.5 million tonnes of CO2. The Irish Times notes a separate Microsoft campus planned near Jigginstown, which is not part of this record.",
+  "last_reviewed": "2026-10-09"
+}
