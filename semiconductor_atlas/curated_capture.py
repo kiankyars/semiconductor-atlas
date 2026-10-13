@@ -384,6 +384,14 @@ def _inventory(root: Path) -> dict:
 
 def validate_capture(root_value: str | Path) -> dict:
     root = Path(root_value)
+    expected = _validate_contents(root)
+    manifest = _strict_json(_read(root / "manifest.json"), "capture manifest")
+    if manifest != {"format": "semiconductor-atlas-curated-acquisition-manifest-v1", "files": _inventory(root)}:
+        raise ValueError("capture inventory or bytes differ from manifest")
+    return expected
+
+
+def _validate_contents(root: Path) -> dict:
     plan, plan_raw = load_plan(root / "plan.json")
     if _sha(_read(root / "review.json")) != plan["review_record"]["sha256"]:
         raise ValueError("review record hash mismatch")
@@ -441,9 +449,6 @@ def validate_capture(root_value: str | Path) -> dict:
         expected_paths.update(f"prior/{item['path']}" for item in prior["attempts"] if item["path"] is not None)
     if set(_inventory(root)) != expected_paths:
         raise ValueError("capture contains missing or unmanaged files")
-    manifest = _strict_json(_read(root / "manifest.json"), "capture manifest")
-    if manifest != {"format": "semiconductor-atlas-curated-acquisition-manifest-v1", "files": _inventory(root)}:
-        raise ValueError("capture inventory or bytes differ from manifest")
     return expected
 
 
@@ -529,6 +534,7 @@ def capture_sources(
         "source_checks_code_sha256": _sha(Path(__file__).with_name("source_checks.py").read_bytes()),
         "raw_redistribution": False, "claim_acceptance": False,
     }))
+    _validate_contents(root)  # A rejectable run stays an unmanifested, incomplete capture.
     _write(root / "manifest.json", _pretty_bytes({
         "format": "semiconductor-atlas-curated-acquisition-manifest-v1", "files": _inventory(root),
     }))

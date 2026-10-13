@@ -9,6 +9,7 @@ from pathlib import Path
 
 from semiconductor_atlas.alerts import detect_revision_alerts
 from semiconductor_atlas.analytics import forecast_current_capacity
+from semiconductor_atlas.coverage import coverage_report
 from semiconductor_atlas.database import initialize
 from semiconductor_atlas.models import (
     CapacityBasis, CapacityValue, ClaimKind, ClaimSeries, ClaimVersion,
@@ -19,10 +20,11 @@ from semiconductor_atlas.models import (
 from semiconductor_atlas.release import write_release
 from semiconductor_atlas.repository import (
     add_claim_series, add_entity, add_ingestion_run, add_source,
-    add_source_document, add_source_family, add_source_record, insert_claim,
+    add_source_document, add_source_family, add_source_record, current_claims, insert_claim,
 )
 from semiconductor_atlas.service import (
-    claim_history_records, claim_records, claim_value, source_claim_records,
+    claim_history_records, claim_records, claim_value, materialize_entities,
+    source_claim_records, summarize,
 )
 
 
@@ -217,6 +219,41 @@ class SourceClaimViewTests(unittest.TestCase):
         value = self._jsonl(output / "claims.jsonl")[0]["value"]
         self.assertNotIn("date_precision", value)
         self.assertNotIn("date_literal", value)
+
+    def test_cutoff_without_timezone_is_rejected_on_every_schema(self):
+        aware = "2026-09-08T00:00:00+00:00"
+        for version in (4, 5):
+            connection, _ = initialize(self.root / f"cutoff-{version}.sqlite", target_version=version)
+            self.addCleanup(connection.close)
+            self._seed(connection)
+            self._claim("current", ScalarValue(ScalarType.TEXT, "source wording"),
+                        effective="2026-01-01", confidence=0.9, connection=connection)
+            claims = claim_records(connection, as_of="2026-09-07", recorded_at=aware)
+            entities = materialize_entities(connection, as_of="2026-09-07", recorded_at=aware, claims=claims)
+            summary = summarize(connection, as_of="2026-09-07", recorded_at=aware, claims=claims, entities=entities)
+            coverage_report(connection, as_of="2026-09-07", recorded_at=aware,
+                            claims=claims, entities=entities, summary=summary)
+            self.assertEqual((1, 1, 1, 1, aware), (
+                len(claims), len(claim_history_records(connection, as_of="2026-09-07", recorded_at=aware)),
+                len(entities), summary["source_document_count"], summary["recorded_at"]))
+            for cutoff in ("2026-09-08T00:00:00", "2026-09-08"):
+                views = {
+                    "current_claims": lambda: current_claims(connection, as_of="2026-09-07", recorded_at=cutoff),
+                    "claim_history_records": lambda: claim_history_records(
+                        connection, as_of="2026-09-07", recorded_at=cutoff),
+                    "materialize_entities": lambda: materialize_entities(
+                        connection, as_of="2026-09-07", recorded_at=cutoff, claims=claims),
+                    "summarize": lambda: summarize(
+                        connection, as_of="2026-09-07", recorded_at=cutoff, claims=claims, entities=entities),
+                    "coverage_report": lambda: coverage_report(connection, as_of="2026-09-07", recorded_at=cutoff,
+                        claims=claims, entities=entities, summary=summary),
+                    "forecast_current_capacity": lambda: forecast_current_capacity(
+                        connection, as_of="2026-09-07", recorded_at=cutoff, forecast_start=date(2026, 10, 1)),
+                }
+                for name, view in views.items():
+                    with self.subTest(version=version, cutoff=cutoff, view=name):
+                        with self.assertRaisesRegex(ValueError, "recorded_at must include a timezone"):
+                            view()
 
     def test_legacy_alerts_skip_unknown_confidence(self):
         for claim_id, year, recorded in (("before", 2028, FIRST), ("after", 2027, SECOND)):

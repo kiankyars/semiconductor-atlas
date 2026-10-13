@@ -53,7 +53,8 @@ def main():
                     if result["registration_sha256"] != shadow._hash(raw):
                         raise ValueError("registration changed between output protection and sealing")
                     result = {**vintage.write_new(directory / "seal.json", result, reference_root=args.reference_root,
-                        protected_directories=registration["inputs"]["protected_directories"]), "counts": result["counts"]}
+                        protected_directories=registration["inputs"]["protected_directories"], stage_outside=True),
+                        "counts": result["counts"]}
     except (OSError, ValueError, TypeError, KeyError, sqlite3.Error) as error:
         parser.exit(1, f"{error}\n")
     print(json.dumps(result, indent=2, sort_keys=True))

@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import json
 import unittest
+from datetime import timedelta
 from pathlib import Path
 from unittest.mock import patch
 
@@ -88,6 +89,33 @@ class CuratedPollTests(unittest.TestCase):
             result = self.tick()
         self.assertEqual(["capture_failed", "captured_imported"], [row["status"] for row in result["results"]])
         self.assertEqual([7, 7, 7], [call.args[0] for call in pause.call_args_list])
+
+    def test_plan_expiring_during_inter_plan_pause_writes_no_intent(self) -> None:
+        self.add_tsmc_plan(7)
+        self.capture.plan["expires_at"] = "2026-09-07T03:00:17Z"
+        self.repin_plan()
+
+        def advance(seconds: float) -> None:
+            clock = poll._instant(self.clock) + timedelta(seconds=seconds)
+            self.clock = self.capture.clock = self.fixture.clock = clock.isoformat().replace("+00:00", "Z")
+
+        # Amkor is checked at 03:00:14 but the 7 s pause after TSMC ends at 03:00:21.
+        with patch.object(poll.time, "sleep", side_effect=advance):
+            result = self.tick()
+        self.assertEqual(["captured_imported", "review_expired"], [row["status"] for row in result["results"]])
+        self.assertEqual(["0"], sorted(path.name for path in (Path(result["invocation_path"]) / "jobs").iterdir()))
+        self.assertEqual(3, len(self.capture.calls))
+
+    def test_rejectable_capture_stays_interrupted_and_due_poll_recaptures(self) -> None:
+        self.capture.overrides["document"] = {"http_code": 999}
+        failed = self.tick()
+        self.assertEqual("capture_failed", failed["results"][0]["status"])
+        self.assertFalse((self.root / "poll-captures" / failed["results"][0]["capture_name"] / "manifest.json").exists())
+        self.capture.overrides.clear()
+        recovered = self.tick("2026-09-07T04:00:00Z")
+        self.assertEqual([], recovered["recovery"])
+        self.assertEqual("captured_imported", recovered["results"][0]["status"])
+        self.assertEqual(6, len(self.capture.calls))
 
     def test_capture_then_not_due_then_due_without_skip_postponement(self) -> None:
         first = self.tick()

@@ -249,6 +249,17 @@ class AICriticalAlertReviewTests(unittest.TestCase):
         self.assertNotEqual(forwards[0]["id"], forwards[1]["id"])
         self.assertEqual(first["id"], forwards[0]["id"])
 
+    def test_rows_follow_admission_instant_not_clock_text(self):
+        first = self._import()["alerts"][0]
+        backward = self.fixture._write_release("same-second", self.fixture._spec(
+            "change-fixture-same-second", as_of="2026-08-22", recorded_at="2026-08-22T18:00:00Z"))
+        bundle, admission = self._comparison("same-second-comparison", self.current, backward)
+        later = "2026-09-07T10:00:00.500000Z"
+        result = self._import(clock=later, prior=self.current, current=backward, bundle=bundle, admission=admission)
+        self.assertEqual([NOW, later], [alert["first_recorded_at"] for alert in result["alerts"]])
+        self.assertEqual(first["id"], result["alerts"][0]["id"])
+        self.assertEqual(result["alerts"], review.queue_report(self.db, as_of=later)["alerts"])
+
     def test_exact_same_prior_backfill_coalesces_without_clock_or_status_regression(self):
         later = self.fixture._write_release("backfill-later", self.fixture._spec(
             "fixture-backfill-later", as_of="2026-08-22", recorded_at="2026-08-22T18:00:00Z", mutate=self._progress))

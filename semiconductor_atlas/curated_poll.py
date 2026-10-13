@@ -250,6 +250,10 @@ def poll_once(
             if previous_capture_interval is not None:
                 time.sleep(max(previous_capture_interval, plan["minimum_interval_seconds"]))
             previous_capture_interval = plan["minimum_interval_seconds"]
+            intent_clock = _now()
+            if _instant(intent_clock) >= _instant(plan["expires_at"]):
+                results.append({**item, "status": "review_expired"})
+                continue
             job = tick / "jobs" / str(index)
             job.mkdir()
             # Capture consumes these pinned private bytes, never a mutable plan path.
@@ -260,7 +264,7 @@ def poll_once(
             review_path.parent.mkdir(parents=True)
             _write(review_path, review_raw)
             name = f"{tick.name}-{index}"
-            intent = {**item, "started_at": _now(), "capture_name": name,
+            intent = {**item, "started_at": intent_clock, "capture_name": name,
                       "prior_root": str(prior_root) if prior_root else None,
                       "prior_ledger_sha256": _sha(_read(prior_checks)) if prior_checks else None}
             _write(job / "intent.json", _pretty_bytes(intent))

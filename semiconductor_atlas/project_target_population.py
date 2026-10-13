@@ -61,8 +61,8 @@ def _study(raw: bytes) -> dict:
         if relative.is_absolute() or ".." in relative.parts or relative.as_posix() != ref["path"]:
             raise ValueError("review references must be canonical repository-relative paths")
         sha = _digest(ref["sha256"])
-        expected = repository.stable_id(acceptance.RULE_VERSION, sha)
-        if ref["run_id"] != expected or expected in seen or sha in hashes:
+        expected = ref["run_id"]
+        if expected not in [repository.stable_id(rule, sha) for rule in acceptance.RULE_VERSIONS] or expected in seen or sha in hashes:
             raise ValueError("duplicate or mismatched accepted review identity")
         seen.add(expected); hashes.add(sha)
     return item
@@ -70,7 +70,7 @@ def _study(raw: bytes) -> dict:
 
 def _inventory(connection: sqlite3.Connection) -> list[dict]:
     method_runs = {row[0] for row in connection.execute(
-        "SELECT DISTINCT created_by_run_id FROM claim_versions WHERE method=?", (acceptance.RULE_VERSION,))}
+        f"SELECT DISTINCT created_by_run_id FROM claim_versions WHERE method IN ({','.join('?' * len(acceptance.RULE_VERSIONS))})", acceptance.RULE_VERSIONS)}
     code = _hash(_read(Path(acceptance.__file__)))
     result = []
     for run in connection.execute("""
@@ -82,7 +82,7 @@ def _inventory(connection: sqlite3.Connection) -> list[dict]:
         if not isinstance(params, dict):
             raise ValueError("core ingestion parameters must be objects")
         markers = {
-            "parameters_rule": params.get("rule_version") == acceptance.RULE_VERSION,
+            "parameters_rule": params.get("rule_version") in acceptance.RULE_VERSIONS,
             "claim_method": run["id"] in method_runs,
             "importer_code": run["code_version"] == code,
             "source_family": run["source_family"] == "reviewed-source-project-targets",
@@ -96,7 +96,7 @@ def _inventory(connection: sqlite3.Connection) -> list[dict]:
             if (admitted != run["completed_at"] or params.get("acceptance_timestamp_basis") != "actual_database_admission"
                     or not _instant(run["started_at"]) < _instant(admitted)):
                 raise ValueError("project census requires an exact actual core admission clock")
-            ids = acceptance._ids({"review": params["review"], "review_sha256": params["review_sha256"]})
+            ids = acceptance._ids({"review": params["review"], "review_sha256": params["review_sha256"]}, params["rule_version"])
             if ids["run_id"] != run["id"]:
                 raise ValueError("project review digest does not identify its core admission")
             subjects = [dict(row) for row in connection.execute("""

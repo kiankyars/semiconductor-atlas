@@ -3,8 +3,9 @@ from __future__ import annotations
 import copy
 import io
 import json
+import os
 import unittest
-from contextlib import redirect_stderr, redirect_stdout
+from contextlib import contextmanager, redirect_stderr, redirect_stdout
 from unittest.mock import patch
 
 from semiconductor_atlas import curated_review as queue, curated_poll as poll
@@ -17,6 +18,34 @@ from tests import test_curated_observation_population as fixtures
 URL = "https://www.nist.gov/chips/synthetic-alpha"
 OLD_BODY = b"<h1>Project Update</h1><p>Project Alpha production is planned for 2028.</p>"
 NEW_BODY = OLD_BODY.replace(b"2028", b"2027")
+
+
+class Killed(BaseException):
+    """Simulated SIGKILL or power loss: nothing after the interrupted write runs."""
+
+
+@contextmanager
+def killed_during_write(marker: bytes):
+    real_fdopen, real_unlink, dead = os.fdopen, os.unlink, []
+    class Torn:
+        def __init__(self, stream): self.stream = stream
+        def __getattr__(self, name): return getattr(self.stream, name)
+        def __enter__(self): return self
+        def __exit__(self, *exc): self.stream.close()
+        def write(self, raw):
+            if marker not in raw:
+                return self.stream.write(raw)
+            self.stream.write(raw[:len(raw) // 2])
+            self.stream.flush()
+            dead.append(True)
+            raise Killed
+    def unlink(*args, **kwargs):
+        if dead:
+            raise Killed
+        return real_unlink(*args, **kwargs)
+    with patch.object(os, "fdopen", side_effect=lambda *args, **kwargs: Torn(real_fdopen(*args, **kwargs))), \
+            patch.object(os, "unlink", side_effect=unlink):
+        yield
 
 
 class SourceVintageReviewTests(unittest.TestCase):
@@ -582,6 +611,59 @@ class SourceVintageReviewTests(unittest.TestCase):
                 with self.assertRaises(SystemExit):
                     self.invoke("freeze", "--study", self.study_path, "--reference-root", self.root, "--output", output)
                 self.assertFalse(output.exists())
+
+    def test_cli_and_writer_refuse_case_aliases_of_retained_directories(self):
+        if not (self.root / "HISTORICAL").is_dir():
+            self.skipTest("case-sensitive filesystem")
+        self.poll.tick()
+        self.prepare_study()
+        (self.root / "artifacts").mkdir()
+        capture = next((self.root / "poll-captures").iterdir())
+        for output in (self.root / "Historical" / "injected.json", self.root / "POLL-STATE" / "injected.json",
+                       self.root / "Poll-Captures" / capture.name.upper() / "injected.json"):
+            with self.subTest(output=str(output)):
+                with self.assertRaisesRegex(ValueError, "inside retained source or polling directories"):
+                    vintage.write_new(output, {"fixture": True}, reference_root=self.root,
+                                      protected_directories=["historical", "poll-state", "poll-captures"])
+                with self.assertRaises(SystemExit):
+                    self.invoke("freeze", "--study", self.study_path, "--reference-root", self.root, "--output", output)
+                self.assertFalse(output.exists())
+        output = self.root / "artifacts" / "vintage-frozen.json"
+        summary = self.invoke("freeze", "--study", self.study_path, "--reference-root", self.root, "--output", output)
+        self.assertEqual(vintage._hash(output.read_bytes()), summary["sha256"])
+
+    def test_interrupted_writer_never_publishes_a_partial_output(self):
+        (self.root / "artifacts").mkdir()
+        output, raw = self.root / "artifacts" / "cohort.json", _pretty_bytes({"fixture": True})
+        write = lambda data: vintage.write_new(output, data, reference_root=self.root, protected_directories=["historical"])
+        with self.assertRaises(Killed), killed_during_write(b'"fixture": true'):
+            write({"fixture": True})
+        self.assertFalse(output.exists())
+        self.assertTrue(all(path.name.startswith(".atlas-staging-") for path in output.parent.iterdir()))
+        for orphan in output.parent.iterdir():
+            orphan.unlink()
+        self.assertEqual({"output": str(output), "bytes": len(raw), "sha256": vintage._hash(raw)}, write({"fixture": True}))
+        self.assertEqual(raw, output.read_bytes())
+        entries = sorted(self.root.iterdir())
+        with self.assertRaises(FileExistsError):
+            write({"fixture": False})
+        self.assertEqual(raw, output.read_bytes())
+        self.assertEqual(entries, sorted(self.root.iterdir()))
+
+    def test_writer_needs_only_the_output_directory_unless_staging_outside(self):
+        locked = self.root / "locked"
+        (locked / "out").mkdir(parents=True)
+        locked.chmod(0o555)
+        self.addCleanup(locked.chmod, 0o755)
+        output = locked / "out" / "report.json"
+        vintage.write_new(output, {"fixture": True}, reference_root=self.root, protected_directories=["historical"])
+        self.assertEqual([output], list(output.parent.iterdir()))
+        journal = self.root / "journal"
+        journal.mkdir()
+        with self.assertRaises(Killed), killed_during_write(b'"fixture": true'):
+            vintage.write_new(journal / "entry.json", {"fixture": True}, reference_root=self.root,
+                              protected_directories=["historical"], stage_outside=True)
+        self.assertEqual([], list(journal.iterdir()))
 
 
 if __name__ == "__main__":

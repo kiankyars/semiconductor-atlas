@@ -118,6 +118,18 @@ class DiscoveryPollTests(unittest.TestCase):
         self.assertEqual("captured_imported", self.tick()["result"]["status"])
         self.assertFalse(self.tick()["result"]["unresolved_interrupted_capture"])
 
+    def test_rejectable_capture_stays_interrupted_and_due_poll_recaptures(self):
+        self.fixture.overrides["awards-page-1"] = {"http_code": 999}
+        first = self.tick()
+        self.assertEqual("capture_failed", first["result"]["status"])
+        self.assertFalse((self.root / "poll-captures" / first["result"]["capture_name"] / "manifest.json").exists())
+        self.fixture.overrides.clear()
+        self.fixture.advance(3600)
+        result = self.tick()
+        self.assertEqual([], result["recovery"])
+        self.assertEqual("captured_imported", result["result"]["status"])
+        self.assertEqual(12, len(self.fixture.calls))
+
     def test_invalid_completed_unimported_capture_blocks_even_forced_refetch(self):
         with patch.object(poll, "import_capture", side_effect=KeyboardInterrupt):
             with self.assertRaises(KeyboardInterrupt):

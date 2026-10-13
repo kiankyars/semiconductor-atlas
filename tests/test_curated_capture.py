@@ -146,6 +146,27 @@ class CuratedCaptureTests(unittest.TestCase):
         self.assertTrue((self.root / "run/responses/robots.attempt.json").is_file())
         self.assertFalse((self.root / "run/manifest.json").exists())
 
+    def test_rejectable_transport_or_expiry_straddle_leaves_unmanifested_receipts(self) -> None:
+        real_transport = self.transport
+
+        def straddle(entry: dict, destination: Path, plan: dict) -> dict:
+            result = real_transport(entry, destination, plan)
+            self.clock = "2027-01-01T00:00:00Z" if entry["id"] == "document" else self.clock
+            return result
+
+        for name, metadata, transport, error in (
+            ("status", {"http_code": 999}, real_transport, "invalid HTTP status"),
+            ("signal", {"http_code": None, "curl_exit_code": -9}, real_transport, "nonnegative"),
+            ("straddle", {}, straddle, "validity"),
+        ):
+            with self.subTest(name=name):
+                self.clock, self.overrides["document"], self.transport = "2026-09-07T03:00:00Z", metadata, transport
+                with self.assertRaisesRegex(ValueError, error):
+                    self.run_capture(name)
+                self.assertTrue((self.root / name / "source_checks.json").is_file())
+                self.assertTrue((self.root / name / "run.json").is_file())
+                self.assertFalse((self.root / name / "manifest.json").exists())
+
     def test_expired_plan_existing_output_and_future_prior_reject_before_network(self) -> None:
         prior, _ = self.run_capture("prior")
         self.calls.clear()

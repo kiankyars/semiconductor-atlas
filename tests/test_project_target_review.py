@@ -342,6 +342,120 @@ class ProjectTargetReviewTests(unittest.TestCase):
         self.assertTrue(replay["replayed"])
         self.assertEqual(first["admitted_at"], replay["admitted_at"])
 
+    def two_project_reviews(self):
+        before = self.before_body.replace(b".</p>", b" and production beginning in the third fab in 2030.</p>").replace(
+            b"</td></table>", b"<br><strong>Fab 3</strong>: Expected to begin production in 2030</td></table>")
+        after = before.replace(b"production beginning in the second fab in 2028", b"production in the second fab targeted for the second half in 2027").replace(b"production in 2028", b"production in second half of 2027")
+        self.fixture.bodies["document"] = after
+        packet, _ = self.fixture.run_capture("two-project-capture", self.packet)
+        imported = curated_review.import_capture(self.queue, packet)
+        candidate = next(row for row in curated_review.queue_report(self.queue)["candidates"] if row["status"] == "pending")
+        text = copy.deepcopy(self.text_review)
+        text.update(reviewed_at=self.now(), candidate_id=candidate["id"], expected_event_id=candidate["last_event_id"])
+        text["source_capture"] = {"manifest_sha256": imported["run_id"], "body_sha256": capture._sha(after),
+            "normalized_sha256": candidate["current_text_sha256"], "normalization": "html_visible_text_v1", "retrieved_at": candidate["first_seen_at"]}
+        text_path, events, old, manifest = (self.root / name for name in ("two-project-text-review.json", "two-project-events.json", "two-project-old.html", "two-project-manifest.json"))
+        self.write(text_path, text)
+        handed = curated_review.record_decision(self.queue, candidate["id"], action="handoff", reviewer="fixture", reason="Two source-native projects",
+            expected_event_id=candidate["last_event_id"], evidence_ref=targets._ref(self.binding(text_path)))
+        self.write(events, curated_review.export_events(self.queue))
+        old.write_bytes(before)
+        self.write(manifest, {**self.manifest, "inputs": [{"url": self.source_url, "path": old.name, "sha256": capture._sha(before), "bytes": len(before)}]})
+        fab2 = copy.deepcopy(self.review)
+        fab2["reviewed_at"] = self.now()
+        fab2["before"].update(body=self.binding(old), manifest=self.binding(manifest), spans=self.spans(before))
+        fab2["after"].update(body=self.binding(packet / "responses/document.body"), retrieved_at=text["source_capture"]["retrieved_at"], spans=self.spans(after))
+        fab2["source"].update(events=self.binding(events), candidate_id=handed["id"], expected_event_id=handed["last_event_id"],
+            run_id=imported["run_id"], text_sha256=handed["current_text_sha256"])
+        fab2["source_review"] = self.binding(text_path)
+        fab3 = copy.deepcopy(fab2)
+        fab3["project"] = {"label": "Fab 3, third TSMC Arizona fab", "source_native_subject": "Fab 3", "narrative_subject": "third fab",
+            "scope": "Source-native planned third fab; not first-fab operating state", "canonical_facility_assignment": None}
+        for name in ("before", "after"):
+            fab3[name]["target"] = {"literal": "2030", "precision": "year", "date_low": "2030-01-01", "date_high": "2030-12-31"}
+        paths = self.root / "fab2-claim-review.json", self.root / "fab3-claim-review.json"
+        for path, review in zip(paths, (fab2, fab3)):
+            self.write(path, review)
+        return paths
+
+    def accept_path(self, path, **options):
+        return targets.accept_review(self.connection, path, reference_root=self.root, source_queue=self.queue, **options)
+
+    def deny_writes(self):
+        self.connection.set_authorizer(lambda action, *_: sqlite3.SQLITE_DENY if action in (sqlite3.SQLITE_INSERT, sqlite3.SQLITE_UPDATE, sqlite3.SQLITE_DELETE) else sqlite3.SQLITE_OK)
+
+    def count(self, table):
+        return self.connection.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
+
+    def test_second_project_from_same_page_versions_is_admitted_and_replays(self):
+        paths = self.two_project_reviews()
+        fab2, fab3 = map(self.accept_path, paths)
+        self.assertEqual(fab2["document_ids"], fab3["document_ids"])
+        self.assertNotEqual(fab2["entity_id"], fab3["entity_id"])
+        self.assertEqual(("source_stated_target_revision", "source_stated_target_reaffirmation"), (fab2["comparison"]["kind"], fab3["comparison"]["kind"]))
+        for table, count in (("sources", 1), ("source_documents", 2), ("entities", 2), ("claim_series", 4), ("claim_versions", 4), ("claim_evidence", 8)):
+            self.assertEqual(count, self.count(table), table)
+        for row in self.connection.execute("SELECT * FROM source_documents"):
+            self.assertEqual("NIST project target statement", row["title"])
+            self.assertEqual({"retained_body", "claim_effective_at", "publication_time", "retrieval_timestamp_basis"}, set(json.loads(row["metadata_json"])))
+        self.assertEqual([(targets.RULE_VERSION,)], [tuple(row) for row in self.connection.execute("SELECT DISTINCT method FROM claim_versions")])
+        self.assertEqual({"Fab 2", "Fab 3"}, {json.loads(row[0])["project"]["source_native_subject"] for row in self.connection.execute("SELECT payload_json FROM source_records")})
+        self.deny_writes()
+        for path, result in zip(paths, (fab2, fab3)):
+            self.assertEqual({**result, "replayed": True, "database_writes": 0}, self.accept_path(path))
+        self.assertEqual([], repository.validate_database(self.connection))
+
+    def test_v1_admission_keeps_recorded_project_scoped_rows_and_replays_beside_v2(self):
+        v1_rule = "reviewed-source-native-project-target-v1"
+        paths = self.two_project_reviews()
+        v1 = self.accept_path(paths[0], rule_version=v1_rule)
+        v2 = self.accept_path(paths[1])
+        raw = paths[0].read_bytes()
+        review, source_key = json.loads(raw), "reviewed-project-source:" + self.source_url
+        source = repository.stable_id(v1_rule, "source", source_key)
+        self.assertEqual((v1_rule, repository.stable_id(v1_rule, capture._sha(raw)), repository.stable_id(v1_rule, "project", source_key + ":Fab 2")),
+                         (v1["rule_version"], v1["run_id"], v1["entity_id"]))
+        for name in ("before", "after"):
+            row = self.connection.execute("SELECT * FROM source_documents WHERE id=?", (v1["document_ids"][name],)).fetchone()
+            self.assertEqual((repository.stable_id(source, review[name]["body"]["sha256"], review[name]["retrieved_at"]), source,
+                "NIST project target statement: Fab 2, second TSMC Arizona fab"), (row["id"], row["source_id"], row["title"]))
+            self.assertEqual({"source_native_project_scope": review["project"], "retained_body": review[name]["body"], "claim_effective_at": None,
+                "publication_time": None, "retrieval_timestamp_basis": review[name].get("retrieval_timestamp_basis", "UTC microsecond response-finished invocation clock")},
+                json.loads(row["metadata_json"]))
+        self.assertFalse(set(v1["document_ids"].values()) & set(v2["document_ids"].values()))
+        self.assertEqual({(v1["run_id"], v1_rule), (v2["run_id"], targets.RULE_VERSION)},
+            {tuple(row) for row in self.connection.execute("SELECT DISTINCT created_by_run_id, method FROM claim_versions")})
+        self.deny_writes()
+        for path, result in zip(paths, (v1, v2)):
+            for rule in (v1_rule, targets.RULE_VERSION):
+                self.assertEqual({**result, "replayed": True, "database_writes": 0}, self.accept_path(path, rule_version=rule))
+        self.assertEqual(2, self.count("ingestion_runs"))
+
+    def test_v2_follow_up_of_v1_project_shares_entity_and_replays_both(self):
+        first_path = self.review_path
+        first = self.accept_path(first_path, rule_version="reviewed-source-native-project-target-v1")
+        self.second_review()
+        second = self.accept()
+        self.assertEqual((first["entity_id"], targets.RULE_VERSION), (second["entity_id"], second["rule_version"]))
+        self.assertEqual((2, 4, 4, 1), tuple(map(self.count, ("sources", "source_documents", "claim_series", "entities"))))
+        self.deny_writes()
+        self.assertEqual({**second, "replayed": True, "database_writes": 0}, self.accept())
+        self.assertEqual({**first, "replayed": True, "database_writes": 0}, self.accept_path(first_path))
+
+    def test_v1_identity_matches_recorded_pilot_admission(self):
+        raw = (Path(__file__).resolve().parent.parent / "review_plans/2026-09-07-tsmc-fab2-project-target-claims.json").read_bytes()
+        review = json.loads(raw)
+        ids = targets._ids({"review": review, "review_sha256": capture._sha(raw)}, "reviewed-source-native-project-target-v1")
+        self.assertEqual(("574fa308-9352-5cf1-939e-9f7a48de055a", "a04f43a6-8a47-51de-922f-92b122c9101e", "8f33e76f-ac2c-5962-a9a2-2cd1bcb55d86"),
+                         (ids["run_id"], ids["source_id"], ids["entity_id"]))
+        self.assertEqual(["b357aa1e-1f3e-5bff-a831-db6ba5c136df", "8c6af32d-6d63-556d-912f-4e39455c7be2"],
+            [repository.stable_id(ids["source_id"], review[name]["body"]["sha256"], review[name]["retrieved_at"]) for name in ("before", "after")])
+
+    def test_unknown_rule_version_rejected(self):
+        with self.assertRaisesRegex(ValueError, "rule version"):
+            self.accept_path(self.review_path, rule_version="reviewed-source-native-project-target-v0")
+        self.assert_empty()
+
     def test_transitive_code_and_migration_files_are_in_snapshot(self):
         names = {path.name for path in targets._code_files()}
         self.assertTrue({"discovery_handoff.py", "source_checks.py", "ai_critical_changes.py", "0005_source_claim_precision.sql"} <= names)

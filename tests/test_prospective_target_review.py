@@ -13,6 +13,7 @@ from semiconductor_atlas import prospective_target_review as shadow
 from semiconductor_atlas import curated_observation_population as population, curated_poll as poll
 from semiconductor_atlas.ai_critical_changes import _pretty_bytes
 from tests import test_curated_observation_population as fixtures
+from tests.test_source_vintage_review import Killed, killed_during_write
 from scripts import shadow_source_targets as cli
 
 
@@ -426,6 +427,29 @@ class ProspectiveTargetReviewTests(unittest.TestCase):
         self.assertTrue(self.invoke(*args)["exact_source_and_prediction_replay"])
         self.assertEqual(queue_bytes, self.poll.queue.read_bytes())
         self.assertEqual(calls, len(self.poll.capture.calls))
+
+    def test_interrupted_journal_writes_leave_no_torn_entry_and_later_runs_recover(self):
+        self.register()
+        self.poll.tick("2026-09-07T04:00:00Z")
+        marker = lambda value: b'"format": "' + value.encode() + b'"'
+        with self.assertRaises(Killed), killed_during_write(marker(shadow.BATCH_FORMAT)):
+            self.record()
+        self.assertEqual([], list(self.prediction_root.iterdir()))
+        with self.assertRaises(Killed), killed_during_write(marker(shadow.RECEIPT_FORMAT)):
+            self.record("2026-09-07T04:20:00Z")
+        self.assertEqual(1, len(list(self.prediction_root.iterdir())))
+        self.assertEqual([], list(self.prediction_root.glob("*.receipt.json")))
+        self.assertEqual("recorded", self.record("2026-09-07T04:30:00Z")["status"])
+        self.clock = "2026-09-07T09:00:00Z"
+        args = ("seal", "--registration", self.registration_path, "--reference-root", self.root)
+        with self.assertRaises(Killed), killed_during_write(marker(shadow.SEAL_FORMAT)):
+            self.invoke(*args)
+        self.assertFalse((self.prediction_root / "seal.json").exists())
+        self.assertEqual(3, len(list(self.prediction_root.iterdir())))
+        self.assertEqual({"on_time": 1}, self.invoke(*args)["counts"]["recording_statuses"])
+        verified = shadow.validate_seal(self.registration_path, reference_root=self.root)
+        self.assertEqual(1, verified["counts"]["uncommitted_batches"])
+        self.assertEqual(2, verified["counts"]["recorded_batches"])
 
     def test_cli_register_verify_record_seal_and_verify_seal(self):
         self.study_path.write_bytes(_pretty_bytes(self.study))
