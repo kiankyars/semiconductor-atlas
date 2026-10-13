@@ -1,12 +1,11 @@
 # Methodology
 
-The Open Data Center Atlas records large data center builds as collections of sourced
-statements. It reports what public sources said, when they said it, and on what basis. It does not
-estimate missing values, verify construction from imagery, or forecast. Unknown values stay unknown.
+The Open Data Center Atlas records large data center projects from public sources. Each figure
+retains its source, date and meaning. Missing values are left blank.
 
 ## What a record is
 
-A record is one build: a campus, or tightly co-located buildings that share a site name and power
+A record is one project: a campus, or tightly co-located buildings that share a site name and power
 arrangement. Each record holds:
 
 - **Location** with an explicit precision (site, approximate site, locality, county, or state).
@@ -20,18 +19,17 @@ arrangement. Each record holds:
 - **Power supply** arrangements as reported.
 - **Sources** with publisher, type, publication date and access date.
 
-Every statement points to at least one source, and every source must be cited by a statement.
-The record contract is enforced in code and published as a JSON Schema.
+Every statement points to at least one source, and every listed source supports a statement.
 
 ## Inclusion criteria
 
-Version 1 includes builds that were announced, proposed in a public filing, under construction, or
+The atlas includes projects that were announced, proposed in a public filing, under construction, or
 first operational on or after 1 January 2022, with at least 100 MW of planned power in any scope or
 at least USD 1 billion (or equivalent) of planned investment, and a location known at least to the
 county or city. Cancelled, paused and blocked builds stay in the dataset. Capacity contracts
 without a named site are out of scope until a site is named.
 
-This is a curated selection of large builds, not a census. Smaller facilities, private projects
+Coverage is a selection of large projects. Smaller facilities, private projects
 without public disclosures, and regions with little English-language coverage are
 under-represented.
 
@@ -45,13 +43,9 @@ type, so users can filter to primary evidence.
 All text in the dataset (summaries, notes, power-supply descriptions) is written by the
 maintainers. Sources are linked, not copied; the dataset contains no verbatim excerpts.
 
-The first release was compiled in October 2026 by AI-assisted research agents working from public
-web sources, each record then checked against its cited sources in a separate verification pass
-before publication. Later additions follow the same two-step process: one pass drafts a record
-from sources, and an independent pass re-opens every source and corrects or removes anything it
-does not support. Because every value links to its source, any reader can audit it. Errors should
-be reported through the issue tracker and are corrected in the open. Builds known but not yet
-recorded are listed on the coverage page.
+Records are drafted from public sources, then checked in a separate review. The review re-opens
+each source and corrects or removes statements it does not support. Report errors through the
+issue tracker. Projects identified for further research are listed on the coverage page.
 
 ## Statuses
 
@@ -72,8 +66,7 @@ recorded.
 
 ## Power: basis and scope
 
-Power figures are the most frequently misread numbers in data center reporting. Each statement
-keeps two separate labels, and they are never merged.
+Each power figure has a **basis** describing its stage and a **scope** describing what it measures.
 
 | Basis | Meaning |
 | --- | --- |
@@ -104,8 +97,8 @@ source does. Areas keep their reported unit (square feet, square metres, acres, 
 
 ## Derived headline values
 
-The table views show one headline value per project for convenience. Headline values select one
-statement; they never add, average or convert statements.
+The table views select one headline value per project from the source statements, without adding,
+averaging or converting them.
 
 - **Planned power**: campus-level statements with basis planned, contracted or permitted. Facility,
   grid-connection and unspecified scopes are preferred over IT load; on-site generation is excluded.
@@ -129,35 +122,29 @@ point was derived. Locations are never inferred from imagery alone.
 
 ## Uncurated layers
 
-Two open layers add breadth around the curated records:
+The map also includes two external datasets:
 
 - **OpenStreetMap**: every feature tagged `telecom=data_center` or `building=data_center`,
-  worldwide, with its tags. It shows where mappers have recorded data centers; it has no status,
-  capacity or completeness guarantee. © OpenStreetMap contributors, ODbL 1.0.
+  worldwide, with its tags. These are mapper-contributed locations without project status or
+  capacity figures. © OpenStreetMap contributors, ODbL 1.0.
 - **Wikidata**: items that are instances of data center (Q671224) with coordinates. CC0.
 
-Each layer's retrieval manifest records the exact query, endpoint, retrieval time, and the SHA-256
-of the raw response. Layers are refreshed by re-running the fetch command; changes are reviewed as
-ordinary diffs. Layer features are not linked to curated records automatically, because name and
-proximity matches are not evidence of identity.
+Each layer includes a retrieval manifest with its query, endpoint, retrieval time and response
+checksum. Name and proximity alone are not enough to link a layer feature to an atlas project,
+so these matches are not made automatically.
 
 ## Limitations
 
-- **Selection**: large, publicly announced builds are over-represented; the dataset is not a
-  census and absence from it means nothing.
-- **Reported, not verified**: figures are what sources said, often promotional and forward-looking.
-  The dataset does not confirm construction progress independently.
+- **Coverage**: the atlas is not a census. A missing project may not have been researched or may
+  lack public information that meets the inclusion criteria.
+- **Source claims**: figures may be promotional or forward-looking. Research checks them against
+  their cited sources; it does not independently confirm construction progress or forecast outcomes.
 - **Timeliness**: statuses can lag reality between source updates and reviews.
 - **Language**: English-language sources dominate, which under-covers some regions, notably China.
-- **Not advice**: nothing here is investment, legal or engineering advice.
 
 ## Related work
 
 [Epoch AI's Frontier Data Centers](https://epoch.ai/data/data-centers) tracks the largest AI
-data centers with satellite imagery and permits (CC BY). Commercial trackers cover more facilities
-behind paywalls. This atlas focuses on statement-level provenance, explicit power scopes, open
-licensing and many access routes (CSV, JSON, GeoJSON, SQLite, Excel, Parquet and a static API).
-It complements rather than replaces imagery-based analysis.
+data centers with satellite imagery and permits (CC BY).
 
-The atlas lives in the same repository as Semiconductor Atlas, an evidence-first registry of
-semiconductor fabs, and shares its rule that every published value must trace to evidence.
+The atlas shares a repository with Semiconductor Atlas, a registry of semiconductor fabs.

@@ -7,7 +7,7 @@ const $ = (sel) => root.querySelector(sel);
 const STATUS_ORDER = Object.keys(STATUS_LABELS);
 const LIST_FIELDS = ["aliases", "workloads", "developers", "owners", "operators", "tenants", "power_source_types"];
 
-const state = { q: "", status: "", region: "", country: "", workload: "", minmw: "", osm: false, wd: false, sort: "planned_power_mw", dir: "desc" };
+const state = { q: "", status: "", region: "", country: "", workload: "", minmw: "", osm: false, wd: false, sort: "planned_power_mw", dir: "desc", view: "map" };
 let projects = [], columns = [], map = null, layers = { osm: null, wd: null }, lastRows = [];
 
 function readUrl() {
@@ -16,6 +16,7 @@ function readUrl() {
     if (!p.has(key)) continue;
     state[key] = typeof state[key] === "boolean" ? p.get(key) === "1" : p.get(key);
   }
+  if (!["map", "table"].includes(state.view)) state.view = "map";
 }
 
 function writeUrl() {
@@ -23,11 +24,25 @@ function writeUrl() {
   for (const [key, value] of Object.entries(state)) {
     if (key === "sort" && value === "planned_power_mw") continue;
     if (key === "dir" && value === "desc") continue;
+    if (key === "view" && value === "map") continue;
     if (value === true) p.set(key, "1");
     else if (value && value !== true) p.set(key, value);
   }
   const qs = p.toString();
   history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+}
+
+function syncView() {
+  $("#map").hidden = state.view !== "map";
+  $("#project-table").hidden = state.view !== "table";
+  root.querySelectorAll("[data-view]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.view === state.view));
+  });
+}
+
+function syncFilterSummary() {
+  const count = [state.region, state.workload, state.minmw].filter(Boolean).length;
+  $("#more-filters summary").textContent = count ? `More filters (${count})` : "More filters";
 }
 
 function haystack(r) {
@@ -178,6 +193,8 @@ function columnChart(el, items) {
 
 function renderCharts(rows) {
   lastRows = rows;
+  const charts = document.querySelector("details.charts");
+  if (charts && !charts.open) return;
   const counts = STATUS_ORDER.map((s) => ({ label: STATUS_LABELS[s], value: rows.filter((r) => r.status === s).length })).filter((d) => d.value);
   barChart(document.getElementById("chart-status"), counts, { valueFormat: (v) => `${v}` });
   const top = rows.filter((r) => r.planned_power_mw != null).sort((a, b) => b.planned_power_mw - a.planned_power_mw).slice(0, 12)
@@ -281,7 +298,8 @@ async function getJson(url) {
 function update({ refit = false } = {}) {
   const rows = projects.filter(matches).sort(compare);
   if (map && map.highlight && map.highlight.row && !rows.includes(map.highlight.row)) clearSelection();
-  $("#count").textContent = `${rows.length} of ${projects.length} projects`;
+  $("#count").textContent = rows.length === projects.length ? `${projects.length} projects` : `${rows.length} of ${projects.length} projects`;
+  syncFilterSummary();
   renderTable(rows);
   renderHeaders();
   renderCharts(rows);
@@ -323,6 +341,8 @@ async function init() {
   if (!columns.includes(state.sort) && !["location", "status"].includes(state.sort)) state.sort = "planned_power_mw";
   if (!["asc", "desc"].includes(state.dir)) state.dir = "desc";
   $("#f-osm").checked = state.osm; $("#f-wd").checked = state.wd;
+  $("#more-filters").open = Boolean(state.region || state.workload || state.minmw);
+  $("#map-layers").open = state.osm || state.wd;
 
   let timer;
   $("#f-q").addEventListener("input", (e) => { clearTimeout(timer); timer = setTimeout(() => { state.q = e.target.value.trim(); update(); }, 120); });
@@ -334,6 +354,7 @@ async function init() {
   $("#f-osm").addEventListener("change", (e) => { state.osm = e.target.checked; writeUrl(); updateLayers(); });
   $("#f-wd").addEventListener("change", (e) => { state.wd = e.target.checked; writeUrl(); updateLayers(); });
   $("#reset").addEventListener("click", () => {
+    clearTimeout(timer);
     Object.assign(state, { q: "", status: "", region: "", country: "", workload: "", minmw: "" });
     for (const id of ["#f-q", "#f-status", "#f-region", "#f-workload", "#f-minmw"]) $(id).value = "";
     syncCountryOptions();
@@ -342,6 +363,11 @@ async function init() {
     if (map) map.fitWorld();
   });
   $("#download").addEventListener("click", () => downloadCsv(projects.filter(matches).sort(compare)));
+  root.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", () => {
+    state.view = button.dataset.view;
+    syncView();
+    writeUrl();
+  }));
   root.querySelectorAll("th[data-sort] button").forEach((b) => b.addEventListener("click", () => {
     const key = b.parentElement.dataset.sort;
     if (state.sort === key) state.dir = state.dir === "asc" ? "desc" : "asc";
@@ -351,18 +377,23 @@ async function init() {
   let resizeTimer;
   new ResizeObserver(() => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => renderCharts(lastRows), 150); })
     .observe(document.getElementById("chart-power"));
-  const filtered = update();
+  document.querySelector("details.charts")?.addEventListener("toggle", (e) => {
+    if (e.target.open) renderCharts(lastRows);
+  });
+  update();
 
   try {
     const basemap = await loadBasemap(`${base}assets/basemap.json`);
     map = new AtlasMap($("#map"), basemap, {
       tooltip: tooltipFor, onSelect: selectPoint,
       onReset: () => map.fitPoints(projects.filter(matches).map((r) => r._xy), 30),
-      label: "World map of the filtered data center builds. The table below lists the same projects.",
+      label: "World map of data center projects. Switch to Table to browse the same projects as a list.",
     });
-    update();
+    const filtered = update();
     if (state.country || state.region || state.q) map.fitPoints(filtered.map((r) => r._xy), 30);
     if (state.osm || state.wd) updateLayers();
+    syncView();
+    $(".view-switch").hidden = false;
   } catch (err) {
     console.error(err);
     const legend = $("#map .legend");
@@ -372,5 +403,5 @@ async function init() {
 
 init().catch((err) => {
   console.error(err);
-  $("#count").textContent = "Could not load the project list. Downloads on the Data & API page still work.";
+  $("#count").textContent = "Could not load the project list. You can still download the data.";
 });

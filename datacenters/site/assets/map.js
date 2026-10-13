@@ -78,6 +78,7 @@ export class AtlasMap {
   resize() {
     // The canvas fills the padding box, so size it from clientWidth/clientHeight.
     const width = this.container.clientWidth, height = this.container.clientHeight;
+    if (width <= 0 || height <= 0) return;
     const dpr = window.devicePixelRatio || 1;
     const first = !this.w;
     this.w = width; this.h = height; this.dpr = dpr;

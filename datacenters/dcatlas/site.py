@@ -70,8 +70,8 @@ POWER_TYPE_LABELS = {
 UNIT_LABELS = {"sq_ft": "sq ft", "sq_m": "m²", "acres": "acres", "hectares": "ha",
                "count": "", "MW": "MW"}
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-NAV = (("", "Explore"), ("projects/", "All projects"), ("data/", "Data & API"),
-       ("coverage/", "Coverage"), ("methodology/", "Methodology"), ("about/", "About"))
+NAV = (("", "Explore"), ("data/", "Downloads"),
+       ("coverage/", "Coverage"), ("about/", "About"))
 
 LOGO = ('<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
         '<rect x="3" y="4" width="18" height="5" rx="1.5" fill="none" stroke="currentColor" '
@@ -175,7 +175,6 @@ def page(*, title: str, description: str, body: str, depth: int, path: str, base
         f'<a href="{rel}{href}"{current_attr if href == current else ""}>{label}</a>'
         for href, label in NAV
     )
-    nav += f'<a href="{REPO_URL}">GitHub</a>'
     script_tags = "".join(f'<script type="module" src="{rel}assets/{s}{v}"></script>'
                           for s in scripts)
     full_title = title if title == SITE_TITLE else f"{title} · {SITE_TITLE}"
@@ -211,9 +210,11 @@ def page(*, title: str, description: str, body: str, depth: int, path: str, base
 cite “{e(SITE_TITLE)}”. OpenStreetMap layer © OpenStreetMap contributors,
 <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a>. Wikidata layer CC0. Basemap:
 Natural Earth (public domain).</p>
-<p>Data as of {e(data_as_of)}. Not investment advice; unknown values stay unknown.
+<p>Data as of {e(data_as_of)}.
 <a href="{REPO_URL}/issues/new?labels=data-correction&amp;title=Correction%3A%20">Report an error</a> ·
-<a href="{rel}feed.xml">Updates feed</a> · <a href="{rel}api/v1/index.json">API</a></p>
+<a href="{rel}methodology/">Methodology</a> · <a href="{rel}projects/">All projects</a> ·
+<a href="{REPO_URL}">GitHub</a> · <a href="{rel}feed.xml">Updates</a> ·
+<a href="{rel}data/#api">API</a></p>
 </div></footer>
 {script_tags}
 </body>
@@ -552,9 +553,6 @@ def _sorted_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _index_page(rows, records, stats, layer_meta, manifest, ctx) -> str:
-    by_status = stats["by_status"]
-    building = by_status["under_construction"]
-    operating = by_status["operational"] + by_status["partially_operational"]
     osm_count = layer_meta.get("osm", {}).get("feature_count")
     wd_count = layer_meta.get("wikidata", {}).get("feature_count")
     status_options = "".join(
@@ -573,25 +571,10 @@ def _index_page(rows, records, stats, layer_meta, manifest, ctx) -> str:
         layer_toggles += '<input type="checkbox" id="f-wd" hidden>'
     table_rows = "".join(_table_row(r, "") for r in _sorted_rows(rows))
     body = f"""
-<section class="lede">
-<h1>Data center builds, with every number sourced</h1>
-<p>{e(SITE_TITLE)} tracks {stats['projects']} large data center builds in {stats['countries']}
-countries: who is building them, for whom, how much power they plan, what they cost, and where they
-stand. Each value carries its basis, scope and date, and links to the public source that reported
-it. Everything is free to download and reuse under CC BY 4.0.</p>
-<div class="actions">
-<a class="button primary" href="data/projects.csv" download>Download CSV</a>
-<a class="button" href="data/">All formats &amp; API</a>
-<a class="button" href="methodology/">How it is built</a>
-<a class="button" href="{REPO_URL}/blob/main/{DATA_PATH_IN_REPO}/CONTRIBUTING.md">Add or correct a project</a>
-</div>
-</section>
-<section class="tiles" aria-label="Summary">
-<div class="tile"><div class="value">{stats['projects']}</div><div class="label">projects tracked</div></div>
-<div class="tile"><div class="value">{building}</div><div class="label">under construction</div></div>
-<div class="tile"><div class="value">{operating}</div><div class="label">operating or partly operating</div></div>
-<div class="tile"><div class="value">{stats['sources']:,}</div><div class="label">sources cited</div></div>
-<div class="tile"><div class="value">{e(fmt_date(ctx['data_as_of']))}</div><div class="label">last reviewed</div></div>
+<section class="explore-intro">
+<div><h1>Data center projects</h1>
+<p>{stats['projects']} projects · {stats['countries']} countries</p></div>
+<a class="button" href="data/">Download data</a>
 </section>
 <section class="card" data-explorer data-base="" aria-label="Explorer">
 <div class="filters">
@@ -599,19 +582,27 @@ it. Everything is free to download and reuse under CC BY 4.0.</p>
 <label>Status<select id="f-status"><option value="">All statuses</option>
 <option value="group:operating">Operating (any)</option><option value="group:planned">Planned (any)</option>
 <option value="group:inactive">Paused or cancelled</option>{status_options}</select></label>
-<label>Region<select id="f-region"><option value="">All regions</option></select></label>
 <label>Country<select id="f-country"><option value="">All countries</option></select></label>
+<details class="more-filters" id="more-filters"><summary>More filters</summary>
+<div class="filter-options">
+<label>Region<select id="f-region"><option value="">All regions</option></select></label>
 <label>Workload<select id="f-workload"><option value="">Any workload</option><option value="ai">AI reported</option><option value="other">No AI use reported</option></select></label>
 <label>Planned power<select id="f-minmw"><option value="">Any</option><option value="100">≥ 100 MW</option><option value="500">≥ 500 MW</option><option value="1000">≥ 1 GW</option><option value="5000">≥ 5 GW</option></select></label>
+</div></details>
 </div>
 <div class="result-bar">
+<div class="view-switch" role="group" aria-label="View" hidden>
+<button type="button" data-view="map" aria-pressed="true" aria-controls="map">Map</button>
+<button type="button" data-view="table" aria-pressed="false" aria-controls="project-table">Table</button>
+</div>
 <span id="count" aria-live="polite">{len(rows)} of {len(rows)} projects</span>
-<div class="layer-toggles">{layer_toggles}</div>
 <span class="spacer"></span>
 <button class="linkish" id="reset" type="button">Reset filters</button>
 <button class="button" id="download" type="button">Download filtered CSV</button>
 </div>
 <div class="map-wrap" id="map">
+<details class="map-layers" id="map-layers"><summary>Map layers</summary>
+<div class="layer-toggles">{layer_toggles}</div></details>
 <div class="map-controls"><button type="button" data-zoom="in" aria-label="Zoom in">+</button>
 <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
 <button type="button" data-zoom="reset" aria-label="Fit to filtered projects">⤢</button></div>
@@ -626,27 +617,17 @@ it. Everything is free to download and reuse under CC BY 4.0.</p>
 <div class="tooltip selection" id="selection" hidden style="pointer-events:auto;left:10px;top:10px"></div>
 <span class="attribution">Natural Earth{' · © OpenStreetMap contributors' if osm_count else ''}</span>
 </div>
-<div class="table-scroll explorer-table"><table id="projects-table">
+<div class="table-scroll explorer-table" id="project-table"><table id="projects-table">
 <caption class="skip">Data center builds. Planned power is the headline figure; see each project for all statements.</caption>
 {TABLE_HEAD}
 <tbody id="rows">{table_rows}</tbody></table></div>
 </section>
-<section class="grid-2" aria-label="Charts">
-<div class="card chart-card"><h2>Largest planned power</h2><p class="caption">Headline campus figure as reported; scopes differ (IT load vs. total facility), so bars are not strictly comparable. Hover for scope and date.</p><div class="chart" id="chart-power" data-label="Largest planned power by project"></div></div>
+<details class="charts"><summary>Charts</summary><div class="grid-2">
+<div class="card chart-card"><h2>Largest planned power</h2><p class="caption">Reported campus power. Figures use different definitions; hover for details.</p><div class="chart" id="chart-power" data-label="Largest planned power by project"></div></div>
 <div class="card chart-card"><h2>Projects by status</h2><p class="caption">Status reflects the newest cited source for each project.</p><div class="chart" id="chart-status" data-label="Projects by status"></div></div>
 <div class="card chart-card"><h2>Projects by country</h2><p class="caption">Top 12 countries in the current selection.</p><div class="chart" id="chart-country" data-label="Projects by country"></div></div>
 <div class="card chart-card"><h2>Announcements by year</h2><p class="caption">Year of the earliest recorded public announcement.</p><div class="chart" id="chart-years" data-label="Announcements by year"></div></div>
-</section>
-<section class="section">
-<h2>Use the data</h2>
-<p>Every table is a static file with a stable URL, so you can load it directly in your tools. No
-sign-up, no API key.</p>
-<pre><code>import pandas as pd
-projects = pd.read_csv("{e(ctx['base_url'])}data/projects.csv")
-statements = pd.read_csv("{e(ctx['base_url'])}data/statements.csv")  # every sourced value</code></pre>
-<p>More: <a href="data/">CSV, JSON, GeoJSON, SQLite, Excel, Parquet and the JSON API</a> ·
-<a href="https://lite.datasette.io/?url={quote(ctx['base_url'] + 'data/datacenters.sqlite', safe='')}">query it with SQL in your browser</a>.</p>
-</section>
+</div></details>
 """
     return page(title=SITE_TITLE, description=f"{TAGLINE}. Interactive map, table and free "
                 "downloads (CSV, JSON, GeoJSON, SQLite, Excel) with a source for every value.",
@@ -821,10 +802,13 @@ def _project_page(record: dict[str, Any], row: dict[str, Any], ctx: dict) -> str
 <p class="meta-line"><span>{status_badge(record['status'])}</span><span>{e(place)}</span>
 {f'<span>{e(workloads)}</span>' if workloads else ''}<span>Last reviewed {e(fmt_date(record['last_reviewed']))}</span></p>
 <p>{e(record['summary'])}</p>
-{f'<p class="notice">{e(record["notes"])}</p>' if record.get('notes') else ''}
+<nav class="meta-line" aria-label="Project sections"><a href="#figures">Figures</a>
+{ '<a href="#timeline">Timeline</a>' if timeline else '' }
+<a href="#location">Location</a><a href="#sources">Sources</a></nav>
 </header>
 <dl class="kv">{facts}</dl>
-<section class="section"><h2>Location</h2>
+{f'<section class="section"><h2>Project notes</h2><p>{e(record["notes"])}</p></section>' if record.get('notes') else ''}
+<section class="section" id="location"><h2>Location</h2>
 <div class="map-wrap small" data-locator data-base="{rel}" data-id="{e(record['id'])}" data-label="Locator map for {e(record['name'])}">
 <div class="map-controls"><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="out" aria-label="Zoom out">−</button><button type="button" data-zoom="reset" aria-label="Recenter">⤢</button></div>
 <div class="tooltip" hidden></div><span class="attribution">Natural Earth</span></div>
@@ -832,11 +816,10 @@ def _project_page(record: dict[str, Any], row: dict[str, Any], ctx: dict) -> str
 {f'<span class="sub">{e(loc["note"])}</span>' if loc.get('note') else ''}
 <a href="{osm_link}">Open in OpenStreetMap</a></p>
 </section>
-<section class="section"><h2>Quantities</h2>
-<p>Every reported figure, kept separate by basis and scope. Headline values above are chosen by the
-<a href="{rel}methodology/#derived-headline-values">documented rules</a>.</p>
+<section class="section" id="figures"><h2>Reported figures</h2>
+<p><a href="{rel}methodology/#derived-headline-values">How the summary figures are selected</a>.</p>
 {metrics_html}</section>
-{f'<section class="section"><h2>Timeline</h2><ul class="timeline">{timeline}</ul></section>' if timeline else ''}
+{f'<section class="section" id="timeline"><h2>Timeline</h2><ul class="timeline">{timeline}</ul></section>' if timeline else ''}
 {f'<section class="section"><h2>Organizations</h2><div class="table-scroll"><table><thead><tr><th>Name</th><th>Role</th><th>Source</th><th>Note</th></tr></thead><tbody>{parties}</tbody></table></div></section>' if parties else ''}
 {f'<section class="section"><h2>Power supply</h2><ul>{power_sources}</ul></section>' if power_sources else ''}
 {f'<section class="section"><h2>Related projects</h2><ul>{related}</ul></section>' if related else ''}
@@ -929,18 +912,22 @@ def _data_page(tables, manifest, layer_meta, parquet, ctx) -> str:
     sqlite_url = base + "data/datacenters.sqlite"
     rules = "".join(f"<li><code>{e(k)}</code>: {e(v)}</li>" for k, v in DERIVATION_RULES.items())
     body = f"""
-<div class="lede"><h1>Data &amp; API</h1>
-<p>Every file below is static, versioned with the repository, and served with open CORS, so you can
-read it straight from a notebook, spreadsheet, GIS tool or web page. No account or key. Data as of
-{e(fmt_date(ctx['data_as_of']))} (version {e(manifest['version'])}).</p></div>
-<section class="section"><h2>Downloads</h2>
+<div class="lede"><h1>Downloads</h1>
+<p>CSV, Excel, JSON and more. Free to reuse with attribution. Data as of
+{e(fmt_date(ctx['data_as_of']))}.</p>
+<div class="actions">
+<a class="button primary" href="projects.csv" download>Projects CSV</a>
+<a class="button" href="datacenters.xlsx" download>Excel workbook</a>
+<a class="button" href="projects.json" download>Full JSON records</a>
+<a class="button" href="open-data-center-atlas.zip" download>Download ZIP</a>
+</div></div>
+<section class="section"><h2>All files</h2>
 <div class="table-scroll card"><table><thead><tr><th>File</th><th>Format</th><th>Contents</th>
 <th class="num">Rows</th><th class="num">Size</th><th>SHA-256</th></tr></thead>
 <tbody>{''.join(rows_html)}</tbody></table></div>
-<p>Stable URLs: <code>{e(base)}data/&lt;file&gt;</code>. Older versions are in the
-<a href="{REPO_URL}/commits/main/datacenters">repository history</a> and in
-<a href="{REPO_URL}/releases">tagged releases</a>.</p></section>
-<section class="section"><h2>Quick start</h2>
+<p>Files can also be loaded directly from their URLs. See the
+<a href="{REPO_URL}/commits/main/datacenters">data history</a> for earlier records.</p></section>
+<details class="section"><summary>Code examples</summary>
 <h3>Python (pandas)</h3>
 <pre><code>import pandas as pd
 base = "{e(base)}data/"
@@ -964,10 +951,9 @@ sqlite3 datacenters.sqlite "SELECT name, status, planned_power_mw FROM projects 
 <pre><code>const {{ projects }} = await fetch("{e(base)}api/v1/projects.json").then(r =&gt; r.json());</code></pre>
 <h3>GIS (QGIS, kepler.gl, Felt)</h3>
 <p>Add <code>{e(base)}data/projects.geojson</code> as a vector layer by URL.</p>
-</section>
+</details>
 <section class="section" id="api"><h2>JSON API</h2>
-<p>A read-only, static API. Paths under <code>/api/v1/</code> stay backward compatible; breaking
-changes get a new version path.</p>
+<p>Read the JSON files directly. No account or API key required.</p>
 <div class="table-scroll card"><table><thead><tr><th>Endpoint</th><th>Returns</th></tr></thead><tbody>
 <tr><td><a href="../api/v1/index.json"><code>/api/v1/index.json</code></a></td><td>Endpoint catalog, licenses, data date.</td></tr>
 <tr><td><a href="../api/v1/projects.json"><code>/api/v1/projects.json</code></a></td><td>All projects with headline values; list fields are arrays.</td></tr>
@@ -979,11 +965,11 @@ changes get a new version path.</p>
 <code>columns</code> table inside the SQLite file.</p>
 {''.join(dictionary)}
 </section>
-<section class="section"><h2>Headline derivation rules</h2><ul class="prose">{rules}</ul></section>
-<section class="section"><h2>Uncurated layers</h2>
-<p>These layers add breadth, not verification: they show where mappers and editors have recorded
-data centers. They are not build records, carry no status or capacity, and keep their own licenses.</p>
-<ul>{''.join(layers_html) or '<li>No layers in this build.</li>'}</ul></section>
+<details class="section"><summary>How summary figures are selected</summary><ul class="prose">{rules}</ul></details>
+<details class="section"><summary>Additional map layers</summary>
+<p>OpenStreetMap and Wikidata locations are supplied by their contributors and have not been
+individually checked for this atlas. They contain no project status or capacity figures.</p>
+<ul>{''.join(layers_html) or '<li>No additional layers available.</li>'}</ul></details>
 <section class="section"><h2>License and citation</h2>
 <p>Curated tables: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Please cite
 “{e(SITE_TITLE)}, {e(base)}, data as of {e(ctx['data_as_of'])}”. The OpenStreetMap layer is
@@ -991,7 +977,7 @@ data centers. They are not build records, carry no status or capacity, and keep 
 contributors); databases you derive from it must stay ODbL. The Wikidata layer is CC0. Cited
 sources keep their own rights; the dataset stores links and paraphrases, not copies.</p></section>
 """
-    return page(title="Data & API", description="Download the Open Data Center Atlas as CSV, "
+    return page(title="Downloads", description="Download the Open Data Center Atlas as CSV, "
                 "JSON, GeoJSON, SQLite, Excel or Parquet, or use the static JSON API.",
                 body=body, depth=1, path="data/", base_url=base, current="data/",
                 head=_jsonld_dataset(ctx, manifest), data_as_of=ctx["data_as_of"])
@@ -1059,9 +1045,8 @@ def _coverage_page(root: Path, rows: list[dict[str, Any]], ctx: dict) -> str:
         gaps = markdown.render(gaps_path.read_text(encoding="utf-8").partition("\n")[2],
                                link=lambda u: _repo_link(u, ""), shift=1)
     body = f"""<div class="lede"><h1>Coverage</h1>
-<p>The atlas is a curated selection of large builds, not a census. This page shows where records
-exist today and lists builds we know about but have not yet recorded, so gaps are visible rather
-than silent. Absence from the atlas says nothing about whether a project exists.</p></div>
+<p>{len(rows)} projects by country and status. Coverage is incomplete;
+the research list below identifies projects still to add or check.</p></div>
 <section class="section"><h2>Records by region and country</h2>
 <div class="table-scroll card"><table><thead><tr><th scope="col">Region / country</th>{head}
 <th scope="col" class="num">Total</th><th scope="col" class="num">Sources</th></tr></thead>
@@ -1084,8 +1069,10 @@ def _about_page(root: Path, ctx: dict) -> str:
         link=lambda u: _repo_link(u, ""), shift=2)
     body = f"""<div class="lede"><h1>About</h1></div>
 <article class="prose">{about}
-<h2 id="contributing">Contributing</h2>{contributing}
-<h2 id="changelog">Changelog</h2>{changelog}</article>"""
+<p><a href="../methodology/">Methodology</a> · <a href="../coverage/">Coverage</a> ·
+<a href="{REPO_URL}/issues/new">Suggest an addition or correction</a></p>
+<details id="contributing"><summary>Contributing records</summary>{contributing}</details>
+<details id="changelog"><summary>Data updates</summary>{changelog}</details></article>"""
     return page(title="About", description="What the Open Data Center Atlas is, how to cite it, "
                 "and how to contribute.", body=body, depth=1, path="about/",
                 base_url=ctx["base_url"], current="about/", data_as_of=ctx["data_as_of"])

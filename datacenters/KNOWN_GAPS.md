@@ -1,10 +1,10 @@
-# Known gaps
+# Projects to research
 
-These are builds the maintainers know about but have not recorded, with the reason. Most lack a
-public figure tied to the specific site, a named location, or a source that could be opened.
-Additions are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md).
+These projects have been identified for further research. Most need a public capacity or investment
+figure for the site, a named location, or an accessible source before they can be added. See
+[CONTRIBUTING.md](CONTRIBUTING.md) to suggest an addition.
 
-## Waiting for a site-level figure or a named site
+## Missing site details
 
 | Build | What is missing |
 | --- | --- |
@@ -28,7 +28,7 @@ Additions are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md).
 | Teton Digital Northern Forge, Naver and NVIDIA Morocco | No town or county named. |
 | Fluidstack France (1 GW) | No site named. |
 
-## Leads not yet researched
+## Research queue
 
 - United States: PowerHouse Charlotte (University City Blvd, 380 MW on the company page) and the
   PowerHouse/Poe campus in Carroll County, Kentucky; Microsoft Person County (North Carolina) and
