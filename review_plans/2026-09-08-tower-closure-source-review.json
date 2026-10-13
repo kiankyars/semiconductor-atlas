@@ -1,0 +1,121 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "tower-source-native-closure-events-2026-09-08",
+  "review_completed_at": "2026-09-08T22:51:36Z",
+  "reviewer": "Codex primary agent",
+  "decision": "retain_three_reviewed_source_event_candidates_for_separate_core_admission",
+  "review_method": "Read the complete retained release text and all 21 retained terms sections. Bound each selected heading, dateline and complete paragraph to original UTF-8 byte offsets and SHA-256. The existing strict evidence parser accepts the selected complete blocks and their document ancestors. Browser-rendered visibility is not claimed.",
+  "prior_exposure": "The reviewer saw search and web-extracted issuer evidence before acquisition. Selection and review are retrospective, neither blind adjudication nor an early-detection test.",
+  "selection": "Three explicitly dated discontinuation or cessation events in the selected issuer release. The undated strategic-flow transfer remains supporting context. This is not a complete Tower historical project population or an independently verified closure census.",
+  "claim_acceptance": false,
+  "collector_enabled": false,
+  "source": {
+    "publisher": "Tower Semiconductor Ltd.",
+    "url": "https://towersemi.com/2025/02/10/02102025/",
+    "title": "Tower Semiconductor Reports 2024 Fourth Quarter and Full Year Financial Results",
+    "retained_path": "artifacts/2026-09-08-tower-fab1-source-capture-v1/responses/tower-fy2024-results-fab1.body",
+    "media_type": "text/html",
+    "bytes": 185743,
+    "sha256": "7945c366226cf0564916fa2a4f946c663f90900c2a41c4bfaad5c9d7460fe255",
+    "publication_date": "2025-02-10",
+    "publication_precision": "day",
+    "publication_basis": "Complete visible release dateline, not URL structure, search indexing, copyright year or CMS modification metadata.",
+    "retrieval_started_at": "2026-09-08T22:49:03.946798Z",
+    "retrieval_finished_at": "2026-09-08T22:49:04.111976Z",
+    "source_reliability_limit": "Issuer-reported historical events; the financial-disclosure context does not independently verify manufacturing events."
+  },
+  "acquisition": {
+    "plan": "review_plans/2026-09-08-tower-fab1-source-acquisition.json",
+    "plan_sha256": "cf395d3342b9b462fc41ab2e4c0fa998c89aa3b54d85f500b2b5839db2d981c5",
+    "packet": "artifacts/2026-09-08-tower-fab1-source-capture-v1",
+    "manifest_sha256": "da6420656fca2f5e9643b9f3879c587f7907f218bb0c2d8852ff8f8e4333891b",
+    "ledger_sha256": "388ed9104132a5ef00e372decd5e8ed0a5b423b1a4122c37e73e002992930acb",
+    "manifest_form": "Exact dictionary of relative file paths to byte counts and SHA-256; manifest excludes itself.",
+    "policy_probes": [
+      {
+        "packet": "artifacts/2026-09-08-tower-policy-probe-v1",
+        "manifest_sha256": "439abc822a6673ea6f4fe5e6a4f614460c1e720e460665c827f5686e345ebb8b",
+        "plan": "review_plans/2026-09-08-tower-policy-probe.json",
+        "plan_sha256": "25365b3a707f7a81eca27a039aa5be44a01db13a5211260b2b44087e365783bf"
+      },
+      {
+        "packet": "artifacts/2026-09-08-tower-terms-probe-v1",
+        "manifest_sha256": "d632fc55b39e1486dcefe083b068b32c9e18db083a3540cf31592cea6164f541",
+        "plan": "review_plans/2026-09-08-tower-terms-probe.json",
+        "plan_sha256": "e16cf0a0697d3fde1ff6cad2a93d62aa405dc5bf10fb170f9581a0138aa72e9b"
+      }
+    ]
+  },
+  "rights": {
+    "use": "local_personal_informational_noncommercial_review_only",
+    "basis": "Retained Tower main-origin terms sections 1 and 3; preserve original materials and notices, attribute Tower and do not transfer raw copies onward.",
+    "raw_redistribution": false,
+    "commercial_use_authorized": false,
+    "model_training_authorized": false,
+    "ir_subdomain_retention_authorized": false
+  },
+  "evidence": {
+    "title": {"start": 103191, "end": 103279, "sha256": "6e9e66006312f1992279bdd4ed92f13576cfa7095e3853a30ca9a2399471ec8d", "tag": "h1"},
+    "publication_dateline": {"start": 105712, "end": 105938, "sha256": "a458fab7c3de5da99286c1ee2242d718d456aea320bd68f989006f6a39f71ba7", "tag": "p"},
+    "fab_consolidation_heading": {"start": 108315, "end": 108368, "sha256": "5ff6310f56d1f8b2dbd7ceac2aea94547fa500cc96e6abe76979223a5a9dca38", "tag": "p"},
+    "complete_fab_consolidation_paragraph": {"start": 108368, "end": 108725, "sha256": "9a13f6b9f2c461abb340d5703603f85033049ee95ccca73066f5168405cc4abb", "tag": "p"},
+    "non_gaap_heading": {"start": 112066, "end": 112117, "sha256": "edff5dc92f784bb3b4154ef89b3437a077a9ac9e0beb5c9c96c06d3405f31f1f", "tag": "p"},
+    "complete_arai_context_paragraph": {"start": 112117, "end": 118362, "sha256": "a975c65f870727bc2dbdc073101218edeca14bb2c09b89955740c80fd4bdcc8d", "tag": "p"}
+  },
+  "event_candidates": [
+    {
+      "key": "tower-fab1-legacy-flow-discontinuation",
+      "source_native_subject": "Tower Fab1 legacy 150mm flows",
+      "subject_kind": "facility",
+      "canonical_entity_id": null,
+      "milestone_type": "legacy_150mm_flow_discontinuation",
+      "status": "completed",
+      "date_low": "2024-10-01",
+      "date_base": null,
+      "date_high": "2024-12-31",
+      "date_precision": "quarter",
+      "date_literal": "fourth quarter of 2024",
+      "support": ["fab_consolidation_heading", "complete_fab_consolidation_paragraph"],
+      "scope_limit": "Legacy-flow discontinuation is distinct from the later last wafer output, facility demolition or loss of all company capacity."
+    },
+    {
+      "key": "tower-fab1-last-fab-output",
+      "source_native_subject": "Tower Fab1",
+      "subject_kind": "facility",
+      "canonical_entity_id": null,
+      "milestone_type": "last_fab_output",
+      "status": "completed",
+      "date_low": "2025-01-01",
+      "date_base": null,
+      "date_high": "2025-01-31",
+      "date_precision": "month",
+      "date_literal": "January 2025",
+      "support": ["fab_consolidation_heading", "complete_fab_consolidation_paragraph"],
+      "scope_limit": "Last output has no numeric volume, exact day, restart prohibition or independently established permanent building closure."
+    },
+    {
+      "key": "tower-arai-operations-cessation",
+      "source_native_subject": "Tower-reported Arai facility",
+      "subject_kind": "facility",
+      "canonical_entity_id": null,
+      "milestone_type": "operations_cessation",
+      "status": "completed",
+      "date_low": "2022-01-01",
+      "date_base": null,
+      "date_high": "2022-12-31",
+      "date_precision": "year",
+      "date_literal": "during 2022",
+      "support": ["non_gaap_heading", "complete_arai_context_paragraph"],
+      "scope_limit": "Historical cessation reported in restructuring accounting context; not all Japanese fabs, a current physical state or independently measured capacity loss."
+    }
+  ],
+  "excluded_inferences": [
+    "No date midpoint, exact shutdown day or event ordering within a reported period.",
+    "No canonical identity, facility-safe geometry, ownership assignment or location inferred from the release dateline.",
+    "No conversion of discontinued or transferred flows to numeric capacity, good-die output, yield, utilization or qualification.",
+    "The strategic-flow transfer to Fab2 is reported completed but has no separately established event interval in this release; do not assign it the Q4 or January interval by proximity.",
+    "No zero capacity or current closure claim inferred from an historical event, source omission or failed retrieval.",
+    "No historical system-knowledge date, blind evaluation, realized forecast pair or predictive score."
+  ],
+  "next_gate": "Admit the three reviewed source-native milestone statements into a new schema-8 successor using actual admission time, with source and review hashes, full policy/capture graph verification and complete parent preservation. Reuse the existing completed-period representation; no migration is required. Keep source-native events outside current physical-state claims and preserve all frozen producers and registered forecast vintages."
+}

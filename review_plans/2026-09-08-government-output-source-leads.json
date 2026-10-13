@@ -1,0 +1,44 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "government-facility-output-leads-2026-09-08",
+  "reviewer": "Codex government_output_evidence subagent; findings retained by primary agent",
+  "decision": "preserve_unadmitted_primary_source_leads",
+  "review_method": "Bounded primary-source web research. No exact-byte local document acquisition or complete visual PDF review in this pass. Search-extracted evidence is explicitly distinguished from opened document text.",
+  "claim_acceptance": false,
+  "collector_enabled": false,
+  "source_documents_archived": 0,
+  "leads": [
+    {
+      "subject": "SCL Mohali existing 8-inch fab",
+      "official_landing": "https://www.scl.gov.in/tender.html",
+      "documents": [
+        "https://www.scl.gov.in/tenders/Annexure-I_18032025.pdf",
+        "https://www.scl.gov.in/tenders/Annexure-1_24042025.pdf",
+        "https://www.scl.gov.in/tenders/RFP_45088.pdf"
+      ],
+      "evidence": "The March 18, 2025 Q&A search extraction locates an SCL reply on printed page 7, Vendor 4 question 3, describing approximately 500-600 WSPM of current installed capacity, calculated for a four-metal 180nm digital-logic process. The April 24 Q&A expands WSPM to wafer starts per month. The official tender landing identifies the existing 8-inch fab.",
+      "verification_limits": "The March Q&A and original RFP web opens timed out. The numeric reply is search-extracted, not complete-page visually verified. The April vendor question alone must not be substituted for an issuer assertion. Exact cross-document scope, units, capacity definition and full table context remain unverified.",
+      "excluded_inferences": "Actual maximum throughput and yield are not publicly disclosed in this lead; the reply routes those details to qualified bidders under NDA. Do not infer actual output, yield, calendar-quarter applicability or a 550 midpoint.",
+      "rights_policy": "https://www.scl.gov.in/website_policy.html",
+      "access_status": "The reviewed website policy requires permission before reproduction. No permission request was sent, no direct document GET was attempted and robots remains unknown.",
+      "next_gate": "Establish permitted retention, then read complete original RFP and both clarification pages visually before any installed-capacity admission."
+    },
+    {
+      "subject": "Analog Devices Camas",
+      "url": "https://apps.ecology.wa.gov/paris/DownloadDocument.aspx?id=559700&wc=20260831",
+      "evidence": "Washington Ecology's May 27, 2025 inspection report, printed page 2 / PDF page 3, connects 6-inch wafers to an approximately 5000-per-week production estimate by the end of 2025. The inspection occurred May 14 and was reconnaissance without sampling.",
+      "verification_limits": "Web-extracted report text only; no exact-byte local capture or visual QA. This is future guidance at inspection time, not an actual-output observation despite the surrounding current-estimate wording.",
+      "access_status": "Separate fact-sheet links with document IDs 328851 and 140165 returned explicit anti-crawler download prevention. Research stopped on that route. Do not remove parameters, change user agents, retry through a browser or use another channel to bypass it."
+    },
+    {
+      "subject": "Intel Ireland Fab 34",
+      "url": "https://leap.epa.ie/docs/d9ca223c-e1e6-497e-8b00-98fb386e3b51.pdf",
+      "document": "2024 annual environmental report; 42 PDF pages",
+      "evidence": "Printed page 9 reports Module 1 production beginning in late September 2023, with Module 2 construction and tool installation continuing during 2024.",
+      "verification_limits": "Parsed document text contained no numeric wafer-output observation. Energy, water and waste figures are not production proxies. No local capture or visual review was completed.",
+      "rights_policy": "https://www.epa.ie/footer/termsofuse/",
+      "access_status": "Web-readable public-inspection document; unrestricted reproduction permission is not established by the reviewed EPA terms."
+    }
+  ],
+  "next_action": "Prioritize the separately retained Infineon Villach output series for typed core integration. Keep the SCL installed-range lead pending lawful retention and full-page verification. No research lead here changes a core manufacturing claim or an alert."
+}

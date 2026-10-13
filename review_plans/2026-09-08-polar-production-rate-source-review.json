@@ -1,0 +1,228 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "polar-source-native-production-rate-2026-09-08",
+  "review_completed_at": "2026-09-08T23:44:08Z",
+  "reviewer": "Codex government_output_evidence subagent; independent local review after primary-agent acquisition and policy review",
+  "decision": "retain_one_source_native_production_rate_candidate_pending_separate_structural_validation_and_core_admission",
+  "review_method": "Read the complete retained release text, complete senator privacy page, all seven central Senate privacy provisions and all six Senate usage-rule sections. Independently verified all five packet inventories, corresponding plan bytes and hashes, dependencies, and acquisition ledgers. Selected complete original UTF-8 HTML blocks, not head metadata duplicates. The existing strict complete-block parser was run against the original document and failed on malformed preceding navigation; this failure is preserved below. No source bytes were repaired, no network requests were made by this reviewer, and browser-rendered visibility is not claimed.",
+  "prior_exposure": "The reviewers saw the government rate through web extraction before local acquisition. The lead was selected after targeted capacity/output research and comparison with issuer and NIST wording. This is exposed retrospective source review, not blind evaluation, independent manufacturing measurement or evidence of historical system knowledge.",
+  "selection": "One explicit numerical production-rate sentence in the selected government-office release, interpreted only with its complete adjacent facility-context sentence. This is not a complete Polar source population, production time series, company capacity census or comparative performance sample.",
+  "claim_acceptance": false,
+  "collector_enabled": false,
+  "raw_redistribution": false,
+  "source": {
+    "publisher": "Office of U.S. Senator Amy Klobuchar",
+    "url": "https://www.klobuchar.senate.gov/public/index.cfm/2024/9/klobuchar-announces-major-funding-for-polar-semiconductor-s-bloomington-manufacturing-facility",
+    "title": "Klobuchar Announces Major Funding for Polar Semiconductor’s Bloomington Manufacturing Facility",
+    "retained_path": "artifacts/2026-09-08-polar-senate-source-capture-v1/responses/polar-senate-production-rate.body",
+    "media_type": "text/html",
+    "bytes": 40085,
+    "sha256": "201e16ff5e47b1aae7d042941f263bec1be3e73e583351c6abfb4faefbe8bda3",
+    "publication_date": "2024-09-24",
+    "publication_precision": "day",
+    "publication_basis": "Complete body dateline outer span contains separate month, day and year child spans. The URL, head datewritten timestamp, meta description duplicates, CMS metadata and retrieval date are not publication-time or measurement-time evidence.",
+    "retrieval_started_at": "2026-09-08T23:39:49.676772Z",
+    "retrieval_finished_at": "2026-09-08T23:39:50.274324Z",
+    "source_family": "us-senate-klobuchar",
+    "source_reliability_limit": "Distinct government-office publication, not demonstrated independent measurement. The source discloses no measurement method or upstream provenance for the production rate; the office reports working with Polar on the award. Government publication and program due diligence do not establish independent numerical verification or completed-wafer accounting."
+  },
+  "acquisition": {
+    "method": "Manually reviewed bounded policy chain; not the same-origin curated collector and not an automatic redirect or HTTP-404 exception.",
+    "manifest_form": "Each packet manifest is an exact dictionary of managed relative file paths to byte counts and SHA-256; it excludes itself. Corresponding repository plan bytes equal retained packet plan.json bytes.",
+    "packets": [
+      {
+        "packet": "artifacts/2026-09-08-polar-senate-policy-probe-v1",
+        "manifest_sha256": "057a3e6f5b1659cae853bb87272164ea20b8fcabef8fe13a80e662179616343c",
+        "plan": "review_plans/2026-09-08-polar-senate-policy-probe.json",
+        "plan_sha256": "513fedca8af9d9fb3c2ad0500a8f61eabd82f0ed0ccf9dd40b0e8e45de34ff4e"
+      },
+      {
+        "packet": "artifacts/2026-09-08-senate-policy-probe-v1",
+        "manifest_sha256": "027454d97d98a00700530f8a815c68fecae909a044b9752a5f6c5dfb4c47e4a9",
+        "plan": "review_plans/2026-09-08-senate-policy-probe.json",
+        "plan_sha256": "95e3a4979de603f226adee9701a7084d82e0475a82b1f355f07e76bb44507fac"
+      },
+      {
+        "packet": "artifacts/2026-09-08-senate-missing-policy-destination-v1",
+        "manifest_sha256": "5656da7178f25dfdabf1603dd1b24cb81961282cb6646bc4f20142a5b2dcc4a0",
+        "plan": "review_plans/2026-09-08-senate-missing-policy-destination.json",
+        "plan_sha256": "9e379c5df431f03143c74cdab5b34db303d4e4876a1dbec1fe24065dbfbdb37a"
+      },
+      {
+        "packet": "artifacts/2026-09-08-senate-rights-chain-v1",
+        "manifest_sha256": "78544ff2f4085b748c664c983298e18e5b4710976fc48f469386ffe8fbc75bf1",
+        "plan": "review_plans/2026-09-08-senate-rights-chain-acquisition.json",
+        "plan_sha256": "73b964875bc7a0a4dcf39f062ded3500e0c2ae9a3e1abd52f6f8e1c0495f6eee"
+      },
+      {
+        "packet": "artifacts/2026-09-08-polar-senate-source-capture-v1",
+        "manifest_sha256": "87dbf81065bff2770230cb4ba805abf1ac6040cf429bab45edd064945273747d",
+        "plan": "review_plans/2026-09-08-polar-senate-source-acquisition.json",
+        "plan_sha256": "09d7af9f95ed7462865362e0ea01416a4ec63db5ea9528866dcda2aae5d48272"
+      }
+    ],
+    "verification": {
+      "packet_count": 5,
+      "managed_file_instances_excluding_manifests": 32,
+      "request_count": 7,
+      "http_302_failed_attempts": 2,
+      "http_200_successful_attempts": 5,
+      "all_retained_file_sizes_and_hashes_verified": true,
+      "all_plan_copies_and_dependencies_verified": true,
+      "all_source_check_ledgers_validated": true,
+      "source_check_validator": "semiconductor_atlas/source_checks.py",
+      "source_check_validator_sha256": "8b4ffd3b1b54e38fcc6e42d566fc60c101a2948871979d7c80093bd117503060",
+      "scope": "Exact retained-byte, inventory, plan/dependency and transport-ledger consistency, not automatic permission interpretation, manufacturing truth or rendered visibility."
+    }
+  },
+  "policy_chain": {
+    "access": {
+      "origin_robots_urls": [
+        "https://www.klobuchar.senate.gov/robots.txt",
+        "https://www.senate.gov/robots.txt"
+      ],
+      "origin_robots_http_status": 302,
+      "origin_robots_outcome": "failed",
+      "origin_robots_body_bytes_each": 265,
+      "origin_robots_body_sha256": "f02b6a012715360041fda97b743408827c6474131d65b022c0da961ea7e9421c",
+      "explicit_body_link_destination": "https://www.senate.gov/pagelayout/general/one_item_and_teasers/file_not_found.htm",
+      "destination_http_status": 200,
+      "destination_body_sha256": "7bb82f38d7b9b50fba0f22fcfbf1d2cfd73acafcc7105c006f410855af3f4a76",
+      "destination_semantics": "Complete public error page identifies a requested page as not found (404), despite HTTP 200. No robots directives were returned. Preserve HTTP transport status separately from human-readable page meaning.",
+      "reviewed_direct_http_404": false,
+      "positive_robots_grant": false,
+      "automatic_redirects_followed": false,
+      "interpretation": "The primary agent separately approved each exact destination/policy/source request after reviewing retained preceding responses. This is a bounded manual missing-policy decision, not a passed robots policy or permission inferred from lack of directives. No retry, authentication, cookies, alternative host workaround or recurring collector is authorized."
+    },
+    "rights": {
+      "senator_policy_url": "https://www.klobuchar.senate.gov/public/index.cfm/privacypolicy",
+      "senator_policy_sha256": "1aa4882ef93310b2891f3131a8dad3349a84fb153277096a3beb2b125d035d1c",
+      "senator_to_central_link": {
+        "retained_path": "artifacts/2026-09-08-senate-rights-chain-v1/responses/klobuchar-privacy.body",
+        "start": 19587,
+        "end": 19723,
+        "sha256": "0d11956f96dafbfb0a9e56ebb8c9854eb64c432ca8ea18c6e3fc97c098043e24",
+        "raw_html": "<a href=\"http://www.senate.gov/pagelayout/general/one_item_and_teasers/privacy.htm\" target=\"_blank\">read their online privacy policy</a>",
+        "literal_href": "http://www.senate.gov/pagelayout/general/one_item_and_teasers/privacy.htm",
+        "retained_https_url": "https://www.senate.gov/pagelayout/general/one_item_and_teasers/privacy.htm",
+        "transport_upgrade_interpretation": "The exact source link uses HTTP. The reviewed and separately requested URL upgrades only the scheme to HTTPS, preserving authority and path. This is an explicit reviewer interpretation, not a byte-identical href or an observed automatic redirect."
+      },
+      "central_policy_url": "https://www.senate.gov/pagelayout/general/one_item_and_teasers/privacy.htm",
+      "central_policy_sha256": "a0c5fb1875d93e25f6c256ba06d3b673fb1443521405f680e04eb81435c4de63",
+      "central_policy_scope": "All seven provisions read. Provision 2 permits copying/distribution of public information unless otherwise specified and requests appropriate credits; this is not an unrestricted grant for third-party assets or all uses. The senator policy links this central policy and distinguishes external non-senate.gov sites. Its application to this government-office text is a recorded policy-chain interpretation, not a same-origin collector rule.",
+      "central_to_usage_link": {
+        "retained_path": "artifacts/2026-09-08-senate-rights-chain-v1/responses/senate-privacy.body",
+        "start": 21328,
+        "end": 21380,
+        "sha256": "190dda9829374c0bb0f98924d1ecbf654a92daad628ec2403494ef9dea4d738c",
+        "raw_html": "<a href=\"/usage/internetpolicy.htm\">Usage Policy</a>",
+        "literal_href": "/usage/internetpolicy.htm",
+        "retained_url": "https://www.senate.gov/usage/internetpolicy.htm",
+        "interpretation": "The root-relative footer link supports the retained usage-policy URL. The body also has a different bare-relative internetpolicy.htm link; do not silently treat that separate href as the same resolved URL."
+      },
+      "usage_policy_url": "https://www.senate.gov/usage/internetpolicy.htm",
+      "usage_policy_sha256": "5152bd19e912d2b93c607c52984613b5996bc27d45d619d38642e61acabee3d6",
+      "usage_policy_scope": "All six numbered sections read. They define official Senate office websites and regulate Senate-office resources, official/campaign/commercial communications, third-party accounts, links, seals and election-period communications. They are not a blanket external-user content license or an automated-collection grant. Preserve their restrictions and do not imply government endorsement."
+    }
+  },
+  "rights": {
+    "use": "local_informational_research_of_government_office_release_text_only",
+    "attribution": "Office of U.S. Senator Amy Klobuchar; exact source title, publication date and URL",
+    "basis": "Retained senator-to-central privacy link, reviewed HTTPS transport upgrade, central copying provision with exceptions, complete Senate usage rules, and the primary agent's exact-source acquisition review. This is an operational scope decision, not legal advice.",
+    "raw_redistribution": false,
+    "release_rights_review_required": true,
+    "commercial_use_authorized": false,
+    "model_training_authorized": false,
+    "linked_assets_acquisition_authorized": false,
+    "seal_or_logo_use_authorized": false,
+    "issuer_material_copying_authorized": false
+  },
+  "evidence": {
+    "title": {"start": 28076, "end": 28281, "sha256": "b1d2f891c06f31aacd90f1db51e913250e73175673ad4edcd45fb18593e512c9", "tag": "h1"},
+    "publication_dateline": {"start": 28309, "end": 28452, "sha256": "a450ee240c42363128f83511235cf2386f7b464c6e956360445080300f2fc603", "tag": "span"},
+    "complete_production_paragraph": {"start": 29733, "end": 29962, "sha256": "7b794078a04227f3469b50ba4842b38920231b15c10f486357587a59aa28be9e", "tag": "p"},
+    "publisher_header": {"start": 25594, "end": 25724, "sha256": "94e5a5bc97e767ab69eb2b6d0ffa7b9d63caf4a2ad69ed3016e18ce34741430f", "tag": "a"}
+  },
+  "raw_evidence": {
+    "title": {
+      "raw_html": "<h1 class=\"title\"><a href=\"/public/index.cfm/news-releases?ID=511DBEB0-8A3C-42DC-A2B9-F6F26AFD8B79\">Klobuchar Announces Major Funding for Polar Semiconductor’s Bloomington Manufacturing Facility</a></h1>",
+      "decoded_text": "Klobuchar Announces Major Funding for Polar Semiconductor’s Bloomington Manufacturing Facility"
+    },
+    "publication_dateline": {
+      "raw_html": "<span class=\"date\">\r\n\t\t\r\n\t\t\r\n\t\t\t\r\n\t\t\r\n\t\t<span class=\"month\">September</span> <span class=\"day\">24</span>, <span class=\"year\">2024</span></span>",
+      "decoded_text": "September 24, 2024",
+      "required_children": [{"tag": "span", "class": "month", "text": "September"}, {"tag": "span", "class": "day", "text": "24"}, {"tag": "span", "class": "year", "text": "2024"}]
+    },
+    "complete_production_paragraph": {
+      "raw_html": "<p>Polar produces high-voltage semiconductors for use in automotive, commercial and industrial applications at its 310,000-square-foot facility in Bloomington. The company produces 21,000 wafer semiconductors per month.&nbsp;</p>",
+      "decoded_text": "Polar produces high-voltage semiconductors for use in automotive, commercial and industrial applications at its 310,000-square-foot facility in Bloomington. The company produces 21,000 wafer semiconductors per month."
+    },
+    "publisher_header": {
+      "raw_html": "<a href=\"/public/index.cfm/home\"><span class=\"line1\">Amy Klobuchar</span><span class=\"line2\">U.S. Senator for Minnesota</span></a>",
+      "decoded_text": "Amy KlobucharU.S. Senator for Minnesota",
+      "interpretation": "The original two inline child spans have no separating source whitespace. Preserve exact text and identify their separate line1/line2 semantics rather than changing the raw or parser text."
+    }
+  },
+  "evidence_validation": {
+    "original_source_sha256_verified": true,
+    "all_four_span_hashes_verified": true,
+    "offset_convention": "Zero-based half-open original UTF-8 byte ranges, including complete opening and closing tags.",
+    "strict_parser": "semiconductor_atlas.realized_milestones._EvidenceHTML",
+    "strict_parser_module_sha256": "a1359514c611455a591f95c4ee332afe5047daaba63f69d3a1ecd703bc2c4c28",
+    "strict_parser_passed": false,
+    "strict_parser_error": "unrecognized HTML nesting",
+    "first_failure_offset": 14058,
+    "first_failure_meaning": "Malformed preceding navigation has a stray </a> after an already closed anchor and a button; no anchor is open and the stack top is div. This occurs before every selected evidence block.",
+    "diagnostic_stray_anchor_offsets": [14058, 14816, 17619, 18273, 20933, 21696],
+    "diagnostic_only": "An in-memory diagnostic subclass that ignored only unmatched closing anchors with no open anchor found these six exact preceding tokens and reached the complete four blocks. It did not change source bytes or production code. This is not a passed run of the existing strict parser or a reviewed general repair rule.",
+    "head_metadata_excluded": "The production text occurs inside three head meta-description attributes before its body paragraph. Those duplicates are not body evidence and are not admissible substitute support. Datewritten has an unzoned timestamp and is not used to add time-of-day publication precision.",
+    "structural_admission_gate": "A separate source-specific structural validation must bind the original body hash, exact complete spans and any explicitly reviewed malformed-prefix handling. Do not truncate away ancestors, globally relax nesting, silently repair source bytes, or claim that the unmodified strict parser passed."
+  },
+  "rate_candidates": [
+    {
+      "key": "polar-bloomington-reported-production-rate",
+      "source_native_subject": "Polar Semiconductor's Bloomington manufacturing facility, as described in the senator release",
+      "subject_kind": "facility",
+      "canonical_entity_id": null,
+      "scope_kind": "source_native_facility",
+      "scope_label": "The named Bloomington manufacturing facility in the complete two-sentence source paragraph; not a canonical identity, separately allocated production line or independently established company-wide accounting perimeter.",
+      "scope_basis": "The first sentence identifies Polar's 310,000-square-foot facility in Bloomington. The immediately following sentence gives the company's production rate in the same paragraph, and the article title reinforces the facility context. The numeric sentence's grammatical subject remains company; no additional site-allocation evidence is claimed.",
+      "claim_kind": "source_statement",
+      "metric_semantics": "source_reported_wafer_production_rate",
+      "source_sentence": "The company produces 21,000 wafer semiconductors per month.",
+      "source_display_number_literal": "21,000",
+      "source_number_literal": "21000",
+      "source_unit_scale": 1,
+      "source_unit_literal": "wafer semiconductors per month",
+      "rate_denominator": "month",
+      "numeric_qualifier": "as_reported_precision_unspecified",
+      "assertion_kind": "reported",
+      "native_wafer_diameter_inches": null,
+      "wafer_equivalence": null,
+      "production_accounting_basis": "unspecified; source does not distinguish wafer starts from completed or qualified wafers",
+      "reporting_period_start": null,
+      "reporting_period_end": null,
+      "rate_as_of_date": null,
+      "publication_date_context": "2024-09-24",
+      "physical_valid_from": null,
+      "physical_valid_to": null,
+      "physical_capacity_basis": null,
+      "confidence": null,
+      "support": ["complete_production_paragraph"],
+      "context": ["title", "publication_dateline", "publisher_header"],
+      "time_limit": "Present-tense production is asserted in a release dated September 24, 2024. Per month is only a rate denominator. No measured month, annual total, physical start/end, current-as-of statement or persistence into the 2026 retrieval period is established. Core source observation must use actual successful retrieval and core knowledge must use actual admission time.",
+      "source_definition": "Government-office reported wafer-semiconductor production rate, with exact source unit retained. Diameter, equivalent-wafer basis, process-stage boundary, measurement method, product/test/reclaim mix and independent verification are unspecified. It is not installed capacity, a wafer-start-rate claim, defined finished-wafer or good-die output, shipment volume, qualification, yield or utilization."
+    }
+  ],
+  "excluded_inferences": [
+    "No approximately, currently, up to or other qualifier is added to the source sentence.",
+    "No eight-inch diameter, mixed-product basis or alternative future target is borrowed from the issuer lead.",
+    "NIST's roughly 20000-to-40000 wafer starts per month is a different capacity metric and does not corroborate this numerical production rate.",
+    "No multiplication into annual or quarterly totals, reporting-period assignment, wafer-area conversion or computation of utilization from output/capacity ratios.",
+    "No assertion of measured completed wafers, qualified good-die output or any physical installed/economically-usable capacity basis.",
+    "No canonical facility matching, ownership assignment, source-derived geometry or manufacturing location inferred from the WASHINGTON dateline.",
+    "No source acquisition, recurring collector activation, raw release, model training, commercial-use grant, government endorsement or permission for issuer materials follows from this research review.",
+    "No historical system-knowledge date, blind evaluation, realized forecast pair or predictive score."
+  ],
+  "next_gate": "Separately review and validate the exact retained document's malformed-prefix handling without changing original source bytes. Then use a separately reviewed typed source-rate representation and admission review in a new successor snapshot, preserving every parent row and all physical-current query results. Existing schema-8 complete-period quantities cannot represent this rate with unknown diameter and unknown measurement interval; do not relax or rewrite them. This research JSON alone accepts no database claim."
+}

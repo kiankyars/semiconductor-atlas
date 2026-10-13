@@ -1,0 +1,468 @@
+{
+  "boundaries": {
+    "calibration": false,
+    "database_modified": false,
+    "historical_atlas_forecasts": false,
+    "historical_availability_verified": false,
+    "independent_or_blind_evaluation": false,
+    "model_training": false,
+    "physical_capacity_claims": false,
+    "prospective_study_modified": false,
+    "raw_redistribution": false,
+    "representative_population": false
+  },
+  "format": "semiconductor-atlas-reviewed-source-guidance-screen-v1",
+  "input_files": {
+    "artifacts/2026-09-08-infineon-policy-probe-v1/plan.json": {
+      "bytes": 874,
+      "sha256": "769b166b31971ff00000880684d8ecbe6523da33d8e473c25cb713778ef97026"
+    },
+    "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body": {
+      "bytes": 1582,
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    "artifacts/2026-09-08-infineon-policy-probe-v1/source_checks.json": {
+      "bytes": 1256,
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/plan.json": {
+      "bytes": 1212,
+      "sha256": "a3c11b38b74613639f13ca52ecdf0e07846277d516e12f5214b2acbfb21c059f"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/responses/infineon-terms.body": {
+      "bytes": 1570215,
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/source_checks.json": {
+      "bytes": 1292,
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/capture.py": {
+      "bytes": 3534,
+      "sha256": "d67bb84fd66db8dc2f5fc0926df620379374cf46fcb5c9ca103e98b0ea8306ee"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/dependencies/0-infineon-robots.body": {
+      "bytes": 1582,
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/dependencies/1-source_checks.json": {
+      "bytes": 1256,
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/dependencies/2-infineon-terms.body": {
+      "bytes": 1570215,
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/dependencies/3-source_checks.json": {
+      "bytes": 1292,
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/manifest.json": {
+      "bytes": 2086,
+      "sha256": "b3150d5831138f2873588302f2ffbcc716ce0f41370cb9a24d84240ace85164f"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/plan.json": {
+      "bytes": 5543,
+      "sha256": "aceb4cf20f878927f2a76494056ec574f048bef9a953bccb3e0a9f3d9b87d8b9"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-opening-guidance-2025.body": {
+      "bytes": 1524083,
+      "sha256": "bdb0d2b84fcb3e5e1112f564f04cb6da92926f6c137aed36e49dbb73dec49b69"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-opening-report-2026.body": {
+      "bytes": 1532889,
+      "sha256": "221df43c3472dcf26742b52e2bf4c9738abc41b54d5795c8b52e3e9c1f36b6af"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-production-guidance-2024.body": {
+      "bytes": 1531359,
+      "sha256": "a1851ee211090f3dcf713f72033dd17128be03e3834579569a7cb6c73bedcb7a"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-opening-report-2024.body": {
+      "bytes": 1529251,
+      "sha256": "a997360e7b79d04dbf3767fb08b997d4386f193a9e31794143686da2adcc0ce5"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-original-guidance-2022.body": {
+      "bytes": 1530052,
+      "sha256": "e9c4c302fed4f6ee900f2d175a8080f3bd1d806aa22e12139ec204f423d2e2d3"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-production-guidance-2023.body": {
+      "bytes": 1528164,
+      "sha256": "3dfa274c8ab4b0c30ddb0b74931d567794929cfd9e82a295a5d0eece8091ae1c"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-production-outcome-2025.body": {
+      "bytes": 1923849,
+      "sha256": "2a64df17fec5d81eb69224d85b36d70504efaec762690a3dca0d8a9a00a349de"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json": {
+      "bytes": 8301,
+      "sha256": "a3e1d272a805b52b8c89ec9b99031056cb545dea5ef35b512ba48c2e2ece9ddb"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-visual-v1/page-5.png": {
+      "bytes": 603712,
+      "sha256": "793a2847331e2be588285a7a113cac9659b4b3d3c6900ddde5d216b9485e8962"
+    },
+    "artifacts/2026-09-09-infineon-dresden-kulim-visual-v1/prospectus-layout.txt": {
+      "bytes": 1047264,
+      "sha256": "2c248d9ada5006f956089268b15adf8f5d7873db7deb9b0a982e5ecbd4a40d77"
+    },
+    "artifacts/2026-09-09-prepare-infineon-timing-review.py": {
+      "bytes": 9886,
+      "sha256": "0fe261f10312f1e102b8841bc64b97fa7beb6412549d03df4ed0844f0e6682cf"
+    },
+    "review_plans/2026-09-09-infineon-dresden-kulim-screen.md": {
+      "bytes": 5351,
+      "sha256": "485132bbbefbc1c67abea08bf33300cb5402d86a2f42e613e38c71d676184c71"
+    },
+    "review_plans/2026-09-09-infineon-dresden-kulim-source-acquisition.json": {
+      "bytes": 5543,
+      "sha256": "aceb4cf20f878927f2a76494056ec574f048bef9a953bccb3e0a9f3d9b87d8b9"
+    }
+  },
+  "outcomes": [
+    {
+      "case_id": "infineon-dresden-opening",
+      "event_type": "opening",
+      "outcome": {
+        "status": "observed_by",
+        "through": "2026-07-02"
+      },
+      "project_group": "infineon:dresden",
+      "project_id": "infineon:dresden-smart-power-fab",
+      "reason": "Only an occurrence upper bound is accepted; no lower bound or exact opening day is asserted.",
+      "scope_id": "new-smart-power-fab-not-campus",
+      "source_document_date": "2026-07-02",
+      "source_reference_ids": [
+        "dresden-opening-report-2026"
+      ]
+    },
+    {
+      "case_id": "infineon-dresden-production-start",
+      "event_type": "production_start",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "infineon:dresden",
+      "project_id": "infineon:dresden-smart-power-fab",
+      "reason": "Opening and qualitative production/ramp language do not establish the same-event startup date.",
+      "scope_id": "new-smart-power-fab-not-campus",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "dresden-opening-report-2026",
+        "screen"
+      ]
+    },
+    {
+      "case_id": "infineon-kulim-construction-start",
+      "event_type": "construction_start",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "No accepted construction-start outcome; later opening does not supply its date.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "screen"
+      ]
+    },
+    {
+      "case_id": "infineon-kulim-equipment-readiness",
+      "event_type": "ready_for_equipment",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "No accepted equipment-readiness outcome, installation or qualification inference.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "screen"
+      ]
+    },
+    {
+      "case_id": "infineon-kulim-first-wafers-leaving",
+      "event_type": "first_wafers_leaving_fab",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "Phase-one opening and symbolic launch do not establish wafers leaving the fab.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "kulim-opening-report-2024",
+        "screen"
+      ]
+    },
+    {
+      "case_id": "infineon-kulim-production-start",
+      "event_type": "production_start",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "Prospectus-specific purpose restriction remains uncleared for this diagnostic; no startup outcome or score is accepted from it. Symbolic opening launch is not a substitute.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "kulim-opening-report-2024",
+        "screen"
+      ]
+    }
+  ],
+  "prior_exposure": "Outcome-informed selection and source review in September 2026 after exposure to opening and startup leads. Printed historical dates do not authenticate historical bytes or Atlas knowledge. No blinded review or pre-outcome forecast issue is claimed.",
+  "reviewed_at": "2026-09-09T11:27:04.969979Z",
+  "reviewed_by": "Codex main reviewer; separate exact-source and event-scope check by infineon_pair_contract_review",
+  "rights": "Six HTML sources reviewed under Infineon local informational noncommercial permission with originals, notices and attribution preserved. The seventh captured source, a debt prospectus, remains a rights-review artifact only: its source-specific published-purpose restriction has not been cleared for this diagnostic. Its body/text/render hashes audit that decision; it is not a primary reference and contributes no accepted outcome. No commercial use, source redistribution or model training is approved.",
+  "roster": [
+    {
+      "case_id": "infineon-dresden-opening",
+      "disposition": "eligible",
+      "event_type": "opening",
+      "project_group": "infineon:dresden",
+      "project_id": "infineon:dresden-smart-power-fab",
+      "reason": "Explicit new-fab opening year.",
+      "scope_id": "new-smart-power-fab-not-campus",
+      "source_document_date": "2025-02-20",
+      "source_reference_ids": [
+        "dresden-opening-guidance-2025"
+      ],
+      "target": {
+        "high": "2026-12-31",
+        "kind": "interval",
+        "low": "2026-01-01"
+      }
+    },
+    {
+      "case_id": "infineon-dresden-production-start",
+      "disposition": "eligible",
+      "event_type": "production_start",
+      "project_group": "infineon:dresden",
+      "project_id": "infineon:dresden-smart-power-fab",
+      "reason": "Explicit new-fab production-start year.",
+      "scope_id": "new-smart-power-fab-not-campus",
+      "source_document_date": "2024-05-30",
+      "source_reference_ids": [
+        "dresden-production-guidance-2024"
+      ],
+      "target": {
+        "high": "2026-12-31",
+        "kind": "interval",
+        "low": "2026-01-01"
+      }
+    },
+    {
+      "case_id": "infineon-kulim-construction-start",
+      "disposition": "eligible",
+      "event_type": "construction_start",
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "June target with year 2022 explicitly derived from the forward-looking February 2022 source context.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": "2022-02-17",
+      "source_reference_ids": [
+        "kulim-original-guidance-2022"
+      ],
+      "target": {
+        "high": "2022-06-30",
+        "kind": "interval",
+        "low": "2022-06-01"
+      }
+    },
+    {
+      "case_id": "infineon-kulim-equipment-readiness",
+      "disposition": "unresolved",
+      "event_type": "ready_for_equipment",
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "Seasonal equipment-readiness target has no defensible literal calendar bounds.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": "2022-02-17",
+      "source_reference_ids": [
+        "kulim-original-guidance-2022"
+      ],
+      "target": null
+    },
+    {
+      "case_id": "infineon-kulim-first-wafers-leaving",
+      "disposition": "eligible",
+      "event_type": "first_wafers_leaving_fab",
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "Explicit second-half calendar interval for wafers leaving this fab; not production startup.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": "2022-02-17",
+      "source_reference_ids": [
+        "kulim-original-guidance-2022"
+      ],
+      "target": {
+        "high": "2024-12-31",
+        "kind": "interval",
+        "low": "2024-07-01"
+      }
+    },
+    {
+      "case_id": "infineon-kulim-production-start",
+      "disposition": "eligible",
+      "event_type": "production_start",
+      "project_group": "infineon:kulim",
+      "project_id": "infineon:kulim-third-module",
+      "reason": "Explicit new-plant startup year, with manually reviewed third-module project correspondence.",
+      "scope_id": "new-third-module-not-campus-or-all-phases",
+      "source_document_date": "2023-05-03",
+      "source_reference_ids": [
+        "kulim-original-guidance-2022",
+        "kulim-production-guidance-2023"
+      ],
+      "target": {
+        "high": "2024-12-31",
+        "kind": "interval",
+        "low": "2024-01-01"
+      }
+    }
+  ],
+  "selection": "Two purposively selected projects, six event cases across four selected guidance releases. All project-specific prospective physical timing events in those guidance releases retained; other scopes and later context documents are not a new target population. Original cohorts remain immutable. See the exact screening note.",
+  "source_references": {
+    "dresden-opening-guidance-2025": {
+      "body_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-opening-guidance-2025.body",
+      "capture": {
+        "attempt_id": "dresden-opening-guidance-2025",
+        "ledger_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:21:26.098776Z",
+      "interpretation": "New Smart Power Fab opening planned in calendar 2026, not an inclusive by-date deadline or a production-start target. Complete title/date/article source markup reviewed, not independent browser-render verification. Printed dates are not historical knowledge clocks.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2025-02-20",
+      "source_url": "https://www.infineon.com/press-release/2025/infxx202502-058",
+      "support_spans": [
+        {
+          "end": 1497973,
+          "path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-opening-guidance-2025.body",
+          "sha256": "cfe9d28b72351a466ffd2de22e32d9fd3c319d268438d70edfb7d053cde7669a",
+          "start": 1493701
+        }
+      ]
+    },
+    "dresden-opening-report-2026": {
+      "body_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-opening-report-2026.body",
+      "capture": {
+        "attempt_id": "dresden-opening-report-2026",
+        "ledger_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:21:31.215859Z",
+      "interpretation": "Past-tense opening report establishes occurrence by the printed report date, not an exact event date or lower bound. Political and qualitative ramp statements do not establish a production-start date or numeric capacity. Complete title/date/article source markup reviewed, not independent browser-render verification. Printed dates are not historical knowledge clocks.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2026-07-02",
+      "source_url": "https://www.infineon.com/press-release/2026/ifxpr202607-117",
+      "support_spans": [
+        {
+          "end": 1501659,
+          "path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-opening-report-2026.body",
+          "sha256": "3082e7fc6eb57015c1b811f5d82ce7bbceb5f7e080b3b7fb18fe78e5302e9c15",
+          "start": 1493862
+        }
+      ]
+    },
+    "dresden-production-guidance-2024": {
+      "body_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-production-guidance-2024.body",
+      "capture": {
+        "attempt_id": "dresden-production-guidance-2024",
+        "ledger_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:21:28.722376Z",
+      "interpretation": "Manufacturing startup of the new Smart Power Fab in calendar 2026, separate from the existing site and opening ceremony. Complete title/date/article source markup reviewed, not independent browser-render verification. Printed dates are not historical knowledge clocks.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2024-05-30",
+      "source_url": "https://www.infineon.com/press-release/2024/infxx202405-109",
+      "support_spans": [
+        {
+          "end": 1500632,
+          "path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/dresden-production-guidance-2024.body",
+          "sha256": "eb8f50ae1c3e9e8404bb26a1fb32927db0cc519bd89d9f43a17dd34ee90c7c5c",
+          "start": 1493541
+        }
+      ]
+    },
+    "kulim-opening-report-2024": {
+      "body_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-opening-report-2024.body",
+      "capture": {
+        "attempt_id": "kulim-opening-report-2024",
+        "ledger_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:21:38.728001Z",
+      "interpretation": "Kulim 3 phase-one opening and symbolic launch provide project context but are not accepted as a production-start, construction-start, equipment-readiness or first-wafers-leaving outcome. Future 200-mm and second-phase qualifiers remain intact. Complete title/date/article source markup reviewed, not independent browser-render verification. Printed dates are not historical knowledge clocks.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2024-08-08",
+      "source_url": "https://www.infineon.com/press-release/2024/infxx202408-133",
+      "support_spans": [
+        {
+          "end": 1501720,
+          "path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-opening-report-2024.body",
+          "sha256": "5321d8768be0ebbfdd960c108c2e227b46598c2ce4e2454a5c891a2fa041654f",
+          "start": 1493601
+        }
+      ]
+    },
+    "kulim-original-guidance-2022": {
+      "body_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-original-guidance-2022.body",
+      "capture": {
+        "attempt_id": "kulim-original-guidance-2022",
+        "ledger_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:21:33.622292Z",
+      "interpretation": "Third module/Kulim 3 identity; three separate targets: construction in June, equipment readiness in summer 2024, first wafers leaving in H2 2024. June 2022 uses the forward-looking source-year context. Summer stays vague. Other sites, supplier deliveries and company financial/market targets are excluded from this project-event screen. Complete title/date/article source markup reviewed, not independent browser-render verification. Printed dates are not historical knowledge clocks.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2022-02-17",
+      "source_url": "https://www.infineon.com/press-release/2022/infxx202202-053",
+      "support_spans": [
+        {
+          "end": 1499830,
+          "path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-original-guidance-2022.body",
+          "sha256": "45adc9e5a757ca96fbc63b6f174d4ad17e02525e62423d6806b0644ffaddd175",
+          "start": 1493873
+        }
+      ]
+    },
+    "kulim-production-guidance-2023": {
+      "body_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-production-guidance-2023.body",
+      "capture": {
+        "attempt_id": "kulim-production-guidance-2023",
+        "ledger_path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:21:36.200675Z",
+      "interpretation": "New Kulim SiC plant startup in calendar 2024. Manual correspondence to the third module uses the separate 2022 project and 2024 opening narratives, not the issuer name or location alone. No wafer diameter, full-ramp or phase-two completion assertion. Complete title/date/article source markup reviewed, not independent browser-render verification. Printed dates are not historical knowledge clocks.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2023-05-03",
+      "source_url": "https://www.infineon.com/press-release/2023/infxx202305-099",
+      "support_spans": [
+        {
+          "end": 1497956,
+          "path": "artifacts/2026-09-09-infineon-dresden-kulim-capture-v1/responses/kulim-production-guidance-2023.body",
+          "sha256": "a225dffea82d0e011ff5dff29829e7c39e9ea1dd44dae2a934a1418cbaa51b97",
+          "start": 1493661
+        }
+      ]
+    },
+    "screen": {
+      "body_path": "review_plans/2026-09-09-infineon-dresden-kulim-screen.md",
+      "capture": null,
+      "capture_finished_at": null,
+      "interpretation": "Declared outcome-exposed population, event distinctions and prospectus-specific unresolved clearance. Not primary manufacturing evidence.",
+      "kind": "screening_note",
+      "source_document_date": null,
+      "source_url": null,
+      "support_spans": [
+        {
+          "end": 5351,
+          "path": "review_plans/2026-09-09-infineon-dresden-kulim-screen.md",
+          "sha256": "485132bbbefbc1c67abea08bf33300cb5402d86a2f42e613e38c71d676184c71",
+          "start": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "articles": [
+    {
+      "position": 34,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with Infinera and identifies a new San Jose fab and a new Bethlehem advanced test and packaging facility. The Bethlehem research space is ancillary to an explicitly manufacturing project.",
+      "evidence": ["d34-b001", "d34-b003", "d34-b008", "d34-b009", "d34-b014", "d34-b016"],
+      "non_target_dates": [
+        "The more-than-20-year operating history describes existing activities, not a deadline for either proposed facility.",
+        "The 2030 renewable-energy goal applies across U.S. locations and is not a manufacturing-event target."
+      ]
+    },
+    {
+      "position": 35,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with Wolfspeed. It directly links proposed funding to the Siler City silicon carbide wafer facility and separately says the investment is expected to catalyze the planned Marcy device-fab expansion. Both source-native groups are retained without treating their funding linkages as equivalent.",
+      "evidence": ["d35-b001", "d35-b003", "d35-b006", "d35-b007", "d35-b008", "d35-b010", "d35-b012"],
+      "non_target_dates": [
+        "The 1987 founding and 2023 product-sales references describe corporate history, not new-project timing.",
+        "The five-year scholarship horizon concerns workforce support, not a manufacturing milestone.",
+        "The 2030 emissions goal is not a production or construction deadline."
+      ]
+    },
+    {
+      "position": 36,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with Edwards Vacuum for a greenfield dry-vacuum-pump manufacturing facility. Semiconductor equipment manufacturing is included; this is not a wafer fabrication project.",
+      "evidence": ["d36-b001", "d36-b004", "d36-b006", "d36-b008"],
+      "non_target_dates": [
+        "The company's first project announcement in 2022 is historical context, separate from this 2024 PMT announcement.",
+        "The 2022 regional challenge award is workforce and regional-development background, not a facility deadline."
+      ]
+    },
+    {
+      "position": 37,
+      "classification": "other",
+      "reason": "The body announces Industrial Advisory Committee leadership changes. Corporate biographies and a historical Austin fab reference do not announce manufacturing PMTs or new facility projects.",
+      "evidence": ["d37-b002", "d37-b003", "d37-b004", "d37-b005", "d37-b006", "d37-b007", "d37-b011"],
+      "non_target_dates": [
+        "The 2022 committee inception, December 2023 membership and October 4 membership announcement concern governance.",
+        "Career dates and AMD's 1979 Austin facility opening are biographical or historical context, not current PMT targets.",
+        "Three-year terms beginning in October describe committee appointments."
+      ]
+    },
+    {
+      "position": 38,
+      "classification": "other",
+      "reason": "The body announces returning and new Industrial Advisory Committee members. It contains no new manufacturing PMT or proposed facility intervention.",
+      "evidence": ["d38-b001", "d38-b002", "d38-b003", "d38-b004", "d38-b006", "d38-b008"],
+      "non_target_dates": [
+        "September 2022 appointment, October 1, 2024 term completion and three-year membership terms are governance dates.",
+        "The FY 2021 statutory reference concerns the committee's authority, not a manufacturing event."
+      ]
+    },
+    {
+      "position": 39,
+      "classification": "research_only",
+      "reason": "The body announces a notice of intent for an AI-assisted sustainable-materials research competition and university-led collaborations, not a manufacturer PMT or named commercial manufacturing project.",
+      "evidence": ["d39-b001", "d39-b002", "d39-b005", "d39-b007", "d39-b008"],
+      "non_target_dates": [
+        "Within five years and perhaps as few as five years describe research and adoption ambitions, not a named facility's manufacturing deadline.",
+        "Later this year refers to the anticipated funding-opportunity notice, not facility operation."
+      ]
+    },
+    {
+      "position": 40,
+      "classification": "other",
+      "reason": "The body announces a funding competition to operate the National Network for Microelectronics Education coordination hub. This is education and workforce infrastructure, not a new manufacturing PMT.",
+      "evidence": ["d40-b001", "d40-b002", "d40-b005", "d40-b006", "d40-b013"],
+      "non_target_dates": [
+        "October 28, 2024 at 4 p.m. EDT is the hub application deadline; October 4, 2024 at 1 p.m. EDT is an informational webinar.",
+        "The next-decade horizon concerns workforce needs; earlier-year and July references concern the MOU and request for information.",
+        "The fiscal-year 2024 NSF budget is organizational background."
+      ]
+    },
+    {
+      "position": 41,
+      "classification": "research_only",
+      "reason": "The body announces the METIS beta research-data service, including data from three metrology research projects. Research-data deployment is not a manufacturing PMT or a commercial facility project.",
+      "evidence": ["d41-b001", "d41-b002", "d41-b004", "d41-b005", "d41-b006", "d41-b007", "d41-b016"],
+      "non_target_dates": [
+        "Today identifies the beta release; once fully deployed concerns a research-data service rather than semiconductor production."
+      ]
+    },
+    {
+      "position": 42,
+      "classification": "other",
+      "reason": "The body launches the NSTC Workforce Center of Excellence and describes training awards and advisory governance. The seven education programs are not new manufacturing PMTs.",
+      "evidence": ["d42-b001", "d42-b003", "d42-b014", "d42-b031"],
+      "non_target_dates": [
+        "The ten-year investment horizon concerns workforce support, not manufacturing-event timing.",
+        "November 1, 2024 is the advisory-board nomination deadline, not a facility deadline."
+      ]
+    },
+    {
+      "position": 43,
+      "classification": "final_award_only",
+      "reason": "The body announces Polar's final commercial-fab award after a previously signed PMT and completed due diligence. It does not newly announce a PMT; the Bloomington expansion is not entered again from this final-award article.",
+      "evidence": ["d43-b001", "d43-b004", "d43-b008"],
+      "non_target_dates": [
+        "Within two years qualifies the final-award article's production-capacity statement. It is not imported into an earlier PMT's announcement-time target.",
+        "The previously signed PMT and completed due diligence are prior funding events, separate from the final award announced here."
+      ]
+    },
+    {
+      "position": 44,
+      "classification": "research_only",
+      "reason": "The body awards 17 SBIR Phase I research-feasibility grants in metrology and identifies their research topics. These are not manufacturing PMTs, even where equipment or industrial applicants are involved.",
+      "evidence": ["d44-b002", "d44-b004", "d44-b005", "d44-b008", "d44-b024"],
+      "non_target_dates": [
+        "Spring 2025 concerns possible Phase II research consideration, not the start of manufacturing."
+      ]
+    },
+    {
+      "position": 45,
+      "classification": "research_only",
+      "reason": "The body establishes a metrology community of practice and recaps research funding. It announces neither a new manufacturer PMT nor a commercial manufacturing facility.",
+      "evidence": ["d45-b002", "d45-b004", "d45-b006", "d45-b011", "d45-b013", "d45-b016", "d45-b017"],
+      "non_target_dates": [
+        "August 29, 2024 at 3 p.m. ET is a community webinar.",
+        "June 14, 2024 is the earlier SBIR application deadline, not a manufacturing target."
+      ]
+    },
+    {
+      "position": 46,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with HP for expansion and modernization of the existing Corvallis facility. It expressly supports commercial silicon-device manufacturing alongside R&D, so the project is not excluded as pure research.",
+      "evidence": ["d46-b002", "d46-b003", "d46-b006", "d46-b008", "d46-b009", "d46-b010", "d46-b011"],
+      "non_target_dates": [
+        "The 47-year local presence is historical context.",
+        "The 25-year Oregon State University lease describes an existing relationship and is not a new project completion target.",
+        "The 2025 global renewable-electricity goal is not a Corvallis manufacturing deadline."
+      ]
+    },
+    {
+      "position": 47,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with Texas Instruments for three new fabs in two locations: two individually unnamed Sherman fabs and one Lehi fab. The location-level roster preserves Sherman multiplicity rather than inventing individual fab identities.",
+      "evidence": ["d47-b002", "d47-b010", "d47-b012", "d47-b014", "d47-b015", "d47-b016", "d47-b026"],
+      "non_target_dates": [
+        "Through the end of the decade describes the investment horizon; the article does not attach it to a specific construction-completion or production-start event.",
+        "By 2030 concerns the company's internal-manufacturing share, not the opening or production date of any of these three fabs."
+      ]
+    },
+    {
+      "position": 48,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with SK hynix for HBM advanced packaging manufacturing and associated R&D in West Lafayette. It states a second-half-2028 mass-production expectation for the packaging facility; the R&D component does not make the combined project research-only.",
+      "evidence": ["d48-b001", "d48-b004", "d48-b005", "d48-b011"],
+      "non_target_dates": [
+        "July 2022 refers to the group's earlier U.S. investment commitment, not the West Lafayette mass-production target."
+      ]
+    },
+    {
+      "position": 49,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with Amkor for a Peoria greenfield advanced packaging and test project. It describes an undated full-operation state but gives no calendar opening or production target and no distinct source-native phases.",
+      "evidence": ["d49-b002", "d49-b003", "d49-b008", "d49-b009", "d49-b011"],
+      "non_target_dates": [
+        "Every two years describes Moore's Law in general technical background, not the proposed facility's schedule."
+      ]
+    },
+    {
+      "position": 50,
+      "classification": "other",
+      "reason": "The body announces a workforce-education MOU between NSF and Commerce and a request for information. Its non-binding MOU is not a manufacturer preliminary memorandum of terms and does not define a commercial manufacturing project.",
+      "evidence": ["d50-b001", "d50-b002", "d50-b006", "d50-b008", "d50-b012"],
+      "non_target_dates": [
+        "Over the next five years describes the proposed workforce-hub funding horizon.",
+        "The fiscal-year 2024 NSF budget is background rather than project timing."
+      ]
+    },
+    {
+      "position": 51,
+      "classification": "other",
+      "reason": "The body announces the NAPMP director's appointment and recaps research solicitations and applications. It does not newly announce a manufacturer PMT or a funded commercial facility.",
+      "evidence": ["d51-b001", "d51-b007", "d51-b008", "d51-b009", "d51-b010"],
+      "non_target_dates": [
+        "July 9 concerns a research notice of intent; February 2024 concerns a prior research funding-opportunity notice.",
+        "May 22 concerns selection of teams to apply; July 3, 2024 concerns full applications, not manufacturing milestones.",
+        "Up to five years describes research-award duration."
+      ]
+    },
+    {
+      "position": 52,
+      "classification": "new_manufacturing_pmt",
+      "reason": "The body newly announces a signed non-binding PMT with GlobalWafers subsidiaries. It explicitly includes three source-native interventions: a new Sherman silicon-wafer facility, a new St. Peters SOI-wafer facility and conversion of part of an existing Sherman epitaxy facility to SiC epitaxy. Wafer-materials manufacturing is included without conflating the two Sherman interventions.",
+      "evidence": ["d52-b002", "d52-b006", "d52-b007", "d52-b008", "d52-b010", "d52-b011", "d52-b012", "d52-b014"],
+      "non_target_dates": [
+        "Between now and the end of the decade describes the wider CHIPS investment program, not a GlobalWafers manufacturing-event deadline.",
+        "End-of-decade leading-edge share and the 2022-to-2032 industry projection are national aggregate expectations, not targets for these wafer-materials facilities.",
+        "Throughout 2024 concerns expected additional PMT announcements."
+      ]
+    },
+    {
+      "position": 53,
+      "classification": "research_only",
+      "reason": "The body announces selection procedures for three NSTC research facilities, including a prototyping and advanced-packaging pilot facility. These are research infrastructure rather than newly announced manufacturing PMTs, despite references to wafer-processing equipment and operational horizons.",
+      "evidence": ["d53-b001", "d53-b007", "d53-b014", "d53-b015", "d53-b016", "d53-b017"],
+      "non_target_dates": [
+        "2025, by 2026 and 2028 are operational aspirations for the administrative/design, EUV research and prototyping/pilot facilities respectively; they are not included commercial-manufacturing PMT targets.",
+        "March 2024 refers to an earlier request for information.",
+        "The week of July 15, 2024 and the one-week response window concern the research-facility selection questionnaire."
+      ]
+    },
+    {
+      "position": 54,
+      "classification": "other",
+      "reason": "The body announces a CHIPS portfolio officer's appointment. Its recap of twelve previously announced PMTs does not itself newly announce a manufacturer PMT or project.",
+      "evidence": ["d54-b002", "d54-b005", "d54-b006"],
+      "non_target_dates": [
+        "The end-of-decade national investment and production expectations and the 2022-to-2032 industry projection are program background, not a new facility's event targets."
+      ]
+    },
+    {
+      "position": 55,
+      "classification": "research_only",
+      "reason": "The body announces a notice of intent for an advanced-packaging R&D competition. The five research areas, prototype opportunities and prior application process do not establish new manufacturer PMTs or commercial manufacturing projects.",
+      "evidence": ["d55-b001", "d55-b004", "d55-b006", "d55-b007", "d55-b011", "d55-b012", "d55-b016", "d55-b017", "d55-b018"],
+      "non_target_dates": [
+        "Within a decade describes a broad advanced-packaging R&D ambition, not a named commercial facility's deadline.",
+        "February 2024, May 22 and July 3 refer to the earlier funding notice, invitations to apply and full-application deadline.",
+        "Up to five years describes research funding duration."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "nist2024-d34-infinera-san-jose",
+      "position": 34,
+      "organization": "Infinera",
+      "location": "San Jose, California",
+      "scope": "Construction of a new modernized fab and foundry for indium phosphide photonic integrated circuits. The article does not name an individual fab or identify dated construction or production phases.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly supports a new semiconductor fabrication facility at this location.",
+      "components": [{"description": "New modernized InP PIC fab and foundry", "count": 1}],
+      "evidence": ["d34-b001", "d34-b008"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d34-b016"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d34-infinera-bethlehem",
+      "position": 34,
+      "organization": "Infinera",
+      "location": "Bethlehem, Pennsylvania",
+      "scope": "Construction of a new advanced test and packaging facility dedicated to InP PICs, with dedicated R&D space for newer optical packaging technologies. The research space is a component of the manufacturing project, not an independently identified plant.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly supports commercial semiconductor test and packaging, alongside associated research space.",
+      "components": [{"description": "New InP PIC advanced test and packaging facility including dedicated optical-packaging R&D space", "count": 1}],
+      "evidence": ["d34-b001", "d34-b009"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d34-b016"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d35-wolfspeed-siler-city",
+      "position": 35,
+      "organization": "Wolfspeed, Inc.",
+      "location": "Siler City, North Carolina",
+      "scope": "Construction of the John Palmour Manufacturing Center for silicon carbide wafer manufacturing. This is wafer-materials production, distinct from the linked Marcy device-fab expansion; no existing or future numerical capacity is admitted here.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly supports construction of this semiconductor wafer-materials facility.",
+      "components": [{"description": "New John Palmour Manufacturing Center for silicon carbide wafers", "count": 1}],
+      "evidence": ["d35-b001", "d35-b006"],
+      "conditions": [
+        {"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d35-b012"]},
+        {"kind": "funding_specific", "interpretation": "The article describes anticipated private capital alongside disbursement conditions related to construction and operating milestones, and a PMT requirement for further balance-sheet-strengthening steps. It does not establish the private-capital amount or those funding conditions as physical prerequisites for manufacturing.", "evidence": ["d35-b007"]}
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d35-wolfspeed-marcy",
+      "position": 35,
+      "organization": "Wolfspeed, Inc.",
+      "location": "Marcy, New York",
+      "scope": "Planned expansion of the existing silicon carbide device manufacturing facility, linked to the Siler City development. The article says the proposed CHIPS investment is expected to catalyze this expansion, rather than stating an equivalent direct-funding allocation. Existing-fab qualification is not assigned to the proposed expansion.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT article explicitly includes the planned device-fab expansion as a catalyzed manufacturing intervention. This source-native linkage is retained without upgrading it to a directly funded or separately named new fab.",
+      "components": [{"description": "Expansion of the existing Marcy silicon carbide device manufacturing facility", "count": 1}],
+      "evidence": ["d35-b001", "d35-b006"],
+      "conditions": [
+        {"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d35-b012"]},
+        {"kind": "funding_specific", "interpretation": "The article describes anticipated private capital alongside disbursement conditions related to construction and operating milestones, and a PMT requirement for further balance-sheet-strengthening steps. These funding conditions are not converted into physical prerequisites or allocated separately to the Marcy expansion.", "evidence": ["d35-b007"]},
+        {"kind": "project_specific", "interpretation": "The expansion is described in conjunction with the Siler City development and as expected to be catalyzed by the proposed investment. This preserves a source-stated project linkage without asserting sequencing, a physical prerequisite or a separate direct-funding award.", "evidence": ["d35-b001", "d35-b006"]}
+      ],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d36-edwards-vacuum-genesee-county",
+      "position": 36,
+      "organization": "Edwards Vacuum",
+      "location": "Genesee County, New York",
+      "scope": "Construction of a greenfield manufacturing facility for semiconductor-grade dry vacuum pumps. The source supplies county-level location, not an individual municipal or canonical facility identity. The pumps are equipment used in fabs; this facility is not itself identified as a wafer fab.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly supports semiconductor equipment manufacturing, which is within this manufacturing-announcement cohort.",
+      "components": [{"description": "Greenfield semiconductor-grade dry-vacuum-pump manufacturing facility", "count": 1}],
+      "evidence": ["d36-b001", "d36-b004"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d36-b008"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d46-hp-corvallis",
+      "position": 46,
+      "organization": "HP Inc.",
+      "location": "Corvallis, Oregon",
+      "scope": "Expansion and modernization of HP's existing facility, spanning commercial silicon-device manufacturing and R&D based on microfluidics and MEMS. The university lease and regional lab-to-fab relationships are context, not separately identified new manufacturing projects or phases.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT expressly supports commercial manufacturing of silicon devices for life-sciences equipment alongside R&D; research involvement does not make this a pure R&D project.",
+      "components": [{"description": "Expansion and modernization of the existing Corvallis manufacturing and R&D facility", "count": 1}],
+      "evidence": ["d46-b002", "d46-b003", "d46-b008"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d46-b011"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d47-texas-instruments-sherman",
+      "position": 47,
+      "organization": "Texas Instruments",
+      "location": "Sherman, Texas",
+      "scope": "Construction of two new large-scale 300-mm fabrication facilities for 65nm to 130nm essential chips at the Sherman location. The source does not individually name the two fabs or allocate dated manufacturing targets between them; the location group retains multiplicity two without canonical identities.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT expressly includes two new fabrication facilities at this location; grouping them does not reduce the source-stated count to one fab.",
+      "components": [{"description": "Individually unnamed new 300-mm fabrication facilities for essential chips", "count": 2}],
+      "evidence": ["d47-b002", "d47-b014", "d47-b015"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d47-b026"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d47-texas-instruments-lehi",
+      "position": 47,
+      "organization": "Texas Instruments",
+      "location": "Lehi, Utah",
+      "scope": "Construction of a new large-scale 300-mm fabrication facility for 28nm to 65nm analog and embedded-processing chips. The source does not name an individual fab or state its construction-completion or production-start date.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT expressly includes a new semiconductor fabrication facility at Lehi, distinct from the two Sherman fabs.",
+      "components": [{"description": "New 300-mm fabrication facility for analog and embedded-processing chips", "count": 1}],
+      "evidence": ["d47-b002", "d47-b014", "d47-b016"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d47-b026"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d48-sk-hynix-west-lafayette",
+      "position": 48,
+      "organization": "SK hynix",
+      "location": "West Lafayette, Indiana",
+      "scope": "HBM advanced packaging manufacturing at Purdue University Research Park with an associated advanced-packaging R&D facility component. The source describes a memory packaging plant, a production line and R&D; correspondence among these functional components and individual physical buildings remains unresolved. The mass-production target is for the packaging manufacturing facility, not an independently dated R&D opening.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly supports HBM packaging production and associated R&D at this location, with a source-stated manufacturing event target.",
+      "components": [
+        {"description": "Memory packaging plant with an advanced semiconductor packaging line for next-generation HBM; not an inferred wafer-fabrication plant", "count": 1},
+        {"description": "Associated advanced-packaging R&D facility component; physical building correspondence and count unresolved", "count": null}
+      ],
+      "evidence": ["d48-b001", "d48-b005"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d48-b011"]}],
+      "timing": [
+        {
+          "event": "mass_production_start",
+          "literal": "second half of 2028",
+          "classification": "calendar_interval",
+          "target": {"kind": "interval", "low": "2028-07-01", "high": "2028-12-31"},
+          "reason": "The source expects mass production to begin in this half-year. The interval preserves that precision without choosing a midpoint, asserting achieved production or assigning a separate R&D opening date.",
+          "evidence": ["d48-b005"]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d49-amkor-peoria",
+      "position": 49,
+      "organization": "Amkor Technology, Inc.",
+      "location": "Peoria, Arizona",
+      "scope": "Greenfield end-to-end advanced semiconductor packaging and test project, including expected use of 2.5D and other next-generation technologies. The PMT article does not distinguish numbered phases, independently named buildings or a calendar operational target.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT expressly supports a commercial advanced packaging and test facility at Peoria; absence of a calendar target does not remove it from the announcement cohort.",
+      "components": [{"description": "Greenfield advanced packaging and test facility, with phases unspecified in this source", "count": 1}],
+      "evidence": ["d49-b002", "d49-b008", "d49-b009"],
+      "conditions": [
+        {"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d49-b011"]},
+        {"kind": "project_specific", "interpretation": "The prospective packaging-and-test description is qualified by full operation. This does not establish when full operation will occur, that it has occurred, a separate physical prerequisite or a numerical capacity claim.", "evidence": ["d49-b009"]}
+      ],
+      "timing": [
+        {
+          "event": "full_operation",
+          "literal": "When fully operational",
+          "classification": "undated",
+          "target": null,
+          "reason": "This is an undated conditional description of future full operation, not a calendar forecast, production-start date or achieved state. No later-source date or phase identity is imported.",
+          "evidence": ["d49-b009"]
+        }
+      ]
+    },
+    {
+      "id": "nist2024-d52-globalwafers-sherman-silicon",
+      "position": 52,
+      "organization": "GlobalWafers",
+      "location": "Sherman, Texas",
+      "scope": "Establishment of a new 300mm silicon-wafer manufacturing facility supplying wafers used by foundries and integrated device manufacturers. This is semiconductor wafer-materials production, not a device fab. The PMT signatories are GlobalWafers America, LLC and MEMC LLC; this record does not invent a subsidiary-to-facility ownership assignment.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly includes this new wafer-materials facility, distinct from conversion of part of the existing Sherman epitaxy facility.",
+      "components": [{"description": "New 300mm silicon-wafer manufacturing facility", "count": 1}],
+      "evidence": ["d52-b002", "d52-b005", "d52-b006"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d52-b010"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d52-globalwafers-st-peters-soi",
+      "position": 52,
+      "organization": "GlobalWafers",
+      "location": "St. Peters, Missouri",
+      "scope": "Establishment of a new facility producing 300mm silicon-on-insulator wafers for uses including defense and aerospace. This is wafer-materials manufacturing, not a separately inferred device fab. The PMT signatories are GlobalWafers America, LLC and MEMC LLC; this record does not assign a canonical subsidiary owner.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The newly announced PMT explicitly includes a new SOI-wafer production facility at this location.",
+      "components": [{"description": "New 300mm silicon-on-insulator wafer manufacturing facility", "count": 1}],
+      "evidence": ["d52-b002", "d52-b005", "d52-b007"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for construction or production.", "evidence": ["d52-b010"]}],
+      "timing": []
+    },
+    {
+      "id": "nist2024-d52-globalwafers-sherman-sic-epitaxy-conversion",
+      "position": 52,
+      "organization": "GlobalWafers",
+      "location": "Sherman, Texas",
+      "scope": "Conversion of a portion of the existing silicon epitaxy wafer manufacturing facility to production of 150mm and 200mm silicon carbide epitaxy wafers. This is a partial-facility conversion, not a whole-facility replacement, an additional greenfield fab or the new Sherman 300mm silicon-wafer facility. The source does not identify the converted portion's individual line or building.",
+      "selection": "included_manufacturing",
+      "selection_reason": "The body explicitly states that this existing-facility conversion is part of the newly announced PMT; retaining it avoids dropping a manufacturing intervention outside the article's two-location bullet list.",
+      "components": [{"description": "Conversion intervention affecting a portion of one existing silicon epitaxy wafer manufacturing facility; converted lines and buildings unresolved", "count": 1}],
+      "evidence": ["d52-b002", "d52-b008"],
+      "conditions": [{"kind": "funding_general", "interpretation": "The non-binding PMT remains subject to due diligence, award-document negotiation and funding milestones; final terms may differ. These are funding conditions, not asserted physical prerequisites for conversion or production.", "evidence": ["d52-b010"]}],
+      "timing": []
+    }
+  ]
+}

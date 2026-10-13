@@ -1,0 +1,85 @@
+{
+  "format": "semiconductor-atlas-legacy-pmt-outcome-review-v1",
+  "rule": "tsmc_phoenix_first_facility_hvm_end_year_v1",
+  "reviewed_at": "2026-09-09T04:58:40.332438Z",
+  "reviewed_by": "Codex main reviewer: complete retained Arizona subsidiary narrative and complete original NIST April 8, 2024 PMT narrative inspected. Legacy baseline and snapshot metadata reconciled locally. This is exposed manual source correspondence, not independent physical corroboration.",
+  "selection": "Add one matched legacy-source outcome to the complete frozen NIST PMT screen, preserving all 45 manufacturing groups, all 49 original cases, all original target meanings and the existing separately scoped Bosch sample observation. Only the original first-Phoenix-fab HVM outcome changes from unknown. All other outcomes and original project scopes remain byte-equivalent data values.",
+  "prior_exposure": "The retained filing and its successful end-2024 first-Arizona-facility HVM report were exposed during earlier baseline, operating-table and correspondence work. Source/target matching is retrospective and purposive within the preserved cohort, not a blind holdout. Original NIST bodies have later modification metadata. Printed source dates do not prove historical byte availability, pre-outcome Atlas forecasts or independent physical realization.",
+  "rights": {
+    "use": "local_review_only",
+    "raw_redistribution": false,
+    "publisher_bodies_embedded": false,
+    "new_network_acquisition": false,
+    "model_training": false
+  },
+  "boundaries": {
+    "historical_availability_verified": false,
+    "global_census": false,
+    "independent_or_blind_evaluation": false,
+    "canonical_facility_identity": false,
+    "physical_capacity_claims": false,
+    "calibration": false,
+    "model_training": false,
+    "database_modified": false,
+    "prospective_study_modified": false,
+    "scheduled_runtime_modified": false,
+    "raw_redistribution": false,
+    "historical_http_transaction_verified": false,
+    "external_timestamp_attestation": false,
+    "independent_physical_corroboration": false,
+    "canonical_fab21_phase_identity": false
+  },
+  "parent_screen": {
+    "path": "review_plans/2026-09-09-nist-pmt-outcome-screen-v1.json",
+    "bytes": 3073,
+    "sha256": "21d1b8ca1d6cc3bb072917238fc8de002dfa68deff628e144ae7bce1a59358f4"
+  },
+  "legacy_inputs": {
+    "body": {
+      "path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/tsmc-2025-form-20f.html",
+      "bytes": 10355816,
+      "sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b"
+    },
+    "provenance": {
+      "path": "baselines/ai_critical_manufacturing_v1.json",
+      "bytes": 51871,
+      "sha256": "8eec7a20a9d2d900161efce778532756f9224520f2ec0056bb329c5118198958"
+    },
+    "snapshot_manifest": {
+      "path": "source_snapshots/2026-08-20-ai-critical-manufacturing-v1/manifest.json",
+      "bytes": 7360,
+      "sha256": "cb4efdf68888a7af6acef20b08068006d70d6aa1d025ba8e6bec4767ed7e4f72"
+    }
+  },
+  "evidence": {
+    "arizona_narrative": {
+      "start": 1494045,
+      "end": 1497004,
+      "sha256": "eb22e3ca5b1afd9fb497a89eae3e7d08459bbc9045f39e4c4fcdefbb7b2ce97b"
+    }
+  },
+  "correspondence": {
+    "guidance_reference_id": "nist2024-d67",
+    "organization": "The original NIST PMT names TSMC Arizona Corporation as a TSMC subsidiary; the issuer narrative names its TSMC Arizona subsidiary. This is source-native project correspondence, not a legal-entity assignment.",
+    "location": "Both narratives explicitly locate the multi-facility manufacturing program in Phoenix, Arizona. This does not create geometry or a plant-level address.",
+    "phase": "The original PMT explicitly separates first, second and third greenfield fabs. The issuer narrative likewise distinguishes its first facility from ongoing second-facility construction and third-facility construction begun in 2025. Match the first facility only; do not identify the aggregate manufacturing entity Fab 21 or its operating-table row with this phase.",
+    "event": "The PMT expects high-volume production in the first fab by the first half of 2025. The issuer narrative reports that its first facility entered high volume production at the end of 2024. Both refer to HVM, not generic commercial commencement, a ceremony, a trial run or all-campus completion.",
+    "limitations": "The issuer phrase supplies a conservative latest calendar bound of December 31, 2024, but no exact start day or justified quarter lower bound. Preserve only observed_by. No exact-day error, canonical phase equality, capacity, qualification, yield, utilization, historical availability or calibrated prediction follows. The original PMT deadline remains June 30, 2025 without an invented January 1 lower bound."
+  },
+  "outcome": {
+    "case_id": "nist2024-d67-tsmc-phoenix-first-fab--timing-01",
+    "project_id": "nist2024-d67-tsmc-phoenix-first-fab",
+    "project_group": "nist2024-d67-tsmc-phoenix-first-fab",
+    "event_type": "high_volume_production",
+    "scope_id": "nist2024-d67-tsmc-phoenix-first-fab--original-pmt-scope",
+    "reason": "The retained issuer narrative reports first-Phoenix-facility HVM at the end of 2024. Use only a conservative upper bound through December 31, 2024; do not infer Q4 or an exact event day. The source-native first-facility/event correspondence is manually reviewed against the complete original PMT narrative. This upper bound satisfies the original June 30, 2025 deadline in retrospective source-statement arithmetic. The legacy filing date and batch-completion retrieval clock are recorded metadata, not independently verified historical availability or a per-request HTTP log.",
+    "outcome": {
+      "status": "observed_by",
+      "through": "2024-12-31"
+    },
+    "source_reference_ids": [
+      "legacy-tsmc-2025-20f-first-phoenix-hvm"
+    ],
+    "source_document_date": "2026-04-16"
+  }
+}

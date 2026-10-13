@@ -70,6 +70,89 @@ class CuratedCaptureTests(unittest.TestCase):
             self.assertEqual(report, capture.validate_capture(root))
         self.assertFalse(json.loads((root / "run.json").read_bytes())["claim_acceptance"])
 
+    def missing_robots_plan(self):
+        self.plan["format"] = capture.PLAN_FORMAT_V2
+        self.bodies["robots"] = b"<html><title>404 Not Found</title><p>Not Found</p></html>"
+        self.plan["policies"][0].update(normalization="reviewed_robots_404_body_v1",
+            media_types=["text/html"], normalized_sha256=capture._sha(self.bodies["robots"]))
+        self.overrides["robots"] = {"http_code": 404}
+        self.plan["policies"][1]["url"] = "https://example.org/cp.aspx?n=ABC123"
+        self.plan["documents"][0]["url"] = "https://example.org/News_Content.aspx?n=ABC&s=DEF&sms=123"
+
+    def test_v2_reviewed_404_remains_failed_http_but_can_pass_exact_policy_gate(self):
+        self.missing_robots_plan()
+        root, report = self.run_capture()
+        self.assertEqual(self.calls, ["robots", "rights", "document"])
+        self.assertEqual(report["policies"][0]["policy_state"], "reviewed_missing_robots_404")
+        self.assertEqual(report["policies"][0]["http_status"], 404)
+        self.assertEqual(report["documents"][0]["status"], "first_observation_requires_review")
+        ledger = json.loads((root / "source_checks.json").read_bytes())
+        self.assertEqual(ledger["attempts"][0]["outcome"], "failed")
+        self.assertEqual(ledger["attempts"][0]["error"], "HTTP 404")
+        self.assertEqual(json.loads((root / "run.json").read_bytes())["format"], capture.RUN_FORMAT_V3)
+        self.assertEqual(capture.validate_capture(root), report)
+        _, repeated = self.run_capture("second", root)
+        self.assertEqual(repeated["documents"][0]["status"], "unchanged")
+
+    def test_v2_missing_robots_rejects_denials_errors_redirects_and_invalid_tls(self):
+        self.missing_robots_plan()
+        changes = [{"http_code": status} for status in (200, 204, 301, 302, 401, 403, 410, 429, 500, 503)]
+        changes += [{"curl_exit_code": 28}, {"ssl_verify_result": 1}, {"ssl_verify_result": None},
+                    {"ssl_verify_result": False}, {"num_redirects": 1},
+                    {"url_effective": "https://example.org/error"}, {"content_type": "application/json"}]
+        for index, change in enumerate(changes):
+            self.calls.clear()
+            self.overrides["robots"] = {"http_code": 404, **change}
+            with self.subTest(change=change):
+                _, report = self.run_capture(f"blocked-{index}")
+                self.assertEqual(self.calls, ["robots", "rights"])
+                self.assertFalse(report["policies"][0]["accepted"])
+                self.assertEqual(report["documents"][0]["status"], "not_attempted_policy_blocked")
+
+    def test_v2_missing_robots_requires_original_error_body_and_separate_rights_gate(self):
+        self.missing_robots_plan()
+        original = dict(self.bodies)
+        for key, body in (("robots", b"<html>Access Denied</html>"), ("robots", b""),
+                          ("rights", b"<p>New restrictions</p>")):
+            self.bodies = {**original, key: body}
+            self.calls.clear()
+            _, report = self.run_capture("changed-" + str(len(body)))
+            self.assertEqual(self.calls, ["robots", "rights"])
+            self.assertEqual(report["documents"][0]["status"], "not_attempted_policy_blocked")
+
+    def test_v1_does_not_silently_gain_missing_robots_or_query_support(self):
+        self.missing_robots_plan()
+        self.plan["format"] = capture.PLAN_FORMAT
+        with self.assertRaises(ValueError): self.run_capture("v1-404")
+        self.plan["policies"][0]["normalization"] = "robots_text_v1"
+        with self.assertRaises(ValueError): self.run_capture("v1-query")
+        self.assertEqual(self.calls, [])
+
+    def test_v2_query_parameters_are_literal_unique_identifiers_not_discovery_or_redirects(self):
+        self.missing_robots_plan()
+        for index, query in enumerate(("n=a&n=b", "n=", "n=a%26s%3Db", "n=../x", "url=https://evil.test",
+                                       "n=a+b", "n=a;b=c", "=a", "n=a#frag", "n=a\nb")):
+            self.plan["documents"][0]["url"] = "https://example.org/news?" + query
+            with self.subTest(query=query), self.assertRaises(ValueError): self.run_capture(f"query-{index}")
+        self.assertEqual(self.calls, [])
+
+    def test_v2_cannot_apply_missing_robots_normalization_to_rights_or_query_robots(self):
+        self.missing_robots_plan()
+        self.plan["policies"][1]["normalization"] = "reviewed_robots_404_body_v1"
+        with self.assertRaises(ValueError): self.run_capture("wrong-purpose")
+        self.plan["policies"][1]["normalization"] = "html_policy_v1"
+        self.plan["policies"][0]["url"] += "?n=ABC"
+        with self.assertRaises(ValueError): self.run_capture("query-robots")
+        self.assertEqual(self.calls, [])
+
+    def test_v2_offline_replay_rejects_claimed_404_gate_with_success_status(self):
+        self.missing_robots_plan()
+        root, _ = self.run_capture()
+        ledger = json.loads((root / "source_checks.json").read_bytes())
+        ledger["attempts"][0].update(http_status=200, outcome="succeeded", error=None)
+        with self.assertRaisesRegex(ValueError, "despite failed policy"):
+            capture.derive_results(self.plan, ledger, root)
+
     def test_changed_policy_link_or_robots_blocks_source(self) -> None:
         for changed in ("rights", "robots"):
             original = copy.deepcopy(self.bodies)

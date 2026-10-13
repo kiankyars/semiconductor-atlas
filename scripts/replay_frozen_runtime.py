@@ -19,6 +19,9 @@ from scripts import frozen_runtime as runtime
 
 
 OPERATIONS = {
+    "source-family-assignment": ("scripts/admit_source_family.py", "verify",
+                                  ("parent", "review", "output", "reference-root", "expected-parent-sha256",
+                                   "expected-review-sha256", "expected-output-sha256")),
     "realized-milestone": ("scripts/record_realized_milestone.py", "verify",
                            ("observation", "source-body", "provenance")),
     "realized-cohort": ("scripts/record_realized_fab_cohort.py", "verify",
@@ -28,7 +31,62 @@ OPERATIONS = {
     "target-policy": ("scripts/evaluate_prospective_source_targets.py", "verify-policy",
                       ("registration", "policy", "reference-root")),
     "target-population": ("scripts/evaluate_project_targets.py", "verify", ("frozen",)),
+    "guidance-interval": ("scripts/guidance_interval_baseline.py", "verify",
+                          ("database", "vintage", "trusted-vintage-sha256")),
+    "source-guidance-diagnostic": ("scripts/evaluate_source_guidance.py", "verify",
+                                   ("review", "review-sha256", "reference-root", "report", "report-sha256")),
+    "legacy-pmt-outcome-diagnostic": ("scripts/evaluate_legacy_pmt_outcomes.py", "verify",
+                                      ("review", "review-sha256", "reference-root", "source-body",
+                                       "provenance", "source-manifest", "report", "report-sha256")),
+    "tsmc-source-quantities": ("scripts/admit_tsmc_source_quantities.py", "verify",
+                              ("parent", "review", "source-body", "output",
+                               "expected-review-sha256", "expected-output-sha256")),
+    "ase-k18b-milestones": ("scripts/admit_ase_k18b_milestones.py", "verify",
+                            ("parent", "review", "reference-root", "output",
+                             "expected-review-sha256", "expected-output-sha256")),
+    "infineon-villach-output": ("scripts/admit_infineon_villach_output.py", "verify",
+                              ("parent", "review", "reference-root", "output",
+                               "expected-review-sha256", "expected-output-sha256")),
+    "tower-closure-milestones": ("scripts/admit_tower_closure_milestones.py", "verify",
+                                ("parent", "review", "reference-root", "output",
+                                 "expected-review-sha256", "expected-output-sha256")),
+    "reviewed-source-rates": ("scripts/admit_reviewed_source_rates.py", "verify",
+                              ("parent", "review", "reference-root", "output",
+                               "expected-review-sha256", "expected-output-sha256")),
+    "new-albany-project-statements": ("scripts/admit_new_albany_project_statements.py", "verify",
+                                     ("parent", "review", "reference-root", "output",
+                                      "expected-review-sha256", "expected-output-sha256")),
+    "coherent-sherman-capability": ("scripts/admit_coherent_sherman_capability.py", "verify",
+                                    ("parent", "review", "reference-root", "output",
+                                     "expected-review-sha256", "expected-output-sha256")),
+    "bosch-sample-production": ("scripts/admit_bosch_sample_production.py", "verify",
+                                ("parent", "review", "reference-root", "output",
+                                 "expected-review-sha256", "expected-output-sha256")),
 }
+DIGEST_FIELDS = {("source-family-assignment", "expected-parent-sha256"),
+                 ("source-family-assignment", "expected-review-sha256"),
+                 ("source-family-assignment", "expected-output-sha256"),
+                 ("guidance-interval", "trusted-vintage-sha256"),
+                 ("source-guidance-diagnostic", "review-sha256"),
+                 ("source-guidance-diagnostic", "report-sha256"),
+                 ("legacy-pmt-outcome-diagnostic", "review-sha256"),
+                 ("legacy-pmt-outcome-diagnostic", "report-sha256"),
+                 ("tsmc-source-quantities", "expected-review-sha256"),
+                 ("tsmc-source-quantities", "expected-output-sha256"),
+                 ("ase-k18b-milestones", "expected-review-sha256"),
+                 ("ase-k18b-milestones", "expected-output-sha256"),
+                 ("infineon-villach-output", "expected-review-sha256"),
+                 ("infineon-villach-output", "expected-output-sha256"),
+                 ("tower-closure-milestones", "expected-review-sha256"),
+                 ("tower-closure-milestones", "expected-output-sha256"),
+                 ("reviewed-source-rates", "expected-review-sha256"),
+                 ("reviewed-source-rates", "expected-output-sha256"),
+                 ("new-albany-project-statements", "expected-review-sha256"),
+                 ("new-albany-project-statements", "expected-output-sha256"),
+                 ("coherent-sherman-capability", "expected-review-sha256"),
+                 ("coherent-sherman-capability", "expected-output-sha256"),
+                 ("bosch-sample-production", "expected-review-sha256"),
+                 ("bosch-sample-production", "expected-output-sha256")}
 MAX_OUTPUT = 1_000_000
 _LOADED_PRODUCER = runtime.digest(Path(__file__).read_bytes())
 
@@ -128,10 +186,17 @@ def run_verified(bundle, *, expected_sha256, expected_commit, operation, inputs,
         raise ValueError("replay input fields must exactly match the selected operation")
     arguments = [command]
     for field in fields:
+        if (operation, field) in DIGEST_FIELDS:
+            arguments.extend(["--" + field, runtime._hex(inputs[field], 64)])
+            continue
         path = Path(inputs[field])
         if not path.is_absolute() or ".." in path.parts:
             raise ValueError("replay evidence inputs require explicit absolute paths")
         arguments.extend(["--" + field, str(path)])
+    global_options = {"source-guidance-diagnostic": 3, "legacy-pmt-outcome-diagnostic": 6}
+    if operation in global_options:
+        boundary = 1 + 2 * global_options[operation]
+        arguments = [*arguments[1:boundary], command, *arguments[boundary:]]
     working_directory = Path(working_directory).absolute()
     descriptor = runtime._directory(working_directory)
     os.close(descriptor)
@@ -197,7 +262,8 @@ def main(argv=None):
     for name, (_, _, fields) in OPERATIONS.items():
         command = commands.add_parser(name)
         for field in fields:
-            command.add_argument("--" + field, type=Path, required=True)
+            command.add_argument("--" + field, type=str if (name, field) in DIGEST_FIELDS else Path,
+                                 required=True)
     args = parser.parse_args(argv)
     inputs = {field: getattr(args, field.replace("-", "_")) for field in OPERATIONS[args.operation][2]}
     try:

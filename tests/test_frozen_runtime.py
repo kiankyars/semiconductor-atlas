@@ -34,9 +34,25 @@ class FrozenRuntimeTests(unittest.TestCase):
         self.repository.mkdir()
         self.files = {"semiconductor_atlas/__init__.py": "from .models import marker\n",
                       "semiconductor_atlas/models.py": "marker = 'committed'\n",
+                      "semiconductor_atlas/reviewed_source_rates.py": "from .models import marker\n",
                       "semiconductor_atlas/migrations/0001_initial.sql": "-- original SQL\n",
                       "semiconductor_atlas/adapters/__init__.py": "",
                       "scripts/record_realized_fab_cohort.py": PROBE,
+                      "scripts/guidance_interval_baseline.py": PROBE,
+                      "scripts/evaluate_source_guidance.py": PROBE,
+                      "scripts/evaluate_legacy_pmt_outcomes.py": PROBE,
+                      "scripts/admit_tsmc_source_quantities.py": PROBE,
+                      "scripts/admit_ase_k18b_milestones.py": PROBE,
+                      "scripts/admit_infineon_villach_output.py": PROBE,
+                      "scripts/admit_tower_closure_milestones.py": PROBE,
+                      "scripts/admit_new_albany_project_statements.py": PROBE,
+                      "scripts/admit_coherent_sherman_capability.py": PROBE.replace(
+                          '"marker": marker', '"verifier": "coherent-sherman-capability", "marker": marker'),
+                      "scripts/admit_bosch_sample_production.py": PROBE.replace(
+                          '"marker": marker', '"verifier": "bosch-sample-production", "marker": marker'),
+                      "scripts/admit_reviewed_source_rates.py": PROBE.replace(
+                          "from semiconductor_atlas import marker",
+                          "from semiconductor_atlas.reviewed_source_rates import marker"),
                       "web/atlas-template.html": "<html>template only</html>\n",
                       "web/generate_atlas.py": "# generator\n",
                       "pyproject.toml": "[project]\nname = 'fixture'\nversion = '0'\n",
@@ -114,6 +130,387 @@ class FrozenRuntimeTests(unittest.TestCase):
             self.replay(inputs={**self.inputs, "output": self.root / "new.json"})
         with self.assertRaises(ValueError):
             self.replay(inputs={**self.inputs, "cohort": "relative.json"})
+
+    def test_guidance_replay_passes_exact_digest_as_literal_not_path(self):
+        inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
+                  "trusted-vintage-sha256": "a" * 64}
+        result = self.replay(operation="guidance-interval", inputs=inputs)
+        self.assertEqual(result["operation_receipt"]["arguments"], [
+            "verify", "--database", str(inputs["database"]), "--vintage", str(inputs["vintage"]),
+            "--trusted-vintage-sha256", "a" * 64])
+        self.assertFalse(result["network_acquisition_requested"])
+        self.assertFalse(result["core_migration_requested"])
+
+    def test_quantity_replay_is_verify_only_and_keeps_both_hashes_literal(self):
+        inputs = {key: self.root / key for key in ("parent", "review", "source-body", "output")}
+        inputs.update({"expected-review-sha256": "a" * 64, "expected-output-sha256": "b" * 64})
+        result = self.replay(operation="tsmc-source-quantities", inputs=inputs)
+        expected = ["verify"]
+        for key, value in inputs.items(): expected += ["--" + key, str(value)]
+        self.assertEqual(result["operation_receipt"]["arguments"], expected)
+        for key in ("expected-review-sha256", "expected-output-sha256"):
+            for invalid in (None, "A" * 64, Path("a" * 64), "--admit"):
+                with self.subTest(key=key, invalid=invalid), self.assertRaises(ValueError):
+                    self.replay(operation="tsmc-source-quantities", inputs={**inputs, key: invalid})
+        with self.assertRaises(ValueError):
+            self.replay(operation="tsmc-source-quantities admit", inputs=inputs)
+
+    def test_source_guidance_diagnostic_replay_keeps_read_only_argument_order(self):
+        inputs = {'review': self.root / 'review.json', 'review-sha256': 'a' * 64,
+                  'reference-root': self.root, 'report': self.root / 'report.json',
+                  'report-sha256': 'b' * 64}
+        result = self.replay(operation='source-guidance-diagnostic', inputs=inputs)
+        self.assertEqual(result['operation_receipt']['arguments'], [
+            '--review', str(inputs['review']), '--review-sha256', 'a' * 64,
+            '--reference-root', str(self.root), 'verify', '--report', str(inputs['report']),
+            '--report-sha256', 'b' * 64])
+        for key in ('review-sha256', 'report-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--create'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='source-guidance-diagnostic', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        for changes in ({**inputs, 'output': self.root / 'new.json'},
+                        {**inputs, 'review': 'relative.json'},
+                        {k: v for k, v in inputs.items() if k != 'report-sha256'}):
+            with self.assertRaises(ValueError):
+                self.replay(operation='source-guidance-diagnostic', inputs=changes)
+        with self.assertRaises(ValueError):
+            self.replay(operation='source-guidance-diagnostic create', inputs=inputs)
+
+    def test_source_guidance_diagnostic_replay_uses_committed_script(self):
+        (self.repository / 'scripts/evaluate_source_guidance.py').write_text("raise RuntimeError('changed')\n")
+        inputs = {'review': self.root / 'review.json', 'review-sha256': 'a' * 64,
+                  'reference-root': self.root, 'report': self.root / 'report.json',
+                  'report-sha256': 'b' * 64}
+        self.assertEqual('committed', self.replay(operation='source-guidance-diagnostic', inputs=inputs)['operation_receipt']['marker'])
+
+    def legacy_inputs(self):
+        return {'review': self.root / 'review.json', 'review-sha256': 'a' * 64,
+                'reference-root': self.root, 'source-body': self.root / 'legacy.html',
+                'provenance': self.root / 'baseline.json', 'source-manifest': self.root / 'manifest.json',
+                'report': self.root / 'report.json', 'report-sha256': 'b' * 64}
+
+    def test_legacy_pmt_replay_preserves_six_global_options_and_committed_script(self):
+        (self.repository / 'scripts/evaluate_legacy_pmt_outcomes.py').write_text("raise RuntimeError('changed')\n")
+        inputs = self.legacy_inputs()
+        result = self.replay(operation='legacy-pmt-outcome-diagnostic', inputs=inputs)
+        expected = []
+        for key, value in list(inputs.items())[:6]: expected += ['--' + key, str(value)]
+        expected += ['verify', '--report', str(inputs['report']), '--report-sha256', 'b' * 64]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+
+    def test_legacy_pmt_replay_rejects_missing_inputs_unsafe_paths_and_invalid_digests(self):
+        inputs = self.legacy_inputs()
+        changes = [{key: value for key, value in inputs.items() if key != missing} for missing in inputs]
+        changes.append({**inputs, 'output': self.root / 'new-report.json'})
+        for key in ('review-sha256', 'report-sha256'):
+            changes.extend({**inputs, key: bad} for bad in (None, True, 64, 'A' * 64, 'a' * 63,
+                                                            Path('a' * 64), '--create'))
+        for key in ('review', 'reference-root', 'source-body', 'provenance', 'source-manifest', 'report'):
+            changes.extend({**inputs, key: bad} for bad in ('relative', self.root / '..' / 'outside'))
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='legacy-pmt-outcome-diagnostic', inputs=changed)
+                child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='legacy-pmt-outcome-diagnostic create', inputs=inputs)
+
+    def test_legacy_pmt_cli_accepts_only_the_explicit_read_only_contract(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'legacy-pmt-outcome-diagnostic']
+        for key, value in self.legacy_inputs().items(): arguments += ['--' + key, str(value)]
+        stdout = io.StringIO()
+        with redirect_stdout(stdout): self.assertEqual(replay.main(arguments), 0)
+        result = json.loads(stdout.getvalue())
+        self.assertEqual(result['operation'], 'legacy-pmt-outcome-diagnostic')
+        self.assertEqual(result['operation_receipt']['arguments'][12], 'verify')
+        for extra in ('create', '--output', '--capture', '--migrate', '--http-ledger'):
+            with self.subTest(extra=extra), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                replay.main([*arguments, extra])
+
+    def test_legacy_pmt_replay_rejects_runtime_without_its_verifier(self):
+        self.git('rm', 'scripts/evaluate_legacy_pmt_outcomes.py')
+        self.git('-c', 'user.name=Runtime tests', '-c', 'user.email=runtime@example.test', 'commit', '-qm', 'old runtime')
+        commit, bundle = self.git('rev-parse', 'HEAD').strip(), self.root / 'without-legacy.json'
+        receipt = runtime.retain_runtime(self.repository, commit=commit, output=bundle)
+        with mock.patch.object(replay, '_capture') as child, self.assertRaisesRegex(ValueError, 'absent'):
+            replay.run_verified(bundle, expected_sha256=receipt['sha256'], expected_commit=commit,
+                operation='legacy-pmt-outcome-diagnostic', inputs=self.legacy_inputs(), working_directory=self.repository)
+        child.assert_not_called()
+
+    def test_guidance_replay_rejects_missing_malformed_or_option_like_digest_before_execution(self):
+        inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
+                  "trusted-vintage-sha256": "a" * 64}
+        for digest in (None, True, 64, "A" * 64, "a" * 63, "--output=/tmp/not-allowed", Path("a" * 64)):
+            with self.subTest(digest=digest), mock.patch.object(replay, "_capture") as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation="guidance-interval", inputs={**inputs, "trusted-vintage-sha256": digest})
+                child.assert_not_called()
+        for changed in ({key: value for key, value in inputs.items() if key != "trusted-vintage-sha256"},
+                        {**inputs, "output": self.root / "output.json"},
+                        {**inputs, "database": "relative.sqlite"}):
+            with mock.patch.object(replay, "_capture") as child, self.assertRaises(ValueError):
+                self.replay(operation="guidance-interval", inputs=changed)
+            child.assert_not_called()
+
+    def test_k18b_replay_is_verify_only_and_has_no_live_queue_dependency(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='ase-k18b-milestones', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for changed in ({**inputs, 'queue': self.root / 'live.sqlite'},
+                        {**inputs, 'expected-output-sha256': '--admit'},
+                        {**inputs, 'expected-review-sha256': Path('a' * 64)}):
+            with mock.patch.object(replay, '_capture') as child, self.assertRaises(ValueError):
+                self.replay(operation='ase-k18b-milestones', inputs=changed)
+            child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='ase-k18b-milestones admit', inputs=inputs)
+
+    def test_guidance_cli_preserves_digest_type_and_disallows_freeze_or_score(self):
+        arguments = ["--bundle", str(self.bundle), "--sha256", self.receipt["sha256"], "--commit", self.commit,
+                     "--working-directory", str(self.repository), "guidance-interval",
+                     "--database", str(self.root / "db.sqlite"), "--vintage", str(self.root / "vintage.json"),
+                     "--trusted-vintage-sha256", "b" * 64]
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            self.assertEqual(replay.main(arguments), 0)
+        self.assertEqual(json.loads(stdout.getvalue())["operation_receipt"]["arguments"][-1], "b" * 64)
+        for extra in ("freeze", "score", "--output", "--evidence-cutoff-at"):
+            with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                replay.main([*arguments, extra])
+
+    def test_villach_replay_keeps_hashes_literal_and_exposes_only_verify(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='infineon-villach-output', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), self.assertRaises(ValueError):
+                    self.replay(operation='infineon-villach-output', inputs={**inputs, key: bad})
+        with self.assertRaises(ValueError):
+            self.replay(operation='infineon-villach-output admit', inputs=inputs)
+
+    def test_guidance_replay_uses_retained_producer_after_current_code_changes(self):
+        (self.repository / "scripts/guidance_interval_baseline.py").write_text("raise RuntimeError('new code')\n")
+        (self.repository / "semiconductor_atlas/models.py").write_text("raise RuntimeError('new schema')\n")
+        inputs = {"database": self.root / "database.sqlite", "vintage": self.root / "vintage.json",
+                  "trusted-vintage-sha256": "c" * 64}
+        result = self.replay(operation="guidance-interval", inputs=inputs)
+        self.assertEqual(result["operation_receipt"]["marker"], "committed")
+
+    def test_tower_replay_keeps_hashes_literal_and_exposes_only_verify(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='tower-closure-milestones', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='tower-closure-milestones', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='tower-closure-milestones admit', inputs=inputs)
+
+    def test_source_rate_replay_is_verify_only_and_preserves_explicit_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='reviewed-source-rates', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items(): expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['imported_project_modules']['semiconductor_atlas.reviewed_source_rates'],
+                         'semiconductor_atlas/reviewed_source_rates.py')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 64, 'A' * 64, 'a' * 63, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='reviewed-source-rates', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        changes = [{key: value for key, value in inputs.items() if key != 'expected-output-sha256'},
+                   {**inputs, 'parent': Path('relative.sqlite')},
+                   {**inputs, 'reference-root': self.root / '..' / 'escape'},
+                   {**inputs, 'source-body': self.root / 'unreviewed.body'},
+                   {**inputs, 'verify-only': False}]
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='reviewed-source-rates', inputs=changed)
+                child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='reviewed-source-rates admit', inputs=inputs)
+
+    def test_new_albany_replay_preserves_inputs_and_is_verify_only(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='new-albany-project-statements', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items():
+            expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 'A' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='new-albany-project-statements', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+        with self.assertRaises(ValueError):
+            self.replay(operation='new-albany-project-statements admit', inputs=inputs)
+
+    def test_new_albany_replay_rejects_ambiguous_or_relative_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        changes = [{key: value for key, value in inputs.items() if key != 'expected-output-sha256'},
+                   {**inputs, 'parent': Path('relative.sqlite')},
+                   {**inputs, 'reference-root': self.root / '..' / 'escape'},
+                   {**inputs, 'source-body': self.root / 'unreviewed.body'},
+                   {**inputs, 'admit': True}]
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='new-albany-project-statements', inputs=changed)
+                child.assert_not_called()
+
+    def test_source_rate_replay_uses_retained_script_and_importer(self):
+        for name in ('scripts/admit_reviewed_source_rates.py', 'semiconductor_atlas/reviewed_source_rates.py'):
+            (self.repository / name).write_text("raise RuntimeError('evolving rate importer')\n")
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        result = self.replay(operation='reviewed-source-rates', inputs=inputs)
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        self.assertEqual(result['operation_receipt']['arguments'][0], 'verify')
+
+    def coherent_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        return {**inputs, 'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64}
+
+    def test_coherent_replay_dispatches_exact_isolated_verify_operation(self):
+        inputs = self.coherent_inputs()
+        result = self.replay(operation='coherent-sherman-capability', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items():
+            expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['operation_receipt']['verifier'], 'coherent-sherman-capability')
+        self.assertEqual(result['operation'], 'coherent-sherman-capability')
+        self.assertEqual(result['isolated_flags'], ['-I', '-S', '-B'])
+        self.assertFalse(result['operation_receipt']['site_loaded'])
+        self.assertEqual(result['imported_project_modules']['semiconductor_atlas.models'],
+                         'semiconductor_atlas/models.py')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+
+    def test_coherent_replay_rejects_nonliteral_or_malformed_digests_before_dispatch(self):
+        inputs = self.coherent_inputs()
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 64, 'A' * 64, 'a' * 63, 'a' * 65, 'g' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='coherent-sherman-capability', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+
+    def test_coherent_replay_rejects_missing_extra_relative_and_mutating_arguments(self):
+        inputs = self.coherent_inputs()
+        changes = [{key: value for key, value in inputs.items() if key != missing} for missing in inputs]
+        for field in ('parent', 'review', 'reference-root', 'output'):
+            changes.extend(({**inputs, field: Path('relative')},
+                            {**inputs, field: self.root / '..' / 'escape'}))
+        changes.extend(({**inputs, 'source-body': self.root / 'unreviewed.body'},
+                        {**inputs, 'queue': self.root / 'live.sqlite'},
+                        {**inputs, 'admit': True}, {**inputs, 'verify-only': False}))
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='coherent-sherman-capability', inputs=changed)
+                child.assert_not_called()
+        for operation in ('coherent-sherman-capability admit', 'coherent-sherman-capability capture'):
+            with self.subTest(operation=operation), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation=operation, inputs=inputs)
+                child.assert_not_called()
+
+    def test_coherent_replay_uses_committed_verifier_despite_hostile_current_checkout(self):
+        for name in ('scripts/admit_coherent_sherman_capability.py', 'semiconductor_atlas/models.py'):
+            (self.repository / name).write_text("raise RuntimeError('evolving Coherent code')\n")
+        with mock.patch.dict(os.environ, {'PYTHONPATH': str(self.repository), 'PYTHONHOME': str(self.repository)}):
+            result = self.replay(operation='coherent-sherman-capability', inputs=self.coherent_inputs())
+        self.assertEqual(result['operation_receipt']['verifier'], 'coherent-sherman-capability')
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        self.assertIsNone(result['operation_receipt']['pythonpath'])
+
+    def test_coherent_cli_preserves_digest_strings_and_rejects_unapproved_actions(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'coherent-sherman-capability']
+        for key, value in self.coherent_inputs().items():
+            arguments.extend(['--' + key, str(value)])
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            self.assertEqual(replay.main(arguments), 0)
+        result = json.loads(stdout.getvalue())
+        self.assertEqual(result['operation_receipt']['verifier'], 'coherent-sherman-capability')
+        self.assertEqual(result['operation_receipt']['arguments'][-4:],
+                         ['--expected-review-sha256', 'a' * 64, '--expected-output-sha256', 'b' * 64])
+        for extra in ('admit', '--verify-only', '--source-body', '--migrate', '--capture', '--queue'):
+            with self.subTest(extra=extra), mock.patch.object(replay, '_capture') as child:
+                with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                    replay.main([*arguments, extra])
+                child.assert_not_called()
+
+    def test_coherent_verifier_missing_from_retained_runtime_fails_before_dispatch(self):
+        self.git('rm', 'scripts/admit_coherent_sherman_capability.py')
+        self.git('-c', 'user.name=Runtime tests', '-c', 'user.email=runtime@example.test',
+                 'commit', '-qm', 'without Coherent verifier')
+        commit, bundle = self.git('rev-parse', 'HEAD').strip(), self.root / 'without-coherent.json'
+        receipt = runtime.retain_runtime(self.repository, commit=commit, output=bundle)
+        with mock.patch.object(replay, '_capture') as child, self.assertRaisesRegex(ValueError, 'absent'):
+            replay.run_verified(bundle, expected_sha256=receipt['sha256'], expected_commit=commit,
+                operation='coherent-sherman-capability', inputs=self.coherent_inputs(),
+                working_directory=self.repository)
+        child.assert_not_called()
+
+    def test_source_rate_cli_accepts_only_the_bounded_verify_contract(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'reviewed-source-rates']
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        for key, value in inputs.items(): arguments.extend(['--' + key, str(value)])
+        stdout = io.StringIO()
+        with redirect_stdout(stdout): self.assertEqual(replay.main(arguments), 0)
+        receipt = json.loads(stdout.getvalue())
+        self.assertEqual(receipt['operation'], 'reviewed-source-rates')
+        self.assertEqual(receipt['operation_receipt']['arguments'][-4:],
+                         ['--expected-review-sha256', 'a' * 64, '--expected-output-sha256', 'b' * 64])
+        for extra in ('admit', '--verify-only', '--source-body', '--migrate', '--capture'):
+            with self.subTest(extra=extra), redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                replay.main([*arguments, extra])
+
+    def test_source_rate_verifier_missing_from_an_older_runtime_fails_closed(self):
+        name = 'scripts/admit_reviewed_source_rates.py'
+        self.git('rm', name)
+        self.git('-c', 'user.name=Runtime tests', '-c', 'user.email=runtime@example.test', 'commit', '-qm', 'without rate verifier')
+        commit, bundle = self.git('rev-parse', 'HEAD').strip(), self.root / 'without-rates.json'
+        receipt = runtime.retain_runtime(self.repository, commit=commit, output=bundle)
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        inputs.update({'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64})
+        with mock.patch.object(replay, '_capture') as child, self.assertRaisesRegex(ValueError, 'absent'):
+            replay.run_verified(bundle, expected_sha256=receipt['sha256'], expected_commit=commit,
+                operation='reviewed-source-rates', inputs=inputs, working_directory=self.repository)
+        child.assert_not_called()
 
     def test_interpreter_drift_fails_before_running_any_code(self):
         with mock.patch.object(runtime, "interpreter", return_value={}), mock.patch.object(replay, "_capture") as child:
@@ -250,6 +647,83 @@ class FrozenRuntimeTests(unittest.TestCase):
         with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
             self.assertEqual(replay.main(arguments), 1)
         self.assertEqual(saved, target.read_bytes())
+
+
+    def bosch_inputs(self):
+        inputs = {key: self.root / key for key in ('parent', 'review', 'reference-root', 'output')}
+        return {**inputs, 'expected-review-sha256': 'a' * 64, 'expected-output-sha256': 'b' * 64}
+
+    def test_bosch_replay_dispatches_exact_isolated_verify_operation(self):
+        inputs = self.bosch_inputs()
+        result = self.replay(operation='bosch-sample-production', inputs=inputs)
+        expected = ['verify']
+        for key, value in inputs.items():
+            expected += ['--' + key, str(value)]
+        self.assertEqual(result['operation_receipt']['arguments'], expected)
+        self.assertEqual(result['operation_receipt']['verifier'], 'bosch-sample-production')
+        self.assertEqual(result['operation'], 'bosch-sample-production')
+        self.assertEqual(result['isolated_flags'], ['-I', '-S', '-B'])
+        self.assertFalse(result['operation_receipt']['site_loaded'])
+        self.assertEqual(result['imported_project_modules']['semiconductor_atlas.models'],
+                         'semiconductor_atlas/models.py')
+        for field in ('network_acquisition_requested', 'core_migration_requested', 'scheduled_execution_rerouted'):
+            self.assertFalse(result[field])
+
+    def test_bosch_replay_rejects_nonliteral_or_malformed_digests_before_dispatch(self):
+        inputs = self.bosch_inputs()
+        for key in ('expected-review-sha256', 'expected-output-sha256'):
+            for bad in (None, True, 64, 'A' * 64, 'a' * 63, 'a' * 65, 'g' * 64, Path('a' * 64), '--admit'):
+                with self.subTest(key=key, bad=bad), mock.patch.object(replay, '_capture') as child:
+                    with self.assertRaises(ValueError):
+                        self.replay(operation='bosch-sample-production', inputs={**inputs, key: bad})
+                    child.assert_not_called()
+
+    def test_bosch_replay_rejects_missing_extra_relative_and_mutating_arguments(self):
+        inputs = self.bosch_inputs()
+        changes = [{key: value for key, value in inputs.items() if key != missing} for missing in inputs]
+        for field in ('parent', 'review', 'reference-root', 'output'):
+            changes.extend(({**inputs, field: Path('relative')},
+                            {**inputs, field: self.root / '..' / 'escape'}))
+        changes.extend(({**inputs, 'source-body': self.root / 'unreviewed.body'},
+                        {**inputs, 'queue': self.root / 'live.sqlite'},
+                        {**inputs, 'admit': True}, {**inputs, 'verify-only': False}))
+        for changed in changes:
+            with self.subTest(inputs=changed), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation='bosch-sample-production', inputs=changed)
+                child.assert_not_called()
+        for operation in ('bosch-sample-production admit', 'bosch-sample-production capture'):
+            with self.subTest(operation=operation), mock.patch.object(replay, '_capture') as child:
+                with self.assertRaises(ValueError):
+                    self.replay(operation=operation, inputs=inputs)
+                child.assert_not_called()
+
+    def test_bosch_replay_uses_committed_verifier_despite_hostile_current_checkout(self):
+        for name in ('scripts/admit_bosch_sample_production.py', 'semiconductor_atlas/models.py'):
+            (self.repository / name).write_text("raise RuntimeError('evolving Bosch code')\n")
+        with mock.patch.dict(os.environ, {'PYTHONPATH': str(self.repository), 'PYTHONHOME': str(self.repository)}):
+            result = self.replay(operation='bosch-sample-production', inputs=self.bosch_inputs())
+        self.assertEqual(result['operation_receipt']['verifier'], 'bosch-sample-production')
+        self.assertEqual(result['operation_receipt']['marker'], 'committed')
+        self.assertIsNone(result['operation_receipt']['pythonpath'])
+
+    def test_bosch_cli_preserves_digest_strings_and_rejects_unapproved_actions(self):
+        arguments = ['--bundle', str(self.bundle), '--sha256', self.receipt['sha256'], '--commit', self.commit,
+                     '--working-directory', str(self.repository), 'bosch-sample-production']
+        for key, value in self.bosch_inputs().items():
+            arguments.extend(['--' + key, str(value)])
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            self.assertEqual(replay.main(arguments), 0)
+        result = json.loads(stdout.getvalue())
+        self.assertEqual(result['operation_receipt']['verifier'], 'bosch-sample-production')
+        self.assertEqual(result['operation_receipt']['arguments'][-4:],
+                         ['--expected-review-sha256', 'a' * 64, '--expected-output-sha256', 'b' * 64])
+        for extra in ('admit', '--verify-only', '--source-body', '--migrate', '--capture', '--queue'):
+            with self.subTest(extra=extra), mock.patch.object(replay, '_capture') as child:
+                with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                    replay.main([*arguments, extra])
+                child.assert_not_called()
 
 
 if __name__ == "__main__":

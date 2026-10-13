@@ -1,0 +1,341 @@
+{
+  "format": "semiconductor-atlas-local-source-acquisition-review-v1",
+  "reviewed_at": "2026-09-09T02:53:49Z",
+  "reviewer": "local:complete-nist-2024-index-document-review",
+  "decision": "approved_exact_urls_local_informational_review_only",
+  "purpose": "Retain the complete set of 65 currently indexed calendar-2024 NIST CHIPS article bodies before final PMT/project adjudication. Do not select only the 25 title candidates or current award recipients.",
+  "index_roster": {
+    "path": "review_plans/2026-09-09-nist-archive-index-roster-v1.json",
+    "sha256": "01e78176d40796dfc4e652f7e554fd115198be5d32cee74eb8d57d5fe6a51bd6"
+  },
+  "policy_basis": "Main reviewer read current robots.txt and the complete Copyrights & Disclaimers page and verified retained current normalized policies before four index captures. The exact canonical /news-events/news/2024/ article URLs do not match the robot exclusions. Government information is available for copying except marked copyrighted content and product-specific restrictions. Capture only original HTML and preserve attribution; marked material must be separately adjudicated before use. No linked attachments, images, issuer sites, credentials, cookies, redirects or retries.",
+  "scope": "All 65 canonical NIST article links below, in displayed-index order, split 50/15 only to respect the existing capture tool's per-plan bound. Exact index titles are identity checks, not claim truth or outcome labels. Raw HTML is local only; no core ingestion, training, public raw distribution, forecast scoring, permission emails or scheduler changes are authorized.",
+  "prior_exposure": "Known project outcomes have already been exposed. The retained index is current, not a historical as-of census or proof that its exact bytes existed in 2024. Retention does not change the prior frozen roster or its zero body-reviewed-article count.",
+  "documents": [
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-amkor",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with Amkor Technology to Bring End-to-End Chip Production to the U.S.",
+      "displayed_position": 12
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with Samsung Electronics to Solidify U.S. Leadership in Leading-Edge Semiconductor Production",
+      "displayed_position": 13
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-texas",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with Texas Instruments to Expand U.S. Capacity of Current-Generation and Mature-Node Chips",
+      "displayed_position": 14
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-sk-hynix",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with SK hynix to Advance U.S. Technological Leadership and Expand Capacity of Chips Crucial to the AI Supply Chain",
+      "displayed_position": 15
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-awards-globalwafers",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Awards with GlobalWafers to Support Domestic Production of Silicon Wafers",
+      "displayed_position": 16
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-preliminary-terms-bosch-advance-us",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Bosch to Advance U.S. Supply Chain Resiliency of Crucial Semiconductor Manufacturing Components",
+      "displayed_position": 17
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/department-commerce-awards-chips-incentives-micron-idaho-and-new-york",
+      "title": "Department of Commerce Awards CHIPS Incentives to Micron for Idaho and New York Projects and Announces Preliminary Memorandum of Terms for Virginia DRAM Project to Secure Domestic Supply of Legacy Memory Chips",
+      "displayed_position": 18
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announce-preliminary-terms-coherent-skywater",
+      "title": "Biden-Harris Administration Announce Preliminary Terms with Coherent, SkyWater, and X-Fab to Advance U.S. Supply Chain Security",
+      "displayed_position": 19
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-awards-absolics-and",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Awards with Absolics and Entegris to Support Development of Advanced Packaging Technology and Onshore Material for Leading-Edge Chip Production",
+      "displayed_position": 20
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award-intel-advance",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with Intel to Advance U.S. Leading-Edge Chip Capacity and Create Tens of Thousands of Jobs",
+      "displayed_position": 21
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-awards-bae-systems",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Awards with BAE Systems, Inc., and Rocket Lab to Expand Production of Chips Critical for U.S. National Security and Space Industry",
+      "displayed_position": 22
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/chips-america-announces-300-million-funding-boost-us-semiconductor",
+      "title": "CHIPS for America Announces up to $300 million in Funding to Boost U.S. Semiconductor Packaging",
+      "displayed_position": 23
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with GlobalFoundries to Strengthen Essential Chip Supply for Key U.S. Industries Including Auto and Defense",
+      "displayed_position": 24
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/chips-america-announces-new-proposed-285-million-award-chips-manufacturing",
+      "title": "CHIPS for America Announces New Proposed $285 Million Award for CHIPS Manufacturing USA Institute for Digital Twins, Headquartered in North Carolina",
+      "displayed_position": 25
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-chips-incentives-award-tsmc-arizona",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with TSMC Arizona to Secure U.S. Leadership in Advanced Semiconductor Technology",
+      "displayed_position": 26
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-preliminary-terms-akash-systems",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Akash Systems to Support Development and Production of Emerging Semiconductor Technology",
+      "displayed_position": 27
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-preliminary-terms-corning-and-powerex",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Corning and Powerex to Support U.S. Supply Chain Resiliency",
+      "displayed_position": 28
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/11/biden-harris-administration-announces-sunnyvale-ca-expected-location-second",
+      "title": "Biden-Harris Administration Announces Sunnyvale, CA as Expected Location for Second CHIPS for America R&D Flagship Facility",
+      "displayed_position": 29
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-ny-creates-albany-nanotech-complex",
+      "title": "Biden-Harris Administration Announces NY CREATES’ Albany NanoTech Complex as the first CHIPS for America R&D Flagship Facility and Planned Site for the estimated $825 Million CHIPS for America EUV Accelerator",
+      "displayed_position": 30
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-opens-100-million-competition-accelerate-rd-and",
+      "title": "Biden-Harris Administration Opens $100 million Competition to Accelerate R&D and AI Technologies for Sustainable Semiconductor Materials",
+      "displayed_position": 31
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-hemlock",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Hemlock Semiconductor to Significantly Expand U.S. Production Capacity of Semiconductor-Grade Polysilicon",
+      "displayed_position": 32
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-opens-funding-competition-16-billion-accelerate",
+      "title": "Biden-Harris Administration Opens Funding Competition for Up to $1.6 Billion to Accelerate U.S. Semiconductor Advanced Packaging Technologies",
+      "displayed_position": 33
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-infinera-support",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Infinera to Support Development of Semiconductor Technology Important for Communications and National Security",
+      "displayed_position": 34
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-wolfspeed-solidify",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Wolfspeed to Solidify U.S. Technological Leadership in Silicon Carbide Manufacturing",
+      "displayed_position": 35
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-announces-preliminary-terms-edwards-vacuum",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Edwards Vacuum to Bring Specialized Dry Vacuum Pump Manufacturing to the U.S. for the First Time",
+      "displayed_position": 36
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/chips-america-welcomes-new-chair-and-vice-chair-industrial-advisory",
+      "title": "CHIPS for America Welcomes New Chair and Vice Chair to Industrial Advisory Committee (IAC)",
+      "displayed_position": 37
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/chips-america-welcomes-new-and-returning-members-industrial-advisory",
+      "title": "CHIPS for America Welcomes New and Returning Members to the Industrial Advisory Committee",
+      "displayed_position": 38
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/10/biden-harris-administration-invest-100-million-accelerate-rd-and-ai",
+      "title": "Biden-Harris Administration to Invest up to $100 Million to Accelerate R&D and AI Technologies for Sustainable Semiconductor Materials",
+      "displayed_position": 39
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/09/us-national-science-foundation-and-department-commerce-announce-new-30m",
+      "title": "U.S. National Science Foundation and Department of Commerce Announce a New $30M Funding Opportunity, Funded by the CHIPS & Science Act, to Prepare Talent for Semiconductor Jobs Nationwide",
+      "displayed_position": 40
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/09/chips-america-releases-metis-data-exchange-ecosystem-supporting-metrology",
+      "title": "CHIPS for America Releases METIS Data Exchange Ecosystem for Supporting Metrology Innovation",
+      "displayed_position": 41
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-launches-nstc-workforce-center-excellence",
+      "title": "Biden-Harris Administration Launches NSTC Workforce Center of Excellence with Expected $250 Million Investment",
+      "displayed_position": 42
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-announces-first-chips-commercial-fabrication",
+      "title": "Biden-Harris Administration Announces First CHIPS Commercial Fabrication Facilities Award with Polar Semiconductor, Establishing Independent American Foundry",
+      "displayed_position": 43
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-awards-nearly-5-million-small-businesses-bring",
+      "title": "Biden-Harris Administration Awards nearly $5 million to Small Businesses to Bring New CHIPS Technology to the Commercial Market",
+      "displayed_position": 44
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/08/chips-america-announces-new-chips-metrology-community-practice",
+      "title": "CHIPS for America Announces New CHIPS Metrology Community of Practice",
+      "displayed_position": 45
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/08/biden-harris-administration-announces-preliminary-terms-hp-support",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with HP to Support Development and Commercialization of Cutting-Edge Semiconductor Technologies",
+      "displayed_position": 46
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/08/biden-harris-administration-announces-preliminary-terms-texas-instruments",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Texas Instruments to Expand U.S. Current-Generation and Mature-Node Chip Capacity",
+      "displayed_position": 47
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/08/us-department-commerce-announces-preliminary-terms-sk-hynix-advance-us-ai-0",
+      "title": "U.S. Department of Commerce Announces Preliminary Terms with SK hynix to Advance U.S. AI Supply Chain Security",
+      "displayed_position": 48
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-preliminary-terms-amkor-technology",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Amkor Technology to Bring Cutting-Edge Advanced Packaging Technology to the U.S. for Leading-Edge Semiconductors",
+      "displayed_position": 49
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/department-commerce-and-national-science-foundation-partner-advance",
+      "title": "Department of Commerce and National Science Foundation partner to advance semiconductor workforce development",
+      "displayed_position": 50
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/dr-dev-palmer-joins-chips-america-research-and-development-office",
+      "title": "Dr. Dev Palmer Joins the CHIPS for America Research and Development Office",
+      "displayed_position": 51
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-preliminary-terms-globalwafers",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with GlobalWafers to Significantly Increase Production of Silicon Wafers in U.S.",
+      "displayed_position": 52
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-announces-first-chips-america-rd-facilities-and",
+      "title": "Biden-Harris Administration Announces First CHIPS for America R&D Facilities and Selection Processes",
+      "displayed_position": 53
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/us-department-commerce-names-lynelle-mckay-chief-portfolio-management",
+      "title": "U.S. Department of Commerce Names Lynelle McKay as Chief Portfolio Management Officer of CHIPS Program Office",
+      "displayed_position": 54
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/biden-harris-administration-invest-16-billion-establish-and-accelerate",
+      "title": "Biden-Harris Administration to Invest Up to $1.6 Billion to Establish and Accelerate Domestic Capacity Advanced Packaging",
+      "displayed_position": 55
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/07/us-department-commerce-announces-preliminary-terms-rogue-valley",
+      "title": "U.S. Department of Commerce Announces Preliminary Terms with Rogue Valley Microdevices to Support the Construction of New Foundry",
+      "displayed_position": 56
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/06/biden-harris-administration-announces-preliminary-terms-entegris-onshore",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Entegris to Onshore Supply Chain Materials for Leading-Edge Chip Production",
+      "displayed_position": 57
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/06/us-department-commerce-announces-two-new-voluntary-company-commitments",
+      "title": "U.S. Department of Commerce Announces Two New Voluntary Company Commitments to the CHIPS Women in Construction Framework",
+      "displayed_position": 58
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/06/biden-harris-administration-announces-preliminary-terms-rocket-lab-expand",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Rocket Lab to Expand Production of Compound Semiconductors that Power Spacecrafts and Satellites",
+      "displayed_position": 59
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-absolics-support",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Absolics to Support Development of Glass Substrate Technology for Semiconductor Advanced Packaging",
+      "displayed_position": 60
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-polar-semiconductor",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Polar Semiconductor to Establish an Independent American Foundry",
+      "displayed_position": 61
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/05/chips-america-announces-285-million-funding-opportunity-digital-twin-and",
+      "title": "CHIPS for America Announces $285 million Funding Opportunity for a Digital Twin and Semiconductor CHIPS Manufacturing USA Institute",
+      "displayed_position": 62
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/05/us-department-commerce-launches-chips-women-construction-framework-initial",
+      "title": "U.S. Department of Commerce Launches CHIPS Women in Construction Framework with Initial Voluntary Commitments from Intel and Micron",
+      "displayed_position": 63
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-micron-onshore",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Micron to Onshore Leading-Edge Memory Chip Production in U.S. for First Time in Decades",
+      "displayed_position": 64
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/04/chips-america-announces-over-50-million-funding-opportunity-encourage-small",
+      "title": "CHIPS for America Announces over $50 million Funding Opportunity to Encourage Small Business Research and Development",
+      "displayed_position": 65
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-samsung-electronics",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Samsung Electronics to Establish Leading-Edge Semiconductor Ecosystem in Central Texas",
+      "displayed_position": 66
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-tsmc-expanded",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with TSMC, Expanded Investment from Company to Bring World’s Most Advanced Leading-Edge Technology to the U.S.",
+      "displayed_position": 67
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/04/chips-america-and-natcast-give-update-national-semiconductor-technology",
+      "title": "CHIPS for America and Natcast to Give Update on the National Semiconductor Technology Center",
+      "displayed_position": 68
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/03/us-department-commerce-receives-over-160-concept-plans-across-30-states",
+      "title": "U.S. Department of Commerce Receives Over 160 Concept Plans Across 30 States for CHIPS for America Funding Opportunity for Small Supply Chain Projects",
+      "displayed_position": 69
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/03/biden-harris-administration-announces-preliminary-terms-intel-support",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Intel to Support Investment in U.S. Semiconductor Technology Leadership and Create Tens of Thousands of Jobs",
+      "displayed_position": 70
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/02/chips-america-announces-funding-opportunity-expand-us-semiconductor",
+      "title": "CHIPS for America Announces Funding Opportunity to Expand U.S. Semiconductor Packaging",
+      "displayed_position": 71
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/02/biden-harris-administration-announces-preliminary-terms-globalfoundries",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with GlobalFoundries to Strengthen Domestic Legacy Chip Supply for U.S. Auto and Defense Industries",
+      "displayed_position": 72
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/02/biden-harris-administration-launches-next-phase-over-5-billion-chips-rd",
+      "title": "Biden-Harris Administration Launches Next Phase for Over $5 Billion in CHIPS R&D Investments, Including the National Semiconductor Technology Center (NSTC)",
+      "displayed_position": 73
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/01/natcast-names-deirdre-hanford-chief-executive-officer",
+      "title": "Natcast Names Deirdre Hanford as Chief Executive Officer",
+      "displayed_position": 74
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/01/nist-welcomes-five-new-members-industrial-advisory-committee",
+      "title": "NIST Welcomes Five New Members to the Industrial Advisory Committee",
+      "displayed_position": 75
+    },
+    {
+      "url": "https://www.nist.gov/news-events/news/2024/01/biden-harris-administration-announces-chips-preliminary-terms-microchip",
+      "title": "Biden-Harris Administration Announces CHIPS Preliminary Terms with Microchip Technology to Strengthen Supply Chain Resilience for America’s Automotive, Defense, and Aerospace Industries",
+      "displayed_position": 76
+    }
+  ]
+}

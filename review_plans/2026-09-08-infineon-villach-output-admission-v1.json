@@ -1,0 +1,307 @@
+{
+  "boundaries": {
+    "baseline_modified": false,
+    "canonical_identity_assigned": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "geometry_inferred": false,
+    "independent_measurement": false,
+    "model_training": false,
+    "native_diameter_allocation": false,
+    "ownership_assigned": false,
+    "physical_capacity_basis_assigned": false,
+    "quarterly_allocation": false,
+    "raw_redistribution": false,
+    "scheduled_execution_rerouted": false,
+    "source_acquisition": false,
+    "wafer_count_conversion": false,
+    "yield_utilization_qualification_inferred": false
+  },
+  "decision": "accept_all_five_source_native_site_wafer_area_totals",
+  "format": "semiconductor-atlas-villach-output-admission-review-v1",
+  "input_files": {
+    "artifacts/2026-09-08-infineon-policy-probe-v1/plan.json": {
+      "bytes": 874,
+      "sha256": "769b166b31971ff00000880684d8ecbe6523da33d8e473c25cb713778ef97026"
+    },
+    "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body": {
+      "bytes": 1582,
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    "artifacts/2026-09-08-infineon-policy-probe-v1/source_checks.json": {
+      "bytes": 1256,
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/plan.json": {
+      "bytes": 1212,
+      "sha256": "a3c11b38b74613639f13ca52ecdf0e07846277d516e12f5214b2acbfb21c059f"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/responses/infineon-terms.body": {
+      "bytes": 1570215,
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/source_checks.json": {
+      "bytes": 1292,
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/dependencies/0.body": {
+      "bytes": 1582,
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/dependencies/1.body": {
+      "bytes": 1256,
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/dependencies/2.body": {
+      "bytes": 1570215,
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/dependencies/3.body": {
+      "bytes": 1292,
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/manifest.json": {
+      "bytes": 1842,
+      "sha256": "098e94943c67e331143a20415290ca57bf5a3d8a58fba850c110b82c5c4f4207"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/plan.json": {
+      "bytes": 3483,
+      "sha256": "8055d6cfd830ddd80ab2ad049e8d3f76fda59d63a6236ba270f074f30d79333e"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/responses/infineon-villach-environment-2025.attempt.json": {
+      "bytes": 1125,
+      "sha256": "7b969146bbc11fa48007ad749a83777f2ce1237b78c361041605365589ec8344"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/responses/infineon-villach-environment-2025.body": {
+      "bytes": 11110904,
+      "sha256": "1606c4ffdb5f4b9f5118f9f003d423c5715b3fb32a8f20d0c712219d9ecba032"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/responses/infineon-villach-fy2025-release.attempt.json": {
+      "bytes": 1057,
+      "sha256": "347e35309b77ae509c55a7513a143e35842147f943eb735077cb943e9e619a0a"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/responses/infineon-villach-fy2025-release.body": {
+      "bytes": 1569037,
+      "sha256": "b323708eb839e6e02024a8922a250b222be13d2b2b71f1d8a0b44fbc3af70c57"
+    },
+    "artifacts/2026-09-08-infineon-villach-source-capture-v1/source_checks.json": {
+      "bytes": 2679,
+      "sha256": "9ed462b5ba302e9e40a7d2e084757788bc682f9508ec9062ea36608987a2b404"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/environment-2025.txt": {
+      "bytes": 191985,
+      "sha256": "18afd39523113b3d8b774ba608b82cb7783b07b59dc94f046ed763a17461a4a2"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/manifest.json": {
+      "bytes": 1507,
+      "sha256": "1a2ce0f89b8a65543eb578bbb53d422f992f3a5e0fa5e1de15fe29500d289645"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page2.png": {
+      "bytes": 1013466,
+      "sha256": "480d03260e4dd90308b1a01781a53be093225fc0e9dcb96c096783ffec3f6e03"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page24.png": {
+      "bytes": 1783716,
+      "sha256": "33280b03dc4244fcb700af3f56eebbfc5bb1c7cd240653fbcba06b0e13b0145f"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page25.png": {
+      "bytes": 341271,
+      "sha256": "a3186795b44db3e10b89faf0fad4c3c9ef1e98738cdb59233348a0a65d80fa95"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page38.png": {
+      "bytes": 334684,
+      "sha256": "584223b7ec0c01a2b9a8020ce8cdcae59b3bf737f466768c62519c30e2064ed1"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page39.png": {
+      "bytes": 1194839,
+      "sha256": "9a840aaa7761bb359415357201a802be8a949d55155ae649934f983fe198ff2b"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page65.png": {
+      "bytes": 365493,
+      "sha256": "cb6f6f59f00762de8f345404fbda5550b09e59e68f8416e3bc86021ae7395af8"
+    },
+    "artifacts/2026-09-08-infineon-villach-visual-review-v1/page68.png": {
+      "bytes": 306986,
+      "sha256": "40d6e397067f53cb6369728883dadea1a8a802a27711477a1561df4aa7d73a22"
+    },
+    "review_plans/2026-09-08-infineon-villach-output-source-review.json": {
+      "bytes": 11383,
+      "sha256": "92ba8eaf4b9951f0b963ff9cedccbec0a83215e0ce835e6bff6b64b60402e270"
+    },
+    "review_plans/2026-09-08-infineon-villach-source-acquisition.json": {
+      "bytes": 3483,
+      "sha256": "8055d6cfd830ddd80ab2ad049e8d3f76fda59d63a6236ba270f074f30d79333e"
+    }
+  },
+  "interpretation_method": "Manual visual transcription of all five comma-decimal total labels from complete retained page 39; Poppler text extraction omits these numbers. Complete pages 2,24,25,38,65,68 bind site scope, accounting definition, fiscal convention, comparability and assurance limits. FY2024/25 endpoints are explicit on page 2; earlier endpoints apply the October-to-September fiscal convention on page 65. Exact evidence hashes validate retained bytes, not automated chart interpretation or independent production truth. Original research review remains unchanged; this separate review explicitly authorizes only local typed source-quantity admission.",
+  "parent_database_sha256": "ca0d973348301ee5f2d8f7c7e375838f56c224f8f46a1df6351d15ec9b366af3",
+  "prior_exposure": "All five totals and their source interpretation were previously reviewed. This is an exposed retrospective source admission, not blind evaluation, independent manufacturing measurement or a historical forecast vintage.",
+  "research_review": {
+    "path": "review_plans/2026-09-08-infineon-villach-output-source-review.json",
+    "sha256": "92ba8eaf4b9951f0b963ff9cedccbec0a83215e0ce835e6bff6b64b60402e270"
+  },
+  "reviewed_at": "2026-09-08T22:19:53.551527Z",
+  "reviewed_by": "Codex primary agent after rereading the full selected retained PDF pages and verifying the complete evidence graph.",
+  "rights": {
+    "attribution": "Infineon Technologies Austria AG and Infineon Technologies AG",
+    "basis": "Retained Infineon Terms of Use section 3.2; original materials and notices remain unchanged.",
+    "commercial_use_authorized": false,
+    "model_training_authorized": false,
+    "redistribution_authorized": false,
+    "use": "local_informational_noncommercial_review_only"
+  },
+  "rows": [
+    {
+      "context_pages": [
+        2,
+        24,
+        25,
+        38,
+        65,
+        68
+      ],
+      "key": "produced_wafer_area:2020/21",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "produced_wafer_area",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "as_reported_precision_unspecified",
+        "period_end": "2021-09-30",
+        "period_kind": "fiscal_year",
+        "period_start": "2020-10-01",
+        "scope_kind": "source_native_site",
+        "scope_label": "Villach site aggregate; not Austria-wide operations, one building or production line, or the cross-country One Virtual Fab network.",
+        "source_definition": "Publisher-produced wafer surface area across the Villach site diameter mix, used as an environmental-indicator denominator. Not cleanroom area, wafer starts/counts, layer-weighted workload, shipments, installed capacity or qualified good-die output. Product/test/reclaim accounting is not exhaustively specified; process mix limits comparability.",
+        "source_number_literal": "462.5",
+        "source_period_label": "2020/21",
+        "source_unit_scale": 1000000,
+        "unit": "square_centimeters"
+      },
+      "source_display_number_literal": "462,5",
+      "support_page": 39
+    },
+    {
+      "context_pages": [
+        2,
+        24,
+        25,
+        38,
+        65,
+        68
+      ],
+      "key": "produced_wafer_area:2021/22",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "produced_wafer_area",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "as_reported_precision_unspecified",
+        "period_end": "2022-09-30",
+        "period_kind": "fiscal_year",
+        "period_start": "2021-10-01",
+        "scope_kind": "source_native_site",
+        "scope_label": "Villach site aggregate; not Austria-wide operations, one building or production line, or the cross-country One Virtual Fab network.",
+        "source_definition": "Publisher-produced wafer surface area across the Villach site diameter mix, used as an environmental-indicator denominator. Not cleanroom area, wafer starts/counts, layer-weighted workload, shipments, installed capacity or qualified good-die output. Product/test/reclaim accounting is not exhaustively specified; process mix limits comparability.",
+        "source_number_literal": "488.9",
+        "source_period_label": "2021/22",
+        "source_unit_scale": 1000000,
+        "unit": "square_centimeters"
+      },
+      "source_display_number_literal": "488,9",
+      "support_page": 39
+    },
+    {
+      "context_pages": [
+        2,
+        24,
+        25,
+        38,
+        65,
+        68
+      ],
+      "key": "produced_wafer_area:2022/23",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "produced_wafer_area",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "as_reported_precision_unspecified",
+        "period_end": "2023-09-30",
+        "period_kind": "fiscal_year",
+        "period_start": "2022-10-01",
+        "scope_kind": "source_native_site",
+        "scope_label": "Villach site aggregate; not Austria-wide operations, one building or production line, or the cross-country One Virtual Fab network.",
+        "source_definition": "Publisher-produced wafer surface area across the Villach site diameter mix, used as an environmental-indicator denominator. Not cleanroom area, wafer starts/counts, layer-weighted workload, shipments, installed capacity or qualified good-die output. Product/test/reclaim accounting is not exhaustively specified; process mix limits comparability.",
+        "source_number_literal": "517.8",
+        "source_period_label": "2022/23",
+        "source_unit_scale": 1000000,
+        "unit": "square_centimeters"
+      },
+      "source_display_number_literal": "517,8",
+      "support_page": 39
+    },
+    {
+      "context_pages": [
+        2,
+        24,
+        25,
+        38,
+        65,
+        68
+      ],
+      "key": "produced_wafer_area:2023/24",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "produced_wafer_area",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "as_reported_precision_unspecified",
+        "period_end": "2024-09-30",
+        "period_kind": "fiscal_year",
+        "period_start": "2023-10-01",
+        "scope_kind": "source_native_site",
+        "scope_label": "Villach site aggregate; not Austria-wide operations, one building or production line, or the cross-country One Virtual Fab network.",
+        "source_definition": "Publisher-produced wafer surface area across the Villach site diameter mix, used as an environmental-indicator denominator. Not cleanroom area, wafer starts/counts, layer-weighted workload, shipments, installed capacity or qualified good-die output. Product/test/reclaim accounting is not exhaustively specified; process mix limits comparability.",
+        "source_number_literal": "524.0",
+        "source_period_label": "2023/24",
+        "source_unit_scale": 1000000,
+        "unit": "square_centimeters"
+      },
+      "source_display_number_literal": "524,0",
+      "support_page": 39
+    },
+    {
+      "context_pages": [
+        2,
+        24,
+        25,
+        38,
+        65,
+        68
+      ],
+      "key": "produced_wafer_area:2024/25",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "produced_wafer_area",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "as_reported_precision_unspecified",
+        "period_end": "2025-09-30",
+        "period_kind": "fiscal_year",
+        "period_start": "2024-10-01",
+        "scope_kind": "source_native_site",
+        "scope_label": "Villach site aggregate; not Austria-wide operations, one building or production line, or the cross-country One Virtual Fab network.",
+        "source_definition": "Publisher-produced wafer surface area across the Villach site diameter mix, used as an environmental-indicator denominator. Not cleanroom area, wafer starts/counts, layer-weighted workload, shipments, installed capacity or qualified good-die output. Product/test/reclaim accounting is not exhaustively specified; process mix limits comparability.",
+        "source_number_literal": "505.5",
+        "source_period_label": "2024/25",
+        "source_unit_scale": 1000000,
+        "unit": "square_centimeters"
+      },
+      "source_display_number_literal": "505,5",
+      "support_page": 39
+    }
+  ],
+  "selection": "All five labeled total bars on printed/PDF page 39, fiscal years 2020/21 through 2024/25. No numeric diameter segments are printed; none are digitized. The separate chip and wafer-count fact box is context only and is not selected for numeric admission.",
+  "site": {
+    "kind": "site",
+    "label": "Infineon Villach site (source-native, canonical identity unresolved)",
+    "scope": "Villach site aggregate; not Austria-wide operations, one building or production line, or the cross-country One Virtual Fab network.",
+    "stable_key": "infineon-issuer:villach-site-unresolved"
+  }
+}

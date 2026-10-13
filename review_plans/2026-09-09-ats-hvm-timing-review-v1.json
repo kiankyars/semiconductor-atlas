@@ -1,0 +1,465 @@
+{
+  "boundaries": {
+    "calibration": false,
+    "database_modified": false,
+    "historical_atlas_forecasts": false,
+    "historical_availability_verified": false,
+    "independent_or_blind_evaluation": false,
+    "model_training": false,
+    "physical_capacity_claims": false,
+    "prospective_study_modified": false,
+    "raw_redistribution": false,
+    "representative_population": false
+  },
+  "format": "semiconductor-atlas-reviewed-source-guidance-screen-v1",
+  "input_files": {
+    "artifacts/2026-09-09-ats-extract-html.py": {
+      "bytes": 1540,
+      "sha256": "50fd490f9721d1b57750f585c5a3d8ac3ded76da1e32e781433be2ca31fc1aa3"
+    },
+    "artifacts/2026-09-09-ats-independent-review.md": {
+      "bytes": 7483,
+      "sha256": "67552ca750d60086c67fabb8169c4e846a8d2595966a0a45fa934e2f31c54c18"
+    },
+    "artifacts/2026-09-09-ats-rights-probe-v1/capture.py": {
+      "bytes": 2083,
+      "sha256": "95ab7182a3dbe1aa969f2b542611170b9336f17b2b05f318df5eecfeee7d0005"
+    },
+    "artifacts/2026-09-09-ats-rights-probe-v1/manifest.json": {
+      "bytes": 649,
+      "sha256": "a67c07006108bda2a36873dfd12f817d9e537a2ee8e0dfa9aec852260c3b8b6f"
+    },
+    "artifacts/2026-09-09-ats-rights-probe-v1/plan.json": {
+      "bytes": 1203,
+      "sha256": "db2fe8842f23af1dd26730e54da72de967b079f6ed37734066d9600c5cc2cbe6"
+    },
+    "artifacts/2026-09-09-ats-rights-probe-v1/responses/ats-legal-notice.body": {
+      "bytes": 1146134,
+      "sha256": "56c7c97032b8434fdfc96a2bfcad25f9c3e9181a2093ed74f779dae3a4092f90"
+    },
+    "artifacts/2026-09-09-ats-rights-probe-v1/robots.body": {
+      "bytes": 363,
+      "sha256": "6c1285590ff7d207c35d3220f6bff585cf304b3e410eac835d6412534ed2590e"
+    },
+    "artifacts/2026-09-09-ats-rights-probe-v1/source_checks.json": {
+      "bytes": 1273,
+      "sha256": "f743ae69afd3d05c0b6a7f1e13a89c119d4ede11eadedf87891a7680c501a2ec"
+    },
+    "artifacts/2026-09-09-ats-robots-probe-v1/capture.py": {
+      "bytes": 1684,
+      "sha256": "88918fecdaf91047445d33ca16a793cac550572196ca4b02a89e8e9c63cfb55e"
+    },
+    "artifacts/2026-09-09-ats-robots-probe-v1/manifest.json": {
+      "bytes": 515,
+      "sha256": "604f2b6d55b098d13b1c2e9338f9260d226e6667239106b3f3df14abac07a6dc"
+    },
+    "artifacts/2026-09-09-ats-robots-probe-v1/plan.json": {
+      "bytes": 898,
+      "sha256": "9567b5ab9b5bf016495f4e6061ba30868ca988cee2cfb9b38074a9c993040131"
+    },
+    "artifacts/2026-09-09-ats-robots-probe-v1/responses/ats-robots.body": {
+      "bytes": 363,
+      "sha256": "6c1285590ff7d207c35d3220f6bff585cf304b3e410eac835d6412534ed2590e"
+    },
+    "artifacts/2026-09-09-ats-robots-probe-v1/source_checks.json": {
+      "bytes": 1218,
+      "sha256": "b0852bd2d06c4252e3de1b8bdfee9113cf4a73c8d1cf6e2c7adde8cf66ddb1c7"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/capture.py": {
+      "bytes": 3249,
+      "sha256": "751fffafe1985d5452ac7011694e86c489f1d56883019a827cd5e368334c77b3"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/dependencies/0-ats-robots.body": {
+      "bytes": 363,
+      "sha256": "6c1285590ff7d207c35d3220f6bff585cf304b3e410eac835d6412534ed2590e"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/dependencies/1-source_checks.json": {
+      "bytes": 1218,
+      "sha256": "b0852bd2d06c4252e3de1b8bdfee9113cf4a73c8d1cf6e2c7adde8cf66ddb1c7"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/dependencies/2-ats-legal-notice.body": {
+      "bytes": 1146134,
+      "sha256": "56c7c97032b8434fdfc96a2bfcad25f9c3e9181a2093ed74f779dae3a4092f90"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/dependencies/3-source_checks.json": {
+      "bytes": 1273,
+      "sha256": "f743ae69afd3d05c0b6a7f1e13a89c119d4ede11eadedf87891a7680c501a2ec"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/manifest.json": {
+      "bytes": 1583,
+      "sha256": "4fe7eeb7fb52c31093cdb96402cb534491dc6a926357f54fe57cdd1e8ed6039a"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/plan.json": {
+      "bytes": 4244,
+      "sha256": "e9c477b899f4741339e36928ed5822875ad3fcd8d4d3168b6cf79393f9496267"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-fy-2024-25-outcomes.body": {
+      "bytes": 1326172,
+      "sha256": "0845fb60eca53114828ac1d632e0546bff318ac26430adb5a34f3eb740d45145"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-october-2024-revision.body": {
+      "bytes": 1165389,
+      "sha256": "1ccd54fac5771ea77b5da87569980d37e5974fd4000176b555c7a0de5f9f92d7"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-q1-2024-25-guidance.body": {
+      "bytes": 1348701,
+      "sha256": "7c7fde9bed1f93b5b24faa5d5c3d1bfe33ea88e5ee2632c9606ff54d58b965fe"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-q1-2025-26-followup.body": {
+      "bytes": 1146690,
+      "sha256": "b923a24048d1041c0a350e3c7ba6c18f5263d8d547f10e87b958ff6994569e08"
+    },
+    "artifacts/2026-09-09-ats-timing-capture-v1/source_checks.json": {
+      "bytes": 4933,
+      "sha256": "3c6d7ac2da7cfbde802242c172f9f5ac21a0fea7c3286191fccb8819198501ca"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/ats-fy-2024-25-outcomes.txt": {
+      "bytes": 24402,
+      "sha256": "7588bb6283e25154778ec8ed7e1f0416c2e190dd190396b8d7bc9b2cf66bcd3e"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/ats-q1-2024-25-guidance.txt": {
+      "bytes": 33313,
+      "sha256": "e62248bab13bbb9a83cd6d2b82ca69bfe180c9dd9770b68893e79d4f1c146865"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/ats-q1-2025-26-followup.txt": {
+      "bytes": 18536,
+      "sha256": "d875a120f9ae9801e5bcaa765b5209179b9b2e54cbc316364eec6e2dab635d24"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/followup-page-1.png": {
+      "bytes": 800599,
+      "sha256": "d9aba13f99bca67f0dbc437c7407e9ed0ce213eaf892c87c9475740e0b6c682d"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/followup-page-1.txt": {
+      "bytes": 102,
+      "sha256": "8609ac8e9ea5c9be15409a8f3f7b0847611fb261d0e78318c43c04e77f8d8231"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/followup-page-19.png": {
+      "bytes": 155542,
+      "sha256": "8b179baacedc7857e2837166fcdb21da60d902577ef26f8fdaa4ca4c780facfb"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/followup-page-19.txt": {
+      "bytes": 2378,
+      "sha256": "93467f63ad33f83f3379df5e9ce71dc0798a8ae568c529af40baccc86d610db9"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/followup-page-6.png": {
+      "bytes": 560358,
+      "sha256": "5303e245e0471d80d441e565caa4fb4fb8fac4dca05854483a590baf9ab10b6f"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/followup-page-6.txt": {
+      "bytes": 572,
+      "sha256": "17ec2b1f5c096fef334a511a3635e5235231eeefa423118bba964db980f37496"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-1.png": {
+      "bytes": 1134774,
+      "sha256": "9d7d87dbf373bb132994ba5654f0ae1c5045a572f614f626660ba18d70a72ae5"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-1.txt": {
+      "bytes": 103,
+      "sha256": "c46d9168a8d7e1f5a455eae1d51f07211dbe04845e9b081ed8d9894de8eded54"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-25.png": {
+      "bytes": 155768,
+      "sha256": "f460002e10bd21e562bf770cb81303783b405d0352e4455c2c7b2b6f207b5809"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-25.txt": {
+      "bytes": 2378,
+      "sha256": "a2300639e5089d4ed4be2432e6ec80b8e7f3cf6a6fd5a71d58a18b6ffb0369ae"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-5.png": {
+      "bytes": 111551,
+      "sha256": "eb55d62acfc6762b2177df7d61d339e3a2df4fd0e2e0c90ceefad49fffe9da48"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-5.txt": {
+      "bytes": 1802,
+      "sha256": "b62792720f7a00b010306ddc112deeb93c4e46c05c85ecc7e5c6981c638e5758"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-8.png": {
+      "bytes": 723754,
+      "sha256": "4f5db78690ecf259a736c96a8a8e6eb9a45b09f9b7780f44f34f1c0972cdc1f4"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-8.txt": {
+      "bytes": 1195,
+      "sha256": "260c9be94cf9ad90014587ce0be1ae94addc44a2f41fe669e6d1d6fa0894edd4"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/legal-notice-visible.txt": {
+      "bytes": 6612,
+      "sha256": "1f91722f638f97a037f61533ce2a49370dd9990215513bb5424cdefbbaea357b"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-1.png": {
+      "bytes": 1132057,
+      "sha256": "3678f635247daffb5d4cfeb2a1c625b0a94021dba79cca9f7d85183473987199"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-1.txt": {
+      "bytes": 102,
+      "sha256": "78080d8a10026260ac3e51be3d89892cd022b464f9f401af6fd2a464ab8e9f29"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-24.png": {
+      "bytes": 155526,
+      "sha256": "86ebe529b106ae6ca668ba1ae2dd0e1ed2d910b246a7fcbbad6fded45c878615"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-24.txt": {
+      "bytes": 2378,
+      "sha256": "19c990c9b87e3dbde67f515980218297c77d7468bf8d386fd7d9b3de1af0fcc5"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-3.png": {
+      "bytes": 415308,
+      "sha256": "50b501a1e012fd6a32b2f1b5a25b0ecfe39f5f74a17cd0f20d105e5b42495fb4"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-3.txt": {
+      "bytes": 431,
+      "sha256": "2d6f4f904413c7c8ec14c2d5316172d2f5bcbf15966a08f8555aef52455b2406"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-8.png": {
+      "bytes": 391629,
+      "sha256": "dc27df013c996a053cb45545022a4a1e918d530a27690c78b1f02af6b0bf75a6"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-8.txt": {
+      "bytes": 417,
+      "sha256": "cf8c10bcdd2e4567bb87343efb96b25e25e2608475ff10bd305560f9dec71a64"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-9.png": {
+      "bytes": 276488,
+      "sha256": "1384f551e93209abf626bb39618dc6027517464f2d9ea83895f7ac4732809bd8"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-9.txt": {
+      "bytes": 606,
+      "sha256": "11349eef6c7f4be169224c01a49219a5d4dedaa19ce7b6d4abf753ca77847929"
+    },
+    "artifacts/2026-09-09-ats-timing-review-v1/revision-visible.txt": {
+      "bytes": 13059,
+      "sha256": "6281c86cb77fad4d88632edd0be01b880194c6a6a36aacde02e2665019d45d75"
+    },
+    "artifacts/2026-09-09-build-ats-review.py": {
+      "bytes": 11153,
+      "sha256": "7534802d5326d9bc730bfa7e7e44392153b49b0156bfa423f01a47eed71af96b"
+    },
+    "review_plans/2026-09-09-ats-project-timing-acquisition.json": {
+      "bytes": 4244,
+      "sha256": "e9c477b899f4741339e36928ed5822875ad3fcd8d4d3168b6cf79393f9496267"
+    },
+    "review_plans/2026-09-09-ats-rights-probe.json": {
+      "bytes": 1203,
+      "sha256": "db2fe8842f23af1dd26730e54da72de967b079f6ed37734066d9600c5cc2cbe6"
+    },
+    "review_plans/2026-09-09-ats-robots-probe.json": {
+      "bytes": 898,
+      "sha256": "9567b5ab9b5bf016495f4e6061ba30868ca988cee2cfb9b38074a9c993040131"
+    }
+  },
+  "outcomes": [
+    {
+      "case_id": "ats-2024-08-01-kulim-hvm",
+      "event_type": "high_volume_production_start",
+      "outcome": {
+        "high": "2025-04-01",
+        "low": "2025-04-01",
+        "status": "observed"
+      },
+      "project_group": "ats:kulim-new-substrate-plant",
+      "project_id": "ats:kulim-new-substrate-plant",
+      "reason": "May 15, 2025 page 8 explicitly reports the new Kulim substrate plant HVM start on April 1, 2025; July 31 page 6 repeats that exact day in words. The day lies after the original interval's March 31 end. This is a source-statement result, not an independently observed factory event, measured capacity, model score, or exact delay estimate against an unspecified planned day. Neither one-day nor ninety-day delay duration is established.",
+      "scope_id": "new Kulim Malaysia IC-substrate plant HVM start; excludes second plant and full ramp",
+      "source_document_date": "2025-05-15",
+      "source_reference_ids": [
+        "ats-july-outcome-followup",
+        "ats-may-outcome-report"
+      ]
+    },
+    {
+      "case_id": "ats-2024-08-01-leoben-hvm",
+      "event_type": "high_volume_production_start",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "ats:leoben-htb3-rd-center",
+      "project_id": "ats:leoben-htb3-rd-center",
+      "reason": "Retained later Leoben disclosures describe R&D, prototypes, small volume, samples, qualifications and an opening, not a dated HVM start. The May June-opening label is future guidance; July's opening label is still a different event. The October revision is forward guidance, not censoring evidence. The original target remains eligible and its outcome unknown; neither nonoccurrence, target failure, cancellation nor target satisfaction is inferred from silence or scope evolution.",
+      "scope_id": "Leoben HTB3 and R&D center original HVM target; excludes opening, samples and generic ramp",
+      "source_document_date": "2025-07-31",
+      "source_reference_ids": [
+        "ats-july-outcome-followup",
+        "ats-may-outcome-report",
+        "ats-october-guidance-revision"
+      ]
+    }
+  ],
+  "prior_exposure": "Web results showing a delay revision and Kulim's later start were seen before this roster and adjudication were fixed. All exact bodies were acquired on September 9, 2026, not on their printed historical dates. Present-day acquisition proves retained bytes and clock ordering only, not historical availability, a historical Atlas prediction or blindness. The October revision does not overwrite the original target; prior reviews and the prospective study remain immutable.",
+  "reviewed_at": "2026-09-09T12:06:36.901745Z",
+  "reviewed_by": "Codex main reviewer with a separate agent's retained visual/semantic review; both outcome-exposed, neither independent physical observer nor blind evaluator.",
+  "rights": "Private noncommercial local information review only. The retained website legal notice expressly allows private noncommercial use and restricts changed source content, public/commercial reuse and networked redistribution absent written permission. Complete originals remain unchanged. All three PDF disclaimers identify proprietary informational content, no independent verification/warranty, risk in forward statements and no financial recommendation. No raw-source publication, public derivative, commercial permission, model training, third-party chart/photo reuse or production-service license is asserted. Local extracted text and page renders preserve context for manual inspection, not replacement publisher documents. Exact robots and rights plans, bodies, capture logs and dependency hashes are inventoried.",
+  "roster": [
+    {
+      "case_id": "ats-2024-08-01-kulim-hvm",
+      "disposition": "eligible",
+      "event_type": "high_volume_production_start",
+      "project_group": "ats:kulim-new-substrate-plant",
+      "project_id": "ats:kulim-new-substrate-plant",
+      "reason": "One of both project-specific HVM targets in the complete original page-8 table, corroborated by page-5 HVM wording. Calendar-quarter interval preserved without midpoint or invented issue timestamp.",
+      "scope_id": "new Kulim Malaysia IC-substrate plant HVM start; excludes second plant and full ramp",
+      "source_document_date": "2024-08-01",
+      "source_reference_ids": [
+        "ats-original-hvm-guidance"
+      ],
+      "target": {
+        "high": "2025-03-31",
+        "kind": "interval",
+        "low": "2025-01-01"
+      }
+    },
+    {
+      "case_id": "ats-2024-08-01-leoben-hvm",
+      "disposition": "eligible",
+      "event_type": "high_volume_production_start",
+      "project_group": "ats:leoben-htb3-rd-center",
+      "project_id": "ats:leoben-htb3-rd-center",
+      "reason": "One of both project-specific HVM targets in the complete original page-8 table, corroborated by page-5 HVM wording. Calendar-quarter interval preserved without midpoint or invented issue timestamp.",
+      "scope_id": "Leoben HTB3 and R&D center original HVM target; excludes opening, samples and generic ramp",
+      "source_document_date": "2024-08-01",
+      "source_reference_ids": [
+        "ats-original-hvm-guidance"
+      ],
+      "target": {
+        "high": "2025-03-31",
+        "kind": "interval",
+        "low": "2025-01-01"
+      }
+    }
+  ],
+  "selection": "Purposive retrospective cohort: exactly both project-specific HVM targets in the August 1, 2024 Q1 FY2024/25 paired project table, with HVM confirmed by page 5. This is not all AT&S projects, all events, all vintages or an independently complete announcement population. Two physical project groups share one issuer and correlated customer/market exposure, so they are not assumed statistically independent. Scope excludes the separate second Kulim plant, plant openings, customer-sample timing, CCC, other company facilities, market charts and financial metrics. AT&S Kulim is not Infineon Kulim. Every selected project remains in the outcome roster, including unresolved Leoben; no overall success-rate or model-fitting claim follows.",
+  "source_references": {
+    "ats-july-outcome-followup": {
+      "body_path": "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-q1-2025-26-followup.body",
+      "capture": {
+        "attempt_id": "ats-q1-2025-26-followup",
+        "ledger_path": "artifacts/2026-09-09-ats-timing-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:56:20.364268Z",
+      "interpretation": "Cover is July 31, 2025. Complete paired page 6 repeats Kulim HVM start as April 1, 2025. This is same-issuer repetition, not a second independent physical corroboration. Leoben-Hinterberg3 lists June 2025 opening, R&D/prototyping/small-volume work and ongoing customer qualification, not a date for the original HVM event. No Leoben HVM nonoccurrence or cancellation is inferred. Full-page render/text correspondence and final disclaimer were reviewed.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2025-07-31",
+      "source_url": "https://ats.net/download/conference-call-q1-2025-26/?refresh=6985f15445a0a1770385748&wpdmdl=48483",
+      "support_spans": [
+        {
+          "end": 102,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/followup-page-1.txt",
+          "sha256": "8609ac8e9ea5c9be15409a8f3f7b0847611fb261d0e78318c43c04e77f8d8231",
+          "start": 0
+        },
+        {
+          "end": 572,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/followup-page-6.txt",
+          "sha256": "17ec2b1f5c096fef334a511a3635e5235231eeefa423118bba964db980f37496",
+          "start": 0
+        },
+        {
+          "end": 2378,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/followup-page-19.txt",
+          "sha256": "93467f63ad33f83f3379df5e9ce71dc0798a8ae568c529af40baccc86d610db9",
+          "start": 0
+        }
+      ]
+    },
+    "ats-may-outcome-report": {
+      "body_path": "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-fy-2024-25-outcomes.body",
+      "capture": {
+        "attempt_id": "ats-fy-2024-25-outcomes",
+        "ledger_path": "artifacts/2026-09-09-ats-timing-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:56:16.259705Z",
+      "interpretation": "Cover is May 15, 2025. Page 8 reports Kulim high-volume production start 01.04.2025; July's spelling confirms day/month interpretation as April 1. This is issuer-reported HVM start of the new substrate plant, not full ramp, the second plant, or measured usable capacity. Page 3 says both plants in ramp but supplies no dated Leoben HVM. Page 9 describes Leoben-Hinterberg3 R&D/prototyping/small-volume operations and ongoing qualifications. Its June 2025 opening label is future relative to this May document, so not an observed opening. End-2024 sample shipments are a different event. All listed full pages, notes and disclaimer were visually inspected; original PDF and full extracted text remain local.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2025-05-15",
+      "source_url": "https://ats.net/en/download/conference-call-fy-2024-25/?refresh=6a2506b981c341780811449&wpdmdl=44390",
+      "support_spans": [
+        {
+          "end": 102,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-1.txt",
+          "sha256": "78080d8a10026260ac3e51be3d89892cd022b464f9f401af6fd2a464ab8e9f29",
+          "start": 0
+        },
+        {
+          "end": 431,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-3.txt",
+          "sha256": "2d6f4f904413c7c8ec14c2d5316172d2f5bcbf15966a08f8555aef52455b2406",
+          "start": 0
+        },
+        {
+          "end": 417,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-8.txt",
+          "sha256": "cf8c10bcdd2e4567bb87343efb96b25e25e2608475ff10bd305560f9dec71a64",
+          "start": 0
+        },
+        {
+          "end": 606,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-9.txt",
+          "sha256": "11349eef6c7f4be169224c01a49219a5d4dedaa19ce7b6d4abf753ca77847929",
+          "start": 0
+        },
+        {
+          "end": 2378,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/outcomes-page-24.txt",
+          "sha256": "19c990c9b87e3dbde67f515980218297c77d7468bf8d386fd7d9b3de1af0fcc5",
+          "start": 0
+        }
+      ]
+    },
+    "ats-october-guidance-revision": {
+      "body_path": "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-october-2024-revision.body",
+      "capture": {
+        "attempt_id": "ats-october-2024-revision",
+        "ledger_path": "artifacts/2026-09-09-ats-timing-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:56:12.163655Z",
+      "interpretation": "Visible publication date and release footer identify October 31, 2024. The complete article says HVM at the two new plants is expected one to two quarters later and no current-fiscal-year revenue contribution is expected. This is subsequent issuer guidance, not an actual occurrence, retrospective duration or explicit nonoccurrence-through observation. It supplies context for the unresolved Leoben target without replacing either original interval. A separate second Kulim plant is outside this HVM-start pair. Visible HTML extraction is a local derivative; exact HTML is retained unchanged.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2024-10-31",
+      "source_url": "https://ats.net/en/ir-news/ats-expects-revenue-at-prior-year-level/",
+      "support_spans": [
+        {
+          "end": 13059,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/revision-visible.txt",
+          "sha256": "6281c86cb77fad4d88632edd0be01b880194c6a6a36aacde02e2665019d45d75",
+          "start": 0
+        }
+      ]
+    },
+    "ats-original-hvm-guidance": {
+      "body_path": "artifacts/2026-09-09-ats-timing-capture-v1/responses/ats-q1-2024-25-guidance.body",
+      "capture": {
+        "attempt_id": "ats-q1-2024-25-guidance",
+        "ledger_path": "artifacts/2026-09-09-ats-timing-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T11:56:00.737640Z",
+      "interpretation": "Cover dates this conference call August 1, 2024. Full page 8 gives exactly two project rows: Leoben HTB3 and R&D center, and Kulim Malaysia; both Start of production/HVM CQ1 2025. Full page 5 explicitly associates HVM with both names, supporting the HVM-only target interpretation. CQ1 is calendar Q1 (January 1 through March 31), not the issuer's fiscal Q1. Equipment-installation percentages, sample shipment week 37 and Kulim CCC are different events and are not HVM outcomes. The full-page rendered PNGs and extracted text are manually correspondence-checked. Third-party market data and photographs are not selected factual inputs. Page 25 is retained and reviewed as a source-specific proprietary/informational, no-warranty and forward-looking-statement notice. No CQ abbreviation legend was found; calendar normalization is explicit reviewer interpretation based on CQ versus fiscal-year labeling, not a source-quoted January-to-March interval.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2024-08-01",
+      "source_url": "https://ats.net/download/conference-call-q1-2024-25/?refresh=69dfc7396e5c71776273209&wpdmdl=35315",
+      "support_spans": [
+        {
+          "end": 103,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-1.txt",
+          "sha256": "c46d9168a8d7e1f5a455eae1d51f07211dbe04845e9b081ed8d9894de8eded54",
+          "start": 0
+        },
+        {
+          "end": 1802,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-5.txt",
+          "sha256": "b62792720f7a00b010306ddc112deeb93c4e46c05c85ecc7e5c6981c638e5758",
+          "start": 0
+        },
+        {
+          "end": 1195,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-8.txt",
+          "sha256": "260c9be94cf9ad90014587ce0be1ae94addc44a2f41fe669e6d1d6fa0894edd4",
+          "start": 0
+        },
+        {
+          "end": 2378,
+          "path": "artifacts/2026-09-09-ats-timing-review-v1/guidance-page-25.txt",
+          "sha256": "a2300639e5089d4ed4be2432e6ec80b8e7f3cf6a6fd5a71d58a18b6ffb0369ae",
+          "start": 0
+        }
+      ]
+    }
+  }
+}

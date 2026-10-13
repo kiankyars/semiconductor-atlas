@@ -8,7 +8,7 @@ from collections import Counter, defaultdict
 from datetime import UTC, date, datetime
 from typing import Any, Iterable, Mapping, Sequence
 
-from .database import knowledge_clock_sql, schema_version
+from .database import admission_clock_sql, knowledge_clock_sql, schema_version
 from .repository import (
     _normalized_timestamp, current_claims, known_source_claims, validate_database,
 )
@@ -69,7 +69,7 @@ def _claim_value_from_row(value_kind: str, row: Mapping[str, Any]) -> dict[str, 
             "date_base": row["date_base"],
             "date_high": row["date_high"],
         }
-        for field in ("date_precision", "date_literal"):
+        for field in ("date_precision", "date_literal", "date_relation"):
             if field in row.keys() and row[field] is not None:
                 result[field] = row[field]
         return result
@@ -123,13 +123,24 @@ def claim_value(connection: sqlite3.Connection, claim_id: str, value_kind: str) 
     ).fetchone()
     if row is None:
         raise ValueError(f"claim {claim_id} lacks a {value_kind} value")
-    return _claim_value_from_row(value_kind, row)
+    result = _claim_value_from_row(value_kind, row)
+    if value_kind == 'scalar':
+        from .source_quantities import metadata_for_claims
+        metadata = metadata_for_claims(connection, [claim_id])
+        if claim_id in metadata:
+            result['source_quantity'] = metadata[claim_id]
+        from .source_rates import metadata_for_claims as rate_metadata_for_claims
+        metadata = rate_metadata_for_claims(connection, [claim_id])
+        if claim_id in metadata:
+            result['source_rate'] = metadata[claim_id]
+    return result
 
 
 def _hydrate_claim_rows(
     connection: sqlite3.Connection,
     rows: Sequence[sqlite3.Row],
     *,
+    recorded_at: str,
     dependency_map: Mapping[str, list[dict[str, str]]] | None = None,
 ) -> list[dict[str, Any]]:
     if not rows:
@@ -151,7 +162,16 @@ def _hydrate_claim_rows(
             claim_id = str(value_row["claim_version_id"])
             values[claim_id] = _claim_value_from_row(value_kind, value_row)
 
+    from .source_quantities import metadata_for_claims
+    for claim_id, metadata in metadata_for_claims(connection, selected_ids).items():
+        values[claim_id]['source_quantity'] = metadata
+    from .source_rates import metadata_for_claims as rate_metadata_for_claims
+    for claim_id, metadata in rate_metadata_for_claims(connection, selected_ids).items():
+        values[claim_id]['source_rate'] = metadata
+
     evidence: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    from .source_family_review import apply_resolution, resolutions
+    family_mapping = resolutions(connection, recorded_at=recorded_at)
     for evidence_row in connection.execute(
         """
         WITH selected(id) AS (SELECT value FROM json_each(?))
@@ -163,7 +183,7 @@ def _hydrate_claim_rows(
                records.observed_at AS source_record_observed_at,
                records.record_sha256 AS source_record_sha256,
                sources.publisher, sources.stable_key AS source_key,
-               families.stable_key AS source_family
+               families.stable_key AS source_family, sources.id AS family_source_id
         FROM claim_evidence AS links
         JOIN source_documents AS documents ON documents.id = links.source_document_id
         LEFT JOIN source_records AS records
@@ -178,6 +198,7 @@ def _hydrate_claim_rows(
         (selected_json,),
     ):
         item = dict(evidence_row)
+        apply_resolution(item, item.pop("family_source_id"), family_mapping)
         claim_id = str(item.pop("claim_version_id"))
         evidence[claim_id].append(item)
 
@@ -238,7 +259,7 @@ def claim_records(
         recorded_at=recorded_at,
         subject_entity_id=subject_entity_id,
     )
-    return _hydrate_claim_rows(connection, rows)
+    return _hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
 
 
 def claim_history_records(
@@ -333,7 +354,7 @@ def claim_history_records(
             row["id"],
         ),
     )
-    return _hydrate_claim_rows(connection, rows, dependency_map=dependencies)
+    return _hydrate_claim_rows(connection, rows, recorded_at=recorded_at, dependency_map=dependencies)
 
 
 def source_claim_records(
@@ -350,7 +371,7 @@ def source_claim_records(
     rows = known_source_claims(
         connection, recorded_at=recorded_at, subject_entity_id=subject_entity_id,
     )
-    return _hydrate_claim_rows(connection, rows)
+    return _hydrate_claim_rows(connection, rows, recorded_at=recorded_at)
 
 
 def _preferred_name(entity: sqlite3.Row, claims: list[dict[str, Any]]) -> str:
@@ -477,6 +498,7 @@ def _geojson_source_terms(
 ) -> tuple[list[str], list[str]]:
     """Collect source terms reachable from selected claims at the cutoff."""
 
+    clock = admission_clock_sql(connection)
     seeds = sorted(set(claim_ids))
     if not seeds:
         return [], []
@@ -509,7 +531,7 @@ def _geojson_source_terms(
           ON documents.id = evidence.source_document_id
         WHERE julianday(documents.retrieved_at) <= julianday(?)
         ORDER BY attribution, license
-        """,
+        """.replace("julianday(", f"{clock}("),
         (json.dumps(seeds), recorded_at, recorded_at),
     ).fetchall()
     attributions = sorted({row["attribution"] for row in rows if row["attribution"]})

@@ -313,11 +313,10 @@ class SourceClaimViewTests(unittest.TestCase):
     def test_explicit_source_view_does_not_bypass_forecast_effective_time_guard(self):
         self._claim("capacity", CapacityValue("wafers", CapacityBasis.ECONOMICALLY_USABLE,
                     "wafers/month", 100, 100, 100), series="capacity", confidence=0.8)
-        results = forecast_current_capacity(self.connection, as_of="2026-09-07",
-                    recorded_at=SECOND, forecast_start=date(2026, 10, 1),
-                    claims=source_claim_records(self.connection, recorded_at=SECOND))
-        self.assertEqual(0, len(results))
-        self.assertEqual("unknown_capacity_evidence_basis", results.exclusions[0].reason)
+        with self.assertRaisesRegex(ValueError, "complete database view at the requested cutoffs"):
+            forecast_current_capacity(self.connection, as_of="2026-09-07",
+                        recorded_at=SECOND, forecast_start=date(2026, 10, 1),
+                        claims=source_claim_records(self.connection, recorded_at=SECOND))
 
     def test_forecast_skips_unknown_capacity_confidence(self):
         self._claim("capacity", CapacityValue("wafers", CapacityBasis.ECONOMICALLY_USABLE,

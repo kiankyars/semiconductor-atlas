@@ -1,0 +1,44 @@
+{
+  "format": "semiconductor-atlas-nist-pmt-outcome-screen-v1",
+  "reviewed_at": "2026-09-09T04:39:51.720131Z",
+  "reviewed_by": "Codex main reviewer with separate local retained-narrative check by nist2026_semantic_review; original population decisions reused unchanged. Collaborative source review, not independent physical corroboration.",
+  "selection": "All 45 manufacturing groups and all 49 original cases from the frozen current NIST 2024 PMT review remain present, including 34 untimed groups and 15 timing associations. One separately scoped Bosch sample-production event is supplemental, never an additional original target. All original outcomes remain unknown in this incomplete acquired outcome set; original-population accounting is complete, later outcome review is not.",
+  "prior_exposure": "Outcome-exposed current-archive selection and later follow-up. Known successes, pauses and later guidance preceded this screen. Publication/modification dates are publisher assertions, not historical availability or Atlas issue times. No prior source review, original target or prospective forecast is rewritten. Capture permissions select a bounded later-source subset, not representative outcome coverage.",
+  "boundaries": {
+    "historical_availability_verified": false,
+    "global_census": false,
+    "independent_or_blind_evaluation": false,
+    "canonical_facility_identity": false,
+    "physical_capacity_claims": false,
+    "calibration": false,
+    "model_training": false,
+    "database_modified": false,
+    "prospective_study_modified": false,
+    "scheduled_runtime_modified": false,
+    "raw_redistribution": false
+  },
+  "population_review": {
+    "path": "review_plans/2026-09-09-nist-pmt-body-review-v1.json",
+    "bytes": 4099,
+    "sha256": "714ddc8a245efe714294241d0b5fc493d956168f6071cf9164b3f1c79b0a1aec"
+  },
+  "diagnostic_review": {
+    "path": "review_plans/2026-09-09-nist-pmt-outcome-diagnostic-review-v1.json",
+    "bytes": 128432,
+    "sha256": "91ba19f5ce700fed519389b90d2ef04b9036be32d2e15dd52b204347636a8154"
+  },
+  "later_capture_manifest": {
+    "path": "artifacts/2026-09-09-nist-2026-progress-capture-v1/manifest.json",
+    "bytes": 2473,
+    "sha256": "05a33260bde85bf62efe4c3e8c5bd81430ba3c9c62f140ad718785cc5064579a"
+  },
+  "supplemental_cases": [
+    {
+      "case_id": "nist2024-d17-bosch-roseville--sample-production-observed-by",
+      "project_id": "nist2024-d17-bosch-roseville",
+      "relation": "distinct_event_same_project",
+      "reason": "Both complete narratives explicitly identify Bosch Roseville SiC transformation. The later narrative reports sample production already commenced, with no wafer diameter or start lower bound. Preserve an upper bound through its July 13, 2026 source day for this distinct sample event. Do not equate it to first chips on 200mm wafers, commercial production, HVM or qualification. The original first-200mm-chip-in-2026 interval remains unchanged and unresolved; even a later diameter bridge would not supply interval containment from a one-sided bound alone."
+    }
+  ]
+}
+

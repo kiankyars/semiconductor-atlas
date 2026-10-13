@@ -1,0 +1,32 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "ats-two-project-timing-local-review-2026-09-09",
+  "reviewed_at": "2026-09-09T11:54:39Z",
+  "expires_at": "2026-09-10T11:54:39Z",
+  "decision": "approved_exact_urls_private_noncommercial_local_review_only",
+  "purpose": "Retain the original two-project production/HVM target table, an intervening revision report, and later project-specific outcome disclosures. Preserve both Kulim and Leoben, including unresolved outcomes. This is exposed retrospective source-statement review, not an Atlas forecast or model training.",
+  "rights_review": "Main reviewer inspected the complete retained legal notice. Its Copyright section expressly permits private non-commercial data use, with originals unchanged and notices respected; public/commercial use and reuse on other websites or networked computers require consent. Keep complete originals and private local analysis; no raw redistribution, public derivative, network service, commercial license, endorsement or training permission. Third-party market charts and photos are not selected evidence. Inspect source-specific notices before outcome admission.",
+  "robots_review": "Main reviewer inspected all 363 retained robots bytes. Both wildcard sections exclude search, REST and blackhole paths, not these four exact public document/release URLs. No alternate host, credentials, cookie session, redirect following or automated retry is permitted.",
+  "dependencies": [
+    {"path": "artifacts/2026-09-09-ats-robots-probe-v1/responses/ats-robots.body", "sha256": "6c1285590ff7d207c35d3220f6bff585cf304b3e410eac835d6412534ed2590e"},
+    {"path": "artifacts/2026-09-09-ats-robots-probe-v1/source_checks.json", "sha256": "b0852bd2d06c4252e3de1b8bdfee9113cf4a73c8d1cf6e2c7adde8cf66ddb1c7"},
+    {"path": "artifacts/2026-09-09-ats-rights-probe-v1/responses/ats-legal-notice.body", "sha256": "56c7c97032b8434fdfc96a2bfcad25f9c3e9181a2093ed74f779dae3a4092f90"},
+    {"path": "artifacts/2026-09-09-ats-rights-probe-v1/source_checks.json", "sha256": "f743ae69afd3d05c0b6a7f1e13a89c119d4ede11eadedf87891a7680c501a2ec"}
+  ],
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 40,
+  "max_response_bytes": 10000000,
+  "minimum_interval_seconds": 2,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "entries": [
+    {"id": "ats-q1-2024-25-guidance", "url": "https://ats.net/download/conference-call-q1-2024-25/?refresh=69dfc7396e5c71776273209&wpdmdl=35315", "purpose": "source_document", "company": "AT&S", "country_code": "AT", "source_family": "ats-issuer", "scope": "Original August 1, 2024 Leoben HTB3/R&D and Kulim production/HVM targets, complete two-project table and context; not complete publisher or announcement history.", "media_types": ["application/pdf"]},
+    {"id": "ats-october-2024-revision", "url": "https://ats.net/en/ir-news/ats-expects-revenue-at-prior-year-level/", "purpose": "source_document", "company": "AT&S", "country_code": "AT", "source_family": "ats-issuer", "scope": "Reported timing revision for both new plants; revision guidance is not an observed delay, cancellation or dated nonoccurrence.", "media_types": ["text/html"]},
+    {"id": "ats-fy-2024-25-outcomes", "url": "https://ats.net/en/download/conference-call-fy-2024-25/?refresh=6a2506b981c341780811449&wpdmdl=44390", "purpose": "source_document", "company": "AT&S", "country_code": "AT", "source_family": "ats-issuer", "scope": "May 2025 complete project outcome pages and notices. Distinguish dated Kulim HVM from Leoben production, R&D, opening and qualifications.", "media_types": ["application/pdf"]},
+    {"id": "ats-q1-2025-26-followup", "url": "https://ats.net/download/conference-call-q1-2025-26/?refresh=6985f15445a0a1770385748&wpdmdl=48483", "purpose": "source_document", "company": "AT&S", "country_code": "AT", "source_family": "ats-issuer", "scope": "July 2025 paired Kulim and Leoben follow-up. Preserve R&D/small-volume qualification and opening distinctions; no whole-campus capacity inferred.", "media_types": ["application/pdf"]}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "Retain only UMC robots policy after an initial read showed /upload/ disallowed. No financial report, terms PDF, attachment or other document is requested.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "umc-robots",
+    "url": "https://www.umc.com/robots.txt",
+    "purpose": "access_policy",
+    "company": "UMC",
+    "country_code": "TW",
+    "source_family": "umc-issuer",
+    "scope": "Robots policy only; the /upload/ financial report and terms paths remain excluded from automated acquisition.",
+    "media_types": ["text/plain"]
+  }
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Semiconductor Atlas · Evidence</title>
+  <link rel="stylesheet" href="viewer.css">
+  <script src="viewer.js" defer></script>
+</head>
+<body>
+<main>
+  <header><h1>Semiconductor Atlas <span> / Evidence</span></h1><p class="badge">Local · read only</p></header>
+  <p id="snapshot" class="muted">Loading the retained evidence snapshot…</p>
+  <form id="filters" aria-label="Evidence search">
+    <label>View<select id="view-mode"><option value="registry">Registry</option><option value="changes">New evidence</option></select></label>
+    <label class="query" id="query-label">Entity or publisher<input id="query" type="search" maxlength="200" placeholder="Ohio, Fab 21, Villach…"></label>
+    <label id="since-label" hidden>Learned after (exclusive)<input id="since" type="text" spellcheck="false" disabled placeholder="2026-09-08T19:00:00Z"></label>
+    <label>Entity kind<select id="kind"><option value="">All kinds</option></select></label>
+    <label>World date<input id="as-of" type="date" required></label>
+    <label>Known by (with timezone)<input id="recorded-at" type="text" required spellcheck="false" placeholder="2026-09-09T05:52:00Z"></label>
+    <button type="submit" id="search" disabled>Search</button>
+  </form>
+  <p class="hint" id="query-hint">Literal metadata search, not aliases or document full text. Similar names remain separate records.</p>
+  <p id="status" role="status" aria-live="polite"></p>
+  <div class="workspace">
+    <section class="results" aria-label="Evidence results">
+      <h2 id="list-title">Registry records</h2>
+      <p id="counts" class="muted"></p>
+      <ul id="list"></ul>
+      <nav aria-label="Result pages"><button id="previous" disabled>Previous</button><span id="page"></span><button id="next" disabled>Next</button></nav>
+    </section>
+    <section id="dossier" aria-label="Exact-entity evidence" tabindex="-1"><h2>Inspect an exact record</h2><p>Select a result to see recorded claims, source links and history.</p><p class="muted">An empty result is not evidence of zero capacity, closure or inactivity. This is a registry, not a global facility census.</p></section>
+  </div>
+  <footer>Source reports are not independently verified physical facts. No source bodies, external scripts, map tiles, forecasts or alert delivery. Publication requires separate rights review.</footer>
+</main>
+</body>
+</html>

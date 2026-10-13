@@ -20,8 +20,13 @@ from .source_checks import FORMAT as CHECK_FORMAT, _https, _read, validate_sourc
 
 
 PLAN_FORMAT = "semiconductor-atlas-curated-acquisition-plan-v1"
+PLAN_FORMAT_V2 = "semiconductor-atlas-curated-acquisition-plan-v2"
 RUN_FORMAT = "semiconductor-atlas-curated-acquisition-run-v2"
+RUN_FORMAT_V3 = "semiconductor-atlas-curated-acquisition-run-v3"
 RULE_VERSION = "fixed-url-review-candidates-v1"
+RULE_VERSION_V2 = "fixed-url-reviewed-policy-response-v2"
+MTI_POLICY_NORMALIZATION = "mti_terms_footer_date_v1"
+MTI_TERMS_URL = "https://www.mti.gov.sg/terms-of-use/"
 
 
 def _now() -> str:
@@ -58,12 +63,123 @@ class _Links(HTMLParser):
             self.links.extend(value for key, value in attrs if key == "href" and value is not None)
 
 
+class PolicyNormalizationError(ValueError):
+    """The response does not fit an explicitly reviewed normalization scope."""
+
+
+class _MtiFooterDates(HTMLParser):
+    _void = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+    _footer = "bg-base-canvas-inverse text-base-content-inverse"
+    _paragraph = "prose-label-md-regular text-base-content-inverse-subtle"
+    _branches = {"flex flex-col gap-8 px-6 py-11 md:px-10 lg:hidden lg:py-16": "mobile",
+                 "hidden px-10 py-14 lg:block": "desktop"}
+    _months = "January February March April May June July August September October November December".split()
+
+    def __init__(self, text: str) -> None:
+        super().__init__(convert_charrefs=True)
+        self.text = text
+        self.lines = [0, *(match.end() for match in re.finditer("\n", text))]
+        self.stack: list[tuple[str, dict]] = []
+        self.html_count = self.body_count = 0
+        self.main_count = self.footer_count = 0
+        self.main_closed = False
+        self.candidate: tuple[int, str] | None = None
+        self.dates: dict[str, tuple[int, int, str]] = {}
+
+    def _position(self) -> int:
+        line, column = self.getpos()
+        return self.lines[line - 1] + column
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = dict(attrs)
+        if len(attributes) != len(attrs) or self.candidate is not None:
+            raise PolicyNormalizationError("ambiguous MTI attributes or nested footer-date markup")
+        parent = self.stack[-1][0] if self.stack else None
+        if tag == "html":
+            self.html_count += 1
+            if parent is not None or self.html_count != 1:
+                raise PolicyNormalizationError("ambiguous MTI HTML root")
+        if tag == "body":
+            self.body_count += 1
+            if parent != "html" or self.body_count != 1:
+                raise PolicyNormalizationError("ambiguous MTI policy body")
+        if tag == "main":
+            self.main_count += 1
+            if parent != "body" or self.main_count != 1 or self.footer_count or attributes.get("id") != "main-content":
+                raise PolicyNormalizationError("MTI main-content scope changed")
+        if tag == "footer":
+            self.footer_count += 1
+            if parent != "body" or not self.main_closed or self.footer_count != 1 or attributes != {"class": self._footer}:
+                raise PolicyNormalizationError("MTI footer scope changed")
+        if tag == "p" and attributes.get("class") == self._paragraph and any(name == "footer" for name, _ in self.stack):
+            footer = next(index for index, (name, _) in enumerate(self.stack) if name == "footer")
+            branch = self.stack[footer + 1:]
+            if (not branch or any(name != "div" for name, _ in branch)
+                    or branch[0][1].get("class") not in self._branches
+                    or attributes != {"class": self._paragraph}):
+                raise PolicyNormalizationError("MTI footer-date branch changed")
+            name = self._branches[branch[0][1]["class"]]
+            if name in self.dates:
+                raise PolicyNormalizationError("duplicate MTI footer date")
+            self.candidate = self._position() + len(self.get_starttag_text()), name
+        if tag not in self._void:
+            self.stack.append((tag, attributes))
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        self.handle_starttag(tag, attrs)
+        if tag not in self._void:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag: str) -> None:
+        if not self.stack or self.stack[-1][0] != tag:
+            raise PolicyNormalizationError("malformed MTI policy nesting")
+        if self.candidate is not None:
+            if tag != "p":
+                raise PolicyNormalizationError("unclosed MTI footer-date paragraph")
+            start, branch = self.candidate
+            inner = self.text[start:self._position()]
+            visible = _html_visible_text(inner)
+            match = re.fullmatch(r"© [0-9]{4} Government of Singapore, last updated ([1-9][0-9]? ([A-Za-z]+) ([0-9]{4}))", visible)
+            if match is None or match[2] not in self._months:
+                raise PolicyNormalizationError("MTI footer-date text changed")
+            date = match[1]
+            try:
+                datetime(int(match[3]), self._months.index(match[2]) + 1, int(date.split()[0]))
+            except ValueError as error:
+                raise PolicyNormalizationError("invalid MTI footer calendar date") from error
+            literal = re.search(re.escape(date) + r"\s*\Z", inner)
+            if literal is None:
+                raise PolicyNormalizationError("MTI footer date is not a literal text suffix")
+            self.dates[branch] = start + literal.start(), start + literal.start() + len(date), date
+            self.candidate = None
+        if tag == "main":
+            self.main_closed = True
+        self.stack.pop()
+
+    def normalized_html(self) -> str:
+        self.feed(self.text)
+        self.close()
+        if (self.stack or self.candidate is not None or self.html_count != 1 or self.body_count != 1
+                or self.main_count != 1 or self.footer_count != 1
+                or set(self.dates) != {"mobile", "desktop"}
+                or len({date for _, _, date in self.dates.values()}) != 1):
+            raise PolicyNormalizationError("missing or inconsistent MTI footer dates")
+        result = self.text
+        for start, end, _ in sorted(self.dates.values(), reverse=True):
+            result = result[:start] + "[reviewed-site-footer-date]" + result[end:]
+        return result
+
+
 def normalized_bytes(raw: bytes, normalization: str) -> bytes:
+    if normalization == "reviewed_robots_404_body_v1":
+        return raw
     text = raw.decode("utf-8", errors="strict")
     if normalization == "robots_text_v1":
         return (text.replace("\r\n", "\n").replace("\r", "\n").rstrip("\n") + "\n").encode("utf-8")
     if normalization == "html_visible_text_v1":
         return _html_visible_text(text).encode("utf-8")
+    if normalization == MTI_POLICY_NORMALIZATION:
+        return normalized_bytes(_MtiFooterDates(text).normalized_html().encode("utf-8"), "html_policy_v1")
     if normalization in {"html_policy_v1", "html_policy_v2"}:
         parser = _Links()
         parser.feed(text)
@@ -94,7 +210,7 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
         "expires_at", "decision", "user_agent", "minimum_interval_seconds", "timeout_seconds",
         "max_response_bytes", "policies", "documents", "notes", "review_record",
     })
-    if plan["format"] != PLAN_FORMAT or plan["decision"] != "approved_exact_urls":
+    if plan["format"] not in {PLAN_FORMAT, PLAN_FORMAT_V2} or plan["decision"] != "approved_exact_urls":
         raise ValueError("plan must approve only exact reviewed URLs")
     for key in ("plan_id", "review_scope_id", "checked_facility_key", "notes", "user_agent"):
         _text(plan[key])
@@ -123,8 +239,16 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
                 raise ValueError("invalid entry id")
             url = _https(entry["url"], "plan URL")
             parsed = urlsplit(url)
-            if parsed.query or parsed.fragment or parsed.port not in {None, 443} or parsed.hostname in {"localhost", "localhost.localdomain"}:
+            if parsed.fragment or parsed.port not in {None, 443} or parsed.hostname in {"localhost", "localhost.localdomain"}:
                 raise ValueError("plan URL must be a canonical public document URL")
+            if parsed.query:
+                pairs = parsed.query.split("&")
+                if (plan["format"] != PLAN_FORMAT_V2
+                        or any(not re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]*=[A-Za-z0-9_-]+", pair) for pair in pairs)
+                        or len({pair.split("=", 1)[0] for pair in pairs}) != len(pairs)):
+                    raise ValueError("query URLs require v2 exact, unique identifier parameters")
+            if any(character.isspace() or ord(character) < 32 for character in url):
+                raise ValueError("plan URL cannot contain whitespace or controls")
             if entry["id"] in ids or url in urls:
                 raise ValueError("duplicate plan entry id or URL")
             ids.add(entry["id"]); urls.add(url)
@@ -138,11 +262,16 @@ def load_plan(path: str | Path) -> tuple[dict[str, Any], bytes]:
                 if entry["purpose"] not in {"access_policy", "rights_policy"}:
                     raise ValueError("invalid policy purpose")
                 expected_normalizations = {"robots_text_v1"} if entry["purpose"] == "access_policy" else {"html_policy_v1", "html_policy_v2"}
+                if plan["format"] == PLAN_FORMAT_V2 and entry["purpose"] == "access_policy":
+                    expected_normalizations.add("reviewed_robots_404_body_v1")
+                if (plan["format"] == PLAN_FORMAT_V2 and entry["purpose"] == "rights_policy"
+                        and entry["url"] == MTI_TERMS_URL and entry["media_types"] == ["text/html"]):
+                    expected_normalizations.add(MTI_POLICY_NORMALIZATION)
                 if entry["normalization"] not in expected_normalizations:
                     raise ValueError("policy normalization does not match purpose")
                 if not isinstance(entry["normalized_sha256"], str) or not re.fullmatch(r"[0-9a-f]{64}", entry["normalized_sha256"]):
                     raise ValueError("invalid policy hash")
-                if entry["purpose"] == "access_policy" and parsed.path != "/robots.txt":
+                if entry["purpose"] == "access_policy" and (parsed.path != "/robots.txt" or parsed.query):
                     raise ValueError("access policy must be origin robots.txt")
             else:
                 if entry["purpose"] != "source_document":
@@ -230,7 +359,17 @@ def _attempt(entry: dict, root: Path, plan: dict, transport: Callable) -> dict:
 
 
 def _content_error(entry: dict, attempt: dict, root: Path, plan: dict) -> str | None:
-    if attempt["outcome"] != "succeeded":
+    reviewed_missing = (plan["format"] == PLAN_FORMAT_V2
+                        and entry["purpose"] == "access_policy"
+                        and entry.get("normalization") == "reviewed_robots_404_body_v1")
+    if reviewed_missing:
+        if (type(attempt["http_status"]) is not int or attempt["http_status"] != 404
+                or type(attempt["curl_exit_code"]) is not int or attempt["curl_exit_code"] != 0
+                or attempt["outcome"] != "failed"
+                or type(attempt.get("tls_verification_result")) is not int
+                or attempt["tls_verification_result"] != 0):
+            return "reviewed_robots_404_response_mismatch"
+    elif attempt["outcome"] != "succeeded":
         return "failed_check"
     if attempt["final_url"] != entry["url"] or attempt["redirect_count"] != 0:
         return "unapproved_redirect"
@@ -308,7 +447,16 @@ def derive_results(plan: dict, ledger: dict, root: Path, prior_ledger: dict | No
                     reason = "policy_changed_requires_review"
             except UnicodeError:
                 reason = "unsupported_encoding"
-        policy_results.append({"id": policy["id"], "accepted": reason is None, "reason": reason, "normalized_sha256": digest})
+            except PolicyNormalizationError:
+                reason = "policy_normalization_scope_changed_requires_review"
+        result = {"id": policy["id"], "accepted": reason is None, "reason": reason, "normalized_sha256": digest}
+        if plan["format"] == PLAN_FORMAT_V2:
+            result["http_status"] = attempt["http_status"]
+            result["policy_state"] = (
+                "requires_review" if reason else
+                "reviewed_missing_robots_404" if policy["normalization"] == "reviewed_robots_404_body_v1"
+                else "reviewed_policy_body_matched")
+        policy_results.append(result)
     accepted = {row["id"] for row in policy_results if row["accepted"]}
     previous = _previous_documents(plan, prior_ledger, root)
     documents = []
@@ -361,7 +509,8 @@ def derive_results(plan: dict, ledger: dict, root: Path, prior_ledger: dict | No
                     result["status"] = "unsupported_encoding"
         documents.append(result)
     return {
-        "format": "semiconductor-atlas-curated-acquisition-results-v1", "rule_version": RULE_VERSION,
+        "format": "semiconductor-atlas-curated-acquisition-results-v1",
+        "rule_version": RULE_VERSION_V2 if plan["format"] == PLAN_FORMAT_V2 else RULE_VERSION,
         "policies": policy_results, "documents": documents,
         "review_required_count": sum(row["review_required"] for row in documents),
         "attention_required": any(not row["accepted"] for row in policy_results) or any(row["status"] not in {"unchanged", "raw_bytes_only"} for row in documents),
@@ -399,7 +548,9 @@ def _validate_contents(root: Path) -> dict:
         "format", "plan_sha256", "started_at", "finished_at", "prior_ledger_sha256",
         "capture_code_sha256", "source_checks_code_sha256", "raw_redistribution", "claim_acceptance",
     })
-    if run.get("format") not in {RUN_FORMAT, "semiconductor-atlas-curated-acquisition-run-v1"} or run.get("plan_sha256") != _sha(plan_raw):
+    allowed_runs = ({RUN_FORMAT_V3} if plan["format"] == PLAN_FORMAT_V2
+                    else {RUN_FORMAT, "semiconductor-atlas-curated-acquisition-run-v1"})
+    if run.get("format") not in allowed_runs or run.get("plan_sha256") != _sha(plan_raw):
         raise ValueError("invalid acquisition run or plan binding")
     if run["raw_redistribution"] is not False or run["claim_acceptance"] is not False:
         raise ValueError("capture cannot grant redistribution or accept claims")
@@ -435,7 +586,7 @@ def _validate_contents(root: Path) -> dict:
         raise ValueError("acquisition results do not replay exactly")
     expected_paths = {"plan.json", "review.json", "run.json", "source_checks.json", "results.json"}
     history = _last_successful_checks(plan, ledger, root, prior)
-    if history and run["format"] == RUN_FORMAT:
+    if history and run["format"] in {RUN_FORMAT, RUN_FORMAT_V3}:
         expected_paths.add("last_successful_checks.json")
         if _read(root / "last_successful_checks.json") != _pretty_bytes(history):
             raise ValueError("last successful checks do not replay exactly")
@@ -514,7 +665,7 @@ def capture_sources(
                 digest = _sha(normalized_bytes(_read(root / attempt["path"]), entry["normalization"]))
                 if digest == entry["normalized_sha256"]:
                     accepted.add(entry["id"])
-            except UnicodeError:
+            except (UnicodeError, PolicyNormalizationError):
                 pass
     ledger = {
         "format": CHECK_FORMAT, "review_scope_id": plan["review_scope_id"],
@@ -528,7 +679,8 @@ def capture_sources(
     if history:
         _write(root / "last_successful_checks.json", _pretty_bytes(history))
     _write(root / "run.json", _pretty_bytes({
-        "format": RUN_FORMAT, "plan_sha256": _sha(raw), "started_at": started, "finished_at": _now(),
+        "format": RUN_FORMAT_V3 if plan["format"] == PLAN_FORMAT_V2 else RUN_FORMAT,
+        "plan_sha256": _sha(raw), "started_at": started, "finished_at": _now(),
         "prior_ledger_sha256": _sha(prior_raw) if prior_raw is not None else None,
         "capture_code_sha256": _sha(Path(__file__).read_bytes()),
         "source_checks_code_sha256": _sha(Path(__file__).with_name("source_checks.py").read_bytes()),

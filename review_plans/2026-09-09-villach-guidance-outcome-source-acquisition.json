@@ -1,0 +1,48 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "villach-new-fab-guidance-outcome-local-review-2026-09-09",
+  "reviewed_at": "2026-09-09T00:13:02Z",
+  "expires_at": "2026-09-10T00:13:02Z",
+  "decision": "approved_exact_urls_local_informational_noncommercial_review_only",
+  "purpose": "Retain dated issuer guidance and later issuer-reported realization for a separately labeled exposed retrospective source-statement diagnostic. This is not historical Atlas forecasting, blind evaluation, independent physical measurement or admission into the prospective study.",
+  "rights_review": "The main reviewer reread all thirteen sections of the retained Infineon Terms of Use. Section 3.2 permits informational non-commercial or personal downloading with materials unchanged, notices retained and attribution to Infineon. Both exact URLs are on the reviewed www.infineon.com origin. Retain originals locally; no model training, public source redistribution, commercial-use approval, endorsement or logo-use permission follows.",
+  "robots_review": "The complete retained wildcard policy was reread. Neither exact URL matches an exclusion; the PDF is explicitly under the public assets path, not restricted assets. No alternate route after denial, automated redirects, credentials, cookies or retries are authorized.",
+  "dependencies": [
+    {"path": "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body", "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"},
+    {"path": "artifacts/2026-09-08-infineon-policy-probe-v1/source_checks.json", "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"},
+    {"path": "artifacts/2026-09-08-infineon-terms-probe-v1/responses/infineon-terms.body", "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"},
+    {"path": "artifacts/2026-09-08-infineon-terms-probe-v1/source_checks.json", "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"}
+  ],
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 40,
+  "max_response_bytes": 10000000,
+  "minimum_interval_seconds": 2,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "entries": [
+    {
+      "id": "infineon-villach-q1-2021-guidance",
+      "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2021/infxx202101-035e.pdf",
+      "purpose": "source_document",
+      "company": "Infineon",
+      "country_code": "AT",
+      "source_family": "infineon-issuer",
+      "scope": "Issuer Q1 FY2021 release identified by official web search. Verify visible document date, new Villach fab production-start target, fiscal-quarter convention and all relevant page context. A printed date does not prove exact historical byte availability.",
+      "media_types": ["application/pdf"]
+    },
+    {
+      "id": "infineon-villach-fy2021-outcome",
+      "url": "https://www.infineon.com/regional/austria/press-release/2021/fiscal-year-20-21",
+      "purpose": "source_document",
+      "company": "Infineon",
+      "country_code": "AT",
+      "source_family": "infineon-issuer",
+      "scope": "Issuer Austria FY2021 release. Verify December 7 dateline and new 300-mm fab August 2021 production-start statement, separately from September opening, subsequent ramp and whole-site output.",
+      "media_types": ["text/html"]
+    }
+  ]
+}

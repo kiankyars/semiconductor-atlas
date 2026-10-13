@@ -1,0 +1,103 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "nist-current-archive-2024-denominator-2026-09-09",
+  "reviewed_at": "2026-09-09T02:48:06Z",
+  "expires_at": "2026-09-10T02:48:06Z",
+  "decision": "approved_exact_urls_local_discovery_only",
+  "purpose": "Retain all four currently displayed CHIPS-filtered NIST archive pages before project/outcome adjudication. Preserve all 89 displayed rows and screen all 65 dated 2024 rows; these are index records, not project claims or a complete historical announcement census.",
+  "rights_review": "Main reviewer read the complete current NIST Copyrights & Disclaimers page and the exact retained prior policy. Public information may be copied except marked copyrighted materials and product-specific exceptions. Keep attribution and original markup locally. No linked attachments, images, issuer-site retrieval, model training, public raw redistribution or endorsements are approved.",
+  "robots_review": "Main reviewer read all current robots.txt directives. The exact /news-events/news-updates/archive/search path does not begin with excluded /search, /fusion-search or /site-search. The exact o%5B0%5D selector is not an excluded f%5B facet. Empty combine/tag and page=1,2,3 are fixed, not a parameter search. September 7 archive exclusion was a narrower internal collector scope, not a publisher denial; that review and all existing collectors remain unchanged.",
+  "prior_policy_capture": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0",
+  "discovery_link": "https://www.nist.gov/chips/chips-news-releases",
+  "selection_rule": "Retain every index record in displayed positions 1-89. Calendar-2024 means the index's explicit date starts 2024-, not footer Updated or document URL alone. Include all 65 such records before screening; title-based PMT candidates are a review queue, not a final cohort. Do not drop undated/malformed/conflicting records silently.",
+  "prior_exposure": "Known TSMC, Intel, Amkor, Polar and other project outcomes predate this selection. Four pages were browsed before retention; anticipated counts are 89 total and 65 in 2024. Freezing now does not undo exposure or establish historical availability. Do not use a current award portfolio as an announcement-time denominator.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 30,
+  "max_response_bytes": 2000000,
+  "minimum_interval_seconds": 2,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "linked_document_requests": false,
+  "entries": [
+    {
+      "id": "nist-robots",
+      "url": "https://www.nist.gov/robots.txt",
+      "purpose": "access_policy",
+      "company": "NIST CHIPS",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "scope": "Recheck complete normalized robots policy before any index request.",
+      "media_types": [
+        "text/plain"
+      ],
+      "normalization": "robots_text_v1",
+      "normalized_sha256": "0fed8806709b6ff2716921723b5077d1c19d152f760db983af60988cae0031dd"
+    },
+    {
+      "id": "nist-copyright",
+      "url": "https://www.nist.gov/copyrights-disclaimers",
+      "purpose": "rights_policy",
+      "company": "NIST CHIPS",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "scope": "Recheck complete normalized copyright/disclaimer policy before any index request.",
+      "media_types": [
+        "text/html"
+      ],
+      "normalization": "html_policy_v2",
+      "normalized_sha256": "1130ffcd18cbe4ab88cf0eb2b079e046d9576efb57a5cfbc75cc23472fa48c46"
+    },
+    {
+      "id": "nist-chips-archive-0",
+      "url": "https://www.nist.gov/news-events/news-updates/archive/search?combine=&o%5B0%5D=2810151&tag=",
+      "purpose": "source_document",
+      "company": "NIST CHIPS",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "scope": "Current filtered archive page 0; verify displayed range, complete article records and pagination. No linked article is approved by this entry.",
+      "media_types": [
+        "text/html"
+      ]
+    },
+    {
+      "id": "nist-chips-archive-1",
+      "url": "https://www.nist.gov/news-events/news-updates/archive/search?combine=&o%5B0%5D=2810151&tag=&page=1",
+      "purpose": "source_document",
+      "company": "NIST CHIPS",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "scope": "Current filtered archive page 1; verify displayed range, complete article records and pagination. No linked article is approved by this entry.",
+      "media_types": [
+        "text/html"
+      ]
+    },
+    {
+      "id": "nist-chips-archive-2",
+      "url": "https://www.nist.gov/news-events/news-updates/archive/search?combine=&o%5B0%5D=2810151&tag=&page=2",
+      "purpose": "source_document",
+      "company": "NIST CHIPS",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "scope": "Current filtered archive page 2; verify displayed range, complete article records and pagination. No linked article is approved by this entry.",
+      "media_types": [
+        "text/html"
+      ]
+    },
+    {
+      "id": "nist-chips-archive-3",
+      "url": "https://www.nist.gov/news-events/news-updates/archive/search?combine=&o%5B0%5D=2810151&tag=&page=3",
+      "purpose": "source_document",
+      "company": "NIST CHIPS",
+      "country_code": "US",
+      "source_family": "nist-commerce-government",
+      "scope": "Current filtered archive page 3; verify displayed range, complete article records and pagination. No linked article is approved by this entry.",
+      "media_types": [
+        "text/html"
+      ]
+    }
+  ]
+}

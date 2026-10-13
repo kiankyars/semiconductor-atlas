@@ -81,7 +81,7 @@ class ProjectTargetReviewTests(unittest.TestCase):
             "source_review": self.binding(self.text_review_path), "rationale": "Reviewed revision to source-stated period only", "boundaries": copy.deepcopy(targets.BOUNDARIES)}
         self.review_path = self.root / "claim-review.json"
         self.write_review()
-        self.connection, _ = database.initialize(self.root / "core.sqlite")
+        self.connection, _ = database.initialize(self.root / "core.sqlite", target_version=5)
         self.addCleanup(self.connection.close)
 
     def now(self):
@@ -141,6 +141,16 @@ class ProjectTargetReviewTests(unittest.TestCase):
         self.assertTrue(replay["replayed"])
         self.assertEqual(first["admitted_at"], replay["admitted_at"])
         self.assertEqual(changes, self.connection.total_changes)
+
+    def test_schema11_replay_uses_matching_value_shape_without_target_writes(self):
+        database.apply_migrations(self.connection, target_version=11)
+        first = self.accept()
+        before = self.connection.serialize()
+        self.assertTrue(self.accept()['replayed'])
+        self.assertEqual(before, self.connection.serialize())
+        self.assertEqual(11, database.schema_version(self.connection))
+        self.assertTrue(all(r[0] is None for r in self.connection.execute('SELECT date_relation FROM milestone_values')))
+        self.assertEqual(2, len(first['claim_ids']))
 
     def test_old_access_approval_cannot_accept_claims(self):
         self.review["decision"] = "approve_exact_nist_documents_for_source_text_review_only"

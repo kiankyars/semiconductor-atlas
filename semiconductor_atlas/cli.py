@@ -23,7 +23,7 @@ from .analytics import (
     forecast_jsonl,
     forecast_summary,
 )
-from .database import connect, initialize, schema_version
+from .database import connect, initialize, register_clock_functions, schema_version
 from .eea_industrial_review import (
     read_eea_industrial_review_file,
     read_eea_industrial_review_queue_file,
@@ -106,6 +106,39 @@ def _result_counts(value: object) -> dict[str, Any]:
         key: len(item) if isinstance(item, tuple) else item
         for key, item in result.items()
     }
+
+
+def _evidence_dossier(args: argparse.Namespace) -> dict:
+    from .evidence_dossier import write_dossier
+
+    return write_dossier(args.database, args.output, subject_entity_id=args.entity_id,
+        as_of=args.as_of, recorded_at=args.recorded_at, output_format=args.format)
+
+
+def _evidence_search(args: argparse.Namespace) -> dict:
+    from .evidence_dossier import readonly_database
+    from .evidence_search import search_evidence
+
+    with readonly_database(args.database) as connection:
+        return search_evidence(connection, as_of=args.as_of, recorded_at=args.recorded_at,
+            query=args.query, kind=args.kind, limit=args.limit, offset=args.offset)
+
+
+def _evidence_viewer(args: argparse.Namespace) -> dict:
+    from .evidence_viewer import serve_viewer
+
+    return serve_viewer(args.database, as_of=args.as_of, recorded_at=args.recorded_at,
+                        port=args.port)
+
+
+def _evidence_changes(args: argparse.Namespace) -> dict:
+    from .evidence_changes import evidence_changes
+    from .evidence_dossier import readonly_database
+
+    with readonly_database(args.database) as connection:
+        return evidence_changes(connection, since=args.since, recorded_at=args.recorded_at,
+            as_of=args.as_of, kind=args.kind, subject_entity_id=args.entity_id,
+            limit=args.limit, offset=args.offset, population_sha256=args.population_sha256)
 
 
 def _assert_imported_hashes(connection, snapshot, nist, osm) -> None:
@@ -652,6 +685,7 @@ def _eea_scope_connection(path: Path, *, write: bool = False):
         raise ValueError("EEA scope requires an existing regular working database")
     connection = sqlite3.connect(path.absolute().as_uri() + ("?mode=rw" if write else "?mode=ro"), uri=True)
     connection.row_factory = sqlite3.Row
+    register_clock_functions(connection)
     connection.execute("PRAGMA foreign_keys = ON")
     connection.execute("PRAGMA busy_timeout = 5000")
     return connection
@@ -920,7 +954,45 @@ def _summary(args: argparse.Namespace) -> dict[str, object]:
         connection.close()
 
 
+def _bounded_scope_bytes(path: Path) -> bytes:
+    with path.open("rb") as stream:
+        raw = stream.read(20_000_001)
+    if len(raw) > 20_000_000:
+        raise ValueError("forecast scope input exceeds the 20 MB bound")
+    return raw
+
+
+def _review_forecast_scope(args: argparse.Namespace) -> dict[str, object]:
+    from .forecast_scope import canonical_bytes, create_scope_review
+    from .milestone_benchmark import write_new_bytes
+    from .evidence_dossier import readonly_database
+
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError("duplicate scope decision JSON key")
+            result[key] = value
+        return result
+
+    decisions = json.loads(_bounded_scope_bytes(args.decisions), object_pairs_hook=unique)
+    database_path = args.database.absolute()
+    resolved_database = database_path.resolve()
+    if args.output.resolve() in {Path(str(resolved_database) + suffix) for suffix in ("", "-wal", "-shm", "-journal")}:
+        raise ValueError("scope output cannot be the database or a SQLite sidecar")
+    with readonly_database(database_path) as connection:
+        review = create_scope_review(connection, as_of=args.as_of,
+            recorded_at=args.recorded_at, reviewer=args.reviewer, decisions=decisions)
+        raw = canonical_bytes(review)
+        write_new_bytes(args.output, raw)
+        return {"path": str(args.output.absolute()), "bytes": len(raw),
+                "sha256": hashlib.sha256(raw).hexdigest(), "reviewed_at": review["reviewed_at"]}
+
+
 def _release(args: argparse.Namespace) -> dict[str, object]:
+    if (args.forecast_scope_review is None) != (args.forecast_scope_review_sha256 is None):
+        raise ValueError("forecast scope review and trusted SHA-256 must be supplied together")
+    scope_raw = _bounded_scope_bytes(args.forecast_scope_review) if args.forecast_scope_review is not None else None
     connection = _existing_database(args.database)
     try:
         with tempfile.TemporaryDirectory(
@@ -941,6 +1013,8 @@ def _release(args: argparse.Namespace) -> dict[str, object]:
                     recorded_at=args.recorded_at,
                     forecast_start=date.fromisoformat(args.forecast_start),
                     claims=claims,
+                    scope_review=scope_raw,
+                    scope_review_sha256=args.forecast_scope_review_sha256,
                 )
                 alerts = detect_revision_alerts(
                     snapshot_connection,
@@ -956,6 +1030,8 @@ def _release(args: argparse.Namespace) -> dict[str, object]:
                     "experimental_forecasts.csv": forecast_csv(results),
                     "experimental_forecasts.jsonl": forecast_jsonl(results),
                 }
+                if scope_raw is not None:
+                    extras["experimental_capacity_scope_review.json"] = scope_raw
                 manifest = write_release(
                     snapshot_connection,
                     args.output,
@@ -1226,6 +1302,56 @@ def build_parser() -> argparse.ArgumentParser:
     summary_parser.add_argument("--recorded-at", required=True, type=_timestamp)
     summary_parser.set_defaults(handler=_summary)
 
+    dossier = subparsers.add_parser(
+        "evidence-dossier", help="write a read-only exact-entity evidence dossier, not a physical-state certification"
+    )
+    dossier.add_argument("--database", required=True, type=Path)
+    dossier.add_argument("--entity-id", required=True)
+    dossier.add_argument("--as-of", required=True, type=_date)
+    dossier.add_argument("--recorded-at", required=True, type=_timestamp)
+    dossier.add_argument("--output", required=True, type=Path)
+    dossier.add_argument("--format", choices=("markdown", "json"), default="markdown")
+    dossier.set_defaults(handler=_evidence_dossier)
+
+    search = subparsers.add_parser("evidence-search", help="find exact registry entries by literal entity or direct-source metadata")
+    search.add_argument("--database", required=True, type=Path)
+    search.add_argument("--as-of", required=True, type=_date)
+    search.add_argument("--recorded-at", required=True, type=_timestamp)
+    search.add_argument("--query", help="literal metadata substring; omit to browse")
+    search.add_argument("--kind", help="exact entity kind, such as project or facility")
+    search.add_argument("--limit", type=int, default=50)
+    search.add_argument("--offset", type=int, default=0)
+    search.set_defaults(handler=_evidence_search)
+
+    changes = subparsers.add_parser("evidence-changes", help="inspect stored claim admissions and supersessions, not manufacturing events")
+    changes.add_argument("--database", required=True, type=Path)
+    changes.add_argument("--since", required=True, type=_timestamp, help="exclusive knowledge-window start")
+    changes.add_argument("--recorded-at", required=True, type=_timestamp, help="inclusive knowledge-window end")
+    changes.add_argument("--as-of", required=True, type=_date, help="physical date for dossier drill-through only")
+    changes.add_argument("--kind", help="exact entity kind")
+    changes.add_argument("--entity-id", help="exact subject ID; no alias or related-entity expansion")
+    changes.add_argument("--limit", type=int, default=50)
+    changes.add_argument("--offset", type=int, default=0)
+    changes.add_argument("--population-sha256", help="first-page inventory hash; required for subsequent pages")
+    changes.set_defaults(handler=_evidence_changes)
+
+    viewer = subparsers.add_parser("evidence-viewer", help="inspect evidence in a read-only loopback browser session")
+    viewer.add_argument("--database", required=True, type=Path)
+    viewer.add_argument("--as-of", required=True, type=_date)
+    viewer.add_argument("--recorded-at", required=True, type=_timestamp)
+    viewer.add_argument("--port", type=int, default=0, help="loopback port; default chooses an unused port")
+    viewer.set_defaults(handler=_evidence_viewer)
+
+    scope_review = subparsers.add_parser("review-forecast-scope",
+        help="retain explicit capacity/event/project/phase decisions with current local review clock")
+    scope_review.add_argument("--database", required=True, type=Path)
+    scope_review.add_argument("--decisions", required=True, type=Path)
+    scope_review.add_argument("--reviewer", required=True)
+    scope_review.add_argument("--as-of", required=True, type=_date)
+    scope_review.add_argument("--recorded-at", required=True, type=_timestamp)
+    scope_review.add_argument("--output", required=True, type=Path)
+    scope_review.set_defaults(handler=_review_forecast_scope)
+
     release = subparsers.add_parser(
         "release",
         help="write a deterministic evidence, map, alert, and forecast bundle",
@@ -1235,6 +1361,8 @@ def build_parser() -> argparse.ArgumentParser:
     release.add_argument("--as-of", required=True, type=_date)
     release.add_argument("--recorded-at", required=True, type=_timestamp)
     release.add_argument("--forecast-start", required=True, type=_date)
+    release.add_argument("--forecast-scope-review", type=Path)
+    release.add_argument("--forecast-scope-review-sha256")
     release.set_defaults(handler=_release)
     return parser
 

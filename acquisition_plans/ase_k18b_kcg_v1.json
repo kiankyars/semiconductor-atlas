@@ -1,0 +1,58 @@
+{
+  "format": "semiconductor-atlas-curated-acquisition-plan-v2",
+  "plan_id": "ase-k18b-kcg-exact-document-v1",
+  "review_scope_id": "ase-k18b-kcg-2026-09-08",
+  "checked_facility_key": "ase:kaohsiung-k18b-source-native-project",
+  "reviewed_at": "2026-09-08T20:56:44Z",
+  "expires_at": "2026-10-08T20:56:44Z",
+  "decision": "approved_exact_urls",
+  "user_agent": "SemiconductorAtlas/0.1 (+https://github.com/kiankyars/semiconductor-atlas)",
+  "minimum_interval_seconds": 1,
+  "timeout_seconds": 25,
+  "max_response_bytes": 2000000,
+  "review_record": {
+    "path": "review_plans/2026-09-08-ase-k18b-kcg-source-review.json",
+    "sha256": "7e1a8a71e9a863b0249b832ffba2cece482a1e032f7605400a4ab0e782c7067c"
+  },
+  "notes": "Exactly one public government-authored K18B article for local verification. No publisher-granted permission or open licence is claimed; public output is operational metadata and original reviewer analysis only. The reviewed direct robots 404 remains a failed HTTP fetch but can satisfy the separately versioned missing-policy gate. Every request requires exact same-origin policy response matches. All identifier query parameters are literal parts of the approved URLs, with no search, pagination, rewriting, redirects, retries, cookies or linked resources. No raw redistribution, model training, claim acceptance, canonical assignment, baseline change, scheduled configuration change or registered-study change. K18B is not the complete Kaohsiung campus, K28 or Nanzih Third Park. Thirty-day internal expiry, without automatic renewal.",
+  "policies": [
+    {
+      "id": "kcg-invest-robots",
+      "url": "https://invest.kcg.gov.tw/robots.txt",
+      "purpose": "access_policy",
+      "company": "ASE",
+      "country_code": "TW",
+      "source_family": "municipal-government-news",
+      "scope": "One exact direct 404 response, successful transport and verified TLS; full raw error body reviewed as absent robots, not an Allow rule or content licence.",
+      "media_types": ["text/html"],
+      "normalization": "reviewed_robots_404_body_v1",
+      "normalized_sha256": "eab09f82e87641fb3e8c72b6c9e061f11684c7d8345925aad1fd7de4c05f87ab"
+    },
+    {
+      "id": "kcg-invest-security",
+      "url": "https://invest.kcg.gov.tw/cp.aspx?n=1C95EBE0D0D6C22C",
+      "purpose": "rights_policy",
+      "company": "ASE",
+      "country_code": "TW",
+      "source_family": "municipal-government-news",
+      "scope": "Same-origin security policy and copyright footer under an explicit internal narrow local-research decision, not a blanket content or automation licence.",
+      "media_types": ["text/html"],
+      "normalization": "html_policy_v1",
+      "normalized_sha256": "b08df3cf9afb35095e5827325e4b5ae3cd1fa0363eacaf7d3c45d6995ec2f429"
+    }
+  ],
+  "documents": [
+    {
+      "id": "kcg-ase-k18b-groundbreaking",
+      "url": "https://invest.kcg.gov.tw/News_Content.aspx?n=8CE973AC5F6EE514&s=BA84DF962F234D8E&sms=D7173346CB507235",
+      "purpose": "source_document",
+      "company": "ASE",
+      "country_code": "TW",
+      "source_family": "municipal-government-news",
+      "scope": "City-authored K18B building groundbreaking and completion-target narrative only; not the existing Kaohsiung campus aggregate or attained production/qualification/capacity.",
+      "media_types": ["text/html"],
+      "policy_ids": ["kcg-invest-robots", "kcg-invest-security"],
+      "required_text": ["高雄招商網", "資料來源：經濟發展局", "K18B", "日月光", "上版日期", "114-10-03"]
+    }
+  ]
+}

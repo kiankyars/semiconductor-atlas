@@ -18,4 +18,4 @@ where = ["."]
 include = ["semiconductor_atlas*"]
 
 [tool.setuptools.package-data]
-semiconductor_atlas = ["migrations/*.sql"]
+semiconductor_atlas = ["migrations/*.sql", "viewer/*.html", "viewer/*.js", "viewer/*.css"]

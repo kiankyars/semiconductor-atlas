@@ -781,18 +781,19 @@ class MilestoneValue:
         if self.date_precision is None and self.date_literal is None:
             _ordered_dates(self.date_low, self.date_base, self.date_high, "milestone_date")
             return
-        if self.date_base is not None or self.status is not MilestoneStatus.EXPECTED:
-            raise ValueError("source target periods require expected status and no midpoint")
+        if self.date_base is not None or (self.status is not MilestoneStatus.EXPECTED
+                                         and self.status is not MilestoneStatus.COMPLETED):
+            raise ValueError("source milestone periods require expected or completed status and no midpoint")
         if not isinstance(self.date_precision, str) or self.date_precision not in {
             "day", "month", "quarter", "half_year", "year", "range"
         }:
-            raise ValueError("invalid source target date precision")
+            raise ValueError("invalid source milestone date precision")
         _required(self.date_literal, "date_literal")
         _iso_date(self.date_low, "date_low")
         _iso_date(self.date_high, "date_high")
         low, high = date.fromisoformat(self.date_low), date.fromisoformat(self.date_high)
         if low > high:
-            raise ValueError("source target period bounds are reversed")
+            raise ValueError("source milestone period bounds are reversed")
         if self.date_precision == "range":
             return
         if self.date_precision == "day":
@@ -803,7 +804,34 @@ class MilestoneValue:
             valid = (low.day == 1 and (low.month - 1) % width == 0 and last_month <= 12
                      and high == date(low.year, last_month, calendar.monthrange(low.year, last_month)[1]))
         if not valid:
-            raise ValueError("source target bounds do not match their calendar precision")
+            raise ValueError("source milestone bounds do not match their calendar precision")
+
+
+@dataclass(frozen=True, slots=True)
+class MilestoneUpperBoundValue:
+    """A source-reported occurrence with an upper date bound, not an event date."""
+
+    milestone_type: str
+    status: MilestoneStatus
+    date_low: None
+    date_base: None
+    date_high: str
+    date_precision: str
+    date_literal: str
+    date_relation: str = "on_or_before"
+
+    @property
+    def kind(self) -> ValueKind:
+        return ValueKind.MILESTONE
+
+    def __post_init__(self) -> None:
+        _required(self.milestone_type, "milestone_type")
+        _required(self.date_literal, "date_literal")
+        _iso_date(self.date_high, "date_high")
+        if (self.status is not MilestoneStatus.COMPLETED or self.date_low is not None
+                or self.date_base is not None or self.date_precision != "day"
+                or self.date_relation != "on_or_before"):
+            raise ValueError("milestone upper bounds require completed status, on_or_before day bound, and unknown lower bound/midpoint")
 
 
 @dataclass(frozen=True, slots=True)
@@ -907,6 +935,7 @@ ClaimValue: TypeAlias = (
     | GeometryValue
     | RelationshipValue
     | MilestoneValue
+    | MilestoneUpperBoundValue
     | CapabilityValue
     | CapacityValue
     | ResourceValue

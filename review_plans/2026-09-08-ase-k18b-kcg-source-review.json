@@ -1,0 +1,64 @@
+{
+  "format": "semiconductor-atlas-ase-k18b-municipal-source-review-v1",
+  "reviewed_at": "2026-09-08T20:56:44Z",
+  "reviewer": "Codex local source and access review; previously exposed to the municipal article",
+  "decision": "approve_one_exact_municipal_article_for_local_text_review_only",
+  "source_native_scope": "ase:kaohsiung-k18b-source-native-project",
+  "canonical_facility_assignment": null,
+  "prior_decision": "review_plans/2026-09-07-ase-kcg-acquisition-deferred.json",
+  "policy_capture": {
+    "path": "artifacts/2026-09-08-kcg-policy-probe-v1",
+    "manifest_sha256": "9cc57bd0ca532c3db710d29a7b475c31e62d502fcf82c9d849a5ff99ac83c416",
+    "ledger_sha256": "7b0ea1a578bac6954d73a86b60c36d165576fae07321340c0cadc31876d631aa",
+    "attempt_count": 3,
+    "source_document_requests": 0,
+    "outcomes": "One exact direct robots 404 and two successful policy responses; all bodies and actual invocation clocks retained."
+  },
+  "access_review": {
+    "url": "https://invest.kcg.gov.tw/robots.txt",
+    "http_status": 404,
+    "body_sha256": "eab09f82e87641fb3e8c72b6c9e061f11684c7d8345925aad1fd7de4c05f87ab",
+    "body_bytes": 1161,
+    "normalization": "reviewed_robots_404_body_v1",
+    "body_review": "The complete response declares Big5 HTML and says file or directory not found. It matches the September 7 response exactly. It is not a robots rule set or a permission grant. Its bytes are hashed without text normalization; ordinary policy and source HTML remain strict UTF-8.",
+    "standard": "https://www.rfc-editor.org/rfc/rfc9309.html#section-2.3.1.3",
+    "decision_basis": "RFC 9309 distinguishes unavailable robots from unreachable servers. This explicit plan accepts only a reviewed direct HTTP 404 with verified TLS, successful transport, exact URL, no redirects, approved media type and exact error-body hash. Unlike the standard's broad unavailable class, this implementation does not accept 401, 403, 410, 429, 5xx, timeouts or arbitrary missing/error pages. Any changed status or body requires new review.",
+    "scope_boundary": "One public municipal article, not the denied BIP route, a general crawler, attachments, linked pages or private resources. Old acquisition plans retain their original success-only policy rules."
+  },
+  "security_policy": {
+    "url": "https://invest.kcg.gov.tw/cp.aspx?n=1C95EBE0D0D6C22C",
+    "body_sha256": "681150194af088cb8141ee2fb43fa116cb48d753a669e12c0cb1905cf93987b4",
+    "normalization": "html_policy_v1",
+    "normalized_sha256": "b08df3cf9afb35095e5827325e4b5ae3cd1fa0363eacaf7d3c45d6995ec2f429",
+    "review": "Read the full policy and all navigation/footer text and link targets. It addresses staff security, lawful software use, system access and network overload. This serial three-request collector uses no login, session, scripts or forms. No affirmative open-content licence or blanket automation grant was identified. Copyright remains with the municipal bureau. This is a bounded internal research-use decision, not publisher-granted permission or legal clearance for republication. Every capture must match this complete visible-text-and-links hash."
+  },
+  "ancillary_privacy_policy": {
+    "url": "https://invest.kcg.gov.tw/cp.aspx?n=F415DE5DE54E5358",
+    "body_sha256": "b596aa1b14705ecb3f81485673f353a0234bcc6e42f00442f584674b8e9fdaa9",
+    "normalized_sha256": "69f9a0017b8800ef5ad95bbe1eab34d3aeeed5114a6a2b58895f3cccba1eb93a",
+    "review": "Read the complete statement. It distinguishes ordinary browsing/download logs from voluntarily submitted personal information and excludes linked sites. No personal information is submitted and no cookies, analytics or third-party resources are loaded. This statement is review context, not a content licence."
+  },
+  "rights": {
+    "license_status": "unknown_no_open_license_identified",
+    "copyright_holder": "Economic Development Bureau, Kaohsiung City Government",
+    "access_class": "public_without_login",
+    "local_use": "One government-authored article retained locally for source verification and original analysis under an explicit internal review decision.",
+    "public_output": "Operational metadata and original reviewer analysis only; no raw HTML, images, attachments, substantial publisher text or personal-profile data.",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "document": {
+    "id": "kcg-ase-k18b-groundbreaking",
+    "url": "https://invest.kcg.gov.tw/News_Content.aspx?n=8CE973AC5F6EE514&s=BA84DF962F234D8E&sms=D7173346CB507235",
+    "publisher": "Economic Development Bureau, Kaohsiung City Government",
+    "publication_date_lead": "2025-10-03",
+    "scope": "Source-native K18B building project only. Separate from the complete Kaohsiung campus aggregate, K28 at Dashe and the Nanzih Third Park buildings.",
+    "interpretation_boundary": "A historical groundbreaking and a first-quarter-2028 building-completion target are research leads pending exact-byte review. Neither establishes production, qualification, usable capacity or a revised schedule. CMS update and site footer dates are not physical event dates."
+  },
+  "validity": "Internal review expires 2026-10-08T20:56:44Z. Repeat checks require matching access and security-policy responses; no automatic renewal.",
+  "claim_acceptance": false,
+  "delivery_eligible": false,
+  "scheduled_execution_changed": false,
+  "registered_study_changed": false,
+  "baseline_changed": false
+}

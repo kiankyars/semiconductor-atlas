@@ -7,7 +7,7 @@ import sqlite3
 from collections import Counter
 from typing import Any, Sequence
 
-from .database import knowledge_clock_sql
+from .database import admission_clock_sql, chronological_order_sql, knowledge_clock_sql, schema_version
 from .models import CapacityBasis
 from .repository import _normalized_timestamp
 from .service import (
@@ -117,6 +117,7 @@ def reviewed_relationship_claim_ids_if_visible(
 ) -> set[str] | None:
     """Validate review action lineage and return IDs once every effect is visible."""
 
+    clock = admission_clock_sql(connection)
     descriptor_ids: list[str] = []
     for field in ("created_claims", "reaffirmed_claims"):
         descriptors = parameters.get(field)
@@ -168,7 +169,7 @@ def reviewed_relationship_claim_ids_if_visible(
 
     for timestamp in timestamps:
         comparison = connection.execute(
-            "SELECT julianday(?) <= julianday(?)", (timestamp, recorded_at)
+            f"SELECT {clock}(?) <= {clock}(?)", (timestamp, recorded_at)
         ).fetchone()[0]
         if comparison is None:
             raise ValueError(f"{context} contains an invalid lineage timestamp")
@@ -183,6 +184,7 @@ def _taiwan_tax_relationship_review_scope(
     recorded_at: str,
     claims: Sequence[dict[str, Any]],
 ) -> dict[str, Any] | None:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT runs.id AS review_ingestion_run_id,
@@ -200,7 +202,7 @@ def _taiwan_tax_relationship_review_scope(
         ORDER BY julianday(runs.completed_at) DESC,
                  julianday(runs.started_at) DESC,
                  runs.id DESC
-        """,
+        """.replace("julianday(", f"{clock}("),
         (
             REVIEWED_RELATIONSHIP_FAMILY_KEY,
             recorded_at,
@@ -340,6 +342,100 @@ def _taiwan_tax_relationship_review_scope(
     }
 
 
+def _source_family_rows(
+    connection: sqlite3.Connection,
+    *,
+    recorded_at: str,
+    resolve_assignments: bool = True,
+) -> list[sqlite3.Row]:
+    document_runs_sql = _accepted_document_runs_sql(connection)
+    clock = knowledge_clock_sql(connection)
+    if schema_version(connection) >= 10:
+        from .source_family_review import resolutions
+        mapping = resolutions(connection, recorded_at=recorded_at) if resolve_assignments else {}
+        family_overrides = [{"source_id": source_id, "family_id": value["source_family_id"]}
+                            for source_id, value in mapping.items()]
+        return connection.execute(
+            f"""
+            WITH family_overrides AS (
+                SELECT json_extract(value,'$.source_id') source_id,
+                       json_extract(value,'$.family_id') family_id FROM json_each(?)
+            ), document_runs AS (
+                {document_runs_sql}
+            ), accepted_documents AS (
+                SELECT DISTINCT document_id,
+                       FIRST_VALUE(started_at) OVER (
+                           PARTITION BY document_id
+                           ORDER BY {clock}(started_at), started_at
+                       ) AS database_accepted_at
+                FROM document_runs
+                WHERE {clock}(started_at) <= {clock}(?)
+            ), family_documents AS (
+                SELECT families.id AS family_id,
+                       families.stable_key AS source_family,
+                       families.name AS source_family_name,
+                       sources.id AS source_id, documents.id AS document_id,
+                       documents.retrieved_at, accepted_documents.database_accepted_at
+                FROM accepted_documents
+                JOIN source_documents AS documents ON documents.id = accepted_documents.document_id
+                JOIN sources ON sources.id = documents.source_id
+                LEFT JOIN family_overrides ON family_overrides.source_id = sources.id
+                JOIN source_families AS families ON families.id = coalesce(family_overrides.family_id, sources.family_id)
+            ), ranked AS (
+                SELECT *,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(retrieved_at), retrieved_at, document_id) AS first_retrieval,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(retrieved_at) DESC, retrieved_at DESC, document_id DESC) AS last_retrieval,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(database_accepted_at), database_accepted_at, document_id) AS first_acceptance,
+                       ROW_NUMBER() OVER (PARTITION BY family_id
+                           ORDER BY {clock}(database_accepted_at) DESC, database_accepted_at DESC, document_id DESC) AS last_acceptance
+                FROM family_documents
+            )
+            SELECT source_family, source_family_name,
+                   COUNT(DISTINCT source_id) AS source_count,
+                   COUNT(document_id) AS document_count,
+                   MAX(CASE WHEN first_retrieval = 1 THEN retrieved_at END) AS first_retrieved_at,
+                   MAX(CASE WHEN last_retrieval = 1 THEN retrieved_at END) AS last_retrieved_at,
+                   MAX(CASE WHEN first_acceptance = 1 THEN database_accepted_at END) AS first_database_accepted_at,
+                   MAX(CASE WHEN last_acceptance = 1 THEN database_accepted_at END) AS last_database_accepted_at
+            FROM ranked
+            GROUP BY family_id
+            ORDER BY source_family
+            """,
+            (json.dumps(family_overrides), recorded_at),
+        ).fetchall()
+    return connection.execute(
+        f"""
+        WITH document_runs AS (
+            {document_runs_sql}
+        ), accepted_documents AS (
+            SELECT document_id, MIN(started_at) AS database_accepted_at
+            FROM document_runs
+            WHERE julianday(started_at) <= julianday(?)
+            GROUP BY document_id
+        )
+        SELECT families.stable_key AS source_family,
+               families.name AS source_family_name,
+               COUNT(DISTINCT sources.id) AS source_count,
+               COUNT(documents.id) AS document_count,
+               MIN(documents.retrieved_at) AS first_retrieved_at,
+               MAX(documents.retrieved_at) AS last_retrieved_at,
+               MIN(accepted_documents.database_accepted_at) AS first_database_accepted_at,
+               MAX(accepted_documents.database_accepted_at) AS last_database_accepted_at
+        FROM accepted_documents
+        JOIN source_documents AS documents
+          ON documents.id = accepted_documents.document_id
+        JOIN sources ON sources.id = documents.source_id
+        JOIN source_families AS families ON families.id = sources.family_id
+        GROUP BY families.id
+        ORDER BY families.stable_key
+        """.replace("julianday(", f"{clock}("),
+        (recorded_at,),
+    ).fetchall()
+
+
 def coverage_report(
     connection: sqlite3.Connection,
     *,
@@ -379,36 +475,16 @@ def coverage_report(
     non_organizations = [
         item for item in entity_view if item["entity_kind"] != "organization"
     ]
-    document_runs_sql = _accepted_document_runs_sql(connection)
-    clock = knowledge_clock_sql(connection)
-    source_rows = connection.execute(
-        f"""
-        WITH document_runs AS (
-            {document_runs_sql}
-        ), accepted_documents AS (
-            SELECT document_id, MIN(started_at) AS database_accepted_at
-            FROM document_runs
-            WHERE julianday(started_at) <= julianday(?)
-            GROUP BY document_id
+    scope_clock = admission_clock_sql(connection)
+    source_rows = _source_family_rows(connection, recorded_at=recorded_at)
+    run_order = chronological_order_sql(connection, "runs.started_at")
+    retrieval_order = chronological_order_sql(connection, "documents.retrieved_at")
+    first_acceptance_sql = "MIN(runs.started_at) OVER (PARTITION BY documents.id)"
+    if schema_version(connection) >= 10:
+        first_acceptance_sql = (
+            "FIRST_VALUE(runs.started_at) OVER (PARTITION BY documents.id "
+            f"ORDER BY {run_order}, runs.id)"
         )
-        SELECT families.stable_key AS source_family,
-               families.name AS source_family_name,
-               COUNT(DISTINCT sources.id) AS source_count,
-               COUNT(documents.id) AS document_count,
-               MIN(documents.retrieved_at) AS first_retrieved_at,
-               MAX(documents.retrieved_at) AS last_retrieved_at,
-               MIN(accepted_documents.database_accepted_at) AS first_database_accepted_at,
-               MAX(accepted_documents.database_accepted_at) AS last_database_accepted_at
-        FROM accepted_documents
-        JOIN source_documents AS documents
-          ON documents.id = accepted_documents.document_id
-        JOIN sources ON sources.id = documents.source_id
-        JOIN source_families AS families ON families.id = sources.family_id
-        GROUP BY families.id
-        ORDER BY families.stable_key
-        """.replace("julianday(", f"{clock}("),
-        (recorded_at,),
-    ).fetchall()
     namespace_counts = dict(
         sorted(
             Counter(
@@ -440,12 +516,10 @@ def coverage_report(
         item for item in entity_view if item["stable_key"].startswith("epa:frs:")
     ]
     frs_document = connection.execute(
-        """
+        f"""
         SELECT documents.metadata_json, runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM source_documents AS documents
         JOIN sources ON sources.id = documents.source_id
         JOIN source_families AS families ON families.id = sources.family_id
@@ -455,10 +529,10 @@ def coverage_report(
           AND julianday(runs.started_at) <= julianday(?)
           AND date(json_extract(runs.parameters_json, '$.as_of_date')) <= date(?)
         ORDER BY date(json_extract(runs.parameters_json, '$.as_of_date')) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (recorded_at, as_of),
     ).fetchone()
     frs_candidate_scope = None
@@ -547,14 +621,12 @@ def coverage_report(
         if str(item["entity_id"]) in current_claim_entity_ids
     ]
     moenv_document = connection.execute(
-        """
+        f"""
         SELECT documents.id AS source_document_id,
                documents.metadata_json, documents.retrieved_at,
                runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM ingestion_runs AS runs
         JOIN source_documents AS documents
           ON documents.id = runs.input_document_id
@@ -571,10 +643,10 @@ def coverage_report(
                      json_extract(runs.parameters_json, '$.dataset_updated_at'),
                      '+8 hours'
                  ) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (TAIWAN_MOENV_FAMILY_KEY, recorded_at, as_of),
     ).fetchone()
     moenv_candidate_scope = None
@@ -761,14 +833,12 @@ def coverage_report(
         if str(item["entity_id"]) in current_claim_entity_ids
     ]
     factory_document = connection.execute(
-        """
+        f"""
         SELECT documents.id AS source_document_id,
                documents.metadata_json, documents.retrieved_at,
                runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM ingestion_runs AS runs
         JOIN source_documents AS documents
           ON documents.id = runs.input_document_id
@@ -785,10 +855,10 @@ def coverage_report(
                      json_extract(runs.parameters_json, '$.source_updated_at'),
                      '+8 hours'
                  ) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (TAIWAN_FACTORY_FAMILY_KEY, recorded_at, as_of),
     ).fetchone()
     factory_candidate_scope = None
@@ -901,14 +971,12 @@ def coverage_report(
         if str(item["entity_id"]) in current_claim_entity_ids
     ]
     mof_document = connection.execute(
-        """
+        f"""
         SELECT documents.id AS source_document_id,
                documents.metadata_json, documents.retrieved_at,
                runs.started_at AS processing_run_accepted_at,
                runs.id AS processing_run_id, runs.parameters_json,
-               MIN(runs.started_at) OVER (
-                   PARTITION BY documents.id
-               ) AS source_document_first_accepted_at
+               {first_acceptance_sql} AS source_document_first_accepted_at
         FROM ingestion_runs AS runs
         JOIN source_documents AS documents
           ON documents.id = runs.input_document_id
@@ -920,10 +988,10 @@ def coverage_report(
           AND date(json_extract(runs.parameters_json, '$.publisher_date'))
               <= date(?)
         ORDER BY date(json_extract(runs.parameters_json, '$.publisher_date')) DESC,
-                 runs.started_at DESC, documents.retrieved_at DESC,
+                 {run_order} DESC, {retrieval_order} DESC,
                  documents.id DESC, runs.id DESC
         LIMIT 1
-        """,
+        """.replace("julianday(", f"{scope_clock}("),
         (TAIWAN_MOF_FAMILY_KEY, recorded_at, as_of),
     ).fetchone()
     mof_tax_registration_scope = None
@@ -1065,9 +1133,9 @@ def coverage_report(
                 f"{'s' if gleif_entity_count != 1 else ''}; it is not a global legal-entity "
                 "or facility census, and no Level 2 relationships are ingested."
             )
-    moenv_present = any(
-        family["source_family"] == TAIWAN_MOENV_FAMILY_KEY for family in source_families
-    )
+    original_families = {row["source_family"] for row in _source_family_rows(
+        connection, recorded_at=recorded_at, resolve_assignments=False)}
+    moenv_present = TAIWAN_MOENV_FAMILY_KEY in original_families
     if moenv_present:
         known_gaps.extend(
             (
@@ -1098,10 +1166,7 @@ def coverage_report(
                 "The accepted Taiwan MOENV run contains internally inconsistent audited "
                 "source-summary counts; the recorded values are surfaced without repair."
             )
-    factory_present = any(
-        family["source_family"] == TAIWAN_FACTORY_FAMILY_KEY
-        for family in source_families
-    )
+    factory_present = TAIWAN_FACTORY_FAMILY_KEY in original_families
     if factory_present:
         known_gaps.extend(
             (
@@ -1133,9 +1198,7 @@ def coverage_report(
                 "The accepted Taiwan registered-factory run contains internally inconsistent "
                 "audited source-summary counts; recorded values are surfaced without repair."
             )
-    mof_present = any(
-        family["source_family"] == TAIWAN_MOF_FAMILY_KEY for family in source_families
-    )
+    mof_present = TAIWAN_MOF_FAMILY_KEY in original_families
     if mof_present:
         known_gaps.extend(
             (
@@ -1203,6 +1266,15 @@ def coverage_report(
             "No superiority or parity claim is made without a lawfully licensed, normalized common benchmark."
         ),
     }
+    from .source_family_review import assignment_history
+    family_assignments = assignment_history(connection, recorded_at=recorded_at)
+    if family_assignments:
+        report["source_family_assignments"] = family_assignments
+        report["source_family_interpretation"] = (
+            "Publisher grouping reflects reviewed per-source assignments known at the cutoff. "
+            "Original importer labels and document counts are preserved; grouping is not proof "
+            "of independent corroboration."
+        )
     if moenv_present:
         report["taiwan_moenv_candidate_scope"] = moenv_candidate_scope
     if factory_present:

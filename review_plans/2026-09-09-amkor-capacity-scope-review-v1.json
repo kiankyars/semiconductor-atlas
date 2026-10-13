@@ -1,0 +1,31 @@
+{
+  "as_of": "2026-09-09",
+  "decisions": [
+    {
+      "capacity_claim_id": "021147cd-87d0-5adb-8969-30029e7cb427",
+      "decision": "deferred",
+      "entity_id": "996f4ee0-e395-5eb8-ba42-333ef07a9834",
+      "event_type": "mass_production",
+      "evidence_dossier_sha256": "9a04602bd9a2f3f762ef417ab1a6fb6e851f9986dba34a7229b8ab083422f86e",
+      "milestone_claim_id": "d99a7046-a464-538b-a0ac-90128e27518d",
+      "phase_scope": "Unresolved correspondence to the expanded campus and Phase One; no parcel or phase continuity inferred",
+      "project_scope": "Legacy NIST Amkor Peoria announced-throughput project versus the subsequently expanded Peoria project",
+      "rationale": "The legacy 14,500 wafers/month announced rate and end-2027 mass-production estimate share a document, not affirmative current project/phase applicability. The retained September 7 successor review, decision historical-announced-rates, explicitly defers that applicability; its SHA-256 is 8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160 (review_plans/2026-09-07-amkor-peoria-successor.json). The issuer's Phase One opening and NIST mass production remain different events with unresolved correspondence. Keep the original rate and target unchanged; this deferral establishes no cancellation, withdrawal, zero capacity, comparable delay or forecast accuracy. The legacy midpoint/confidence are importer assumptions, not separately verified production readiness. This is local review of retained evidence, not a fresh publisher check or canonical identity assignment."
+    },
+    {
+      "capacity_claim_id": "f0ca81ba-b8bd-5b17-9875-66752f3db953",
+      "decision": "deferred",
+      "entity_id": "996f4ee0-e395-5eb8-ba42-333ef07a9834",
+      "event_type": "mass_production",
+      "evidence_dossier_sha256": "9a04602bd9a2f3f762ef417ab1a6fb6e851f9986dba34a7229b8ab083422f86e",
+      "milestone_claim_id": "d99a7046-a464-538b-a0ac-90128e27518d",
+      "phase_scope": "Unresolved correspondence to the expanded campus and Phase One; no parcel or phase continuity inferred",
+      "project_scope": "Legacy NIST Amkor Peoria announced-throughput project versus the subsequently expanded Peoria project",
+      "rationale": "The legacy 3,700,000 units/month announced rate and end-2027 mass-production estimate share a document, not affirmative current project/phase applicability. The retained September 7 successor review, decision historical-announced-rates, explicitly defers that applicability; its SHA-256 is 8ab15581bfb8c764325680cda3977d0440a053f82b6bf7ec0c20c76515eba160 (review_plans/2026-09-07-amkor-peoria-successor.json). The issuer's Phase One opening and NIST mass production remain different events with unresolved correspondence. Keep the original rate and target unchanged and non-additive with the wafer rate; this deferral establishes no cancellation, withdrawal, zero capacity, comparable delay or forecast accuracy. The legacy midpoint/confidence are importer assumptions, not separately verified production readiness. This is local review of retained evidence, not a fresh publisher check or canonical identity assignment."
+    }
+  ],
+  "evidence_cutoff_at": "2026-09-09T12:25:57Z",
+  "format": "semiconductor-atlas-capacity-scope-review-v1",
+  "reviewed_at": "2026-09-09T12:26:28.808418Z",
+  "reviewer": "Codex main reviewer, retained-evidence scope deferral; not an independent physical observation"
+}

@@ -1,0 +1,325 @@
+{
+  "format": "semiconductor-atlas-reviewed-source-rate-admission-v1",
+  "decision": "accept_one_source_reported_monthly_rate",
+  "reviewed_at": "2026-09-08T23:49:24.132589Z",
+  "reviewed_by": "Codex primary agent",
+  "prior_exposure": "The reviewers saw the government rate through web extraction before local acquisition. The lead was selected after targeted capacity/output research and comparison with issuer and NIST wording. This is exposed retrospective source review, not blind evaluation, independent manufacturing measurement or evidence of historical system knowledge.",
+  "parent_database_sha256": "b2445daa4cc4dfb4ff56617ad2199ed9a7993f950794f5bf45a184b1d0974bea",
+  "research_review": {
+    "path": "review_plans/2026-09-08-polar-production-rate-source-review.json",
+    "sha256": "75c80f0f9c88dd523a8a5f85de43c3e00537feb4fc73550c4483e96bf1c85638"
+  },
+  "input_files": {
+    "artifacts/2026-09-08-polar-senate-policy-probe-v1/manifest.json": {
+      "bytes": 399,
+      "sha256": "057a3e6f5b1659cae853bb87272164ea20b8fcabef8fe13a80e662179616343c"
+    },
+    "artifacts/2026-09-08-polar-senate-policy-probe-v1/plan.json": {
+      "bytes": 1069,
+      "sha256": "513fedca8af9d9fb3c2ad0500a8f61eabd82f0ed0ccf9dd40b0e8e45de34ff4e"
+    },
+    "artifacts/2026-09-08-polar-senate-policy-probe-v1/responses/klobuchar-robots.body": {
+      "bytes": 265,
+      "sha256": "f02b6a012715360041fda97b743408827c6474131d65b022c0da961ea7e9421c"
+    },
+    "artifacts/2026-09-08-polar-senate-policy-probe-v1/source_checks.json": {
+      "bytes": 1352,
+      "sha256": "8ef7bd6b2fd8d16f8ceb227b7a9e039c774edc66ba6497b9737e9ab1e82cdcbb"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/0-manifest.json": {
+      "bytes": 399,
+      "sha256": "057a3e6f5b1659cae853bb87272164ea20b8fcabef8fe13a80e662179616343c"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/1-manifest.json": {
+      "bytes": 396,
+      "sha256": "027454d97d98a00700530f8a815c68fecae909a044b9752a5f6c5dfb4c47e4a9"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/2-manifest.json": {
+      "bytes": 858,
+      "sha256": "5656da7178f25dfdabf1603dd1b24cb81961282cb6646bc4f20142a5b2dcc4a0"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/3-manifest.json": {
+      "bytes": 1439,
+      "sha256": "78544ff2f4085b748c664c983298e18e5b4710976fc48f469386ffe8fbc75bf1"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/4-klobuchar-privacy.body": {
+      "bytes": 30554,
+      "sha256": "1aa4882ef93310b2891f3131a8dad3349a84fb153277096a3beb2b125d035d1c"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/5-senate-privacy.body": {
+      "bytes": 29318,
+      "sha256": "a0c5fb1875d93e25f6c256ba06d3b673fb1443521405f680e04eb81435c4de63"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/dependencies/6-senate-usage.body": {
+      "bytes": 52926,
+      "sha256": "5152bd19e912d2b93c607c52984613b5996bc27d45d619d38642e61acabee3d6"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/manifest.json": {
+      "bytes": 1419,
+      "sha256": "87dbf81065bff2770230cb4ba805abf1ac6040cf429bab45edd064945273747d"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/plan.json": {
+      "bytes": 3848,
+      "sha256": "09d7af9f95ed7462865362e0ea01416a4ec63db5ea9528866dcda2aae5d48272"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/responses/polar-senate-production-rate.body": {
+      "bytes": 40085,
+      "sha256": "201e16ff5e47b1aae7d042941f263bec1be3e73e583351c6abfb4faefbe8bda3"
+    },
+    "artifacts/2026-09-08-polar-senate-source-capture-v1/source_checks.json": {
+      "bytes": 1670,
+      "sha256": "39d8ffd3a752223b678eab396961584354d8136bd42e72209646d2f8ce1fd98b"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/dependencies/0-klobuchar-robots.body": {
+      "bytes": 265,
+      "sha256": "f02b6a012715360041fda97b743408827c6474131d65b022c0da961ea7e9421c"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/dependencies/1-source_checks.json": {
+      "bytes": 1352,
+      "sha256": "8ef7bd6b2fd8d16f8ceb227b7a9e039c774edc66ba6497b9737e9ab1e82cdcbb"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/dependencies/2-source_checks.json": {
+      "bytes": 1272,
+      "sha256": "d04abb96997ba860b47aba029b2f525695966e3abbd0b43950395878ad9b9350"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/manifest.json": {
+      "bytes": 858,
+      "sha256": "5656da7178f25dfdabf1603dd1b24cb81961282cb6646bc4f20142a5b2dcc4a0"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/plan.json": {
+      "bytes": 1585,
+      "sha256": "9e379c5df431f03143c74cdab5b34db303d4e4876a1dbec1fe24065dbfbdb37a"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/responses/senate-missing-policy-destination.body": {
+      "bytes": 37523,
+      "sha256": "7bb82f38d7b9b50fba0f22fcfbf1d2cfd73acafcc7105c006f410855af3f4a76"
+    },
+    "artifacts/2026-09-08-senate-missing-policy-destination-v1/source_checks.json": {
+      "bytes": 1430,
+      "sha256": "41908026b231cb0ab8d8635ddff78166db30e0b6fcd7c336aea3f169c54c52d1"
+    },
+    "artifacts/2026-09-08-senate-policy-probe-v1/manifest.json": {
+      "bytes": 396,
+      "sha256": "027454d97d98a00700530f8a815c68fecae909a044b9752a5f6c5dfb4c47e4a9"
+    },
+    "artifacts/2026-09-08-senate-policy-probe-v1/plan.json": {
+      "bytes": 1016,
+      "sha256": "95e3a4979de603f226adee9701a7084d82e0475a82b1f355f07e76bb44507fac"
+    },
+    "artifacts/2026-09-08-senate-policy-probe-v1/responses/senate-robots.body": {
+      "bytes": 265,
+      "sha256": "f02b6a012715360041fda97b743408827c6474131d65b022c0da961ea7e9421c"
+    },
+    "artifacts/2026-09-08-senate-policy-probe-v1/source_checks.json": {
+      "bytes": 1272,
+      "sha256": "d04abb96997ba860b47aba029b2f525695966e3abbd0b43950395878ad9b9350"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/dependencies/0-klobuchar-robots.body": {
+      "bytes": 265,
+      "sha256": "f02b6a012715360041fda97b743408827c6474131d65b022c0da961ea7e9421c"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/dependencies/1-source_checks.json": {
+      "bytes": 1352,
+      "sha256": "8ef7bd6b2fd8d16f8ceb227b7a9e039c774edc66ba6497b9737e9ab1e82cdcbb"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/dependencies/2-source_checks.json": {
+      "bytes": 1272,
+      "sha256": "d04abb96997ba860b47aba029b2f525695966e3abbd0b43950395878ad9b9350"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/dependencies/3-senate-missing-policy-destination.body": {
+      "bytes": 37523,
+      "sha256": "7bb82f38d7b9b50fba0f22fcfbf1d2cfd73acafcc7105c006f410855af3f4a76"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/dependencies/4-source_checks.json": {
+      "bytes": 1430,
+      "sha256": "41908026b231cb0ab8d8635ddff78166db30e0b6fcd7c336aea3f169c54c52d1"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/manifest.json": {
+      "bytes": 1439,
+      "sha256": "78544ff2f4085b748c664c983298e18e5b4710976fc48f469386ffe8fbc75bf1"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/plan.json": {
+      "bytes": 3049,
+      "sha256": "73b964875bc7a0a4dcf39f062ded3500e0c2ae9a3e1abd52f6f8e1c0495f6eee"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/responses/klobuchar-privacy.body": {
+      "bytes": 30554,
+      "sha256": "1aa4882ef93310b2891f3131a8dad3349a84fb153277096a3beb2b125d035d1c"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/responses/senate-privacy.body": {
+      "bytes": 29318,
+      "sha256": "a0c5fb1875d93e25f6c256ba06d3b673fb1443521405f680e04eb81435c4de63"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/responses/senate-usage.body": {
+      "bytes": 52926,
+      "sha256": "5152bd19e912d2b93c607c52984613b5996bc27d45d619d38642e61acabee3d6"
+    },
+    "artifacts/2026-09-08-senate-rights-chain-v1/source_checks.json": {
+      "bytes": 3488,
+      "sha256": "c2fa627d460c7298561134f88ebba662497cd83233863a06aa0de6020f5d962c"
+    },
+    "review_plans/2026-09-08-polar-production-rate-source-review.json": {
+      "bytes": 20532,
+      "sha256": "75c80f0f9c88dd523a8a5f85de43c3e00537feb4fc73550c4483e96bf1c85638"
+    },
+    "review_plans/2026-09-08-polar-senate-policy-probe.json": {
+      "bytes": 1069,
+      "sha256": "513fedca8af9d9fb3c2ad0500a8f61eabd82f0ed0ccf9dd40b0e8e45de34ff4e"
+    },
+    "review_plans/2026-09-08-polar-senate-source-acquisition.json": {
+      "bytes": 3848,
+      "sha256": "09d7af9f95ed7462865362e0ea01416a4ec63db5ea9528866dcda2aae5d48272"
+    },
+    "review_plans/2026-09-08-senate-missing-policy-destination.json": {
+      "bytes": 1585,
+      "sha256": "9e379c5df431f03143c74cdab5b34db303d4e4876a1dbec1fe24065dbfbdb37a"
+    },
+    "review_plans/2026-09-08-senate-policy-probe.json": {
+      "bytes": 1016,
+      "sha256": "95e3a4979de603f226adee9701a7084d82e0475a82b1f355f07e76bb44507fac"
+    },
+    "review_plans/2026-09-08-senate-rights-chain-acquisition.json": {
+      "bytes": 3049,
+      "sha256": "73b964875bc7a0a4dcf39f062ded3500e0c2ae9a3e1abd52f6f8e1c0495f6eee"
+    }
+  },
+  "packets": [
+    {
+      "packet": "artifacts/2026-09-08-polar-senate-policy-probe-v1",
+      "manifest_sha256": "057a3e6f5b1659cae853bb87272164ea20b8fcabef8fe13a80e662179616343c",
+      "plan": "review_plans/2026-09-08-polar-senate-policy-probe.json"
+    },
+    {
+      "packet": "artifacts/2026-09-08-senate-policy-probe-v1",
+      "manifest_sha256": "027454d97d98a00700530f8a815c68fecae909a044b9752a5f6c5dfb4c47e4a9",
+      "plan": "review_plans/2026-09-08-senate-policy-probe.json"
+    },
+    {
+      "packet": "artifacts/2026-09-08-senate-missing-policy-destination-v1",
+      "manifest_sha256": "5656da7178f25dfdabf1603dd1b24cb81961282cb6646bc4f20142a5b2dcc4a0",
+      "plan": "review_plans/2026-09-08-senate-missing-policy-destination.json"
+    },
+    {
+      "packet": "artifacts/2026-09-08-senate-rights-chain-v1",
+      "manifest_sha256": "78544ff2f4085b748c664c983298e18e5b4710976fc48f469386ffe8fbc75bf1",
+      "plan": "review_plans/2026-09-08-senate-rights-chain-acquisition.json"
+    },
+    {
+      "packet": "artifacts/2026-09-08-polar-senate-source-capture-v1",
+      "manifest_sha256": "87dbf81065bff2770230cb4ba805abf1ac6040cf429bab45edd064945273747d",
+      "plan": "review_plans/2026-09-08-polar-senate-source-acquisition.json"
+    }
+  ],
+  "source": {
+    "publisher": "Office of U.S. Senator Amy Klobuchar",
+    "url": "https://www.klobuchar.senate.gov/public/index.cfm/2024/9/klobuchar-announces-major-funding-for-polar-semiconductor-s-bloomington-manufacturing-facility",
+    "title": "Klobuchar Announces Major Funding for Polar Semiconductor’s Bloomington Manufacturing Facility",
+    "retained_path": "artifacts/2026-09-08-polar-senate-source-capture-v1/responses/polar-senate-production-rate.body",
+    "media_type": "text/html",
+    "bytes": 40085,
+    "sha256": "201e16ff5e47b1aae7d042941f263bec1be3e73e583351c6abfb4faefbe8bda3",
+    "publication_date": "2024-09-24",
+    "publication_precision": "day",
+    "publication_basis": "Complete body dateline outer span contains separate month, day and year child spans. The URL, head datewritten timestamp, meta description duplicates, CMS metadata and retrieval date are not publication-time or measurement-time evidence.",
+    "retrieval_started_at": "2026-09-08T23:39:49.676772Z",
+    "retrieval_finished_at": "2026-09-08T23:39:50.274324Z",
+    "source_family": "us-senate-klobuchar",
+    "source_reliability_limit": "Distinct government-office publication, not demonstrated independent measurement. The source discloses no measurement method or upstream provenance for the production rate; the office reports working with Polar on the award. Government publication and program due diligence do not establish independent numerical verification or completed-wafer accounting."
+  },
+  "source_family": {
+    "stable_key": "government-office:us-senate-klobuchar",
+    "label": "U.S. Senator Amy Klobuchar office publications"
+  },
+  "subject": {
+    "kind": "facility",
+    "stable_key": "us-senate-klobuchar:polar-bloomington-source-native-unresolved",
+    "label": "Polar Semiconductor's Bloomington manufacturing facility, as described in the senator release",
+    "scope_basis": "The first sentence identifies Polar's 310,000-square-foot facility in Bloomington. The immediately following sentence gives the company's production rate in the same paragraph, and the article title reinforces the facility context. The numeric sentence's grammatical subject remains company; no additional site-allocation evidence is claimed."
+  },
+  "rate": {
+    "metric": "wafer_production_rate",
+    "scope_kind": "source_native_facility",
+    "scope_label": "The named Bloomington manufacturing facility in the complete two-sentence source paragraph; not a canonical identity, separately allocated production line or independently established company-wide accounting perimeter.",
+    "numerator_unit": "native_wafers",
+    "denominator_unit": "month",
+    "native_wafer_diameter_inches": null,
+    "reference_period_kind": "not_stated",
+    "reference_period_start": null,
+    "reference_period_end": null,
+    "source_reference_period_literal": null,
+    "source_number_literal": "21,000",
+    "numeric_qualifier": "as_reported_precision_unspecified",
+    "source_qualifier_literal": null,
+    "assertion_kind": "reported",
+    "source_wording": "Polar produces high-voltage semiconductors for use in automotive, commercial and industrial applications at its 310,000-square-foot facility in Bloomington. The company produces 21,000 wafer semiconductors per month.",
+    "source_definition": "Government-office reported wafer-semiconductor production rate, with exact source unit retained. Diameter, equivalent-wafer basis, process-stage boundary, measurement method, product/test/reclaim mix and independent verification are unspecified. It is not installed capacity, a wafer-start-rate claim, defined finished-wafer or good-die output, shipment volume, qualification, yield or utilization."
+  },
+  "evidence": {
+    "title": {
+      "start": 28076,
+      "end": 28281,
+      "sha256": "b1d2f891c06f31aacd90f1db51e913250e73175673ad4edcd45fb18593e512c9",
+      "tag": "h1"
+    },
+    "publication_dateline": {
+      "start": 28309,
+      "end": 28452,
+      "sha256": "a450ee240c42363128f83511235cf2386f7b464c6e956360445080300f2fc603",
+      "tag": "span"
+    },
+    "complete_production_paragraph": {
+      "start": 29733,
+      "end": 29962,
+      "sha256": "7b794078a04227f3469b50ba4842b38920231b15c10f486357587a59aa28be9e",
+      "tag": "p"
+    },
+    "publisher_header": {
+      "start": 25594,
+      "end": 25724,
+      "sha256": "94e5a5bc97e767ab69eb2b6d0ffa7b9d63caf4a2ad69ed3016e18ce34741430f",
+      "tag": "a"
+    }
+  },
+  "support": "complete_production_paragraph",
+  "publication_literal": "September 24, 2024",
+  "html_structure_review": {
+    "mode": "reviewed_unmatched_anchor_closers_v1",
+    "source_sha256": "201e16ff5e47b1aae7d042941f263bec1be3e73e583351c6abfb4faefbe8bda3",
+    "ignored_anchor_end_offsets": [
+      14058,
+      14816,
+      17619,
+      18273,
+      20933,
+      21696
+    ],
+    "rationale": "The complete retained source has six stray closing anchors in preceding navigation with no open anchor. Ignore only these exact source-hash-bound pre-evidence tokens; keep every original byte, the full ancestor stack, hidden-context checks and all other nesting validation. The old strict parser remains unchanged and its recorded failure remains true. This is structural interpretation, not browser-rendered visibility."
+  },
+  "rights": {
+    "use": "local_informational_review_only",
+    "basis": "Retained senator-to-central privacy link, reviewed HTTPS transport upgrade, central copying provision with exceptions, complete Senate usage rules, and the primary agent's exact-source acquisition review. This is an operational scope decision, not legal advice.",
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "boundaries": {
+    "physical_capacity_basis_assigned": false,
+    "period_total_inferred": false,
+    "wafer_diameter_inferred": false,
+    "wafer_equivalence_inferred": false,
+    "current_operation_inferred": false,
+    "finished_wafer_measurement_inferred": false,
+    "yield_utilization_qualification_inferred": false,
+    "canonical_identity_assigned": false,
+    "geometry_inferred": false,
+    "ownership_assigned": false,
+    "independent_measurement": false,
+    "historical_system_knowledge_backdated": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "baseline_modified": false,
+    "scheduled_execution_rerouted": false,
+    "raw_redistribution": false,
+    "model_training": false,
+    "source_acquisition": false
+  }
+}

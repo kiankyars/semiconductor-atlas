@@ -1,0 +1,947 @@
+{
+  "boundaries": [
+    "No changes to the frozen vintage, project identities, scope, intervals, outcome policy or core database.",
+    "Page modification metadata is a publisher assertion, not a claim-effective date or exact historical-byte attestation.",
+    "Source-body and scoped-text changes are distinct. Missing text does not establish withdrawn commitments or physical nonoccurrence.",
+    "A first-observation collector status means no prior ledger was supplied to this capture; seven prior source versions remain explicitly compared here.",
+    "This is complete only for the six selected URLs, not complete current publisher or project coverage. No calibration, blind evaluation or early-detection claim.",
+    "Manual whole-narrative review is exposed and collaborative. Byte replay does not prove semantic truth or independent physical measurement.",
+    "Raw bodies and full narratives stay local; no linked assets, publication, model training, scheduled acquisition or source queue mutation."
+  ],
+  "capture_clock": {
+    "finished_at": "2026-09-10T16:57:56.757718Z",
+    "started_at": "2026-09-10T16:57:39.951944Z"
+  },
+  "cases": [
+    {
+      "case": {
+        "case_id": "amkor-peoria",
+        "disposition": "abstain_vague_period_and_phase_correspondence",
+        "event_type": "mass_production",
+        "geography": "Peoria, Arizona",
+        "partition": null,
+        "project_entity_id": "996f4ee0-e395-5eb8-ba42-333ef07a9834",
+        "project_group": "amkor-peoria",
+        "project_stable_key": "nist:project:668c5b7c-b5b3-52be-b590-a78b284d6d51",
+        "reason": "End of 2027 does not establish Q4 or December. The reviewed 2026 issuer Phase One opening target is a different event/scope and cannot be substituted or converted to a comparable delay.",
+        "reviewed_source_period": null,
+        "scope": "phase-unspecified NIST packaging/test project; newer Phase One correspondence unresolved",
+        "source": "amkor",
+        "stored_expected_claims": [
+          {
+            "claim_id": "d99a7046-a464-538b-a0ac-90128e27518d",
+            "claim_kind": "derived_estimate",
+            "confidence": 0.75,
+            "date_base": "2027-12-01",
+            "date_high": "2027-12-31",
+            "date_literal": null,
+            "date_low": "2027-10-01",
+            "date_precision": null,
+            "method": "nist_timeline_window_v1",
+            "milestone_type": "mass_production",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-07-18T01:54:47Z",
+            "status": "expected",
+            "valid_from": "2026-07-17",
+            "value_sha256": "101be8a8428d213f067f310f893c2067f4c6e4546a5e083bd6003439b4c2b872"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": true,
+        "timeline_text_equal": true,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-amkor-peoria.body",
+        "body_sha256": "81f34a4a58193c510f18ea5f0e3ccc28835b03f7db39332bd29860186b68cf80",
+        "bytes": 94823,
+        "capture_id": "nist-amkor-peoria",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:24-04:00",
+          "article:published_time": "2024-07-24T23:23-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 85588,
+            "sha256": "2e717be69ff6aba6b7b9eeeba0c2914aacad105ec8c470d729a1b3096ed73121",
+            "start": 80675,
+            "tag": "div",
+            "visible_text_sha256": "026af1593a792373c15539206c2f476220fe4d0325cdf2d7392ec55150e8ac02"
+          },
+          "scope": {
+            "end": 85103,
+            "sha256": "19ed7eb1cea28ec7b2b6261435be682f9bd6fc0480d7568b680a79a110763c04",
+            "start": 84197,
+            "tag": "table",
+            "visible_text_sha256": "62e2c6195ae35b1327e02a7f333fe32fd22335a2414d18f9186f680b4b93d65c"
+          },
+          "timeline": {
+            "end": 85087,
+            "sha256": "026788b6cd3b4960ed190127c569ce85481b3e06dede5fbb876aa297f451db8b",
+            "start": 84975,
+            "tag": "tr",
+            "visible_text_sha256": "73c6bfd63292eee19eea06714ee9161a9e4e32a2e3a368ff0b33fb3fe3256df7"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:51.528235Z",
+        "request_started_at": "2026-09-10T16:57:51.368236Z",
+        "url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria"
+      },
+      "manual_interpretation": "The local scope and mass-production row are unchanged. Vague end-2027 language remains unnormalized. No new Phase One correspondence, actual production or cancellation is established. Workforce, environmental/safety and financial/commercial sections and two related release links are no longer carried by this page; their omission is not withdrawal of underlying commitments.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-amkor-technology-inc-arizona-peoria.html",
+      "original_disposition": "abstained",
+      "original_guidance_interval": null,
+      "original_prediction": null,
+      "original_regions": {
+        "narrative": {
+          "end": 91785,
+          "sha256": "360f22dfd585a706a88ba325ee3c92e4d336609bb4fde962078dfef286a0e1fe",
+          "start": 78653,
+          "tag": "div",
+          "visible_text_sha256": "614805dcdada8677ce37014d5984f153c0ab836c43cafcb680234892f116d6be"
+        },
+        "scope": {
+          "end": 90175,
+          "sha256": "19ed7eb1cea28ec7b2b6261435be682f9bd6fc0480d7568b680a79a110763c04",
+          "start": 89269,
+          "tag": "table",
+          "visible_text_sha256": "62e2c6195ae35b1327e02a7f333fe32fd22335a2414d18f9186f680b4b93d65c"
+        },
+        "timeline": {
+          "end": 90159,
+          "sha256": "026788b6cd3b4960ed190127c569ce85481b3e06dede5fbb876aa297f451db8b",
+          "start": 90047,
+          "tag": "tr",
+          "visible_text_sha256": "73c6bfd63292eee19eea06714ee9161a9e4e32a2e3a368ff0b33fb3fe3256df7"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "dc29e77054171acd3da6d8324801319ecbf9bd8b52b80521ee93dc931ff4e8ec",
+        "document_url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria",
+        "id": "d3cc5fb6-6bd0-55fb-b11a-0973a4a2d896",
+        "license": "NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded",
+        "media_type": "text/html",
+        "metadata_json": "{\"access_class\":\"public\",\"attribution\":\"National Institute of Standards and Technology\",\"copyright_notice_url\":\"https://www.nist.gov/copyrights-disclaimers\",\"record_type\":\"award_detail_page\",\"reuse_notice\":\"NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded\",\"reuse_status\":\"public_information_unless_marked_otherwise\",\"updated_at\":\"2026-06-03T10:30-04:00\"}",
+        "published_at": "2024-07-25T03:23:00Z",
+        "retrieved_at": "2026-07-18T01:54:47Z",
+        "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+        "title": "Amkor Technology, Inc. (Arizona)"
+      },
+      "original_source_age_days_at_freeze": 52,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "unchanged_target_formulation"
+    },
+    {
+      "case": {
+        "case_id": "hemlock-new-facility",
+        "disposition": "future_literal_interval_requires_source_claim_admission",
+        "event_type": "production_start",
+        "geography": "Hemlock, Michigan",
+        "partition": null,
+        "project_entity_id": "35200609-3ec3-5766-8aef-107433b0a75c",
+        "project_group": "hemlock-new-facility",
+        "project_stable_key": "nist:project:bbdc1234-326c-53df-8ee6-e6bec233fd9f",
+        "reason": "Source supports the full year only. The existing July 1 midpoint and 0.75 confidence are derived conventions, not publisher assertions or physical truth.",
+        "reviewed_source_period": {
+          "base": null,
+          "high": "2028-12-31",
+          "literal": "2028",
+          "low": "2028-01-01"
+        },
+        "scope": "one new polysilicon facility on the existing campus",
+        "source": "hemlock",
+        "stored_expected_claims": [
+          {
+            "claim_id": "ce225f21-8a87-56cf-abd7-2683e133d11e",
+            "claim_kind": "derived_estimate",
+            "confidence": 0.75,
+            "date_base": "2028-07-01",
+            "date_high": "2028-12-31",
+            "date_literal": null,
+            "date_low": "2028-01-01",
+            "date_precision": null,
+            "method": "nist_timeline_window_v1",
+            "milestone_type": "production_start",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-07-18T01:54:47Z",
+            "status": "expected",
+            "valid_from": "2026-07-17",
+            "value_sha256": "da631aa6c4918091a1385877ab7e9266a6af301036617a003333906ac62f8212"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": true,
+        "timeline_text_equal": true,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-hemlock-michigan.body",
+        "body_sha256": "d1676416645de24653519723a9a365463e0af8e4f7a05a9602634b3500e6f1a4",
+        "bytes": 94612,
+        "capture_id": "nist-hemlock-michigan",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:52-04:00",
+          "article:published_time": "2024-10-21T10:20-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 85370,
+            "sha256": "07446e4ba5a4bbc0574a0af3d2cc18f8dcd258becd306ca5237e5692ff71d650",
+            "start": 80623,
+            "tag": "div",
+            "visible_text_sha256": "02febfb6e69e0e8d29b47273d6e6888ba7bb140e1a1dda98799bc40495042e84"
+          },
+          "scope": {
+            "end": 84267,
+            "sha256": "330864e9ac4bae6ac8da75a70a97bb5a9a0d6c43be2e4dfbcc594f2df80016c3",
+            "start": 83427,
+            "tag": "table",
+            "visible_text_sha256": "0774eda0ff54e276f625783ae08c9958a1eeaf6e2f3a947a4a5cc71bd945653a"
+          },
+          "timeline": {
+            "end": 84251,
+            "sha256": "76370a07c25ffcd39c0fcaaaa69970846038f6c3e707a87998dc70c770cfa06b",
+            "start": 84162,
+            "tag": "tr",
+            "visible_text_sha256": "fb247956e76af2bf48990c45a9f4536b8d47f613e4668505222f0b249a580d22"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:47.120196Z",
+        "request_started_at": "2026-09-10T16:57:46.715728Z",
+        "url": "https://www.nist.gov/chips/hemlock-semiconductor-michigan-hemlock"
+      },
+      "manual_interpretation": "The new-facility scope and 2028 production row are unchanged. Existing campus activity does not establish the new facility's commencement. Workforce, environmental/safety and financial/commercial sections are no longer carried; this is a source-content omission, not contractual or physical nonperformance.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-hemlock-semiconductor-michigan-hemlock.html",
+      "original_disposition": "issued",
+      "original_guidance_interval": {
+        "base": null,
+        "high": "2028-12-31",
+        "low": "2028-01-01"
+      },
+      "original_prediction": {
+        "base": null,
+        "high": "2028-12-31",
+        "low": "2028-01-01"
+      },
+      "original_regions": {
+        "narrative": {
+          "end": 63626,
+          "sha256": "43783db92b7ff102aeb2b860dfa9ff074c4bb9e156a4cdfb91c40c80628fedb1",
+          "start": 51629,
+          "tag": "div",
+          "visible_text_sha256": "38edcf202aa4aea6c271f4323f7ad5f2fa94f97a5765cf6fcfc39bb66839573e"
+        },
+        "scope": {
+          "end": 61922,
+          "sha256": "330864e9ac4bae6ac8da75a70a97bb5a9a0d6c43be2e4dfbcc594f2df80016c3",
+          "start": 61082,
+          "tag": "table",
+          "visible_text_sha256": "0774eda0ff54e276f625783ae08c9958a1eeaf6e2f3a947a4a5cc71bd945653a"
+        },
+        "timeline": {
+          "end": 61906,
+          "sha256": "76370a07c25ffcd39c0fcaaaa69970846038f6c3e707a87998dc70c770cfa06b",
+          "start": 61817,
+          "tag": "tr",
+          "visible_text_sha256": "fb247956e76af2bf48990c45a9f4536b8d47f613e4668505222f0b249a580d22"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "99ece2fc05c3cb0ae71c3b829ac8d484302662f32446f93d08d48c02e59136bb",
+        "document_url": "https://www.nist.gov/chips/hemlock-semiconductor-michigan-hemlock",
+        "id": "b762c782-3e2d-5305-8199-8f6bfe0a2975",
+        "license": "NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded",
+        "media_type": "text/html",
+        "metadata_json": "{\"access_class\":\"public\",\"attribution\":\"National Institute of Standards and Technology\",\"copyright_notice_url\":\"https://www.nist.gov/copyrights-disclaimers\",\"record_type\":\"award_detail_page\",\"reuse_notice\":\"NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded\",\"reuse_status\":\"public_information_unless_marked_otherwise\",\"updated_at\":\"2025-01-07T04:59-05:00\"}",
+        "published_at": "2024-10-21T14:20:00Z",
+        "retrieved_at": "2026-07-18T01:54:47Z",
+        "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+        "title": "Hemlock Semiconductor (Michigan)"
+      },
+      "original_source_age_days_at_freeze": 52,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "unchanged_target_formulation"
+    },
+    {
+      "case": {
+        "case_id": "infinera-california",
+        "disposition": "abstain_no_defensible_wholly_future_literal_interval",
+        "event_type": "production_start",
+        "geography": "San Jose, California",
+        "partition": null,
+        "project_entity_id": "8d10b984-5425-509b-92b1-95a2b6c7ae97",
+        "project_group": "infinera-linked-award",
+        "project_stable_key": "nist:project:64419244-3876-5902-940b-a41efd4b4a40",
+        "reason": "Summer 2026 is not a precise calendar interval. The legacy June-August bounds are elapsed, but neither attainment nor nonoccurrence follows. Group with the related Bethlehem project, not an independent geography holdout.",
+        "reviewed_source_period": null,
+        "scope": "site-specific fab and foundry construction/modernization project",
+        "source": "infinera-ca",
+        "stored_expected_claims": [
+          {
+            "claim_id": "b1da3ba9-5071-5c04-b014-3a45ee020ad7",
+            "claim_kind": "derived_estimate",
+            "confidence": 0.75,
+            "date_base": "2026-07-15",
+            "date_high": "2026-08-31",
+            "date_literal": null,
+            "date_low": "2026-06-01",
+            "date_precision": null,
+            "method": "nist_timeline_window_v1",
+            "milestone_type": "production_start",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-07-18T01:54:47Z",
+            "status": "expected",
+            "valid_from": "2026-07-17",
+            "value_sha256": "3e3add3327ca7151b23ffebc6f0958a0614515fe3f2d7b030db1ca17e05417bf"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": true,
+        "timeline_text_equal": true,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-infinera-california.body",
+        "body_sha256": "eed1a510b364dce4edb63c883934991995df6fb5aa4bdbdd20eafeb655d63405",
+        "bytes": 96332,
+        "capture_id": "nist-infinera-california",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:38-04:00",
+          "article:published_time": "2024-10-16T16:32-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 87059,
+            "sha256": "7986c30ab60f22ea0769dc902a49ab252cd93b88828638976cf775f74a08041b",
+            "start": 80343,
+            "tag": "div",
+            "visible_text_sha256": "69711754d054f31c63329a6ade021f7cb18f5368a53afe239694a5f139eabfe1"
+          },
+          "scope": {
+            "end": 85865,
+            "sha256": "000e16b0e47ed7e4210e261cd21784305dc31bf7555d1f12ea683cf123f6e862",
+            "start": 84764,
+            "tag": "table",
+            "visible_text_sha256": "7aaaa41867a00f947198a1ac7ae2cb171dba01cbab1eb6e71b94bd2a173c11b3"
+          },
+          "timeline": {
+            "end": 85849,
+            "sha256": "4d99f4898e719afd4414e90c96b317d1f41dc9870ece3d80635b80eb712128c5",
+            "start": 85710,
+            "tag": "tr",
+            "visible_text_sha256": "235f952c78fddfe81fc4a18982ba3c293bdb45996fabe7c22a65a5829517646b"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:53.750376Z",
+        "request_started_at": "2026-09-10T16:57:53.534139Z",
+        "url": "https://www.nist.gov/chips/infinera-california-san-jose"
+      },
+      "manual_interpretation": "San Jose retains its own fab/foundry scope and vague summer-2026 target, not a completed event or explicit nonoccurrence. The linked Bethlehem project remains separate. Workforce, environmental/safety and financial/commercial sections are no longer carried. Omission is not cancellation or a verified missed target.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-infinera-california-san-jose.html",
+      "original_disposition": "abstained",
+      "original_guidance_interval": null,
+      "original_prediction": null,
+      "original_regions": {
+        "narrative": {
+          "end": 90471,
+          "sha256": "c2bea46aadf19092c833a934ed29092f8a9bb452faafb460336c0ae1cae438a4",
+          "start": 78325,
+          "tag": "div",
+          "visible_text_sha256": "1d0c3888edbd0f5691a70bbd9d0e5cb8b5a57143c0fe17b67e6987b9f3b38476"
+        },
+        "scope": {
+          "end": 88670,
+          "sha256": "000e16b0e47ed7e4210e261cd21784305dc31bf7555d1f12ea683cf123f6e862",
+          "start": 87569,
+          "tag": "table",
+          "visible_text_sha256": "7aaaa41867a00f947198a1ac7ae2cb171dba01cbab1eb6e71b94bd2a173c11b3"
+        },
+        "timeline": {
+          "end": 88654,
+          "sha256": "4d99f4898e719afd4414e90c96b317d1f41dc9870ece3d80635b80eb712128c5",
+          "start": 88515,
+          "tag": "tr",
+          "visible_text_sha256": "235f952c78fddfe81fc4a18982ba3c293bdb45996fabe7c22a65a5829517646b"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "68c92c8def306183ac90ccd93189d5f79fb2c4038365a127bb19dee339a886e7",
+        "document_url": "https://www.nist.gov/chips/infinera-california-san-jose",
+        "id": "d216e249-e028-5202-b02d-f513fd1d2dff",
+        "license": "NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded",
+        "media_type": "text/html",
+        "metadata_json": "{\"access_class\":\"public\",\"attribution\":\"National Institute of Standards and Technology\",\"copyright_notice_url\":\"https://www.nist.gov/copyrights-disclaimers\",\"record_type\":\"award_detail_page\",\"reuse_notice\":\"NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded\",\"reuse_status\":\"public_information_unless_marked_otherwise\",\"updated_at\":\"2025-11-12T16:41-05:00\"}",
+        "published_at": "2024-10-16T20:32:00Z",
+        "retrieved_at": "2026-07-18T01:54:47Z",
+        "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+        "title": "Infinera (California)"
+      },
+      "original_source_age_days_at_freeze": 52,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "unchanged_target_formulation"
+    },
+    {
+      "case": {
+        "case_id": "infinera-pennsylvania",
+        "disposition": "abstain_no_defensible_wholly_future_literal_interval",
+        "event_type": "production_start",
+        "geography": "Bethlehem, Pennsylvania",
+        "partition": null,
+        "project_entity_id": "6e9651ba-7c7b-57e0-bb2d-5a1ad6c76432",
+        "project_group": "infinera-linked-award",
+        "project_stable_key": "nist:project:09284cc9-7298-5e83-bd17-e1e7aae084ee",
+        "reason": "Summer 2026 is vague; the expired legacy interval is not outcome evidence. The shared overview spans both sites; use the local statistics and keep this related to San Jose.",
+        "reviewed_source_period": null,
+        "scope": "site-specific advanced test and packaging facility project",
+        "source": "infinera-pa",
+        "stored_expected_claims": [
+          {
+            "claim_id": "99098405-f482-51c5-8890-6289ce10b6f9",
+            "claim_kind": "derived_estimate",
+            "confidence": 0.75,
+            "date_base": "2026-07-15",
+            "date_high": "2026-08-31",
+            "date_literal": null,
+            "date_low": "2026-06-01",
+            "date_precision": null,
+            "method": "nist_timeline_window_v1",
+            "milestone_type": "production_start",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-07-18T01:54:47Z",
+            "status": "expected",
+            "valid_from": "2026-07-17",
+            "value_sha256": "3e3add3327ca7151b23ffebc6f0958a0614515fe3f2d7b030db1ca17e05417bf"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": true,
+        "timeline_text_equal": true,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-infinera-pennsylvania.body",
+        "body_sha256": "e09cca2b41a46aeffc4fa8de5df1fe31a830260fdfb4446792a200fe54e393b8",
+        "bytes": 100795,
+        "capture_id": "nist-infinera-pennsylvania",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:37-04:00",
+          "article:published_time": "2024-10-16T21:57-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 91467,
+            "sha256": "21ed18b7391f1ec130a5e6c77f294000fbc2cdae7f67483ae5da1ddc1f3ac7f5",
+            "start": 80119,
+            "tag": "div",
+            "visible_text_sha256": "d60cfd62af5dec590049d3f215e4515d076629f61f6f62be3870390b00626906"
+          },
+          "scope": {
+            "end": 90273,
+            "sha256": "5d9abdaa4cab0d3e3050e7a5624c3a21c03ddef70b4a2ebc390ed424fd3afa5e",
+            "start": 89189,
+            "tag": "table",
+            "visible_text_sha256": "e83cf77a37d11a70d187684c3f71dc4c3848ddb33c050ff0e0c10a575568309f"
+          },
+          "timeline": {
+            "end": 90257,
+            "sha256": "4d99f4898e719afd4414e90c96b317d1f41dc9870ece3d80635b80eb712128c5",
+            "start": 90118,
+            "tag": "tr",
+            "visible_text_sha256": "235f952c78fddfe81fc4a18982ba3c293bdb45996fabe7c22a65a5829517646b"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:56.690370Z",
+        "request_started_at": "2026-09-10T16:57:55.757120Z",
+        "url": "https://www.nist.gov/chips/infinera-pennsylvania-bethlehem"
+      },
+      "manual_interpretation": "Bethlehem retains its distinct new advanced test/packaging scope, vague summer-2026 target and substantive project narrative. A preliminary-terms related link is no longer carried. The page's $456 billion overview and California's $456 million wording remain discrepant; neither is corrected or imported here. Existing company production does not settle this new facility's event.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-infinera-pennsylvania-bethlehem.html",
+      "original_disposition": "abstained",
+      "original_guidance_interval": null,
+      "original_prediction": null,
+      "original_regions": {
+        "narrative": {
+          "end": 63085,
+          "sha256": "3c1510b7adb91ceebf35fca749f8491b06720ca3587a994a38b0700b4c62fdc5",
+          "start": 51129,
+          "tag": "div",
+          "visible_text_sha256": "380efc9786b33263c83c52c47b8a442b451d28ac6b3e52bc450d542f0941a0c0"
+        },
+        "scope": {
+          "end": 61284,
+          "sha256": "5d9abdaa4cab0d3e3050e7a5624c3a21c03ddef70b4a2ebc390ed424fd3afa5e",
+          "start": 60200,
+          "tag": "table",
+          "visible_text_sha256": "e83cf77a37d11a70d187684c3f71dc4c3848ddb33c050ff0e0c10a575568309f"
+        },
+        "timeline": {
+          "end": 61268,
+          "sha256": "4d99f4898e719afd4414e90c96b317d1f41dc9870ece3d80635b80eb712128c5",
+          "start": 61129,
+          "tag": "tr",
+          "visible_text_sha256": "235f952c78fddfe81fc4a18982ba3c293bdb45996fabe7c22a65a5829517646b"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "c50556e869f664a4b7882c5e2aa26b24941739bf8b839bad9688a75a41f77026",
+        "document_url": "https://www.nist.gov/chips/infinera-pennsylvania-bethlehem",
+        "id": "621a1d84-9d6f-5415-93b0-10cbfd31ffdd",
+        "license": "NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded",
+        "media_type": "text/html",
+        "metadata_json": "{\"access_class\":\"public\",\"attribution\":\"National Institute of Standards and Technology\",\"copyright_notice_url\":\"https://www.nist.gov/copyrights-disclaimers\",\"record_type\":\"award_detail_page\",\"reuse_notice\":\"NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded\",\"reuse_status\":\"public_information_unless_marked_otherwise\",\"updated_at\":\"2025-03-13T10:41-04:00\"}",
+        "published_at": "2024-10-17T01:57:00Z",
+        "retrieved_at": "2026-07-18T01:54:47Z",
+        "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+        "title": "Infinera (Pennsylvania)"
+      },
+      "original_source_age_days_at_freeze": 52,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "unchanged_target_formulation"
+    },
+    {
+      "case": {
+        "case_id": "sk-hynix-indiana",
+        "disposition": "future_literal_interval_requires_distinct_event_contract_and_source_claim_admission",
+        "event_type": "mass_production",
+        "geography": "West Lafayette, Indiana",
+        "partition": null,
+        "project_entity_id": "93ff4826-772d-5770-8107-03b678da6ba1",
+        "project_group": "sk-hynix-indiana",
+        "project_stable_key": "nist:project:5bd14e97-967b-58dd-b35a-c70826bb676a",
+        "reason": "The typed event is mass_production despite the legacy production_start predicate. Preserve that distinction; October 1 and 0.75 are not source-supplied.",
+        "reviewed_source_period": {
+          "base": null,
+          "high": "2028-12-31",
+          "literal": "second half of 2028",
+          "low": "2028-07-01"
+        },
+        "scope": "HBM packaging line and R&D testbed facility; no numbered phase invented",
+        "source": "sk-hynix",
+        "stored_expected_claims": [
+          {
+            "claim_id": "0c1da66d-d496-5208-b706-0893771eb676",
+            "claim_kind": "derived_estimate",
+            "confidence": 0.75,
+            "date_base": "2028-10-01",
+            "date_high": "2028-12-31",
+            "date_literal": null,
+            "date_low": "2028-07-01",
+            "date_precision": null,
+            "method": "nist_timeline_window_v1",
+            "milestone_type": "mass_production",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-07-18T01:54:47Z",
+            "status": "expected",
+            "valid_from": "2026-07-17",
+            "value_sha256": "2f3613cc553fc9efd53bb341cc3c13ef4985b0f5f366abe8d6cbb5704119bf76"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": true,
+        "timeline_text_equal": true,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-sk-hynix-indiana.body",
+        "body_sha256": "1709232b2228508781fe6fae230911341f25a0c07d0844b5ca33be3b908f9fbd",
+        "bytes": 94998,
+        "capture_id": "nist-sk-hynix-indiana",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:50-04:00",
+          "article:published_time": "2024-08-05T10:42-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 85775,
+            "sha256": "a418225e767643bf15d98ae452ddd990d5b23ae3a83a324dd989fd9c1daca43e",
+            "start": 80406,
+            "tag": "div",
+            "visible_text_sha256": "2239331391f1889dbfe9cd09d861e7fd645494a9e834f7422db6c3d30030acb5"
+          },
+          "scope": {
+            "end": 85191,
+            "sha256": "9c5d75a2e75b1dcd451d9a051d812fdfa86a83a58a1155170c2e1d90bb17cfca",
+            "start": 83298,
+            "tag": "table",
+            "visible_text_sha256": "eb30760f41022a52336c9b9b3f8c7c8dc6d5b30e9158ce005e3cb30b7b501f64"
+          },
+          "timeline": {
+            "end": 85175,
+            "sha256": "b104e87d1983f410d2afc5faada91de711cc1036a71d8a82803452b0f7cca0a9",
+            "start": 85036,
+            "tag": "tr",
+            "visible_text_sha256": "f5b3aa25b29877f7ae7f2efccb8a18f3b8aa30c3f732c2bc89bccc36b76a028b"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:49.362046Z",
+        "request_started_at": "2026-09-10T16:57:49.126349Z",
+        "url": "https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette"
+      },
+      "manual_interpretation": "The West Lafayette scope and H2-2028 mass-production formulation are unchanged in both narrative and table. The previously exposed IEDC H2-2029 lead remains unadmitted and unresolved; this one NIST refresh is not the latest exhaustive guidance. Workforce, environmental/safety and financial/commercial text and a final-award related link are no longer carried. No attained mass production or cancellation is reported for this project.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-sk-hynix-indiana-west-lafayette.html",
+      "original_disposition": "issued",
+      "original_guidance_interval": {
+        "base": null,
+        "high": "2028-12-31",
+        "low": "2028-07-01"
+      },
+      "original_prediction": {
+        "base": null,
+        "high": "2028-12-31",
+        "low": "2028-07-01"
+      },
+      "original_regions": {
+        "narrative": {
+          "end": 92258,
+          "sha256": "e1a611fe7c333e5cc71167c3630fbee904153a77c97d986b536f1018688df75d",
+          "start": 78304,
+          "tag": "div",
+          "visible_text_sha256": "38334373f23fd8b18df03e7b9f2312a57296926a4a2fde0a9cc264dcf0131e0a"
+        },
+        "scope": {
+          "end": 91051,
+          "sha256": "9c5d75a2e75b1dcd451d9a051d812fdfa86a83a58a1155170c2e1d90bb17cfca",
+          "start": 89158,
+          "tag": "table",
+          "visible_text_sha256": "eb30760f41022a52336c9b9b3f8c7c8dc6d5b30e9158ce005e3cb30b7b501f64"
+        },
+        "timeline": {
+          "end": 91035,
+          "sha256": "b104e87d1983f410d2afc5faada91de711cc1036a71d8a82803452b0f7cca0a9",
+          "start": 90896,
+          "tag": "tr",
+          "visible_text_sha256": "f5b3aa25b29877f7ae7f2efccb8a18f3b8aa30c3f732c2bc89bccc36b76a028b"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "778b7e27346659d8ef03fd07b84afbb962507610eecf3bc2f794cab0001749e9",
+        "document_url": "https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette",
+        "id": "8b15719c-6244-5a8a-aee7-524fffca3b3b",
+        "license": "NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded",
+        "media_type": "text/html",
+        "metadata_json": "{\"access_class\":\"public\",\"attribution\":\"National Institute of Standards and Technology\",\"copyright_notice_url\":\"https://www.nist.gov/copyrights-disclaimers\",\"record_type\":\"award_detail_page\",\"reuse_notice\":\"NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded\",\"reuse_status\":\"public_information_unless_marked_otherwise\",\"updated_at\":\"2025-03-13T09:37-04:00\"}",
+        "published_at": "2024-08-05T14:42:00Z",
+        "retrieved_at": "2026-07-18T01:54:47Z",
+        "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+        "title": "SK hynix (Indiana)"
+      },
+      "original_source_age_days_at_freeze": 52,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "unchanged_target_formulation"
+    },
+    {
+      "case": {
+        "case_id": "tsmc-fab2",
+        "disposition": "future_literal_interval",
+        "event_type": "production_start",
+        "geography": "Phoenix, Arizona",
+        "partition": null,
+        "project_entity_id": "8f33e76f-ac2c-5962-a9a2-2cd1bcb55d86",
+        "project_group": "tsmc-arizona",
+        "project_stable_key": "reviewed-project-source:https://www.nist.gov/chips/tsmc-arizona-phoenix:Fab 2",
+        "reason": "The latest reviewed Fab 2 statement is one target, not a second project beside its earlier 2028 statement. Do not join the aggregate Arizona entity, Fab 21 table row or Hsinchu Fab 2.",
+        "reviewed_source_period": {
+          "base": null,
+          "high": "2027-12-31",
+          "literal": "second half of 2027",
+          "low": "2027-07-01"
+        },
+        "scope": "explicitly named Fab 2 project within the three-fab source page",
+        "source": "tsmc",
+        "stored_expected_claims": [
+          {
+            "claim_id": "4870d11d-3555-52f9-bf9a-8d67e200ecff",
+            "claim_kind": "source_statement",
+            "confidence": null,
+            "date_base": null,
+            "date_high": "2027-12-31",
+            "date_literal": "second half of 2027",
+            "date_low": "2027-07-01",
+            "date_precision": "half_year",
+            "method": "reviewed-source-native-project-target-v1",
+            "milestone_type": "production_start",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-09-07T09:28:12.852741Z",
+            "status": "expected",
+            "valid_from": null,
+            "value_sha256": "10675b9521ed7a46f83abd0d743b59a82bfb91f0ed0e330c8b8e61d05a727c5b"
+          },
+          {
+            "claim_id": "b350581c-3257-5e6c-aabb-aab20d884e9c",
+            "claim_kind": "source_statement",
+            "confidence": null,
+            "date_base": null,
+            "date_high": "2028-12-31",
+            "date_literal": "2028",
+            "date_low": "2028-01-01",
+            "date_precision": "year",
+            "method": "reviewed-source-native-project-target-v1",
+            "milestone_type": "production_start",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-09-07T09:28:12.852741Z",
+            "status": "expected",
+            "valid_from": null,
+            "value_sha256": "399d344f3b2e943a22f5258377a320566a9d41688b99965bf23609aae831393a"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": true,
+        "timeline_text_equal": true,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-tsmc-phoenix.body",
+        "body_sha256": "a3b4faed5ec71b86661e2e4b7af622b6014466fa6c62fa6b9b239e85a77afa96",
+        "bytes": 98013,
+        "capture_id": "nist-tsmc-phoenix",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:07-04:00",
+          "article:published_time": "2024-07-24T23:18-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 88818,
+            "sha256": "c068fc632da599d78b5c08232d9aa283ef87593c9a7ae00c6a3951637f10bc51",
+            "start": 79956,
+            "tag": "div",
+            "visible_text_sha256": "0d4fcfb03d8d553fda17fbbfd439930512c57e40710b27496e9e72b11ec7104d"
+          },
+          "scope": {
+            "end": 86773,
+            "sha256": "9483e8fc5e71671d405c575e53e355d94f035ac92af379614959a1b702cbae38",
+            "start": 84658,
+            "tag": "table",
+            "visible_text_sha256": "0011d37cfd0d79e007cb2cb491db1c3dae15333142b9b20fd4e4d0fdad0b1423"
+          },
+          "timeline": {
+            "end": 86757,
+            "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+            "start": 86457,
+            "tag": "tr",
+            "visible_text_sha256": "7d5850c28d9baa9eb9ac9340ec7f1d31371bdf4c68894de3e5c517ff88a98ddf"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:44.712082Z",
+        "request_started_at": "2026-09-10T16:57:44.497003Z",
+        "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix"
+      },
+      "manual_interpretation": "The explicitly named Fab 2 H2-2027 production formulation is unchanged from the selected September source. Financial/commercial text and older related links are no longer carried, and a new investment-news link appears. Linked-page contents are not acquired. The stale first-fab future wording remains; it cannot establish physical status. No Fab 2 outcome or new timeline revision is inferred.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0/responses/nist-tsmc-arizona.body",
+      "original_disposition": "issued",
+      "original_guidance_interval": {
+        "base": null,
+        "high": "2027-12-31",
+        "low": "2027-07-01"
+      },
+      "original_prediction": {
+        "base": null,
+        "high": "2027-12-31",
+        "low": "2027-07-01"
+      },
+      "original_regions": {
+        "narrative": {
+          "end": 90786,
+          "sha256": "4fb137c1d0dcd787f67cf5849180e1fc80c7e87fc3921df5db4f441f59c51ca3",
+          "start": 79956,
+          "tag": "div",
+          "visible_text_sha256": "7fe8f9fe38761400391b5ba3f4b21516966c7d1f424faac2cec9b1c4b05d3aff"
+        },
+        "scope": {
+          "end": 88170,
+          "sha256": "9483e8fc5e71671d405c575e53e355d94f035ac92af379614959a1b702cbae38",
+          "start": 86055,
+          "tag": "table",
+          "visible_text_sha256": "0011d37cfd0d79e007cb2cb491db1c3dae15333142b9b20fd4e4d0fdad0b1423"
+        },
+        "timeline": {
+          "end": 88154,
+          "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+          "start": 87854,
+          "tag": "tr",
+          "visible_text_sha256": "7d5850c28d9baa9eb9ac9340ec7f1d31371bdf4c68894de3e5c517ff88a98ddf"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598",
+        "document_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+        "id": "8c6af32d-6d63-556d-912f-4e39455c7be2",
+        "license": "NIST public information; marked and third-party exceptions excluded; raw retained locally",
+        "media_type": "text/html",
+        "metadata_json": "{\"claim_effective_at\":null,\"publication_time\":null,\"retained_body\":{\"path\":\"source_snapshots/curated-poll-v1/98974b8c0258460e91ae9c58a1d899e7-0/responses/nist-tsmc-arizona.body\",\"sha256\":\"6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598\"},\"retrieval_timestamp_basis\":\"UTC microsecond response-finished invocation clock\",\"source_native_project_scope\":{\"canonical_facility_assignment\":null,\"label\":\"TSMC Arizona Fab 2 planned-production project (NIST source-native)\",\"narrative_subject\":\"second fab\",\"scope\":\"Only the explicitly named Fab 2 planned-production target within the NIST three-fab Arizona page. Source-native PROJECT; no assignment to Fab 21, first fab, canonical facility, production unit or ownership/containment relationship.\",\"source_native_subject\":\"Fab 2\"}}",
+        "published_at": null,
+        "retrieved_at": "2026-09-07T04:48:35.222019Z",
+        "source_id": "a04f43a6-8a47-51de-922f-92b122c9101e",
+        "title": "NIST project target statement: TSMC Arizona Fab 2 planned-production project (NIST source-native)"
+      },
+      "original_source_age_days_at_freeze": 1,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "unchanged_target_formulation"
+    },
+    {
+      "case": {
+        "case_id": "tsmc-legacy-aggregate",
+        "disposition": "screen_out_unresolved_aggregate_phase_and_past_target",
+        "event_type": "production_start",
+        "geography": "Phoenix, Arizona",
+        "partition": null,
+        "project_entity_id": "5fdaf6c0-0f98-5019-858c-c4c17d0c70e2",
+        "project_group": "tsmc-arizona",
+        "project_stable_key": "nist:project:ed47151f-951a-5ce3-a494-31f575b321c4",
+        "reason": "An aggregate project carrying an extracted first-fab 2025 estimate is neither a second Fab 2 case nor an eligible newly frozen pre-outcome prediction.",
+        "reviewed_source_period": null,
+        "scope": "legacy aggregate multi-fab project with first-fab schedule extraction",
+        "source": "tsmc",
+        "stored_expected_claims": [
+          {
+            "claim_id": "e78eb135-98b2-5551-a381-1963d000d80d",
+            "claim_kind": "derived_estimate",
+            "confidence": 0.75,
+            "date_base": "2025-04-01",
+            "date_high": "2025-06-30",
+            "date_literal": null,
+            "date_low": "2025-01-01",
+            "date_precision": null,
+            "method": "nist_timeline_window_v1",
+            "milestone_type": "production_start",
+            "predicate": "milestone.production_start",
+            "recorded_at": "2026-07-18T01:54:47Z",
+            "status": "expected",
+            "valid_from": "2026-07-17",
+            "value_sha256": "a9c1243f4391e01b2efb2fd55bd649f3c9f0edb8a8c0344adb4f8a0abb6c9008"
+          }
+        ]
+      },
+      "comparison": {
+        "narrative_text_equal": false,
+        "scope_text_equal": false,
+        "timeline_text_equal": false,
+        "whole_body_equal": false,
+        "whole_visible_text_equal": false
+      },
+      "fresh_document": {
+        "body_path": "artifacts/2026-09-10-guidance-roster-capture-v1/responses/nist-tsmc-phoenix.body",
+        "body_sha256": "a3b4faed5ec71b86661e2e4b7af622b6014466fa6c62fa6b9b239e85a77afa96",
+        "bytes": 98013,
+        "capture_id": "nist-tsmc-phoenix",
+        "page_metadata": {
+          "article:modified_time": "2026-09-10T09:07-04:00",
+          "article:published_time": "2024-07-24T23:18-04:00"
+        },
+        "regions": {
+          "narrative": {
+            "end": 88818,
+            "sha256": "c068fc632da599d78b5c08232d9aa283ef87593c9a7ae00c6a3951637f10bc51",
+            "start": 79956,
+            "tag": "div",
+            "visible_text_sha256": "0d4fcfb03d8d553fda17fbbfd439930512c57e40710b27496e9e72b11ec7104d"
+          },
+          "scope": {
+            "end": 86773,
+            "sha256": "9483e8fc5e71671d405c575e53e355d94f035ac92af379614959a1b702cbae38",
+            "start": 84658,
+            "tag": "table",
+            "visible_text_sha256": "0011d37cfd0d79e007cb2cb491db1c3dae15333142b9b20fd4e4d0fdad0b1423"
+          },
+          "timeline": {
+            "end": 86757,
+            "sha256": "af356af636f93fca8fb49b3ffc37f3c9eb30f48be40d5a3254fe123ed7bfb094",
+            "start": 86457,
+            "tag": "tr",
+            "visible_text_sha256": "7d5850c28d9baa9eb9ac9340ec7f1d31371bdf4c68894de3e5c517ff88a98ddf"
+          }
+        },
+        "request_finished_at": "2026-09-10T16:57:44.712082Z",
+        "request_started_at": "2026-09-10T16:57:44.497003Z",
+        "url": "https://www.nist.gov/chips/tsmc-arizona-phoenix"
+      },
+      "manual_interpretation": "The full timeline differs from this case's July source because Fab 2 changed from 2028 to H2-2027, a revision already represented by the separate Fab 2 case before the frozen vintage. It is not a newly detected change, a second prediction, or an outcome for the excluded aggregate's extracted first-fab target. Preserve the exclusion and original source version.",
+      "old_source_path": "/Users/kian/Developer/semiconductor_atlas/source_snapshots/2026-07-17-open-seed/nist-chips-detail-tsmc-arizona-phoenix.html",
+      "original_disposition": "excluded",
+      "original_guidance_interval": null,
+      "original_prediction": null,
+      "original_regions": {
+        "narrative": {
+          "end": 88735,
+          "sha256": "d9212f2f533ddff2a0f3f181f771a9aef6efaf3830b6f177a56a7402fce976f2",
+          "start": 77934,
+          "tag": "div",
+          "visible_text_sha256": "d9a73f83f54efeeecf4dfb87d55a86aee705acbeba43ccd64da96f4ffb6c065a"
+        },
+        "scope": {
+          "end": 86119,
+          "sha256": "a74e99fe58dd3a3c3ead9215c5db56ec9491f778a971e364cc7f4c76991f34f6",
+          "start": 84013,
+          "tag": "table",
+          "visible_text_sha256": "9adb524f5b8588547f29827bc192b91bd4a914ede1815e67576b2e8296a39861"
+        },
+        "timeline": {
+          "end": 86103,
+          "sha256": "7cb61469b6ce9f41830019a7c4db2211928bd5b130023e26c1cb590cbbcad752",
+          "start": 85812,
+          "tag": "tr",
+          "visible_text_sha256": "50ed7b3e40cc9527722619522f1c3a6c02d7f0003f8f7f64456bf7608415b4c8"
+        }
+      },
+      "original_selected_document": {
+        "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+        "document_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+        "id": "e54850f0-e411-57e9-8f6e-819385101e86",
+        "license": "NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded",
+        "media_type": "text/html",
+        "metadata_json": "{\"access_class\":\"public\",\"attribution\":\"National Institute of Standards and Technology\",\"copyright_notice_url\":\"https://www.nist.gov/copyrights-disclaimers\",\"record_type\":\"award_detail_page\",\"reuse_notice\":\"NIST public information unless marked otherwise; credit requested; marked and third-party exceptions excluded\",\"reuse_status\":\"public_information_unless_marked_otherwise\",\"updated_at\":\"2026-01-20T15:00-05:00\"}",
+        "published_at": "2024-07-25T03:18:00Z",
+        "retrieved_at": "2026-07-18T01:54:47Z",
+        "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+        "title": "TSMC Arizona"
+      },
+      "original_source_age_days_at_freeze": 52,
+      "outcome_scored": false,
+      "physical_outcome": "unknown",
+      "target_review": "preexisting_other_phase_revision_excluded"
+    }
+  ],
+  "counts": {
+    "abstained": 3,
+    "excluded": 1,
+    "frozen_cases": 7,
+    "issued": 3,
+    "new_forecasts": 0,
+    "scored_outcomes": 0,
+    "unchanged_retained_target_formulations": 6,
+    "unique_source_urls": 6
+  },
+  "format": "semiconductor-atlas-guidance-roster-refresh-research-v1",
+  "inputs": {
+    "artifacts/2026-09-08-guidance-interval-baseline-v1.json": "d7d0b539717b3c51799710190e21c40247e8d62b20908d7035992a1ba7de4b00",
+    "artifacts/2026-09-10-guidance-roster-capture-v1/manifest.json": "652f3d675314b51f0597619b46eaacd9eb95be52771b567e99f6a2a891d9e789",
+    "review_plans/2026-09-08-guidance-interval-inputs-v1.json": "edee4f6d92a6932b58a1b1ac86d10e87f684c10b0a0a3da570b598bb659131e2"
+  },
+  "producer_sha256": "4ab130eb56decdac412cef3bd0fca0c30d6e88a518e96f4dc307bab6f7ef5a8a",
+  "reviewed_at": "2026-09-10T17:03:10.510727Z",
+  "reviewer": "local:codex-complete-roster-source-review",
+  "status": "research_sidecar_not_importable_outcome_review"
+}

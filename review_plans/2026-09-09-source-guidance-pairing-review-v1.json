@@ -1,0 +1,331 @@
+{
+  "boundaries": {
+    "calibration": false,
+    "database_modified": false,
+    "historical_atlas_forecasts": false,
+    "historical_availability_verified": false,
+    "independent_or_blind_evaluation": false,
+    "model_training": false,
+    "physical_capacity_claims": false,
+    "prospective_study_modified": false,
+    "raw_redistribution": false,
+    "representative_population": false
+  },
+  "format": "semiconductor-atlas-reviewed-source-guidance-screen-v1",
+  "input_files": {
+    "artifacts/2026-09-08-infineon-policy-probe-v1/plan.json": {
+      "bytes": 874,
+      "sha256": "769b166b31971ff00000880684d8ecbe6523da33d8e473c25cb713778ef97026"
+    },
+    "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body": {
+      "bytes": 1582,
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    "artifacts/2026-09-08-infineon-policy-probe-v1/source_checks.json": {
+      "bytes": 1256,
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/plan.json": {
+      "bytes": 1212,
+      "sha256": "a3c11b38b74613639f13ca52ecdf0e07846277d516e12f5214b2acbfb21c059f"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/responses/infineon-terms.body": {
+      "bytes": 1570215,
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    "artifacts/2026-09-08-infineon-terms-probe-v1/source_checks.json": {
+      "bytes": 1292,
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/dependencies/0-infineon-robots.body": {
+      "bytes": 1582,
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/dependencies/1-source_checks.json": {
+      "bytes": 1256,
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/dependencies/2-infineon-terms.body": {
+      "bytes": 1570215,
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/dependencies/3-source_checks.json": {
+      "bytes": 1292,
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/manifest.json": {
+      "bytes": 1171,
+      "sha256": "74da200537209712d74d30a99cc080013504985f4963cc1c7009d02002d1c261"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/plan.json": {
+      "bytes": 3573,
+      "sha256": "4e6fd176379c0fe5f9ca6dfee99a18eadd63a85deadbcc99ca9bed438a2aef49"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body": {
+      "bytes": 1546401,
+      "sha256": "de91f7d6bff436dbe66063afe25dc381e68da815cbd90d42fad8662ece54ce37"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-q1-2021-guidance.body": {
+      "bytes": 488791,
+      "sha256": "c6f14f406906aeb16fc81f984157280b8f5b11098c1a2b3a3e3232dea20e615e"
+    },
+    "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/source_checks.json": {
+      "bytes": 2890,
+      "sha256": "d2f7065c01352e137961b772182632bf9506acb58d67d681077605a103d0c9ff"
+    },
+    "artifacts/2026-09-09-villach-guidance-visual-v1/guidance-layout.txt": {
+      "bytes": 60540,
+      "sha256": "527f3ac0b8a9a0bf3ac1ba3e9c82241fd97c6a7a5238c5a4d1ea6b7855a57f88"
+    },
+    "artifacts/2026-09-09-villach-guidance-visual-v1/manifest.json": {
+      "bytes": 1051,
+      "sha256": "9dd805c6553eeefe46989cbc7020ec3faa038b8946900ee0d012fe927db5f5a9"
+    },
+    "artifacts/2026-09-09-villach-guidance-visual-v1/page-1.png": {
+      "bytes": 355273,
+      "sha256": "06fb828c4e846945470ddfba2c4100065cd9e39103d88e1ed3b7c98afa0f2362"
+    },
+    "artifacts/2026-09-09-villach-guidance-visual-v1/page-15.png": {
+      "bytes": 307286,
+      "sha256": "2fc5fff8f4b73269eda1c222dfc78d88e0edbf950413abfc6a0d4646bc1848ec"
+    },
+    "artifacts/2026-09-09-villach-guidance-visual-v1/page-7.png": {
+      "bytes": 298653,
+      "sha256": "4302ef7a85e5ed83a845bba34eee61d4a511770e95dac9b98e29900606c8ca67"
+    },
+    "artifacts/2026-09-09-villach-guidance-visual-v1/review.json": {
+      "bytes": 2601,
+      "sha256": "4ce9991b0103c0fc70b2818cd1b7d87463df8f4b9c82e0ece4b20015273a4b46"
+    },
+    "review_plans/2026-09-07-eea-industrial-v16-scope-research-v2.json": {
+      "bytes": 268132,
+      "sha256": "b6ff8b365d012c5036aec5b5529ee4f844f49ee2ca2cf9368b79b99361f8cba8"
+    },
+    "review_plans/2026-09-08-tsmc-operating-fab-correspondence.json": {
+      "bytes": 6326,
+      "sha256": "3686fc58176cd9eec4acab39fa8a7d7c22022777b96e9dc26c14fe3e465321c9"
+    },
+    "review_plans/2026-09-09-project-guidance-pairing-screen.md": {
+      "bytes": 3329,
+      "sha256": "2c398ed44e31c407290465f320aef9e1e593c8422a5766e8972e7c09053835e3"
+    },
+    "review_plans/2026-09-09-villach-guidance-outcome-source-acquisition.json": {
+      "bytes": 3573,
+      "sha256": "4e6fd176379c0fe5f9ca6dfee99a18eadd63a85deadbcc99ca9bed438a2aef49"
+    }
+  },
+  "outcomes": [
+    {
+      "case_id": "infineon-villach-new-fab-2021",
+      "event_type": "production_start",
+      "outcome": {
+        "high": "2021-08-31",
+        "low": "2021-08-01",
+        "status": "observed"
+      },
+      "project_group": "infineon:villach",
+      "project_id": "infineon:villach-new-power-fab-2021",
+      "reason": "Issuer-reported August 2021 production-start month, not opening or full ramp.",
+      "scope_id": "new-2021-fab-not-campus",
+      "source_document_date": "2021-12-07",
+      "source_reference_ids": [
+        "infineon-fy2021"
+      ]
+    },
+    {
+      "case_id": "samsung-austin-nand-lead",
+      "event_type": "event_correspondence_unresolved",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "samsung:austin",
+      "project_id": "samsung:austin-new-nand-fab-lead",
+      "reason": "No accepted outcome in this retained evidence screen; missing evidence is not nonoccurrence.",
+      "scope_id": "new-nand-fab-not-taylor",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "samsung-screen"
+      ]
+    },
+    {
+      "case_id": "tsmc-arizona-first-fab-lead",
+      "event_type": "event_correspondence_unresolved",
+      "outcome": {
+        "status": "unknown"
+      },
+      "project_group": "tsmc:arizona",
+      "project_id": "tsmc:arizona-first-fab-lead",
+      "reason": "No accepted outcome in this retained evidence screen; missing evidence is not nonoccurrence.",
+      "scope_id": "first-fab-event-unresolved-not-fab21-table-alias",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "tsmc-screen"
+      ]
+    }
+  ],
+  "prior_exposure": "Outcome-informed research and implementation. The September 7 scope research v2 already records access at 2026-09-07T16:33:44Z to the successful September 2021 Villach factory announcement. The new sources were inspected before this review and execution. No blindness, historical knowledge replay, prospective issue clock or original-schedule completeness is claimed.",
+  "reviewed_at": "2026-09-09T00:25:41.026692Z",
+  "reviewed_by": "Codex main reviewer; separate Villach source/scope audit by villach_quantity_schema",
+  "rights": "Infineon attribution retained. Local informational noncommercial review under reread retained Terms of Use section 3.2; original source bytes/notices unchanged. No source redistribution, commercial-use permission or model training follows. Research-note URLs for other publishers do not grant acquisition rights.",
+  "roster": [
+    {
+      "case_id": "infineon-villach-new-fab-2021",
+      "disposition": "eligible",
+      "event_type": "production_start",
+      "project_group": "infineon:villach",
+      "project_id": "infineon:villach-new-power-fab-2021",
+      "reason": "Exact retained new-project target and subsequent production-start wording manually matched.",
+      "scope_id": "new-2021-fab-not-campus",
+      "source_document_date": "2021-02-04",
+      "source_reference_ids": [
+        "infineon-q1-2021"
+      ],
+      "target": {
+        "high": "2021-09-30",
+        "kind": "interval",
+        "low": "2021-07-01"
+      }
+    },
+    {
+      "case_id": "samsung-austin-nand-lead",
+      "disposition": "unresolved",
+      "event_type": "event_correspondence_unresolved",
+      "project_group": "samsung:austin",
+      "project_id": "samsung:austin-new-nand-fab-lead",
+      "reason": "Retained primary evidence, event correspondence and source dates are insufficient; keep in screen without scoring.",
+      "scope_id": "new-nand-fab-not-taylor",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "samsung-screen"
+      ],
+      "target": null
+    },
+    {
+      "case_id": "tsmc-arizona-first-fab-lead",
+      "disposition": "unresolved",
+      "event_type": "event_correspondence_unresolved",
+      "project_group": "tsmc:arizona",
+      "project_id": "tsmc:arizona-first-fab-lead",
+      "reason": "Retained primary evidence, event correspondence and source dates are insufficient; keep in screen without scoring.",
+      "scope_id": "first-fab-event-unresolved-not-fab21-table-alias",
+      "source_document_date": null,
+      "source_reference_ids": [
+        "tsmc-screen"
+      ],
+      "target": null
+    }
+  ],
+  "selection": "Three purposively selected research candidates with known possible outcomes, not an announcement-time or publisher-complete population. Only the retained Infineon pair is eligible for descriptive arithmetic; both other candidates stay unresolved. Multiple source statements from one project do not create independent projects.",
+  "source_references": {
+    "infineon-fy2021": {
+      "body_path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body",
+      "capture": {
+        "attempt_id": "infineon-villach-fy2021-outcome",
+        "ledger_path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T00:15:03.080386Z",
+      "interpretation": "Complete HTML h1/date and factual paragraphs were inspected in source, with exact body bytes retained. The issuer explicitly says the new fully automated 300-mm thin-wafer fab started production in August 2021, separately from September official opening and a subsequent four-year ramp. Whole-site 8.72 billion chips is not new-fab output. Source-markup review is not rendered-browser visibility verification. New-project correspondence is a manual source-native match, not canonical registry identity or independent physical measurement.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2021-12-07",
+      "source_url": "https://www.infineon.com/regional/austria/press-release/2021/fiscal-year-20-21",
+      "support_spans": [
+        {
+          "end": 1494567,
+          "path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body",
+          "sha256": "7831b643bae16e2c81d409af749620a40b0f7435855985f79486e90a1c4fc43b",
+          "start": 1494466
+        },
+        {
+          "end": 1494995,
+          "path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body",
+          "sha256": "c788893b7e107c2a6528728e13812beaa8018a83042ff146fbc997ed19be681c",
+          "start": 1494953
+        },
+        {
+          "end": 1497244,
+          "path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body",
+          "sha256": "2abe3c16d99d38b7101c151073ae5b210ce3371813ae09e0e4672fe24d89b04c",
+          "start": 1496284
+        },
+        {
+          "end": 1498775,
+          "path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body",
+          "sha256": "f1ae35c22e4a2a3ad93b1fa02ba6422b6424ddca3ca9949b2c7414791dac5487",
+          "start": 1498242
+        },
+        {
+          "end": 1503184,
+          "path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-fy2021-outcome.body",
+          "sha256": "ed5a9680b7db4b16173ace0af16b4c8ffaaf5e7ff37077419c3f946c7c8031eb",
+          "start": 1502532
+        }
+      ]
+    },
+    "infineon-q1-2021": {
+      "body_path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/responses/infineon-villach-q1-2021-guidance.body",
+      "capture": {
+        "attempt_id": "infineon-villach-q1-2021-guidance",
+        "ledger_path": "artifacts/2026-09-09-villach-guidance-outcome-capture-v1/source_checks.json"
+      },
+      "capture_finished_at": "2026-09-09T00:15:00.606727Z",
+      "interpretation": "Visually reviewed new Villach power-semiconductor plant startup target, last quarter of FY2021, derived July 1-September 30. The title supplies production-start semantics. The printed date is a publisher assertion, not historical capture or verified publication time. This is a revised target; the superseded target is not supplied.",
+      "kind": "reviewed_primary",
+      "source_document_date": "2021-02-04",
+      "source_url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2021/infxx202101-035e.pdf",
+      "support_spans": [
+        {
+          "end": 2537,
+          "path": "artifacts/2026-09-09-villach-guidance-visual-v1/guidance-layout.txt",
+          "sha256": "a40b63aee763da713d61d61237cc08cc29d0a9b1b2f12df5e438fbd0a636c91f",
+          "start": 0
+        },
+        {
+          "end": 25197,
+          "path": "artifacts/2026-09-09-villach-guidance-visual-v1/guidance-layout.txt",
+          "sha256": "b9165a081e5152f5db8c6e866191c1acef534773e45c0bd8674ad01cdaec6ec2",
+          "start": 22302
+        },
+        {
+          "end": 60539,
+          "path": "artifacts/2026-09-09-villach-guidance-visual-v1/guidance-layout.txt",
+          "sha256": "1e1e1c9d424f1bb44ea8acecd9ebac7d6c2fcab0453db6b1ec242ec0b1a92728",
+          "start": 55539
+        }
+      ]
+    },
+    "samsung-screen": {
+      "body_path": "review_plans/2026-09-09-project-guidance-pairing-screen.md",
+      "capture": null,
+      "capture_finished_at": null,
+      "interpretation": "Outcome-exposed unresolved research lead; not retained primary-source evidence or an eligible scoring input.",
+      "kind": "screening_note",
+      "source_document_date": null,
+      "source_url": null,
+      "support_spans": [
+        {
+          "end": 2983,
+          "path": "review_plans/2026-09-09-project-guidance-pairing-screen.md",
+          "sha256": "4cf9cce590fea602328853dcf9ad2f74d5a4029dbca45eff37eb52e29a900c33",
+          "start": 2414
+        }
+      ]
+    },
+    "tsmc-screen": {
+      "body_path": "review_plans/2026-09-09-project-guidance-pairing-screen.md",
+      "capture": null,
+      "capture_finished_at": null,
+      "interpretation": "Outcome-exposed unresolved research lead; not retained primary-source evidence or an eligible scoring input.",
+      "kind": "screening_note",
+      "source_document_date": null,
+      "source_url": null,
+      "support_spans": [
+        {
+          "end": 2414,
+          "path": "review_plans/2026-09-09-project-guidance-pairing-screen.md",
+          "sha256": "037806e174d010cff5dc2aee10b0efef1c693b231b2d4d1d957db02ee577e390",
+          "start": 1267
+        }
+      ]
+    }
+  }
+}

@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 MIGRATION_PATTERN = re.compile(r"^(\d{4})_(.+)\.sql$")
-REBUILD_MIGRATIONS = frozenset({5})
+REBUILD_MIGRATIONS = frozenset({5, 10})
 
 
 def _timestamp_microseconds(value: object) -> int | None:
@@ -26,12 +26,36 @@ def _timestamp_microseconds(value: object) -> int | None:
         return None
 
 
+def register_clock_functions(connection: sqlite3.Connection) -> None:
+    """Register once: replacing a UDF while a query is active is invalid in SQLite."""
+    if connection.execute(
+        "SELECT 1 FROM pragma_function_list WHERE name = 'atlas_timestamp_us' AND narg = 1"
+    ).fetchone() is None:
+        connection.create_function("atlas_timestamp_us", 1, _timestamp_microseconds, deterministic=True)
+
+
 def knowledge_clock_sql(connection: sqlite3.Connection) -> str:
     """Schema 5 knowledge cutoffs retain microseconds instead of SQLite date rounding."""
     if schema_version(connection) < 5:
         return "julianday"
-    connection.create_function("atlas_timestamp_us", 1, _timestamp_microseconds, deterministic=True)
+    register_clock_functions(connection)
     return "atlas_timestamp_us"
+
+
+def admission_clock_sql(connection: sqlite3.Connection) -> str:
+    """Schema 10 writes/guards use the exact reader clock; historical schemas stay replayable."""
+    if schema_version(connection) < 10:
+        return "julianday"
+    register_clock_functions(connection)
+    return "atlas_timestamp_us"
+
+
+def chronological_order_sql(connection: sqlite3.Connection, expression: str) -> str:
+    """Order trusted timestamp SQL by instant in schema 10, preserving legacy text order."""
+    if schema_version(connection) < 10:
+        return expression
+    register_clock_functions(connection)
+    return f"atlas_timestamp_us({expression})"
 
 
 def connect(path: str | Path) -> sqlite3.Connection:
@@ -40,16 +64,21 @@ def connect(path: str | Path) -> sqlite3.Connection:
         database_path.parent.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(str(database_path))
     connection.row_factory = sqlite3.Row
+    register_clock_functions(connection)
     connection.execute("PRAGMA foreign_keys = ON")
     connection.execute("PRAGMA busy_timeout = 5000")
     return connection
 
 
-def apply_migrations(connection: sqlite3.Connection, *, target_version: int | None = None) -> list[int]:
+def apply_migrations(connection: sqlite3.Connection, *, target_version: int | None = None,
+                     applied_at: str | None = None) -> list[int]:
     if connection.in_transaction:
         raise ValueError("finish the current transaction before applying migrations")
     if target_version is not None and (type(target_version) is not int or target_version < 1):
         raise ValueError("target_version must be a positive schema version")
+    if applied_at is not None and _timestamp_microseconds(applied_at) is None:
+        raise ValueError("migration applied_at requires an aware timestamp")
+    register_clock_functions(connection)
     connection.execute(
         """
         CREATE TABLE IF NOT EXISTS schema_migrations (
@@ -96,11 +125,25 @@ def apply_migrations(connection: sqlite3.Connection, *, target_version: int | No
             connection.executescript(
                 "BEGIN IMMEDIATE;\n"
                 + script
-                + "\nINSERT INTO schema_migrations(version, name, sha256) VALUES ("
-                + f"{version}, '{quoted_name}', '{checksum}');\n"
+                + "\nINSERT INTO schema_migrations(version, name, sha256"
+                + (", applied_at" if applied_at is not None else "") + ") VALUES ("
+                + f"{version}, '{quoted_name}', '{checksum}'"
+                + (", '" + applied_at.replace("'", "''") + "'" if applied_at is not None else "") + ");\n"
             )
             if connection.execute("PRAGMA foreign_key_check").fetchone() is not None:
                 raise RuntimeError(f"migration {version:04d} violates a foreign key")
+            if version in {10, 11, 12}:
+                # Rebuilding tables does not replay cross-table identity guards.
+                # Validate under the new schema while rollback is still possible.
+                from .repository import validate_database
+
+                errors = validate_database(connection)
+                if errors:
+                    raise sqlite3.IntegrityError(
+                        f"migration {version:04d} "
+                        + {10: "exact knowledge", 11: "milestone upper bound", 12: "source family assignment"}[version]
+                        + " validation failed: " + "; ".join(errors)
+                    )
             connection.commit()
         except BaseException:
             if connection.in_transaction:

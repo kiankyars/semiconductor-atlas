@@ -1,0 +1,109 @@
+{
+  "format": "semiconductor-atlas-ase-k18b-claim-admission-review-v1",
+  "decision": "accept_two_source_native_k18b_milestone_statements",
+  "reviewed_at": "2026-09-08T21:19:11.144997Z",
+  "reviewed_by": "Codex primary claim reviewer",
+  "prior_exposure": "Exposed to the retained source and previous source-text review. This is explicit primary adjudication, not blind or independent physical corroboration.",
+  "selection": "Two milestone statements in the complete retained opening paragraph: historical groundbreaking bound to publication context, and expected building completion. No production, HVM, qualification, installed capacity, ownership, geometry or forecast claim is selected. The CMS update and site footer are not event clocks.",
+  "parent_database_sha256": "131bcc1b1b6727cfefd4f02e7bbeeb90bdd168e528f5e78d7393892d3160a186",
+  "source_url": "https://invest.kcg.gov.tw/News_Content.aspx?n=8CE973AC5F6EE514&s=BA84DF962F234D8E&sms=D7173346CB507235",
+  "source_sha256": "34c23c7e387e8f7e3b25b99939839b84cb68bbf52399f7763a003202a0234380",
+  "source_bytes": 106582,
+  "project": {
+    "source_native_subject": "K18B",
+    "label": "ASE K18B building project (source-native, canonical identity unresolved)",
+    "scope": "One K18B building project; not the Kaohsiung campus aggregate, Dashe K28 or Nanzih Third Park.",
+    "canonical_facility_assignment": null
+  },
+  "access_review": {
+    "path": "review_plans/2026-09-08-ase-k18b-kcg-source-review.json",
+    "sha256": "7e1a8a71e9a863b0249b832ffba2cece482a1e032f7605400a4ab0e782c7067c"
+  },
+  "source_review": {
+    "path": "review_plans/2026-09-08-ase-k18b-source-text-adjudication.json",
+    "sha256": "75182441534972dc008dfa8b25066aa0a41c1d5769dba926ff63e09a779ec362"
+  },
+  "source": {
+    "events": {
+      "path": "artifacts/2026-09-08-ase-k18b-source-events-v1.json",
+      "sha256": "86dcc3fd7ad293ce306ebb9ac0c8ca7ab7ba50bfe6e232c2fc4be0f967367aff"
+    },
+    "queue_head": "845503598dcde237c431beb86f6b9d0a70cb8204fc05b19685c7a79bda0353fb",
+    "candidate_id": "d475a8b0af9765f6811776fc60d1e3b0b04ed9ab7907ac99e1b4576ff77400ef",
+    "expected_event_id": "082c0d973377079562a894f0dbdcc277a1a8353606df247baa2a29c9f8b4062e",
+    "run_id": "5f1ffe2c3a6c7b4364f51f996cb17cf2ccfd3403166d7ddf5a3eed5a290e61b4",
+    "document_id": "kcg-ase-k18b-groundbreaking",
+    "plan_sha256": "3ad137518e95404316a34cda938a58887f11531f17b656786f506d27f688bf9a",
+    "text_sha256": "1a55dd9b6693efa98b7702232206392e3c1222a4d87470a20e43a8d2dfa744e9",
+    "body": {
+      "path": "artifacts/2026-09-08-ase-k18b-kcg-capture-v1/responses/kcg-ase-k18b-groundbreaking.body",
+      "sha256": "34c23c7e387e8f7e3b25b99939839b84cb68bbf52399f7763a003202a0234380"
+    },
+    "retrieved_at": "2026-09-08T20:58:37.042730Z"
+  },
+  "evidence": {
+    "complete_opening_paragraph": {
+      "start": 80706,
+      "end": 81290,
+      "sha256": "9e6e9a07473c5ebdf2447192267f44bb4e3b0a29647db207e09f9f50a90fc571"
+    },
+    "publication_date": {
+      "start": 83405,
+      "end": 83449,
+      "sha256": "59b4ec720e56d77cb2848f211b764d26bff91c87c4a6964b5de30a07af0dfcd9"
+    },
+    "cms_update_and_publisher": {
+      "start": 80548,
+      "end": 80651,
+      "sha256": "5322af8770c5072b62626c147fd9724a63cd8733876c3b9340f43467c3a4c227"
+    }
+  },
+  "rows": [
+    {
+      "key": "groundbreaking",
+      "value": {
+        "milestone_type": "groundbreaking",
+        "status": "completed",
+        "date_low": "2025-10-03",
+        "date_base": null,
+        "date_high": "2025-10-03",
+        "date_precision": "day",
+        "date_literal": "今(3)日 / 上版日期：114-10-03"
+      },
+      "support": ["complete_opening_paragraph", "publication_date"],
+      "dating_basis": "Reviewer binds the relative third-day ceremony statement to the article publication date; ROC year 114 + 1911 = 2025. Not an independently dated observation."
+    },
+    {
+      "key": "building_complete",
+      "value": {
+        "milestone_type": "building_complete",
+        "status": "expected",
+        "date_low": "2028-01-01",
+        "date_base": null,
+        "date_high": "2028-03-31",
+        "date_precision": "quarter",
+        "date_literal": "2028年第一季"
+      },
+      "support": ["complete_opening_paragraph"],
+      "dating_basis": "Source-stated first-quarter building-completion target; inclusive calendar bounds, no midpoint. Not production, mass production, HVM or qualification."
+    }
+  ],
+  "boundaries": {
+    "baseline_modified": false,
+    "current_stage_reaffirmed": false,
+    "canonical_assignment": false,
+    "production_attainment": false,
+    "capacity_claim": false,
+    "geometry_inferred": false,
+    "ownership_assigned": false,
+    "qualification_yield_utilization_inferred": false,
+    "independent_corroboration": false,
+    "forecast_created": false,
+    "forecast_scored": false,
+    "delivery_eligible": false,
+    "raw_redistribution": false,
+    "model_training": false,
+    "scheduled_execution_rerouted": false,
+    "registered_study_modified": false
+  }
+}

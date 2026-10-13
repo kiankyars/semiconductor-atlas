@@ -1,0 +1,60 @@
+{
+  "format": "semiconductor-atlas-bounded-reviewed-acquisition-v1",
+  "review_id": "infineon-villach-output-local-review-2026-09-08",
+  "reviewed_at": "2026-09-08T21:45:00Z",
+  "expires_at": "2026-09-09T21:45:00Z",
+  "decision": "approved_exact_urls_local_informational_noncommercial_review_only",
+  "purpose": "Retain the two public Infineon documents identified through official issuer web pages and search. Examine site-specific fiscal-year production and its scope. No source statement is accepted by acquisition alone.",
+  "rights_review": "The complete retained Terms of Use, sections 1 through 13, were reviewed. Section 3.2 explicitly permits informational non-commercial or personal downloading with materials unchanged, notices retained and Infineon identified. Retain originals locally and attribute Infineon. No commercial-use license, redistribution approval for an Atlas release, model-training permission, endorsement or logo-use permission is inferred. Secure sections remain excluded.",
+  "robots_review": "The retained wildcard policy has no exclusion matching either exact document path or the terms path. The PDF is public, not under /assets/row/restricted/. Search, filter and campaign-parameter exclusions are not bypassed. No cookies, credentials, redirects or retries are used.",
+  "dependencies": [
+    {
+      "path": "artifacts/2026-09-08-infineon-policy-probe-v1/responses/infineon-robots.body",
+      "sha256": "52b64338e247089ea9ffefd91a49d2527e8c94ec956f67cf7d2b3487f46ed196"
+    },
+    {
+      "path": "artifacts/2026-09-08-infineon-policy-probe-v1/source_checks.json",
+      "sha256": "d1d016feb9bfcfcc5188d3fecfd3335b94747f42b8188d934f05f1156852ddf3"
+    },
+    {
+      "path": "artifacts/2026-09-08-infineon-terms-probe-v1/responses/infineon-terms.body",
+      "sha256": "43e44d925d98f81e3adb469ceb06a59d8a1a5c30657cf4380938b568c7aa5ffa"
+    },
+    {
+      "path": "artifacts/2026-09-08-infineon-terms-probe-v1/source_checks.json",
+      "sha256": "64b275c13b6c20eec68cffef39bbb039ee760df91ca6d806738c2c477bbbd41d"
+    }
+  ],
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 40,
+  "max_response_bytes": 33554432,
+  "minimum_interval_seconds": 2,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "raw_redistribution": false,
+  "collector_enabled": false,
+  "entries": [
+    {
+      "id": "infineon-villach-fy2025-release",
+      "url": "https://www.infineon.com/regional/austria/press-release/2025/fiscal-year-25",
+      "purpose": "source_document",
+      "company": "Infineon",
+      "country_code": "AT",
+      "source_family": "infineon-issuer",
+      "scope": "Infineon Austria fiscal-year-2025 results release. Any Villach production passage remains distinct from company-wide financial and employment figures.",
+      "media_types": ["text/html"]
+    },
+    {
+      "id": "infineon-villach-environment-2025",
+      "url": "https://www.infineon.com/row/public/documents/regions/austria/2025-uwe-de-web.pdf",
+      "purpose": "source_document",
+      "company": "Infineon",
+      "country_code": "AT",
+      "source_family": "infineon-issuer",
+      "scope": "Public Austrian environmental statement candidate. Actual title, edition, period, site scope, units and verification scope must be checked against retained PDF pages, not inferred from its URL or search date.",
+      "media_types": ["application/pdf"]
+    }
+  ]
+}

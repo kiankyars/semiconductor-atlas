@@ -1,0 +1,109 @@
+{
+  "format": "semiconductor-atlas-source-research-decision-v1",
+  "review_id": "umc-capacity-source-research-2026-09-08",
+  "review_completed_at": "2026-09-08T20:12:38Z",
+  "reviewer": "Codex primary-source research with independent local data-contract review",
+  "decision": "preserve_source_lead_no_document_acquisition_or_claim_admission",
+  "collector_enabled": false,
+  "claim_acceptance": false,
+  "baseline_modified": false,
+  "registered_study_modified": false,
+  "review_method": "Primary-source web text and official navigation review plus direct robots probes. This is original research metadata, not a retained manufacturing evidence packet. No complete visual table review or exact source-byte validation is claimed.",
+  "issuer_documents": [
+    {
+      "document": "UMC 2025 Form 20-F",
+      "official_index": "https://www.umc.com/en/Download/annual_reports",
+      "url": "https://www.umc.com/upload/media/08_Investors/Annual_Reports/Form-20_pdf_eng/Form_20-F_December_31_2025.pdf",
+      "locator": "PDF page 30, printed page 27, manufacturing table immediately before Capacity and Utilization",
+      "observed_scope": "Twelve source-native fab rows, three annual capacity columns for 2023 through 2025, and separate company-total capacity, output and average-utilization rows.",
+      "unit_review": "The annual filing table reports thousands of 12-inch wafer equivalents. Native 6-inch and 8-inch fab figures must not be interpreted as native wafer counts.",
+      "semantics_review": "The table introduction calls per-fab capacity estimated annual full capacity. Actual output and utilization are company totals, not per-fab quantities. An installed-equipment, qualification or economically-usable basis is not established by this wording.",
+      "source_bytes_retained": false
+    },
+    {
+      "document": "UMC 2Q 2026 report",
+      "official_index": "https://www.umc.com/en/Download/quarterly_results/QuarterlyResultsDetail/2026/2026Q2",
+      "url": "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf",
+      "publication_date": "2026-07-29",
+      "publication_precision": "day",
+      "locators": ["PDF page 8, printed page 8, wafer shipments and utilization", "PDF page 9, printed page 9, capacity tables and footnotes"],
+      "observed_scope": "Twelve fab rows in adjacent annual and quarterly tables. Quarterly columns are 3Q26E, 2Q26, 1Q26 and 4Q25; the E marker is preserved as source guidance at publication.",
+      "unit_review": "Fab rows use thousands of native-diameter wafers; totals use 12-inch equivalents. This differs from the Form 20-F unit contract. Preserve publisher rounding and totals rather than requiring an exact sum using a rounded conversion coefficient.",
+      "semantics_review": "The footnote describes estimated capacity based on calculated maximum output, not design capacity, with equipment-delivery and ramp dependencies. Removing an E marker does not make later reported capacity an independently measured outcome. Company shipments are not the wafer-out numerator used by the utilization definition.",
+      "source_bytes_retained": false
+    },
+    {
+      "document": "UMC 1Q 2026 report",
+      "official_index": "https://www.umc.com/en/Download/quarterly_results/QuarterlyResultsDetail/2026/2026Q1",
+      "url": "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q1_2026/UMC26Q1_report.pdf",
+      "review_status": "Official navigation confirmed; complete table and footnotes not independently verified in this pass.",
+      "source_bytes_retained": false
+    }
+  ],
+  "issuer_policy": {
+    "robots_url": "https://www.umc.com/robots.txt",
+    "retained_probe_plan": "review_plans/2026-09-08-umc-policy-probe.json",
+    "retained_probe_plan_sha256": "1ab64e6d70e1e0d7c40acc05ef6ae3b8cdc6827ef10b58110725c5a66fb96750",
+    "retained_ledger": "artifacts/2026-09-08-umc-policy-probe-v1/source_checks.json",
+    "retained_ledger_sha256": "f9de6ab74fca63d7ef2940e6c60d08954a7f7a7aa1f82b388f291c5bcd20aaf0",
+    "retained_body": "artifacts/2026-09-08-umc-policy-probe-v1/responses/umc-robots.body",
+    "body_bytes": 64,
+    "body_sha256": "f75e85ea0c8bf4c0557dd7e992d19b32a7fd13bf992f9bce3a0a014fc21c9dca",
+    "started_at": "2026-09-08T20:08:50.161638Z",
+    "finished_at": "2026-09-08T20:08:50.569047Z",
+    "http_status": 200,
+    "content_type": "text/plain",
+    "robots_assessment": "The wildcard user-agent disallows /upload/. This covers all three report paths and the linked terms PDF. No direct collector request for those documents was made. A permitted landing page does not authorize a disallowed linked payload.",
+    "terms_url": "https://www.umc.com/upload/media/index/Terms_and_Conditions_2020.pdf",
+    "terms_review_method": "Complete web-extracted two-page text reviewed before the robots decision; no local PDF retained.",
+    "terms_assessment": "UMC copyright is retained. The text restricts promotional use without written permission and warns that dated information may be superseded. No blanket redistribution, model-training or automated-archive license is inferred. The robots exclusion independently prevents this proposed direct acquisition.",
+    "initial_probe_disclosure": "An earlier direct robots read also showed the same rules, but its response was only tool-visible. The retained packet contains one later exact-byte probe, not every prior web or terminal observation."
+  },
+  "distinct_statutory_filing_lead": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526193757/d91630d20f.htm",
+    "cik": "1033767",
+    "accession": "0001193125-26-193757",
+    "form": "20-F",
+    "period_of_report": "2025-12-31",
+    "discovery": "SEC-hosted search result displays the manufacturing table. A full web open failed the research tool's content-length bound; neither result is an archived filing.",
+    "direct_policy_probe": {
+      "url": "https://www.sec.gov/robots.txt",
+      "request_count": 1,
+      "outcome": "access_rejection_html_not_robots",
+      "response_title": "SEC.gov | Request Rate Threshold Exceeded",
+      "http_status": null,
+      "exact_request_clocks": null,
+      "raw_response_retained": false,
+      "raw_response_sha256": null,
+      "assessment": "The bounded direct probe printed an access-rejection page. This invocation did not retain HTTP metadata or raw response bytes, so no exact status, source-policy hash or cause of rejection is asserted. No filing request, changed user agent, alternate-host workaround or retry followed."
+    },
+    "source_bytes_retained": false,
+    "underlying_rights_review_complete": false
+  },
+  "data_contract_findings": {
+    "current_core_capacity_encoding": "CapacityValue requires a non-null one-of-five basis and numeric low/base/high. It cannot truthfully encode an issuer maximum-output estimate with unresolved physical basis.",
+    "rejected_shortcuts": [
+      "Relabel all issuer estimates as announced, tool_installed, qualified or economically_usable.",
+      "Allocate company output or utilization to each fab.",
+      "Divide shipments by capacity to invent utilization.",
+      "Use publication or retrieval time as the physical effective date.",
+      "Collapse annual and quarterly periods or native and equivalent wafer units into one claim series.",
+      "Treat Q1 forward guidance and a later reported estimate as an independently measured forecast/outcome pair."
+    ],
+    "recommended_followup": "After admissible exact source acquisition, use numeric source-statement scalars with validated quantity metadata for metric, unit and scale, period, report vintage, numeric qualifier, source-native accounting scope and definition. Keep physical basis unresolved and exclude these observations from physical-capacity exports until separately supported. Each quantity series must include its full semantic dimensions; the core supersedes same-series null-effective-date claims.",
+    "full_denominator_gate": "Any future importer must review every row and selected column of the complete bounded table, together with headers and footnotes. No numeric cell is admitted from this research record."
+  },
+  "boundaries": {
+    "manufacturing_claims_added": 0,
+    "non_announced_capacity_claims_added": 0,
+    "output_or_utilization_claims_added": 0,
+    "source_documents_archived": 0,
+    "independent_corroboration": false,
+    "canonical_facility_identity": false,
+    "raw_redistribution": false,
+    "model_training": false,
+    "forecast_calibration": false,
+    "absence_inference": false
+  },
+  "next_action": "Resolve a permitted exact-byte acquisition for the statutory filing, or obtain issuer permission before accessing disallowed report paths. Then visually verify complete tables and admit source-native quantities with explicit semantics. Retained TSMC company-level quantities are separate evidence and cannot replace missing UMC fab evidence."
+}

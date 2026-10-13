@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "First direct inspection of AT&S access policy before any local source retention. Research concerns the two source-native Leoben and Kulim substrate projects, not Infineon Kulim. No manufacturing document or outcome is admitted by this probe.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "ats-robots",
+    "url": "https://ats.net/robots.txt",
+    "purpose": "access_policy",
+    "company": "AT&S",
+    "country_code": "AT",
+    "source_family": "ats-issuer",
+    "scope": "Publisher access policy only; no event date, facility identity or reuse grant.",
+    "media_types": ["text/plain"]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "format": "semiconductor-atlas-policy-normalization-candidate-v1",
+  "reviewed_at": "2026-09-09T11:02:42Z",
+  "reviewer": "local:technical-normalization-review",
+  "decision": "implementation_candidate_not_authorized_for_acquisition",
+  "policy_url": "https://www.mti.gov.sg/terms-of-use/",
+  "normalization": "mti_terms_footer_date_v1",
+  "implementation_path": "semiconductor_atlas/curated_capture.py",
+  "implementation_sha256": "e50527798832f8d33d8e6a0be18941853fd0a223ec8556222ae29b602e13c743",
+  "evidence_reference_root": "/Users/kian/Developer/semiconductor_atlas",
+  "retained_inputs": [
+    {
+      "path": "source_snapshots/curated-poll-v1/896451f7f5d741e68247482a467559bd-3/responses/mti-terms.body",
+      "bytes": 377361,
+      "sha256": "58ef9d018774011afe805a7894f3daa54f920ef3c181e6f702afa0d09c1c6608",
+      "html_policy_v1_bytes": 4367,
+      "html_policy_v1_sha256": "f8a2dd63e2813af8c6014adc0575fda827f5751bc3e740c3ede5d410d1fba270",
+      "footer_date": "4 September 2026"
+    },
+    {
+      "path": "source_snapshots/curated-poll-v1/196365d6962b4ab5a94aba8104151a74-3/responses/mti-terms.body",
+      "bytes": 377361,
+      "sha256": "d68e876912449340766ce3dff561f5403c40d2469c2fd6cb791cb8e9df2d5ef3",
+      "html_policy_v1_bytes": 4367,
+      "html_policy_v1_sha256": "e5c6ce26e5c74e9e6409c732b956fd592e2bcf09199bf6ebecd8f390f2e8ed38",
+      "footer_date": "8 September 2026"
+    }
+  ],
+  "candidate_output_bytes": 4389,
+  "candidate_output_sha256": "170ef16f6a1c135b309a05cec8d2d0f4720f4e9ce4434b804ad1abbe3613ce66",
+  "comparison": "Both retained pages produce identical candidate bytes. Independently replacing exactly the two known footer dates in each original html_policy_v1 payload reproduces the candidate output byte-for-byte. Original v1 hashes, the complete href inventory and the main-content terms update date remain unchanged.",
+  "scope": "Exactly two matching valid literal calendar dates in the reviewed mobile and desktop copyright paragraphs inside one body-level MTI footer after main-content. Preserve the copyright year, publisher, label, all other existing visible-text normalization output and all original hrefs.",
+  "structural_rejection": "Missing or duplicate roots, bodies, main sections, footers or date branches; changed reviewed scope markers; duplicate attributes; malformed nesting; nested date-paragraph markup; changed publisher or label; invalid, nonliteral or mismatched dates require review. There is no fallback to generic normalization.",
+  "plan_restriction": "Opt-in only in a separately reviewed acquisition-plan-v2 rights-policy entry for the exact policy URL with text/html as its only permitted media type. No current plan selects this normalizer.",
+  "verification": {
+    "retained_pair_checked": true,
+    "independent_exact_replacement_reference_matched": true,
+    "actual_main_terms_update_date_mutation_remained_significant": true,
+    "synthetic_normalization_and_capture_gate_tests": 25,
+    "scoped_and_legacy_capture_tests_passed": 48,
+    "core_tests_executed": 2243,
+    "core_tests_passed": 2242,
+    "core_expected_skips": 1,
+    "core_test_seconds": 291.164,
+    "web_tests_passed": 12,
+    "historical_v1_capture_replayed_still_blocked": true,
+    "original_registered_study_replayed_after_change": true,
+    "source_wheel_installed_package_files_matched": 110,
+    "wheel_path": "artifacts/2026-09-09-mti-footer-dist-v1/semiconductor_atlas-0.1.0-py3-none-any.whl",
+    "wheel_sha256": "2d1fce0e5fb1cb8917e58b4fec44ff2477c3e2808bb17d9bd952084d99b38e38",
+    "installed_retained_pair_check_matched": true,
+    "live_acquisition_exercised": false
+  },
+  "boundaries": {
+    "new_access_or_reuse_permission": false,
+    "policy_approval_or_renewal": false,
+    "active_plan_repin": false,
+    "registered_producer_change": false,
+    "scheduler_change": false,
+    "new_network_requests": false,
+    "raw_redistribution": false,
+    "raw_training_use": false,
+    "source_scope_expansion": false,
+    "manufacturing_claim_change": false,
+    "restored_monitoring_proven": false,
+    "measured_alert_performance": false
+  },
+  "next_authority_gate": "Any real activation requires a fresh explicit review of the normalization and source rights, a new plan and compatible producer version, and a separately disclosed protocol after preserving the active study. Do not repin the September 8-15 study or retry its blocked speech on the basis of this technical candidate."
+}

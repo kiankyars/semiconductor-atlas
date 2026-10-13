@@ -1,0 +1,47 @@
+{
+  "format": "semiconductor-atlas-tsmc-fab-correspondence-review-v1",
+  "reviewed_at": "2026-09-08T18:46:00Z",
+  "reviewed_by": "local:codex-tsmc-fab-correspondence-review",
+  "prior_exposure": "The author reviewed the retained table, prior cohort and baseline and coordinated with an agent that independently reread the same retained filing. This is an exposed collaborative review of one issuer document, not blind adjudication, independent publisher corroboration or independent physical verification.",
+  "parent_database_sha256": "945518cd5b2de08719a18b648ddae06a01ee79fbaf34ac8dcd353375667253a9",
+  "parent_run_id": "2e817f05-e468-5a96-a0f1-343ab4412432",
+  "cohort_sha256": "74c6b9aea5e789c2bb0e802090f97ba2eb83e8b637c583ececc9b861b01aa776",
+  "source_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+  "source_bytes": 10355816,
+  "rationale": "The operating-table Fab(1) header directly references footnote (1), which explicitly assigns geographic labels to all sixteen rows. Admit these labels as source statements with unknown effective dates, not geometry or locations at historical commencement. Two subsidiary narratives explicitly identify their manufacturing fab and report the same commercial-production commencement event at month precision: Fab 11 in October 1998 and Fab 16 in April 2018. Retain these as additional same-document assertions, preserving the original year assertions and their clocks, not independent outcomes or extra facilities. The manufacture-entity descriptions establish within-document correspondence only; they do not merge a corporation with a facility or identify a unique project phase. All sixteen project-phase correspondences remain unresolved. This review admits no capacity, canonical identity, corporate aliases, physical-current facts, HVM equivalence, forecasts or scores. The population remains the original survivor-selected operating-fab table.",
+  "evidence": {
+    "locations": {"start": 1163178, "end": 1165235, "sha256": "85f88ad7d616352d0683bc79d9a5eabd4ccfe5c5ee0d320f11a52cd4759d1ba6"},
+    "washington": {"start": 1471727, "end": 1474777, "sha256": "53ffee8ce2cb2cda535146f72ee7dba5eb6203ecf8c1b638829fe97b49aae36b"},
+    "china": {"start": 1483537, "end": 1485061, "sha256": "a42ec37dfab17b302ae191139b765ca128fe91b5e42b8db9770d4beed137b49e"},
+    "nanjing": {"start": 1492517, "end": 1494045, "sha256": "9ed32e2baee1305fa7f77f530660a7331714e583183c3080c057a754db9d6d8d"},
+    "arizona": {"start": 1494045, "end": 1497004, "sha256": "eb22e3ca5b1afd9fb497a89eae3e7d08459bbc9045f39e4c4fcdefbb7b2ce97b"},
+    "jasm": {"start": 1501586, "end": 1509196, "sha256": "ea191e1be33599040885426128193a5d670947311f543a1ca28c2e63d448e031"}
+  },
+  "rows": [
+    {"fab": "2", "location": "Hsinchu Science Park", "commercial_month": null},
+    {"fab": "3", "location": "Hsinchu Science Park", "commercial_month": null},
+    {"fab": "5", "location": "Hsinchu Science Park", "commercial_month": null},
+    {"fab": "6", "location": "Southern Taiwan Science Park", "commercial_month": null},
+    {"fab": "8", "location": "Hsinchu Science Park", "commercial_month": null},
+    {"fab": "10", "location": "Shanghai, China", "commercial_month": null},
+    {"fab": "11", "location": "Washington State, United States", "commercial_month": {"literal": "October 1998", "low": "1998-10-01", "high": "1998-10-31", "evidence": "washington"}},
+    {"fab": "12", "location": "Hsinchu Science Park", "commercial_month": null},
+    {"fab": "14", "location": "Southern Taiwan Science Park", "commercial_month": null},
+    {"fab": "15", "location": "Central Taiwan Science Park", "commercial_month": null},
+    {"fab": "16", "location": "Nanjing, China", "commercial_month": {"literal": "April 2018", "low": "2018-04-01", "high": "2018-04-30", "evidence": "nanjing"}},
+    {"fab": "18", "location": "Southern Taiwan Science Park", "commercial_month": null},
+    {"fab": "20", "location": "Hsinchu Science Park", "commercial_month": null},
+    {"fab": "21", "location": "Arizona, U.S.", "commercial_month": null},
+    {"fab": "22", "location": "Southern Taiwan Science Park", "commercial_month": null},
+    {"fab": "23", "location": "Kumamoto, Japan", "commercial_month": null}
+  ],
+  "excluded_or_unresolved": [
+    {"candidate": "table Fab 2 equals the reviewed NIST Arizona Fab 2 project", "decision": "reject", "evidence": ["locations"], "reason": "The table Fab 2 is explicitly in Hsinchu. Arizona second-fab numbering is not a shared entity identifier."},
+    {"candidate": "table Fab 21 uniquely equals the first Phoenix facility", "decision": "defer", "evidence": ["arizona"], "reason": "Fab 21 is described as the Arizona manufacturing entity with multiple facilities. First-facility HVM at end-2024 does not establish unique phase equality with the table's commercial-production row. The baseline's first-fab scope needs a separate complete cross-source adjudication; this review does not rewrite it."},
+    {"candidate": "table Fab 23 uniquely equals the first JASM facility", "decision": "defer", "evidence": ["jasm"], "reason": "The manufacturing entity narrative also describes investment in and construction of a second facility. Table-level identity is not automatically a unique phase."},
+    {"candidate": "Fab 11 commercial production began in July 1998", "decision": "reject", "evidence": ["washington"], "reason": "July concerns initial trial production; the same passage explicitly places commercial production in October."},
+    {"candidate": "Fab 10 late-2004 wording supplies an exact month or quarter", "decision": "reject", "evidence": ["china"], "reason": "The vague late-year expression is preserved as a review lead only; no invented calendar bounds narrow the existing year claim."},
+    {"candidate": "Fab 21 commercial commencement is the first-facility HVM event", "decision": "reject", "evidence": ["arizona"], "reason": "Distinct event terminology and unresolved aggregate-to-phase scope prevent this alias, even though both reports mention 2024."},
+    {"candidate": "Fab 23 commercial commencement is December 2024 volume production", "decision": "reject", "evidence": ["jasm"], "reason": "Volume production is not silently substituted for commercial commencement, and the unique project-phase correspondence is unresolved."}
+  ]
+}

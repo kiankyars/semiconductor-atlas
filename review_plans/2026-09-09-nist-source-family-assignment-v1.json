@@ -1,0 +1,61 @@
+{
+  "format": "semiconductor-atlas-source-family-review-v1",
+  "source": {
+    "id": "a04f43a6-8a47-51de-922f-92b122c9101e",
+    "family_id": "b62b4dee-c59b-5517-8e55-d9cffe74e8bc",
+    "stable_key": "reviewed-project-source:https://www.nist.gov/chips/tsmc-arizona-phoenix",
+    "name": "Reviewed project statements: https://www.nist.gov/chips/tsmc-arizona-phoenix",
+    "publisher": "NIST",
+    "canonical_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+    "license": "NIST public information; marked and third-party exceptions excluded; raw retained locally",
+    "created_at": "2026-09-07T09:28:12.852741Z"
+  },
+  "target_family": {
+    "id": "058a2903-ba0f-5a3b-a0c2-fcc50f1df3bd",
+    "stable_key": "us-official-semiconductor-awards",
+    "name": "United States official semiconductor award disclosures",
+    "description": "Official subsidy and award statements; not proof of physical progress.",
+    "created_at": "2026-07-17T00:00:00Z"
+  },
+  "evidence_documents": [
+    {
+      "id": "8c6af32d-6d63-556d-912f-4e39455c7be2",
+      "source_id": "a04f43a6-8a47-51de-922f-92b122c9101e",
+      "document_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+      "content_sha256": "6e62a364921f03f376cf352147e7495d59a4c50dc41bf473a37b7f4a2c6d2598",
+      "retrieved_at": "2026-09-07T04:48:35.222019Z"
+    },
+    {
+      "id": "b357aa1e-1f3e-5bff-a831-db6ba5c136df",
+      "source_id": "a04f43a6-8a47-51de-922f-92b122c9101e",
+      "document_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+      "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+      "retrieved_at": "2026-07-18T01:54:47Z"
+    },
+    {
+      "id": "e54850f0-e411-57e9-8f6e-819385101e86",
+      "source_id": "0ef07849-fe39-5090-95c6-9d5d96530ac7",
+      "document_url": "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+      "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+      "retrieved_at": "2026-07-18T01:54:47Z"
+    }
+  ],
+  "boundaries": {
+    "source_rows_modified": false,
+    "family_rows_merged": false,
+    "claims_modified": false,
+    "documents_deduplicated": false,
+    "independent_corroboration_inferred": false,
+    "physical_state_inferred": false,
+    "importer_population_changed": false,
+    "historical_knowledge_backdated": false,
+    "source_acquisition": false,
+    "raw_redistribution": false,
+    "model_training": false
+  },
+  "reviewer": "Codex main agent; explicit retrospective provenance review",
+  "reviewed_at": "2026-09-09T10:08:37Z",
+  "reason": "The exact NIST TSMC Arizona source was grouped by its reviewed-project importer route. Both retained HTML vintages identify NIST in the title, canonical URL and og:site_name. The older subject document and e54850f0-e411-57e9-8f6e-819385101e86 have identical URL, SHA-256 and retrieval clock, and the latter already belongs to the United States official semiconductor award disclosures family. Assign only this source to that existing publisher group; do not merge the importer-labelled family or treat NIST repetition as independent corroboration. Preserve the original conservative batch-completion qualification on the older retrieval clock and the later response-finished microsecond clock.",
+  "prior_exposure": "Retrospective correction after reviewing the accepted two NIST Fab 2 target claims, their retained source bytes, the existing NIST award source and the publisher-family audit. This is not a blind evaluation, a new physical event, a target revision or a forecast outcome.",
+  "expected_predecessor_id": null
+}

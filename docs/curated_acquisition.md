@@ -55,9 +55,46 @@ so a changed destination, ordinary link, or visible policy text still requires r
 [normalization review](../review_plans/2026-09-07-nist-policy-normalization.json) records the retained
 byte comparison; v1 plans and their blocked packets remain unchanged.
 
+The [MTI footer-date candidate](../review_plans/2026-09-09-mti-footer-date-normalization-candidate-v1.json)
+adds the opt-in `mti_terms_footer_date_v1` rule for a future reviewed plan. It is
+accepted only in plan v2 for a rights-policy entry at exactly
+`https://www.mti.gov.sg/terms-of-use/`, with only `text/html` permitted. No active
+plan, registered producer, scheduler or source permission was changed.
+
+The candidate requires one HTML root and body, one `main-content` section and
+one subsequent body-level MTI footer with its reviewed class. Exactly one
+mobile and one desktop copyright paragraph must have matching valid calendar
+dates. Only their final literal date spans are replaced with a fixed marker.
+Copyright years, publisher text, the main terms-update date, all other visible
+text and every original href remain significant under the existing v1 semantics.
+Dates in unrelated text or URLs are not canonicalized. The complete footer is
+never discarded, and NIST's separate rotating-contact-link rule is not applied.
+
+Changed scope markers, duplicate attributes, malformed nesting, missing or
+extra date branches, nested paragraph markup, changed publisher/label,
+nonliteral dates and mismatched dates fail closed. Both collection and offline
+replay retain `policy_normalization_scope_changed_requires_review`; no source
+document is fetched and there is no fallback to a generic normalizer. A
+well-shaped page with changed visible policy text or href inventory still yields
+the ordinary `policy_changed_requires_review` hash mismatch. Like v1, this does
+not evaluate script-only content, CSS, images or rendered legal meaning.
+
+The retained September 7/8 MTI pair differs only in two site-footer dates.
+Their candidate output is exactly 4,389 bytes with SHA-256
+`170ef16f6a1c135b309a05cec8d2d0f4720f4e9ce4434b804ad1abbe3613ce66`;
+their original v1 outputs remain distinct. This technical match is not a legal
+review or evidence of restored collection. A fresh, explicitly reviewed plan
+and compatible producer are required before any real use. The active
+September 8–15 study retains its original whole-policy pin and blocked speech.
+
 Raw HTTP bodies stay local. Neither a plan nor a successful run grants redistribution, training,
 unrestricted crawling, or access to subscriber/restricted material. Review metadata and derivative
 facts may be published only within the owning source's documented rights boundary.
+
+The separately versioned [ASE K18B workflow](ase_k18b_acquisition.md) adds plan-v2 support for
+exact identifier query URLs and a hash-bound, TLS-verified direct robots 404. Its HTTP ledger
+still records failure; a separate policy state records reviewed absence. This is not automatic
+error acceptance or a content licence. V1 plans and scheduled producers retain their original rules.
 
 ## Results and limitations
 

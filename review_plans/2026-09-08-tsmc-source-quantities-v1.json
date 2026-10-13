@@ -1,0 +1,110 @@
+{
+  "evidence": {
+    "capacity": {
+      "end": 1167940,
+      "sha256": "88e35bf61b265e83e041524a4db05b2f79bb872e703a0b450ec35b2e649d21c6",
+      "start": 1166112
+    },
+    "capacity_repeat": {
+      "end": 1535688,
+      "sha256": "1c2be58c2c5fc38da568fdcfef28e5e1c1bcfc1412ad921f13be5d7f57f2cdb3",
+      "start": 1533633
+    },
+    "shipments": {
+      "end": 1718939,
+      "sha256": "4d06fd6484fbda02828fc8198a67f98472ac5ef119934138e0877cab6a09e87d",
+      "start": 1717481
+    }
+  },
+  "format": "semiconductor-atlas-tsmc-source-quantity-review-v1",
+  "parent_database_sha256": "d31fd0597ddf188f76c44d2758f46f95d00f0a22169c1360b34b7c390aaeaeeb",
+  "prior_exposure": "The same assistant inspected these passages and implemented this grammar; not independent source corroboration or a blind outcome review.",
+  "reviewed_at": "2026-09-08T20:33:43.640089Z",
+  "reviewed_by": "Codex retained-source scope review",
+  "rows": [
+    {
+      "key": "wafer_capacity:2024",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "wafer_capacity",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "approximate",
+        "period_end": "2024-12-31",
+        "period_kind": "year",
+        "period_start": "2024-01-01",
+        "scope_kind": "company_aggregate",
+        "scope_label": "TSMC company-reported aggregate; no fab allocation or independently resolved consolidation perimeter",
+        "source_definition": "Issuer annual-capacity reference; installed, qualified and economically usable bases are not stated.",
+        "source_number_literal": "17",
+        "source_period_label": "2024",
+        "source_unit_scale": 1000000,
+        "unit": "12_inch_equivalent_wafers"
+      },
+      "support": "capacity"
+    },
+    {
+      "key": "wafer_capacity:2025",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "wafer_capacity",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "greater_than",
+        "period_end": "2025-12-31",
+        "period_kind": "year",
+        "period_start": "2025-01-01",
+        "scope_kind": "company_aggregate",
+        "scope_label": "TSMC company-reported aggregate; no fab allocation or independently resolved consolidation perimeter",
+        "source_definition": "Issuer annual-capacity reference; installed, qualified and economically usable bases are not stated.",
+        "source_number_literal": "17",
+        "source_period_label": "2025",
+        "source_unit_scale": 1000000,
+        "unit": "12_inch_equivalent_wafers"
+      },
+      "support": "capacity"
+    },
+    {
+      "key": "wafer_shipments:2024",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "wafer_shipments",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "as_reported_precision_unspecified",
+        "period_end": "2024-12-31",
+        "period_kind": "year",
+        "period_start": "2024-01-01",
+        "scope_kind": "company_aggregate",
+        "scope_label": "TSMC company-reported aggregate; no fab allocation or independently resolved consolidation perimeter",
+        "source_definition": "Issuer annual wafer shipments; not wafer production, wafer-out, usable capacity or utilization.",
+        "source_number_literal": "13",
+        "source_period_label": "2024",
+        "source_unit_scale": 1000000,
+        "unit": "12_inch_equivalent_wafers"
+      },
+      "support": "shipments"
+    },
+    {
+      "key": "wafer_shipments:2025",
+      "metadata": {
+        "assertion_kind": "reported",
+        "metric": "wafer_shipments",
+        "native_wafer_diameter_inches": null,
+        "numeric_qualifier": "approximate",
+        "period_end": "2025-12-31",
+        "period_kind": "year",
+        "period_start": "2025-01-01",
+        "scope_kind": "company_aggregate",
+        "scope_label": "TSMC company-reported aggregate; no fab allocation or independently resolved consolidation perimeter",
+        "source_definition": "Issuer annual wafer shipments; not wafer production, wafer-out, usable capacity or utilization.",
+        "source_number_literal": "15",
+        "source_period_label": "2025",
+        "source_unit_scale": 1000000,
+        "unit": "12_inch_equivalent_wafers"
+      },
+      "support": "shipments"
+    }
+  ],
+  "selection": "All four company-level 2024/2025 capacity and shipment references in the selected complete sentences, with one duplicate capacity passage retained as same-document context. Not a complete filing-wide quantity census. The 2024 shipment number has no repeated approximate qualifier, so its precision stays unspecified, not exact or assigned a rounding interval. No fab allocation, production-output alias, utilization ratio, or physical capacity basis is admitted.",
+  "source_bytes": 10355816,
+  "source_document_id": "b0e1919c-f174-530a-9667-ba5ba132b765",
+  "source_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b"
+}

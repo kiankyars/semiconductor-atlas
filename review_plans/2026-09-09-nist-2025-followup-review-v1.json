@@ -1,0 +1,407 @@
+{
+  "format": "semiconductor-atlas-nist-followup-review-v1",
+  "reviewed_at": "2026-09-09T04:00:35Z",
+  "reviewed_by": "Codex primary agent, complete static-HTML narrative review of all eleven retained calendar-2025 index articles; corroborating correspondence screening by three collaborating agents. Not independent or blind.",
+  "selection": "All eleven calendar-2025 rows in the unchanged frozen NIST CHIPS-filtered current archive index, not selected by company, award status or manufacturing success. Compare against all 45 included source-native manufacturing groups in the frozen 2024 full-body PMT review. New 2025 projects do not enter the old population. The filtered archive is not a complete 2025 or 2026 news census; a separately discovered June 2025 Micron NIST article is absent from this index and remains an unretained lead.",
+  "prior_exposure": "Later events and guidance were known before review. Exact bodies were captured in September 2026, with 2025 source modification metadata; original publication dates do not prove historical byte availability or Atlas knowledge. This packet records funding correspondence and explicit nonmatches only, not physical outcomes, forecast labels, independent corroboration or model training. Exact NIST source-review permissions apply to local retained review; no raw redistribution. Original PMT population, prospective forecasts and scheduled database remain unchanged.",
+  "boundaries": {
+    "historical_availability_verified": false,
+    "global_census": false,
+    "independent_or_blind_evaluation": false,
+    "canonical_facility_identity": false,
+    "physical_outcomes_adjudicated": false,
+    "physical_capacity_claims": false,
+    "forecast_scoring": false,
+    "database_modified": false,
+    "scheduled_runtime_modified": false,
+    "raw_redistribution": false
+  },
+  "population_review": {
+    "path": "review_plans/2026-09-09-nist-pmt-body-review-v1.json",
+    "bytes": 4099,
+    "sha256": "714ddc8a245efe714294241d0b5fc493d956168f6071cf9164b3f1c79b0a1aec"
+  },
+  "capture_manifest": {
+    "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/manifest.json",
+    "bytes": 4978,
+    "sha256": "9afeabecf3d7b90c4dd60785058b9809c44ef5ee6eec29aa3c536143d056b737"
+  },
+  "documents": [
+    {
+      "position": 1,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-1.body",
+        "sha256": "5b3edf283a1ad520440cfc19f26f11d3c2fe378bc3f7ed61e60654c0d70fb55c",
+        "bytes": 56283
+      },
+      "narrative_span": {
+        "start": 43236,
+        "end": 44445,
+        "sha256": "97e63273e5bda817e131033cd91047f31d791c3158527fc62830d0358cdfa9dc"
+      },
+      "classification": "governance",
+      "reason": "Industrial Advisory Committee member departure; no frozen manufacturing project event.",
+      "evidence": [
+        "d1-b001",
+        "d1-b002"
+      ],
+      "links": []
+    },
+    {
+      "position": 2,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-2.body",
+        "sha256": "6bd48ecdb7624d6c9d8008dbadbf2b8da271e4b56a429c00aac273e4764512ce",
+        "bytes": 86872
+      },
+      "narrative_span": {
+        "start": 73091,
+        "end": 74623,
+        "sha256": "46e83611b6185fe1e3ddd5ac4e5fe77d950d60230502a1c25767c73046f5b0a8"
+      },
+      "classification": "governance",
+      "reason": "Industrial Advisory Committee departure and SMART USA organizational context, not manufacturing attainment.",
+      "evidence": [
+        "d2-b001",
+        "d2-b005"
+      ],
+      "links": []
+    },
+    {
+      "position": 3,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-3.body",
+        "sha256": "ea3ac262f3e981df8b6ddbdde43e0ef265c616b6c3296205861f15c4d822f3ae",
+        "bytes": 96805
+      },
+      "narrative_span": {
+        "start": 74403,
+        "end": 84843,
+        "sha256": "a8b3f2c365715b33e1405bc3d010b7bda01d1145193b09fd93a3763d4dd8544c"
+      },
+      "classification": "final_awards_and_additional_scope",
+      "reason": "Final awards explicitly follow Corning, Edwards and Infinera PMTs. A separate GlobalFoundries award amendment introduces packaging scope at the existing Malta facility; no physical attainment is stated.",
+      "evidence": [
+        "d3-b004",
+        "d3-b007",
+        "d3-b008",
+        "d3-b009",
+        "d3-b012",
+        "d3-b013",
+        "d3-b015"
+      ],
+      "links": [
+        {
+          "project_id": "nist2024-d28-corning-canton",
+          "relation": "funding_finalized",
+          "reason": "Same Canton HPFS/ULE expansion; explicit November 8, 2024 PMT bridge. Funds remain subject to completion milestones; no expanded output is measured.",
+          "evidence": [
+            "d3-b004",
+            "d3-b008",
+            "d3-b015"
+          ],
+          "parent_evidence": [
+            "d28-b001",
+            "d28-b004",
+            "d28-b007"
+          ]
+        },
+        {
+          "project_id": "nist2024-d34-infinera-san-jose",
+          "relation": "funding_finalized",
+          "reason": "Same new San Jose fab and October 17, 2024 PMT. Shared company award and tenfold combined-capacity expectation are not separately allocated project funding or achieved output.",
+          "evidence": [
+            "d3-b004",
+            "d3-b009",
+            "d3-b015"
+          ],
+          "parent_evidence": [
+            "d34-b001",
+            "d34-b008"
+          ]
+        },
+        {
+          "project_id": "nist2024-d34-infinera-bethlehem",
+          "relation": "funding_finalized",
+          "reason": "Same new Bethlehem advanced test and packaging facility and October 17, 2024 PMT. Shared funding is not independently counted or interpreted as facility completion.",
+          "evidence": [
+            "d3-b004",
+            "d3-b009",
+            "d3-b015"
+          ],
+          "parent_evidence": [
+            "d34-b001",
+            "d34-b009"
+          ]
+        },
+        {
+          "project_id": "nist2024-d36-edwards-vacuum-genesee-county",
+          "relation": "funding_finalized",
+          "reason": "Same county-level greenfield dry-vacuum-pump manufacturing project and October 10, 2024 PMT. The parenthetical spelling Genessee is preserved in the source; no canonical municipality or production outcome is inferred.",
+          "evidence": [
+            "d3-b004",
+            "d3-b007",
+            "d3-b015"
+          ],
+          "parent_evidence": [
+            "d36-b001",
+            "d36-b004"
+          ]
+        },
+        {
+          "project_id": "nist2024-d72-gf-malta-existing-expansion",
+          "relation": "additional_scope",
+          "reason": "Additional existing-Malta photonic packaging/chiplet/hybrid-bonding scope. This is not attainment of the frozen automotive fab expansion, not the new Malta fab, and does not silently enlarge the parent project.",
+          "evidence": [
+            "d3-b012",
+            "d3-b013"
+          ],
+          "parent_evidence": [
+            "d72-b010",
+            "d72-b012"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 4,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-4.body",
+        "sha256": "2e6bced7a4584b65ce46054f8c4776137c31d62efb39c670b1ffa632f90bc51b",
+        "bytes": 92327
+      },
+      "narrative_span": {
+        "start": 73836,
+        "end": 80017,
+        "sha256": "3f46aea09e7d8ba374ca5bab6a1d9b49f68f84c5fefe79db75f7a6586fe3e113"
+      },
+      "classification": "research",
+      "reason": "Long-term NSTC operations and research/workforce funding, including packaging research infrastructure. Ten-year funding duration is not a frozen manufacturing target.",
+      "evidence": [
+        "d4-b002",
+        "d4-b005",
+        "d4-b006"
+      ],
+      "links": []
+    },
+    {
+      "position": 5,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-5.body",
+        "sha256": "aa6c8d2bdb62f1140e7a2894e5e774c81d8aafa4264848bacf4cdb7401e6f8dc",
+        "bytes": 98472
+      },
+      "narrative_span": {
+        "start": 74538,
+        "end": 86575,
+        "sha256": "c7f7e86ea0f5cbd40f95622ba05235c6ac2f56bcae2a2e0f8264e591a7494dd3"
+      },
+      "classification": "new_pmt",
+      "reason": "Four new 2025 PMTs are outside the frozen 2024 population. Coherent Easton silicon-carbide substrates are not Coherent Sherman indium-phosphide expansion. Proposed output gains remain prospective.",
+      "evidence": [
+        "d5-b002",
+        "d5-b005",
+        "d5-b006",
+        "d5-b007",
+        "d5-b008",
+        "d5-b012"
+      ],
+      "links": [
+        {
+          "project_id": "nist2024-d19-coherent-sherman",
+          "relation": "distinct_project_same_company",
+          "reason": "Coherent Easton, Pennsylvania SiC substrates/epitaxy are distinct from Sherman, Texas InP expansion. Neither $79m nor the proposed substrate/output increases belong to the frozen Sherman group.",
+          "evidence": [
+            "d5-b002",
+            "d5-b006"
+          ],
+          "parent_evidence": [
+            "d19-b002",
+            "d19-b006"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 6,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-6.body",
+        "sha256": "89eeb9e6681db46a955cba0022276a70790df27812787c6b9e4ee37a7d182aed",
+        "bytes": 93578
+      },
+      "narrative_span": {
+        "start": 73410,
+        "end": 80951,
+        "sha256": "85638fd8c2bdf05c13bc7df6f383a0334e2e950dd8ab1e2a18c129676a3d075d"
+      },
+      "classification": "research",
+      "reason": "NAPMP research and piloting awards, including a separate Absolics SMART research program. Research funding is not evidence of commercial manufacturing completion.",
+      "evidence": [
+        "d6-b002",
+        "d6-b004",
+        "d6-b008",
+        "d6-b009",
+        "d6-b010",
+        "d6-b011"
+      ],
+      "links": [
+        {
+          "project_id": "nist2024-d60-absolics-covington",
+          "relation": "distinct_project_same_company",
+          "reason": "The separately named NAPMP SMART research award is not finalization or attainment of the frozen commercial glass-substrate-facility PMT, despite sharing company and city.",
+          "evidence": [
+            "d6-b004",
+            "d6-b008"
+          ],
+          "parent_evidence": [
+            "d60-b001",
+            "d60-b005",
+            "d60-b006",
+            "d60-b008"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 7,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-7.body",
+        "sha256": "db42c2a974b5e10405b17b3eeadce192dedcfd7947a22747f447e9f4d4d7d9a6",
+        "bytes": 92328
+      },
+      "narrative_span": {
+        "start": 74002,
+        "end": 80484,
+        "sha256": "e2c8f73ae77bf5011882d45673f7a1c1d118e6c0ccabab7fc082d627453f8fa0"
+      },
+      "classification": "new_pmt",
+      "reason": "MACOM's Lowell and Durham projects are newly proposed in 2025 and outside the frozen 2024 PMT population. Existing trusted-foundry operations do not establish expansion attainment.",
+      "evidence": [
+        "d7-b002",
+        "d7-b004",
+        "d7-b008"
+      ],
+      "links": []
+    },
+    {
+      "position": 8,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-8.body",
+        "sha256": "1216fc694d2955df858f6d6ef376ddd5e9fe6e4fcf439e0505d884c4494b292d",
+        "bytes": 92303
+      },
+      "narrative_span": {
+        "start": 74155,
+        "end": 80455,
+        "sha256": "87e9a3399496fbe18e2a274e0686c849775480feafb03fdfef1ef111cf1e2074"
+      },
+      "classification": "final_award",
+      "reason": "HP Corvallis award finalized following its August 27, 2024 PMT. Up-to-$53m final funding differs from the original up-to-$50m proposal; no manufacturing completion or production-start event is stated.",
+      "evidence": [
+        "d8-b002",
+        "d8-b004",
+        "d8-b008"
+      ],
+      "links": [
+        {
+          "project_id": "nist2024-d46-hp-corvallis",
+          "relation": "funding_finalized",
+          "reason": "Same Corvallis lab-to-fab expansion and modernization, with explicit August 27, 2024 PMT bridge. Final recipient HPI Federal LLC is source wording, not a newly adjudicated canonical ownership relationship. Funding revised from up to $50m to up to $53m; disbursement conditions remain.",
+          "evidence": [
+            "d8-b002",
+            "d8-b004",
+            "d8-b008"
+          ],
+          "parent_evidence": [
+            "d46-b002",
+            "d46-b003",
+            "d46-b008"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 9,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-9.body",
+        "sha256": "177bf2e0d1bc6879a0aa858a7bcca53dbdd5cd05a84254c79a33043b2ab7b3c4",
+        "bytes": 91411
+      },
+      "narrative_span": {
+        "start": 73575,
+        "end": 79567,
+        "sha256": "75ebec7c0c86318123d88b30d8e12fc6c7fd8960d78f539ab16795832bf028c4"
+      },
+      "classification": "final_award",
+      "reason": "Hemlock final award explicitly follows the October 21, 2024 PMT; the new facility remains described prospectively. No production-start date or attainment is stated.",
+      "evidence": [
+        "d9-b002",
+        "d9-b005",
+        "d9-b007"
+      ],
+      "links": [
+        {
+          "project_id": "nist2024-d32-hemlock-hemlock",
+          "relation": "funding_finalized",
+          "reason": "Same new polysilicon manufacturing facility in Hemlock, Michigan and explicit October 21, 2024 PMT bridge. Final award is not actual construction completion or production.",
+          "evidence": [
+            "d9-b002",
+            "d9-b005",
+            "d9-b007"
+          ],
+          "parent_evidence": [
+            "d32-b001",
+            "d32-b003",
+            "d32-b007"
+          ]
+        }
+      ]
+    },
+    {
+      "position": 10,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-10.body",
+        "sha256": "668072375d000d8d3a79588e107a997236ab7945169229a20006dc202f8f6bf0",
+        "bytes": 97724
+      },
+      "narrative_span": {
+        "start": 73364,
+        "end": 85154,
+        "sha256": "a2b4965fda6da2ded23078d14332e9ab30cbf2195be9af032c13194c8e025fba"
+      },
+      "classification": "research",
+      "reason": "Proposed NSTC/NAPMP prototyping and advanced-packaging pilot site in Tempe. Expected 2028 operation belongs to research infrastructure outside the frozen manufacturing population.",
+      "evidence": [
+        "d10-b002",
+        "d10-b006",
+        "d10-b010"
+      ],
+      "links": []
+    },
+    {
+      "position": 11,
+      "body": {
+        "path": "artifacts/2026-09-09-nist-2025-followup-capture-v1/responses/nist-2025-index-11.body",
+        "sha256": "b02aff6a60c5afb4bace877f1d959c4447e6c82e741c463d1917c18a1c1fd2f5",
+        "bytes": 95429
+      },
+      "narrative_span": {
+        "start": 73947,
+        "end": 82349,
+        "sha256": "00af1c44b397d04edd46bbd76ae4a3e1dbd8b4a251ee3498b7fbdb71c11d31b7"
+      },
+      "classification": "research",
+      "reason": "SMART USA digital-twin research institute award and five-year research/workforce objectives. Not an observed manufacturing change in a frozen project.",
+      "evidence": [
+        "d11-b001",
+        "d11-b005",
+        "d11-b006",
+        "d11-b007",
+        "d11-b008",
+        "d11-b009",
+        "d11-b010"
+      ],
+      "links": []
+    }
+  ]
+}

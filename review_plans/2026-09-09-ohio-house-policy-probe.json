@@ -1,0 +1,21 @@
+{
+  "format": "semiconductor-atlas-bounded-policy-probe-v1",
+  "purpose": "One identified direct request to the exact Ohio House origin robots endpoint before any project-source acquisition. The web reader reported a non-retryable URL-open error for robots and a 502 for the homepage; neither response supplied retained publisher policy bytes. This is the first direct policy probe for this lead. Stop on denial, redirects or uncertainty; no source body, automatic retry or alternate-origin acquisition is approved.",
+  "user_agent": "SemiconductorAtlas/0.1 (research; https://github.com/kiankyars/semiconductor_atlas)",
+  "timeout_seconds": 25,
+  "max_response_bytes": 65536,
+  "redirects": false,
+  "retries": false,
+  "cookies": false,
+  "claim_acceptance": false,
+  "entry": {
+    "id": "ohio-house-robots",
+    "url": "https://www.house.ohio.gov/robots.txt",
+    "purpose": "access_policy",
+    "company": "Intel",
+    "country_code": "US",
+    "source_family": "ohio-house-government",
+    "scope": "Ohio House robots policy only; not a rights grant, source-body approval or manufacturing outcome.",
+    "media_types": ["text/plain", "text/html"]
+  }
+}

@@ -5,8 +5,10 @@ import io
 import json
 import tempfile
 import unittest
+import hashlib
 from datetime import date
 from pathlib import Path
+from unittest import mock
 
 from semiconductor_atlas.analytics import (
     forecast_csv,
@@ -14,6 +16,8 @@ from semiconductor_atlas.analytics import (
     forecast_summary,
 )
 from semiconductor_atlas.database import initialize
+from semiconductor_atlas.forecast_scope import canonical_bytes, create_scope_review
+from semiconductor_atlas.service import claim_records
 from semiconductor_atlas.models import (
     CapacityBasis,
     CapacityValue,
@@ -170,12 +174,38 @@ class ForecastBridgeTests(unittest.TestCase):
         )
         return version
 
+    def _scope_review(self, *, as_of="2026-07-17", recorded_at=RECORDED_AT):
+        """Explicit synthetic attestations for this single-project/phase fixture only."""
+        records = claim_records(self.connection, as_of=as_of, recorded_at=recorded_at)
+        milestones = [r for r in records if r["value_kind"] == "milestone"
+                      and r["value"]["status"] in {"expected", "started", "completed", "delayed"}]
+        if not milestones:
+            return {}
+        decisions = []
+        for capacity in records:
+            if capacity["value_kind"] != "capacity" or capacity["value"]["basis"] == "economically_usable":
+                continue
+            dependencies = {d["depends_on_claim_version_id"] for d in capacity["dependencies"]}
+            milestone = next((m for m in milestones if m["id"] in dependencies), milestones[0])
+            decisions.append({"capacity_claim_id": capacity["id"], "milestone_claim_id": milestone["id"],
+                "project_scope": "Synthetic project", "phase_scope": "Synthetic phase A",
+                "event_type": milestone["value"]["milestone_type"], "decision": "accepted",
+                "rationale": "Fixture explicitly assigns both records to phase A; not inferred from their shared document."})
+        if not decisions:
+            return {}
+        with mock.patch("semiconductor_atlas.forecast_scope._now", return_value=recorded_at):
+            review = create_scope_review(self.connection, as_of=as_of, recorded_at=recorded_at,
+                reviewer="Synthetic test reviewer", decisions=sorted(decisions, key=lambda row: row["capacity_claim_id"]))
+        raw = canonical_bytes(review)
+        return {"scope_review": raw, "scope_review_sha256": hashlib.sha256(raw).hexdigest()}
+
     def _forecast(self):
         return forecast_current_capacity(
             self.connection,
             as_of="2026-07-17",
             recorded_at=RECORDED_AT,
             forecast_start=date(2026, 7, 1),
+            **self._scope_review(),
         )
 
     def test_requires_one_explicitly_linked_active_milestone(self) -> None:
@@ -191,7 +221,8 @@ class ForecastBridgeTests(unittest.TestCase):
         self.assertEqual(1, len(selection))
         self.assertEqual((), selection.exclusions)
         self.assertEqual(1, len(selection.pairings))
-        self.assertEqual("claim_lineage", selection.pairings[0].method)
+        self.assertEqual("reviewed_scope_with_claim_lineage", selection.pairings[0].method)
+        self.assertIsNotNone(selection.pairings[0].scope_review_sha256)
         self.assertEqual(capacity.id, selection[0].capacity_input.capacity_claim_id)
         self.assertEqual(milestone.id, selection[0].capacity_input.production_start.milestone_claim_id)
 

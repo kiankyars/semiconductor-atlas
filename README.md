@@ -45,6 +45,21 @@ Version 0.1 is a bounded, reproducible seed. It is **not** a global facility cen
 announced project is operating, a comparison with commercial databases, a calibrated forecast, or
 investment advice. Unknown values remain unknown.
 
+The [schema-10 clock contract](docs/exact_knowledge_clocks.md) uses exact UTC microseconds
+for new admissions, corrections and identity chronology. Older snapshots and producers remain
+frozen; migration rejects inconsistent history without rewriting it.
+
+The [schema-11 occurrence-bound contract](docs/bosch_sample_production.md) preserves
+source reports that an event had occurred by a date, without inventing its lower
+bound or exact start. Such source-only milestones are not physical-current state
+or finite forecast outcomes. The retained Bosch Roseville sample-production report
+is the first bounded admission; its original 200 mm first-chip target remains unresolved.
+
+The [schema-12 publisher-grouping ledger](docs/source_family_assignments.md) corrects
+per-source attribution at exact knowledge cutoffs while preserving original importer
+labels, rights rules and claims. Its first reviewed correction joins duplicate NIST
+attribution without counting it as independent evidence or inventing a claim event.
+
 ## Capacity contract
 
 Every capacity claim uses exactly one basis:
@@ -592,6 +607,33 @@ Last-eligible observations survive failed later checks. The first successful rep
 byte-identical Amkor pages and a NIST page with unchanged visible text; it accepted no new claims.
 This is a batch acquisition tool, not a scheduled service or complete publisher search.
 
+The isolated [ASE K18B municipal acquisition](docs/ase_k18b_acquisition.md) adds two verified
+observations and a source-text handoff using explicit reviewed-missing-robots semantics. It does
+not change the campus baseline, admit production claims or reroute scheduled execution.
+The subsequent [core admission](docs/ase_k18b_core_admission.md) adds exactly two source-native
+milestones: a publication-context-dated groundbreaking and a Q1 2028 building-completion target.
+The new schema-7 snapshot preserves every parent row, physical-capacity boundary and forecast
+vintage, and replays completely without depending on the live review queue's later state.
+
+The isolated [Villach source-quantity admission](docs/infineon_villach_output_review.md)
+extends the core to schema 8 and retains all five reviewed fiscal-year produced-wafer-area totals
+for Infineon's source-native Villach site. Units, accounting scope, reporting periods and
+unspecified precision remain explicit. All older rows and physical-capacity values are preserved;
+wafer counts, installed capacity, yield, utilization and forecast outcomes are not inferred.
+The exact 28-file evidence chain and complete successor replay are verifiable offline.
+
+The isolated [Tower historical-event admission](docs/tower_closure_source_review.md) adds three
+issuer-reported milestones on two source-native facilities: Fab1 legacy-flow discontinuation,
+Fab1 last output and Arai operations cessation. Quarter, month and year precision are retained
+without date midpoints. The schema-8 successor preserves every inherited row and the complete
+physical-current view; no current closure, numeric capacity loss or forecast outcome is inferred.
+
+The isolated [source-rate contract and Polar admission](docs/source_rates.md) extend the core to
+schema 9. One government-office production-rate statement is retained with its monthly denominator,
+unknown measurement interval and wafer diameter, exact wording and source-native facility scope.
+It remains outside physical-capacity exports. All prior rows and historical views are preserved;
+the complete successor replays under its separately retained committed producer.
+
 The [durable source-version review queue](docs/curated_review.md) keeps unreviewed versions pending
 across later quiet or failed checks. Capture can import directly into the queue; explicit reviewer
 actions and historical cutoffs replay from an exportable append-only event log. The live pilot
@@ -691,6 +733,18 @@ closure. It includes all seven configured documents; four have parser routes and
 The fixed September 8–15 UTC study does not yet supply future outcomes, independently reviewed
 labels, measured detector performance or calibrated forecasts.
 
+The [interim monitoring audit](docs/prospective_monitoring_status.md) replays the first accepted
+batch in its original frozen runtime. It distinguishes seven on-time recordings from four timely
+decisions across six comparable documents (four of seven total opportunities), preserving two
+unsupported parser routes and the MTI policy block. It changes no registered study inputs and
+supplies no accuracy labels or scores.
+
+Its version-2 activity view now separates completed-assessment age, document
+attempt completion and prediction receipt timing. At the September 10 audit
+cutoff, the same seven on-time recordings coexisted with assessments about
+32.6 hours old. Failed requests, policy blocks and incomplete intents remain
+distinct; no missed-run count or continuous-monitoring claim is inferred.
+
 The separate [prospective outcome evaluator](docs/prospective_target_evaluation.md) pins its
 scoring policy before observations, produces source-only review material after closure and
 retains unresolved labels, abstentions, late and missing outputs in conditional document-triage
@@ -737,6 +791,11 @@ JSONL; evidence and capacity CSV; GeoJSON; source metadata; attribution; summary
 Its 20-quarter baseline forecast is deterministic and
 parameter-fingerprinted, but every coefficient and ramp curve is labelled `assumption_not_fact`.
 It has not been calibrated or backtested and is not approved for investment use.
+The [capacity/event scope gate](docs/capacity_scope_review.md) now requires an
+explicit evidence-bound project/phase review before a candidate production ramp
+can be emitted. The retained Amkor rates are currently deferred, not converted
+into expanded-project forecasts or zero physical capacity. Shared documents and
+dependencies alone are not semantic scope approval.
 The CLI builds from a private SQLite backup, so forecasts, alerts, claims, source inputs, and coverage
 share one database snapshot without holding a long read lock on the live store.
 
@@ -746,6 +805,139 @@ them to separately reviewed outcomes. They preserve cutoff-safe lineage, project
 and unknown or censored cases without writing core claims or embedding publisher bodies. The
 workflow is tested, but no real prediction/outcome study or calibrated forecasting result has been
 produced. See the [implementation review](docs/milestone_benchmark_implementation_review.md).
+
+The isolated [September 8 readiness review](docs/forecast_readiness_2026-09-08.md) screens all
+eight expected claims on seven projects and repairs the experimental capacity bridge's caller
+cutoff override and linked-cancellation conflict. Caller-provided `claims=` must now match the
+complete database view at both cutoffs; it cannot replace that view with selected or altered facts.
+These repairs do not turn the experimental scenarios into calibrated forecasts.
+
+The [forecast support cutoff repair](docs/forecast_support_cutoffs.md) also checks
+the transitive evidence behind every emitted capacity series. A succeeded run
+that finishes after the requested knowledge cutoff cannot support an earlier
+usable-capacity forecast. Already-usable capacity remains independent of a
+production-start milestone, and unrelated unavailable history does not suppress
+a separately supported input. The real retained three-capacity population and
+its existing exclusions remain unchanged.
+
+The [September 10 complete-roster refresh](docs/guidance_roster_refresh_2026-09-10.md)
+retains six freshly checked NIST pages and reviews all seven existing forecast
+cases. Selected timing and scope tables are unchanged; surrounding text omissions
+remain source changes, not terminated commitments or physical outcomes. The old
+forecast vintage and its uncertainty remain intact.
+
+The separate [executed source-guidance interval comparator](docs/guidance_interval_baseline.md)
+now retains a real September 8 vintage: three source-derived intervals with null midpoints,
+three abstentions and one aggregate exclusion. Exact re-execution reproduces all frozen bytes.
+It preserves mass production as a distinct event and prespecifies complete quarterly outcome
+review, including explicit nonoccurrence-window misses. This is a comparator for a future model
+to beat, not a fitted forecast, a fresh source search or a measured performance result.
+
+Its [original producer is now retained for isolated replay](docs/frozen_runtime.md#september-8-guidance-producer-retention),
+so later package and migration changes need not invalidate the old vintage. Separately, the
+[UMC capacity-source review](review_plans/2026-09-08-umc-capacity-source-review.json) identifies
+twelve-fab quantity tables but admits no cells: direct source acquisition is not approved, and
+estimated maximum output must not be relabeled as installed, qualified or usable capacity.
+
+The separate [retrospective source-guidance diagnostic](docs/source_guidance_outcomes.md)
+now compares one retained Infineon new-Villach-fab target with its later issuer-reported
+startup month; the month is contained in the target quarter. Three candidates remain in
+the screen, two unresolved. This outcome-exposed source-statement comparison is not a
+historical Atlas forecast, verified historical byte availability or a calibrated result.
+The original prospective comparator and core database remain unchanged.
+
+The separate [AT&S two-project HVM diagnostic](docs/ats_hvm_timing.md) retains
+both original calendar-quarter targets: one later issuer-reported HVM start
+falls outside its interval, while Leoben's HVM outcome remains unknown.
+This private local, outcome-exposed comparison adds a reported miss without
+claiming representative forecasting accuracy or changing the prospective study.
+
+The [NIST 2024 announcement-population evidence](docs/nist_2024_announcement_population.md)
+now freezes all 65 calendar-2024 articles from the currently displayed CHIPS archive
+and retains every article body, including the 40 outside the preliminary-terms title
+filter. The [complete full-body review](docs/nist_2024_pmt_body_review.md) now retains
+all article decisions, 45 manufacturing project groups and three excluded research
+scopes, including undated groups and shared-source dependencies. Later outcome
+adjudication remains pending. This broadens the source population without claiming
+historical completeness, independent evaluation or new forecast scores.
+
+The [later-evidence screen](docs/nist_2024_pmt_followup_screen.md) keeps all 45
+manufacturing groups and records both attainment and pause leads for further
+rights-reviewed acquisition. Separately, all eleven retained 2025 archive
+articles have full-body correspondence decisions: six finalized-funding links,
+one additional-scope link and two same-company nonmatches. Neither this funding
+review nor the unretained research leads supply physical outcomes or new scores.
+
+The [NIST-only PMT outcome comparison](docs/nist_pmt_outcome_screen.md) preserves
+49 original cases across all 45 groups and adds one separately scoped Bosch
+sample-production observation with a source-reported upper date bound. It also
+retains Coherent's existing 150mm InP capability separately from future expansion
+and Powerex's funding/location limitations. The three original calendar targets
+remain unresolved, with zero scored targets. One-sided timing cannot invent exact
+start dates, interval containment or late misses. No core database, prospective
+vintage or scheduled-runtime change follows.
+
+The separate [retained TSMC outcome comparison](docs/tsmc_legacy_pmt_outcome.md)
+preserves all 50 cases and adds one original source-guidance deadline hit: the
+first Phoenix fab's HVM is reported by end-2024, before its June 30, 2025 deadline.
+Forty-eight original outcomes remain unknown and two calendar results unresolved.
+The legacy batch-clock provenance stays distinct from per-request HTTP evidence;
+no old diagnostic, core database or forecast vintage is rewritten. This is a
+retrospective issuer-guidance result, not measured Atlas forecast accuracy.
+
+The separate [Rio Rancho operational-source review](docs/nm_rio_rancho_operational_review.md)
+retains a State portal report about the combined Fab 9/Fab 11x packaging site.
+The source-reported operational-by bound does not resolve the original untimed
+PMT full-production case or produce a forecast score. The source's truncated
+broader release, aggregate facility scope and actual retrieval clock remain explicit.
+
+The [Ohio One municipal construction report](docs/new_albany_project_statements.md)
+adds three schema-9 source statements: slower construction pace, reaffirmed
+commitment and an index-reported July 2025 announcement month. Both retained City
+pages share one source family and one unresolved source-native project. Physical
+effective dates and publication dates stay unknown; no cancellation, numeric
+capacity, existing PMT target/outcome change or forecast score is inferred.
+
+The installed [exact-entity evidence dossier](docs/evidence_dossier.md) exposes these
+accepted records as readable local Markdown or JSON. Its explicit world/knowledge
+cutoffs separate source statements, world-current observations and assessments,
+superseded history and transitive dependency context. Event precision, fiscal
+quantity scope, rate denominators and evidence provenance remain intact. This is
+read-only inspection, not a fresh source check, canonical identity assignment,
+physical-state certification or forecast result.
+
+Use the installed [evidence search](docs/evidence_search.md) to find those exact
+IDs from a name, stable key or currently associated publisher/family label. It
+supports literal Unicode matching, kind filters and counted pagination, preserves
+separate source-native identities and gives an explicit selection for the dossier.
+Search counts are metadata inventories, not operating-facility counts or full
+lineage/source verification.
+
+The [recorded evidence-change feed](docs/evidence_changes.md) adds exact-window claim
+admissions and supersessions, complete event accounting and digest-bound pagination through
+the CLI and the local viewer's New evidence mode. Source claims remain distinct from physical
+manufacturing events; typed values, provenance and strict page-level lineage checks are retained.
+
+The installed [local evidence viewer](docs/evidence_viewer.md) connects that search
+to exact dossiers in a browser, with editable world/knowledge cutoffs, counted
+pagination and separate source, current, history and dependency sections. It is
+loopback-only and pins a read-only database snapshot for the session. Typed
+values and nulls remain intact; old requests cannot overwrite newer selections.
+This does not modify or publish the release map, merge identities or establish
+alert/forecast performance.
+
+The isolated [schema-7 source-quantity workflow](docs/source_quantities.md) now admits four
+company-level TSMC capacity/shipment references from the already-retained filing. Reporting
+periods, native/equivalent units, number scale and approximate/lower-bound/unspecified-precision
+qualifiers remain mandatory. They are source statements, not new physical-capacity claims;
+no per-fab allocation or shipment-based utilization is inferred. The new snapshot replays
+exactly and preserves every inherited row and all physical-current claims.
+
+The [Coherent Sherman admission](docs/coherent_sherman_capability.md) represents
+NIST's existing high-volume 150 mm InP facility as three typed source-native
+capability statements. It does not treat proposed expansion as completed,
+merge unrelated Sherman identities, invent physical-effective dates or infer
+numeric output, capacity, qualification or a forecast result.
 
 The separate [realized-event workflow](docs/realized_milestones.md) now retains one
 [reviewed Fab 21 commercial-production commencement observation](docs/fab21_realized_observation_2026-09-07.md)
@@ -763,6 +955,21 @@ The [frozen source runtime](docs/frozen_runtime.md) retains the complete committ
 migrations, scripts and required web assets for isolated historical verification. All five
 existing realization/registration/policy/population replay operations pass with their project
 imports bound to that runtime. It does not migrate the core or reroute scheduled execution.
+
+The isolated [schema-6 completed-cohort workflow](docs/completed_milestone_core.md) now supports
+source-native completed milestones with literal year precision and no invented midpoint. Its
+atomic importer verifies the old cohort in the frozen runtime, preserves both sidecar and new
+core-admission clocks, retains deferred rows, and offers write-free exact replay. It adds no
+canonical identity, physical-current claim, capacity or forecast result. The original scheduled
+checkout and schema-5 evidence remain unchanged; this branch must stay isolated until execution
+routing is deliberately transitioned.
+
+The [TSMC source-correspondence successor](docs/tsmc_fab_correspondence_2026-09-08.md) adds
+sixteen source-reported location labels and two explicit commercial-commencement months to those
+same source-native fab subjects, preserving the original year assertions and immutable parent.
+Project-phase identities remain unresolved; one issuer document is not independent corroboration.
+Its source-specific workflow reconstructs the exact successor from trusted parent/review/source
+bytes without changing the frozen importer or scheduled execution.
 
 Generate the standalone, dependency-free interface from the release GeoJSON:
 

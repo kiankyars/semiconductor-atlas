@@ -16,7 +16,7 @@ from typing import Any, Iterable, Mapping, Sequence
 from .adapters.moenv_ems import MOENV_ATTRIBUTION
 from .adapters.taiwan_factory_registry import TAIWAN_FACTORY_ATTRIBUTION
 from .adapters.taiwan_mof_tax_registry import TAIWAN_MOF_ATTRIBUTION
-from .database import knowledge_clock_sql, schema_version
+from .database import admission_clock_sql, chronological_order_sql, knowledge_clock_sql, schema_version
 from .coverage import (
     REVIEWED_RELATIONSHIP_FAMILY_KEY,
     TAIWAN_FACTORY_FAMILY_KEY,
@@ -35,6 +35,7 @@ from .service import (
     summarize,
     validate_semantics,
 )
+from .source_family_review import apply_resolution, assignment_history, original_family, resolutions
 
 
 FORMAT = "semiconductor-atlas-release-v1"
@@ -324,6 +325,7 @@ def _source_inputs(
                documents.content_sha256, documents.media_type, documents.license,
                documents.metadata_json, sources.stable_key AS source_key,
                sources.publisher, families.stable_key AS source_family,
+               sources.id AS family_source_id,
                accepted.run_id AS accepted_by_run_id,
                accepted.admitted_at AS database_accepted_at,
                accepted.code_version AS acceptance_code_version,
@@ -334,15 +336,18 @@ def _source_inputs(
         JOIN source_families AS families ON families.id = sources.family_id
         JOIN accepted ON accepted.document_id = documents.id
         ORDER BY families.stable_key, sources.stable_key, documents.document_url,
-                 accepted.admitted_at, documents.retrieved_at, documents.id,
+                 {chronological_order_sql(connection, 'accepted.admitted_at')},
+                 {chronological_order_sql(connection, 'documents.retrieved_at')}, documents.id,
                  accepted.run_id
         """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     inputs: list[dict[str, Any]] = []
     by_document: dict[str, dict[str, Any]] = {}
+    family_mapping = resolutions(connection, recorded_at=recorded_at)
     for row in rows:
         item = dict(row)
+        apply_resolution(item, item.pop("family_source_id"), family_mapping)
         parameters = json.loads(item.pop("acceptance_parameters_json"))
         roles_json = item.pop("document_roles_json")
         processing_run = {
@@ -376,6 +381,7 @@ def _reviewed_relationship_runs(
     *,
     recorded_at: str,
 ) -> tuple[list[dict[str, Any]], set[str]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
         """
         SELECT runs.id AS review_ingestion_run_id,
@@ -391,7 +397,7 @@ def _reviewed_relationship_runs(
           AND runs.completed_at IS NOT NULL
           AND julianday(runs.completed_at) <= julianday(?)
         ORDER BY julianday(runs.completed_at), julianday(runs.started_at), runs.id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (REVIEWED_RELATIONSHIP_FAMILY_KEY, recorded_at),
     ).fetchall()
     result: list[dict[str, Any]] = []
@@ -454,7 +460,8 @@ def _source_observations(
                runs.code_version,
                runs.parameters_json,
                sources.stable_key AS source_key,
-               families.stable_key AS source_family
+               families.stable_key AS source_family,
+               sources.id AS family_source_id
         FROM source_records AS records
         JOIN ingestion_runs AS runs ON runs.id = records.ingestion_run_id
         JOIN source_documents AS documents ON documents.id = records.source_document_id
@@ -463,13 +470,16 @@ def _source_observations(
         WHERE julianday({accepted_at_sql}) <= julianday(?)
           AND runs.status = 'succeeded'
         ORDER BY families.stable_key, sources.stable_key,
-                 database_accepted_at, records.source_record_key, records.id
+                 {chronological_order_sql(connection, 'database_accepted_at')},
+                 records.source_record_key, records.id
         """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     observations = []
+    family_mapping = resolutions(connection, recorded_at=recorded_at)
     for row in rows:
         item = dict(row)
+        apply_resolution(item, item.pop("family_source_id"), family_mapping)
         parameters = json.loads(item.pop("parameters_json"))
         item["acceptance_timestamp_basis"] = parameters.get(
             "acceptance_timestamp_basis", "legacy_retrieval_clock"
@@ -513,15 +523,16 @@ def _entity_resolution_runs(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT id, started_at, completed_at, status, resolver_version,
                code_version, parameters_json, error
         FROM entity_resolution_runs
         WHERE status IN ('succeeded', 'failed')
           AND julianday(completed_at) <= julianday(?)
-        ORDER BY started_at, id
-        """,
+        ORDER BY {chronological_order_sql(connection, 'started_at')}, id
+        """.replace("julianday(", f"{clock}("),
         (recorded_at,),
     ).fetchall()
     if not rows:
@@ -574,8 +585,9 @@ def _entity_resolution_candidates(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT candidates.id, candidates.resolution_run_id,
                candidates.source_record_id, records.source_record_key,
                candidates.observed_entity_id,
@@ -596,10 +608,10 @@ def _entity_resolution_candidates(
         WHERE runs.status IN ('succeeded', 'failed')
           AND julianday(runs.completed_at) <= julianday(?)
           AND julianday(candidates.created_at) <= julianday(?)
-        ORDER BY runs.started_at, candidates.resolution_run_id,
+        ORDER BY {chronological_order_sql(connection, 'runs.started_at')}, candidates.resolution_run_id,
                  candidates.source_record_id, candidates.observed_entity_id,
                  candidates.candidate_rank, candidates.id
-        """,
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, recorded_at),
     ).fetchall()
     result: list[dict[str, Any]] = []
@@ -615,8 +627,9 @@ def _entity_resolution_decisions(
     *,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT decisions.id, decisions.candidate_id,
                candidates.resolution_run_id, decisions.outcome,
                decisions.decided_at, decisions.decided_by, decisions.reason,
@@ -634,8 +647,8 @@ def _entity_resolution_decisions(
         WHERE runs.status = 'succeeded'
           AND julianday(runs.completed_at) <= julianday(?)
           AND julianday(decisions.decided_at) <= julianday(?)
-        ORDER BY decisions.decided_at, decisions.id
-        """,
+        ORDER BY {chronological_order_sql(connection, 'decisions.decided_at')}, decisions.id
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, recorded_at),
     ).fetchall()
     result: list[dict[str, Any]] = []
@@ -652,8 +665,9 @@ def _source_entity_assignments(
     as_of: str,
     recorded_at: str,
 ) -> list[dict[str, Any]]:
+    clock = admission_clock_sql(connection)
     rows = connection.execute(
-        """
+        f"""
         SELECT assignments.id, assignments.source_record_id,
                records.source_record_key, assignments.observed_entity_id,
                observed.stable_key AS observed_entity_stable_key,
@@ -680,8 +694,9 @@ def _source_entity_assignments(
           AND julianday(assignments.recorded_at) <= julianday(?)
           AND julianday(decisions.decided_at) <= julianday(?)
         ORDER BY assignments.source_record_id, assignments.observed_entity_id,
-                 assignments.valid_from, assignments.recorded_at, assignments.id
-        """,
+                 assignments.valid_from,
+                 {chronological_order_sql(connection, 'assignments.recorded_at')}, assignments.id
+        """.replace("julianday(", f"{clock}("),
         (recorded_at, as_of, recorded_at, recorded_at),
     ).fetchall()
     return [dict(row) for row in rows]
@@ -745,6 +760,9 @@ def _evidence_rows(claims: list[dict[str, Any]]) -> list[dict[str, object]]:
                     "license": evidence["license"],
                     "locator": evidence["locator"],
                     "excerpt": evidence["excerpt"],
+                    **({"source_family_resolution_json": json.dumps(evidence["source_family_resolution"],
+                        sort_keys=True, ensure_ascii=False, separators=(",", ":"))}
+                       if "source_family_resolution" in evidence else {}),
                 }
             )
     return sorted(
@@ -798,7 +816,7 @@ def _attributions(inputs: list[dict[str, Any]]) -> list[str]:
         attribution = (
             metadata.get("attribution") if isinstance(metadata, dict) else None
         )
-        source_family = item.get("source_family")
+        source_family = original_family(item)
         if source_family == TAIWAN_MOENV_FAMILY_KEY:
             values.add(MOENV_ATTRIBUTION)
         elif source_family == TAIWAN_FACTORY_FAMILY_KEY:
@@ -978,6 +996,7 @@ def _collect_release_views(
         "geojson": geojson,
         "coverage": coverage,
         "identity": identity,
+        "source_family_assignments": assignment_history(connection, recorded_at=recorded_at),
     }
 
 
@@ -1016,6 +1035,7 @@ def write_release(
     geojson = views["geojson"]
     coverage = views["coverage"]
     identity = views["identity"]
+    family_assignments = views["source_family_assignments"]
     assert isinstance(claims, list)
     assert source_claims is None or isinstance(source_claims, list)
     assert isinstance(claim_history, list)
@@ -1055,7 +1075,7 @@ def write_release(
                 "license",
                 "locator",
                 "excerpt",
-            ),
+            ) + (("source_family_resolution_json",) if any("source_family_resolution_json" in row for row in evidence) else ()),
             evidence,
         ),
         "capacity.csv": _csv_bytes(
@@ -1099,6 +1119,8 @@ def write_release(
         files["reviewed_relationship_runs.jsonl"] = _jsonl_bytes(
             reviewed_relationship_runs
         )
+    if family_assignments:
+        files["source_family_assignments.jsonl"] = _jsonl_bytes(family_assignments)
     extra_names = sorted(extra_files or {})
     extra_text = ""
     if extra_names:
@@ -1143,7 +1165,16 @@ Files: `entities.jsonl`, `claims.jsonl`, `claim_history.jsonl`, `evidence.csv`,
 and `ATTRIBUTION.txt`.
 {extra_text}
 """
-    if any(item.get("source_family") == TAIWAN_MOENV_FAMILY_KEY for item in inputs):
+    if family_assignments:
+        readme += ("\n`source_family_assignments.jsonl` retains reviewed publisher-grouping corrections "
+                   "known at this knowledge cutoff, including exact review JSON bytes and their SHA-256. "
+                   "Evidence, source inputs, source observations and coverage use the reviewed grouping; "
+                   "`source_family_resolution` (JSON, or the optional CSV column with `_json` suffix) "
+                   "preserves the original importer label, assignment ID, acceptance clock and review hash. "
+                   "Original source, family, document and claim rows remain unchanged. This metadata "
+                   "correction neither deduplicates documents nor establishes independent corroboration "
+                   "or a manufacturing event. Earlier knowledge cutoffs retain their original grouping.\n")
+    if any(original_family(item) == TAIWAN_MOENV_FAMILY_KEY for item in inputs):
         readme = readme.replace(
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
             "Taiwan MOENV EMS_S_01 records are source-native environmental-control registry "
@@ -1159,7 +1190,7 @@ and `ATTRIBUTION.txt`.
             "release.\n"
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
         )
-    if any(item.get("source_family") == TAIWAN_FACTORY_FAMILY_KEY for item in inputs):
+    if any(original_family(item) == TAIWAN_FACTORY_FAMILY_KEY for item in inputs):
         readme = readme.replace(
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
             "Taiwan registered-factory records are source-native administrative registry "
@@ -1175,7 +1206,7 @@ and `ATTRIBUTION.txt`.
             "is not duplicated into this release.\n"
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
         )
-    if any(item.get("source_family") == TAIWAN_MOF_FAMILY_KEY for item in inputs):
+    if any(original_family(item) == TAIWAN_MOF_FAMILY_KEY for item in inputs):
         readme = readme.replace(
             "Every exported claim carries direct evidence or a dependency chain to evidence.",
             "Taiwan MOF BGMOPEN1 records are source-native active tax-registration "
@@ -1253,6 +1284,12 @@ and `ATTRIBUTION.txt`.
             "probability interval. All source-claim versions and their dependencies are "
             "retained in `claim_history.jsonl`.\n"
         )
+    if any(claim.get("value", {}).get("date_relation") == "on_or_before" for claim in claim_history):
+        readme += ("\nMilestones with `date_relation=on_or_before` report an occurrence by an upper "
+                   "date bound, with unknown lower bound and exact date. Their `day` precision "
+                   "describes the bound only, not the occurrence. They are not finite event "
+                   "intervals or scored forecast outcomes. The event identity remains specific; "
+                   "a bound alone does not establish commercial production or HVM.\n")
     files["README.md"] = readme.encode("utf-8")
     if extra_files:
         for name, raw in extra_files.items():

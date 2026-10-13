@@ -1,5 +1,13 @@
 # Generated geospatial interface
 
+For interactive inspection of retained source reports, use the installed
+[local evidence viewer](../docs/evidence_viewer.md). It connects literal search
+and exact dossiers through a loopback-only read service, with world/knowledge
+controls and full history. It does not alter the standalone release interface
+described below or add source-only records to its map. Its 13 JavaScript state
+tests run with `node --test web/tests/evidence_viewer_state.test.cjs`; they use
+a minimal DOM double, not a rendered browser.
+
 Version 0.1 includes a generated, dependency-free, read-only interface over a pinned release bundle;
 the database is never queried directly from the browser. `generate_atlas.py` verifies the release
 GeoJSON against its manifest, embeds it safely in `atlas.html`, and updates the manifest atomically.

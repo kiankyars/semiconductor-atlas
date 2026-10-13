@@ -86,6 +86,6 @@ python3 scripts/record_realized_fab_cohort.py verify \
 ```
 
 Neither command downloads evidence, modifies a database, assigns canonical identity, registers
-a forecast or scores an outcome. Core support for completed year-precision milestones remains
-a separate integration requirement; this workflow does not circumvent that schema limitation
-with an invented midpoint or an `expected` status.
+a forecast or scores an outcome. The separate isolated [schema-6 core workflow](completed_milestone_core.md)
+now admits these source reports with completed year precision and an actual new core clock,
+without inventing a midpoint, relabelling them `expected` or modifying the old artifacts.

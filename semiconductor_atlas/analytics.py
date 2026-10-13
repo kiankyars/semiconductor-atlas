@@ -7,6 +7,7 @@ import io
 import json
 import sqlite3
 from collections import defaultdict
+from contextlib import contextmanager
 from dataclasses import asdict, dataclass
 from datetime import date
 from typing import Iterable, Iterator, Sequence, overload
@@ -23,6 +24,8 @@ from .forecast import (
 )
 from .models import CapacityBasis
 from .service import claim_records
+from .forecast_scope import validate_scope_review
+from .evidence_dossier import validate_claim_support
 
 
 PRODUCTION_MILESTONES = {
@@ -67,6 +70,10 @@ class ForecastPairing:
     method: str
     shared_source_document_ids: tuple[str, ...]
     assumption_status: str = ASSUMPTION_STATUS
+    scope_review_sha256: str | None = None
+    project_scope: str | None = None
+    phase_scope: str | None = None
+    scope_reviewed_at: str | None = None
 
     def as_dict(self) -> dict[str, object]:
         return asdict(self)
@@ -276,6 +283,16 @@ def _period_exclusion(
     return None
 
 
+@contextmanager
+def _forecast_snapshot(connection: sqlite3.Connection):
+    connection.execute("SAVEPOINT atlas_forecast_read")
+    try:
+        yield
+    finally:
+        connection.execute("ROLLBACK TO SAVEPOINT atlas_forecast_read")
+        connection.execute("RELEASE SAVEPOINT atlas_forecast_read")
+
+
 def forecast_current_capacity(
     connection: sqlite3.Connection,
     *,
@@ -284,14 +301,53 @@ def forecast_current_capacity(
     forecast_start: date,
     parameters: ModelParameters = DEFAULT_MODEL_PARAMETERS,
     claims: Sequence[dict[str, object]] | None = None,
+    scope_review: bytes | None = None,
+    scope_review_sha256: str | None = None,
+) -> ForecastSelection:
+    """Forecast the coherent database view at both cutoffs, never caller-supplied facts.
+
+    ``claims`` is an optional complete-view consistency check for callers already
+    exporting that view. Subsets, stale views and altered records are rejected.
+    Source-only views with unknown effective dates are not physical-current views.
+    Provenance links only nominate ramps. Every selected capacity/milestone pair
+    also requires a hash-bound affirmative project/phase/event scope review.
+    Every emitted series additionally requires cutoff-available transitive support,
+    including economically usable capacity that does not need a milestone.
+    """
+    with _forecast_snapshot(connection):
+        current = claim_records(connection, as_of=as_of, recorded_at=recorded_at)
+        if claims is not None:
+            supplied = list(claims)
+            if any(not isinstance(claim, dict) or not isinstance(claim.get("id"), str) for claim in supplied):
+                raise ValueError("supplied forecast claims must be complete current-view records")
+            supplied_by_id = {claim["id"]: claim for claim in supplied}
+            if (len(supplied_by_id) != len(supplied)
+                    or supplied_by_id != {claim["id"]: claim for claim in current}):
+                raise ValueError("supplied forecast claims differ from the complete database view at the requested cutoffs")
+        if (scope_review is None) != (scope_review_sha256 is None):
+            raise ValueError("scope review bytes and trusted SHA-256 must be supplied together")
+        scope_reviews = (validate_scope_review(connection, review=scope_review,
+            expected_sha256=scope_review_sha256, as_of=as_of, recorded_at=recorded_at)
+            if scope_review is not None else {})
+        scope_reviewed_at = json.loads(scope_review)["reviewed_at"] if scope_review is not None else None
+        return _forecast_from_current_view(connection, current, forecast_start=forecast_start, recorded_at=recorded_at,
+            parameters=parameters, scope_reviews=scope_reviews,
+            scope_review_sha256=scope_review_sha256, scope_reviewed_at=scope_reviewed_at)
+
+
+def _forecast_from_current_view(
+    connection: sqlite3.Connection,
+    current: Sequence[dict[str, object]],
+    *,
+    forecast_start: date,
+    recorded_at: str,
+    parameters: ModelParameters,
+    scope_reviews: dict[str, dict[str, object]] | None = None,
+    scope_review_sha256: str | None = None,
+    scope_reviewed_at: str | None = None,
 ) -> ForecastSelection:
     by_entity: dict[str, list[dict[str, object]]] = defaultdict(list)
-    claim_view = (
-        list(claims)
-        if claims is not None
-        else claim_records(connection, as_of=as_of, recorded_at=recorded_at)
-    )
-    for claim in claim_view:
+    for claim in current:
         by_entity[str(claim["subject_entity_id"])].append(claim)
     results: list[ForecastResult] = []
     exclusions: list[ForecastExclusion] = []
@@ -311,6 +367,10 @@ def forecast_current_capacity(
             and claim["value"].get("milestone_type") in PRODUCTION_MILESTONES
             and claim["value"].get("status") in ACTIVE_MILESTONE_STATUSES
             and str(claim["id"]) not in milestone_values
+        }
+        cancelled_claims = {
+            str(claim["id"]): claim for claim in claims
+            if str(claim["id"]) in cancelled_milestones
         }
         for claim in claims:
             if claim["value_kind"] != "capacity":
@@ -339,6 +399,17 @@ def forecast_current_capacity(
             selected_pairing: ForecastPairing | None = None
             if basis is not CapacityBasis.ECONOMICALLY_USABLE:
                 unsupported_linked = _linked_milestones(connection, claim, unsupported_milestones)
+                linked = _linked_milestones(connection, claim, milestone_claims)
+                cancelled_linked = _linked_milestones(connection, claim, cancelled_claims)
+                if cancelled_linked:
+                    conflicting = set(linked) | set(unsupported_linked)
+                    exclusions.append(ForecastExclusion(
+                        entity_id, capacity_claim_id,
+                        "conflicting_production_milestone_statuses" if conflicting else "cancelled_production_milestone",
+                        "linked cancellation evidence prevents a defensible production ramp; no physical capacity loss is inferred",
+                        tuple(sorted(set(cancelled_linked) | conflicting)),
+                    ))
+                    continue
                 if unsupported_linked:
                     exclusions.append(ForecastExclusion(
                         entity_id, capacity_claim_id, "unsupported_linked_production_milestone",
@@ -346,7 +417,6 @@ def forecast_current_capacity(
                         tuple(sorted(unsupported_linked)),
                     ))
                     continue
-                linked = _linked_milestones(connection, claim, milestone_claims)
                 linked_ids = tuple(sorted(linked))
                 if len(linked_ids) == 1:
                     milestone = milestone_values[linked_ids[0]]
@@ -395,6 +465,42 @@ def forecast_current_capacity(
                         ((milestone.milestone_claim_id,) if milestone else ()),
                     )
                 )
+                continue
+            if selected_pairing is not None:
+                scope = (scope_reviews or {}).get(capacity_claim_id)
+                if scope is None or scope["decision"] != "accepted":
+                    exclusions.append(ForecastExclusion(
+                        entity_id, capacity_claim_id,
+                        "capacity_event_scope_unreviewed" if scope is None else "capacity_event_scope_deferred",
+                        ("shared documents and claim dependencies do not establish project/phase/event applicability; an affirmative scope review is required"
+                         if scope is None else str(scope["rationale"])),
+                        (selected_pairing.milestone_claim_id,),
+                    ))
+                    continue
+                if scope["milestone_claim_id"] != selected_pairing.milestone_claim_id:
+                    exclusions.append(ForecastExclusion(
+                        entity_id, capacity_claim_id, "capacity_event_scope_mismatch",
+                        "the reviewed scope refers to a different milestone than the uniquely linked candidate",
+                        tuple(sorted({selected_pairing.milestone_claim_id, str(scope["milestone_claim_id"])})),
+                    ))
+                    continue
+                selected_pairing = ForecastPairing(
+                    capacity_claim_id, selected_pairing.milestone_claim_id,
+                    "reviewed_scope_with_" + selected_pairing.method,
+                    selected_pairing.shared_source_document_ids,
+                    scope_review_sha256=scope_review_sha256,
+                    project_scope=str(scope["project_scope"]), phase_scope=str(scope["phase_scope"]),
+                    scope_reviewed_at=scope_reviewed_at,
+                )
+            try:
+                validate_claim_support(connection,
+                    claim_ids=[capacity_claim_id] + ([milestone.milestone_claim_id] if milestone else []),
+                    recorded_at=recorded_at)
+            except ValueError as error:
+                exclusions.append(ForecastExclusion(
+                    entity_id, capacity_claim_id, "forecast_input_support_unavailable_or_invalid",
+                    str(error), ((milestone.milestone_claim_id,) if milestone else ()),
+                ))
                 continue
             if selected_pairing is not None:
                 pairings.append(selected_pairing)
@@ -475,6 +581,10 @@ def forecast_csv(results: Iterable[ForecastResult]) -> bytes:
         "milestone_pairing_method",
         "shared_source_document_ids",
         "pairing_assumption_status",
+        "scope_review_sha256",
+        "project_scope",
+        "phase_scope",
+        "scope_reviewed_at",
         "input_basis",
         "output_basis",
         "metric",
@@ -511,6 +621,10 @@ def forecast_csv(results: Iterable[ForecastResult]) -> bytes:
                         ";".join(pairing.shared_source_document_ids) if pairing else ""
                     ),
                     "pairing_assumption_status": pairing.assumption_status if pairing else "",
+                    "scope_review_sha256": pairing.scope_review_sha256 if pairing else "",
+                    "project_scope": pairing.project_scope if pairing else "",
+                    "phase_scope": pairing.phase_scope if pairing else "",
+                    "scope_reviewed_at": pairing.scope_reviewed_at if pairing else "",
                     "input_basis": result.capacity_input.basis.value,
                     "output_basis": "economically_usable",
                     "metric": result.capacity_input.metric,
@@ -542,6 +656,11 @@ def forecast_summary(results: Iterable[ForecastResult]) -> bytes:
         "excluded_capacity_inputs": len(exclusions),
         "exclusion_reason_counts": dict(sorted(reason_counts.items())),
         "exclusions": [item.as_dict() for item in exclusions],
+        "input_support_rule": (
+            "Every emitted capacity series requires stored typed-value integrity and transitive "
+            "claim, source, record and ingestion-run availability at the knowledge cutoff. "
+            "This does not independently verify source bytes or manufacturing truth."
+        ),
         "milestone_pairing_rule": (
             "For announced through qualified inputs, require exactly one active production "
             "milestone on the same entity linked by claim lineage or a shared transitive source "

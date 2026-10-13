@@ -14,6 +14,7 @@ from pathlib import Path
 from . import eea_scope_revisions as scope
 from . import ingest_eea_industrial as seed
 from .ai_critical_changes import _open_real_directory_fd, _strict_json
+from .database import register_clock_functions
 from .eea_industrial_review import parse_eea_industrial_review_queue_bytes
 from .repository import stable_id, validate_database
 
@@ -91,6 +92,7 @@ def _publish(staged: Path, output: Path, descriptor: int) -> None:
 def _connection(path: Path, *, write=False):
     db = sqlite3.connect(path.as_uri() + ("?mode=rw" if write else "?mode=ro"), uri=True)
     db.row_factory = sqlite3.Row
+    register_clock_functions(db)
     db.execute("PRAGMA foreign_keys = ON")
     try:
         yield db

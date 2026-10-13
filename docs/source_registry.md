@@ -49,6 +49,15 @@ but their applicability to the expanded project is unresolved. Failed IR and mun
 checks are retained, and those document bodies were not acquired. This review does not authorize
 a general publisher crawler or certify complete update coverage.
 
+The [September 8 UMC capacity-source review](../review_plans/2026-09-08-umc-capacity-source-review.json)
+identifies twelve-fab annual and quarterly tables but admits no quantities. An exact retained
+robots response disallows the issuer's `/upload/` report and terms-PDF paths; a separate direct
+SEC policy probe returned an access-rejection page. No manufacturing document was archived by
+this review and neither route is activated. Web-visible tables remain research leads, not
+byte-verified claims. A future admission must preserve estimated capacity versus actual output,
+company versus fab scope, native versus equivalent wafer units, reporting periods and guidance
+markers. Estimated maximum output does not automatically establish a physical capacity basis.
+
 | Source | Intended use | Access and rights status | Adapter status and rule |
 | --- | --- | --- | --- |
 | [Taiwan MOENV EMS_S_01](https://data.moenv.gov.tw/dataset/detail/EMS_S_01) | Taiwan source-native facility identities, exact semiconductor industry classes, full addresses, environmental-registry fields, and WGS84 point candidates | **Reviewed and accepted 2026-07-20.** The official catalogue assigns [Taiwan Open Government Data License 1.0](https://data.gov.tw/license), which permits reuse and derivatives with explicit attribution. The dataset is published by the Resource Circulation Administration and declares daily refresh. | **First non-U.S. facility adapter accepted.** The retained full package is filtered locally to exact `industryid` `2611`, `2612`, or `2613` after `industrygroup=261`; its publisher checksum and every distinct same-`emsno` variant replay offline. Environmental-control flags mean registry inclusion only, never operating status. Valid WGS84 coordinates are source points, not site boundaries. Business and factory-registration identifiers remain resolution evidence, not automatic organization or facility merges. The accepted 2026-07-20 snapshot contains 724 source-native facility identities and 798 distinct variants. |
@@ -81,6 +90,12 @@ HTML, not the BIP rejection response. The current pinned collector has no review
 missing-robots representation, and source-specific rights remain unresolved. No
 article was captured or collector enabled. K18B, Dashe K28 and Nanzih Third Park
 remain distinct source-native projects, not replacements for the campus aggregate.
+
+The isolated [September 8 K18B follow-up](ase_k18b_acquisition.md) subsequently completes a narrow
+internal local-research review and introduces explicit plan-v2 missing-robots semantics. Two exact
+article captures and a source-text handoff now replay; source-specific copyright and non-publication
+boundaries remain. This does not amend the older denial/defer records, enable the registered
+scheduled collector, accept core claims or add the municipal project to the campus baseline.
 
 The [September 7 Micron review](../review_plans/2026-09-07-micron-singapore-acquisition-deferred.json)
 does not approve durable acquisition from Micron's investor-relations site. Its linked

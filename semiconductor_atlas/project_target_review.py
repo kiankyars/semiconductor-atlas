@@ -327,7 +327,7 @@ def _verify_replay(connection: sqlite3.Connection, data: dict, prior: sqlite3.Ro
     if rule not in RULE_VERSIONS or _ids(data, rule)["run_id"] != prior["id"]:
         raise ValueError("recorded rule version differs from the admission identity")
     ids = _ids(data, rule)
-    expected, _ = database.initialize(":memory:")
+    expected, _ = database.initialize(":memory:", target_version=database.schema_version(connection))
     try:
         origin = params["lineage_creation_clocks"]["entity_run"]
         if origin != prior["id"]:
