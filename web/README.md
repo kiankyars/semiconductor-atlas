@@ -25,9 +25,10 @@ manifest and the complete release before copying its files unchanged to
 publisher documents remain in local evidence storage.
 
 The seven records have no verified point geometry, so the website starts with a list.
-Old datacenter project and information pages redirect to the
-[Data Center Atlas](https://kiankyars.github.io/datacenter-atlas/). Each has an ordinary
-fallback link for browsers without JavaScript. Unknown addresses show links to both
+Old datacenter project pages redirect to the matching project in
+[Data Center Atlas](https://kiankyars.github.io/datacenter-atlas/). The project listing,
+coverage, data, methodology and about pages redirect to their corresponding destinations.
+Each has an ordinary fallback link for browsers without JavaScript. Unknown addresses show links to both
 atlases; the semiconductor home page never redirects.
 
 ## Local evidence viewer

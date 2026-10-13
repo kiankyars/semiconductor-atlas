@@ -7,7 +7,7 @@ longer the publishing source for this repository.
 
 | Path | Contents |
 | --- | --- |
-| [`projects/`](projects/) | One JSON file per data center build. This is the source of truth. |
+| [`projects/`](projects/) | Archived original records, one JSON file per data center build. |
 | [`layers/`](layers/) | Uncurated OpenStreetMap (ODbL) and Wikidata (CC0) layers with retrieval manifests. |
 | [`schema/project.schema.json`](schema/project.schema.json) | JSON Schema generated from the contract. |
 | [`dcatlas/`](dcatlas/) | Validator, exporters and static site generator. Python 3.11+, standard library only. |

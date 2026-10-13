@@ -71,15 +71,23 @@ class PublicSiteTests(unittest.TestCase):
             (projects / "former-campus.json").write_text("{}")
             output = root / "site"
             build_site.build(output, legacy_projects=projects)
-            for route in ("projects/", "projects/former-campus/", "data/", "coverage/", "about/", "methodology/"):
+            destinations = {
+                "projects/": "sites/", "projects/former-campus/": "projects/former-campus/",
+                "data/": "data/", "coverage/": "countries/", "about/": "about/",
+                "methodology/": "methodology/",
+            }
+            for route, destination_path in destinations.items():
                 contents = (output / route / "index.html").read_text()
-                self.assertIn('window.location.replace("' + build_site.DATACENTER_URL, contents)
-                self.assertIn('href="' + build_site.DATACENTER_URL + '">Open Data Center Atlas', contents)
+                destination = build_site.DATACENTER_URL + destination_path
+                self.assertIn('window.location.replace("' + destination + '");', contents)
+                self.assertIn('href="' + destination + '">Open Data Center Atlas', contents)
+                self.assertIn('<link rel="canonical" href="' + destination + '">', contents)
             self.assertNotIn("window.location.replace", (output / "index.html").read_text())
             missing = (output / "404.html").read_text()
             self.assertNotIn("window.location.replace", missing)
             self.assertIn("Browse semiconductor facilities", missing)
             self.assertIn(build_site.DATACENTER_URL, missing)
+            self.assertIn('<link rel="canonical" href="' + build_site.BASE_URL + '404.html">', missing)
 
     def test_tampered_public_input_rejected_before_output_created(self):
         with tempfile.TemporaryDirectory() as directory:

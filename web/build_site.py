@@ -235,21 +235,23 @@ def facility_body(record: dict, claims: list[dict], evidence: dict[str, dict],
 <section class="section"><details><summary>All {len(owned_claims)} sourced claims</summary>{"".join(claim_html(claim, evidence) for claim in owned_claims)}</details></section>'''
 
 
-def migration_page(template: str, base_url: str, path: str, *, missing: bool = False) -> str:
+def migration_page(template: str, base_url: str, path: str, *,
+                   destination_path: str = "", missing: bool = False) -> str:
+    destination = DATACENTER_URL + destination_path
     heading = "Looking for data centres?" if missing else "Data Center Atlas has moved."
     intro = ("This address is no longer available. Semiconductor facilities are listed on the home page. "
              "Data centre projects and downloads are now in the Data Center Atlas." if missing else
              "Data centre projects and downloads are now in the Data Center Atlas.")
     body = (f'<section class="move"><p class="eyebrow">Semiconductor Atlas</p><h1>{heading}</h1>'
-            f'<p class="lede">{intro}</p><a class="button" href="{DATACENTER_URL}">Open Data Center Atlas ↗</a>'
+            f'<p class="lede">{intro}</p><a class="button" href="{e(destination)}">Open Data Center Atlas ↗</a>'
             f'<p><a href="{e(base_url)}">Browse semiconductor facilities</a></p></section>')
-    script = "" if missing else f'<script>window.location.replace("{DATACENTER_URL}");</script>'
+    script = "" if missing else f'<script>window.location.replace({json.dumps(destination)});</script>'
     # A real fallback link remains usable with scripting disabled. Unknown routes never auto-redirect.
     rendered = page(template, title=heading + " | Semiconductor Atlas", description=intro,
                     body=body, base_url=base_url, path=path, script=script)
     if not missing:
         rendered = rendered.replace(f'<link rel="canonical" href="{e(base_url + path)}">',
-                                    f'<link rel="canonical" href="{DATACENTER_URL}">')
+                                    f'<link rel="canonical" href="{e(destination)}">')
     return rendered
 
 
@@ -281,14 +283,17 @@ def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
             description=f'{record["name"]}: location, production capabilities and source documents.',
             body=facility_body(record, claims, evidence, sources, base_url, manifest["recorded_at"]),
             base_url=base_url, path=route)
-    legacy = ["projects/", "data/", "coverage/", "about/", "methodology/"]
+    legacy = {"projects/": "sites/", "data/": "data/", "coverage/": "countries/",
+              "about/": "about/", "methodology/": "methodology/"}
     project_root = legacy_projects if legacy_projects is not None else ROOT / "datacenters/projects"
     for path in sorted(project_root.glob("*.json")):
         if not re.fullmatch(r"[a-z0-9-]+", path.stem):
             raise ValueError("unsafe legacy project slug")
-        legacy.append("projects/" + path.stem + "/")
-    for route in legacy:
-        routes[route + "index.html"] = migration_page(template, base_url, route)
+        route = "projects/" + path.stem + "/"
+        legacy[route] = route
+    for route, destination_path in legacy.items():
+        routes[route + "index.html"] = migration_page(
+            template, base_url, route, destination_path=destination_path)
     output.mkdir(parents=True)
     shutil.copytree(release, output / DOWNLOAD_PATH)
     for route, contents in routes.items():
