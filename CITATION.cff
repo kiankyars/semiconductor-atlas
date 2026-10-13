@@ -1,22 +1,20 @@
 cff-version: 1.2.0
-message: "If you use the Open Data Center Atlas, please cite it as below."
+message: "If you use Semiconductor Atlas, cite the dataset and retain its source attribution."
 type: dataset
-title: "Open Data Center Atlas: data center builds, with every number sourced"
+title: "Semiconductor Atlas"
 authors:
   - family-names: Kyars
     given-names: Kian
 url: "https://kiankyars.github.io/semiconductor-atlas/"
 repository-code: "https://github.com/kiankyars/semiconductor-atlas"
-license: CC-BY-4.0
-date-released: "2026-10-09"
+date-released: "2026-09-07"
 keywords:
-  - data centers
-  - AI infrastructure
-  - electric power
-  - construction
-  - open data
+  - semiconductors
+  - manufacturing
+  - fabs
+  - advanced packaging
+  - evidence
 abstract: >-
-  An open dataset of large data center builds worldwide. Each record links planned and
-  operational power, investment, status, organizations and milestones to the public sources
-  that reported them, with explicit power basis and scope. Distributed as CSV, JSON, GeoJSON,
-  SQLite, Excel and Parquet with a static JSON API.
+  Source-linked records of semiconductor facilities and manufacturing projects.
+  Reported capabilities, milestones, and capacity retain their source, date,
+  unit, and scope. The accompanying attribution file records source-specific reuse terms.

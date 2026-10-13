@@ -64,9 +64,10 @@ this v1 route does not implement corrections, merge cohorts or assign canonical 
 
 ## Remaining north-star work
 
-The parent checkout, scheduled collectors, active prospective detector study, baseline release,
-and historical artifacts must remain unchanged. Do not merge the schema-6 checkout into their
-execution paths before an explicit runtime-routing transition. The new core records still need
+The October 13 [repository consolidation](repository_consolidation.md) integrated this code into
+`main` after sealing the registered study with its original producer. Historical verification
+and the paused source-check task use the retained original runtime; baseline release and evidence
+bytes stay unchanged. The new core records still need
 reviewed project/event identity, independent realization evidence and broader coverage including
 unbuilt, delayed, cancelled and closed projects. They create no forecast/outcome pairs and provide
 no evidence of forecast calibration or manufacturing-change detector performance.

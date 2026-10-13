@@ -1,0 +1,47 @@
+{
+  "atlas_release_id": "2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2",
+  "consumer_boundary": {
+    "adapter_compatibility": "new_schema_not_legacy_atlas_adapter",
+    "confidence_policy": "null_means_unknown_not_calibrated",
+    "intended_consumer": "Supply Intelligence handoff"
+  },
+  "eligibility": {
+    "period": "exact_calendar_quarter_half_open",
+    "quantity_semantics": "quarter_total",
+    "required_fields": [
+      "format",
+      "schema_version",
+      "record_type",
+      "claim_id",
+      "entity_id",
+      "predicate",
+      "claim_kind",
+      "metric",
+      "basis",
+      "unit",
+      "quantity_semantics",
+      "low",
+      "base",
+      "high",
+      "period_start",
+      "period_end",
+      "scope_kind",
+      "input_output_basis",
+      "technology_scope",
+      "valid_from",
+      "recorded_at",
+      "method",
+      "confidence",
+      "notes",
+      "evidence_ids",
+      "evidence_link_count",
+      "dependencies",
+      "dependency_count",
+      "atlas_release_id"
+    ]
+  },
+  "excluded_capacity_claims": [],
+  "format": "semiconductor-atlas-supply-intelligence-export-contract-v1",
+  "record_count": 0,
+  "schema_version": "supply-intelligence-capacity-quarter-total-v1"
+}

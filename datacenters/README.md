@@ -1,7 +1,9 @@
-# Open Data Center Atlas — source data and tools
+# Data Center Atlas archive
 
-This directory holds the curated records, open layers and the dependency-free tooling that builds
-the public site at <https://kiankyars.github.io/semiconductor-atlas/>.
+Data Center Atlas is maintained in [datacenter-atlas](https://github.com/kiankyars/datacenter-atlas)
+and published at <https://kiankyars.github.io/datacenter-atlas/>. Submit additions and corrections
+there. This directory retains the original records and tooling for reproducibility; it is no
+longer the publishing source for this repository.
 
 | Path | Contents |
 | --- | --- |
@@ -30,12 +32,12 @@ python3 -m dcatlas fetch-layer wikidata        # refresh the Wikidata layer
 python3 -m dcatlas schema                      # regenerate the JSON Schema after contract edits
 ```
 
-`build` writes Parquet files too when `pyarrow` is installed (the Pages workflow installs it).
+`build` writes Parquet files too when `pyarrow` is installed.
 Builds are deterministic: the same commit, base URL and Python/SQLite versions produce
 byte-identical files (the SQLite file header records the library version).
 
 ## Publishing
 
-`.github/workflows/pages.yml` validates the records, runs the tests, builds the site with the
-repository's Pages URL, and deploys it to GitHub Pages on every push to `main`. CI runs the same
-validation and a trial build on every pull request.
+This repository's Pages workflow publishes Semiconductor Atlas. The build commands above remain
+available to reproduce the archived data-center site locally. Current publishing and data updates
+belong in the dedicated Data Center Atlas repository.

@@ -1,0 +1,174 @@
+{
+  "as_of": "2026-09-07",
+  "atlas_generator_sha256": "86e7218ee74016222c71a63e69dc23ec74d774a0e421e389c58bbe7c3645eb24",
+  "atlas_template_sha256": "672df7a3bc13e82ac94eca7da819cdf77926b7d59fdf441b514624e178112ae6",
+  "builder_script_sha256": "94ee0ebe5f8d33a61bdc23620c8a51de9ab5cea76a44964866a63d228044474a",
+  "capacity_claims_by_basis": {
+    "announced": 0,
+    "economically_usable": 0,
+    "physical_construction": 0,
+    "qualified": 0,
+    "tool_installed": 0
+  },
+  "claim_count": 73,
+  "code_sha256": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969",
+  "code_version": "0.1.0",
+  "companies": [
+    "TSMC",
+    "Samsung",
+    "Intel",
+    "Micron",
+    "SK hynix",
+    "Amkor",
+    "ASE"
+  ],
+  "entity_resolution_version": "ai-critical-facility-identity-review-v1",
+  "evidence_fragment_count": 12,
+  "facility_count": 7,
+  "files": {
+    "ATTRIBUTION.md": {
+      "bytes": 5972,
+      "sha256": "ab2fbfc6c8509b025162d74afcfdcaeff734b22d662a7c2de08f20020b8a9cd0"
+    },
+    "BUILD_ai_critical.py": {
+      "bytes": 141232,
+      "sha256": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969"
+    },
+    "BUILD_build_ai_critical_release.py": {
+      "bytes": 11634,
+      "sha256": "94ee0ebe5f8d33a61bdc23620c8a51de9ab5cea76a44964866a63d228044474a"
+    },
+    "BUILD_generate_atlas.py": {
+      "bytes": 21057,
+      "sha256": "86e7218ee74016222c71a63e69dc23ec74d774a0e421e389c58bbe7c3645eb24"
+    },
+    "METHODOLOGY.md": {
+      "bytes": 4826,
+      "sha256": "cd83cf10481f0881cffbc1074c15b4ad49c371187353e453a82476ff172f13b2"
+    },
+    "README.md": {
+      "bytes": 1688,
+      "sha256": "c654aee91676f3cb93e2ed19936b14f475250da15275774bc244ffc9d464aff8"
+    },
+    "atlas-template.html": {
+      "bytes": 14835,
+      "sha256": "672df7a3bc13e82ac94eca7da819cdf77926b7d59fdf441b514624e178112ae6"
+    },
+    "atlas.geojson": {
+      "bytes": 21399,
+      "sha256": "104f37cfa6b2088c2192f708b92fe746ccb464528b46bff9d3873a50991aaae0"
+    },
+    "atlas.html": {
+      "bytes": 29210,
+      "role": "standalone_atlas_html",
+      "sha256": "dadfe679a736cf921e630db369572af76035c9999fd3b5102565f4b9f9cb717d",
+      "source": "atlas.geojson"
+    },
+    "capacity.csv": {
+      "bytes": 213,
+      "sha256": "2cc9121d5ba8b1fffbc7098736dfd27a7bc4cf82cd5e33f7100e3154155b91c6"
+    },
+    "claims.jsonl": {
+      "bytes": 80371,
+      "sha256": "94905d9eb05150f77f0d726e20a48901301574f0813d5706ef8cf88fbd295a6f"
+    },
+    "cohort.json": {
+      "bytes": 51833,
+      "sha256": "406bbca7a1c808e455946b1095ad8ed216b18ecd853100f3b578f859004023bd"
+    },
+    "coverage.json": {
+      "bytes": 1832,
+      "sha256": "a7387149db8601e4254604ee43410ebbef6f1ea8c6b94d1b1c8c2dfecbf62941"
+    },
+    "evidence.jsonl": {
+      "bytes": 36224,
+      "sha256": "51d13a61e208517e21f73ba565fa4cfb38bbd172fc1fc86503e1f9f65e9dc9d9"
+    },
+    "facilities.csv": {
+      "bytes": 5066,
+      "sha256": "61a84fe6f30b40fd62080ffc685f3cb9b62a3b8c7dc735646f6e019764b6ea32"
+    },
+    "producing_run.json": {
+      "bytes": 4332,
+      "sha256": "02928753fef87c9bd093d10fd06fb352fc7ed5e144400ba9b0977961286242b1"
+    },
+    "source_ingestion_runs.json": {
+      "bytes": 9194,
+      "sha256": "6681054a9116daca88af72b3490bc4106ccbb8fbb01c6330a511ff84a26aee47"
+    },
+    "source_inputs.json": {
+      "bytes": 14980,
+      "sha256": "a4c34474ed2caa69c7e8a2e2597c77c5fdc85a2e23cd659d031b5b63896bdefe"
+    },
+    "supply_intelligence.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "supply_intelligence_contract.json": {
+      "bytes": 1231,
+      "sha256": "475da1bbc9844e425e0d12a84fa1521d01ca09a74e282eae3aa4a16e9c9e00d4"
+    },
+    "supply_intelligence_facilities.jsonl": {
+      "bytes": 5336,
+      "sha256": "add6e7961a0d454ad9c55332c3647f9c0bc095ca59988c24bfdd45759fc34dc1"
+    }
+  },
+  "format": "semiconductor-atlas-ai-critical-release-v1",
+  "input_sha256": "406bbca7a1c808e455946b1095ad8ed216b18ecd853100f3b578f859004023bd",
+  "known_limitations": [
+    "This is a bounded seven-company baseline, not a global or company-complete facility census.",
+    "Project-site-scope rows are not asserted to be individual operating fabs or lines.",
+    "Null GeoJSON geometry means the evidence supports named geography but not a releasable facility point.",
+    "Announcements and expected milestones are not operating, installed, qualified, or economically usable capacity.",
+    "Yield, utilization, and qualification remain unknown for every facility in v1.",
+    "Capacity bases with no direct claim remain unknown; zero claims do not mean zero physical capacity."
+  ],
+  "model_version": "none",
+  "producing_run_id": "7cea014a-1a4e-5cc9-aa6c-7f04277fdbe4",
+  "recorded_at": "2026-09-07T02:31:58Z",
+  "release_id": "2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2",
+  "rights_decisions": {
+    "licensed_redistribution": 2,
+    "metadata_and_excerpt_only": 8,
+    "public_domain": 0
+  },
+  "schema_version": "ai-critical-manufacturing-schema-v1",
+  "selection_version": "ai-critical-cohort-selection-v1",
+  "source_checkpoint": {
+    "published_at_max": "2026-05-13",
+    "published_at_min": "2024-04-24",
+    "retrieved_at_max": "2026-09-07T02:18:41Z",
+    "retrieved_at_min": "2026-07-18T01:54:47Z"
+  },
+  "source_document_count": 10,
+  "source_input_hashes": {
+    "amkor-groundbreaking-2025": "d4a24d316d44923b2f4217dbb694f3fe9b2ac467d9c75c6c54cd32bc4994501b",
+    "amkor-peoria-scope-2026": "03a62bc91974a537b73d8097eb5f462201daec3bdb3c2357ee16d75721ad6bde",
+    "ase-kaohsiung-2024-report": "2fadee016e0e41b430b025ca9a9dc2714a17176950e695f2f7a60b0bf5ba6706",
+    "intel-fab52-2025": "34ee72e3963401437475f540b27391342ccea007820ab430759b9dbe2003f9bf",
+    "micron-2025-q3-10q": "02b4b4b45ab88e5516a499162ba1d330e7efb8d3328f31f270f9f9f2a1c27d56",
+    "nist-samsung-texas": "82817d6f4956e93537008d461e91be4e370324a856a43ccf8532ccdd18618009",
+    "nist-tsmc-arizona": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+    "sk-hynix-m15x-2024": "ad8409e282e3cb9baab72d4a14adf8c2bc2563327a19edaf320fd95f10208fc8",
+    "sk-hynix-q3-2025": "6e78cc9df9141c78afed65fb9ccaf1b9fecc6e1a2dd966005d66a6f407c9b3ba",
+    "tsmc-2025-20f": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b"
+  },
+  "source_record_hashes": {
+    "amkor-groundbreaking-2025": "37cad4fec6fdb1dafde2a9acd4fd69b3854c54a18e1a3776761b4ded88cc21cc",
+    "amkor-peoria-scope-2026": "cf70516e0fed4c2d27cc4b2f565439cc3e7aebb5178cea2ee45374f57b18840f",
+    "ase-kaohsiung-2024-report": "2554e80d3764e83d23d7f0b01636d8c535c5aa92d65ea4d85a1166571fcf186e",
+    "intel-fab52-2025": "4c5c7f50cecaafc2995b27745d27cd295343af9ba3cabc5ba4eececdb13aa34e",
+    "micron-2025-q3-10q": "67fd37b9ea9e01e02a00e494f86ab8627b35b3c73a34d940ab4095ea95521274",
+    "nist-samsung-texas": "852394417033fbf0bc61dd2ee0e0735c44a6606fe76fc4afc6ae22618c453cf6",
+    "nist-tsmc-arizona": "b2074755b8807734e5c6f8317f3f5292a1e4b388fc7a43041ed21328cfbd80b9",
+    "sk-hynix-m15x-2024": "d6705aa08310233fb4ff6eeb5baee3b016c7f1fa814ac0a960f7fbe1fbe0d738",
+    "sk-hynix-q3-2025": "dc6a6565527e8ac1c72f357dde9ad3109658479de68792345083d5c3f0c13ae6",
+    "tsmc-2025-20f": "2ab830ca14c047ff15c2ec0e9d034bc05646d3af29bf875cd9a5e774198f1853"
+  },
+  "stable_sort_rules": {
+    "claims": "company_allowlist_order,subject_stable_key,predicate,claim_id",
+    "evidence": "evidence_id",
+    "facilities": "company_allowlist_order,facility_key",
+    "files": "filename_codepoint_order"
+  }
+}

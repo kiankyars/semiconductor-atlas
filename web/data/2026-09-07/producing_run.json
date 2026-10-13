@@ -1,0 +1,83 @@
+{
+  "atlas_generator_sha256": "86e7218ee74016222c71a63e69dc23ec74d774a0e421e389c58bbe7c3645eb24",
+  "atlas_template_sha256": "672df7a3bc13e82ac94eca7da819cdf77926b7d59fdf441b514624e178112ae6",
+  "builder_script_sha256": "94ee0ebe5f8d33a61bdc23620c8a51de9ab5cea76a44964866a63d228044474a",
+  "code_sha256": "98f97bd49cfcfb2d350742f422e43892c9b55c170ecbe73c93538bdbc1c38969",
+  "code_version": "0.1.0",
+  "configuration_sha256": "406bbca7a1c808e455946b1095ad8ed216b18ecd853100f3b578f859004023bd",
+  "descriptor_sha256": "0d9ad4a2f973cc8213e144f95a452bac0a484ee791c2e5b743eda9d4ad3ce29e",
+  "entity_resolution_version": "ai-critical-facility-identity-review-v1",
+  "environment": "python>=3.11",
+  "finished_at": "2026-09-07T02:31:58Z",
+  "format": "semiconductor-atlas-ai-critical-producing-run-v1",
+  "model_version": "none",
+  "outcome": "succeeded",
+  "release_id": "2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2",
+  "review_method": "official_primary_source_facility_scope_review_v1",
+  "run_id": "7cea014a-1a4e-5cc9-aa6c-7f04277fdbe4",
+  "schema_version": "ai-critical-manufacturing-schema-v1",
+  "selection_version": "ai-critical-cohort-selection-v1",
+  "source_documents": [
+    {
+      "content_sha256": "d4a24d316d44923b2f4217dbb694f3fe9b2ac467d9c75c6c54cd32bc4994501b",
+      "ingestion_run_id": "ingest:amkor-groundbreaking-2025:20260907",
+      "source_id": "amkor-groundbreaking-2025",
+      "source_record_sha256": "37cad4fec6fdb1dafde2a9acd4fd69b3854c54a18e1a3776761b4ded88cc21cc"
+    },
+    {
+      "content_sha256": "03a62bc91974a537b73d8097eb5f462201daec3bdb3c2357ee16d75721ad6bde",
+      "ingestion_run_id": "ingest:amkor-peoria-scope-2026:20260907",
+      "source_id": "amkor-peoria-scope-2026",
+      "source_record_sha256": "cf70516e0fed4c2d27cc4b2f565439cc3e7aebb5178cea2ee45374f57b18840f"
+    },
+    {
+      "content_sha256": "2fadee016e0e41b430b025ca9a9dc2714a17176950e695f2f7a60b0bf5ba6706",
+      "ingestion_run_id": "ingest:ase-kaohsiung-2024-report:20260820",
+      "source_id": "ase-kaohsiung-2024-report",
+      "source_record_sha256": "2554e80d3764e83d23d7f0b01636d8c535c5aa92d65ea4d85a1166571fcf186e"
+    },
+    {
+      "content_sha256": "34ee72e3963401437475f540b27391342ccea007820ab430759b9dbe2003f9bf",
+      "ingestion_run_id": "ingest:intel-fab52-2025:20260820",
+      "source_id": "intel-fab52-2025",
+      "source_record_sha256": "4c5c7f50cecaafc2995b27745d27cd295343af9ba3cabc5ba4eececdb13aa34e"
+    },
+    {
+      "content_sha256": "02b4b4b45ab88e5516a499162ba1d330e7efb8d3328f31f270f9f9f2a1c27d56",
+      "ingestion_run_id": "ingest:micron-2025-q3-10q:20260820",
+      "source_id": "micron-2025-q3-10q",
+      "source_record_sha256": "67fd37b9ea9e01e02a00e494f86ab8627b35b3c73a34d940ab4095ea95521274"
+    },
+    {
+      "content_sha256": "82817d6f4956e93537008d461e91be4e370324a856a43ccf8532ccdd18618009",
+      "ingestion_run_id": "ingest:nist-samsung-texas:20260820",
+      "source_id": "nist-samsung-texas",
+      "source_record_sha256": "852394417033fbf0bc61dd2ee0e0735c44a6606fe76fc4afc6ae22618c453cf6"
+    },
+    {
+      "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+      "ingestion_run_id": "ingest:nist-tsmc-arizona:20260820",
+      "source_id": "nist-tsmc-arizona",
+      "source_record_sha256": "b2074755b8807734e5c6f8317f3f5292a1e4b388fc7a43041ed21328cfbd80b9"
+    },
+    {
+      "content_sha256": "ad8409e282e3cb9baab72d4a14adf8c2bc2563327a19edaf320fd95f10208fc8",
+      "ingestion_run_id": "ingest:sk-hynix-m15x-2024:20260820",
+      "source_id": "sk-hynix-m15x-2024",
+      "source_record_sha256": "d6705aa08310233fb4ff6eeb5baee3b016c7f1fa814ac0a960f7fbe1fbe0d738"
+    },
+    {
+      "content_sha256": "6e78cc9df9141c78afed65fb9ccaf1b9fecc6e1a2dd966005d66a6f407c9b3ba",
+      "ingestion_run_id": "ingest:sk-hynix-q3-2025:20260820",
+      "source_id": "sk-hynix-q3-2025",
+      "source_record_sha256": "dc6a6565527e8ac1c72f357dde9ad3109658479de68792345083d5c3f0c13ae6"
+    },
+    {
+      "content_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+      "ingestion_run_id": "ingest:tsmc-2025-20f:20260820",
+      "source_id": "tsmc-2025-20f",
+      "source_record_sha256": "2ab830ca14c047ff15c2ec0e9d034bc05646d3af29bf875cd9a5e774198f1853"
+    }
+  ],
+  "started_at": "2026-09-07T02:24:26.264118Z"
+}

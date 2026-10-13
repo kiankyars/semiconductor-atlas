@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Semiconductor Atlas</title>
+  <style>
+    :root { color-scheme: light dark; font: 15px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --bg: Canvas; --fg: CanvasText; --muted: color-mix(in srgb, CanvasText 58%, Canvas); --line: color-mix(in srgb, CanvasText 18%, Canvas); --accent: AccentColor; --candidate: #c58b18; --construction: #287db5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--fg); background: var(--bg); }
+    main { max-width: 1500px; margin: auto; padding: 1rem; }
+    header, .controls { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; }
+    header { justify-content: space-between; margin-bottom: .8rem; }
+    h1, h2, p { margin: 0; } h1 { font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 550; } h2 { font-size: 1rem; }
+    .muted { color: var(--muted); }
+    label { display: grid; gap: .25rem; color: var(--muted); font-size: .8rem; }
+    input, select { min-height: 2.35rem; border: 1px solid var(--line); border-radius: .4rem; background: var(--bg); color: var(--fg); padding: .45rem .6rem; font: inherit; }
+    input { min-width: min(25rem, 80vw); }
+    .controls { margin-bottom: .75rem; }
+    #count { margin-left: auto; padding-bottom: .5rem; font-variant-numeric: tabular-nums; }
+    .layout { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(17rem, .85fr); gap: 1rem; }
+    .map-card, .panel { border: 1px solid var(--line); border-radius: .55rem; overflow: hidden; }
+    #world { width: 100%; height: auto; min-height: 330px; display: block; background: color-mix(in srgb, Canvas 96%, AccentColor); }
+    .graticule { stroke: var(--line); stroke-width: .7; vector-effect: non-scaling-stroke; }
+    .equator { stroke-width: 1.15; }
+    .point { fill: var(--candidate); stroke: var(--bg); stroke-width: 1.5; cursor: pointer; vector-effect: non-scaling-stroke; }
+    .point.construction { fill: var(--construction); }
+    .point:hover, .point:focus { stroke: var(--fg); stroke-width: 2.5; outline: none; }
+    .map-note { padding: .55rem .7rem; border-top: 1px solid var(--line); font-size: .78rem; color: var(--muted); }
+    .panel { max-height: 650px; display: grid; grid-template-rows: auto minmax(0, 1fr); }
+    .panel h2 { padding: .7rem; border-bottom: 1px solid var(--line); }
+    #list { overflow: auto; margin: 0; padding: 0; list-style: none; }
+    #list button { width: 100%; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--fg); text-align: left; padding: .65rem .7rem; cursor: pointer; }
+    #list button:hover, #list button:focus { background: color-mix(in srgb, AccentColor 10%, Canvas); }
+    .item-meta { display: block; color: var(--muted); font-size: .75rem; margin-top: .15rem; }
+    #detail { margin-top: 1rem; border-top: 1px solid var(--line); padding-top: .9rem; }
+    .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .8rem; margin-top: .7rem; }
+    .detail-block { min-width: 0; }
+    .detail-block h3 { margin: 0 0 .25rem; font-size: .78rem; color: var(--muted); font-weight: 500; }
+    .detail-block p, .detail-block li { overflow-wrap: anywhere; }
+    .detail-block ul { margin: 0; padding-left: 1.1rem; }
+    a { color: inherit; text-underline-offset: .15em; }
+    footer { margin-top: 1rem; font-size: .75rem; color: var(--muted); display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; }
+    @media (max-width: 850px) { .layout { grid-template-columns: 1fr; } .panel { max-height: 360px; } #count { width: 100%; margin-left: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <header><h1>Semiconductor Atlas</h1><p id="cutoff" class="muted"></p></header>
+  <section class="controls" aria-label="Atlas filters">
+    <label>Search<input id="search" type="search" placeholder="Company, site, source, technology"></label>
+    <label>Entity<select id="kind"><option value="all">All</option></select></label>
+    <label>Activity<select id="activity"><option value="all">All</option></select></label>
+    <p id="count" class="muted" aria-live="polite"></p>
+  </section>
+  <section class="layout">
+    <div class="map-card">
+      <svg id="world" viewBox="0 0 1000 500" role="img" aria-labelledby="map-title map-description">
+        <title id="map-title">Global semiconductor facility evidence</title>
+        <desc id="map-description">Candidate and project locations plotted on a longitude-latitude grid.</desc>
+      </svg>
+      <p class="map-note">Equirectangular evidence view. A point is a sourced location, not proof of operational or qualified capacity. Unmapped records remain in the list.</p>
+    </div>
+    <aside class="panel"><h2>Records</h2><ul id="list"></ul></aside>
+  </section>
+  <section id="detail"><p class="muted">Select a record to inspect claims and evidence.</p></section>
+  <footer><span id="attribution"></span><span>No external map tiles or scripts are loaded.</span></footer>
+</main>
+<script id="atlas-data" type="application/json">{"atlas_as_of":"2026-09-07","atlas_recorded_at":"2026-09-07T02:31:58Z","atlas_release_id":"2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2","attribution":["Source: ASE Kaohsiung Site, 2024 ASE Kaohsiung Sustainability Report.","Source: Amkor Technology, Inc., Amkor Company News.","Source: Intel Corporation, Intel Newsroom.","Source: Micron Technology, Inc., Form 10-Q for the quarter ended May 29, 2025, via SEC EDGAR.","Source: National Institute of Standards and Technology, CHIPS for America.","Source: SK hynix Inc., SK hynix Newsroom.","Source: Taiwan Semiconductor Manufacturing Company Limited, 2025 Form 20-F, via SEC EDGAR."],"features":[{"geometry":null,"id":"2adf774c-4dfd-5706-acd6-bc35ca157cd9","properties":{"admin1":"Arizona","capabilities":[{"capability_type":"facility_activity","claim_kind":"reconciled_fact","evidence_ids":["tsmc-fab21-hvm","tsmc-fab21-leading-edge","tsmc-fab21-operating-table"],"method":"cross_source_named_facility_scope_review_v1","readiness":"production","technology":"Fab 21 / first TSMC Arizona fab; 4nm-5nm leading-edge project scope and 5nm most-advanced volume technology","valid_from":"2025-12-31","value":"leading_edge_logic"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Phoenix","claim_count":10,"company":"TSMC","country":"United States","country_code":"US","entity_id":"2adf774c-4dfd-5706-acd6-bc35ca157cd9","entity_kind":"facility","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"named_facility","lifecycle_as_of":"2026-02-28","lifecycle_state":"complete","lifecycle_statement":"TSMC identifies Fab 21 as its Arizona manufacturing entity, reports that the first Arizona facility entered high-volume production at the end of 2024, and lists Fab 21 among fabs in operation as of February 28, 2026.","name":"TSMC Fab 21 (first Arizona fab)","scalar_fields":{"cohort.company":[{"value":"TSMC"}],"geography.city":[{"value":"Phoenix"}],"lifecycle.stage":[{"value":"complete"}]},"scope_categories":["leading_edge_logic"],"source_urls":["https://www.nist.gov/chips/tsmc-arizona-phoenix","https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm"],"stable_key":"tsmc:fab21-arizona","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"},{"geometry":null,"id":"0a69fc56-de9f-5f0b-b4c3-6a9825c929ae","properties":{"admin1":"Texas","capabilities":[{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["samsung-taylor-leading-edge"],"method":"official_project_scope_capture_v1","readiness":"planned","technology":"Two planned leading-edge logic foundry fabs focused on 2nm process technologies","valid_from":"2024-07-24","value":"leading_edge_logic"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Taylor","claim_count":10,"company":"Samsung","country":"United States","country_code":"US","entity_id":"0a69fc56-de9f-5f0b-b4c3-6a9825c929ae","entity_kind":"project_site","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"project_site_scope","lifecycle_as_of":"2024-07-24","lifecycle_state":"announced","lifecycle_statement":"Taylor, Texas: Construct a comprehensive advanced manufacturing ecosystem that includes both high volume leading-edge logic manufacturing and two leading-edge logic foundry fabs focused on mass production of 2nm process technologies.","name":"Samsung Taylor leading-edge logic project (two-fab aggregate)","scalar_fields":{"cohort.company":[{"value":"Samsung"}],"geography.city":[{"value":"Taylor"}],"lifecycle.stage":[{"value":"announced"}]},"scope_categories":["leading_edge_logic"],"source_urls":["https://www.nist.gov/chips/samsung-electronics-texas-austin"],"stable_key":"samsung:taylor-leading-edge-project","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"},{"geometry":null,"id":"5c344e71-4563-50da-924f-2ec22f6b771f","properties":{"admin1":"Arizona","capabilities":[{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["intel-fab52-18a-production"],"method":"official_named_facility_capability_capture_v1","readiness":"production","technology":"Intel 18A leading-edge process; Panther Lake and Clearwater Forest manufacturing","valid_from":"2025-10-09","value":"leading_edge_logic"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Chandler","claim_count":10,"company":"Intel","country":"United States","country_code":"US","entity_id":"5c344e71-4563-50da-924f-2ec22f6b771f","entity_kind":"facility","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"named_facility","lifecycle_as_of":"2025-10-09","lifecycle_state":"ramping","lifecycle_statement":"Arizona’s Fab 52 is fully operational and set to reach high-volume production using Intel 18A later this year; Intel also states that Intel 18A products are being manufactured there.","name":"Intel Fab 52","scalar_fields":{"cohort.company":[{"value":"Intel"}],"geography.city":[{"value":"Chandler"}],"lifecycle.stage":[{"value":"ramping"}]},"scope_categories":["leading_edge_logic"],"source_urls":["https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a"],"stable_key":"intel:fab52-chandler","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"},{"geometry":null,"id":"37b715ef-649c-5acd-8cfb-754250022b80","properties":{"admin1":"Singapore","capabilities":[{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["micron-singapore-hbm-groundbreaking"],"method":"official_project_scope_capture_v1","readiness":"planned","technology":"HBM advanced packaging facility","valid_from":"2025-06-26","value":"advanced_packaging"},{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["micron-singapore-hbm-groundbreaking"],"method":"official_project_scope_capture_v1","readiness":"planned","technology":"HBM advanced packaging facility","valid_from":"2025-06-26","value":"hbm_packaging"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Singapore","claim_count":11,"company":"Micron","country":"Singapore","country_code":"SG","entity_id":"37b715ef-649c-5acd-8cfb-754250022b80","entity_kind":"project_site","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"project_site_scope","lifecycle_as_of":"2025-06-26","lifecycle_state":"site_preparation","lifecycle_statement":"In January 2025, Micron broke ground on an HBM advanced packaging facility in Singapore intended to expand total advanced packaging capacity beginning in calendar 2027.","name":"Micron Singapore HBM advanced packaging facility project","scalar_fields":{"cohort.company":[{"value":"Micron"}],"geography.city":[{"value":"Singapore"}],"lifecycle.stage":[{"value":"site_preparation"}]},"scope_categories":["advanced_packaging","hbm_packaging"],"source_urls":["https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm"],"stable_key":"micron:singapore-hbm-packaging-project","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"},{"geometry":null,"id":"840c4e81-84d7-53da-9b32-6747eee5df78","properties":{"admin1":"North Chungcheong Province","capabilities":[{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["sk-m15x-hbm-scope","sk-m15x-tools-installing"],"method":"official_named_facility_capability_capture_v1","readiness":"planned","technology":"Next-generation DRAM including HBM; M15X described as optimized for HBM production","valid_from":"2024-04-24","value":"hbm_fabrication"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Cheongju","claim_count":10,"company":"SK hynix","country":"South Korea","country_code":"KR","entity_id":"840c4e81-84d7-53da-9b32-6747eee5df78","entity_kind":"facility","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"named_facility","lifecycle_as_of":"2025-10-29","lifecycle_state":"tools_installing","lifecycle_statement":"Equipment installation has recently begun at M15X after the early opening of a new cleanroom.","name":"SK hynix M15X","scalar_fields":{"cohort.company":[{"value":"SK hynix"}],"geography.city":[{"value":"Cheongju"}],"lifecycle.stage":[{"value":"tools_installing"}]},"scope_categories":["hbm_fabrication"],"source_urls":["https://news.skhynix.com/en/wp-json/wp/v2/posts/1035","https://news.skhynix.com/en/wp-json/wp/v2/posts/2059"],"stable_key":"sk-hynix:m15x-cheongju","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"},{"geometry":null,"id":"49721496-2e61-586e-b262-cfa06bb41c63","properties":{"admin1":"Arizona","capabilities":[{"capability_type":"facility_activity","claim_kind":"reconciled_fact","evidence_ids":["amkor-peoria-groundbreaking-two-phase","amkor-peoria-planned-campus-2026"],"method":"reviewed_project_capability_mapping_v1","readiness":"planned","technology":"Planned advanced semiconductor packaging at the two-phase Peoria campus","valid_from":"2026-05-13","value":"advanced_packaging"},{"capability_type":"facility_activity","claim_kind":"reconciled_fact","evidence_ids":["amkor-peoria-groundbreaking-two-phase","amkor-peoria-planned-campus-2026"],"method":"reviewed_project_capability_mapping_v1","readiness":"planned","technology":"Planned semiconductor test capability at the two-phase Peoria campus","valid_from":"2026-05-13","value":"advanced_test"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Peoria","claim_count":11,"company":"Amkor","country":"United States","country_code":"US","entity_id":"49721496-2e61-586e-b262-cfa06bb41c63","entity_kind":"project_site","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"project_site_scope","lifecycle_as_of":"2025-10-06","lifecycle_state":"site_preparation","lifecycle_statement":"Amkor reports the October 6, 2025 groundbreaking for its Peoria packaging and test project and describes a two-phase campus. This is the latest completed physical milestone substantiated by the bounded reviewed documents; it does not establish the current maximum construction stage.","name":"Amkor Peoria two-phase advanced packaging and test project","scalar_fields":{"cohort.company":[{"value":"Amkor"}],"geography.city":[{"value":"Peoria"}],"lifecycle.stage":[{"value":"site_preparation"}]},"scope_categories":["advanced_packaging","advanced_test"],"source_urls":["https://amkor.com/blog/amkor-peoria-number-one-deal-north-america/","https://amkor.com/blog/amkor-semiconductor-packaging-facility-peoria-arizona/"],"stable_key":"amkor:peoria-advanced-packaging-project","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"},{"geometry":null,"id":"fcddef13-a074-5614-a5f2-0fa5c3ea0b09","properties":{"admin1":"Kaohsiung","capabilities":[{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["ase-kaohsiung-capability","ase-kaohsiung-identity"],"method":"official_campus_scope_capability_capture_v1","readiness":"production","technology":"FOCoS, 2.5D packaging, CPO, and high-end packaging processes at Kaohsiung Site aggregate scope","valid_from":"2025-08-01","value":"advanced_packaging"},{"capability_type":"facility_activity","claim_kind":"source_statement","evidence_ids":["ase-kaohsiung-capability","ase-kaohsiung-identity"],"method":"official_campus_scope_capability_capture_v1","readiness":"production","technology":"One-stop comprehensive packaging and testing solutions at Kaohsiung Site aggregate scope","valid_from":"2025-08-01","value":"advanced_test"}],"capacities":[],"capacity_basis_status":{"announced":"unknown","economically_usable":"unknown","physical_construction":"unknown","qualified":"unknown","tool_installed":"unknown"},"city":"Kaohsiung","claim_count":11,"company":"ASE","country":"Taiwan","country_code":"TW","entity_id":"fcddef13-a074-5614-a5f2-0fa5c3ea0b09","entity_kind":"campus","geometry_precision_m":null,"geometry_scope":"unresolved","identity_scope":"campus_scope","lifecycle_as_of":"2025-08-01","lifecycle_state":"complete","lifecycle_statement":"ASE describes Kaohsiung as its largest operating location and manufacturing site and identifies the Kaohsiung Site as a multi-plant campus in the Kaohsiung Nanzih Technology Industrial Park.","name":"ASE Kaohsiung Site aggregate","scalar_fields":{"cohort.company":[{"value":"ASE"}],"geography.city":[{"value":"Kaohsiung"}],"lifecycle.stage":[{"value":"complete"}]},"scope_categories":["advanced_packaging","advanced_test"],"source_urls":["https://ase.aseglobal.com/public/downloads/en/2024-asekh-csr-report-en.pdf"],"stable_key":"ase:kaohsiung-site","unknowns":{"capacity_bases":["announced","economically_usable","physical_construction","qualified","tool_installed"],"qualification":"unknown","utilization":"unknown","yield":"unknown"}},"type":"Feature"}],"type":"FeatureCollection"}</script>
+<script>
+  const atlas = JSON.parse(document.getElementById("atlas-data").textContent);
+  const svg = document.getElementById("world"), list = document.getElementById("list"), detail = document.getElementById("detail");
+  const search = document.getElementById("search"), kind = document.getElementById("kind"), activity = document.getElementById("activity"), count = document.getElementById("count");
+  const NS = "http://www.w3.org/2000/svg";
+  const human = value => String(value || "unknown").replaceAll("_", " ").replace(/\b\w/g, x => x.toUpperCase());
+  const scalarText = props => Object.values(props.scalar_fields || {}).flat().map(x => String(x.value ?? "")).join(" ");
+  function coordinates(geometry) {
+    if (!geometry) return null;
+    if (geometry.type === "Point") {
+      const point = geometry.coordinates;
+      return Array.isArray(point) && point.length >= 2 && Number.isFinite(point[0]) && Number.isFinite(point[1]) ? point : null;
+    }
+    const points = [];
+    (function visit(value) { if (Array.isArray(value) && value.length >= 2 && Number.isFinite(value[0]) && Number.isFinite(value[1])) points.push(value); else if (Array.isArray(value)) value.forEach(visit); })(geometry.coordinates);
+    if (!points.length) return null;
+    return [(Math.min(...points.map(p => p[0])) + Math.max(...points.map(p => p[0]))) / 2, (Math.min(...points.map(p => p[1])) + Math.max(...points.map(p => p[1]))) / 2];
+  }
+  const items = atlas.features.map(feature => {
+    const p = feature.properties || {}, caps = p.capabilities || [], acts = caps.filter(x => x.capability_type === "facility_activity").map(x => String(x.value));
+    return { feature, p, point: coordinates(feature.geometry), activities: acts, haystack: [p.name, p.company, p.entity_kind, p.identity_scope, p.lifecycle_state, p.lifecycle_statement, scalarText(p), acts.join(" "), caps.map(x => `${x.technology || ""} ${x.readiness || ""}`).join(" "), ...(p.source_urls || [])].join(" ").toLowerCase() };
+  });
+  function addOption(select, value) { const option = document.createElement("option"); option.value = value; option.textContent = human(value); select.append(option); }
+  [...new Set(items.map(x => x.p.entity_kind))].filter(Boolean).sort().forEach(x => addOption(kind, x));
+  [...new Set(items.flatMap(x => x.activities))].sort().forEach(x => addOption(activity, x));
+  document.getElementById("cutoff").textContent = `World state ${atlas.atlas_as_of || "unknown"} · knowledge ${atlas.atlas_recorded_at || "unknown"}`;
+  document.getElementById("attribution").textContent = (atlas.attribution || []).join(" · ") || "Attribution is retained per evidence record";
+  for (let lon = -180; lon <= 180; lon += 30) { const line = document.createElementNS(NS, "line"); line.setAttribute("x1", (lon + 180) / 360 * 1000); line.setAttribute("x2", (lon + 180) / 360 * 1000); line.setAttribute("y1", 0); line.setAttribute("y2", 500); line.setAttribute("class", "graticule"); svg.append(line); }
+  for (let lat = -90; lat <= 90; lat += 30) { const line = document.createElementNS(NS, "line"); const y = (90 - lat) / 180 * 500; line.setAttribute("x1", 0); line.setAttribute("x2", 1000); line.setAttribute("y1", y); line.setAttribute("y2", y); line.setAttribute("class", `graticule${lat === 0 ? " equator" : ""}`); svg.append(line); }
+  const pointLayer = document.createElementNS(NS, "g"); svg.append(pointLayer);
+  function matches(item) { const q = search.value.trim().toLowerCase(); return (!q || item.haystack.includes(q)) && (kind.value === "all" || item.p.entity_kind === kind.value) && (activity.value === "all" || item.activities.includes(activity.value)); }
+  function textNode(tag, text) { const node = document.createElement(tag); node.textContent = text; return node; }
+  function capabilityText(x) {
+    if (Object.prototype.hasOwnProperty.call(x, "confidence")) {
+      return `${human(x.capability_type)}: ${x.value}${x.unit ? ` ${x.unit}` : ""} · ${Math.round(x.confidence * 100)}%`;
+    }
+    const base = `${human(x.value || x.capability_type)}${x.technology ? ` · ${x.technology}` : ""}`;
+    return `${base}${x.readiness ? ` · readiness ${human(x.readiness)}` : ""}${x.valid_from ? ` · valid from ${x.valid_from}` : ""}`;
+  }
+  function capacityText(x) {
+    const period = x.period_start || x.period_end ? `${x.period_start || "unknown"} to ${x.period_end || "unknown"}` : "applicability period unknown";
+    const scope = x.scope_kind ? ` · scope ${human(x.scope_kind)}` : "";
+    const basis = x.input_output_basis ? ` · basis ${human(x.input_output_basis)}` : "";
+    const technology = (x.technology_scope || []).length ? ` · technology ${(x.technology_scope || []).map(human).join(", ")}` : "";
+    return `${human(x.metric)} · ${human(x.basis)}: ${x.low} / ${x.base} / ${x.high} ${x.unit} · ${period}${scope}${basis}${technology}${x.notes ? ` · ${x.notes}` : ""}`;
+  }
+  function show(item) {
+    detail.replaceChildren(); detail.append(textNode("h2", item.p.name || item.p.stable_key));
+    const place = [item.p.city, item.p.admin1, item.p.country].filter(Boolean).join(", ");
+    const introParts = [human(item.p.entity_kind)];
+    if (item.p.identity_scope) introParts.push(`identity scope ${human(item.p.identity_scope)}`);
+    if (place) introParts.push(place);
+    introParts.push(item.point ? `${item.point[1].toFixed(4)}, ${item.point[0].toFixed(4)}` : item.p.identity_scope || place ? "facility point unresolved" : "location not yet resolved");
+    const intro = textNode("p", introParts.join(" · ")); intro.className = "muted"; detail.append(intro);
+    const grid = document.createElement("div"); grid.className = "detail-grid";
+    const scopeLifecycle = [];
+    if (item.p.company) scopeLifecycle.push(`Company ${item.p.company}`);
+    if (item.p.lifecycle_state) scopeLifecycle.push(`Lifecycle ${human(item.p.lifecycle_state)}${item.p.lifecycle_as_of ? ` as of ${item.p.lifecycle_as_of}` : ""}`);
+    if (item.p.lifecycle_statement) scopeLifecycle.push(item.p.lifecycle_statement);
+    const blocks = [];
+    if (scopeLifecycle.length) blocks.push(["Scope and lifecycle", scopeLifecycle]);
+    blocks.push(
+      ["Capabilities", (item.p.capabilities || []).map(capabilityText)],
+      ["Capacity by basis", (item.p.capacities || []).map(capacityText)]
+    );
+    const unknowns = item.p.unknowns;
+    if (unknowns && typeof unknowns === "object") {
+      const unknownValues = [];
+      if (Object.prototype.hasOwnProperty.call(unknowns, "yield")) unknownValues.push(`Yield: ${unknowns.yield || "unknown"}`);
+      if (Object.prototype.hasOwnProperty.call(unknowns, "utilization")) unknownValues.push(`Utilization: ${unknowns.utilization || "unknown"}`);
+      if (Object.prototype.hasOwnProperty.call(unknowns, "qualification")) unknownValues.push(`Qualification: ${unknowns.qualification || "unknown"}`);
+      if (Object.prototype.hasOwnProperty.call(unknowns, "capacity_bases")) {
+        const capacityUnknowns = Array.isArray(unknowns.capacity_bases) ? unknowns.capacity_bases : [];
+        unknownValues.push(`Capacity bases: ${capacityUnknowns.length ? capacityUnknowns.map(human).join(", ") : "none"}`);
+      }
+      if (unknownValues.length) blocks.push(["Explicit unknowns", unknownValues]);
+    }
+    blocks.push(
+      ["Milestones", (item.p.milestones || []).map(x => `${human(x.milestone_type)} · ${human(x.status)}: ${x.date_low} / ${x.date_base} / ${x.date_high}`)],
+      ["Sources", item.p.source_urls || []]
+    );
+    for (const [label, values] of blocks) { const block = document.createElement("div"); block.className = "detail-block"; block.append(textNode("h3", label)); if (!values.length) block.append(textNode("p", "Not reported")); else { const ul = document.createElement("ul"); for (const value of values) { const li = document.createElement("li"); if (label === "Sources") { const a = document.createElement("a"); a.href = value; a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = value; li.append(a); } else li.textContent = value; ul.append(li); } block.append(ul); } grid.append(block); }
+    detail.append(grid);
+  }
+  function render() {
+    const visible = items.filter(matches); pointLayer.replaceChildren(); list.replaceChildren();
+    for (const item of visible) {
+      if (item.point) { const [lon, lat] = item.point, circle = document.createElementNS(NS, "circle"); circle.setAttribute("cx", (lon + 180) / 360 * 1000); circle.setAttribute("cy", (90 - lat) / 180 * 500); circle.setAttribute("r", 5); circle.setAttribute("tabindex", 0); circle.setAttribute("aria-label", item.p.name || item.p.stable_key); circle.setAttribute("class", `point${scalarText(item.p).includes("under_construction") ? " construction" : ""}`); circle.addEventListener("click", () => show(item)); circle.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") show(item); }); pointLayer.append(circle); }
+      const li = document.createElement("li"), button = document.createElement("button"); button.type = "button"; button.append(textNode("span", item.p.name || item.p.stable_key)); const meta = textNode("span", `${human(item.p.entity_kind)} · ${item.point ? "mapped" : "unmapped"} · ${item.p.claim_count || 0} claims`); meta.className = "item-meta"; button.append(meta); button.addEventListener("click", () => show(item)); li.append(button); list.append(li);
+    }
+    count.textContent = `${visible.length} records · ${visible.filter(x => x.point).length} mapped`;
+  }
+  [search, kind, activity].forEach(control => control.addEventListener(control === search ? "input" : "change", render)); render();
+</script>
+</body>
+</html>

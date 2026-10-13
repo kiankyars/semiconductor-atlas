@@ -1,0 +1,232 @@
+[
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.7; independent stdlib HTMLParser excerpt/date verification",
+    "finished_at": "2026-09-07T02:24:26.261951Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "d4a24d316d44923b2f4217dbb694f3fe9b2ac467d9c75c6c54cd32bc4994501b",
+        "document_role": "primary",
+        "source_id": "amkor-groundbreaking-2025"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:amkor-groundbreaking-2025:20260907",
+    "source_id": "amkor-groundbreaking-2025",
+    "started_at": "2026-09-07T02:24:26.259263Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.7; independent stdlib HTMLParser excerpt/date verification",
+    "finished_at": "2026-09-07T02:24:26.264118Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "03a62bc91974a537b73d8097eb5f462201daec3bdb3c2357ee16d75721ad6bde",
+        "document_role": "primary",
+        "source_id": "amkor-peoria-scope-2026"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:amkor-peoria-scope-2026:20260907",
+    "source_id": "amkor-peoria-scope-2026",
+    "started_at": "2026-09-07T02:24:26.261988Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.651696Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "2fadee016e0e41b430b025ca9a9dc2714a17176950e695f2f7a60b0bf5ba6706",
+        "document_role": "primary",
+        "source_id": "ase-kaohsiung-2024-report"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:ase-kaohsiung-2024-report:20260820",
+    "source_id": "ase-kaohsiung-2024-report",
+    "started_at": "2026-08-20T17:06:35.637663Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.652162Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "34ee72e3963401437475f540b27391342ccea007820ab430759b9dbe2003f9bf",
+        "document_role": "primary",
+        "source_id": "intel-fab52-2025"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:intel-fab52-2025:20260820",
+    "source_id": "intel-fab52-2025",
+    "started_at": "2026-08-20T17:06:35.651787Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.653049Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "02b4b4b45ab88e5516a499162ba1d330e7efb8d3328f31f270f9f9f2a1c27d56",
+        "document_role": "primary",
+        "source_id": "micron-2025-q3-10q"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:micron-2025-q3-10q:20260820",
+    "source_id": "micron-2025-q3-10q",
+    "started_at": "2026-08-20T17:06:35.652195Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.653559Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "82817d6f4956e93537008d461e91be4e370324a856a43ccf8532ccdd18618009",
+        "document_role": "primary",
+        "source_id": "nist-samsung-texas"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:nist-samsung-texas:20260820",
+    "source_id": "nist-samsung-texas",
+    "started_at": "2026-08-20T17:06:35.653387Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.653796Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "0475c14cd01810d9e8424c9fa1525ecb4eb938b48f2f549a987883cb51c5a71c",
+        "document_role": "primary",
+        "source_id": "nist-tsmc-arizona"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:nist-tsmc-arizona:20260820",
+    "source_id": "nist-tsmc-arizona",
+    "started_at": "2026-08-20T17:06:35.653586Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.653951Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "ad8409e282e3cb9baab72d4a14adf8c2bc2563327a19edaf320fd95f10208fc8",
+        "document_role": "primary",
+        "source_id": "sk-hynix-m15x-2024"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:sk-hynix-m15x-2024:20260820",
+    "source_id": "sk-hynix-m15x-2024",
+    "started_at": "2026-08-20T17:06:35.653821Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.654157Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "6e78cc9df9141c78afed65fb9ccaf1b9fecc6e1a2dd966005d66a6f407c9b3ba",
+        "document_role": "primary",
+        "source_id": "sk-hynix-q3-2025"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:sk-hynix-q3-2025:20260820",
+    "source_id": "sk-hynix-q3-2025",
+    "started_at": "2026-08-20T17:06:35.653981Z"
+  },
+  {
+    "code_version": "official-primary-exact-byte-capture-v1",
+    "configuration": {
+      "method": "official_primary_exact_byte_local_replay",
+      "selection_version": "ai-critical-cohort-selection-v1",
+      "source_count": 1
+    },
+    "configuration_sha256": "3419a5661a66a25a60063afd40b82afc2d4ce0d8690b120c9f692b3ef6d388bb",
+    "environment": "macOS-26.6.2-arm64-arm-64bit-Mach-O; Python 3.14.3",
+    "finished_at": "2026-08-20T17:06:35.658211Z",
+    "format": "semiconductor-atlas-source-ingestion-run-v1",
+    "inputs": [
+      {
+        "content_sha256": "c3ebd05cd8fb383f53fc21a0ac497ee12cf908b709c380f9bec4f39c4916647b",
+        "document_role": "primary",
+        "source_id": "tsmc-2025-20f"
+      }
+    ],
+    "outcome": "succeeded",
+    "run_id": "ingest:tsmc-2025-20f:20260820",
+    "source_id": "tsmc-2025-20f",
+    "started_at": "2026-08-20T17:06:35.654184Z"
+  }
+]

@@ -1,0 +1,626 @@
+{
+  "atlas_as_of": "2026-09-07",
+  "atlas_recorded_at": "2026-09-07T02:31:58Z",
+  "atlas_release_id": "2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2",
+  "attribution": [
+    "Source: ASE Kaohsiung Site, 2024 ASE Kaohsiung Sustainability Report.",
+    "Source: Amkor Technology, Inc., Amkor Company News.",
+    "Source: Intel Corporation, Intel Newsroom.",
+    "Source: Micron Technology, Inc., Form 10-Q for the quarter ended May 29, 2025, via SEC EDGAR.",
+    "Source: National Institute of Standards and Technology, CHIPS for America.",
+    "Source: SK hynix Inc., SK hynix Newsroom.",
+    "Source: Taiwan Semiconductor Manufacturing Company Limited, 2025 Form 20-F, via SEC EDGAR."
+  ],
+  "features": [
+    {
+      "geometry": null,
+      "id": "2adf774c-4dfd-5706-acd6-bc35ca157cd9",
+      "properties": {
+        "admin1": "Arizona",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "reconciled_fact",
+            "evidence_ids": [
+              "tsmc-fab21-hvm",
+              "tsmc-fab21-leading-edge",
+              "tsmc-fab21-operating-table"
+            ],
+            "method": "cross_source_named_facility_scope_review_v1",
+            "readiness": "production",
+            "technology": "Fab 21 / first TSMC Arizona fab; 4nm-5nm leading-edge project scope and 5nm most-advanced volume technology",
+            "valid_from": "2025-12-31",
+            "value": "leading_edge_logic"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Phoenix",
+        "claim_count": 10,
+        "company": "TSMC",
+        "country": "United States",
+        "country_code": "US",
+        "entity_id": "2adf774c-4dfd-5706-acd6-bc35ca157cd9",
+        "entity_kind": "facility",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "named_facility",
+        "lifecycle_as_of": "2026-02-28",
+        "lifecycle_state": "complete",
+        "lifecycle_statement": "TSMC identifies Fab 21 as its Arizona manufacturing entity, reports that the first Arizona facility entered high-volume production at the end of 2024, and lists Fab 21 among fabs in operation as of February 28, 2026.",
+        "name": "TSMC Fab 21 (first Arizona fab)",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "TSMC"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Phoenix"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "complete"
+            }
+          ]
+        },
+        "scope_categories": [
+          "leading_edge_logic"
+        ],
+        "source_urls": [
+          "https://www.nist.gov/chips/tsmc-arizona-phoenix",
+          "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm"
+        ],
+        "stable_key": "tsmc:fab21-arizona",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": null,
+      "id": "0a69fc56-de9f-5f0b-b4c3-6a9825c929ae",
+      "properties": {
+        "admin1": "Texas",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "samsung-taylor-leading-edge"
+            ],
+            "method": "official_project_scope_capture_v1",
+            "readiness": "planned",
+            "technology": "Two planned leading-edge logic foundry fabs focused on 2nm process technologies",
+            "valid_from": "2024-07-24",
+            "value": "leading_edge_logic"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Taylor",
+        "claim_count": 10,
+        "company": "Samsung",
+        "country": "United States",
+        "country_code": "US",
+        "entity_id": "0a69fc56-de9f-5f0b-b4c3-6a9825c929ae",
+        "entity_kind": "project_site",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "project_site_scope",
+        "lifecycle_as_of": "2024-07-24",
+        "lifecycle_state": "announced",
+        "lifecycle_statement": "Taylor, Texas: Construct a comprehensive advanced manufacturing ecosystem that includes both high volume leading-edge logic manufacturing and two leading-edge logic foundry fabs focused on mass production of 2nm process technologies.",
+        "name": "Samsung Taylor leading-edge logic project (two-fab aggregate)",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "Samsung"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Taylor"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "announced"
+            }
+          ]
+        },
+        "scope_categories": [
+          "leading_edge_logic"
+        ],
+        "source_urls": [
+          "https://www.nist.gov/chips/samsung-electronics-texas-austin"
+        ],
+        "stable_key": "samsung:taylor-leading-edge-project",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": null,
+      "id": "5c344e71-4563-50da-924f-2ec22f6b771f",
+      "properties": {
+        "admin1": "Arizona",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "intel-fab52-18a-production"
+            ],
+            "method": "official_named_facility_capability_capture_v1",
+            "readiness": "production",
+            "technology": "Intel 18A leading-edge process; Panther Lake and Clearwater Forest manufacturing",
+            "valid_from": "2025-10-09",
+            "value": "leading_edge_logic"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Chandler",
+        "claim_count": 10,
+        "company": "Intel",
+        "country": "United States",
+        "country_code": "US",
+        "entity_id": "5c344e71-4563-50da-924f-2ec22f6b771f",
+        "entity_kind": "facility",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "named_facility",
+        "lifecycle_as_of": "2025-10-09",
+        "lifecycle_state": "ramping",
+        "lifecycle_statement": "Arizona’s Fab 52 is fully operational and set to reach high-volume production using Intel 18A later this year; Intel also states that Intel 18A products are being manufactured there.",
+        "name": "Intel Fab 52",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "Intel"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Chandler"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "ramping"
+            }
+          ]
+        },
+        "scope_categories": [
+          "leading_edge_logic"
+        ],
+        "source_urls": [
+          "https://newsroom.intel.com/client-computing/intel-unveils-panther-lake-architecture-first-ai-pc-platform-built-on-18a"
+        ],
+        "stable_key": "intel:fab52-chandler",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": null,
+      "id": "37b715ef-649c-5acd-8cfb-754250022b80",
+      "properties": {
+        "admin1": "Singapore",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "micron-singapore-hbm-groundbreaking"
+            ],
+            "method": "official_project_scope_capture_v1",
+            "readiness": "planned",
+            "technology": "HBM advanced packaging facility",
+            "valid_from": "2025-06-26",
+            "value": "advanced_packaging"
+          },
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "micron-singapore-hbm-groundbreaking"
+            ],
+            "method": "official_project_scope_capture_v1",
+            "readiness": "planned",
+            "technology": "HBM advanced packaging facility",
+            "valid_from": "2025-06-26",
+            "value": "hbm_packaging"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Singapore",
+        "claim_count": 11,
+        "company": "Micron",
+        "country": "Singapore",
+        "country_code": "SG",
+        "entity_id": "37b715ef-649c-5acd-8cfb-754250022b80",
+        "entity_kind": "project_site",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "project_site_scope",
+        "lifecycle_as_of": "2025-06-26",
+        "lifecycle_state": "site_preparation",
+        "lifecycle_statement": "In January 2025, Micron broke ground on an HBM advanced packaging facility in Singapore intended to expand total advanced packaging capacity beginning in calendar 2027.",
+        "name": "Micron Singapore HBM advanced packaging facility project",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "Micron"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Singapore"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "site_preparation"
+            }
+          ]
+        },
+        "scope_categories": [
+          "advanced_packaging",
+          "hbm_packaging"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/723125/000072312525000021/mu-20250529.htm"
+        ],
+        "stable_key": "micron:singapore-hbm-packaging-project",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": null,
+      "id": "840c4e81-84d7-53da-9b32-6747eee5df78",
+      "properties": {
+        "admin1": "North Chungcheong Province",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "sk-m15x-hbm-scope",
+              "sk-m15x-tools-installing"
+            ],
+            "method": "official_named_facility_capability_capture_v1",
+            "readiness": "planned",
+            "technology": "Next-generation DRAM including HBM; M15X described as optimized for HBM production",
+            "valid_from": "2024-04-24",
+            "value": "hbm_fabrication"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Cheongju",
+        "claim_count": 10,
+        "company": "SK hynix",
+        "country": "South Korea",
+        "country_code": "KR",
+        "entity_id": "840c4e81-84d7-53da-9b32-6747eee5df78",
+        "entity_kind": "facility",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "named_facility",
+        "lifecycle_as_of": "2025-10-29",
+        "lifecycle_state": "tools_installing",
+        "lifecycle_statement": "Equipment installation has recently begun at M15X after the early opening of a new cleanroom.",
+        "name": "SK hynix M15X",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "SK hynix"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Cheongju"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "tools_installing"
+            }
+          ]
+        },
+        "scope_categories": [
+          "hbm_fabrication"
+        ],
+        "source_urls": [
+          "https://news.skhynix.com/en/wp-json/wp/v2/posts/1035",
+          "https://news.skhynix.com/en/wp-json/wp/v2/posts/2059"
+        ],
+        "stable_key": "sk-hynix:m15x-cheongju",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": null,
+      "id": "49721496-2e61-586e-b262-cfa06bb41c63",
+      "properties": {
+        "admin1": "Arizona",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "reconciled_fact",
+            "evidence_ids": [
+              "amkor-peoria-groundbreaking-two-phase",
+              "amkor-peoria-planned-campus-2026"
+            ],
+            "method": "reviewed_project_capability_mapping_v1",
+            "readiness": "planned",
+            "technology": "Planned advanced semiconductor packaging at the two-phase Peoria campus",
+            "valid_from": "2026-05-13",
+            "value": "advanced_packaging"
+          },
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "reconciled_fact",
+            "evidence_ids": [
+              "amkor-peoria-groundbreaking-two-phase",
+              "amkor-peoria-planned-campus-2026"
+            ],
+            "method": "reviewed_project_capability_mapping_v1",
+            "readiness": "planned",
+            "technology": "Planned semiconductor test capability at the two-phase Peoria campus",
+            "valid_from": "2026-05-13",
+            "value": "advanced_test"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Peoria",
+        "claim_count": 11,
+        "company": "Amkor",
+        "country": "United States",
+        "country_code": "US",
+        "entity_id": "49721496-2e61-586e-b262-cfa06bb41c63",
+        "entity_kind": "project_site",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "project_site_scope",
+        "lifecycle_as_of": "2025-10-06",
+        "lifecycle_state": "site_preparation",
+        "lifecycle_statement": "Amkor reports the October 6, 2025 groundbreaking for its Peoria packaging and test project and describes a two-phase campus. This is the latest completed physical milestone substantiated by the bounded reviewed documents; it does not establish the current maximum construction stage.",
+        "name": "Amkor Peoria two-phase advanced packaging and test project",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "Amkor"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Peoria"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "site_preparation"
+            }
+          ]
+        },
+        "scope_categories": [
+          "advanced_packaging",
+          "advanced_test"
+        ],
+        "source_urls": [
+          "https://amkor.com/blog/amkor-peoria-number-one-deal-north-america/",
+          "https://amkor.com/blog/amkor-semiconductor-packaging-facility-peoria-arizona/"
+        ],
+        "stable_key": "amkor:peoria-advanced-packaging-project",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": null,
+      "id": "fcddef13-a074-5614-a5f2-0fa5c3ea0b09",
+      "properties": {
+        "admin1": "Kaohsiung",
+        "capabilities": [
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "ase-kaohsiung-capability",
+              "ase-kaohsiung-identity"
+            ],
+            "method": "official_campus_scope_capability_capture_v1",
+            "readiness": "production",
+            "technology": "FOCoS, 2.5D packaging, CPO, and high-end packaging processes at Kaohsiung Site aggregate scope",
+            "valid_from": "2025-08-01",
+            "value": "advanced_packaging"
+          },
+          {
+            "capability_type": "facility_activity",
+            "claim_kind": "source_statement",
+            "evidence_ids": [
+              "ase-kaohsiung-capability",
+              "ase-kaohsiung-identity"
+            ],
+            "method": "official_campus_scope_capability_capture_v1",
+            "readiness": "production",
+            "technology": "One-stop comprehensive packaging and testing solutions at Kaohsiung Site aggregate scope",
+            "valid_from": "2025-08-01",
+            "value": "advanced_test"
+          }
+        ],
+        "capacities": [],
+        "capacity_basis_status": {
+          "announced": "unknown",
+          "economically_usable": "unknown",
+          "physical_construction": "unknown",
+          "qualified": "unknown",
+          "tool_installed": "unknown"
+        },
+        "city": "Kaohsiung",
+        "claim_count": 11,
+        "company": "ASE",
+        "country": "Taiwan",
+        "country_code": "TW",
+        "entity_id": "fcddef13-a074-5614-a5f2-0fa5c3ea0b09",
+        "entity_kind": "campus",
+        "geometry_precision_m": null,
+        "geometry_scope": "unresolved",
+        "identity_scope": "campus_scope",
+        "lifecycle_as_of": "2025-08-01",
+        "lifecycle_state": "complete",
+        "lifecycle_statement": "ASE describes Kaohsiung as its largest operating location and manufacturing site and identifies the Kaohsiung Site as a multi-plant campus in the Kaohsiung Nanzih Technology Industrial Park.",
+        "name": "ASE Kaohsiung Site aggregate",
+        "scalar_fields": {
+          "cohort.company": [
+            {
+              "value": "ASE"
+            }
+          ],
+          "geography.city": [
+            {
+              "value": "Kaohsiung"
+            }
+          ],
+          "lifecycle.stage": [
+            {
+              "value": "complete"
+            }
+          ]
+        },
+        "scope_categories": [
+          "advanced_packaging",
+          "advanced_test"
+        ],
+        "source_urls": [
+          "https://ase.aseglobal.com/public/downloads/en/2024-asekh-csr-report-en.pdf"
+        ],
+        "stable_key": "ase:kaohsiung-site",
+        "unknowns": {
+          "capacity_bases": [
+            "announced",
+            "economically_usable",
+            "physical_construction",
+            "qualified",
+            "tool_installed"
+          ],
+          "qualification": "unknown",
+          "utilization": "unknown",
+          "yield": "unknown"
+        }
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

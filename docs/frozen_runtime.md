@@ -132,8 +132,9 @@ The later isolated [schema-6 workflow](completed_milestone_core.md) closes the c
 null-midpoint storage gap and admits the reviewed cohort as source statements. Keep schema-5 evidence databases,
 migrations 1–5, old artifacts and current scheduled execution unchanged. A code bundle alone
 does not reroute an existing schedule: its original script paths still load the original checkout.
-Evolve schema 6 in a separately isolated working checkout/database until the execution-routing
-transition has been explicitly handled. Do not repin an active study to new code, alter its
+The October 13 [repository consolidation](repository_consolidation.md) integrated the later code
+into `main` after preserving the original runtime and sealing the registered study. Historical
+evidence databases remain separate from new research databases. Do not repin an active study to new code, alter its
 window, or backdate historical observations. This runtime removes a replay obstacle; it does not
 establish canonical identity, add forecast/outcome pairs or satisfy the north-star.
 

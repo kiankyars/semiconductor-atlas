@@ -145,9 +145,10 @@ documents. Scheduled local operation requires the computer and app to remain
 available; saved configuration is not execution evidence. See the
 [official scheduled-task guidance](https://developers.openai.com/codex/app/automations).
 
-During this study, do not edit the pinned producer files or source configurations.
-Necessary changes require a separate version and explicit exposure accounting,
-not repinning this registration after observations arrive. Retained source bodies,
+The study was sealed on October 13 with its original producer; see the
+[consolidation record](repository_consolidation.md) for the seal and retained runtime.
+Its code, source configurations, registration and receipts remain pinned. Later code changes
+on `main` do not repin or reinterpret that study. Retained source bodies,
 queues, retrospective reports, original checksum ledger and r3 release remain
 unchanged by shadow recording. Raw publisher bodies stay local. This workflow
 does not authorize a new public data release or claim acceptance.

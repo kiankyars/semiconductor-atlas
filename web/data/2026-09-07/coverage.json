@@ -1,0 +1,63 @@
+{
+  "as_of": "2026-09-07",
+  "capacity_claims_by_basis": {
+    "announced": 0,
+    "economically_usable": 0,
+    "physical_construction": 0,
+    "qualified": 0,
+    "tool_installed": 0
+  },
+  "claim_count": 73,
+  "companies": [
+    "TSMC",
+    "Samsung",
+    "Intel",
+    "Micron",
+    "SK hynix",
+    "Amkor",
+    "ASE"
+  ],
+  "company_facility_counts": {
+    "ASE": 1,
+    "Amkor": 1,
+    "Intel": 1,
+    "Micron": 1,
+    "SK hynix": 1,
+    "Samsung": 1,
+    "TSMC": 1
+  },
+  "evidence_fragment_count": 12,
+  "facility_count": 7,
+  "format": "semiconductor-atlas-ai-critical-coverage-v1",
+  "known_limitations": [
+    "This is a bounded seven-company baseline, not a global or company-complete facility census.",
+    "Project-site-scope rows are not asserted to be individual operating fabs or lines.",
+    "Null GeoJSON geometry means the evidence supports named geography but not a releasable facility point.",
+    "Announcements and expected milestones are not operating, installed, qualified, or economically usable capacity.",
+    "Yield, utilization, and qualification remain unknown for every facility in v1.",
+    "Capacity bases with no direct claim remain unknown; zero claims do not mean zero physical capacity."
+  ],
+  "mapped_facility_count": 0,
+  "recorded_at": "2026-09-07T02:31:58Z",
+  "release_id": "2026-09-07-ai-critical-manufacturing-amkor-successor-v1-r2",
+  "scope_category_counts": {
+    "advanced_packaging": 3,
+    "advanced_test": 2,
+    "hbm_fabrication": 1,
+    "hbm_packaging": 1,
+    "leading_edge_logic": 3
+  },
+  "source_document_count": 10,
+  "unknown_counts": {
+    "capacity_bases": {
+      "announced": 7,
+      "economically_usable": 7,
+      "physical_construction": 7,
+      "qualified": 7,
+      "tool_installed": 7
+    },
+    "qualification": 7,
+    "utilization": 7,
+    "yield": 7
+  }
+}
