@@ -1,9 +1,12 @@
+import html
 from html.parser import HTMLParser
+import json
 from pathlib import Path
+import re
 import shutil
 import tempfile
 import unittest
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 from web import build_site
 
@@ -62,6 +65,35 @@ class PublicSiteTests(unittest.TestCase):
             self.assertEqual({x.name for x in download.iterdir()}, {x.name for x in build_site.RELEASE.iterdir()})
             for source in build_site.RELEASE.iterdir():
                 self.assertEqual(source.read_bytes(), (download / source.name).read_bytes())
+
+    def test_discovery_metadata_and_correction_links(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "site"
+            build_site.build(output)
+            index = (output / "index.html").read_text()
+            match = re.search(r'<script type="application/ld\+json">(.*?)</script>', index, re.S)
+            self.assertIsNotNone(match)
+            dataset = json.loads(match.group(1))
+            self.assertEqual(dataset["@type"], "Dataset")
+            self.assertEqual(dataset["url"], build_site.BASE_URL)
+            self.assertNotIn("license", dataset)  # reuse terms are per source
+            self.assertEqual(len(dataset["spatialCoverage"]), 4)
+            for download in dataset["distribution"]:
+                relative = urlsplit(download["contentUrl"]).path.removeprefix(
+                    urlsplit(build_site.BASE_URL).path)
+                self.assertTrue((output / relative).is_file(), download["contentUrl"])
+            self.assertIn('<meta property="og:title" content="Semiconductor Atlas">', index)
+            self.assertIn('href="' + build_site.BASE_URL + 'favicon.svg"', index)
+            self.assertTrue((output / "favicon.svg").read_text().startswith("<svg"))
+            self.assertNotIn("__HEAD__", index)
+            detail = (output / "facilities/tsmc-fab21-arizona/index.html").read_text()
+            self.assertNotIn("application/ld+json", detail)
+            correction = re.search(r'href="([^"]+)">Report a correction', detail).group(1)
+            query = parse_qs(urlsplit(html.unescape(correction)).query)
+            self.assertEqual(query["template"], ["correction.yml"])
+            self.assertEqual(query["record"], ["tsmc:fab21-arizona"])
+            template = (build_site.ROOT / ".github/ISSUE_TEMPLATE/correction.yml").read_text()
+            self.assertIn("id: record", template)
 
     def test_migration_routes_have_destination_fallback_and_root_is_preserved(self):
         with tempfile.TemporaryDirectory() as directory:

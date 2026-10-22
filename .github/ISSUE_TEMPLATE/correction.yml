@@ -1,0 +1,41 @@
+name: Correct a record
+description: Report a statement on the site that a source contradicts, has superseded, or does not support.
+title: "Correction: "
+labels: ["data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Thanks for helping keep the atlas accurate. Each record only reports what dated sources say,
+        so a source is required. A newer retrieval of an old page does not make its statement current.
+  - type: input
+    id: record
+    attributes:
+      label: Record
+      description: The record key shown in the page address, for example `tsmc:fab21-arizona`.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What should change?
+      description: Quote or describe the statement on the site and what the source says instead.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: A primary source (company filing or release, government record) where possible.
+    validations:
+      required: true
+  - type: input
+    id: source_date
+    attributes:
+      label: Source publication date
+      description: As printed by the publisher, with the precision it gives (day, month or year).
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Scope matters. Say whether the source covers the named facility, a project, or a whole site.

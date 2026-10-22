@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Data centre corrections and additions
+    url: https://github.com/kiankyars/datacenter-atlas/issues
+    about: Data centre records are maintained in the Data Center Atlas repository.

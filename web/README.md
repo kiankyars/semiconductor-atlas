@@ -25,6 +25,9 @@ manifest and the complete release before copying its files unchanged to
 publisher documents remain in local evidence storage.
 
 The seven records have no verified point geometry, so the website starts with a list.
+The home page carries schema.org `Dataset` markup for dataset search engines. It declares no
+license because reuse terms are set per source in `ATTRIBUTION.md`. Each facility page links to a
+correction form prefilled with its record key.
 Old datacenter project pages redirect to the matching project in
 [Data Center Atlas](https://kiankyars.github.io/datacenter-atlas/). The project listing,
 coverage, data, methodology and about pages redirect to their corresponding destinations.

@@ -1,0 +1,41 @@
+name: Suggest a facility or project
+description: Point to a semiconductor fab, memory or advanced packaging facility or project that is not yet recorded.
+title: "Facility: "
+labels: ["missing-facility"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Coverage is selective and grows only where dated primary sources support each statement.
+        Suggestions are reviewed before anything is published.
+  - type: input
+    id: name
+    attributes:
+      label: Facility or project
+    validations:
+      required: true
+  - type: input
+    id: company
+    attributes:
+      label: Company
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: City or county, and country.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: One URL per line, ideally company filings, releases, or government records, with publication dates.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Activity (logic, memory, HBM, packaging, test), reported stage, and anything uncertain.

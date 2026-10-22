@@ -12,7 +12,7 @@ from pathlib import Path
 import re
 import shutil
 import sys
-from urllib.parse import urlsplit
+from urllib.parse import urlencode, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -26,6 +26,13 @@ TEMPLATE = Path(__file__).with_name("site-template.html")
 BASE_URL = "https://kiankyars.github.io/semiconductor-atlas/"
 DATACENTER_URL = "https://kiankyars.github.io/datacenter-atlas/"
 DOWNLOAD_PATH = "downloads/2026-09-07/"
+REPOSITORY_URL = "https://github.com/kiankyars/semiconductor-atlas"
+FAVICON = (
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
+    '<rect width="32" height="32" rx="6" fill="#175b49"/>'
+    '<rect x="10" y="10" width="12" height="12" rx="1" fill="none" stroke="#fff" stroke-width="2.5"/>'
+    "</svg>\n"
+)
 LABELS = {
     "leading_edge_logic": "Leading-edge logic", "hbm_fabrication": "HBM fabrication",
     "hbm_packaging": "HBM packaging", "advanced_packaging": "Advanced packaging",
@@ -77,12 +84,52 @@ def safe_url(value: str) -> str:
 
 
 def page(template: str, *, title: str, description: str, body: str,
-         base_url: str, path: str = "", script: str = "") -> str:
+         base_url: str, path: str = "", script: str = "", head: str = "") -> str:
     values = {"PAGE_TITLE": e(title), "DESCRIPTION": e(description),
               "CANONICAL": e(base_url + path), "HOME": e(base_url),
-              "BODY": body, "SCRIPT": script}
-    return re.sub(r"__(PAGE_TITLE|DESCRIPTION|CANONICAL|HOME|BODY|SCRIPT)__",
+              "BODY": body, "SCRIPT": script, "HEAD": head}
+    return re.sub(r"__(PAGE_TITLE|DESCRIPTION|CANONICAL|HOME|BODY|SCRIPT|HEAD)__",
                   lambda match: values[match.group(1)], template)
+
+
+def dataset_jsonld(features: list[dict], manifest: dict, base_url: str) -> str:
+    """schema.org Dataset markup so dataset search engines can index the public bundle.
+
+    No license is declared: the bundle carries source-specific reuse terms in ATTRIBUTION.md.
+    """
+    records = [feature["properties"] for feature in features]
+    downloads = [("facilities.csv", "text/csv"), ("claims.jsonl", "application/jsonl"),
+                 ("evidence.jsonl", "application/jsonl"), ("atlas.geojson", "application/geo+json")]
+    document = {
+        "@context": "https://schema.org/",
+        "@type": "Dataset",
+        "name": "Semiconductor Atlas",
+        "description": (
+            "Source-linked records of semiconductor fabs, memory and advanced packaging "
+            "facilities and projects. Each record links reported capabilities, milestones and "
+            "capacity to dated primary sources; unknown values stay blank. Coverage is selective "
+            "and is not a complete global inventory."),
+        "url": base_url,
+        "sameAs": REPOSITORY_URL,
+        "isAccessibleForFree": True,
+        "creator": {"@type": "Person", "name": "Kian Kyars"},
+        "dateModified": manifest["recorded_at"][:10],
+        "temporalCoverage": f"../{manifest['as_of']}",
+        "spatialCoverage": [{"@type": "Place", "name": country}
+                            for country in sorted({record["country"] for record in records})],
+        "keywords": ["semiconductors", "fabs", "advanced packaging", "HBM", "manufacturing"],
+        "distribution": [{"@type": "DataDownload", "encodingFormat": media_type,
+                          "contentUrl": base_url + DOWNLOAD_PATH + name}
+                         for name, media_type in downloads],
+    }
+    text = json.dumps(document, ensure_ascii=False, sort_keys=True).replace("</", "<\\/")
+    return f'\n  <script type="application/ld+json">{text}</script>'
+
+
+def correction_url(record: dict) -> str:
+    query = urlencode({"template": "correction.yml", "title": f"Correction: {record['name']}",
+                       "record": record["stable_key"]})
+    return f"{REPOSITORY_URL}/issues/new?{query}"
 
 
 def read_rows(path: Path) -> list[dict]:
@@ -230,7 +277,7 @@ def facility_body(record: dict, claims: list[dict], evidence: dict[str, dict],
 <section class="detail-hero"><p class="eyebrow">{e(record["company"])}</p><h1>{e(record["name"])}</h1><div class="detail-meta"><span>{e(location)}</span><span>{e(label(record["identity_scope"]))}</span></div></section>
 <div class="detail-columns"><div><section class="detail-box"><div class="small-label">Recorded stage · {stage_date(record, sources)}</div><span class="badge" data-stage="{e(record["lifecycle_state"])}">{e(label(record["lifecycle_state"]))}</span><p>{e(record["lifecycle_statement"])}</p>{evidence_links(lifecycle_ids, evidence)}</section>
 <section class="detail-box"><h2>Production capabilities</h2>{capabilities}</section></div>
-<aside><section class="detail-box"><h2>Record details</h2><dl class="fact-list"><dt>Company</dt><dd>{e(record["company"])}</dd><dt>Location</dt><dd>{e(location)}</dd><dt>Scope</dt><dd>{e(label(record["identity_scope"]))}</dd><dt>Evidence recorded</dt><dd>{display_date(recorded_at)}</dd><dt>Capacity, yield and utilization</dt><dd class="empty-value">No supported figures in this record.</dd></dl></section></aside></div>
+<aside><section class="detail-box"><h2>Record details</h2><dl class="fact-list"><dt>Company</dt><dd>{e(record["company"])}</dd><dt>Location</dt><dd>{e(location)}</dd><dt>Scope</dt><dd>{e(label(record["identity_scope"]))}</dd><dt>Evidence recorded</dt><dd>{display_date(recorded_at)}</dd><dt>Capacity, yield and utilization</dt><dd class="empty-value">No supported figures in this record.</dd></dl><p><a href="{e(correction_url(record))}">Report a correction ↗</a></p></section></aside></div>
 <section class="section"><div class="section-head"><h2>Source documents</h2><p>{len(source_ids)} sources</p></div><div class="source-grid">{source_blocks}</div></section>
 <section class="section"><details><summary>All {len(owned_claims)} sourced claims</summary>{"".join(claim_html(claim, evidence) for claim in owned_claims)}</details></section>'''
 
@@ -270,7 +317,8 @@ def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
     template = TEMPLATE.read_text(encoding="utf-8")
     routes = {
         "index.html": page(template, title="Semiconductor Atlas", description="Explore semiconductor facilities, production capabilities and primary sources.",
-                           body=index_body(atlas["features"], sources, manifest, base_url), base_url=base_url, script=FILTER_SCRIPT),
+                           body=index_body(atlas["features"], sources, manifest, base_url), base_url=base_url, script=FILTER_SCRIPT,
+                           head=dataset_jsonld(atlas["features"], manifest, base_url)),
         "404.html": migration_page(template, base_url, "404.html", missing=True),
     }
     for feature in atlas["features"]:
@@ -301,6 +349,7 @@ def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(contents, encoding="utf-8")
     (output / ".nojekyll").write_text("", encoding="utf-8")
+    (output / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     canonical_paths = [""] + ["facilities/" + slug(x["properties"]["stable_key"]) + "/" for x in atlas["features"]]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(
         f"<url><loc>{e(base_url + path)}</loc></url>" for path in canonical_paths) + "</urlset>\n"

@@ -61,6 +61,9 @@ Keep source-native facility and project identities separate until their relation
 Use dated primary sources, preserve the exact project scope, and distinguish a publisher's target
 from reported completion or production. A new retrieval date does not make an old statement
 current. Review existing records for corrections as well as adding missing facilities.
+Anyone can report a problem with the [correction form](https://github.com/kiankyars/semiconductor-atlas/issues/new?template=correction.yml)
+(each facility page links to it with the record filled in) or
+[suggest a facility](https://github.com/kiankyars/semiconductor-atlas/issues/new?template=missing-facility.yml).
 
 The core records completed milestones, source quantities and rates, project-scoped capacity, and
 changes over time. Evidence dates and the time a statement entered the database remain separate.
