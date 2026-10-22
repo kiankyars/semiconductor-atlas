@@ -38,6 +38,7 @@ class PublicSiteTests(unittest.TestCase):
             self.assertIn("August 2025", index)
             self.assertNotIn("1 August 2025", index)
             self.assertIn('id="search"', index)
+            self.assertIn('<th scope="col"><span class="visually-hidden">Details</span></th>', index)
             self.assertNotIn("window.location.replace", index)
             self.assertNotIn("<svg", index)
             for placeholder in ("__PAGE_TITLE__", "__DESCRIPTION__", "__BODY__", "__SCRIPT__"):
