@@ -4,6 +4,7 @@ Explore semiconductor fabs, packaging facilities, and manufacturing projects, wi
 behind each statement.
 
 **[Browse the atlas](https://kiankyars.github.io/semiconductor-atlas/)** ·
+[Facility registry](https://kiankyars.github.io/semiconductor-atlas/registry/) ·
 [Download the public data](web/data/2026-09-07/) ·
 [Data contract](docs/data_contract.md)
 
@@ -12,6 +13,16 @@ SK hynix, Amkor, and ASE. Its latest included review is September 7, 2026. Each 
 reported capabilities, milestones, and capacity to dated source evidence. Coverage is selective;
 unknown values stay blank. The site uses a searchable list because these records do not yet have
 verified map coordinates.
+
+The [facility registry](https://kiankyars.github.io/semiconductor-atlas/registry/) adds 724
+Taiwan environmental-registry records (618 with source-reported map points) and 410
+registered-factory records without a reviewed match, all selected by exact semiconductor codes;
+28 U.S. CHIPS final-award pages with their NIST statements quoted and scoped; 15 European
+industrial-reporting facility records admitted after an AI-assisted scope review; and 3,059
+unverified U.S. EPA leads. These are registry facts, not verified operations or capacity, and the
+counts are registry records rather than a census of plants. See
+[the registry bundle](web/data/registry-2026-07-20/) and its
+[README](web/data/registry-2026-07-20/README.md).
 
 Data centers have moved to **[Data Center Atlas](https://kiankyars.github.io/datacenter-atlas/)**,
 maintained in [its own repository](https://github.com/kiankyars/datacenter-atlas).

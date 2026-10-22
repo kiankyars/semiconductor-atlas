@@ -25,6 +25,24 @@ manifest and the complete release before copying its files unchanged to
 publisher documents remain in local evidence storage.
 
 The seven records have no verified point geometry, so the website starts with a list.
+
+`/registry/` publishes the tracked facility-registry bundle in `web/data/registry-2026-07-20/`.
+`semiconductor_atlas/public_registry.py` derives it from the retained 2026-07-20 open-seed
+release and the accepted EEA scope database, both local-only, plus the tracked EEA candidate
+queue for reporting years. Every input is verified by SHA-256:
+
+```sh
+python3 scripts/build_public_registry.py --output /tmp/registry-bundle
+```
+
+The site build checks the bundle's pinned manifest and every file hash, then copies the files
+unchanged to `downloads/registry-2026-07-20/`. The page draws a Taiwan map from the
+MOENV-reported points only, over a simplified Natural Earth 1:50m outline
+(`taiwan_outline.json`, public domain). Nothing is geocoded. Map dots are a pointer shortcut
+to table rows, follow the table filters and stay out of the tab order. NIST funding, investment, jobs
+and timeline statements are quoted verbatim under the scope of the page section they come from
+(this site, the award page, or a program shared across award pages). Taiwan environmental-control
+listings show each category's flag and release date as published. U.S. EPA FRS rows stay as download-only leads without map points.
 The home page carries schema.org `Dataset` markup for dataset search engines. It declares no
 license because reuse terms are set per source in `ATTRIBUTION.md`. Each facility page links to a
 correction form prefilled with its record key.

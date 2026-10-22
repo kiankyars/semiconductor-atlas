@@ -1,0 +1,82 @@
+{
+  "attribution": {
+    "eea-industrial-reporting": "Source: European Environment Agency (EEA), Industrial reporting under Directive 2010/75/EU and Regulation (EC) No 166/2006, version 16.00, published 20 February 2026, DOI 10.2909/657ac3cb-affa-4295-a4a9-27b4f539adab. Licensed under CC BY 4.0. Semiconductor Atlas filtered and transformed the source; changes were made.",
+    "epa-frs": "Source: U.S. Environmental Protection Agency, Facility Registry Service (public-domain U.S. Government data; no EPA endorsement)",
+    "taiwan-ida-factory": "Source: 經濟部產業發展署 (Taiwan Ministry of Economic Affairs, Industrial Development Administration), 登記工廠名錄, 2026. Released under the Taiwan Open Government Data License, Version 1.0: https://data.gov.tw/license",
+    "taiwan-moenv-ems": "Source: 環境部資源循環署 (Taiwan Ministry of Environment, Resource Circulation Administration), 環境保護許可管理系統(暨解除列管)對象基本資料 (EMS_S_01), 2026. Released under the Taiwan Open Government Data License, Version 1.0: https://data.gov.tw/license",
+    "us-official-semiconductor-awards": "Source: National Institute of Standards and Technology (NIST), CHIPS for America award disclosures. U.S. government public information; credit NIST. Embedded third-party materials are not republished."
+  },
+  "counts": {
+    "eea-industrial-reporting": 15,
+    "epa-frs": 3059,
+    "excluded_personal_name_leads": 6,
+    "excluded_private_organization_rows": 2,
+    "ida_registration_statuses": {
+      "生產中": 553
+    },
+    "ida_token_261_factories": 553,
+    "nist_multi_page_programs": 6,
+    "nist_program_member_pages": 15,
+    "reviewed_identity_links": 142,
+    "reviewed_links_with_differences": 19,
+    "source_reported_points": 618,
+    "taiwan-ida-factory": 410,
+    "taiwan-moenv-ems": 724,
+    "unreviewed_same_name_and_business_number": 162,
+    "us-official-semiconductor-awards": 28
+  },
+  "files": {
+    "ATTRIBUTION.md": {
+      "bytes": 1613,
+      "sha256": "034f50e15a10f773bc3145c62b267517148ee0ecc762c3c37103018d0940602e"
+    },
+    "README.md": {
+      "bytes": 8497,
+      "sha256": "2e79a7d6f79c1ef84b397e155d008ad502dc3044613f865ccbe60b4b30ac38ac"
+    },
+    "records.csv": {
+      "bytes": 1330647,
+      "sha256": "39b2e24f37fac5a443ba6d8548d85341d8f4a935fb0bc5bb0a54d829abde095b"
+    },
+    "records.jsonl": {
+      "bytes": 1660066,
+      "sha256": "7769755bc1f6a713730cd54fc93b92b1e51ea046874772980c1f6df5c59e9c3f"
+    },
+    "registry_points.geojson": {
+      "bytes": 415656,
+      "sha256": "1e52f7ef7d812b3bd762109e8006a218e0ee929b6b29f5ef6f15d18e1c9bfc96"
+    },
+    "us_epa_frs_leads.csv": {
+      "bytes": 754254,
+      "sha256": "fc22bffb5f17c73a92d12ee6e3f920e994034894f8b354692915d68b7c2c2fd9"
+    },
+    "us_epa_frs_leads.jsonl": {
+      "bytes": 1200357,
+      "sha256": "85c70b60638d9076b616b6ef1045e3033ca76c5db143e048cc5217caee45d341"
+    }
+  },
+  "format": "semiconductor-atlas-public-registry-v1",
+  "inputs": {
+    "eea_candidates": "review_plans/2026-07-20-eea-industrial-v16-candidates.json",
+    "eea_candidates_sha256": "a5a0738edcbed94f6eb7b75e992e9342a5d1e3b12f04b9789e3191c7bbfaf58d",
+    "eea_database": "artifacts/2026-09-07-eea-scope-revisions-v3.sqlite",
+    "eea_database_sha256": "7b60f67911a0cb73ce17e47451d534c6e5738e7cd804398734fdf652385db778",
+    "source_release": "releases/2026-07-20-open-seed-taiwan-tax-relationships",
+    "source_release_manifest_sha256": "6d7bca2cd392d1372774ae227ae9cd6e3a665454e2c25084b357c9b58691f4ce",
+    "source_release_recorded_at": "2026-07-20T09:54:46Z"
+  },
+  "licenses": {
+    "eea-industrial-reporting": "https://creativecommons.org/licenses/by/4.0/",
+    "epa-frs": "https://edg.epa.gov/epa_data_license.html",
+    "taiwan-ida-factory": "https://data.gov.tw/license",
+    "taiwan-moenv-ems": "https://data.gov.tw/license",
+    "us-official-semiconductor-awards": "https://www.nist.gov/copyrights-disclaimers"
+  },
+  "source_dates": {
+    "eea-industrial-reporting": "2026-02-20",
+    "epa-frs": "2026-07-01",
+    "taiwan-ida-factory": "2026-07-20",
+    "taiwan-moenv-ems": "2026-07-20",
+    "us-official-semiconductor-awards": "2026-07-17"
+  }
+}
