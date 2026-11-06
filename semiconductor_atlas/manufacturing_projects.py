@@ -18,7 +18,7 @@ from __future__ import annotations
 import json
 import math
 import re
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -249,15 +249,25 @@ def _number(value: Any) -> bool:
     return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
+def latest_calendar_date() -> date:
+    """The latest date currently in use anywhere (UTC+14).
+
+    Researchers record dates in their own time zone, so a check run in UTC must not call a date
+    that has already begun elsewhere "in the future".
+    """
+    return (datetime.now(timezone.utc) + timedelta(hours=14)).date()
+
+
 def validate_record(record: Any, *, stem: str | None = None,
                     today: date | None = None) -> list[str]:
     """Return every structural problem in one record (an empty list means valid).
 
     ``today`` bounds every date (sources cannot be read, nor events reported, in the future);
-    it defaults to the current date.
+    it defaults to the latest calendar date anywhere, so a check run in UTC accepts a source
+    read on a date that has already begun in the researcher's time zone.
     """
     errors: list[str] = []
-    today = today or date.today()
+    today = today or latest_calendar_date()
     if not isinstance(record, dict):
         return ["record: must be a JSON object"]
     for key, required in TOP_LEVEL.items():

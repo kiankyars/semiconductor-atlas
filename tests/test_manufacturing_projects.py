@@ -7,7 +7,7 @@ import csv
 import hashlib
 import io
 import json
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 import tempfile
 import unittest
@@ -219,6 +219,13 @@ class ValidatorTests(unittest.TestCase):
                 record = example(review={"reviewed_on": value, "method": "Checked.", "changes": None})
                 self.assertTrue(any(x.startswith("review.reviewed_on")
                                     for x in mp.validate_record(record, stem="example-fab-one", today=date(2026, 11, 7))))
+
+    def test_default_today_allows_dates_already_begun_east_of_utc(self):
+        utc_today = datetime.now(timezone.utc).date()
+        self.assertIn(mp.latest_calendar_date() - utc_today, (timedelta(0), timedelta(days=1)))
+        record = example()
+        record["sources"][1]["accessed"] = mp.latest_calendar_date().isoformat()
+        self.assertFalse(any("in the future" in x for x in mp.validate_record(record, stem="example-fab-one")))
 
     def test_malformed_values_are_reported_not_raised(self):
         for changes in ({"segments": [["logic"]]}, {"status": ["operating"]}, {"aliases": [["x"]]},
