@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.0",
+  "id": "amkor-arizona-peoria",
+  "name": "Amkor Technology Arizona advanced packaging and test campus, Peoria",
+  "aliases": [
+    "Amkor Technology Arizona",
+    "Amkor Peoria campus"
+  ],
+  "company": "Amkor",
+  "operator": "Amkor Technology Arizona, Inc.",
+  "parties": [
+    {
+      "name": "Amkor Technology Arizona, Inc.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Subsidiary of Amkor Technology, Inc. named as the CHIPS award recipient."
+    },
+    {
+      "name": "Amkor Technology, Inc.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Final CHIPS award of direct funding for the new facility."
+    },
+    {
+      "name": "City of Peoria",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Approved a three-way development agreement in February 2024 with up to USD 3 million of infrastructure reimbursement, and a land swap moving the project to a larger parcel in August 2025."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [
+    {
+      "label": "2.5D packaging",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named on the CHIPS award page among the technologies the facility will offer."
+    },
+    {
+      "label": "Wafer-level packaging",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "label": "System in Package (SiP)",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Amkor's planned high-volume advanced packaging and test campus in north Peoria, Arizona, backed by a final CHIPS award of up to USD 407 million. The project began as a multi-phase USD 2 billion plan approved by the city in 2024, moved to a larger site in the Peoria Innovation Core in August 2025, and broke ground in October 2025 with the planned investment raised to USD 7 billion across two phases. Amkor reported construction underway in August 2026 and expects the first phase to open in 2028.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Peoria",
+    "site": "Peoria Innovation Core",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "A 104-acre parcel in north Peoria, exchanged in August 2025 for the 56-acre parcel originally designated in the Five North at Vistancia development."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-13",
+  "status_source_ids": [
+    "s4",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-02-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original multi-phase plan at the time of the city development agreement."
+    },
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-06",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Expanded plan announced at the groundbreaking, covering two phases."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 407000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "CHIPS direct funding listed as a final award; the award page gives no award date, so the date shown is when the page was read. Separate CHIPS workforce funding of USD 7 million is also listed."
+    },
+    {
+      "metric": "capacity",
+      "value": 14500,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Wafers processed per month on completion, as stated on the CHIPS award page; wafer size not given."
+    },
+    {
+      "metric": "capacity",
+      "value": 3700000,
+      "value_max": null,
+      "unit": "units_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Packaged units per month processed through assembly and test equipment on completion, per the CHIPS award page."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 750000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-06",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total cleanroom space across both planned phases."
+    },
+    {
+      "metric": "site_area",
+      "value": 104,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-08-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Parcel in the Peoria Innovation Core obtained through the land swap."
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-08-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Manufacturing jobs under the original USD 2 billion plan."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-08-13",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Jobs expected under the expanded USD 7 billion plan."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_selected",
+      "date": "2024-02-20",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Peoria City Council approved the development agreement for a site in Five North at Vistancia."
+    },
+    {
+      "event": "site_selected",
+      "date": "2025-08-28",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Council approved a land swap moving the project to a larger parcel in the Peoria Innovation Core."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2025-10-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The CHIPS award page expects mass production to begin at the end of 2027."
+    },
+    {
+      "event": "first_production",
+      "date": "2028-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "At the site change Amkor expected production to start in early 2028."
+    },
+    {
+      "event": "opening",
+      "date": "2028",
+      "planned": true,
+      "phase_label": "Phase One",
+      "source_ids": [
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Peoria City Council Approves Development Agreement Paving The Way For Amkor's Advanced OSAT Facility",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/peoria-city-council-approves-development-agreement-paving-the-way-for-amkors-advanced-osat-facility/",
+      "type": "company_announcement",
+      "published": "2024-02-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Amkor Technology, Inc. (Arizona)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/amkor-technology-inc-arizona-peoria",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Amkor Announces New Site for U.S. Semiconductor Facility",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/amkor-announces-new-site-for-u-s-semiconductor-facility/",
+      "type": "company_announcement",
+      "published": "2025-08-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Amkor Technology Breaks Ground on Landmark U.S. Semiconductor Packaging Facility",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/amkor-semiconductor-packaging-facility-peoria-arizona/",
+      "type": "company_announcement",
+      "published": "2025-10-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Amkor's Peoria Project Recognized as the Number One Deal in North America",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/amkor-peoria-number-one-deal-north-america/",
+      "type": "company_announcement",
+      "published": "2026-05-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Amkor Joins Arizona Economic Delegation to the Republic of Korea",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/arizona-korea-semiconductor-delegation/",
+      "type": "company_announcement",
+      "published": "2026-08-13",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Production targets have moved from the end of 2027 (CHIPS award page) to early 2028 and then to a 2028 opening of Phase One; all are kept as planned milestones. The CHIPS award page gives expected capital expenditure of about USD 1.7 billion for the funded project, well below the later USD 7 billion two-phase plan, and is not recorded as a separate figure.",
+  "archived_record": "amkor:peoria-advanced-packaging-project",
+  "registry_records": [
+    {
+      "record_id": "nist:project:668c5b7c-b5b3-52be-b590-a78b284d6d51",
+      "relation": "award_page",
+      "note": null
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the operator to the Arizona subsidiary named on the CHIPS award page, widened the end-2027 and early-2028 production targets to quarter and half-year precision to match the sources, and noted the USD 1.7 billion capital expenditure on the award page."
+  }
+}

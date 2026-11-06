@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "id": "nexchip-hefei-phase-4",
+  "name": "Nexchip Phase 4 Fab, Hefei",
+  "aliases": [
+    "晶合四期",
+    "Nexchip fourth fab"
+  ],
+  "company": "Nexchip",
+  "operator": "Hefei Jingyi Integrated Circuit (晶奕集成), Nexchip subsidiary",
+  "parties": [
+    {
+      "name": "Hefei Jingyi Integrated Circuit (晶奕集成)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Construction entity for the Phase 4 line, set up in July 2025; Nexchip agreed in February 2026 to invest CNY 2 billion to own all of it, and a November 2026 proposal would raise its registered capital from CNY 2 billion to CNY 11.1 billion."
+    },
+    {
+      "name": "Nexchip Semiconductor Corporation",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Wholly owns the project company; under the capital increase proposed in November 2026 it would add CNY 5.1 billion and its stake would fall to 63.96%."
+    },
+    {
+      "name": "Hefei Construction Investment Holding",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Hefei state investor proposed in November 2026 to contribute CNY 3 billion for a 27.03% stake."
+    },
+    {
+      "name": "Hefei Qinhe Electronic Technology",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Proposed in November 2026 to contribute CNY 1 billion for a 9.01% stake."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "image_sensor"
+  ],
+  "process_nodes": [
+    {
+      "label": "40nm",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Planned for image-sensor, OLED-related and logic processes."
+    },
+    {
+      "label": "28nm",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Planned for image-sensor, OLED-related and logic processes."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "Nexchip's fourth fab, a 300 mm foundry line in Hefei's Xinzhan High-Tech Zone built by its subsidiary Jingyi. Construction started in January 2026 on a CNY 35.5 billion budget for 55,000 wafers a month on 40nm and 28nm image-sensor, OLED and logic processes. The company targets tool move-in and first output in the fourth quarter of 2026 and full capacity in the second quarter of 2028. In November 2026 it proposed bringing Hefei state capital into the project company as minority shareholders.",
+  "location": {
+    "country": "CN",
+    "admin1": "Anhui",
+    "locality": "Hefei",
+    "site": "Xinzhan High-Tech Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-10",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 35500000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-01-04",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 55000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-01-04",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "300 mm wafers per month at full capacity."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2026-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Company announced the start of Phase 4 construction."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2026-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2028-Q2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Target for reaching full capacity given in February 2026; the January 2026 release had said the end of 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "总投资355亿！晶合四期启动建设",
+      "publisher": "Nexchip Semiconductor Corporation",
+      "url": "https://www.nexchip.com.cn/zh-cn/News/News?id=928283893402963968",
+      "type": "company_announcement",
+      "published": "2026-01-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "晶合集成正式登陆港交所",
+      "publisher": "Nexchip Semiconductor Corporation",
+      "url": "https://www.nexchip.com.cn/zh-cn/News/News?id=1002494090379530240",
+      "type": "company_announcement",
+      "published": "2026-07-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "12英寸厂“进账”91亿元，国内晶圆代工按下快进键",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20261106-41410.html",
+      "type": "trade_press",
+      "published": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "总投资355亿！晶合集成四期晶圆厂来了 拟Q4投产",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2283293",
+      "type": "news",
+      "published": "2026-02-06",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "At its Hong Kong listing in July 2026, Nexchip described three fabs at full output and a fourth under construction. The Hong Kong offering proceeds were earmarked for a 22nm platform and other R&D, not for this fab. The November 2026 capital increase had been approved by the board but not yet signed when it was reported.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the shareholdings, which reflected a capital increase only proposed in November 2026, and the project company's history; made the subsidiary the operator, named the Xinzhan High-Tech Zone, and moved the full-capacity target to 2028-Q2 per a February 2026 report."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-yongin-y1",
+  "name": "SK hynix Yongin Semiconductor Cluster Fab 1",
+  "aliases": [
+    "Yongin Y1",
+    "Yongin Phase 1 fab"
+  ],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The first of four fabs SK hynix plans at its Yongin Semiconductor Cluster in Wonsam-myeon, Yongin, Gyeonggi Province. In July 2024 the board approved about KRW 9.4 trillion for the fab and support facilities, with construction to start in March 2025 and completion in May 2027. In February 2026 the company added about KRW 21.6 trillion, bringing the first fab to about KRW 31 trillion before equipment, and moved the first cleanroom opening up to February 2027. The fab has two building shells and six cleanrooms and is to make next-generation DRAM including HBM; SK hynix expects it to enter full operation in 2027.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Yongin",
+    "site": "Yongin Semiconductor Cluster",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Wonsam-myeon, Cheoin-gu, Yongin; the cluster site covers about 4.15 million m²."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-28",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 9400000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-07-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Board-approved for the first fab and its support facilities, to be spent from August 2024 to the end of 2028."
+    },
+    {
+      "metric": "investment",
+      "value": 31000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-25",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "First-fab total after a further KRW 21.6 trillion through December 2030; excludes equipment."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-07-26",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Board approval of the first-fab investment."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025-03",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned start of fab construction."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Construction was scheduled for March 2025; by February 2026 the fab structure had risen to about the height of a 50-storey building. The sources do not give the exact start date."
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-05",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original completion target for the fab."
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-02",
+      "planned": true,
+      "phase_label": "First cleanroom",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Opening of the first cleanroom, moved up from May 2027."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The operator expects the first Yongin fab to enter full-scale operation in 2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SK hynix Board Approves Yongin Semiconductor Cluster Investment Plan",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-board-approves-yongin-semiconductor-cluster-plan/",
+      "type": "company_announcement",
+      "published": "2024-07-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "New Facility Investment for Yongin Semiconductor Cluster",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/new-facility-investment-for-yongin-semiconductor-cluster/",
+      "type": "company_announcement",
+      "published": "2026-02-25",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "SK hynix Invests 54 Trillion Won in Yongin Y2 and Cheongju M17 to Secure Mid-to-Long-Term Production Base for AI Memory Demand",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/fab-facility-investment-2026/",
+      "type": "company_announcement",
+      "published": "2026-08-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "SK hynix Announces 3Q26 Financial Results",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "type": "company_announcement",
+      "published": "2026-10-28",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "sk-hynix-yongin-y2",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The first phase also includes a mini-fab with 300 mm tools where local materials, parts and equipment suppliers can test their products; SK hynix describes it as a research facility, so it is not recorded separately. In August 2026 SK hynix said the power and water infrastructure needed up to Y2 operation was 99% complete. The cluster as a whole, four fabs under a KRW 600 trillion master plan that SK hynix now aims to finish building by 2033 rather than 2045, is described in the Y2 record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Reworded the notes on the 2033 target to match the cited August 2026 release, which gives 2033 as the date for finishing construction of all four fabs; the notes had described it as the fourth fab's first-cleanroom date, which no cited source states."
+  }
+}

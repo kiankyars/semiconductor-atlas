@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-advanced-backend-fab-6-zhunan",
+  "name": "TSMC Advanced Backend Fab 6, Zhunan",
+  "aliases": [
+    "AP6",
+    "Advanced Backend Fab 6"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [
+    {
+      "label": "SoIC",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "TSMC described the fab as ready to mass-produce SoIC, and later reporting calls SoIC its main capacity driver."
+    },
+    {
+      "label": "InFO",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "CoWoS",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "TSMC's advanced packaging and test plant in the Zhunan Science Park, Miaoli County, which TSMC described as its first backend fab to combine automated packaging and testing under one roof. Work on it started in 2020 and TSMC announced its opening in June 2023, calling it the company's largest backend fab: a 14.3-hectare base with a cleanroom bigger than those of its other backend fabs put together. It was set up for SoIC mass production and also handles InFO, CoWoS and testing, with an estimated capacity of more than one million 12-inch wafer equivalents a year. Reporting in April 2026 still described SoIC as the plant's main capacity driver.",
+  "location": {
+    "country": "TW",
+    "admin1": "Miaoli County",
+    "locality": "Zhunan",
+    "site": "Zhunan Science Park",
+    "address": "1, Kezhuan 1st Rd., Zhunan Township, Miaoli 350-012, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-04-13",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "capacity",
+      "value": 1000000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-06-08",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "12-inch (300 mm) wafer equivalents per year of 3DFabric processes; more than 10 million test hours a year were also cited."
+    },
+    {
+      "metric": "site_area",
+      "value": 14.3,
+      "value_max": null,
+      "unit": "hectares",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-06-08",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Base area of the fab."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2020",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2023-06-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC Announces the Opening of Advanced Backend Fab 6, Marking a Milestone in the Expansion of 3DFabric™ System Integration Technology",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3033",
+      "type": "company_announcement",
+      "published": "2023-06-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "[News] TSMC Advances Panel-Level Packaging, CoPoS Pilot Line Reportedly Set for June Completion, 2028–29 Ramp Eyed",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/04/13/news-tsmc-advances-panel-level-packaging-copos-pilot-line-reportedly-set-for-june-completion-2028-29-ramp-eyed/",
+      "type": "trade_press",
+      "published": "2026-04-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Fab Locations - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/aboutTSMC/TSMC_Fabs",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": null,
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:K71B0795",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for Advanced Backend Fab 6."
+    },
+    {
+      "record_id": "taiwan-ida-factory:registered-factories:95M00098",
+      "relation": "same_facility",
+      "note": "Registered factory entry for Advanced Backend Fab 6."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Replaced a 2024 TrendForce article that only mentioned Zhunan in passing with TSMC's fab locations page (street address, Miaoli) and an April 2026 TrendForce report on the plant's SoIC, InFO and CoWoS role, and moved status_as_of to that report. Rewrote the summary and SoIC note so they no longer follow the press release's wording. Audit fixes (2026-11-07): attributed to TSMC its description of the plant as its first all-in-one automated packaging and test fab."
+  }
+}

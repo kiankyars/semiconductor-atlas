@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.0",
+  "id": "china-cansemi-guangzhou-12-inch",
+  "name": "CanSemi 12-inch Fabs, Guangzhou",
+  "aliases": [
+    "粤芯半导体12英寸晶圆厂",
+    "CanSemi 12-inch Fab, Guangzhou"
+  ],
+  "company": "CanSemi",
+  "operator": "CanSemi Technology (粤芯半导体)",
+  "parties": [
+    {
+      "name": "CanSemi Technology (粤芯半导体)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Began trading on the ChiNext board of the Shenzhen Stock Exchange on 13 October 2026."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "campus",
+  "segments": [
+    "analog_mixed_signal",
+    "power",
+    "image_sensor",
+    "photonics"
+  ],
+  "process_nodes": [
+    {
+      "label": "180nm-55nm",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Range the company reported across its mixed-signal, high-voltage, image-sensor, BCD, embedded-memory, power and silicon-photonics platforms in May 2026."
+    },
+    {
+      "label": "180-90nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Phase 3."
+    },
+    {
+      "label": "65nm to 22nm",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned for Phase 4."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "CanSemi's 300 mm specialty foundry site in the Guangzhou Development Zone, where it ran two fabs with 63,300 wafers a month of capacity at the end of 2025. Phase 3, budgeted at CNY 16.25 billion to add 40,000 wafers a month on 180-90nm processes, started in August 2022 and connected its line on 28 December 2024; it was still ramping in 2026. Phase 4, launched in January 2026 at about CNY 25.2 billion, is to add another 40,000 wafers a month at 65nm to 22nm by the end of 2029, for 120,000 in total.",
+  "location": {
+    "country": "CN",
+    "admin1": "Guangdong",
+    "locality": "Guangzhou",
+    "site": "Guangzhou Development Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-11-06",
+  "status_source_ids": [
+    "s2",
+    "s4",
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 16250000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 3",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 25200000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 4",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 3",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional 300 mm wafers per month expected from Phase 3."
+    },
+    {
+      "metric": "capacity",
+      "value": 63300,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-12",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "300 mm wafers per month across the company's two fabs at the end of 2025."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 4",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Additional 300 mm wafers per month from Phase 4."
+    },
+    {
+      "metric": "capacity",
+      "value": 120000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total 300 mm wafers per month once Phase 4 is at full output."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2022-08-18",
+      "planned": false,
+      "phase_label": "Phase 3",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Project launch."
+    },
+    {
+      "event": "building_complete",
+      "date": "2023-07-28",
+      "planned": false,
+      "phase_label": "Phase 3",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Main fab building topped out."
+    },
+    {
+      "event": "first_production",
+      "date": "2024-12-28",
+      "planned": false,
+      "phase_label": "Phase 3",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Line-connection ceremony held at a district event marking the start of trial production."
+    },
+    {
+      "event": "announced",
+      "date": "2026-01-22",
+      "planned": false,
+      "phase_label": "Phase 4",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Launch ceremony in the Guangzhou Development Zone; no construction start was reported."
+    },
+    {
+      "event": "first_production",
+      "date": "2029-12",
+      "planned": true,
+      "phase_label": "Phase 4",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Expected to be completed and producing by the end of 2029."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "多条12英寸晶圆产线，正式投产！",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20250102-37755.html",
+      "type": "trade_press",
+      "published": "2025-01-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "12英寸厂“进账”91亿元，国内晶圆代工按下快进键",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20261106-41410.html",
+      "type": "trade_press",
+      "published": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "粤芯半导体四期项目在广州启动 总投资252亿元",
+      "publisher": "China News Service (via Yangtse Evening News)",
+      "url": "https://www.yzwb.net/news/ch/202601/t20260122_314211.html",
+      "type": "news",
+      "published": "2026-01-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "关于粤芯半导体技术股份有限公司首次公开发行股票并在创业板上市申请文件的第二轮审核问询函的回复",
+      "publisher": "CanSemi Technology and GF Securities",
+      "url": "https://reportdocs.static.szse.cn/UpFiles/rasinfodisc1/202605/RAS_202605_2715007D4A7FF45E8F48E39B62AED0E2BDDE13.pdf",
+      "type": "regulatory_filing",
+      "published": "2026-05-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "【数读IPO】粤芯半导体，今日上市",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2502851",
+      "type": "news",
+      "published": "2026-10-13",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Trade press in November 2026 said the Phase 1 and Phase 2 lines were running at full output; their earlier milestones are not recorded here. In its May 2026 reply to the stock exchange's IPO questions, CanSemi said its second fab was still ramping toward full output in the fourth quarter of 2026 and that capacity at a third fab was being built; the filing does not map these fabs to phase numbers.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Recast the record as a two-fab campus, added the IPO filing, the January 2026 Phase 4 launch and the listing report as sources, corrected the end-2025 capacity to company-wide and the Phase 3 capacity qualifier to exact, and changed the Phase 4 end-2029 target from building completion to start of production. Audit fixes (2026-11-07): replaced the Eastmoney copy of the second-round IPO inquiry reply with the identical copy on the Shenzhen Stock Exchange review site, dated 27 May 2026, and relabelled the China News Service report as read via Yangtse Evening News."
+  }
+}

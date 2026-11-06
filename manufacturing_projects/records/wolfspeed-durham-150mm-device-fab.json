@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "id": "wolfspeed-durham-150mm-device-fab",
+  "name": "Wolfspeed Durham 150 mm device fab",
+  "aliases": [],
+  "company": "Wolfspeed",
+  "operator": "Wolfspeed",
+  "parties": [
+    {
+      "name": "Wolfspeed",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Wolfspeed's 150 mm silicon carbide device fab in Durham, North Carolina was still producing in mid-2024, when it recovered from an equipment incident. In August 2024 Wolfspeed said it would shift device output to its 200 mm Mohawk Valley fab and weigh when to shut Durham, and in November 2024 it announced the closure as part of a cost-cutting plan. The fab stopped producing in Wolfspeed's second fiscal quarter of 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "North Carolina",
+    "locality": "Durham",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": null
+  },
+  "status": "closed",
+  "status_as_of": "2026-08-20",
+  "status_source_ids": [
+    "s5"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "closed",
+      "date": "2025-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Production ceased in the second quarter of fiscal 2026, which ran from late September to late December 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Wolfspeed Announces Key Milestones and Operational Update",
+      "publisher": "Wolfspeed",
+      "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-announces-key-milestones-and-operational-update/",
+      "type": "company_announcement",
+      "published": "2024-06-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Wolfspeed Reports Financial Results for the Fourth Quarter and Full Fiscal Year 2024 (Form 8-K, Exhibit 99.1)",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541924000058/ex9914qfy2024.htm",
+      "type": "company_filing",
+      "published": "2024-08-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Wolfspeed Reports Financial Results for the First Quarter of Fiscal Year 2025 (Form 8-K, Exhibit 99.1)",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541924000087/ex991q1-25.htm",
+      "type": "company_filing",
+      "published": "2024-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 29, 2025",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541925000110/wolf-20250629.htm",
+      "type": "company_filing",
+      "published": "2025-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 28, 2026",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541926000054/wolf-20260628.htm",
+      "type": "company_filing",
+      "published": "2026-08-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "wolfspeed-mohawk-valley-fab",
+      "relation": "predecessor_of"
+    }
+  ],
+  "notes": "This record covers the fab's closure. The closure was part of Wolfspeed's 2025 restructuring plan, described in its fiscal 2025 and 2026 annual reports, under which all power device production moved to the 200 mm fab in Marcy, New York.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed an unsourced statement about when the fab opened; the closure timing and other facts matched the filings."
+  }
+}

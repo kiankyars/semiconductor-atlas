@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "id": "ti-lfab1-lehi",
+  "name": "TI LFAB1 Lehi 300 mm fab",
+  "aliases": [
+    "LFAB1",
+    "LFAB"
+  ],
+  "company": "Texas Instruments",
+  "operator": "Texas Instruments",
+  "parties": [
+    {
+      "name": "Texas Instruments",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "65nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Starting node TI planned for the converted fab."
+    },
+    {
+      "label": "45nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Starting node TI planned for the converted fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "LFAB1 is a 300 mm fab in Lehi, Utah that Texas Instruments agreed in 2021 to buy from Micron Technology for USD 900 million and re-equipped for analog and embedded processing chips. TI says production began in 2022, about a year after the purchase and earlier than the early-2023 start it had first guided. TI described LFAB1 as still ramping in June 2025 and in its FY2025 annual report, and the new LFAB2 is being built next to it.",
+  "location": {
+    "country": "US",
+    "admin1": "Utah",
+    "locality": "Lehi",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-02-06",
+  "status_source_ids": [
+    "s2",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 900000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-06-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cash price in TI's agreement to buy the fab from Micron."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-06-30",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "TI agreed to buy the fab from Micron."
+    },
+    {
+      "event": "acquired",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Purchase completed in 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2023",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Early 2023 was the first-revenue and production expectation TI gave in 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TI says production began in 2022, about a year after it bought the fab."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TI buys Micron's Utah fab for $900m",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/ti-buys-microns-utah-fab-for-900m/",
+      "type": "trade_press",
+      "published": "2021-06-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Lehi, Utah: 300mm wafer fabs",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/manufacturing/lehi.html",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Texas Instruments to begin construction next year on new 300-mm semiconductor wafer fabrication plants",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2021/2021-11-17-texas-instruments-to-begin-construction-next-year-on-new-300-mm-semiconductor-wafer-fabrication-plants.html",
+      "type": "company_announcement",
+      "published": "2021-11-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the US",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+      "type": "company_announcement",
+      "published": "2025-06-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Texas Instruments Incorporated annual report on Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "Texas Instruments",
+      "url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/txn-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-06",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "ti-lfab2-lehi",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The fab was built for memory production by a Micron and Intel venture; the record is in scope because TI re-equipped it and started production there in 2022. The production start is dated only to the year, from the operator's Lehi page. The purchase price is the acquisition consideration, not spending on re-equipping the fab.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added TI's FY2025 annual report, which still describes LFAB1 as ramping, and moved status_as_of to it; added the fab's memory-venture origin from the cited trade report to explain its scope."
+  }
+}

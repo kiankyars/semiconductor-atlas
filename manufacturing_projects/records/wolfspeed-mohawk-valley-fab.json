@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "id": "wolfspeed-mohawk-valley-fab",
+  "name": "Wolfspeed Mohawk Valley Fab",
+  "aliases": [
+    "Mohawk Valley Fab",
+    "Marcy 200 mm silicon carbide device fab"
+  ],
+  "company": "Wolfspeed",
+  "operator": "Wolfspeed",
+  "parties": [
+    {
+      "name": "Wolfspeed",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Signed non-binding preliminary CHIPS terms on 15 October 2024 covering this fab's expansion and a North Carolina materials plant; no final award was found."
+    },
+    {
+      "name": "New York State Urban Development Corporation",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "State grants reimbursing equipment and building costs for the fab, subject to claw-back if grant objectives are not met."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s7"
+      ]
+    }
+  ],
+  "summary": "Wolfspeed's Mohawk Valley Fab in Marcy, New York is a highly automated 200 mm silicon carbide power device fab. It opened in April 2022, ran its first lot that month and began revenue production late in Wolfspeed's 2023 fiscal year. New York State grants of about USD 503 million support it, while October 2024 preliminary CHIPS terms for an expansion were not finalized. The initial expansion phase was substantially complete by late fiscal 2025, and after closing its 150 mm Durham fab Wolfspeed makes all its power devices here.",
+  "location": {
+    "country": "US",
+    "admin1": "New York",
+    "locality": "Marcy",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s7"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-20",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "government_incentive",
+      "value": 750000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-10-15",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Proposed CHIPS direct funding split between the Siler City, North Carolina materials project and the Marcy, New York device fab expansion, payable against construction and operating milestones."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 503400000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-28",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "New York State grants awarded for the fab as of the end of fiscal 2026, of which USD 501.4 million had been paid."
+    },
+    {
+      "metric": "jobs",
+      "value": 600,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-04-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Jobs Wolfspeed expected to create in the Mohawk Valley by 2029."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2022-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The first silicon carbide lot was processed in April 2022."
+    },
+    {
+      "event": "opening",
+      "date": "2022-04-25",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2023",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Revenue production began late in fiscal 2023, which ended in June 2023."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025",
+      "planned": false,
+      "phase_label": "Initial expansion phase",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Wolfspeed reported the buildings and critical infrastructure of the initial expansion phase substantially complete late in fiscal 2025, which ended in June 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Wolfspeed Opens the World's Largest 200mm Silicon Carbide Fab, Enabling Highly Anticipated Device Production",
+      "publisher": "Wolfspeed",
+      "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-opens-the-worlds-largest-200mm-silicon-carbide-fab-enabling-highly-anticipated-device-production/",
+      "type": "company_announcement",
+      "published": "2022-04-25",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Wolfspeed Announces Key Milestones and Operational Update",
+      "publisher": "Wolfspeed",
+      "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-announces-key-milestones-and-operational-update/",
+      "type": "company_announcement",
+      "published": "2024-06-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Wolfspeed Reports Financial Results for the Fourth Quarter and Full Fiscal Year 2024 (Form 8-K, Exhibit 99.1)",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541924000058/ex9914qfy2024.htm",
+      "type": "company_filing",
+      "published": "2024-08-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Wolfspeed (New York)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/wolfspeed-new-york-marcy",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Wolfspeed Announces $750M in Proposed Funding from U.S. CHIPS Act and Additional $750M From Investment Group Led By Apollo, Galvanizing Global Leadership in Delivering Next-Generation Silicon Carbide Technology",
+      "publisher": "Wolfspeed",
+      "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-announces-750m-in-proposed-funding-from-us-chips-act-and-additional-750m-from-investment-group-led-by-apollo-galvanizing-global-leadership-in-delivering-next-generation-silicon-carbide/",
+      "type": "company_announcement",
+      "published": "2024-10-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 29, 2025",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541925000110/wolf-20250629.htm",
+      "type": "company_filing",
+      "published": "2025-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 28, 2026",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541926000054/wolf-20260628.htm",
+      "type": "company_filing",
+      "published": "2026-08-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "wolfspeed-durham-150mm-device-fab",
+      "relation": "successor_of"
+    }
+  ],
+  "notes": "Wolfspeed reported 20 percent wafer start utilization at the fab in June 2024 and targeted 25 percent in the following quarter. The October 2024 CHIPS terms were preliminary and aimed to raise the fab's capacity by about 30 percent; the fiscal 2026 annual report says Wolfspeed was still pursuing CHIPS and other federal funding and records Section 48D tax credit refunds tied to its expansion projects.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the USD 503.4 million in New York State grants and the state agency from the FY2026 annual report, cited the FY2025 report for the expansion milestone, set the undated CHIPS page's publication date to null and noted that the CHIPS terms were never finalized."
+  }
+}

@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from semiconductor_atlas import public_registry
+from semiconductor_atlas import manufacturing_projects, public_registry
 from semiconductor_atlas.ai_critical import validate_release
 
 RELEASE = ROOT / "web/data/2026-09-07"
@@ -32,6 +32,8 @@ REGISTRY = ROOT / "web/data/registry-2026-07-20"
 REGISTRY_MANIFEST_SHA256 = "f006e842958f818ea004d2022b9597c974475ca5f3353c4feea464020b75221a"
 REGISTRY_DOWNLOAD_PATH = "downloads/registry-2026-07-20/"
 TAIWAN_OUTLINE = Path(__file__).with_name("taiwan_outline.json")
+MANUFACTURING = ROOT / manufacturing_projects.RECORDS_DIR
+MANUFACTURING_DOWNLOAD_PATH = "downloads/manufacturing/"
 COUNTRY_NAMES = {"TW": "Taiwan", "US": "United States", "GB": "United Kingdom", "DE": "Germany",
                  "AT": "Austria", "FR": "France", "IE": "Ireland"}
 REGISTRY_SOURCES = {
@@ -236,7 +238,8 @@ FILTER_SCRIPT = """<script>
 
 
 def index_body(features: list[dict], sources: list[dict], manifest: dict,
-               base_url: str, registry_summary: str = "") -> str:
+               base_url: str, registry_summary: str = "",
+               cards: tuple[tuple[str, str, str, str], ...] = ()) -> str:
     records = [feature["properties"] for feature in features]
     countries = sorted({record["country"] for record in records})
     activities = sorted({category for record in records for category in record["scope_categories"]})
@@ -260,6 +263,9 @@ def index_body(features: list[dict], sources: list[dict], manifest: dict,
             f'<td><a class="row-link" href="{e(href)}" aria-label="View {e(record["name"])}">↗</a></td></tr>'
         )
     option = lambda value, text: f'<option value="{e(value)}">{e(text)}</option>'
+    dataset_cards = ('<nav class="dataset-cards" aria-label="Datasets">' + "".join(
+        f'<a class="dataset-card" href="{e(href)}"><strong>{e(count)}</strong><span class="card-title">{e(title)} →</span>'
+        f'<span>{e(text)}</span></a>' for count, title, text, href in cards) + '</nav>') if cards else ""
     downloads = [
         ("facilities.csv", "Facilities", "CSV · Locations, capabilities and recorded stages"),
         ("claims.jsonl", "Sourced claims", "JSON Lines · Every statement and its evidence links"),
@@ -273,10 +279,12 @@ def index_body(features: list[dict], sources: list[dict], manifest: dict,
         [("atlas.geojson", "GeoJSON"), ("source_inputs.json", "Source metadata"),
          ("manifest.json", "File hashes"), ("ATTRIBUTION.md", "Attribution"), ("METHODOLOGY.md", "Methodology")])
     return f'''<section class="hero"><div><p class="eyebrow">Semiconductor manufacturing</p>
-<h1>Semiconductor facilities</h1><p class="lede">Explore fabs, memory and advanced packaging projects, their production capabilities, and the sources behind each record.</p></div>
-<p class="snapshot">Data as of<strong>{display_date(manifest["as_of"])}</strong></p></section>
+<h1>Semiconductor facilities</h1><p class="lede">Fabs, memory and packaging plants and the projects building them, with the sources behind every record.</p></div>
+<p class="snapshot">Archived evidence as of<strong>{display_date(manifest["as_of"])}</strong></p></section>
+{dataset_cards}
+<section id="facilities" aria-label="Browse facilities"><div class="section-head"><h2>Evidence-archived facility records</h2><p>Every source archived; every quoted passage hashed</p></div>
 <div class="stats" aria-label="Dataset coverage"><div class="stat"><strong>{len(records)}</strong>selected records</div><div class="stat"><strong>{len(countries)}</strong>countries</div><div class="stat"><strong>{len(sources)}</strong>primary sources</div></div>
-<section id="facilities" aria-label="Browse facilities"><div class="filters">
+<div class="filters">
 <label>Search facilities<input id="search" type="search" placeholder="Company, location or technology"></label>
 <label>Country<select id="country"><option value="">All countries</option>{"".join(option(x,x) for x in countries)}</select></label>
 <label>Activity<select id="activity"><option value="">All activities</option>{"".join(option(x,label(x)) for x in activities)}</select></label>
@@ -289,7 +297,8 @@ def index_body(features: list[dict], sources: list[dict], manifest: dict,
 
 
 def facility_body(record: dict, claims: list[dict], evidence: dict[str, dict],
-                  sources: list[dict], base_url: str, recorded_at: str) -> str:
+                  sources: list[dict], base_url: str, recorded_at: str,
+                  manufacturing_link: tuple[str, str] | None = None) -> str:
     owned_claims = [claim for claim in claims if claim["subject_stable_key"] == record["stable_key"]]
     lifecycle = [claim for claim in owned_claims if claim["predicate"] == "lifecycle.evidence_summary"]
     lifecycle_ids = list(dict.fromkeys(key for claim in lifecycle for key in claim["evidence_ids"]))
@@ -303,11 +312,14 @@ def facility_body(record: dict, claims: list[dict], evidence: dict[str, dict],
     source_blocks = "".join(source_html(source, evidence_rows=[evidence[key] for key in evidence_ids
                                                               if evidence[key]["source_id"] == source["source_id"]])
                             for source in sources if source["source_id"] in source_ids)
+    manufacturing_dd = (f'<dt>Manufacturing project record</dt><dd><a href="{e(manufacturing_link[0])}">'
+                        f'{e(manufacturing_link[1])} →</a><span class="secondary">Linked sources, timeline and figures</span></dd>'
+                        if manufacturing_link else "")
     return f'''<a class="back" href="{e(base_url)}#facilities">← All facilities</a>
 <section class="detail-hero"><p class="eyebrow">{e(record["company"])}</p><h1>{e(record["name"])}</h1><div class="detail-meta"><span>{e(location)}</span><span>{e(label(record["identity_scope"]))}</span></div></section>
 <div class="detail-columns"><div><section class="detail-box"><div class="small-label">Recorded stage · {stage_date(record, sources)}</div><span class="badge" data-stage="{e(record["lifecycle_state"])}">{e(label(record["lifecycle_state"]))}</span><p>{e(record["lifecycle_statement"])}</p>{evidence_links(lifecycle_ids, evidence)}</section>
 <section class="detail-box"><h2>Production capabilities</h2>{capabilities}</section></div>
-<aside><section class="detail-box"><h2>Record details</h2><dl class="fact-list"><dt>Company</dt><dd>{e(record["company"])}</dd><dt>Location</dt><dd>{e(location)}</dd><dt>Scope</dt><dd>{e(label(record["identity_scope"]))}</dd><dt>Evidence recorded</dt><dd>{display_date(recorded_at)}</dd><dt>Capacity, yield and utilization</dt><dd class="empty-value">No supported figures in this record.</dd></dl><p><a href="{e(correction_url(record))}">Report a correction ↗</a></p></section></aside></div>
+<aside><section class="detail-box"><h2>Record details</h2><dl class="fact-list"><dt>Company</dt><dd>{e(record["company"])}</dd><dt>Location</dt><dd>{e(location)}</dd><dt>Scope</dt><dd>{e(label(record["identity_scope"]))}</dd><dt>Evidence recorded</dt><dd>{display_date(recorded_at)}</dd><dt>Capacity, yield and utilization</dt><dd class="empty-value">No supported figures in this record.</dd>{manufacturing_dd}</dl><p><a href="{e(correction_url(record))}">Report a correction ↗</a></p></section></aside></div>
 <section class="section"><div class="section-head"><h2>Source documents</h2><p>{len(source_ids)} sources</p></div><div class="source-grid">{source_blocks}</div></section>
 <section class="section"><details><summary>All {len(owned_claims)} sourced claims</summary>{"".join(claim_html(claim, evidence) for claim in owned_claims)}</details></section>'''
 
@@ -472,7 +484,8 @@ def date_range(dates: list[str]) -> str:
     return f"{start} – {display_date(last)}"
 
 
-def registry_body(records: list[dict], leads: list[dict], manifest: dict, base_url: str) -> str:
+def registry_body(records: list[dict], leads: list[dict], manifest: dict, base_url: str,
+                  project_links: dict[str, list[tuple[str, str]]] | None = None) -> str:
     counts = manifest["counts"]
     rows = []
     for record in records:
@@ -521,6 +534,8 @@ def registry_body(records: list[dict], leads: list[dict], manifest: dict, base_u
             f'<td><span class="facility-name">{e(record["name"])}</span>'
             + (f'<span class="secondary">{e(id_text)}</span>' if id_text else "")
             + "".join(f'<span class="secondary">{e(x)}</span>' for x in linked)
+            + "".join(f'<span class="secondary">Manufacturing project record: <a href="{e(url)}">{e(name)}</a></span>'
+                      for url, name in (project_links or {}).get(record["record_id"], []))
             + f'</td><td class="location">{e(location)}<span class="secondary">{e(COUNTRY_NAMES[record["country_code"]])}</span>'
             + (f'<span class="secondary">{e(record["address"])}</span>' if record["address"] else "")
             + f'</td><td class="activity">{class_cell}'
@@ -603,6 +618,320 @@ def registry_body(records: list[dict], leads: list[dict], manifest: dict, base_u
 <section class="section" id="attribution"><div class="section-head"><h2>Sources and terms</h2><p>{counts["excluded_private_organization_rows"]} sole-proprietorship factory rows and {counts["excluded_personal_name_leads"]} EPA leads are omitted for privacy</p></div><ul class="attribution">{attribution}</ul></section>'''
 
 
+COUNTRY_LABELS = {
+    "AT": "Austria", "BE": "Belgium", "CA": "Canada", "CH": "Switzerland", "CN": "China",
+    "CR": "Costa Rica", "CZ": "Czech Republic", "DE": "Germany", "ES": "Spain", "FR": "France",
+    "GB": "United Kingdom", "HU": "Hungary", "IE": "Ireland", "IL": "Israel", "IN": "India",
+    "IT": "Italy", "JP": "Japan", "KR": "South Korea", "MT": "Malta", "MX": "Mexico",
+    "MY": "Malaysia", "NL": "Netherlands", "PH": "Philippines", "PL": "Poland", "PT": "Portugal",
+    "SE": "Sweden", "SG": "Singapore", "TH": "Thailand", "TW": "Taiwan", "US": "United States",
+    "VN": "Vietnam",
+}
+UNIT_LABELS = {"wafers_per_month": "wafers a month", "wafers_per_year": "wafers a year",
+               "units_per_day": "units a day", "units_per_month": "units a month",
+               "units_per_year": "units a year", "m2": "m²", "sq_ft": "sq ft",
+               "hectares": "hectares", "acres": "acres", "jobs": "jobs"}
+QUALIFIER_WORDS = {"exact": "", "approximately": "about ", "up_to": "up to ",
+                   "at_least": "at least ", "more_than": "more than ", "range": ""}
+APPLIES_LABELS = {"facility": "this facility", "phase": "one phase", "project": "the whole project",
+                  "multi_site": "several sites"}
+# How this record relates to the linked one, read as "<this record> is <label> <linked record>".
+RELATION_LABELS = {"same_campus": "Same campus as", "phase_of": "A phase of", "has_phase": "Has phase",
+                   "successor_of": "Successor of", "predecessor_of": "Predecessor of"}
+PARTY_LABELS = {"operator": "Operator", "owner": "Owner", "joint_venture_partner": "Joint-venture partner",
+                "technology_partner": "Technology partner", "government": "Government", "customer": "Customer",
+                "builder": "Builder"}
+REVIEW_NOTE = ("Compiled with AI-assisted research (Claude) and checked in a separate AI-assisted review "
+               "that re-opened every cited source. Text is written in our own words; check each "
+               "statement against its linked source.")
+
+
+def country_label(code: str) -> str:
+    if code not in COUNTRY_LABELS:
+        raise ValueError(f"no display name for country code {code}")
+    return COUNTRY_LABELS[code]
+
+
+def period(value: str) -> str:
+    start, _, precision = manufacturing_projects.parse_date(value)
+    if precision == "day":
+        return f"{start.day} {start:%B %Y}"
+    if precision == "month":
+        return f"{start:%B %Y}"
+    if precision == "quarter":
+        return f"Q{(start.month - 1) // 3 + 1} {start.year}"
+    if precision == "half":
+        return f"{'H1' if start.month == 1 else 'H2'} {start.year}"
+    return str(start.year)
+
+
+def number(value: float, unit: str) -> str:
+    if unit in manufacturing_projects.CURRENCIES:
+        for size, word in ((10**12, "trillion"), (10**9, "billion"), (10**6, "million")):
+            if value >= size:
+                scaled = f"{value / size:.3f}".rstrip("0").rstrip(".")
+                return f"{scaled} {word}"
+    return f"{value:,.2f}".rstrip("0").rstrip(".")
+
+
+def amount(metric: dict) -> str:
+    unit = metric["unit"]
+    value = number(metric["value"], unit)
+    if metric["qualifier"] == "range":
+        low, high = value.split(" "), number(metric["value_max"], unit).split(" ")
+        if len(low) == 2 and len(high) == 2 and low[1] == high[1]:
+            value = f"{low[0]}–{high[0]} {high[1]}"  # USD 500–750 million
+        else:
+            value = f"{value}–{' '.join(high)}"
+    text = QUALIFIER_WORDS[metric["qualifier"]] + (
+        f"{unit} {value}" if unit in manufacturing_projects.CURRENCIES else f"{value} {UNIT_LABELS[unit]}")
+    return text
+
+
+def refs(record: dict, ids: list[str]) -> str:
+    order = [source["id"] for source in record["sources"]]
+    by_id = {source["id"]: source for source in record["sources"]}
+    links = ", ".join(
+        f'<a href="#src-{e(x)}" aria-label="Source {order.index(x) + 1}: {e(by_id[x]["publisher"])}">'
+        f'{order.index(x) + 1}</a>' for x in sorted(ids, key=order.index))
+    return f'<sup class="refs">[{links}]</sup>'
+
+
+def manufacturing_location(record: dict, *, with_country: bool = True) -> str:
+    location = record["location"]
+    parts = [location["locality"], location["admin1"]]
+    if with_country:
+        parts.append(country_label(location["country"]))
+    return ", ".join(dict.fromkeys(x for x in parts if x))
+
+
+def production_text(record: dict, as_of: str | None = None) -> str:
+    """Production start, or the current target; a target whose period ended before ``as_of`` is marked."""
+    started, planned = manufacturing_projects.production_dates(record)
+    if started:
+        return "Production since " + period(started)
+    if planned:
+        passed = as_of and manufacturing_projects.parse_date(planned)[1].isoformat() < as_of
+        return "Target " + period(planned) + (" (date passed)" if passed else "")
+    return ""
+
+
+MANUFACTURING_SCRIPT = """<script>
+(() => {
+  const ids = ['mp-search', 'mp-country', 'mp-status', 'mp-segment'];
+  const [search, country, status, segment] = ids.map(id => document.getElementById(id));
+  const rows = Array.from(document.querySelectorAll('[data-mp]'));
+  function filter() {
+    const query = search.value.trim().toLocaleLowerCase();
+    let count = 0;
+    rows.forEach(row => {
+      const match = (!query || row.dataset.search.includes(query)) &&
+        (!country.value || row.dataset.country === country.value) &&
+        (!status.value || row.dataset.status === status.value) &&
+        (!segment.value || row.dataset.segments.split(' ').includes(segment.value));
+      row.hidden = !match;
+      if (match) count += 1;
+    });
+    document.getElementById('mp-count').textContent = `${count} of ${rows.length} records`;
+    document.getElementById('mp-empty').hidden = count !== 0;
+  }
+  [search, country, status, segment].forEach(control => control.addEventListener('input', filter));
+  filter();
+})();
+</script>"""
+
+
+def manufacturing_jsonld(manifest: dict, base_url: str) -> str:
+    """schema.org Dataset markup for the manufacturing-project bundle (source terms vary, so no license)."""
+    downloads = [("manufacturing_projects.csv", "text/csv"),
+                 ("manufacturing_projects.jsonl", "application/jsonl"),
+                 ("figures.csv", "text/csv"), ("milestones.csv", "text/csv"), ("sources.csv", "text/csv")]
+    document = {
+        "@context": "https://schema.org/", "@type": "Dataset",
+        "name": "Semiconductor manufacturing projects",
+        "description": (
+            "Source-linked records of semiconductor wafer fabs, fab expansions and packaging and test "
+            "plants announced, built, opened, paused, cancelled or closed since 2020, with status, technology, "
+            "investment, incentives, capacity, milestones and the sources behind each statement. "
+            "Coverage is a selection, not a census."),
+        "url": base_url + manufacturing_projects.PAGE_ROUTE, "sameAs": REPOSITORY_URL,
+        "isAccessibleForFree": True, "creator": {"@type": "Person", "name": "Kian Kyars"},
+        "dateModified": manifest["as_of"], "temporalCoverage": f"2020-01-01/{manifest['as_of']}",
+        "spatialCoverage": [{"@type": "Place", "name": country_label(code)}
+                            for code in manifest["counts"]["countries"]],
+        "keywords": ["semiconductors", "fabs", "advanced packaging", "CHIPS Act", "manufacturing"],
+        "distribution": [{"@type": "DataDownload", "encodingFormat": media_type,
+                          "contentUrl": base_url + MANUFACTURING_DOWNLOAD_PATH + name}
+                         for name, media_type in downloads],
+    }
+    text = json.dumps(document, ensure_ascii=False, sort_keys=True).replace("</", "<\\/")
+    return f'\n  <script type="application/ld+json">{text}</script>'
+
+
+def manufacturing_body(records: list[dict], manifest: dict, base_url: str) -> str:
+    mp = manufacturing_projects
+    summary = manifest["counts"]
+    rows = []
+    for record in records:
+        href = base_url + mp.PAGE_ROUTE + record["id"] + "/"
+        investment = mp.headline_investment(record)
+        nodes = ", ".join(node["label"] for node in record["process_nodes"])
+        makes = "<br>".join(e(mp.SEGMENTS[x]) for x in record["segments"])
+        haystack = " ".join(" ".join(str(x) for x in (
+            record["name"], *record["aliases"], record["company"], record["operator"],
+            *(party["name"] for party in record["parties"]), manufacturing_location(record),
+            record["location"]["site"] or "", nodes, *(mp.SEGMENTS[x] for x in record["segments"]),
+            mp.FACILITY_TYPES[record["facility_type"]], mp.STATUSES[record["status"]])).lower().split())
+        timing = production_text(record, manifest["as_of"])
+        rows.append(
+            f'<tr data-mp data-search="{e(haystack)}" data-country="{e(record["location"]["country"])}" '
+            f'data-status="{e(record["status"])}" data-segments="{e(" ".join(record["segments"]))}">'
+            f'<td><a class="facility-name" href="{e(href)}">{e(record["name"])}</a>'
+            f'<span class="secondary">{e(record["company"])}</span></td>'
+            f'<td class="location">{e(manufacturing_location(record, with_country=False))}'
+            f'<span class="secondary">{e(country_label(record["location"]["country"]))}</span></td>'
+            f'<td class="activity">{makes}'
+            + (f'<span class="secondary">{e(nodes)}</span>' if nodes else "") + '</td>'
+            f'<td class="stage"><span class="badge" data-stage="{e(record["status"])}">{e(mp.STATUSES[record["status"]])}</span>'
+            f'<span class="secondary">as of {e(period(record["status_as_of"]))}</span></td>'
+            f'<td class="timing">{e(timing)}'
+            + (f'<span class="secondary">{e(amount(investment))} ({e(mp.BASES[investment["basis"]].lower())})</span>'
+               if investment else "") + '</td>'
+            f'<td><a class="row-link" href="{e(href)}" aria-label="View {e(record["name"])}">↗</a></td></tr>')
+    option = lambda value, text: f'<option value="{e(value)}">{e(text)}</option>'
+    countries = sorted(summary["countries"], key=country_label)
+    by_country = "".join(
+        f'<li><span>{e(country_label(code))}</span><strong>{summary["countries"][code]}</strong></li>'
+        for code in sorted(summary["countries"], key=lambda c: (-summary["countries"][c], country_label(c))))
+    building = summary["statuses"].get("under_construction", 0)
+    downloads = "".join(
+        f'<a class="download" href="{e(base_url + MANUFACTURING_DOWNLOAD_PATH + name)}"><strong>{title} ↓</strong><span>{text}</span></a>'
+        for name, title, text in [
+            ("manufacturing_projects.csv", "Projects", "CSV · One row per record with its headline facts"),
+            ("manufacturing_projects.jsonl", "Complete records", "JSON Lines · Every statement and its sources"),
+            ("figures.csv", "Figures", "CSV · Investment, incentives, capacity, area and jobs"),
+        ])
+    extra = "".join(f'<a href="{e(base_url + MANUFACTURING_DOWNLOAD_PATH + name)}">{text}</a>' for name, text in [
+        ("milestones.csv", "Milestones"), ("sources.csv", "Sources"), ("manifest.json", "File hashes"),
+        ("README.md", "Data notes")])
+    return f'''<section class="hero"><div><p class="eyebrow">Semiconductor manufacturing</p>
+<h1>Fab and packaging projects since 2020</h1><p class="lede">New wafer fabs, fab expansions and packaging plants announced, built, opened, paused, cancelled or closed since 2020. Every statement links to the sources behind it.</p></div>
+<p class="snapshot">Sources read<strong>{display_date(manifest["as_of"])}</strong></p></section>
+<div class="stats" aria-label="Dataset coverage"><div class="stat"><strong>{summary["records"]}</strong>records</div><div class="stat"><strong>{len(summary["countries"])}</strong>countries</div><div class="stat"><strong>{summary["companies"]}</strong>companies</div><div class="stat"><strong>{building}</strong>under construction</div><div class="stat"><strong>{summary["distinct_source_urls"]:,}</strong>linked sources</div></div>
+<section id="projects" aria-label="Browse manufacturing projects"><div class="filters mp-filters">
+<label>Search projects<input id="mp-search" type="search" placeholder="Company, place or technology"></label>
+<label>Country<select id="mp-country"><option value="">All countries</option>{"".join(option(x, country_label(x)) for x in countries)}</select></label>
+<label>Status<select id="mp-status"><option value="">All statuses</option>{"".join(option(x, mp.STATUSES[x]) for x in mp.STATUSES if x in summary["statuses"])}</select></label>
+<label>Makes<select id="mp-segment"><option value="">All products</option>{"".join(option(x, mp.SEGMENTS[x]) for x in mp.SEGMENTS if x in summary["segments"])}</select></label>
+<p class="result-count" id="mp-count" role="status">{len(records)} records</p></div>
+<div class="table-shell"><table><thead><tr><th scope="col">Project</th><th scope="col">Location</th><th scope="col">Makes</th><th scope="col">Status</th><th scope="col">Production and investment</th><th scope="col"><span class="visually-hidden">Details</span></th></tr></thead><tbody>{"".join(rows)}</tbody></table><p id="mp-empty" hidden>No matching projects. Try another search or filter.</p></div>
+<p class="table-note">Status is the latest stage the cited sources support, dated by the newest of them. Targets are shown as targets, not achievements. Investment is the most recent figure for the whole facility or project, in the source currency; phase and multi-site amounts are on each record’s page.</p></section>
+<section class="section" id="by-country"><div class="section-head"><h2>Records by country</h2><p>Where the recorded projects are</p></div><ul class="country-counts">{by_country}</ul></section>
+<section class="section" id="method"><div class="section-head"><h2>How these records are made</h2><p>Linked sources, not archived copies</p></div>
+<p class="lede">{e(REVIEW_NOTE)} Primary sources (company announcements and filings, government agencies and regulatory filings) come first; news and trade press corroborate or fill gaps, and each source is labelled by type. {summary["primary_source_citations"]:,} of {summary["source_citations"]:,} citations are primary sources; {summary["press_only_records"]} {"record cites" if summary["press_only_records"] == 1 else "records cite"} no company, government or regulatory source and {"is" if summary["press_only_records"] == 1 else "are"} flagged on {"its page" if summary["press_only_records"] == 1 else "their pages"}.</p>
+<p class="lede">Unlike the <a href="{e(base_url)}#facilities">evidence-archived facility records</a>, these records do not keep copies of their sources, so a linked page can change. Coordinates appear only when a cited source states them for the facility; nothing is geocoded. Coverage is a selection, not a census: projects with little public disclosure are under-represented. <a href="{e(REPOSITORY_URL)}/blob/main/manufacturing_projects/README.md">Field definitions and research rules</a> · <a href="{e(REPOSITORY_URL)}/issues/new?template=missing-facility.yml">Suggest a project</a></p></section>
+<section class="section" id="manufacturing-downloads"><div class="section-head"><h2>Download the data</h2><p>Generated from the tracked records on every build</p></div><div class="download-grid">{downloads}</div><div class="text-links">{extra}</div></section>'''
+
+
+def manufacturing_record_body(record: dict, by_id: dict[str, dict], archived: dict[str, str],
+                              base_url: str, registry: dict[str, dict] | None = None) -> str:
+    mp = manufacturing_projects
+    location = record["location"]
+    milestones = sorted(record["milestones"], key=lambda m: (mp.parse_date(m["date"])[0], m["planned"]))
+    timeline = "".join(
+        f'<li><span class="when">{e(period(m["date"]))}</span><div><strong>{e(mp.MILESTONE_EVENTS[m["event"]])}</strong>'
+        + (' <span class="badge" data-stage="announced">Target</span>' if m["planned"] else "")
+        + (f' <span class="secondary-inline">{e(m["phase_label"])}</span>' if m["phase_label"] else "")
+        + refs(record, m["source_ids"])
+        + (f'<p>{e(m["note"])}</p>' if m["note"] else "") + '</div></li>'
+        for m in milestones)
+    figures = "".join(
+        f'<li><strong>{e(mp.METRIC_LABELS[m["metric"]])}</strong> {e(amount(m))}{refs(record, m["source_ids"])}'
+        f'<span class="secondary">{e(mp.BASES[m["basis"]])} · {e(APPLIES_LABELS[m["applies_to"]])}'
+        + (f' ({e(m["phase_label"])})' if m["phase_label"] else "")
+        + f' · as of {e(period(m["as_of"]))}</span>'
+        + (f'<p>{e(m["note"])}</p>' if m["note"] else "") + '</li>'
+        for m in record["metrics"])
+    technology = [f'<dt>Makes</dt><dd>{e(", ".join(mp.SEGMENTS[x] for x in record["segments"]))}</dd>']
+    if record["process_nodes"]:
+        technology.append('<dt>Process technology</dt><dd>' + "<br>".join(
+            f'{e(node["label"])}{refs(record, node["source_ids"])}'
+            + (f' <span class="secondary-inline">{e(node["note"])}</span>' if node["note"] else "")
+            for node in record["process_nodes"]) + '</dd>')
+    if record["wafer_sizes"]:
+        technology.append('<dt>Wafer size</dt><dd>' + ", ".join(
+            f'{size["mm"]} mm{refs(record, size["source_ids"])}' for size in record["wafer_sizes"]) + '</dd>')
+    parties = "".join(
+        f'<li>{e(party["name"])} · {e(PARTY_LABELS[party["role"]])}'
+        + (f' ({party["share_pct"]:g}%)' if party["share_pct"] is not None else "")
+        + refs(record, party["source_ids"])
+        + (f'<span class="secondary">{e(party["note"])}</span>' if party["note"] else "") + '</li>'
+        for party in record["parties"])
+    place = [x for x in (location["site"], location["address"]) if x]
+    details = [f'<dt>Company</dt><dd>{e(record["company"])}</dd>']
+    if record["operator"] != record["company"]:
+        details.append(f'<dt>Operator</dt><dd>{e(record["operator"])}</dd>')
+    if parties:
+        details.append(f'<dt>Parties</dt><dd><ul class="plain">{parties}</ul></dd>')
+    details.append(f'<dt>Location</dt><dd>{"<br>".join(e(x) for x in place + [manufacturing_location(record)])}'
+                   f'{refs(record, location["source_ids"])}'
+                   + (f'<span class="secondary">{e(location["note"])}</span>' if location["note"] else "") + '</dd>')
+    if location["lat"] is not None:
+        details.append(f'<dt>Coordinates</dt><dd>{location["lat"]:.5f}, {location["lon"]:.5f}'
+                       f'{refs(record, location["coordinate_source_ids"])}</dd>')
+    else:
+        details.append('<dt>Coordinates</dt><dd class="empty-value">None published: no cited source gives a facility point.</dd>')
+    details.append(f'<dt>Record scope</dt><dd>{e(mp.IDENTITY_SCOPES[record["identity_scope"]])} · '
+                   f'{e(mp.FACILITY_TYPES[record["facility_type"]])}</dd>')
+    related = [link for link in record["related"]]
+    if related:
+        details.append('<dt>Related records</dt><dd>' + "<br>".join(
+            f'{e(RELATION_LABELS[link["relation"]])} '
+            f'<a href="{e(base_url + mp.PAGE_ROUTE + link["id"] + "/")}">{e(by_id[link["id"]]["name"])}</a>'
+            for link in related) + '</dd>')
+    if record.get("registry_records"):
+        details.append('<dt>Registry records</dt><dd>' + "<br>".join(
+            f'<a href="{e(base_url + "registry/#" + anchor(registry[link["record_id"]]))}">'
+            f'{e(registry[link["record_id"]]["name"])}</a> <span class="secondary-inline">'
+            f'{e(mp.REGISTRY_RELATIONS[link["relation"]])}</span>'
+            + (f'<span class="secondary">{e(link["note"])}</span>' if link["note"] else "")
+            for link in record["registry_records"]) + '</dd>')
+    if record.get("archived_record"):
+        details.append(f'<dt>Evidence-archived record</dt><dd><a href="{e(archived[record["archived_record"]])}">'
+                       'Archived sources and quoted evidence →</a></dd>')
+    primary = sum(source["type"] in mp.PRIMARY_SOURCE_TYPES for source in record["sources"])
+    reference = sum(source["type"] == "reference" for source in record["sources"])
+    press = len(record["sources"]) - primary - reference
+    kinds = [f"{primary} primary", f"{press} news or trade press"] + ([f"{reference} reference"] if reference else [])
+    if primary:
+        details.append(f'<dt>Source types</dt><dd>{" · ".join(kinds)}</dd>')
+    else:
+        details.append('<dt>Source types</dt><dd class="press-only">No company, government or regulatory source '
+                       f'is cited ({" · ".join(kinds[1:])}).</dd>')
+    review = record.get("review")
+    if review:
+        details.append(f'<dt>Reviewed</dt><dd>{display_date(review["reviewed_on"])}'
+                       f'<span class="secondary">{e(review["method"])}</span></dd>')
+    query = urlencode({"template": "correction.yml", "title": f"Correction: {record['name']}",
+                       "record": "manufacturing:" + record["id"]})
+    sources = "".join(
+        f'<li id="src-{e(source["id"])}"><a href="{e(source["url"])}">{e(source["title"])} ↗</a>'
+        f'<span class="secondary">{e(source["publisher"])} · {e(mp.SOURCE_TYPES[source["type"]])}'
+        + (f' · published {e(period(source["published"]))}' if source["published"] else " · undated")
+        + f' · read {e(display_date(source["accessed"]))}</span></li>'
+        for source in record["sources"])
+    notes = f'<section class="detail-box"><h2>Notes</h2><p>{e(record["notes"])}</p></section>' if record.get("notes") else ""
+    return f'''<a class="back" href="{e(base_url + mp.PAGE_ROUTE)}#projects">← All manufacturing projects</a>
+<section class="detail-hero"><p class="eyebrow">{e(record["company"])}</p><h1>{e(record["name"])}</h1><div class="detail-meta"><span>{e(manufacturing_location(record))}</span><span>{e(mp.FACILITY_TYPES[record["facility_type"]])}</span>{"".join(f"<span>Also known as {e(x)}</span>" for x in record["aliases"][:2])}</div></section>
+<div class="detail-columns"><div><section class="detail-box"><div class="small-label">Status · as of {e(period(record["status_as_of"]))}</div><span class="badge" data-stage="{e(record["status"])}">{e(mp.STATUSES[record["status"]])}</span>{refs(record, record["status_source_ids"])}<p>{e(record["summary"])}</p></section>
+<section class="detail-box"><h2>Timeline</h2>{f'<ol class="timeline">{timeline}</ol>' if timeline else '<p class="empty-value">No dated milestones recorded.</p>'}</section>
+<section class="detail-box"><h2>Figures</h2>{f'<ul class="figure-list">{figures}</ul>' if figures else '<p class="empty-value">No supported figures in this record.</p>'}</section>
+<section class="detail-box"><h2>Technology</h2><dl class="fact-list">{"".join(technology)}</dl></section>{notes}</div>
+<aside><section class="detail-box"><h2>Record details</h2><dl class="fact-list">{"".join(details)}</dl><p><a href="{e(REPOSITORY_URL + "/issues/new?" + query)}">Report a correction ↗</a></p></section></aside></div>
+<section class="section" id="record-sources"><div class="section-head"><h2>Sources</h2><p>{len(record["sources"])} linked sources</p></div><ol class="source-list">{sources}</ol>
+<p class="table-note">{e(REVIEW_NOTE)} Numbers in brackets point to these sources.</p></section>'''
+
+
 def migration_page(template: str, base_url: str, path: str, *,
                    destination_path: str = "", missing: bool = False) -> str:
     destination = DATACENTER_URL + destination_path
@@ -624,7 +953,8 @@ def migration_page(template: str, base_url: str, path: str, *,
 
 
 def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
-          legacy_projects: Path | None = None, registry: Path = REGISTRY) -> dict:
+          legacy_projects: Path | None = None, registry: Path = REGISTRY,
+          manufacturing: Path = MANUFACTURING) -> dict:
     base_url = safe_url(base_url)
     if output.exists():
         raise ValueError("output directory must not already exist")
@@ -647,16 +977,74 @@ def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
     evidence = {row["evidence_id"]: row for row in read_rows(release / "evidence.jsonl")}
     sources = json.loads((release / "source_inputs.json").read_text(encoding="utf-8"))
     template = TEMPLATE.read_text(encoding="utf-8")
+    projects = manufacturing_projects.load_records(manufacturing)
+    bundle = manufacturing_projects.build_bundle(projects)
+    project_manifest = json.loads(bundle["manifest.json"])
+    project_counts = project_manifest["counts"]
+    archived_urls = {feature["properties"]["stable_key"]:
+                     base_url + "facilities/" + slug(feature["properties"]["stable_key"]) + "/"
+                     for feature in atlas["features"]}
+    archived_links = {}
+    for project in projects:
+        key = project.get("archived_record")
+        if key:
+            if key not in archived_urls:
+                raise ValueError(f"{project['id']}: unknown archived record {key}")
+            archived_links[key] = (base_url + manufacturing_projects.PAGE_ROUTE + project["id"] + "/",
+                                   project["name"])
+    for code in project_counts["countries"]:
+        country_label(code)
+    registry_by_id = {row["record_id"]: row for row in registry_records}
+    project_links: dict[str, list[tuple[str, str]]] = {}
+    for project in projects:
+        for link in project.get("registry_records", []):
+            if link["record_id"] not in registry_by_id:
+                raise ValueError(f"{project['id']}: unknown registry record {link['record_id']}")
+            project_links.setdefault(link["record_id"], []).append(
+                (base_url + manufacturing_projects.PAGE_ROUTE + project["id"] + "/", project["name"]))
+    manufacturing_summary = (
+        f"{project_counts['records']} source-linked records of wafer fabs, fab expansions and packaging "
+        f"plants announced, built, opened, paused, cancelled or closed since 2020, from "
+        f"{project_counts['companies']} companies in {len(project_counts['countries'])} countries: "
+        + ", ".join(f"{count} {manufacturing_projects.STATUSES[status].lower()}"
+                    for status, count in sorted(project_counts["statuses"].items(),
+                                                key=lambda item: list(manufacturing_projects.STATUSES).index(item[0])))
+        + ". Each record has its status, technology, figures, milestones and the sources behind them.")
+    cards = (
+        (f"{project_counts['records']:,}", "Manufacturing projects",
+         f"Fabs, fab expansions and packaging plants since 2020 in {len(project_counts['countries'])} "
+         "countries, with linked sources and a separate review.", base_url + manufacturing_projects.PAGE_ROUTE),
+        (f"{len(atlas['features'])}", "Evidence-archived records",
+         "Selected AI-critical facilities whose sources are archived and whose quoted passages are hashed.",
+         base_url + "#facilities"),
+        (f"{len(registry_records):,}", "Facility registry",
+         "Taiwan, U.S. and EU registry records selected by semiconductor codes: registry facts, not verified operations.",
+         base_url + "registry/"),
+    )
     routes = {
         "index.html": page(template, title="Semiconductor Atlas", description="Explore semiconductor facilities, production capabilities and primary sources.",
-                           body=index_body(atlas["features"], sources, manifest, base_url, registry_summary), base_url=base_url, script=FILTER_SCRIPT,
+                           body=index_body(atlas["features"], sources, manifest, base_url, registry_summary, cards), base_url=base_url, script=FILTER_SCRIPT,
                            head=dataset_jsonld(atlas["features"], manifest, base_url)),
         "404.html": migration_page(template, base_url, "404.html", missing=True),
         "registry/index.html": page(
             template, title="Facility registry | Semiconductor Atlas",
-            description=registry_summary, body=registry_body(registry_records, registry_leads, registry_manifest, base_url),
+            description=registry_summary, body=registry_body(registry_records, registry_leads, registry_manifest, base_url, project_links),
             base_url=base_url, path="registry/", script=REGISTRY_SCRIPT),
+        "manufacturing/index.html": page(
+            template, title="Manufacturing projects | Semiconductor Atlas",
+            description=manufacturing_summary,
+            body=manufacturing_body(projects, project_manifest, base_url), base_url=base_url,
+            path=manufacturing_projects.PAGE_ROUTE, script=MANUFACTURING_SCRIPT,
+            head=manufacturing_jsonld(project_manifest, base_url)),
     }
+    by_id = {project["id"]: project for project in projects}
+    for project in projects:
+        route = manufacturing_projects.PAGE_ROUTE + project["id"] + "/"
+        routes[route + "index.html"] = page(
+            template, title=project["name"] + " | Semiconductor Atlas",
+            description=f'{project["name"]} ({project["company"]}): status, timeline, figures and sources.',
+            body=manufacturing_record_body(project, by_id, archived_urls, base_url, registry_by_id),
+            base_url=base_url, path=route)
     for feature in atlas["features"]:
         record = feature["properties"]
         route = "facilities/" + slug(record["stable_key"]) + "/"
@@ -665,7 +1053,8 @@ def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
         routes[route + "index.html"] = page(
             template, title=record["name"] + " | Semiconductor Atlas",
             description=f'{record["name"]}: location, production capabilities and source documents.',
-            body=facility_body(record, claims, evidence, sources, base_url, manifest["recorded_at"]),
+            body=facility_body(record, claims, evidence, sources, base_url, manifest["recorded_at"],
+                               archived_links.get(record["stable_key"])),
             base_url=base_url, path=route)
     legacy = {"projects/": "sites/", "data/": "data/", "coverage/": "countries/",
               "about/": "about/", "methodology/": "methodology/"}
@@ -676,24 +1065,32 @@ def build(output: Path, *, base_url: str = BASE_URL, release: Path = RELEASE,
         route = "projects/" + path.stem + "/"
         legacy[route] = route
     for route, destination_path in legacy.items():
+        if route + "index.html" in routes:
+            raise ValueError(f"legacy redirect {route} collides with a page")
         routes[route + "index.html"] = migration_page(
             template, base_url, route, destination_path=destination_path)
     output.mkdir(parents=True)
     shutil.copytree(release, output / DOWNLOAD_PATH)
     shutil.copytree(registry, output / REGISTRY_DOWNLOAD_PATH)
+    (output / MANUFACTURING_DOWNLOAD_PATH).mkdir(parents=True)
+    for name, data in bundle.items():
+        (output / MANUFACTURING_DOWNLOAD_PATH / name).write_bytes(data)
     for route, contents in routes.items():
         target = output / route
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(contents, encoding="utf-8")
     (output / ".nojekyll").write_text("", encoding="utf-8")
     (output / "favicon.svg").write_text(FAVICON, encoding="utf-8")
-    canonical_paths = ["", "registry/"] + ["facilities/" + slug(x["properties"]["stable_key"]) + "/" for x in atlas["features"]]
+    canonical_paths = (["", "registry/", manufacturing_projects.PAGE_ROUTE]
+                       + ["facilities/" + slug(x["properties"]["stable_key"]) + "/" for x in atlas["features"]]
+                       + [manufacturing_projects.PAGE_ROUTE + x["id"] + "/" for x in projects])
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(
         f"<url><loc>{e(base_url + path)}</loc></url>" for path in canonical_paths) + "</urlset>\n"
     (output / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     (output / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base_url}sitemap.xml\n", encoding="utf-8")
     return {"facilities": len(atlas["features"]), "sources": len(sources),
             "registry_records": len(registry_records), "registry_leads": len(registry_leads),
+            "manufacturing_projects": len(projects),
             "as_of": manifest["as_of"], "recorded_at": manifest["recorded_at"],
             "legacy_redirects": len(legacy), "output": str(output)}
 

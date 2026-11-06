@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "id": "rohm-miyazaki-plant-no-2",
+  "name": "LAPIS Semiconductor Miyazaki Plant No. 2",
+  "aliases": [
+    "ROHM Kunitomi plant",
+    "Miyazaki Plant No.2"
+  ],
+  "company": "ROHM",
+  "operator": "LAPIS Semiconductor",
+  "parties": [
+    {
+      "name": "LAPIS Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "ROHM",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Parent company; bought the plant assets."
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Certified the joint ROHM and Toshiba power device plan, with a subsidy of up to one third of the investment."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "silicon_carbide"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A former Solar Frontier solar-cell plant in Kunitomi, Miyazaki Prefecture, that ROHM bought in November 2023 to become its group's main production site for silicon carbide power devices, also making silicon carbide wafers, run by its subsidiary LAPIS Semiconductor. Operations were targeted for 2024, and the site is ROHM's part of a joint power device plan with Toshiba certified for subsidy by Japan's industry ministry. In May 2025 ROHM said it had stopped installing equipment on the substrate lines and would reschedule equipment installation and start of operation, adjusting use of the device lines to market conditions.",
+  "location": {
+    "country": "JP",
+    "admin1": "Miyazaki",
+    "locality": "Kunitomi",
+    "site": "Miyazaki Plant No. 2 (former Solar Frontier Kunitomi Plant)",
+    "address": "1815 Taziri, Kunitomi-cho, Higashimorokata-gun, Miyazaki, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "paused",
+  "status_as_of": "2025-05-14",
+  "status_source_ids": [
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 289200000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-12-08",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "ROHM and LAPIS Semiconductor's share of the joint plan with Toshiba, for silicon carbide power devices and wafers at this plant."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 129400000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2023-12-08",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Maximum METI subsidy, one third of the ¥388.3 billion joint plan that covers this plant and the Kaga Toshiba silicon power device fab."
+    },
+    {
+      "metric": "site_area",
+      "value": 400000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-11-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total floor area is about 230,000 m2."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "acquired",
+      "date": "2023-11-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Acquisition of the plant assets completed under a basic agreement signed in July 2023."
+    },
+    {
+      "event": "opening",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "ROHM aimed to start operation during 2024."
+    },
+    {
+      "event": "paused",
+      "date": "2025-05-14",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Equipment installation on the substrate lines stopped; device line operation to be adjusted to market conditions."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Expanding production capacity for SiC power devices: ROHM completes acquisition of new production site",
+      "publisher": "ROHM",
+      "url": "https://www.rohm.com/news-detail?news-title=2023-11-07_news&defaultGroupId=false",
+      "type": "company_announcement",
+      "published": "2023-11-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "ROHM and Toshiba Agree to Collaborate in Manufacturing Power Devices",
+      "publisher": "Toshiba Electronic Devices & Storage Corporation",
+      "url": "https://toshiba.semicon-storage.com/eu/company/news/2023/12/corporate-20231208-1.html",
+      "type": "company_announcement",
+      "published": "2023-12-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "FY2024 Year-End Presentation Q&A",
+      "publisher": "ROHM",
+      "url": "https://micro.rohm.com/en/financial/account/2503_41811104_QA_en",
+      "type": "company_report",
+      "published": "2025-05-14",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The plant covers both silicon carbide substrates, which this dataset does not track on their own, and front-end device production; it is recorded for the device lines. Solar Frontier, the former owner, kept part of the site and buildings under lease as an office. No cited source reports that device production has started.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the METI web page, which now refuses automated access, and the certification and revision dates only it supported; dropped Solar Frontier as an owner party (it is the former owner and is now mentioned in the notes)."
+  }
+}

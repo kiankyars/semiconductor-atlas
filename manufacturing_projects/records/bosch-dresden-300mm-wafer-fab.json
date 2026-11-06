@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "id": "bosch-dresden-300mm-wafer-fab",
+  "name": "Bosch Dresden 300 mm wafer fab",
+  "aliases": [
+    "Bosch Dresden wafer fab"
+  ],
+  "company": "Bosch",
+  "operator": "Bosch",
+  "parties": [
+    {
+      "name": "Robert Bosch GmbH",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "German Federal Ministry for Economic Affairs and Climate Action",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Bosch's factsheet says the fab received funding under the first IPCEI on microelectronics; no amount is given."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "mems_sensors",
+    "power"
+  ],
+  "process_nodes": [
+    {
+      "label": "65 nm",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Bosch's 2023 factsheet gives structure widths down to 65 nm."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s6"
+      ]
+    }
+  ],
+  "summary": "Bosch's 300 mm wafer fab in Dresden, Germany, cost about EUR 1 billion, which Bosch called the biggest single investment in its more than 130-year history. It was inaugurated on 7 June 2021 and started production in July 2021, earlier than first planned, making ASICs and power semiconductors mainly for automotive and industrial uses; MEMS sensor production on 300 mm wafers was planned to start there in 2026. In July 2022 Bosch said it would spend EUR 250 million over the following year adding 3,000 square metres of cleanroom, and in November 2022 it said that expansion was under way.",
+  "location": {
+    "country": "DE",
+    "admin1": "Saxony",
+    "locality": "Dresden",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2023-08-21",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Initial fab",
+      "as_of": "2021-06-07",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6"
+      ],
+      "note": "Cost of the original fab."
+    },
+    {
+      "metric": "investment",
+      "value": 250000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Cleanroom expansion",
+      "as_of": "2022-07-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "To be spent over the year following the July 2022 announcement."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 10000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Initial fab",
+      "as_of": "2023-08-21",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Existing cleanroom before the planned addition of about 3,000 square metres."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 3000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Cleanroom expansion",
+      "as_of": "2022-07-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Additional cleanroom space."
+    },
+    {
+      "metric": "jobs",
+      "value": 700,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Initial fab",
+      "as_of": "2021-06-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Workforce once construction is complete; about 250 people worked there at the opening."
+    },
+    {
+      "metric": "jobs",
+      "value": 480,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-08",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Headcount in August 2023."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "opening",
+      "date": "2021-06-07",
+      "planned": false,
+      "phase_label": "Initial fab",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Official inauguration."
+    },
+    {
+      "event": "first_production",
+      "date": "2021-07",
+      "planned": false,
+      "phase_label": "Initial fab",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Production for Bosch power tools; at the opening Bosch said this start was six months earlier than planned."
+    },
+    {
+      "event": "first_production",
+      "date": "2021-09",
+      "planned": true,
+      "phase_label": "Initial fab",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned start of chip production for automotive customers, stated at the opening."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "Cleanroom expansion",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The operator reported the cleanroom expansion under way in November 2022."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Bosch opens wafer fab of the future in Dresden",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/bosch-opens-wafer-fab-of-the-future-in-dresden-230080.html",
+      "type": "company_announcement",
+      "published": "2021-06-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "“Invented for life” with semiconductors: Bosch invests further billions in chip business",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/invented-for-life-with-semiconductors-bosch-invests-further-billions-in-chip-business-243715.html",
+      "type": "company_announcement",
+      "published": "2022-07-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Bosch readies itself for rising demand for specialty semiconductors",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/bosch-readies-itself-for-rising-demand-for-specialty-semiconductors-248320.html",
+      "type": "company_announcement",
+      "published": "2022-11-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Rising demand for SiC chips: Bosch plans to acquire U.S. chipmaker TSI Semiconductors",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/rising-demand-for-sic-chips-bosch-plans-to-acquire-u-s-chipmaker-tsi-semiconductors-253824.html",
+      "type": "company_announcement",
+      "published": "2023-04-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Focus on promising markets: Bosch is strengthening its semiconductor business with a dedicated division",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/focus-on-promising-markets-bosch-is-strengthening-its-semiconductor-business-with-a-dedicated-division-286784.html",
+      "type": "company_announcement",
+      "published": "2026-11-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "300 milimeters wafer fab in Dresden",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/300-milimeters-wafer-fab-in-dresden-229248.html",
+      "type": "company_announcement",
+      "published": "2023-08-21",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The record is in scope for the fab's June 2021 opening and its 2022 cleanroom expansion. Bosch's August 2023 factsheet still lists the roughly 3,000 square metre addition as pending, and no source read for this record reports its completion, so the status remains partly operating as of that factsheet. In November 2026 Bosch said it had invested about EUR 3 billion in its Dresden and Reutlingen fabs in recent years, without splitting the amount.",
+  "registry_records": [
+    {
+      "record_id": "eea-industrial-reporting:eea_t_ied-eprtr_p_2007-2024_v16_r00:production-facility:https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/1483068481",
+      "relation": "same_facility",
+      "note": "EU industrial-emissions reporting record for Bosch's Dresden wafer fab."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Bosch's August 2023 Dresden factsheet (existing cleanroom, 65 nm structures, 2023 headcount, IPCEI funding, planned 2026 MEMS start) and moved status_as_of to it; removed an inferred 2023 cleanroom completion milestone and an unsourced note about pre-2020 foundation work; narrowed the product description to what the sources state. Audit fixes (2026-11-07): Attributed the biggest-single-investment claim in the summary to Bosch, as its opening release (s1) states it."
+  }
+}

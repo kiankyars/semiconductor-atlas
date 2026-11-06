@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "id": "mitsubishi-electric-shisui-sic-fab",
+  "name": "Mitsubishi Electric Power Device Works Shisui SiC wafer fab",
+  "aliases": [
+    "Fab.SA",
+    "Shisui 8-inch SiC wafer plant"
+  ],
+  "company": "Mitsubishi Electric",
+  "operator": "Mitsubishi Electric",
+  "parties": [
+    {
+      "name": "Mitsubishi Electric",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "silicon_carbide"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "A new front-end fab for silicon carbide power semiconductors on 200 mm wafers in the Shisui area of Kikuchi, Kumamoto Prefecture, incorporating a facility Mitsubishi Electric already owned there. Announced in March 2023 as the main part of a doubled five-year power device investment plan, it was budgeted at about ¥100 billion with startup then set for April 2026. The building was completed in October 2025 and operation started in November 2025, earlier than first planned, while part of the equipment build-out was deferred to fiscal 2031 or later because electric-vehicle demand grew more slowly than expected.",
+  "location": {
+    "country": "JP",
+    "admin1": "Kumamoto",
+    "locality": "Kikuchi",
+    "site": "Shisui area (Power Device Works)",
+    "address": "1576-1 Sumiyoshi, Shisui-machi, Kikuchi, Kumamoto Prefecture, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-01",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-03-14",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "For the new 8-inch silicon carbide wafer plant and related production facilities, within a five-year plan of about ¥260 billion to March 2026."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-03-14",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2026-04",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Startup scheduled for April 2026 at announcement."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Completion of the new building, marked by a ceremony in early October 2025."
+    },
+    {
+      "event": "opening",
+      "date": "2025-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Start of operation given as November 2025; the operator describes the wafer line as ramping up."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Mitsubishi Electric to Construct New Wafer Plant to Boost SiC Power Semiconductor Business",
+      "publisher": "Mitsubishi Electric",
+      "url": "https://ie.mitsubishielectric.com/global/common/pdf/global-news/pr/2023/230314-b_3580_en_g.pdf",
+      "type": "company_announcement",
+      "published": "2023-03-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Mitsubishi Electric Power devices: SiC",
+      "publisher": "Mitsubishi Electric",
+      "url": "https://www.mitsubishielectric.com/semiconductors/powerdevices/topics/sic/",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Introduction of SiC 200mm wafer production line in Shisui area",
+      "publisher": "Mitsubishi Electric",
+      "url": "https://www.mitsubishielectric.com/semiconductors/powerdevices/drawings/topics/Introduction_of_SiC%20200mm_wafer_production_line_in_Shisui_area_en.pdf",
+      "type": "company_report",
+      "published": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Mitsubishi completes new SiC facility",
+      "publisher": "Compound Semiconductor",
+      "url": "https://compoundsemiconductor.net/article/122626/Mitsubishi_completes_new_SiC_facility",
+      "type": "trade_press",
+      "published": "2025-10-02",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The completed building has six floors and about 42,000 m2 of floor space. At the opening the company said it would decide how many production lines to install according to market conditions; its SiC product page says it is speeding up the ramp of the fully automated wafer line.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added October 2025 trade-press coverage of the completion: the deferral of part of the equipment plan to fiscal 2031 or later, and the building's size; summary updated accordingly."
+  }
+}

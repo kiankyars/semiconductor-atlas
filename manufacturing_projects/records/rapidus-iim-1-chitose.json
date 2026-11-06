@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "id": "rapidus-iim-1-chitose",
+  "name": "Rapidus IIM-1",
+  "aliases": [
+    "Innovative Integration for Manufacturing 1",
+    "IIM-1"
+  ],
+  "company": "Rapidus",
+  "operator": "Rapidus",
+  "parties": [
+    {
+      "name": "Rapidus",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Approved a further 631.5 billion yen of support for Rapidus in April 2026."
+    },
+    {
+      "name": "New Energy and Industrial Technology Development Organization (NEDO)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s5",
+        "s8"
+      ],
+      "note": "Has subsidised Rapidus since fiscal 2022 and approved its fiscal 2026 plan for 2nm integration and short-turnaround manufacturing."
+    },
+    {
+      "name": "Information-technology Promotion Agency (IPA)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s8",
+        "s9"
+      ],
+      "note": "A METI agency that bought 100 billion yen of Rapidus shares in the round completed in February 2026 and another 150 billion yen in June 2026; the stake is in the company, not the plant alone."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "2nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Gate-all-around logic process building on Rapidus's joint development partnership with IBM."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Rapidus's first fab, a 2nm logic foundry in the Chitose Bibi World industrial park in Chitose, Hokkaido. The company picked Chitose in February 2023 and broke ground that September. The cleanroom was completed in 2024, the first EUV scanner was delivered in December 2024 and a pilot line started in April 2025; by July 2025 the fab was making prototype 2nm gate-all-around transistors on 300 mm wafers. Funding comes mainly from government-approved research budgets and from equity bought by a state agency and private companies, and Rapidus aims to begin mass production in the second half of its fiscal year 2027.",
+  "location": {
+    "country": "JP",
+    "admin1": "Hokkaido",
+    "locality": "Chitose",
+    "site": "Chitose Bibi World industrial park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-05",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "government_incentive",
+      "value": 631500000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-04-11",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Additional government support for Rapidus approved by METI in April 2026; the source does not split it between IIM-1 and the company's other programmes."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 2400000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-04-11",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Reported cumulative government support for Rapidus after the April 2026 approval, for the company as a whole."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_selected",
+      "date": "2023-02-28",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Chitose chosen for its water, power and room to grow an ecosystem."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2023-09-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Cleanroom completed."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024-12-18",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Delivery and installation of the first ASML NXE:3800E EUV scanner announced."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025-06",
+      "planned": false,
+      "phase_label": "Pilot line",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "More than 200 process tools connected; the pilot line had started in April 2025."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4",
+        "s6",
+        "s7"
+      ],
+      "note": "Mass production is targeted for the second half of Rapidus's fiscal 2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Rapidus Selects Chitose City in Hokkaido for its New State-of-the-Art Semiconductor Plant",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/rapidus-selects-chitose-city-in-hokkaido-for-its-new-state-of-the-art-semiconductor-plant/",
+      "type": "company_announcement",
+      "published": "2023-02-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Rapidus Held Groundbreaking Ceremony for IIM-1",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/rapidus-held-groundbreaking-ceremony-for-iim-1-2/",
+      "type": "company_announcement",
+      "published": "2023-09-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Rapidus begins installation of Japan's first NXE:3800E EUV lithography machinery for semiconductor mass production",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/rapidus-begins-installation-of-japans-first-euv-lithography-machinery-for-semiconductor-mass-production-en/",
+      "type": "company_announcement",
+      "published": "2024-12-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Rapidus Achieves Significant Milestone at its State-of-the-Art Foundry with Prototyping of Leading-Edge 2nm GAA Transistors",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/rapidus-achieves-significant-milestone-at-its-state-of-the-art-foundry-with-prototyping-of-leading-edge-2nm-gaa-transistors/",
+      "type": "company_announcement",
+      "published": "2025-07-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "NEDO Approves Rapidus' FY2026 Plan and Budget for 2nm Semiconductor Projects",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/nedo-approves-rapidus-fy2026-plan-and-budget-for-2nm-semiconductor-projects/",
+      "type": "company_announcement",
+      "published": "2026-04-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Rapidus Opens Analysis Center and Rapidus Chiplet Solutions",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/rapidus-opens-analysis-center-and-rapidus-chiplet-solutions/",
+      "type": "company_announcement",
+      "published": "2026-04-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "[News] Rapidus Reportedly Launches Back-End Prototype Line; Japan Adds ¥631.5B to Support 2nm Push",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/04/13/news-rapidus-reportedly-launches-back-end-prototype-line-japan-adds-%c2%a5631-5b-to-support-2nm-push/",
+      "type": "trade_press",
+      "published": "2026-04-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Rapidus Secures 267.6 Billion Yen in Funding from Japan Government and Private Sector Companies",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/rapidus-secures-267-6-billion-yen-in-funding-from-japan-government-and-private-sector-companies/",
+      "type": "company_announcement",
+      "published": "2026-02-27",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Rapidus Completes 150 Billion Yen Funding Round from Japan Government",
+      "publisher": "Rapidus",
+      "url": "https://www.rapidus.inc/en/news_topics/information/20260605-2/",
+      "type": "company_announcement",
+      "published": "2026-06-05",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "A pilot line has run at IIM-1 since April 2025 (s5), producing prototype wafers (s4) and supporting an early process design kit for customers. The status stays under construction because no source reports commercial production; in June 2026 Rapidus still described itself as moving from research and development towards full-scale manufacturing by 2027 (s9). The analysis centre opened next to the fab in April 2026 and the separate back-end research facility at the Seiko Epson Chitose plant are not part of this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Rewrote the METI party note and both incentive notes, which claimed a facility split the TrendForce report does not give, cited the NEDO release for the April 2025 pilot-line start, tied the IBM link to the sources that state it, and added Rapidus's June 2026 IPA funding release to the state agency's stake and the status."
+  }
+}

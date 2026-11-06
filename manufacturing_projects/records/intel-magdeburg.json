@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-magdeburg",
+  "name": "Intel Magdeburg fabs",
+  "aliases": [
+    "Silicon Junction"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Federal Government of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Signed a revised letter of intent in June 2023 that increased incentives for the site; the incentives depended on European Commission approval."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned two-fab leading-edge logic site in Magdeburg, Saxony-Anhalt, that Intel called Silicon Junction. Announced in March 2022 with an initial €17 billion, construction was to start in the first half of 2023 and production in 2027, pending European Commission approval of state aid. Intel bought the land in November 2022, and in June 2023 Intel and the German government widened the scope to more than €30 billion. Intel's April 2024 update still listed the site as planned. It paused the project by about two years in September 2024 and dropped it in July 2025. By May 2026 the state of Saxony-Anhalt had bought back parts of the former Intel site, though not yet all of it, for a planned high-tech park.",
+  "location": {
+    "country": "DE",
+    "admin1": "Saxony-Anhalt",
+    "locality": "Magdeburg",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-05-26",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 17000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-03-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial investment for two fabs."
+    },
+    {
+      "metric": "investment",
+      "value": 30000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Expanded plan for two fabs under the revised letter of intent."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-19",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Permanent Intel jobs, plus about 7,000 construction jobs in the first build phase."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-03-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original target, not met."
+    },
+    {
+      "event": "first_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original target, conditional on European Commission approval."
+    },
+    {
+      "event": "paused",
+      "date": "2024-09-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Intel paused its German project by about two years."
+    },
+    {
+      "event": "cancelled",
+      "date": "2025-07-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Intel said it would no longer move forward with the German project."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Announces Initial Investment of More Than €33 Billion for Semiconductor R&D and Manufacturing in EU",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1532/intel-announces-initial-investment-of-more-than-33",
+      "type": "company_announcement",
+      "published": "2022-03-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel, German Government Agree on Increased Scope for Wafer Fabrication Site in Magdeburg",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1628",
+      "type": "company_announcement",
+      "published": "2023-06-19",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "A message from Intel CEO Pat Gelsinger to employees regarding the next phase of Intel's transformation",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1710/a-message-from-intel-ceo-pat-gelsinger-to-employees",
+      "type": "company_announcement",
+      "published": "2024-09-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Intel Reports Second-Quarter 2025 Financial Results",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1745/intel-reports-second-quarter-2025-financial-results",
+      "type": "company_announcement",
+      "published": "2025-07-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Magdeburger Finanzminister: Ansiedlungen auf Intel-Flächen wohl erst in Jahren",
+      "publisher": "dpa-AFX (via extraETF)",
+      "url": "https://extraetf.com/de/news/dpa-afx/magdeburger-finanzminister-ansiedlungen-auf-intel-flachen-wohl-erst-in-jahren--1779800271-04575-1779800269907",
+      "type": "news",
+      "published": "2026-05-26",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The June 2023 agreement said the first fab would start production four to five years after European Commission approval of the incentive package. Intel's 2025 annual report lists Germany among the manufacturing projects it delayed or cancelled. The state's partial buy-back of the site is reported by dpa-AFX, read in extraETF's republication (s7); no state-government release on it could be opened. Intel's own release and 10-K (s5, s6) support the cancelled status; s7 adds the later state of the site and sets the status date.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the land purchase date to November 2022, added a May 2026 report that Saxony-Anhalt was buying back the former Intel site, and set the 2025 annual report's filing date to 23 January 2026. Audit fixes (2026-11-07): Re-read the dpa-AFX report (s7) and kept it labelled as dpa-AFX via extraETF, because no original agency copy or state-government release could be opened; confirmed Intel's own sources (s5, s6) also support the cancelled status and noted this; reworded the 10-K reference to match its delayed-or-cancelled wording."
+  }
+}

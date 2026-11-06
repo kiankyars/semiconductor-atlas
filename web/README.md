@@ -52,6 +52,15 @@ coverage, data, methodology and about pages redirect to their corresponding dest
 Each has an ordinary fallback link for browsers without JavaScript. Unknown addresses show links to both
 atlases; the semiconductor home page never redirects.
 
+`/manufacturing/` publishes the source-linked manufacturing-project records in
+`manufacturing_projects/records/`. The build validates every record and the links between them
+(`semiconductor_atlas/manufacturing_projects.py`), then writes a list page, one page per record
+and a download bundle to `downloads/manufacturing/` (JSON Lines, CSV files for projects, figures,
+milestones and sources, a README and a manifest of SHA-256 hashes). The bundle is generated from
+the tracked records on every build and is byte-identical for identical records. A record linked
+to an evidence-archived facility (`archived_record`) is cross-linked from both pages. Nothing is
+geocoded: coordinates appear only when a cited source states them for the facility.
+
 ## Local evidence viewer
 
 For interactive inspection of retained source reports, use the installed

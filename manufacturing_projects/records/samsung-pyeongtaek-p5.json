@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-pyeongtaek-p5",
+  "name": "Samsung Pyeongtaek P5",
+  "aliases": [
+    "Pyeongtaek Line 5",
+    "Pyeongtaek Plant 5"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm",
+    "nand",
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The fifth line at Samsung's Pyeongtaek campus, in the site's second complex. Korean press reported that work on P5 stopped, along with parts of P4, from early 2024 during the memory downturn. In November 2025 Samsung said a management committee had decided to proceed with the building's frame construction, aiming for full operation in 2028, as part of a group pledge of KRW 450 trillion in domestic investment over five years. In August 2026 trade press reported foundation work on two fab units, P5-1 and P5-2, meant for HBM and other DRAM, V-NAND and foundry chips, with final completion targeted for 2030, and a pending planning amendment that would allow a larger triple-fab layout.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Pyeongtaek",
+    "site": "Pyeongtaek Campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "In the second complex of the Pyeongtaek campus."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-20",
+  "status_source_ids": [
+    "s4"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "TrendForce dates the start of P5 construction to 2022."
+    },
+    {
+      "event": "paused",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported stalled with P4 from early 2024; in June 2025 the city said it had received no recent permit requests for P5."
+    },
+    {
+      "event": "resumed",
+      "date": "2025-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Samsung announced on 16 November 2025 that a recent management committee meeting had approved proceeding with the frame construction; the meeting date is not given."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Full-scale operation target set when construction was approved to proceed."
+    },
+    {
+      "event": "building_complete",
+      "date": "2030",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Final completion target reported in August 2026, while foundation work for P5-1 and P5-2 was under way."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Samsung gears up for new factory construction in Pyeongtaek, aims to lead in HBM4",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/samsung-gears-up-for-new-factory-construction-in-pyeongtaek-aims-to-lead-in-hbm4/12120999",
+      "type": "news",
+      "published": "2025-06-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Samsung to invest 450 tril. won over next 5 years",
+      "publisher": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/amp/business/companies/20251116/samsung-to-invest-450-tril-won-over-next-5-years",
+      "type": "news",
+      "published": "2025-11-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Samsung to Invest 450 Trillion Won in Korea Over 5 Years... Begins Construction of Pyeongtaek Plant 5",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2025111618201352354",
+      "type": "news",
+      "published": "2025-11-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "[News] Samsung to Break Ground on KRW 6T Onyang HBM Fab in Sept., P5 Eyes Triple-Fab Shift as Expansion Accelerates",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/08/20/news-samsung-to-break-ground-on-krw-6t-onyang-hbm-fab-in-sept-p5-eyes-triple-fab-shift-as-expansion-accelerates/",
+      "type": "trade_press",
+      "published": "2026-08-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "samsung-pyeongtaek-p2",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p3",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p4",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "No P5-specific investment figure is given in the cited sources; the KRW 450 trillion pledge covers Samsung group companies' domestic spending including R&D. Status evidence is from press and trade-press reports rather than a Samsung release. TrendForce reported that Samsung had applied to raise the site's floor area ratio from 350% to 490%, which would allow a triple-fab layout with up to six cleanrooms; approval was pending in August 2026.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Dated the decision to resume construction to November 2025, since the sources give only the announcement date of 16 November and not the committee meeting date; switched the TrendForce link to its canonical address and reworded the summary."
+  }
+}

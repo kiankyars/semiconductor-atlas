@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0",
+  "id": "spil-douliu-plant",
+  "name": "SPIL Douliu plant, Yunlin",
+  "aliases": [
+    "矽品斗六廠"
+  ],
+  "company": "ASE",
+  "operator": "Siliconware Precision Industries (SPIL)",
+  "parties": [
+    {
+      "name": "Siliconware Precision Industries (SPIL)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Subsidiary of ASE Technology Holding."
+    },
+    {
+      "name": "Yunlin County Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Formed a cross-department team to help with land matching, building permit review and coordination."
+    },
+    {
+      "name": "Ministry of Economic Affairs (Taiwan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The economics minister attended the groundbreaking and said the ministry's industrial park and industrial development agencies would support the project with administrative coordination and infrastructure."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "CoWoS",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "SPIL says the plant will focus on CoWoS advanced packaging for AI accelerators and high-performance computing chips."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A new SPIL advanced packaging plant in Douliu, Yunlin County, Taiwan, focused on CoWoS packaging for AI accelerators and high-performance computing chips. SPIL said in January 2025 that it was planning the site, and held the groundbreaking on 11 August 2026. Total investment is put at nearly NT$100 billion on a 6-hectare development area, with the first phase expected to open in 2028. It is SPIL's second Yunlin base after its Huwei plant, which began production in 2025.",
+  "location": {
+    "country": "TW",
+    "admin1": "Yunlin County",
+    "locality": "Douliu",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-11",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Described as nearly NT$100 billion in total."
+    },
+    {
+      "metric": "site_area",
+      "value": 6,
+      "value_max": null,
+      "unit": "hectares",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Development area."
+    },
+    {
+      "metric": "jobs",
+      "value": 1300,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-08-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Jobs expected once the first phase opens."
+    },
+    {
+      "metric": "jobs",
+      "value": 2200,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "at_least",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Jobs expected at full operation."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-01-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "SPIL said planning was under way for a new factory site in Douliu."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-08-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2028",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Groundbreaking for SPIL's Douliu Plant Marks Another Leap in Advanced Packaging and Testing Capacity; Dual Yunlin Facilities Link into Global AI Supply Chain",
+      "publisher": "Siliconware Precision Industries (SPIL)",
+      "url": "https://www.spilglobal.com/NewsDetail/d3d7f369a56f613a",
+      "type": "company_announcement",
+      "published": "2026-08-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "矽品斗六廠動土 先進封測產能再躍進 雲林雙廠串聯全球AI供應鏈",
+      "publisher": "Economic Daily News (republished by SPIL)",
+      "url": "https://www.spilglobal.com/Files/news/2026Q3/20260811矽品斗六廠動土%20先進封測產能再躍進%20雲林雙廠串聯全球AI供應鏈.pdf",
+      "type": "news",
+      "published": "2026-08-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "SPIL hosts NVIDIA founder and CEO Jensen Huang at new factory site for the acceleration of semiconductor assembly and test services",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/spil-hosts-nvidia-founder-and-ceo-at-new-factory-site",
+      "type": "company_announcement",
+      "published": "2025-01-16",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "SPIL's press release for the groundbreaking is a newspaper article (credited to the Economic Daily News of 11 August 2026) posted as a PDF on SPIL's press page. The article also says SPIL invested about NT$200 billion across Taiwan in new plants over the previous two years; that company-wide figure is not recorded here.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:P46B8733",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for the Douliu plant."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the full-operation jobs qualifier to at least 2,200, corrected the ministry's supporting agencies to its industrial park and industrial development bodies, and reworded the summary and figure notes; status and other facts were confirmed."
+  }
+}

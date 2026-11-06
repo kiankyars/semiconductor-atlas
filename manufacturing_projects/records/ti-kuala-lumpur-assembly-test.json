@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "id": "ti-kuala-lumpur-assembly-test",
+  "name": "TI Kuala Lumpur assembly and test factory expansion",
+  "aliases": [],
+  "company": "Texas Instruments",
+  "operator": "Texas Instruments",
+  "parties": [
+    {
+      "name": "Texas Instruments",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Malaysian Investment Development Authority",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Federal investment agency that announced and backed the expansion; no incentive amount is published."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "project",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Texas Instruments plans a new assembly and test factory in Kuala Lumpur, Malaysia, by converting a building it bought next to its existing Kuala Lumpur plant, with potential investment of up to MYR 9.6 billion and more than 1 million sq ft of cleanroom. Announced in June 2023, construction was expected to begin later that year and production as early as 2025. No cited source reports construction or production.",
+  "location": {
+    "country": "MY",
+    "admin1": "Kuala Lumpur",
+    "locality": "Kuala Lumpur",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2023-06-13",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 9600000000,
+      "value_max": null,
+      "unit": "MYR",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-13",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Potential investment to convert the building into an assembly and test factory."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 1000000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-13",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "site_area",
+      "value": 18,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Site of the building TI bought next to its existing Kuala Lumpur factory."
+    },
+    {
+      "metric": "jobs",
+      "value": 1300,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-13",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Additional local jobs at full build."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-06-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Construction expected to start later in 2023."
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Production expected as early as 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Texas Instruments to expand manufacturing operations in Malaysia",
+      "publisher": "Texas Instruments",
+      "url": "https://ti.com/about-ti/newsroom/news-releases/2023/2023-06-13-texas-instruments-to-expand-manufacturing-operations-in-malaysia.html",
+      "type": "company_announcement",
+      "published": "2023-06-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Texas Instruments to Expand Manufacturing Operations in Malaysia",
+      "publisher": "Malaysian Investment Development Authority (MIDA)",
+      "url": "https://www.mida.gov.my/media-release/texas-instruments-to-expand-manufacturing-operations-in-malaysia/",
+      "type": "government",
+      "published": "2023-06-13",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Searches in November 2026 found no report of construction progress or a production start for this factory, so the record stays announced; the 2025 production target is a planned milestone that no source has confirmed. The operator has not published a name for the factory.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 18-acre site area stated in TI's announcement; no corrections were needed and no newer reporting on construction or production was found."
+  }
+}

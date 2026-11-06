@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "id": "microchip-tempe-fab-2",
+  "name": "Microchip Fab 2",
+  "aliases": [
+    "Tempe Fab 2"
+  ],
+  "company": "Microchip",
+  "operator": "Microchip Technology",
+  "parties": [
+    {
+      "name": "Microchip Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "0.25 to 1.0 micron",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The fab mainly ran processes in this range."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "Fab 2 is Microchip's 200 mm wafer fab in Tempe, Arizona, which mainly ran 0.25 to 1.0 micron processes. Citing high inventory and spare capacity elsewhere, Microchip announced its closure in December 2024 and is moving its process technologies to Fab 4 in Gresham, Oregon and Fab 5 in Colorado Springs. Manufacturing ended in May 2025, earlier than first planned, and the facility and equipment are held for sale.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Tempe",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "closed",
+  "status_as_of": "2026-05-21",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "closed",
+      "date": "2025-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Closure announced on 2024-12-02 with a target of the September 2025 quarter, then brought forward to May 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Microchip Technology current report on Form 8-K (Item 2.05, closure of Fab 2)",
+      "publisher": "Microchip Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705424000225/mchp-20241202.htm",
+      "type": "company_filing",
+      "published": "2024-12-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Microchip Technology current report on Form 8-K (Item 2.05, additional restructuring actions)",
+      "publisher": "Microchip Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705425000037/mchp-20250303.htm",
+      "type": "company_filing",
+      "published": "2025-03-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Microchip Technology annual report on Form 10-K for the fiscal year ended March 31, 2025",
+      "publisher": "Microchip Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705425000077/mchp-20250331.htm",
+      "type": "company_filing",
+      "published": "2025-05-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Microchip Technology annual report on Form 10-K for the fiscal year ended March 31, 2026",
+      "publisher": "Microchip Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/827054/000082705426000016/mchp-20260331.htm",
+      "type": "company_filing",
+      "published": "2026-05-21",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The December 2024 filing said the closure would affect about 500 employees. The FY2026 annual report classifies the Fab 2 wafer fab in Tempe as held for sale at 31 March 2026; the Tempe property it sits on, which also holds an R&D centre, warehousing and offices, totals about 388,100 sq ft. The filings do not give Fab 2's product mix; the segments are an assumption based on Microchip's analog, mixed-signal and microcontroller lines and are not sourced.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Clarified that the 388,100 sq ft figure covers the whole Tempe property rather than the fab alone and that the segments are not sourced; no factual corrections were needed."
+  }
+}

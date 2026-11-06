@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.0",
+  "id": "psmc-tongluo-p5-fab",
+  "name": "PSMC Tongluo fab (P5)",
+  "aliases": [
+    "PSMC P5",
+    "Powerchip Tongluo 12-inch fab"
+  ],
+  "company": "PSMC",
+  "operator": "Powerchip Semiconductor Manufacturing Corporation (PSMC)",
+  "parties": [
+    {
+      "name": "Powerchip Semiconductor Manufacturing Corporation (PSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "note": "Built and opened the fab; after the sale it is moving its own Tongluo operations out in stages."
+    },
+    {
+      "name": "Micron Technology",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "note": "Agreed in January 2026 to buy the P5 site for US$1.8 billion in cash and took ownership on 15 March 2026; the fab under Micron is recorded in micron-tongluo-miaoli-fab."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "55nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "label": "40nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "label": "28nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "A possible second phase was to move to 2x-nanometre technology."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "A 12-inch wafer fab that PSMC built and ran at Tongluo in Miaoli County, Taiwan, and sold to Micron in March 2026. Construction began in March 2021 and the fab was inaugurated in May 2024, when initial tools were in place and trial production had begun; it was planned around 55nm, 40nm and 28nm processes. By late 2025 only about 8,000 wafers a month had been installed, mostly for customer qualification and a fully loaded silicon interposer line for advanced packaging, against a long-term site plan of up to 120,000 wafers a month. PSMC agreed in January 2026 to sell the fab to Micron for US$1.8 billion in cash, and the sale closed on 15 March 2026. From the sale on, the facility is carried by the successor record micron-tongluo-miaoli-fab, which covers Micron's conversion to DRAM.",
+  "location": {
+    "country": "TW",
+    "admin1": "Miaoli County",
+    "locality": "Tongluo",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "transferred",
+  "status_as_of": "2026-04-10",
+  "status_source_ids": [
+    "s3",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 300000000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total for the 12-inch fab project."
+    },
+    {
+      "metric": "investment",
+      "value": 80000000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-05-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Amount spent by the May 2024 inauguration."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned monthly output of the 12-inch (300 mm) fab; the source states it as 50,000 units a month."
+    },
+    {
+      "metric": "capacity",
+      "value": 8000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Installed 12-inch (300 mm) capacity in the completed first building, including a silicon interposer line of about 2,500 wafers a month."
+    },
+    {
+      "metric": "capacity",
+      "value": 120000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Long-term plan for three 12-inch fab buildings at Tongluo of about 40,000 wafers a month each."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 28000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-05-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "site_area",
+      "value": 110000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-05-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2021-03",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2024-05",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial equipment installed and trial production started by the inauguration."
+    },
+    {
+      "event": "opening",
+      "date": "2024-05-02",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Inauguration ceremony."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-H2",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target for mass production of silicon interposers for CoWoS-style packaging, initially at several thousand units a month."
+    },
+    {
+      "event": "sold",
+      "date": "2026-03-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "note": "Sale to Micron under a January 2026 letter of intent; trade press reported that part of the price was due by the end of 2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "[News] PSMC's New Tongluo Plant Unveiled, CoWoS Packaging Ready to Roll",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2024/05/03/news-psmcs-new-tongluo-plant-unveiled-cowos-packaging-ready-to-roll/",
+      "type": "trade_press",
+      "published": "2024-05-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Micron Reportedly Schedules March 26 Tool Move-In at PSMC Tongluo Fab, Signaling Next Deal Phase",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/03/13/news-micron-reportedly-schedules-march-26-tool-move-in-at-psmc-tongluo-fab-signaling-next-deal-phase/",
+      "type": "trade_press",
+      "published": "2026-03-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "[News] PSMC Core Business Reportedly Swings to Profit in Q1; Micron Deal Adds Strategic Upside",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/04/10/news-psmc-core-business-reportedly-swings-to-profit-in-q1-micron-deal-adds-strategic-upside/",
+      "type": "trade_press",
+      "published": "2026-04-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "[News] Micron Reportedly Weighs Acquiring PSMC 12-Inch Tongluo Fab, With Multiple Partners Also Interested",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/12/31/news-micron-reportedly-weighs-acquiring-psmc-12-inch-tongluo-fab-with-multiple-partners-also-interested/",
+      "type": "trade_press",
+      "published": "2025-12-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+      "type": "company_announcement",
+      "published": "2026-03-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Micron Signs Letter of Intent to Purchase Tongluo Site, Begin Strategic Partnership with PSMC",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Signs-Letter-of-Intent-to-Purchase-Tongluo-Site-Begin-Strategic-Partnership-with-PSMC-01-17-2026/default.aspx",
+      "type": "company_announcement",
+      "published": "2026-01-17",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "micron-tongluo-miaoli-fab",
+      "relation": "predecessor_of"
+    }
+  ],
+  "notes": "This record covers the fab under PSMC up to the sale to Micron on 15 March 2026; the successor record micron-tongluo-miaoli-fab carries the same building from the sale on, including the DRAM conversion and Micron's tool move-in. PSMC was to move its own Tongluo operations out over a set period after the sale. The PSMC-era facts rest on trade press because PSMC's own site could not be read.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:K77A1855",
+      "relation": "same_facility",
+      "note": "Environmental-control registration under PSMC."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:K77A3198",
+      "relation": "same_facility",
+      "note": "Environmental-control registration under the new owner, Micron, at the same address."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Micron's letter-of-intent and completion releases to date the sale to 15 March 2026, corrected the summary's claim that Micron expects mass production in 2027 (a trade-press projection), and linked the record to the Micron Tongluo record for the same building. Audit fixes (2026-11-07): set the status to transferred as of the April 2026 TrendForce report confirming the completed sale (citing it with Micron's completion release), and rewrote the summary and notes to cover PSMC's period up to the sale, pointing to the Micron Tongluo record as the successor."
+  }
+}

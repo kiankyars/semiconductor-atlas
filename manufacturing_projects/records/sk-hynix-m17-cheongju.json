@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-m17-cheongju",
+  "name": "SK hynix M17",
+  "aliases": [],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A NAND flash fab SK hynix plans at its Cheongju campus, which already houses the M11, M12 and M15 fabs. In its July 2026 plan for the Chungcheong region the company earmarked about KRW 80 trillion for M17, with construction from 2027 and operations in the first half of 2029. In August 2026 the board approved KRW 19.1 trillion for M17 through April 2031, with groundbreaking in February 2027 and the first cleanroom opening in December 2028. SK hynix's Korean release gives M17 a gross floor area of about 206,000 pyeong, which its English release renders as a total area of about 680,000 m²; this is neither a site nor a cleanroom area, so it is not recorded as a figure.",
+  "location": {
+    "country": "KR",
+    "admin1": "North Chungcheong Province",
+    "locality": "Cheongju",
+    "site": "Cheongju Campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-07",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 80000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Amount assigned to M17 in the July 2026 Chungcheong investment plan."
+    },
+    {
+      "metric": "investment",
+      "value": 19100000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-07",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Board-approved investment through April 2031."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2027-02",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2028-12",
+      "planned": true,
+      "phase_label": "First cleanroom",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Opening of the first cleanroom."
+    },
+    {
+      "event": "first_production",
+      "date": "2029-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Operations targeted for the first half of 2029."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SK hynix Announces Investment Plan for the Chungcheong Region",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/fact-07/",
+      "type": "company_announcement",
+      "published": "2026-07-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "SK hynix Invests 54 Trillion Won in Yongin Y2 and Cheongju M17 to Secure Mid-to-Long-Term Production Base for AI Memory Demand",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/fab-facility-investment-2026/",
+      "type": "company_announcement",
+      "published": "2026-08-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "SK hynix Announces 2Q26 Financial Results",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/q2-2026-business-results/",
+      "type": "company_announcement",
+      "published": "2026-07-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "SK hynix to Produce DRAM From M15X in Cheongju",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-to-produce-dram-from-m15x-in-cheongju/",
+      "type": "company_announcement",
+      "published": "2024-04-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "SK하이닉스, 용인 Y2 ∙ 청주 M17에 54조 원 투자… AI 시대 메모리 수요 대응 위한 중장기 생산 기반 확보",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.co.kr/fab-facility-investment-2026/",
+      "type": "company_announcement",
+      "published": "2026-08-07",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "sk-hynix-pt7-cheongju",
+      "relation": "same_campus"
+    },
+    {
+      "id": "sk-hynix-m15x-cheongju",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "SK hynix said in July 2026 that M17 and the other mid-term projects would be carried out in phases according to customer demand and investment efficiency (s3). The 2024 M15X release is cited only for the province of the Cheongju site.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the board-approved KRW 19.1 trillion from approximate to exact as the release states it, and corrected the summary, which called the 680,000 m² figure floor area where the source says total area. Audit fixes (2026-11-07): Added the Korean version of the August 2026 release (s5), which describes the 206,000-pyeong (about 680,000 m²) figure as gross floor area, and reworded the summary accordingly; no site or cleanroom area metric is added because the sources give neither."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "id": "umc-tainan-p7-p8-fab-building",
+  "name": "UMC Tainan new fab building for P7 and P8",
+  "aliases": [
+    "UMC Tainan P7/P8"
+  ],
+  "company": "UMC",
+  "operator": "United Microelectronics Corporation (UMC)",
+  "parties": [
+    {
+      "name": "United Microelectronics Corporation (UMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A new fab building shell at UMC's main campus in Tainan, Taiwan, to house future production phases P7 and P8. UMC announced it in July 2026 alongside fitting out a P4 cleanroom in Singapore, describing the two as a dual-track response to customer demand. In October 2026 its board approved an additional capital budget of about US$3.2 billion to accelerate the expansion. No capacity, technology or completion dates have been given.",
+  "location": {
+    "country": "TW",
+    "admin1": "Tainan City",
+    "locality": "Tainan",
+    "site": "UMC Tainan campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-28",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3200000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Additional capital budget approved by UMC's board to speed up its expansion, which the company links to its Singapore and Tainan plans; not split by site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-29",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "UMC said it would begin building the new fab shell at the same time as the Singapore P4 fit-out."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "UMC announced its operating results for the second quarter of 2026 (Form 6-K, Exhibit 99)",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+      "type": "company_filing",
+      "published": "2026-07-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "UMC announced its operating results for the third quarter of 2026 (Form 6-K, Exhibit 99)",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526434992/umc-ex99.htm",
+      "type": "company_filing",
+      "published": "2026-10-28",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The filings do not say whether the new building belongs to Fab 12A or name its products; the logic segment reflects UMC's foundry business generally. No source read reports that construction has started. UMC's earlier Fab 12A P6 expansion in the Southern Taiwan Science Park, announced in April 2021, is not recorded because its later progress could not be sourced.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

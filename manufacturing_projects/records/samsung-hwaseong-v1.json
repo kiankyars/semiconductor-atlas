@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-hwaseong-v1",
+  "name": "Samsung Hwaseong V1 line",
+  "aliases": [
+    "V1 line"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "7nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "EUV process; in production at the start of mass production."
+    },
+    {
+      "label": "6nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "EUV process; in production at the start of mass production."
+    },
+    {
+      "label": "3nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Samsung said the line would keep adopting finer nodes down to 3nm."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "Samsung's first production line built specifically for EUV lithography, at its Hwaseong site in South Korea. Ground was broken in February 2018 and test wafers were run in the second half of 2019; in February 2020 Samsung announced that the line had begun mass-producing 7nm and 6nm mobile chips, with finer nodes down to 3nm to follow. Samsung expected its cumulative spending on the line to reach USD 6 billion by the end of 2020.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Hwaseong",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2020-02-20",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-02-20",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned cumulative investment in the line by the end of 2020."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2018-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2019-H2",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Test wafer production."
+    },
+    {
+      "event": "volume_production",
+      "date": "2020-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Mass production announced on 20 February 2020, with first customer deliveries planned for the first quarter."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Samsung Electronics Begins Mass Production at New EUV Manufacturing Line",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-electronics-begins-mass-production-at-new-euv-manufacturing-line",
+      "type": "company_announcement",
+      "published": "2020-02-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The 300 mm wafer size follows from the release's table of Samsung foundry lines, which lists five 12-inch lines including V1 and one 8-inch line. The release expected capacity at 7nm and below to triple from 2019 levels by the end of 2020.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the summary, which called V1 Samsung's first foundry line for EUV; the source calls it Samsung's first production line dedicated to EUV, and the summary was reworded."
+  }
+}

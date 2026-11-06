@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "id": "infineon-villach-300mm-power-fab",
+  "name": "Infineon Villach 300 mm power electronics fab",
+  "aliases": [
+    "Villach high-tech chip factory"
+  ],
+  "company": "Infineon",
+  "operator": "Infineon Technologies Austria",
+  "parties": [
+    {
+      "name": "Infineon Technologies Austria",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Infineon Technologies",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Parent company that made the investment."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A fully automated chip factory for power semiconductors on 300 mm thin silicon wafers at Infineon's Villach site in Austria. Infineon announced it in 2018 and invested €1.6 billion. After about three years of preparation and building, the fab was commissioned in early August 2021, three months ahead of plan, and was formally opened on 17 September 2021. Infineon runs it together with its Dresden 300 mm site as one virtual fab.",
+  "location": {
+    "country": "AT",
+    "admin1": "Carinthia",
+    "locality": "Villach",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2025-11",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1600000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-09-17",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 400,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-09-17",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional jobs named at the opening; the company said more than two-thirds of the roughly 400 specialists needed had already been hired."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2018",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Infineon announced the construction of the 300 mm power electronics fab in 2018."
+    },
+    {
+      "event": "first_production",
+      "date": "2021-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Commissioned at the start of August 2021; first wafers were due to leave the plant in the week of the opening."
+    },
+    {
+      "event": "opening",
+      "date": "2021-09-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Infineon opens high-tech chip factory for power electronics on 300-millimeter thin wafers",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/regional/austria/press-release/2021/mission-future",
+      "type": "company_announcement",
+      "published": "2021-09-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Shaping an innovative and sustainable future: Infineon Technologies Austria, Fiscal year 2025",
+      "publisher": "Infineon Technologies Austria",
+      "url": "https://www.infineon.com/assets/row/public/documents/regions/austria/jb-2025-e.pdf",
+      "type": "company_report",
+      "published": "2025-11",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "At the opening Infineon said output would be ramped up gradually over four to five years; the 2025 report of Infineon Austria lists 2021 as the year the new 300 mm fab was completed and began production.",
+  "registry_records": [
+    {
+      "record_id": "eea-industrial-reporting:eea_t_ied-eprtr_p_2007-2024_v16_r00:production-facility:AT.CAED/9008392397730.FACILITY",
+      "relation": "same_site",
+      "note": "EU industrial-emissions reporting record for Infineon's Villach site, which includes the 300 mm fab."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the Infineon Austria report's publication date to November 2025 (and status_as_of with it), made the 400-jobs figure exact, and added the 2018 announcement milestone and the planned four-to-five-year ramp."
+  }
+}

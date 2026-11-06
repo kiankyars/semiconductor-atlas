@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "id": "skywater-indiana-west-lafayette",
+  "name": "SkyWater Indiana production and R&D facility, West Lafayette",
+  "aliases": [
+    "SkyWater Purdue facility"
+  ],
+  "company": "SkyWater",
+  "operator": "SkyWater Technology",
+  "parties": [
+    {
+      "name": "SkyWater Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "State of Indiana",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Partner in the plan; the Indiana Economic Development Corporation committed incentives, none of which SkyWater claimed."
+    },
+    {
+      "name": "Purdue University",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Public university and partner in the plan; the fab was to be built on its Discovery Park District land, on which SkyWater held an option until 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned semiconductor production and research and development fab that SkyWater Technology announced in July 2022 for Purdue University's Discovery Park District in West Lafayette, Indiana, in partnership with the State of Indiana and Purdue. The roughly 600,000 square foot, USD 1.8 billion plant was expected to create 750 jobs and depended on federal CHIPS Act grants. SkyWater received no CHIPS money, and in April 2024 Purdue said the company would not build the facility and had given up its option on the land; SkyWater said it was reassessing and had no firm plan for a new fab in Indiana.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "locality": "West Lafayette",
+    "site": "Discovery Park District, Purdue University",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "cancelled",
+  "status_as_of": "2024-04-05",
+  "status_source_ids": [
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1800000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-07-26",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Announced investment, conditional on federal CHIPS Act funding."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 70000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-04-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "State incentives committed by the Indiana Economic Development Corporation, reported as up to more than USD 70 million; SkyWater claimed none of them."
+    },
+    {
+      "metric": "jobs",
+      "value": 750,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-04-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "cancelled",
+      "date": "2024-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Purdue confirmed SkyWater would not build the facility and had released its land option; reported on 5 April 2024."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SkyWater Technology, Inc. Annual Report (Form 10-K) for the fiscal year ended January 1, 2023",
+      "publisher": "SkyWater Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819974/000181997423000011/skyt-20230101.htm",
+      "type": "company_filing",
+      "published": "2023-03-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SkyWater Technology, Inc. Annual Report (Form 10-K) for the fiscal year ended December 31, 2023",
+      "publisher": "SkyWater Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819974/000181997424000008/skyt-20231231.htm",
+      "type": "company_filing",
+      "published": "2024-03-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "SkyWater to build $1.8bn fab in partnership with State of Indiana and Purdue University",
+      "publisher": "Semiconductor Today",
+      "url": "https://semiconductor-today.com/news_items/2022/jul/skywater-260722.shtml",
+      "type": "trade_press",
+      "published": "2022-07-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Chip maker SkyWater cancels plans for Indiana plant—at least for now",
+      "publisher": "Inside INdiana Business",
+      "url": "https://www.insideindianabusiness.com/?p=167278",
+      "type": "news",
+      "published": "2024-04-05",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The SkyWater annual reports read for this record do not announce a cancellation; the status rests on the April 2024 report (s4) that the company had released its land option and would not build the plant, while the state said it would still back SkyWater in Indiana once federal funding was settled. No source gives the fab's product mix; the segment reflects the analog and mixed-signal wafer services SkyWater describes in its 2022 annual report and is an approximation. The company field names SkyWater, the parent at the time; SkyWater became part of IonQ in July 2026, after this project ended.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the status from announced to cancelled with a cancelled milestone, citing April 2024 reporting that SkyWater released its Purdue land option and would not build the plant; added the site, the USD 1.8 billion plan, 750 jobs and the unclaimed state incentives from trade and news sources, and replaced the unsupported logic segment with analog and mixed-signal."
+  }
+}

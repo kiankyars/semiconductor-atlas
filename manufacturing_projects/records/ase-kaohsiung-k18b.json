@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "id": "ase-kaohsiung-k18b",
+  "name": "ASE K18B advanced packaging plant, Kaohsiung",
+  "aliases": [
+    "K18B"
+  ],
+  "company": "ASE",
+  "operator": "Advanced Semiconductor Engineering, Inc.",
+  "parties": [
+    {
+      "name": "Advanced Semiconductor Engineering, Inc.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named in ASE's English release as the company breaking ground on K18B and described there as a member of ASE Technology Holding."
+    },
+    {
+      "name": "ASE Technology Holding",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Parent group of Advanced Semiconductor Engineering, Inc."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "CoWoS",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "ASE names CoWoS as a focus of the plant and lists flip chip BGA work for CoWoS and chiplet products."
+    },
+    {
+      "label": "FOCoS",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "Copper pillar bumping",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "FCBGA",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "System-in-package (SiP)",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "ASE's K18B building in the Nanzih Technology Industrial Park, Kaohsiung, Taiwan, where ground was broken in October 2025. ASE is spending NT$17.6 billion on the eight-storey building (with two basement levels) to add advanced packaging capacity, naming CoWoS and system-in-package work, copper pillar bumping, FOCoS fan-out and flip chip BGA for CoWoS and chiplet products, aimed at AI, HPC and automotive demand. Completion is scheduled for the first quarter of 2028.",
+  "location": {
+    "country": "TW",
+    "admin1": "Kaohsiung City",
+    "locality": "Kaohsiung",
+    "site": "Nanzih Technology Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "The Chinese release places the building in the Nanzih technology park in Kaohsiung; the English release names only Kaohsiung."
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-10-03",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 17600000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-10-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-10-03",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Chinese release says close to 2,000 new jobs once the plant is complete. The English release prints nearly 20,000, which does not match the Chinese text and is not used."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2025-10-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2028-Q1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ASE K18B Groundbreaking Ceremony: Strengthening Our Competitiveness in Advanced Packaging",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/k18b-groundbreaking-ceremony",
+      "type": "company_announcement",
+      "published": "2025-10-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "日月光K18B新廠動土 進一步鞏固先進封裝競爭力",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room-ch/k18b-groundbreaking-ceremony",
+      "type": "company_announcement",
+      "published": "2025-10-03",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "ase-kaohsiung-nanzih-park-iii",
+      "relation": "same_campus"
+    },
+    {
+      "id": "ase-wus-nanzih-advanced-packaging-hub",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": null,
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the jobs figure from about 20,000 to about 2,000 using ASE's Chinese release (the English release's 20,000 appears to be a misprint), added the Chinese release as a source, set the site to the Nanzih Technology Industrial Park, added SiP to the named technologies and rewrote the summary. Audit fixes (2026-11-07): set the operator to Advanced Semiconductor Engineering, Inc., the company ASE's release names as breaking ground, with ASE Technology Holding as parent owner, linked the record to the two other ASE projects in the Nanzih Technology Industrial Park and removed a stale note that the locality was the park's district."
+  }
+}

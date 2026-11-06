@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "id": "smic-tianjin-xiqing",
+  "name": "SMIC Xiqing 12-inch Fab, Tianjin",
+  "aliases": [
+    "SMTC",
+    "Semiconductor Manufacturing Tianjin-Xiqing Corporation",
+    "中芯西青"
+  ],
+  "company": "SMIC",
+  "operator": "Semiconductor Manufacturing Tianjin-Xiqing Corporation (SMIC Xiqing)",
+  "parties": [
+    {
+      "name": "Semiconductor Manufacturing International Corporation",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Wholly owned through SMIC Holdings; registered capital of USD 5 billion."
+    },
+    {
+      "name": "Tianjin Xiqing Economic Development Group Co., Ltd.",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "District state-owned developer; committed land, infrastructure and other support."
+    },
+    {
+      "name": "Tianjin Xiqing Economic and Technology Development Area Management Committee",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Counterparty to the framework agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm to 180nm",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A wholly owned SMIC 300 mm foundry line in Tianjin's Xiqing Development Area, agreed with district authorities in August 2022. It is planned at USD 7.5 billion for 100,000 wafers a month across 28nm to 180nm, for communications, automotive, consumer and industrial chips. SMIC reported that construction had started by the end of 2022.",
+  "location": {
+    "country": "CN",
+    "admin1": "Tianjin",
+    "locality": "Tianjin",
+    "site": "XEDA Sci-Tech Park, Xiqing Development Area",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2023-02-09",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7500000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-08-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-08-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm wafers per month."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-08-26",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cooperation framework agreement signed with Xiqing district bodies."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "SMIC said construction had begun by the end of 2022."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Voluntary Announcement: Entering into the Cooperation Framework Agreement in relation to a Project in Tianjin",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0826/2022082601080.pdf",
+      "type": "company_filing",
+      "published": "2022-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SMIC Reports 2022 Fourth Quarter Results",
+      "publisher": "Semiconductor Manufacturing International Corporation (via PR Newswire Asia)",
+      "url": "https://en.prnasia.com/releases/apac/smic-reports-2022-fourth-quarter-results-392648.shtml",
+      "type": "company_announcement",
+      "published": "2023-02-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Announcement of 2022 Annual Results",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0328/2023032801249.pdf",
+      "type": "company_filing",
+      "published": "2023-03-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Announcement of 2025 Annual Results",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032601294.pdf",
+      "type": "company_filing",
+      "published": "2026-03-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "12英寸厂“进账”91亿元，国内晶圆代工按下快进键",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20261106-41410.html",
+      "type": "trade_press",
+      "published": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "中芯国际集成电路制造有限公司2026年半年度报告",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225520297.PDF",
+      "type": "company_filing",
+      "published": "2026-08-28",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "SMIC had paid in USD 100 million of the subsidiary's capital by the end of 2022. SMIC's results releases since 2023 do not report progress at individual fabs, and no newer source read for this record reports construction or production at this fab, so the under-construction status is unconfirmed since February 2023. SMIC's first-half 2026 report still lists SMIC Xiqing as a wholly owned main subsidiary with USD 5 billion of registered capital and carries a Tianjin plant expansion project at 97% of its budget, without saying which Tianjin fab that covers. Trade press reported in November 2026 that the design plan for a second phase, also covering 28nm to 180nm, was approved in late September 2026; it does not say whether the first phase is producing, so it is not used for the status.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Audit fixes (2026-11-07): checked SMIC's first-half 2026 report, the newest SMIC filing, and the November 2026 trade report; neither reports construction or production at this fab, so the status and its February 2023 date are kept with a note that they are unconfirmed since then, and the report is added for SMIC's continued full ownership."
+  }
+}

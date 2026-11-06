@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-d1x-mod-3-hillsboro",
+  "name": "D1X Mod 3",
+  "aliases": [
+    "D1X Mod3"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Intel's technology development group runs its Oregon R&D fabs, which Intel says take each new process from development to high-volume production."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The third module of Intel's D1X fab in Hillsboro, Oregon, which Intel calls a development factory. Construction started in 2019 and the module opened on 11 April 2022 after an investment of more than $3 billion, adding about 270,000 square feet of cleanroom that Intel said was for developing next-generation process technologies. At the opening Intel renamed the campus Gordon Moore Park at Ronler Acres. Local press describes D1X as the factory where Intel develops new chips and begins their high-volume production, which then continues at other Intel sites, and Intel's 2025 annual report says its Oregon fabs take each new process to high-volume production and also run high-volume manufacturing, with Oregon ramping Intel 18A in 2025, without naming individual fabs.",
+  "location": {
+    "country": "US",
+    "admin1": "Oregon",
+    "locality": "Hillsboro",
+    "site": "Gordon Moore Park at Ronler Acres",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2022-04-12",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-04-11",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 270000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-04-11",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Added cleanroom space; Intel officials told local press it was a 20% increase."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2019",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2022-04-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Grand opening of the module."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Opens Factory Expansion in Oregon, Renames Site for Gordon Moore",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/resources/press-kit-intel-expands-oregon.html",
+      "type": "company_announcement",
+      "published": "2022-04-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "At unveiling of $3 billion Oregon expansion, Intel CEO calls for federal semiconductor action",
+      "publisher": "Oregon Public Broadcasting",
+      "url": "https://opb.org/article/2022/04/11/intel-hillsboro-oregon-expansion-gordon-moore-campus-name",
+      "type": "news",
+      "published": "2022-04-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "D1X is primarily a technology development fab, and Intel's opening release describes Mod 3 only as development space. It is kept in scope, rather than excluded as research-only, because local press reports that Intel begins high-volume production at D1X (s2) and Intel's 2025 annual report says its Oregon fabs carry new processes to high-volume production and also perform high-volume manufacturing (s3). Neither source says which products Mod 3 itself makes.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Reworded the description of D1X's production role and the 20% cleanroom figure to match what the cited report attributes to Intel; all figures and dates were confirmed. Audit fixes (2026-11-07): Checked the research-only exclusion: kept the record because local press (s2) says high-volume production begins at D1X and Intel's 2025 10-K (added as s3) says its Oregon fabs take nodes to high-volume production and also run high-volume manufacturing; reworded the summary and notes to say so and that no source names Mod 3's own products."
+  }
+}

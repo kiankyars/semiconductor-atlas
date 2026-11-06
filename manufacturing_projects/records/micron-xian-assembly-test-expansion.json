@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-xian-assembly-test-expansion",
+  "name": "Micron Xi'an assembly and test expansion",
+  "aliases": [],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "project",
+  "segments": [
+    "assembly_test",
+    "dram",
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "An expansion of Micron's packaging and test site in Xi'an, China, announced in June 2023 with a 4.3 billion yuan budget. The plan adds a new building with a production line for mobile DRAM, NAND and SSD products and takes over the assets of a contractor that had run lines in the factory. Ground was broken in March 2024 and the main structure topped out in November 2024; production was targeted for the second half of 2025, but no source found reports that it began.",
+  "location": {
+    "country": "CN",
+    "admin1": "Shaanxi",
+    "locality": "Xi'an",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2024-11-10",
+  "status_source_ids": [
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 4300000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Spread over several years; includes the new building, new equipment and the acquired assets."
+    },
+    {
+      "metric": "jobs",
+      "value": 500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional jobs, on top of about 1,200 contractor employees offered Micron contracts."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2024-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2024-11-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Topping-out of the new building's main structure."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target given at the March 2024 groundbreaking; the date has passed and no source found confirms that production in the new building has started."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron chips in $600M for China memory facility despite Beijing sanctions",
+      "publisher": "The Register",
+      "url": "https://www.theregister.com/2023/06/16/micron_investment_china_plant/",
+      "type": "news",
+      "published": "2023-06-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Micron breaks ground for Chinese packaging expansion",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/micron-breaks-ground-for-chinese-packaging-expansion/",
+      "type": "trade_press",
+      "published": "2024-04-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "美光科技中国区总经理吴明霞：继续在中国投资 西安新厂将引入全新产线｜进博会专访",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/1853917",
+      "type": "news",
+      "published": "2024-11-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Sustaining our long-term vision and building a better future",
+      "publisher": "Micron Technology",
+      "url": "https://www.micron.com/about/blog/company/sustainability/sustaining-our-long-term-vision-and-building-a-better-future",
+      "type": "company_announcement",
+      "published": "2024-06-27",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The contractor whose assets Micron acquired is Powercheng Semiconductor (Xi'an). The newest source found is the November 2024 report of the new building's topping-out; a search of Micron releases, filings and Chinese press in November 2026 found no report that production in the new building has begun, so the status stays under construction as of that report.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Audit fixes (2026-11-07): added the 2 November 2024 topping-out as a completed building milestone and noted on the second-half 2025 production target that the date has passed without a confirming source; no newer source was found, so status_as_of stays 2024-11-10."
+  }
+}

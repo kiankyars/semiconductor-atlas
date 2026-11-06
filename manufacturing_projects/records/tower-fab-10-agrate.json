@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "id": "tower-fab-10-agrate",
+  "name": "Tower Fab 10, Agrate",
+  "aliases": [
+    "Tower Semiconductor Italy (TSIT) Agrate line"
+  ],
+  "company": "Tower Semiconductor",
+  "operator": "Tower Semiconductor Italy (TSIT)",
+  "parties": [
+    {
+      "name": "Tower Semiconductor Italy (TSIT)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Tower's wholly owned Italian subsidiary, set up after the June 2021 agreement. It bought and installed its own process equipment in about a third of the cleanroom and holds the right to a third of the installed capacity for Tower's foundry customers."
+    },
+    {
+      "name": "Tower Semiconductor",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Parent company of TSIT."
+    },
+    {
+      "name": "STMicroelectronics",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Owns the 300 mm facility and shares its cleanroom and infrastructure with TSIT, but not TSIT's equipment. Under the agreement ST manages the facility, including volume production and operations; ST's own annual report lists the fab as shared with Tower."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "rf",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "65nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "RF SOI analog-based technologies."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "Tower Semiconductor's foundry line inside STMicroelectronics' 300 mm facility at Agrate, Italy, which Tower calls Fab 10. Under an agreement signed in June 2021, Tower's Italian subsidiary TSIT installed its own equipment in about a third of the shared cleanroom and has the right to a third of the installed capacity, while ST, which owns the facility, manages its production and operations. The line runs 65nm RF SOI analog processes. Qualification was completed in 2024 and volume production began in the fourth quarter of 2024, so 2025 was the first full year in which Tower's results included the facility.",
+  "location": {
+    "country": "IT",
+    "admin1": "Lombardy",
+    "locality": "Agrate Brianza",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Shares a building with STMicroelectronics' own 300 mm fab at the same site."
+  },
+  "status": "operating",
+  "status_as_of": "2026-11-02",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Agreement with STMicroelectronics to share the Agrate 300 mm facility."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Follows completion of qualification during 2024."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Tower Semiconductor Ltd. Annual Report (Form 20-F) for the fiscal year ended December 31, 2025",
+      "publisher": "Tower Semiconductor",
+      "url": "https://www.sec.gov/Archives/edgar/data/928876/000117891326002318/zk2635149.htm",
+      "type": "company_filing",
+      "published": "2026-04-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Tower Semiconductor Reports Third Quarter Record Results, Providing Record Fourth Quarter Guidance Resulting in 2026 $2 Billion Annual Revenue",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/2026/11/02/11022026/",
+      "type": "company_announcement",
+      "published": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2025",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/932787/000093278726000009/stm-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-26",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "st-agrate-300mm-fab",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "TSIT is recorded as the operator of this line because it owns the equipment in Tower's part of the cleanroom and sells that capacity to Tower's foundry customers; Tower's annual report says ST manages the facility's volume production and operations, and ST owns the building. The annual report gives no capacity or investment amount for Fab 10; it says Tower still needs cash to finish equipping the Agrate facility. The November 2026 results release (s2) lists Italy among the countries where Tower operates 300 mm fabs. The physical fab is ST's Agrate 300 mm building (its Fab 3), recorded separately as st-agrate-300mm-fab; this record covers only Tower's share of it.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 65nm RF SOI process and RF segment that the 20-F states for Fab 10 (the notes wrongly said it gives no process), noted TSIT's right to a third of capacity, and added Tower's November 2026 results release to the operating status. Audit fixes (2026-11-07): Added TSIT as the operator party to match the operator field, recorded ST as owner of the building that manages the facility's production and operations (per Tower's 20-F, corroborated by ST's 2025 20-F, added as s3), explained the operator choice in the notes, and reworded the first-full-year statement to what the 20-F says."
+  }
+}

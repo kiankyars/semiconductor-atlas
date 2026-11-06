@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "id": "eu-ams-osram-premstaetten-wafer-fab",
+  "name": "ams OSRAM Premstätten integrated wafer manufacturing facility",
+  "aliases": [],
+  "company": "ams OSRAM",
+  "operator": "ams OSRAM",
+  "parties": [
+    {
+      "name": "ams OSRAM",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Austria",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Notified a direct grant of about €227 million toward the construction-period investment; the economy ministry issued its formal funding commitment in 2025 and ams OSRAM received a first payment of €83 million that year."
+    },
+    {
+      "name": "European Commission",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the Austrian aid measure under EU State aid rules in February 2025."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "mems_sensors"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A new wafer production line in an additional 1,800 m2 cleanroom at ams OSRAM's headquarters site in Premstätten, Austria. It combines CMOS transistor processing with through-silicon vias and optical filters on the same wafers, mainly for optoelectronic sensors for automotive (including Grade 0 qualified parts), medical, industrial and consumer uses. The European Commission cleared about €227 million of Austrian grant aid in February 2025 for €567 million of investment to 2030, when the plant is expected to run at full capacity. Part of its capacity is to be open to other chip companies.",
+  "location": {
+    "country": "AT",
+    "admin1": "Styria",
+    "locality": "Premstätten",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Built at ams OSRAM's existing headquarters and production site in Premstätten."
+  },
+  "status": "announced",
+  "status_as_of": "2026-01-21",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 567000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-02-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Investment planned to 2030; the Commission names it as the construction-period investment the grant supports."
+    },
+    {
+      "metric": "investment",
+      "value": 588000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-05-13",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Amount given when ams OSRAM first announced the plan in May 2024, to be invested by 2030."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 227000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "preliminary_award",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-02-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Direct grant cleared by the Commission under EU State aid rules; the Austrian ministry's formal grant approval was still pending at the time."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 1800,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-02-24",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Additional cleanroom for CMOS production."
+    },
+    {
+      "metric": "jobs",
+      "value": 250,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-05-13",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "New jobs ams OSRAM expected at the site over the following years."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "ams OSRAM announced the investment plan and said it had applied for up to €200 million of Chips Act funding."
+    },
+    {
+      "event": "volume_production",
+      "date": "2030",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Full-capacity production is expected in 2030."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Commission approves €227 million Austrian State aid measure to support ams Osram in setting up a new wafer manufacturing facility in Premstätten",
+      "publisher": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_589/IP_25_589_EN.pdf",
+      "type": "government",
+      "published": "2025-02-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "ams OSRAM receives EU Commission approval for an investment grant up to €227 million for a new semiconductor manufacturing facility in Austria",
+      "publisher": "ams OSRAM",
+      "url": "https://ams-osram.com/news/press-releases/european-chips-act",
+      "type": "company_announcement",
+      "published": "2025-02-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "ams OSRAM plans to significantly expand production and chip technologies in Styria by 2030 as part of the European Chips Act",
+      "publisher": "ams OSRAM",
+      "url": "https://ams-osram.com/news/press-releases/expand-production-and-chip-technologies-in-styria-by-2030-european-chips-act",
+      "type": "company_announcement",
+      "published": "2024-05-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "ams-Osram vor radikalem Umbruch: Milliarden-Deal soll Schuldenlast senken",
+      "publisher": "Industriemagazin",
+      "url": "https://industriemagazin.at/news/ams-osram-verkauf-milliarden-deal-schulden-umbau/",
+      "type": "news",
+      "published": "2026-01-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "ams OSRAM Annual Report 2025",
+      "publisher": "ams OSRAM",
+      "url": "https://ams-osram.com/documents/d/ams-osram/eng-geschafts-und-nachhaltigkeitsbericht-ams-osram-2025",
+      "type": "company_report",
+      "published": "2026-03",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "ams OSRAM said investment had begun when the grant was cleared, and its 2025 annual report describes the project as building a new factory, but the cited sources do not report construction of the cleanroom, so the record stays announced. The 2025 annual report says the EU granted the factory Integrated Production Facility and Open EU Foundry status under the Chips Act. In January 2026, while ams OSRAM was negotiating asset sales to reduce debt, reporting still described the expansion as planned through 2030. The €588 million and 250 jobs are taken from ams OSRAM's May 2024 release, which replaced a Styrian chamber of commerce news page reporting the same announcement.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the ams OSRAM release, the May 2024 announcement and January 2026 reporting; moved the announcement milestone to May 2024, added cleanroom, jobs and the earlier €588 million figures, and changed the grant basis to preliminary award because national approval was pending. Audit fixes (2026-11-07): Replaced the Wirtschaftskammer Steiermark page (s3) with ams OSRAM's own 13 May 2024 release for the €588 million, about 250 jobs and the announcement date (now 13 May 2024); added ams OSRAM's 2025 annual report (s5) for the 2025 formal funding commitment, first grant payment and IPF and Open EU Foundry status."
+  }
+}

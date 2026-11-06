@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0",
+  "id": "hua-hong-wuxi-fab-9a",
+  "name": "Hua Hong Fab 9A, Wuxi",
+  "aliases": [
+    "FAB9",
+    "Hua Hong Wuxi Phase II",
+    "Hua Hong Manufacturing (Wuxi) Project",
+    "Hua Hong Wuxi second 12-inch production line"
+  ],
+  "company": "Hua Hong",
+  "operator": "Hua Hong Semiconductor Manufacturing (Wuxi) Co., Ltd.",
+  "parties": [
+    {
+      "name": "Hua Hong Semiconductor Manufacturing (Wuxi) Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s8"
+      ],
+      "note": "Joint-venture company incorporated on 17 June 2022; Hua Hong's 2026 filings call it Wuxi JV II and its results releases report its capital spending as Hua Hong Manufacturing."
+    },
+    {
+      "name": "Hua Hong Grace Semiconductor Limited",
+      "role": "owner",
+      "share_pct": 21.9,
+      "source_ids": [
+        "s1",
+        "s8"
+      ],
+      "note": "Listed parent, named Hua Hong Semiconductor Limited when the venture was formed; holds 21.9% directly and, with its subsidiary's 29.1%, about 51% in total."
+    },
+    {
+      "name": "Shanghai Huahong Grace Semiconductor Manufacturing Corporation",
+      "role": "owner",
+      "share_pct": 29.1,
+      "source_ids": [
+        "s1",
+        "s8"
+      ],
+      "note": "Wholly owned subsidiary of the listed parent."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": 29,
+      "source_ids": [
+        "s1",
+        "s8"
+      ],
+      "note": null
+    },
+    {
+      "name": "Wuxi Xi Hong Guo Xin Investment Co., Ltd.",
+      "role": "government",
+      "share_pct": 20,
+      "source_ids": [
+        "s1",
+        "s8"
+      ],
+      "note": "Investment company jointly controlled by Wuxi municipal and district state-owned enterprises."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "analog_mixed_signal",
+    "power"
+  ],
+  "process_nodes": [
+    {
+      "label": "65/55nm to 40nm",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Process range in the scope of the 2023 joint venture."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "Hua Hong's second 300 mm specialty foundry line in Wuxi, also called Fab 9 or Wuxi Phase II, run by the joint venture Hua Hong Semiconductor Manufacturing (Wuxi). The venture was agreed in January 2023 with a USD 6.7 billion budget, construction began in June 2023 and the line began loading wafers in December 2024. All tools for its planned 83,000 wafers a month had been moved in by the end of June 2026, Hua Hong closed the line's IPO-funded construction project in August 2026 as ready for use, and its November 2026 results described both of its Wuxi 300 mm fabs as built.",
+  "location": {
+    "country": "CN",
+    "admin1": "Jiangsu",
+    "locality": "Wuxi",
+    "site": "Wuxi National Hi-Tech District",
+    "address": "Nos. 28 and 30 Xinzhou Road and Nos. 27 and 29 Xixing Road, Wuxi",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s10"
+    ],
+    "note": "The address is the land Hua Hong Wuxi agreed to transfer to the joint venture in 2023."
+  },
+  "status": "operating",
+  "status_as_of": "2026-11-05",
+  "status_source_ids": [
+    "s9",
+    "s10",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6700000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-01-18",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total investment under the joint-venture agreement: USD 4.02 billion of equity and USD 2.68 billion of debt."
+    },
+    {
+      "metric": "capacity",
+      "value": 83000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-27",
+      "source_ids": [
+        "s2",
+        "s5",
+        "s7"
+      ],
+      "note": "Planned 300 mm wafers per month at full capacity; in August 2026 Hua Hong aimed to reach it by the end of the third quarter of 2026."
+    },
+    {
+      "metric": "site_area",
+      "value": 249049,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-01-18",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Land use rights Hua Hong Wuxi agreed to transfer to the joint venture."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-01-18",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Joint-venture and investment agreements signed."
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2024-12-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Hua Hong Group announced on 10 December 2024 that the line was built and loading wafers, as reported in trade press; the company's 2024 results said the line had been built and begun operating."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "All process tools needed for 83,000 wafers a month had been moved in by the end of June 2026, with installation and commissioning under way."
+    },
+    {
+      "event": "building_complete",
+      "date": "2026-08-14",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Hua Hong concluded the IPO-funded Hua Hong Manufacturing (Wuxi) project on this date, saying it had reached its intended usable condition."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "(1) Major Transactions in relation to the JV Agreement, the JV Investment Agreement and the Land Transfer Agreement and (2) Connected Transaction in relation to the Land",
+      "publisher": "Hua Hong Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0118/2023011800483.pdf",
+      "type": "company_filing",
+      "published": "2023-01-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Chinese Foundry Giant Hua Hong Appoints Former Intel VP as New President",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/01/02/news-chinese-foundry-giant-hua-hong-appoints-former-intel-vp-as-new-president/",
+      "type": "trade_press",
+      "published": "2025-01-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Hua Hong Semiconductor Limited Reports 2024 Fourth Quarter Results",
+      "publisher": "Hua Hong Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0213/2025021300345.pdf",
+      "type": "company_announcement",
+      "published": "2025-02-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Hua Hong Semiconductor Limited Reports 2025 Fourth Quarter Results",
+      "publisher": "Hua Hong Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0212/2026021200389.pdf",
+      "type": "company_announcement",
+      "published": "2026-02-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "多条12英寸晶圆产线，正式投产！",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20250102-37755.html",
+      "type": "trade_press",
+      "published": "2025-01-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "60亿元投资平台落地，无锡加码半导体扩产",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2481263",
+      "type": "news",
+      "published": "2026-09-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "华虹宏力半导体有限公司2026年半年度报告",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514149.PDF",
+      "type": "company_filing",
+      "published": "2026-08-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "Discloseable Transaction in relation to the JV Investment Agreement and the JV Shareholders Agreement",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103625.pdf",
+      "type": "company_filing",
+      "published": "2026-09-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "关于募集资金投资项目结项、变更及超募资金用于投资新项目和永久补充流动资金的公告",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-05/1225549800.PDF",
+      "type": "company_filing",
+      "published": "2026-09-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s10",
+      "title": "Hua Hong Grace Semiconductor Limited Reports 2026 Third Quarter Results",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1105/2026110500668.pdf",
+      "type": "company_announcement",
+      "published": "2026-11-05",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "hua-hong-wuxi-fab-9b",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Hua Hong's fourth-quarter 2025 release said the first phase of FAB9 capacity construction was finished ahead of expectations (s4). The 83,000-wafer target is still a plan: no source read reports whether it was reached by the end of September 2026. Hua Hong's 2026 filings use the listed parent's new name, Hua Hong Grace Semiconductor Limited. The third Wuxi line, Fab 9B, is a separate record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the Fab 9A company's registered name and formation date, added the Phase III project company as an operator party, and reworded the first-production note to match the trade-press report; no newer reporting changed the status. Audit fixes (2026-11-07): split from hua-hong-wuxi-fab-9, which merged the separately named Fab 9A and Fab 9B lines; this record keeps Fab 9A (Wuxi Phase II) with its joint-venture company as operator and its 2026 shareholding, replaces the 10jqka-hosted reports with Hua Hong's first-half 2026 report for the June 2026 tool move-in, adds the August 2026 close of the funded construction project and the November 2026 results, and sets the status to operating."
+  }
+}

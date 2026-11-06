@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-fab-42-chandler",
+  "name": "Fab 42",
+  "aliases": [
+    "Intel Fab 42"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "10nm",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Intel said in 2021 that Fab 42 makes microprocessors on its 10nm processes."
+    },
+    {
+      "label": "7nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target process when Intel committed in 2017 to complete the fab; not the process reported in production."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A high-volume logic fab on Intel's Ocotillo campus in Chandler, Arizona. In February 2017 Intel committed more than $7 billion to complete the fab, then aimed at a 7nm process, within three to four years. Intel reported in March 2021 that Fab 42 had become fully operational in 2020, producing microprocessors on its 10nm processes.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Chandler",
+    "site": "Ocotillo campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2021-03-23",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2017-02-08",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Investment to complete Fab 42."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2017-02-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Intel announced plans to complete the fab."
+    },
+    {
+      "event": "opening",
+      "date": "2020",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Intel reported the fab fully operational in 2020."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Supports American Innovation with $7 Billion Investment in Next-Generation Semiconductor Factory in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/248/intel-supports-american-innovation-with-7-billion",
+      "type": "company_announcement",
+      "published": "2017-02-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel Announces Major Expansion in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1452/intel-announces-major-expansion-in-arizona",
+      "type": "company_announcement",
+      "published": "2021-03-23",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "intel-fab-52-chandler",
+      "relation": "same_campus"
+    },
+    {
+      "id": "intel-fab-62-chandler",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Included because the fab entered full operation in 2020; the completion decision dates from 2017.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

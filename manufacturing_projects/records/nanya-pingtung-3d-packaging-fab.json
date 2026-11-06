@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "id": "nanya-pingtung-3d-packaging-fab",
+  "name": "Nanya Technology Pingtung 3D wafer packaging and testing fab",
+  "aliases": [],
+  "company": "Nanya",
+  "operator": "Nanya Technology",
+  "parties": [
+    {
+      "name": "Nanya Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned 3D wafer packaging and testing fab at Pingtung Science Park in Taiwan, which Nanya Technology says will use through-silicon vias and wafer stacking. Nanya disclosed the plan with its third-quarter 2026 results and targets the end of 2028.",
+  "location": {
+    "country": "TW",
+    "admin1": "Pingtung County",
+    "locality": "Pingtung",
+    "site": "Pingtung Science Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-12",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "opening",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned by the end of 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Nanya Technology Reports Results for the Third Quarter 2026",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/IR/16?IRId=14188",
+      "type": "company_announcement",
+      "published": "2026-10-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Nanya Technology Q3 2026 Investor Conference",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/Activity?Action=IR_investorcalendar_FileName&Id=5298&column=Presentation",
+      "type": "company_report",
+      "published": "2026-10-12",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "No investment, capacity or construction start has been published in the cited sources. Nanya says new capacity is planned around customers' long-term agreements for AI projects.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

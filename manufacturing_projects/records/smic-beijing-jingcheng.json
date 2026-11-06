@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "id": "smic-beijing-jingcheng",
+  "name": "SMIC Jingcheng, Beijing",
+  "aliases": [
+    "SMBC",
+    "Semiconductor Manufacturing Beijing Corporation",
+    "中芯京城"
+  ],
+  "company": "SMIC",
+  "operator": "Semiconductor Manufacturing Beijing Corporation (SMIC Jingcheng)",
+  "parties": [
+    {
+      "name": "Semiconductor Manufacturing International Corporation",
+      "role": "owner",
+      "share_pct": 54.04,
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "Planned about 51% of the initial USD 5 billion registered capital; its 2025 annual results show 54.04%."
+    },
+    {
+      "name": "Beijing E-Town International Investment and Development Co., Ltd.",
+      "role": "government",
+      "share_pct": 24.51,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Beijing E-Town state investor."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported at 24.49% in Cailian Press's account of SMIC's disclosures."
+    },
+    {
+      "name": "Beijing Economic-Technological Development Area Management Committee",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Counterparty to the July 2020 cooperation framework agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm and above",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "SMIC's majority-owned 300 mm logic foundry joint venture in Beijing's E-Town, agreed in July 2020. Phase 1 was planned at USD 7.6 billion for about 100,000 wafers a month at 28nm and above. SMIC reported pilot production by the end of 2022, with volume output delayed by late equipment. In February 2025 a land parcel reported as planned for Phase 2 was sold, with that project listed at no less than CNY 50 billion.",
+  "location": {
+    "country": "CN",
+    "admin1": "Beijing",
+    "locality": "Beijing",
+    "site": "Beijing Economic-Technological Development Area (Yizhuang)",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2025-02-18",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2020-08-04",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 49700000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-02-18",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Two-phase total that Cailian Press attributed to Beijing E-Town; it sits below the USD 7.6 billion Phase 1 budget, so the two figures are not on the same basis."
+    },
+    {
+      "metric": "investment",
+      "value": 50000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "at_least",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2025-02-18",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total for the project planned on the land sold in February 2025, from the listing documents."
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2020-08-04",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Eventual 300 mm wafers per month for Phase 1."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2020-07-31",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cooperation framework agreement with the Beijing E-Town management committee."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "SMIC described the fab as under construction in August 2022 and in pilot production by the end of 2022; mass production was pushed back by one to two quarters because of delayed bottleneck tools."
+    },
+    {
+      "event": "site_selected",
+      "date": "2025-02-18",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "A Beijing E-Town affiliate won an industrial parcel that a person close to SMIC said is planned for Phase 2; SMIC did not comment."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "首期投资530亿元！中芯国际拟合资投建新12英寸晶圆厂",
+      "publisher": "IT Home",
+      "url": "https://www.ithome.com/0/501/493.htm",
+      "type": "news",
+      "published": "2020-08-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Voluntary Announcement: Entering into the Cooperation Framework Agreement in relation to a Project in Tianjin",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0826/2022082601080.pdf",
+      "type": "company_filing",
+      "published": "2022-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "SMIC Reports 2022 Fourth Quarter Results",
+      "publisher": "Semiconductor Manufacturing International Corporation (via PR Newswire Asia)",
+      "url": "https://en.prnasia.com/releases/apac/smic-reports-2022-fourth-quarter-results-392648.shtml",
+      "type": "company_announcement",
+      "published": "2023-02-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "中芯国际扩产迎新进展！中芯京城二期工业用地成交 拟建项目总投资不低于500亿元",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/1946491",
+      "type": "news",
+      "published": "2025-02-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Announcement of 2025 Annual Results",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032601294.pdf",
+      "type": "company_filing",
+      "published": "2026-03-26",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The joint venture was formally set up in December 2020. Cailian Press cited a November 2023 E-Town report that Phase 1 was in use and that a Phase 2 main structure was complete with equipment going in; the sources do not say how that relates to the Phase 2 land sold in 2025. SMIC's results releases since 2023 do not report progress at individual fabs.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the November 2023 report of Phase 2 construction and the December 2020 formation date to the notes, and flagged that the CNY 49.7 billion two-phase figure does not reconcile with the Phase 1 budget; no newer reporting was found."
+  }
+}

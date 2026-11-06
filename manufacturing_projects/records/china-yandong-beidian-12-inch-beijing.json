@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "id": "china-yandong-beidian-12-inch-beijing",
+  "name": "Beidian Integration 12-inch Line, Beijing",
+  "aliases": [
+    "北电集成 12英寸集成电路生产线",
+    "Beijing Electronics Integrated Circuit Manufacturing 12-inch line"
+  ],
+  "company": "Yandong Micro",
+  "operator": "Beijing Electronics Integrated Circuit Manufacturing Co., Ltd. (Beidian Integration)",
+  "parties": [
+    {
+      "name": "Beijing Electronics Integrated Circuit Manufacturing Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Project company set up in October 2023."
+    },
+    {
+      "name": "Beijing Yandong Microelectronic Co., Ltd.",
+      "role": "owner",
+      "share_pct": 24.95,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Holds its stake through subsidiary Yandong Technology, which is to control the project company through acting-in-concert agreements with three other shareholders; plans to put CNY 4 billion of placement proceeds into the line."
+    },
+    {
+      "name": "Beijing Yizhuang Technology",
+      "role": "owner",
+      "share_pct": 20,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Beijing E-Town International Investment and Development",
+      "role": "government",
+      "share_pct": 12.5,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Beijing state-owned investor."
+    },
+    {
+      "name": "Beijing State-owned Assets Management",
+      "role": "government",
+      "share_pct": 12.5,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Beijing state-owned investor."
+    },
+    {
+      "name": "Tianjin BOE Venture Capital",
+      "role": "owner",
+      "share_pct": 10,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "BOE-affiliated investor."
+    },
+    {
+      "name": "Guoxin Juyuan",
+      "role": "owner",
+      "share_pct": 10,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Zhongfa No. 2 Fund (中发贰号基金)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Contributes CNY 2 billion to the capital increase; its stake is not stated."
+    },
+    {
+      "name": "Beijing Electronics Holding Co., Ltd.",
+      "role": "owner",
+      "share_pct": 0.05,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Controlling shareholder of Yandong Micro; holds 0.05% directly and subscribes to Yandong's placement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "analog_mixed_signal",
+    "rf"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm-55nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5",
+        "s6"
+      ],
+      "note": "Specialty high-voltage, mixed-signal and RF CMOS platforms; the first report also lists PD/FD-SOI."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "A 300 mm specialty-process foundry line in Beijing, funded by Yandong Micro, Beijing state investors, a BOE affiliate and other funds and controlled by Yandong Micro. Budgeted at CNY 33 billion for 50,000 wafers a month on 28-55nm platforms, it started construction at the end of 2024, began receiving tools in December 2025, and in September 2026 was still commissioning equipment ahead of a mass-production target at the end of 2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Beijing",
+    "locality": "Beijing",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Sources place the line in Beijing without naming a site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-08",
+  "status_source_ids": [
+    "s4",
+    "s7",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 33000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-11-15",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "About CNY 13 billion beyond the shareholders' equity is to come from bank loans."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-08",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6"
+      ],
+      "note": "Planned 300 mm wafers per month at full capacity, targeted for 2030."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-11-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Joint capital increase into the project company disclosed."
+    },
+    {
+      "event": "construction_start",
+      "date": "2024-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "A company representative said construction began at the end of 2024."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025-12-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5",
+        "s7"
+      ],
+      "note": "Move-in ceremony for process tools, starting installation and commissioning; the first-half 2026 report said tool move-in to the main fab building was continuing on schedule."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026-12",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "Mass-production target; the December 2025 company release said the second half of 2026 and the September 2026 report said the end of 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "北京即将诞生一个大型晶圆厂！燕东微、京东方、亦庄国投等联合出手 拟增资近200亿",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/1860494",
+      "type": "news",
+      "published": "2024-11-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "燕东微40亿余定增获受理 公司人士：北电集成28nm产线于去年底开建 目前仍在梳理设备采买清单",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/1945455",
+      "type": "news",
+      "published": "2025-02-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "北京燕东微电子股份有限公司2025年年度报告摘要",
+      "publisher": "Beijing Yandong Microelectronic Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225238588.PDF",
+      "type": "company_filing",
+      "published": "2026-04-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "燕东微：两条产线将随订单和良率提升逐步达成盈亏平衡",
+      "publisher": "Securities Times (via 10jqka)",
+      "url": "https://stock.10jqka.com.cn/20260908/c679706008.shtml",
+      "type": "news",
+      "published": "2026-09-08",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "燕东微北电集成12英寸生产线工艺设备顺利搬入",
+      "publisher": "Beijing Yandong Microelectronic Co., Ltd.",
+      "url": "http://ydme.com/news/158.html",
+      "type": "company_announcement",
+      "published": "2025-12-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "12英寸集成电路生产线",
+      "publisher": "Beijing Yandong Microelectronic Co., Ltd.",
+      "url": "http://www.ydme.com/jyzz/list47/",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "北京燕东微电子股份有限公司2026年半年度报告",
+      "publisher": "Beijing Yandong Microelectronic Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225498014.PDF",
+      "type": "company_filing",
+      "published": "2026-08-25",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Yandong Micro's 2025 annual report summary says the company had two 300 mm lines planned at 90,000 wafers a month in total and that this project was building its process platforms on schedule. Its first-half 2026 report said key process platforms had reached interim installed-capacity targets and lead products were being prepared for volume production. In September 2026 the company described the line as commissioning tools and ramping capacity, without reporting production; that report was read on 10jqka because the Securities Times original was not found.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the Zhongfa No. 2 Fund as a shareholder, clarified that Yandong's control rests on acting-in-concert agreements, and reworded the summary's funding description; no newer reporting of production was found. Audit fixes (2026-11-07): replaced the Eastmoney copy of the 2025 annual report summary with the exchange copy on cninfo (dated 29 April 2026 there), relabelled the Securities Times report as read via 10jqka, and added the first-half 2026 report as a primary source for the tool move-in and construction status."
+  }
+}

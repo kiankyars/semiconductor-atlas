@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "mitsubishi-electric-fukuyama-factory",
+  "name": "Mitsubishi Electric Power Device Works Fukuyama Factory",
+  "aliases": [
+    "Fukuyama Factory"
+  ],
+  "company": "Mitsubishi Electric",
+  "operator": "Mitsubishi Electric",
+  "parties": [
+    {
+      "name": "Mitsubishi Electric",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "A silicon power semiconductor wafer processing plant of Mitsubishi Electric's Power Device Works in Fukuyama, Hiroshima Prefecture, set up in a three-storey building of about 46,500 m2 that the company bought from Sharp Fukuyama Semiconductor in 2020. It started operations in November 2021 and began mass production on 200 mm wafers in April 2022. A 300 mm line was installed by August 2023 and in September 2024 the factory began large-scale supply of chips made on 300 mm wafers for module assembly. It is central to the company's plan to double silicon power wafer capacity by fiscal 2026 from five years earlier.",
+  "location": {
+    "country": "JP",
+    "admin1": "Hiroshima",
+    "locality": "Fukuyama",
+    "site": null,
+    "address": "Daimonmachi Asahi 1-4, Fukuyama, Hiroshima Prefecture, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-01",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-06-11",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Planned spending on acquiring the buildings and land and setting up production when the purchase was announced."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2020-06-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Mitsubishi Electric announced it would buy the buildings and land from Sharp Fukuyama Semiconductor, a Sharp subsidiary, and start production in November 2021."
+    },
+    {
+      "event": "opening",
+      "date": "2021-11",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Start-up target given when the acquisition was announced."
+    },
+    {
+      "event": "opening",
+      "date": "2021-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Started operations."
+    },
+    {
+      "event": "volume_production",
+      "date": "2022-04",
+      "planned": false,
+      "phase_label": "200 mm line",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Mass production on 200 mm wafers."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2023-08",
+      "planned": false,
+      "phase_label": "300 mm line",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Installation of the 300 mm wafer processing line completed."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-09",
+      "planned": false,
+      "phase_label": "300 mm line",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Large-scale supply of chips from 300 mm wafers began."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Mitsubishi Electric Begins Supplying Power Semiconductor Chips Made from 12-inch Wafers for Semiconductor Module Assembly",
+      "publisher": "Mitsubishi Electric",
+      "url": "https://www.mitsubishielectric.com/en/pr/2024/pdf/0930.pdf",
+      "type": "company_announcement",
+      "published": "2024-09-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Introduction of SiC 200mm wafer production line in Shisui area",
+      "publisher": "Mitsubishi Electric",
+      "url": "https://www.mitsubishielectric.com/semiconductors/powerdevices/drawings/topics/Introduction_of_SiC%20200mm_wafer_production_line_in_Shisui_area_en.pdf",
+      "type": "company_report",
+      "published": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Mitsubishi Electric to acquire factory to expand power device business",
+      "publisher": "Automotive World",
+      "url": "https://www.automotiveworld.com/news-releases/mitsubishi-electric-to-acquire-factory-to-expand-power-device-business",
+      "type": "news",
+      "published": "2020-06-11",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The January 2026 Shisui presentation (s2) still lists Fukuyama among Power Device Works' wafer processing sites as of October 2025.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the June 2020 acquisition announcement from Sharp Fukuyama Semiconductor with its approximate ¥20 billion investment and November 2021 start-up target; existing statements matched the September 2024 release."
+  }
+}

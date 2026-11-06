@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-singapore-nand-wafer-fab",
+  "name": "Micron Singapore advanced NAND wafer fab",
+  "aliases": [],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A new NAND wafer fab inside Micron's existing NAND manufacturing complex in Singapore, which Micron describes as the country's first double-story wafer fab. Groundbreaking took place in January 2026. The fab is designed to reach 700,000 square feet of cleanroom at full build-out and is expected to start wafer output in the second half of calendar 2028.",
+  "location": {
+    "country": "SG",
+    "admin1": null,
+    "locality": "Singapore",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Within Micron's existing NAND manufacturing complex, which the release says also holds Micron's HBM advanced packaging facility."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 24000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Stated as US$24 billion (SG$31 billion) over 10 years."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 700000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cleanroom the fab is designed to reach at full build-out."
+    },
+    {
+      "metric": "jobs",
+      "value": 1600,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2026-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2028-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore-01-26-2026/default.aspx",
+      "type": "company_announcement",
+      "published": "2026-01-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Micron Technology, Inc. Form 10-K for the fiscal year ended September 3, 2026",
+      "publisher": "Micron Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm",
+      "type": "company_filing",
+      "published": "2026-10-09",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "micron-singapore-hbm-advanced-packaging",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The release page header is dated 26 January 2026 and its dateline 27 January 2026, so the groundbreaking is recorded to the month.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Audit fixes (2026-11-07): linked the Micron Singapore HBM advanced packaging facility as the same campus, since the groundbreaking release places both in the same manufacturing complex."
+  }
+}

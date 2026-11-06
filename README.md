@@ -4,6 +4,7 @@ Explore semiconductor fabs, packaging facilities, and manufacturing projects, wi
 behind each statement.
 
 **[Browse the atlas](https://kiankyars.github.io/semiconductor-atlas/)** ·
+[Manufacturing projects](https://kiankyars.github.io/semiconductor-atlas/manufacturing/) ·
 [Facility registry](https://kiankyars.github.io/semiconductor-atlas/registry/) ·
 [Download the public data](web/data/2026-09-07/) ·
 [Data contract](docs/data_contract.md)
@@ -13,6 +14,15 @@ SK hynix, Amkor, and ASE. Its latest included review is September 7, 2026. Each 
 reported capabilities, milestones, and capacity to dated source evidence. Coverage is selective;
 unknown values stay blank. The site uses a searchable list because these records do not yet have
 verified map coordinates.
+
+[Manufacturing projects](https://kiankyars.github.io/semiconductor-atlas/manufacturing/) records
+128 new wafer fabs, fab expansions and packaging plants announced, built, opened, paused,
+cancelled or closed since 2020, from 50 companies in 16 countries. Each record gives the
+status the sources support, process technology, investment, government incentives, capacity, dated
+milestones (targets kept separate from reported events) and the sources behind every statement.
+These records link to live sources rather than archiving them, all text is written in our own words,
+and each record was compiled with AI-assisted research and checked in a separate AI-assisted review
+that re-opened every source. See [the record format and research rules](manufacturing_projects/README.md).
 
 The [facility registry](https://kiankyars.github.io/semiconductor-atlas/registry/) adds 724
 Taiwan environmental-registry records (618 with source-reported map points) and 410
@@ -92,6 +102,7 @@ Research preserved locally can be reviewed without changing the public dataset.
 ## Checks
 
 ```sh
+python3 scripts/validate_manufacturing_projects.py
 python3 -m unittest discover -s tests -q
 python3 -m unittest discover -s web/tests -q
 node --test web/tests/evidence_viewer_state.test.cjs

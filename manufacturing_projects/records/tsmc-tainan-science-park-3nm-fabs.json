@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-tainan-science-park-3nm-fabs",
+  "name": "TSMC Tainan Science Park 3nm fab additions",
+  "aliases": [],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "3nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Two new 3nm fabs TSMC announced in 2026 for Tainan in response to AI demand, a departure from its usual practice of not adding capacity to a node once that node reaches its planned capacity. The first, announced in April 2026 as an addition to TSMC's GIGAFAB cluster in the Southern Taiwan Science Park (which TSMC calls the Tainan Science Park), was reported in October 2026 to be under construction and is scheduled for volume production in the first half of 2027. The second, announced in October 2026, is scheduled for the first half of 2028; no source describes construction of it. TSMC has not named the fabs or given investment or capacity figures.",
+  "location": {
+    "country": "TW",
+    "admin1": "Tainan City",
+    "locality": "Tainan",
+    "site": "Southern Taiwan Science Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "TSMC calls the location its GIGAFAB cluster in the Tainan Science Park; Taiwan News and Evertiq name it the Southern Taiwan Science Park, where Fab 18 also stands. The cited sources place the second new fab only in Tainan."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-19",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-04-16",
+      "planned": false,
+      "phase_label": "First new 3nm fab",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "First new 3nm fab",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Reported as under construction in October 2026; when work began is not stated."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-H1",
+      "planned": true,
+      "phase_label": "First new 3nm fab",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "announced",
+      "date": "2026-10-15",
+      "planned": false,
+      "phase_label": "Second new 3nm fab",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2028-H1",
+      "planned": true,
+      "phase_label": "Second new 3nm fab",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Q1 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-04/3cef85204275f94fd111485cfdf4adb3c0263c45/TSMC%201Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-04-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Q2 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-07-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Q3 2026 Taiwan Semiconductor Manufacturing Company Limited Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-10-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "TSMC approves another 3 nm chip fab in Tainan",
+      "publisher": "Taiwan News",
+      "url": "https://www.taiwannews.com.tw/news/6460426",
+      "type": "news",
+      "published": "2026-10-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "TSMC to build another 3nm fab in Tainan",
+      "publisher": "Evertiq",
+      "url": "https://evertiq.com/design/2026-10-19-tsmc-to-build-another-3nm-fab-in-tainan",
+      "type": "trade_press",
+      "published": "2026-10-19",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "tsmc-fab-18-tainan",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "TSMC has not said whether these fabs are new phases of Fab 18 or separate fabs. The October 2026 reports give an investment of more than NT$1.86 trillion and 11,300 jobs only for TSMC in Tainan as a whole, the same figures TSMC gave for Fab 18 in 2022, so they are not recorded here.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "October 2026 reports (Taiwan News, Evertiq) describe the first new 3nm fab as under construction, so the status moved from announced to under construction with a construction milestone of unstated start date. Rewrote the summary, which closely followed TSMC's wording. Audit fixes (2026-11-07): used the Southern Taiwan Science Park as the site name, as in the Fab 18 record, with TSMC's Tainan Science Park name kept in the location note, and linked Fab 18 as the same campus."
+  }
+}

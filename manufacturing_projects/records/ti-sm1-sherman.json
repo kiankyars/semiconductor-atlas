@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "id": "ti-sm1-sherman",
+  "name": "TI SM1 Sherman 300 mm fab",
+  "aliases": [
+    "SM1"
+  ],
+  "company": "Texas Instruments",
+  "operator": "Texas Instruments",
+  "parties": [
+    {
+      "name": "Texas Instruments",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Final CHIPS Act direct-funding award covering the two new Sherman fabs, paid out as project milestones are met."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "power",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "65nm to 130nm",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Range the CHIPS award gives for the two new Sherman fabs together; not stated for SM1 alone."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s7"
+      ]
+    }
+  ],
+  "summary": "SM1 is the first of up to four connected 300 mm fabs on Texas Instruments' Sherman, Texas site, built for analog and embedded processing chips. TI chose Sherman in November 2021, broke ground in May 2022 and said in December 2025 that SM1 was in production, starting with analog power products and ramping with customer demand. Federal CHIPS funding was finalized for SM1 and the second Sherman fab in December 2024.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Sherman",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s8"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-02-06",
+  "status_source_ids": [
+    "s7",
+    "s8",
+    "s10"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 30000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-11-17",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Potential total for up to four fabs at the Sherman site, as stated when the site was chosen."
+    },
+    {
+      "metric": "investment",
+      "value": 40000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-06-18",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Amount TI allocated in June 2025 to four 300 mm fabs at Sherman (SM1 to SM4)."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-11-17",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Direct TI jobs over time if all four Sherman fabs are built."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 900000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-12-20",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Sherman share of TI's final CHIPS award of up to USD 1.61 billion; covers the two new Sherman fabs (SM1 and SM2) together."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 1600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-08-16",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Preliminary CHIPS terms for three TI fabs: two in Sherman, Texas and one in Lehi, Utah. The first Sherman fab's share was to fund its cleanroom and pilot line."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-11-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "TI selected Sherman for up to four 300 mm fabs."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2022-05-18",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s8"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Early production target given at the site selection and the groundbreaking."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "TI announced on 17 December 2025 that SM1 was in production and shipping to customers."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Texas Instruments to begin construction next year on new 300-mm semiconductor wafer fabrication plants",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2021/2021-11-17-texas-instruments-to-begin-construction-next-year-on-new-300-mm-semiconductor-wafer-fabrication-plants.html",
+      "type": "company_announcement",
+      "published": "2021-11-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Governor Abbott Announces Texas Instruments' Potential $30 Billion Investment in Sherman",
+      "publisher": "Office of the Texas Governor",
+      "url": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-instruments-potential-30-billion-investment-in-sherman",
+      "type": "government",
+      "published": "2021-11-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Texas Instruments breaks ground on new 300-mm semiconductor wafer fabrication plants in Sherman, Texas",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2022/2022-05-18-texas-instruments-breaks-ground-on-new-300-mm-semiconductor-wafer-fabrication-plants-in-sherman-texas.html",
+      "type": "company_announcement",
+      "published": "2022-05-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Texas Instruments (Texas)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/node/1857341",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Texas Instruments Gets $1.6 Billion for Semiconductors",
+      "publisher": "Transport Topics",
+      "url": "https://www.ttnews.com/articles/texas-instruments-chips",
+      "type": "news",
+      "published": "2024-12-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the US",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+      "type": "company_announcement",
+      "published": "2025-06-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "The future starts with the first: Our newest 300mm wafer fab is in production",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/company-blog/the-future-starts-with-the-first-our-newest-300mm-wafer-fab-is-in-production.html",
+      "type": "company_announcement",
+      "published": "2025-12-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Sherman, Texas: 300mm wafer fabs",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/manufacturing/sherman.html",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Texas Instruments scores $1.6B in CHIPS funding",
+      "publisher": "Manufacturing Dive",
+      "url": "https://www.manufacturingdive.com/news/texas-instruments-chips-science-act-funding-wafers-texas-utah/724452/",
+      "type": "trade_press",
+      "published": "2024-08-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s10",
+      "title": "Texas Instruments Incorporated annual report on Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "Texas Instruments",
+      "url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/txn-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-06",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "ti-sm2-sherman",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "TI's June 2025 plan names four Sherman fabs, SM1 to SM4; SM3 and SM4 are only described as future capacity without dates, so they have no records here. The CHIPS figures are shared with other fabs and are not specific to SM1. The production milestone is dated to TI's December 2025 announcement; the exact start date was not published.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:96cca1f6-4b83-50b2-aaef-a6961be05bd7",
+      "relation": "award_page",
+      "note": "The award covers the first two Sherman fabs, SM1 and SM2, together."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the 3,000-jobs figure from exact to up to, as the sources state it as a ceiling, and added TI's FY2025 annual report on ramping at Sherman, moving status_as_of to February 2026."
+  }
+}

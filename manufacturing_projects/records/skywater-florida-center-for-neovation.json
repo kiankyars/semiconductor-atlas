@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "id": "skywater-florida-center-for-neovation",
+  "name": "SkyWater Florida advanced packaging facility (Center for NeoVation)",
+  "aliases": [
+    "SkyWater Florida",
+    "Center for NeoVation"
+  ],
+  "company": "IonQ",
+  "operator": "SkyWater Technology",
+  "parties": [
+    {
+      "name": "SkyWater Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Osceola County, Florida",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Leases the Center for NeoVation to SkyWater under a January 2021 development agreement joined by the non-profit BRIDG, and is developing technology and education facilities on the same campus."
+    },
+    {
+      "name": "IonQ",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Acquired SkyWater, which became a wholly owned IonQ subsidiary on 31 July 2026."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "An advanced packaging plant at the Center for NeoVation in Kissimmee, Osceola County, Florida, that SkyWater Technology took over in 2021 and runs under a public-private partnership with the county. It offers fan-out wafer-level packaging, silicon interposers and hybrid wafer bonding for wafers made by SkyWater and by other foundries. The building covers about 109,000 square feet, with roughly 36,000 square feet of cleanroom. SkyWater agreed to bring the plant to full production capacity within five years; in 2025 it installed and qualified production tools as the site ramped up, and it is seeking Trusted accreditation for the plant. SkyWater, including this site, became a wholly owned subsidiary of IonQ in July 2026, and IonQ's report for the quarter to September 2026 lists the plant as its foundry business's Florida packaging facility.",
+  "location": {
+    "country": "US",
+    "admin1": "Florida",
+    "locality": "Kissimmee",
+    "site": "Center for NeoVation",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "In Osceola County."
+  },
+  "status": "operating",
+  "status_as_of": "2026-11-05",
+  "status_source_ids": [
+    "s4",
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "cleanroom_area",
+      "value": 36000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Within a building of about 109,000 square feet."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "opening",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "SkyWater added the county-owned Center for NeoVation to its operations in 2021 under its lease and development agreements with Osceola County and BRIDG; the date marks the start of SkyWater's operation of the existing plant, not the opening of a new building."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Production tools installed and qualified during the site's ramp, with about US$10.3 million of start-up costs."
+    },
+    {
+      "event": "acquired",
+      "date": "2026-07-31",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "IonQ completed its acquisition of SkyWater."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SkyWater Technology, Inc. Annual Report (Form 10-K) for the fiscal year ended December 28, 2025",
+      "publisher": "SkyWater Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819974/000181997426000009/skyt-20251228.htm",
+      "type": "company_filing",
+      "published": "2026-03-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "SkyWater Technology, Inc. Annual Report (Form 10-K) for the fiscal year ended December 29, 2024",
+      "publisher": "SkyWater Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819974/000181997425000010/skyt-20241229.htm",
+      "type": "company_filing",
+      "published": "2025-03-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "SkyWater Technology, LLC Current Report (Form 8-K) dated July 31, 2026",
+      "publisher": "SkyWater Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819974/000119312526327137/d49031d8k.htm",
+      "type": "company_filing",
+      "published": "2026-07-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "IonQ, Inc. Quarterly Report (Form 10-Q) for the quarter ended September 30, 2026",
+      "publisher": "IonQ",
+      "url": "https://www.sec.gov/Archives/edgar/data/1824920/000119312526449829/ionq-20260930.htm",
+      "type": "company_filing",
+      "published": "2026-11-05",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The filings give no investment amount, capacity or production start date for the plant; the opening milestone marks the year SkyWater took over the existing, county-owned plant rather than a new building. Under the 2021 lease SkyWater must bring the plant to full production capacity within five years, run it at full capacity for 15 more years and then take ownership of the building (s1). A federal Build Back Better grant to Osceola County and BRIDG partly funds expansion and equipment at the plant, with SkyWater committed to a 20 percent matching share estimated at about USD 10.2 million at the end of 2025 (s1); the grant amount for the plant is not stated and is not recorded. The company field names IonQ, SkyWater's parent since July 2026.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the company to IonQ, SkyWater's parent since July 2026, and corrected the notes, which said the Osceola County terms appear only as data tags: the 2025 annual report describes the lease commitments and the grant matching share, now summarised. Audit fixes (2026-11-07): kept the 2021 opening milestone but noted that it marks SkyWater taking over the existing county-owned plant, and added IonQ's November 2026 quarterly report, which describes the Florida packaging facility as operating under IonQ, as the newest status source, so the status date (5 November 2026) and the IonQ parent now match."
+  }
+}

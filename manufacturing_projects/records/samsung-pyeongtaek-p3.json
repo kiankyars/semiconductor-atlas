@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-pyeongtaek-p3",
+  "name": "Samsung Pyeongtaek P3",
+  "aliases": [
+    "Pyeongtaek Line 3"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand",
+    "dram",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "5nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "EUV-based foundry production at 5nm or below was planned at the line after its first NAND output, subject to demand."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "The third production line at Samsung's Pyeongtaek campus in Gyeonggi Province. Earthworks started in July 2020 on a line that Korea JoongAng Daily said would cost around KRW 30 trillion, with mass production then expected by 2023. The line came on stream in July 2022 with NAND flash among its first products, and Samsung showed it to the press that September; EUV-based DRAM and foundry production at 5nm or below were to be added as demand warranted. Press reports called P3 Samsung's largest fab, at about 700,000 m².",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Pyeongtaek",
+    "site": "Pyeongtaek Campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2022-09-07",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 30000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-08-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Figure reported by Korea JoongAng Daily when groundwork began; Samsung declined to comment on construction details."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2020-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "A city official said earthworks began in July 2020 after building approval in June."
+    },
+    {
+      "event": "volume_production",
+      "date": "2023",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Mass production target reported when groundwork began."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-07",
+      "planned": false,
+      "phase_label": "NAND",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Samsung said the line started operating in July 2022 with wafer input under way; NAND flash was among the first products."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Samsung begins groundwork for P3 chip facility",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/samsung-begins-groundwork-for-p3-chip-facility/11694687",
+      "type": "news",
+      "published": "2020-08-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Samsung starts operations at newest chip plant in Pyeongtaek complex",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/samsung-starts-operations-at-newest-chip-plant-in-pyeongtaek-complex/11563785",
+      "type": "news",
+      "published": "2022-09-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Samsung Launches Full Operation of Pyeongtaek Campus Line 3... \"Maintaining Ultra-Gap in Semiconductor Business\"",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2022090717015933753",
+      "type": "news",
+      "published": "2022-09-07",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "samsung-pyeongtaek-p2",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p4",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p5",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The 700,000 m² size is as reported by Korea JoongAng Daily in September 2022, which does not say whether it is floor area or site area. The cited sources do not report when DRAM or foundry production started on the line.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the Korea JoongAng Daily source to the July 2022 production milestone, since only it names NAND as an early product, and reworded the summary, which had attributed the cost figure to local press."
+  }
+}

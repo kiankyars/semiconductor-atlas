@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "id": "amkor-vietnam-bac-ninh",
+  "name": "Amkor Technology Vietnam factory, Bac Ninh",
+  "aliases": [
+    "Amkor Technology Vietnam (ATV)"
+  ],
+  "company": "Amkor",
+  "operator": "Amkor Technology Vietnam",
+  "parties": [
+    {
+      "name": "Amkor Technology Vietnam",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Vietnamese subsidiary of Amkor Technology, Inc."
+    },
+    {
+      "name": "Amkor Technology, Inc.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [
+    {
+      "label": "System in Package (SiP)",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Advanced SiP was one of the first product lines at opening, alongside memory."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Amkor's assembly and test factory in the Yen Phong 2C Industrial Park, Bac Ninh province, northern Vietnam. Announced in November 2021 with a first phase of USD 200-250 million, it was inaugurated in October 2023 as a USD 1.6 billion factory that Amkor said would become its most advanced, starting with advanced System in Package and memory lines; the site is planned to reach 200,000 square metres of cleanroom on 57 acres. Registered capital was raised to USD 1.6 billion in July 2024. In 2026 the plant employed more than 2,000 people, Amkor said its Vietnam output had doubled in a year, and capacity was being raised toward about 3.6 billion products a year.",
+  "location": {
+    "country": "VN",
+    "admin1": "Bac Ninh",
+    "locality": "Bac Ninh",
+    "site": "Yen Phong 2C Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Sources name the Yen Phong 2C (II-C) Industrial Park in Bac Ninh province without a street address."
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-02",
+  "status_source_ids": [
+    "s1",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 200000000,
+      "value_max": 250000000,
+      "unit": "USD",
+      "qualifier": "range",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2021-11-10",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "First-phase estimate given when the factory was announced, funded from cash on hand."
+    },
+    {
+      "metric": "investment",
+      "value": 1600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-10-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Value of the factory as described at its inauguration."
+    },
+    {
+      "metric": "investment",
+      "value": 520000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-05-07",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Initial investment when the first plant opened in October 2023."
+    },
+    {
+      "metric": "investment",
+      "value": 1600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-05-07",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Registered capital after Bac Ninh authorities amended the investment certificate in July 2024."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 20000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2021-11-10",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 200000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-10-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cleanroom space the factory will have when complete."
+    },
+    {
+      "metric": "site_area",
+      "value": 57,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-10-11",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The 2021 report gives about 230,000 square metres."
+    },
+    {
+      "metric": "capacity",
+      "value": 3600000000,
+      "value_max": null,
+      "unit": "units_per_year",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-02",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Products per year the plant is being expanded to, according to the provincial science and technology department."
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-02",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Employees in Bac Ninh province."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Plan for a new factory in Bac Ninh focused on advanced System in Package assembly and test."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Cleanroom construction was expected to begin in 2022; the actual start was not found."
+    },
+    {
+      "event": "volume_production",
+      "date": "2023-H2",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "High-volume manufacturing target given at the announcement."
+    },
+    {
+      "event": "opening",
+      "date": "2023-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Ribbon-cutting described in a company release dated 11 October 2023, with initial advanced SiP and memory lines."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Amkor Inaugurates Latest Factory in Vietnam",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/amkor-inaugurates-latest-factory-in-vietnam/",
+      "type": "company_announcement",
+      "published": "2023-10-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Amkor Technology Vietnam Honored with Industry Award and Highlights Innovation at SEMIExpo Vietnam",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/amkor-vietnam-industry-award-semiexpo-2025/",
+      "type": "company_announcement",
+      "published": "2025-11-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Amkor Technology announces cleanroom facility plans in Vietnam",
+      "publisher": "Cleanroom Technology",
+      "url": "https://www.cleanroomtechnology.com/amkor-technology-announces-cleanroom-facility-plans-in-vietnam-180504",
+      "type": "trade_press",
+      "published": "2021-11-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Amkor Technology proposes to double capacity of its semiconductor plant in Bac Ninh",
+      "publisher": "VnEconomy",
+      "url": "https://en.vneconomy.vn/amkor-technology-proposes-to-double-capacity-of-its-semiconductor-plant-in-bac-ninh.htm",
+      "type": "news",
+      "published": "2026-05-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Bac Ninh targets higher value of semiconductor supply chain",
+      "publisher": "The Star (Viet Nam News / ANN)",
+      "url": "https://www.thestar.com.my/business/business-news/2026/10/02/bac-ninh-targets-higher-value-of-semiconductor-supply-chain",
+      "type": "news",
+      "published": "2026-10-02",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Capacity figures in Vietnamese reports are given in products and tonnes and are not consistent between articles; only the 3.6 billion products a year target is recorded. In May 2026 Amkor was seeking approval to raise the plant's operating capacity further; no separate new building is reported, so the status stays operating.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 2021 announcement, the first-phase investment and cleanroom plan, the July 2024 increase in registered capital to USD 1.6 billion, and 2026 reports on staffing, output growth and the capacity target; set the opening to month precision because the release does not date the ceremony, filled in the province and refreshed the status date."
+  }
+}

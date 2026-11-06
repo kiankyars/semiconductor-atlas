@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-m15x-cheongju",
+  "name": "SK hynix M15X",
+  "aliases": [
+    "M15 Extension"
+  ],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A DRAM fab built as an extension of SK hynix's M15 plant in the Cheongju Technopolis industrial complex, North Chungcheong Province. SK hynix first announced M15X in September 2022 with a KRW 15 trillion, five-year plan, then relaunched it in April 2024 as a production base for DRAM including HBM, with about KRW 5.3 trillion for the building and more than KRW 20 trillion over time. The cleanroom opened in October 2025, ahead of the November target, and equipment installation followed. Wafer input was planned for February 2026; by October 2026 the company said the fab had started operating ahead of schedule and would be ramped to full capacity by the end of 2026 to raise HBM4 output.",
+  "location": {
+    "country": "KR",
+    "admin1": "North Chungcheong Province",
+    "locality": "Cheongju",
+    "site": "Cheongju Technopolis Industrial Complex",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Next to SK hynix's M15 fab."
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-28",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 15000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-09-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Planned in September 2022 for building the fab and installing production equipment over five years."
+    },
+    {
+      "metric": "investment",
+      "value": 5300000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Board-approved construction cost of the fab building."
+    },
+    {
+      "metric": "investment",
+      "value": 20000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Long-term total including equipment to be added in stages."
+    },
+    {
+      "metric": "site_area",
+      "value": 60000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-09-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Land in the Cheongju Technopolis industrial complex that SK hynix had already secured for the fab."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-09-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "First announcement of M15X as an extension of M15."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2022-10",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Construction start set in the September 2022 plan."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The September 2022 plan aimed to complete the fab in early 2025."
+    },
+    {
+      "event": "announced",
+      "date": "2024-04-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Board approval of the revised plan to make DRAM, including HBM, at M15X."
+    },
+    {
+      "event": "construction_start",
+      "date": "2024-04",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The April 2024 plan set construction to start at the end of that month."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-11",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Completion target in the April 2024 plan, with early mass production to follow."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-10",
+      "planned": false,
+      "phase_label": "Cleanroom",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "The cleanroom opened in October 2025, earlier than planned."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "The operator's results of 29 October 2025 said equipment installation had recently begun; in January 2026 tools were still being set up in sequence."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-02",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reuters reported in January 2026 that SK hynix planned to start putting wafers into M15X the following month."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s6",
+        "s7"
+      ],
+      "note": "In October 2026 the operator said the M15X HBM fab had started operating ahead of schedule; equipment was still being set up in January 2026, and no cited source gives the start date."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SK hynix to Produce DRAM From M15X in Cheongju",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-to-produce-dram-from-m15x-in-cheongju/",
+      "type": "company_announcement",
+      "published": "2024-04-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SK hynix Announces 3Q25 Financial Results",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-announces-3q25-financial-results/",
+      "type": "company_announcement",
+      "published": "2025-10-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "SK hynix to Build M15X Fab in Cheongju",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-to-build-m15x-fab-in-cheongju-in-october/",
+      "type": "company_announcement",
+      "published": "2022-09-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "첨단 패키징 P&T 신규 투자 관련 설명드립니다",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.co.kr/fact-02/",
+      "type": "company_announcement",
+      "published": "2026-01-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Exclusive-SK Hynix speeds up new chip fab opening to meet memory demand, executive says",
+      "publisher": "Reuters (via The Star)",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/01/15/exclusive-sk-hynix-speeds-up-new-chip-fab-opening-to-meet-memory-demand-executive-says",
+      "type": "news",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "기술 혁신으로 쌓아 올린 금자탑… SK하이닉스, ‘제19회 반도체의 날’서 5관왕 영예",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.co.kr/19th-semiconductor-day/",
+      "type": "company_announcement",
+      "published": "2026-10-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "SK hynix Announces 3Q26 Financial Results",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+      "type": "company_announcement",
+      "published": "2026-10-28",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "sk-hynix-m17-cheongju",
+      "relation": "same_campus"
+    },
+    {
+      "id": "sk-hynix-pt7-cheongju",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The September 2022 plan set groundbreaking for October 2022 and completion in early 2025; the April 2024 release instead set construction to start at the end of April 2024, and the cited sources do not say how much work was done in between. SK hynix chose to make HBM DRAM at M15X because it sits next to M15, where the company has been adding TSV capacity. The October 2026 statement that the fab began operating early comes from a Korean-language newsroom story about industry awards, and the third-quarter 2026 results describe ramping M15X to maximum capacity by year-end to increase HBM4 output.",
+  "archived_record": "sk-hynix:m15x-cheongju",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Moved the status from under construction to operating on SK hynix's October 2026 reports that the fab started operating early and is being ramped to full capacity, and replaced a mislabelled year-end volume-production milestone with dated cleanroom, wafer-input and production milestones. Added the September 2022 first announcement with its KRW 15 trillion plan and 60,000 m² site, the industrial-complex site name, and recorded the board-approved KRW 5.3 trillion as committed; dropped the first- and second-quarter 2026 results, which only described the ramp in general terms."
+  }
+}

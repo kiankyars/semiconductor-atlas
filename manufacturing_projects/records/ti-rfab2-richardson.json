@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "id": "ti-rfab2-richardson",
+  "name": "TI RFAB2 Richardson 300 mm fab",
+  "aliases": [
+    "RFAB2"
+  ],
+  "company": "Texas Instruments",
+  "operator": "Texas Instruments",
+  "parties": [
+    {
+      "name": "Texas Instruments",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "RFAB2 is Texas Instruments' second 300 mm analog wafer fab in Richardson, Texas, connected to RFAB1, which opened in 2009. TI chose the site in 2019, had guided a start in the second half of 2022 and reported initial production in September 2022, with output ramping over the following months. The new fab is more than 30 percent larger than RFAB1; TI said in June 2025 that it was still ramping to full production.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Richardson",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-02-06",
+  "status_source_ids": [
+    "s2",
+    "s4",
+    "s5"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "site_selected",
+      "date": "2019-04-19",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TI's Richardson page dates its choice of Richardson for the second 300 mm fab to April 2019."
+    },
+    {
+      "event": "building_complete",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TI's Richardson page gives 2022 for completion of construction."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Expected start given in November 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Initial production began; output was to ramp over the following months."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TI's new 300-millimeter wafer fab in Richardson, Texas, begins initial production",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/company-blog/tis-new-300-millimeter-wafer-fab-in-richardson-texas-begins-initial-production.html",
+      "type": "company_announcement",
+      "published": "2022-09-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Richardson, Texas: 300mm wafer fabs",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/manufacturing/richardson.html",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Texas Instruments to begin construction next year on new 300-mm semiconductor wafer fabrication plants",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2021/2021-11-17-texas-instruments-to-begin-construction-next-year-on-new-300-mm-semiconductor-wafer-fabrication-plants.html",
+      "type": "company_announcement",
+      "published": "2021-11-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the US",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+      "type": "company_announcement",
+      "published": "2025-06-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Texas Instruments Incorporated annual report on Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "Texas Instruments",
+      "url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/txn-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-06",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "TI gives cleanroom space (more than 630,000 sq ft in 2022, 650,000 sq ft on its current site page) and output of over 100 million analog chips a day for RFAB1 and RFAB2 combined, not for RFAB2 alone, so those figures are not entered as metrics. No investment figure specific to RFAB2 was found. TI's FY2025 annual report says it kept ramping production at its newest Richardson fab during 2025.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 2019 site selection and 2022 construction completion from TI's Richardson page and TI's FY2025 annual report, which moves status_as_of to February 2026."
+  }
+}

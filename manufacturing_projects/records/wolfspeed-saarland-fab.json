@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "id": "wolfspeed-saarland-fab",
+  "name": "Wolfspeed Saarland 200 mm silicon carbide device fab",
+  "aliases": [
+    "Wolfspeed Ensdorf fab"
+  ],
+  "company": "Wolfspeed",
+  "operator": "Wolfspeed",
+  "parties": [
+    {
+      "name": "Wolfspeed",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "European Commission",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The fab was planned within the IPCEI on microelectronics and communication technologies and depended on Commission state-aid approval."
+    },
+    {
+      "name": "Federal Government of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Negotiated the incentive package; news reports put the planned federal share of state aid at EUR 360 million."
+    },
+    {
+      "name": "State of Saarland",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "One of the governments negotiating the incentive package with Wolfspeed; news reports put its planned share of state aid at EUR 155 million."
+    },
+    {
+      "name": "ZF Friedrichshafen",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Planned a sizable financial investment in the fab, reported at about EUR 170 million."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "Wolfspeed announced in February 2023 a highly automated 200 mm silicon carbide device fab, its first in Europe, on a 14-hectare former coal power plant site in Saarland, Germany, with ZF planning to invest. Construction was to start in the first half of 2023 subject to EU state-aid approval, but in August 2024 Wolfspeed said it would not build until incentives were final, and in October 2024 it suspended the plan. Its fiscal 2025 and 2026 annual reports record an impairment of the Saarland site assets during restructuring.",
+  "location": {
+    "country": "DE",
+    "admin1": "Saarland",
+    "locality": "Ensdorf",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "The announcement was datelined Ensdorf and held on the planned site, a former coal-fired power station."
+  },
+  "status": "paused",
+  "status_as_of": "2026-08-20",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2700000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-10-24",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Initial cost estimate reported when the plan was suspended; the same report also cites about EUR 3 billion."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 515000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-10-24",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Planned state aid reported by the news source: EUR 360 million federal and EUR 155 million from Saarland; never finalized."
+    },
+    {
+      "metric": "site_area",
+      "value": 35,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-02-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Given as 35 acres (14 hectares)."
+    },
+    {
+      "metric": "jobs",
+      "value": 600,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-02-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Staff when fully operational."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-02-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expected start, subject to European Commission approval."
+    },
+    {
+      "event": "paused",
+      "date": "2024-08-22",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Wolfspeed said it would not start construction until incentives were final and that they might come in fiscal 2026 or later; in October 2024 it suspended the plan, citing slower EV adoption in Europe."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Wolfspeed Announces Plan to Construct World's Largest, Most Advanced Silicon Carbide Device Manufacturing Facility in Saarland, Germany",
+      "publisher": "Wolfspeed",
+      "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-announces-plan-to-construct-worlds-largest-most-advanced-silicon-carbide-device-manufacturing-facility-in-saarland-germany/",
+      "type": "company_announcement",
+      "published": "2023-02-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 30, 2024",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541924000062/wolf-20240630.htm",
+      "type": "company_filing",
+      "published": "2024-08-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 29, 2025",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541925000110/wolf-20250629.htm",
+      "type": "company_filing",
+      "published": "2025-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Wolfspeed suspends plans to build $3.2bn chip factory in Germany",
+      "publisher": "Verdict",
+      "url": "https://www.verdict.co.uk/wolfspeed-german-chip-plant-plans/",
+      "type": "news",
+      "published": "2024-10-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Wolfspeed, Inc. Annual Report on Form 10-K for the fiscal year ended June 28, 2026",
+      "publisher": "Wolfspeed",
+      "url": "https://www.sec.gov/Archives/edgar/data/895419/000089541926000054/wolf-20260628.htm",
+      "type": "company_filing",
+      "published": "2026-08-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Status is recorded as paused: Wolfspeed suspended the plan and later impaired the site assets, but no source read for this record, including searches in November 2026, contains an operator statement that the fab was cancelled. A direct statement of cancellation would change the status to cancelled.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added an October 2024 news report of the suspension with the reported EUR 2.7 billion cost, EUR 515 million planned state aid and ZF's planned stake, added the German government and ZF as parties, and the FY2026 annual report, moving status_as_of to August 2026."
+  }
+}

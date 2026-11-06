@@ -1,0 +1,236 @@
+{
+  "schema_version": "1.0",
+  "id": "china-silan-jihong-xiamen-sic-8-inch",
+  "name": "Silan Jihong 8-inch SiC Power Device Line, Xiamen",
+  "aliases": [
+    "士兰集宏8英寸SiC功率器件芯片制造生产线",
+    "Xiamen Silan Jihong SiC fab"
+  ],
+  "company": "Silan",
+  "operator": "Xiamen Silan Jihong Semiconductor Co., Ltd.",
+  "parties": [
+    {
+      "name": "Xiamen Silan Jihong Semiconductor Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Project company implementing the line."
+    },
+    {
+      "name": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Parent group; equity split not disclosed."
+    },
+    {
+      "name": "Xiamen Municipal People's Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed the May 2024 strategic cooperation framework agreement with the Haicang district government and Silan."
+    },
+    {
+      "name": "Haicang District People's Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "Silan's 200 mm silicon carbide power-device fab in Xiamen's Haicang District, mainly for SiC MOSFETs. Agreed with the city and district in May 2024 at CNY 12 billion over two phases, its buildings were topped out in February 2025 and tools began arriving in June 2025. The Phase 1 line was connected on 4 January 2026 and is to ramp toward 420,000 wafers a year through 2028; both phases are planned at 720,000 wafers a year.",
+  "location": {
+    "country": "CN",
+    "admin1": "Fujian",
+    "locality": "Xiamen",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "The plant is in Haicang District."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-01-05",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 12000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Phase 1 CNY 7 billion and Phase 2 CNY 5 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-07-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2025-07-30",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 420000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "200 mm SiC wafers per year design capacity for Phase 1."
+    },
+    {
+      "metric": "capacity",
+      "value": 720000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "200 mm SiC power-device wafers per year after both phases."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-21",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Strategic cooperation framework agreement signed in Xiamen."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-02-28",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Main fab and other buildings topped out."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025-06-26",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "First process tool moved in."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-01-04",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Line-connection ceremony; earlier the company had planned connection and trial production for the fourth quarter of 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "士兰集宏“8英寸SiC功率器件芯片制造生产线”项目进展顺利",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://www.silan.com.cn/index.php/news/details/263.html",
+      "type": "company_announcement",
+      "published": "2025-07-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "士兰微电子迎来双线里程碑：8英寸碳化硅产线通线， 12英寸高端模拟芯片产线同步开工",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://www.silan.com.cn/index.php/news/details/286.html",
+      "type": "company_announcement",
+      "published": "2026-01-05",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The company plans to ramp Phase 1 capacity from 2026 to 2028. No construction date has been cited for Phase 2.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

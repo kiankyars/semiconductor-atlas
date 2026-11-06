@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-pyeongtaek-p4",
+  "name": "Samsung Pyeongtaek P4",
+  "aliases": [
+    "Pyeongtaek Line 4"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm",
+    "nand"
+  ],
+  "process_nodes": [
+    {
+      "label": "1c DRAM",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "Sixth-generation 10nm-class DRAM used in HBM4; reported as the main product of P4."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "The fourth fab at Samsung's Pyeongtaek campus in Gyeonggi Province, a double-fab building split into four phases. Foundation work began in 2022. Trade press reported that the shell and utilities were finished without production lines during the memory downturn, that NAND tools went in during 2024, and that Samsung then committed P4 to 1c DRAM for HBM4. Work on phases 2 and 4 stalled from early 2024 and, according to Korean press, resumed in December 2025, with lines first meant for foundry switched to memory. By July 2026 Korean press reported phase 1 running, phase 3 ready for mass production and phases 2 and 4 due to start in the second half of 2026; in August 2026 TrendForce called P4 recently operational while a 1c DRAM line was still being built.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Pyeongtaek",
+    "site": "Pyeongtaek Campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-08-20",
+  "status_source_ids": [
+    "s7",
+    "s8"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Foundation and preparatory work for the fourth line had begun by September 2022."
+    },
+    {
+      "event": "paused",
+      "date": "2024",
+      "planned": false,
+      "phase_label": "Phases 2 and 4",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Korea JoongAng Daily reported that work on the P4 phase 2 and phase 4 lines, and on P5, had been halted since early 2024 because of weak chip demand and capital allocation."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "TrendForce reported in August 2024 that Samsung had begun installing NAND flash equipment in the previously empty P4 building."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-06",
+      "planned": true,
+      "phase_label": "1c DRAM line",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "ETNews-reported mass-production target for the 1c DRAM line; TrendForce's own projection was 2026."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025-Q4",
+      "planned": true,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Cleanroom construction for phase 2 was expected in late 2025 or early 2026."
+    },
+    {
+      "event": "resumed",
+      "date": "2025-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Newsis reported that P4 construction restarted in December 2025 and that Samsung had pulled the building's completion forward from the first quarter of 2027 into 2026."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Samsung aimed to finish equipment investment for 1c DRAM at P4 by the first half of 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Newsis described phase 1 as nearing completion in January 2026, and MTN reported in July 2026 that it was running; neither gives the start date."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-H2",
+      "planned": true,
+      "phase_label": "Phases 2 and 4",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "MTN reported in July 2026 that phases 2 and 4 were expected to finish preparations and start operating in the second half of 2026, bringing the whole fab into operation within the year."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Samsung starts operations at newest chip plant in Pyeongtaek complex",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/samsung-starts-operations-at-newest-chip-plant-in-pyeongtaek-complex/11563785",
+      "type": "news",
+      "published": "2022-09-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Samsung Launches Full Operation of Pyeongtaek Campus Line 3... \"Maintaining Ultra-Gap in Semiconductor Business\"",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2022090717015933753",
+      "type": "news",
+      "published": "2022-09-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "[News] Samsung Reportedly Confirms Investment in Pyeongtaek P4 Plant for 6th-Generation 1c DRAM",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2024/08/13/news-samsung-reportedly-confirms-investment-in-pyeongtaek-p4-plant-for-6th-generation-1c-dram/",
+      "type": "trade_press",
+      "published": "2024-08-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "[News] Samsung Reportedly Expands 1c DRAM Capacity for HBM4, Targeting 60K Wafers Monthly in 2025",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/09/12/news-samsung-reportedly-expands-1c-dram-capacity-for-hbm4-targeting-60k-wafers-monthly-in-2025/",
+      "type": "trade_press",
+      "published": "2025-09-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Samsung gears up for new factory construction in Pyeongtaek, aims to lead in HBM4",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/samsung-gears-up-for-new-factory-construction-in-pyeongtaek-aims-to-lead-in-hbm4/12120999",
+      "type": "news",
+      "published": "2025-06-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "\"최대한 빨리 짓자\"…삼성·SK, HBM4 공장 '속도전'",
+      "publisher": "Newsis",
+      "url": "https://www.newsis.com/view/NISX20260116_0003479918",
+      "type": "news",
+      "published": "2026-01-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "삼성·SK·마이크론 증설 경쟁…공장이 AI 시대 승부처[기술, 다시 공장]",
+      "publisher": "MTN (Money Today Broadcasting)",
+      "url": "https://news.mtn.co.kr/news-detail/2026071315244420745",
+      "type": "news",
+      "published": "2026-07-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "[News] Samsung to Break Ground on KRW 6T Onyang HBM Fab in Sept., P5 Eyes Triple-Fab Shift as Expansion Accelerates",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/08/20/news-samsung-to-break-ground-on-krw-6t-onyang-hbm-fab-in-sept-p5-eyes-triple-fab-shift-as-expansion-accelerates/",
+      "type": "trade_press",
+      "published": "2026-08-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "samsung-pyeongtaek-p2",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p3",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p5",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "All status evidence here is from press and trade-press reports; Samsung declined to comment on the P4 expansion in June 2025 and has not published phase-level details in the sources cited. The temporary occupancy permits the city issued in the first half of 2025 allow limited uses such as tool installation and test runs before construction is finished. Reports number and describe the phases differently: TrendForce said in September 2025 that tool investment was complete for the hybrid NAND-DRAM phase 1 and the DRAM phase 3, while Newsis described phase 1 as still nearing completion in January 2026, so the production start is dated only to 2026. The 60,000 wafers a month in the September 2025 TrendForce headline is Samsung's company-wide 1c DRAM capacity, not a P4 figure, and is not recorded.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Moved the status from under construction to partly operating on 2026 reports that phase 1 was running and P4 had recently come on line while further 1c DRAM lines were being fitted, adding the December 2025 restart and the 2026 production milestones with their sources. Limited the 2024 pause to phases 2 and 4 as the source says, removed a company-wide 1c DRAM capacity figure recorded as a P4 metric, added HBM to the segments and rewrote the summary."
+  }
+}

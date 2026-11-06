@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "id": "globalfoundries-module-7h-singapore",
+  "name": "Module 7H (Fab 7 extension)",
+  "aliases": [
+    "Fab 7H"
+  ],
+  "company": "GlobalFoundries",
+  "operator": "GlobalFoundries",
+  "parties": [
+    {
+      "name": "GlobalFoundries",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "An extension of GlobalFoundries' 300 mm Fab 7 operations in Singapore. Ground was broken in 2021, the first tool moved in in June 2022, and Singapore's Economic Development Board marked the official opening of the US$4 billion expansion fab in September 2023, citing more than 23,000 square metres of cleanroom and 1,000 new jobs. Module 7H began limited production that month and started commercial wafer shipments in the second half of 2024. It is expected to add about 450,000 wafers a year, taking GlobalFoundries' Singapore capacity to about 1.5 million.",
+  "location": {
+    "country": "SG",
+    "admin1": null,
+    "locality": "Singapore",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2025-03-20",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-09-12",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Given at the opening as US$4 billion (S$5 billion)."
+    },
+    {
+      "metric": "capacity",
+      "value": 450000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-29",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "300 mm wafers per year once fully ramped, added to GlobalFoundries' Singapore capacity."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 23000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-09-12",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-09-12",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "New jobs, mostly equipment and process technicians and engineers."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2022-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "First tool moved in."
+    },
+    {
+      "event": "first_production",
+      "date": "2023-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Limited production began."
+    },
+    {
+      "event": "opening",
+      "date": "2023-09-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Official opening of the expansion fab."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-H2",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "GlobalFoundries reports that Module 7H began commercial shipments of wafers in the second half of 2024."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2023",
+      "publisher": "GlobalFoundries",
+      "url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904824000013/gfs-20231231.htm",
+      "type": "company_filing",
+      "published": "2024-04-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2024",
+      "publisher": "GlobalFoundries",
+      "url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904825000024/gfs-20241231.htm",
+      "type": "company_filing",
+      "published": "2025-03-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "GlobalFoundries officially opens US$4 billion expansion facility in Singapore, creating 1,000 new jobs",
+      "publisher": "Singapore Economic Development Board",
+      "url": "https://www.edb.gov.sg/en/about-edb/media-releases-publications/globalfoundries-opens-us4-billion-expansion-facility-in-singapore.html",
+      "type": "government",
+      "published": "2023-09-12",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The Economic Development Board release does not use the Module 7H name; it is matched to the module by its September 2023 opening and its 450,000-wafer capacity, which GlobalFoundries' filings give for Module 7H. The cited sources do not name the technologies it runs.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Singapore's Economic Development Board opening release as a source for the US$4 billion investment, cleanroom area, jobs, 2021 groundbreaking, June 2022 tool move-in and September 2023 opening; the existing statements were confirmed. Audit fixes (2026-11-07): Added a volume-production milestone for the start of commercial wafer shipments in the second half of 2024, which the summary stated without a milestone, citing GlobalFoundries' 2024 20-F (s2)."
+  }
+}

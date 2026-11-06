@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "id": "tower-uozu-additional-300mm-fab",
+  "name": "Tower additional 300mm fab at Uozu (next to Fab 7)",
+  "aliases": [
+    "Tower Japan expansion Track Two"
+  ],
+  "company": "Tower Semiconductor",
+  "operator": "Tower Semiconductor",
+  "parties": [
+    {
+      "name": "Tower Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Its subsidy approval, applied for by Tower, is a condition for buying the land; Tower warns the grant terms could cut or remove the funding."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "photonics",
+    "rf"
+  ],
+  "process_nodes": [
+    {
+      "label": "SiPho (silicon photonics)",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Technology platform named by Tower rather than a node."
+    },
+    {
+      "label": "SiGe",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Technology platform named by Tower rather than a node."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A new 300 mm fab that Tower Semiconductor plans to build on land next to its existing Fab 7 in Uozu, Toyama Prefecture, to multiply its silicon photonics and silicon germanium capacity. Tower first disclosed the plan in March 2026, when it agreed to take full ownership of Fab 7 and said it would buy the neighbouring land from NTCJ if METI approved a subsidy, targeting four times Uozu's current 300 mm capacity across the existing and new buildings. In July 2026 it presented the fab as the second track of a METI-backed Japan expansion alongside the conversion of the former Arai fab, putting its own investment for both tracks at about US$3 billion after US$1 billion of Japanese government grants. Work is to start once the related agreements are signed and closed, and Tower expects the fab to lift earnings from 2029.",
+  "location": {
+    "country": "JP",
+    "admin1": "Toyama",
+    "locality": "Uozu",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "The new building is planned beside Tower's existing Uozu fab, whose published address is 800 Higashiyama, Uozu City."
+  },
+  "status": "announced",
+  "status_as_of": "2026-11-02",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Tower's own spending net of grants for both tracks: the Arai fab conversion and this new fab at Uozu."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-14",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Japanese government grants for both tracks of the expansion; Tower warns the grant terms could reduce or remove the funding."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-03-25",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s1"
+      ],
+      "note": "Plan to expand onto the adjacent land, subject to METI subsidy approval; set out as track two of the Japan expansion on 14 July 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Tower Semiconductor with METI Support Announces Strategic Capacity Expansion in Japan",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/2026/07/14/07142026/",
+      "type": "company_announcement",
+      "published": "2026-07-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Tower Semiconductor Reports Third Quarter Record Results, Providing Record Fourth Quarter Guidance Resulting in 2026 $2 Billion Annual Revenue",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/2026/11/02/11022026/",
+      "type": "company_announcement",
+      "published": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "TPSCo Manufacturing Facilities",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/tpsco-manufacturing-facilities/",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Tower Semiconductor Announces Plans to Expand 300mm Capacity in Japan to Support Strong Customer Demand",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/wp-content/uploads/2026/04/TSEM-300mm-Japan-PR_March25_FINALF_AC.pdf",
+      "type": "company_announcement",
+      "published": "2026-03-25",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Tower has given no capacity in wafers, construction date or production date for the new fab; work is to start in parallel with the Arai conversion once the related agreements are signed and closed (s1), and the November 2026 results still describe it as planned (s2). Under the March 2026 restructuring Tower is to take full ownership of Fab 7 from its TPSCo venture with NTCJ, with closing targeted for 1 April 2027 (s4). The first track, converting the former Arai fab (Fab 6) in Niigata, is a separate site recorded as tower-arai-fab.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Moved the announcement to Tower's March 2026 release, which first disclosed the adjacent-land expansion and its METI condition, added the fourfold Uozu capacity target, and corrected the notes, which wrongly said the Arai conversion is not recorded separately."
+  }
+}

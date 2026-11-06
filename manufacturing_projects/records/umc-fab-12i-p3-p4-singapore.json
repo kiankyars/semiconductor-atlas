@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "id": "umc-fab-12i-p3-p4-singapore",
+  "name": "UMC Fab 12i P3 and P4, Singapore",
+  "aliases": [
+    "Fab 12i Phase 3",
+    "Fab 12i P3"
+  ],
+  "company": "UMC",
+  "operator": "United Microelectronics Corporation (UMC)",
+  "parties": [
+    {
+      "name": "United Microelectronics Corporation (UMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "photonics"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "22nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s6",
+        "s7"
+      ]
+    }
+  ],
+  "summary": "A greenfield expansion next to UMC's 300 mm Fab 12i at the Pasir Ris Wafer Park in Singapore, approved by UMC's board in February 2022 to add 22nm and 28nm capacity. The first phase (P3) has a design capacity of 30,000 wafers a month and was reported at US$5 billion. Its first tools arrived in May 2024 and UMC held an opening ceremony for the completed building in April 2025, but the production start has slipped from the first half of 2025 to the second half of 2026. In July 2026 UMC said the shell for a further phase, P4, was already built and that it would fit out its cleanroom and buy tools there, including for silicon photonics, as part of a two-site expansion with Tainan; its board approved an extra capital budget of about US$3.2 billion in October 2026.",
+  "location": {
+    "country": "SG",
+    "admin1": null,
+    "locality": "Singapore",
+    "site": "Pasir Ris Wafer Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s7"
+    ],
+    "note": "Next to UMC's existing Fab 12i."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-29",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "P3 first phase",
+      "as_of": "2022-02-24",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Figure announced with the February 2022 plan, as repeated in 2024 and 2025 reporting."
+    },
+    {
+      "metric": "capacity",
+      "value": 30000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "P3 first phase",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s7"
+      ],
+      "note": "Design capacity in wafers per month for the first phase of the new fab; UMC measures capacity in 12-inch wafer equivalents."
+    },
+    {
+      "metric": "investment",
+      "value": 3200000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Additional capital budget approved by UMC's board to speed up its expansion, which the company links to its Singapore and Tainan plans; not split by site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-02-24",
+      "planned": false,
+      "phase_label": "P3",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Board approval of the new fab next to Fab 12i."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024-05",
+      "planned": false,
+      "phase_label": "P3",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Ceremony for the arrival of the first equipment."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-H1",
+      "planned": true,
+      "phase_label": "P3",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Earlier target in the annual report for 2023; later moved."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-H1",
+      "planned": true,
+      "phase_label": "P3",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Target of early 2026 reported in May 2024 after customers adjusted orders."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-04-01",
+      "planned": false,
+      "phase_label": "P3",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Opening ceremony for the completed expansion; production was still set for 2026, so it is not recorded as an opening."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-H2",
+      "planned": true,
+      "phase_label": "P3",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Target in the annual report for 2025; the July 2025 results gave 2026."
+    },
+    {
+      "event": "building_complete",
+      "date": "2026-07-29",
+      "planned": false,
+      "phase_label": "P4",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The P4 building shell was reported as already built on this date; its actual completion date is not given."
+    },
+    {
+      "event": "announced",
+      "date": "2026-07-29",
+      "planned": false,
+      "phase_label": "P4",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "UMC said it would immediately fit out the P4 cleanroom and buy tools, including for silicon photonics capacity."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "United Microelectronics Corporation Annual Report (Form 20-F) for the fiscal year ended December 31, 2025",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526193757/d91630d20f.htm",
+      "type": "company_filing",
+      "published": "2026-04-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "United Microelectronics Corporation Annual Report (Form 20-F) for the fiscal year ended December 31, 2023",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312524111429/d448612d20f.htm",
+      "type": "company_filing",
+      "published": "2024-04-25",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "UMC announced its operating results for the second quarter of 2025 (Form 6-K, Exhibit 99)",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000095017025099865/umc-ex99.htm",
+      "type": "company_filing",
+      "published": "2025-07-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "UMC announced its operating results for the second quarter of 2026 (Form 6-K, Exhibit 99)",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+      "type": "company_filing",
+      "published": "2026-07-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "UMC announced its operating results for the third quarter of 2026 (Form 6-K, Exhibit 99)",
+      "publisher": "UMC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526434992/umc-ex99.htm",
+      "type": "company_filing",
+      "published": "2026-10-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "UMC's new fab in Singapore sees first equipment tools move in",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2024/05/22/2003818199",
+      "type": "news",
+      "published": "2024-05-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "UMC completes expansion of 22nm fab, set to begin production in 2026",
+      "publisher": "DIGITIMES",
+      "url": "https://www.digitimes.com/news/a20250401PD231.html",
+      "type": "trade_press",
+      "published": "2025-04-01",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "UMC's own website returned an access error, so the record relies on its SEC filings and press reports. No source read says whether P3 production has started: the annual report for 2025, filed in April 2026, still expected it in the second half of 2026, and the October 2026 results do not mention P3. The status rests on the completed P3 building and tool move-in, and on the P4 shell being fitted out from July 2026.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Taipei Times (May 2024) and DigiTimes (April 2025) reports for the P3 tool move-in, the April 2025 opening ceremony of the completed building, the US$5 billion figure, the early-2026 target, the 300 mm wafer size and the Pasir Ris Wafer Park site. Rewrote the summary and notes accordingly."
+  }
+}

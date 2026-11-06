@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-poland-assembly-test",
+  "name": "Intel Poland assembly and test facility",
+  "aliases": [
+    "Wrocław West assembly and test facility"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned semiconductor assembly and test plant near Wrocław, Poland, announced in June 2023 with investment of up to $4.6 billion and about 2,000 Intel jobs, meant to meet demand Intel expected by 2027. Construction was to follow European Commission approval, and Intel's April 2024 update still listed the plant as planned. Intel paused the project by about two years in September 2024 and dropped it in July 2025.",
+  "location": {
+    "country": "PL",
+    "admin1": "Lower Silesian Voivodeship",
+    "locality": "Wrocław",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Described as an area near Wrocław; Intel's 2024 update calls the location Wrocław West."
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-01-23",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 4600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-06-16",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-06-16",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Intel employees when complete."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-06-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "paused",
+      "date": "2024-09-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Intel paused its Polish project by about two years."
+    },
+    {
+      "event": "cancelled",
+      "date": "2025-07-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Intel said it would no longer move forward with the Polish project."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Plans Assembly and Test Facility in Poland",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1627",
+      "type": "company_announcement",
+      "published": "2023-06-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "A message from Intel CEO Pat Gelsinger to employees regarding the next phase of Intel's transformation",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1710/a-message-from-intel-ceo-pat-gelsinger-to-employees",
+      "type": "company_announcement",
+      "published": "2024-09-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Intel Reports Second-Quarter 2025 Financial Results",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1745/intel-reports-second-quarter-2025-financial-results",
+      "type": "company_announcement",
+      "published": "2025-07-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": null,
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the 2025 annual report's filing date, and so status_as_of, to 23 January 2026; all other statements were confirmed."
+  }
+}

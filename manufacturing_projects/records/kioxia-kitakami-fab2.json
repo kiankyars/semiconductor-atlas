@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "id": "kioxia-kitakami-fab2",
+  "name": "Kioxia Kitakami Fab2",
+  "aliases": [
+    "K2"
+  ],
+  "company": "Kioxia",
+  "operator": "Kioxia Iwate Corporation",
+  "parties": [
+    {
+      "name": "Kioxia Iwate Corporation",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "Sandisk",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Co-announced the start of operation and of 10th-generation production as Kioxia's joint venture partner."
+    },
+    {
+      "name": "Government of Japan",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Part of the fab's investment is subsidized under a plan approved in February 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [
+    {
+      "label": "8th-generation 218-layer 3D flash memory (CBA)",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The July 2026 release confirms 8th-generation output but gives no layer count."
+    },
+    {
+      "label": "10th-generation 3D flash memory (CBA)",
+      "source_ids": [
+        "s6"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "The second flash memory fab at Kioxia's Kitakami Plant in Iwate Prefecture, built on land east of Fab1. Construction began in April 2022, the building was finished in July 2024 and the fab began operating in September 2025, run jointly with Sandisk and partly funded by a Japanese government subsidy. It first made 8th-generation 218-layer flash and in July 2026 began producing the 10th generation, with capacity added in stages.",
+  "location": {
+    "country": "JP",
+    "admin1": "Iwate",
+    "locality": "Kitakami",
+    "site": "Kitakami Plant",
+    "address": "5-29, Kitakogyodanchi, Kitakami City, Iwate",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s5",
+      "s7"
+    ],
+    "note": "Built on the east side of the existing Fab1."
+  },
+  "status": "operating",
+  "status_as_of": "2026-07-03",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "government_incentive",
+      "value": 150000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-02-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Subsidy for the Kioxia and Western Digital joint venture covering both the Yokkaichi and Kitakami plants."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-03-23",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2022-04-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2023",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Original completion target."
+    },
+    {
+      "event": "building_complete",
+      "date": "2024-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2025-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "Start of operation."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Meaningful output was expected in the first half of 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Kioxia Corporation to Expand 3D Flash Memory Production Capacity by Building New Fabrication Facility at Kitakami Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2022/20220323-1.html",
+      "type": "company_announcement",
+      "published": "2022-03-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Kioxia Corporation Commences Construction of New Fabrication Facility at Kitakami Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2022/20220406-1.html",
+      "type": "company_announcement",
+      "published": "2022-04-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Kioxia and Western Digital's Joint Venture To Receive Up To 150 Billion Yen Government Subsidy for Yokkaichi and Kitakami Plants",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2024/20240206-1.html",
+      "type": "company_announcement",
+      "published": "2024-02-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Kioxia Announces Completion of New Flash Memory Manufacturing Building in Kitakami Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2024/20240801-1.html",
+      "type": "company_announcement",
+      "published": "2024-08-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Kioxia and Sandisk Announce Beginning of Operation of Fab2 at Kitakami Plant, Japan to Meet the Market Demand Driven by AI",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2025/20250930-1.html",
+      "type": "company_announcement",
+      "published": "2025-09-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Kioxia and Sandisk Begin Production of 10th-Generation 3D Flash Memory Products at Kitakami Plant Fab2",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260703-2.html",
+      "type": "company_announcement",
+      "published": "2026-07-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Kitakami Plant (KIOXIA Iwate Corporation)",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/kitakami.html",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "kioxia-kitakami-fab1",
+      "relation": "same_campus"
+    },
+    {
+      "id": "kioxia-kitakami-fab3",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Kioxia has not published an investment amount for Fab2 and says capital spending follows market conditions. The 2024 subsidy release names Western Digital as the joint venture partner; the 2025 and 2026 releases name Sandisk.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Cited the 218-layer label only to the September 2025 release, since the July 2026 release does not give a layer count."
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-fab-22-kaohsiung",
+  "name": "TSMC Fab 22, Kaohsiung",
+  "aliases": [
+    "Fab 22",
+    "F22",
+    "TSMC Kaohsiung fab"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "N2",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5",
+        "s7",
+        "s9"
+      ],
+      "note": "Current plan for all five phases."
+    },
+    {
+      "label": "7nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Part of the 2022 plan; that line was postponed in November 2022."
+    },
+    {
+      "label": "28nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Part of the 2022 plan; 2025 reporting describes the fab as a 2nm site."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s6"
+      ]
+    }
+  ],
+  "summary": "TSMC's 2nm GIGAFAB in Kaohsiung, in the Nanzih Technology Industrial Park on the site of the former Kaohsiung Refinery. The site was first planned in 2022 for 7nm and 28nm lines; the 7nm line was postponed that November and the project later became a five-phase 2nm fab costing more than NT$1.5 trillion, with about 280,000 square metres of cleanroom. Tools moved into phase 1 in November 2024, phase 2 was topped out in March 2025 and N2 entered high-volume production in the fourth quarter of 2025. In early 2026 phase 2 was in trial production, phase 3 was largely built and phases 4 and 5 were under construction, with all five expected to operate by late 2027.",
+  "location": {
+    "country": "TW",
+    "admin1": "Kaohsiung City",
+    "locality": "Kaohsiung",
+    "site": "Nanzih Technology Industrial Park",
+    "address": "1, Yuancyu N. Rd., Nanzi Dist., Kaohsiung City 811-019, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s5",
+      "s10"
+    ],
+    "note": "The industrial park occupies the former Kaohsiung Refinery site; 2025 reporting places Fab 22 within the Southern Taiwan Science Park."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-10-15",
+  "status_source_ids": [
+    "s7",
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1500000000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-31",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Total for all phases."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 280000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-31",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Combined cleanroom of phases 1 to 5; each phase is about twice a standard logic fab."
+    },
+    {
+      "metric": "site_area",
+      "value": 79,
+      "value_max": null,
+      "unit": "hectares",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-31",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Land for phases 1 to 5."
+    },
+    {
+      "metric": "jobs",
+      "value": 7000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-31",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Direct high-tech jobs; more than 20,000 construction jobs were also cited."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2022-08-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reported groundbreaking under the 7nm and 28nm plan."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Works under way after land grading, per the operator's November 2022 statement."
+    },
+    {
+      "event": "paused",
+      "date": "2022-11",
+      "planned": false,
+      "phase_label": "7nm line",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The 7nm part of the plan was postponed because of weak demand."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Mass production target under the 7nm and 28nm plan."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024-11",
+      "planned": false,
+      "phase_label": "P1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-03-31",
+      "planned": false,
+      "phase_label": "P2",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Topping-out ceremony marking completion of the structure."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025",
+      "planned": false,
+      "phase_label": "P3",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Structural works reported under way by March 2025."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-H2",
+      "planned": true,
+      "phase_label": "P1",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "2nm target given at the March 2025 ceremony."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-Q4",
+      "planned": false,
+      "phase_label": "P1",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "N2 high-volume production began at the Kaohsiung site."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-Q4",
+      "planned": true,
+      "phase_label": "P1–P5",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "All five phases expected to be fully operating, per supply-chain reporting."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC breaks ground on new factory in Kaohsiung for 7nm and 28nm chips",
+      "publisher": "TechNode",
+      "url": "https://technode.com/2022/08/08/tsmc-breaks-ground-on-new-factory-in-kaohsiung-for-7nm-and-28nm-chips/",
+      "type": "trade_press",
+      "published": "2022-08-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "TSMC starts construction of new fab in Kaohsiung",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2022/11/22/2003789359",
+      "type": "news",
+      "published": "2022-11-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "台積電2奈米來了！估下半年在台量產：高雄晶圓22廠耗資逾1.5兆，佔地46座足球場",
+      "publisher": "Business Next (數位時代)",
+      "url": "https://www.bnext.com.tw/article/82803/tsmc-kaohsiung-f22-p2-ceremony",
+      "type": "news",
+      "published": "2025-03-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "TSMC to invest NT$1.5tn in Kaohsiung expansion",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/front/archives/2025/04/01/2003834405",
+      "type": "news",
+      "published": "2025-04-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "台積電高雄 2 奈米擴產，深耕台灣 2025 年下半年進入量產",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://technews.tw/?p=1364156",
+      "type": "trade_press",
+      "published": "2025-03-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "GIGAFAB® Facilities - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/manufacturing/gigafab",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "[News] TSMC Speeds up Expansion in Taiwan: up to 10 Fabs Reportedly under Construction or Starting in 2026",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/02/23/news-tsmc-speeds-up-expansion-in-taiwan-up-to-10-fabs-reportedly-under-construction-or-starting-in-2026/",
+      "type": "trade_press",
+      "published": "2026-02-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Q3 2026 Taiwan Semiconductor Manufacturing Company Limited Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-10-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s10",
+      "title": "Fab Locations - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/aboutTSMC/TSMC_Fabs",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Phase labels follow TSMC's P1 to P5 numbering. The source for the switch from 28nm to 2nm is the 2025 reporting, which describes all phases as 2nm; the date of that decision is not recorded here.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:E49B5035",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 1 of Fab 22."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:E49B5025",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 2 of Fab 22."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:E49B8108",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 3 of Fab 22."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:E49B9225",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 4 of Fab 22."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:E49B9592",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 5 of Fab 22."
+    },
+    {
+      "record_id": "taiwan-ida-factory:registered-factories:94P00001",
+      "relation": "same_facility",
+      "note": "Registered factory entry for phase 1 of Fab 22."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the CPC attribution of the refinery site, which no cited source makes, reworded the 28nm note so it no longer infers a replacement decision, marked the 79-hectare land figure as reported, and added TSMC's fab locations page for the street address."
+  }
+}

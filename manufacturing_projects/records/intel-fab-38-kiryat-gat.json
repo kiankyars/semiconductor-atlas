@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-fab-38-kiryat-gat",
+  "name": "Fab 38",
+  "aliases": [
+    "Intel Fab 38"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Israel (Israel Investment Authority)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Agreed a grant for the plant paid against construction, hiring and start-up milestones; none had been paid by June 2024, and the NIS 1.3 billion budgeted for 2025 was reportedly withdrawn after the pause."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A $25 billion leading-edge fab planned next to Intel's Fab 28 in Kiryat Gat, Israel, to make advanced chips with EUV lithography. Construction was under way in early 2024, with completion first targeted for 2028. In June 2024 Intel told suppliers to halt work, and by July 2025 local press reported the second building frozen for the foreseeable future while the finished first building, with about $10 billion invested, still awaited production tools. Intel's 2025 annual report lists Israel among its delayed or cancelled projects. In July 2026 trade press reported that Israel had withdrawn the 2025 tranche of the grant and that Intel said its plans were still under review.",
+  "location": {
+    "country": "IL",
+    "admin1": "Southern District",
+    "locality": "Kiryat Gat",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Adjacent to Intel's existing Fab 28."
+  },
+  "status": "paused",
+  "status_as_of": "2026-07-31",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 25000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "First building",
+      "as_of": "2025-07-10",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Press estimate of the amount invested in the first building since 2019."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 11000000000,
+      "value_max": null,
+      "unit": "ILS",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-06-13",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Grant agreed by the Israel Investment Authority, paid only against milestones. In July 2026 trade press, citing Israel's state budget execution report, said the 2025 tranche of about ILS 1.3 billion had been withdrawn, while ILS 1.06 billion budgeted for 2026 had not been cancelled."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "building_complete",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Original construction completion target; full capacity was planned by 2035."
+    },
+    {
+      "event": "paused",
+      "date": "2024-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Intel told several suppliers to halt work on building and expanding the plant."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel cash problems causing pause in new Israeli plant",
+      "publisher": "Globes",
+      "url": "https://en.globes.co.il/en/article-intel-cash-problems-causing-pause-in-new-israeli-plant-1001481323",
+      "type": "news",
+      "published": "2024-06-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Intel Kiryat Gat expansion frozen for foreseeable future",
+      "publisher": "Globes",
+      "url": "https://en.globes.co.il/en/article-intel-kiryat-gat-expansion-frozen-for-foreseeable-future-1001515435",
+      "type": "news",
+      "published": "2025-07-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "[News] Israel Reportedly Withdraws $425M Intel Grant as Kiryat Gat Expansion Remains Uncertain",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/07/31/news-israel-reportedly-withdraws-425m-intel-grant-as-kiryat-gat-expansion-remains-uncertain/",
+      "type": "trade_press",
+      "published": "2026-07-31",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The construction-under-way status in Intel's April 2024 update predates the halt. Intel told local press in 2025 that the finished first building could start up within 18 months to two years depending on customer demand, and the press noted it might instead be sold to another chipmaker; Intel says the pace follows market conditions.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a July 2026 trade-press report that Israel withdrew the 2025 grant tranche and that Intel's plans remain under review, moving status_as_of to 2026-07-31; corrected 'frozen indefinitely' to 'for the foreseeable future' and attributed the start-up estimate to Intel. Audit fixes (2026-11-07): Added to the ILS 11 billion grant figure's note that trade press (s5) reported the 2025 tranche of about ILS 1.3 billion withdrawn while the 2026 amount stayed in the budget."
+  }
+}

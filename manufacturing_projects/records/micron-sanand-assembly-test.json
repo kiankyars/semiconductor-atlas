@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-sanand-assembly-test",
+  "name": "Micron Sanand assembly and test facility",
+  "aliases": [
+    "Micron Sanand ATMP"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of India",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Fiscal support for half of the total project cost under the Modified ATMP Scheme."
+    },
+    {
+      "name": "Government of Gujarat",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Incentives equal to a fifth of the total project cost."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "assembly_test",
+    "dram",
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Micron's assembly and test plant in Sanand, Gujarat, which Micron called India's first semiconductor assembly and test facility at its opening; there Micron packages and tests DRAM and NAND made at its wafer fabs elsewhere and builds memory and storage products. Announced in June 2023 with central and Gujarat state support, it broke ground in September 2023 and opened in February 2026, well after the original late-2024 target. Micron reports commercial shipments and a production ramp in 2026; a second phase of similar scale was planned for later in the decade.",
+  "location": {
+    "country": "IN",
+    "admin1": "Gujarat",
+    "locality": "Sanand",
+    "site": "Sanand Industrial Park (GIDC)",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Industrial park operated by the Gujarat Industrial Development Corporation."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 825000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-22",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Micron's own share across both phases."
+    },
+    {
+      "metric": "investment",
+      "value": 2750000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-02-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Combined investment by Micron and its government partners; the 2023 release gave up to the same amount."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 500000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-02-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Cleanroom of the first phase once fully ramped."
+    },
+    {
+      "metric": "jobs",
+      "value": 5000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-22",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Direct Micron jobs over several years; the release also cites 15,000 community jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-06-22",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2023-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The 2023 plan targeted the start of operations in late 2024."
+    },
+    {
+      "event": "opening",
+      "date": "2026-02-28",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Grand opening; commercial production had begun."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron Announces New Semiconductor Assembly and Test Facility in India",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-announces-new-semiconductor-assembly-and-test-facility",
+      "type": "company_announcement",
+      "published": "2023-06-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Micron Celebrates Opening of India’s First Semiconductor Assembly and Test Facility",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Celebrates-Opening-of-Indias-First-Semiconductor-Assembly-and-Test-Facility-02-28-2026/default.aspx",
+      "type": "company_announcement",
+      "published": "2026-02-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Micron Technology, Inc. Form 10-K for the fiscal year ended September 3, 2026",
+      "publisher": "Micron Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm",
+      "type": "company_filing",
+      "published": "2026-10-09",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Sustaining our long-term vision and building a better future",
+      "publisher": "Micron Technology",
+      "url": "https://www.micron.com/about/blog/company/sustainability/sustaining-our-long-term-vision-and-building-a-better-future",
+      "type": "company_announcement",
+      "published": "2024-06-27",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Partly operating means the first phase is producing while the second phase, described in 2023 as a similar-sized facility starting toward the second half of the decade, has no cited construction. Government support is stated as shares of project cost rather than amounts. The first-in-India description is Micron's own: CG Semi's G1 assembly and test plant, also in Sanand, was inaugurated as a pilot-scale line in August 2025, before Micron's February 2026 opening (see osat-cg-semi-sanand-g1).",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Reworded the summary's description of what the plant does so it no longer follows the opening release's wording. Audit fixes (2026-11-07): attributed the first-in-India description to Micron instead of stating it as fact, and noted that CG Semi's Sanand G1 plant was inaugurated as a pilot line earlier, in August 2025."
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "infineon-kulim-3-sic-fab",
+  "name": "Infineon Kulim 3 silicon carbide power fab",
+  "aliases": [
+    "Kulim 3",
+    "Kulim Module Three"
+  ],
+  "company": "Infineon",
+  "operator": "Infineon Technologies",
+  "parties": [
+    {
+      "name": "Infineon Technologies",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Malaysia",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "The prime minister welcomed the 2023 expansion and attended the 2024 opening; no incentive amount is stated in the cited sources."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "silicon_carbide",
+    "gallium_nitride"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "A third front-end module at Infineon's Kulim site in Malaysia for silicon carbide power semiconductors, with gallium nitride epitaxy, on 200 mm wafers. Announced in February 2022 as a module of more than €2 billion, it was enlarged in August 2023 with a second construction phase of up to €5 billion. The first phase opened in August 2024 and Infineon reported a volume production ramp in fiscal 2025, but in November 2024 the company postponed the second phase and further cleanroom capacity because of weak demand.",
+  "location": {
+    "country": "MY",
+    "admin1": "Kedah",
+    "locality": "Kulim",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Third module at Infineon's existing Kulim manufacturing site."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2025-11",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-02-17",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "First phase; the opening release gives about €2 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2023-08-03",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Second construction phase over five years; postponed in November 2024."
+    },
+    {
+      "metric": "jobs",
+      "value": 900,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-08-08",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "High-value jobs from the first phase."
+    },
+    {
+      "metric": "jobs",
+      "value": 4000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-08-08",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Jobs across both phases."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-02-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2022-06",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction start planned for June 2022 at announcement."
+    },
+    {
+      "event": "first_production",
+      "date": "2024-H2",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "At announcement Infineon expected the fab to be ready for equipment in summer 2024 and the first wafers in the second half of 2024."
+    },
+    {
+      "event": "announced",
+      "date": "2023-08-03",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Second construction phase announced."
+    },
+    {
+      "event": "opening",
+      "date": "2024-08-08",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Official opening of the first phase."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The 2025 annual report names the ramp-up of silicon carbide volume production in Kulim among the fiscal 2025 (October 2024 to September 2025) investment priorities."
+    },
+    {
+      "event": "paused",
+      "date": "2024-11-12",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Infineon said it would postpone further cleanroom capacity at Kulim, delaying the second phase."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Infineon doubles down on wide bandgap by investing more than €2 billion in a new Kulim, Malaysia frontend fab to expand market leadership in power semiconductors",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2022/infxx202202-053",
+      "type": "company_announcement",
+      "published": "2022-02-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Infineon to build the world’s largest 200-millimeter SiC Power Fab in Kulim, Malaysia, leading to total revenue potential of about seven billion euros by the end of the decade",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2023/infxx202308-140",
+      "type": "company_announcement",
+      "published": "2023-08-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Infineon opens the world’s largest and most efficient SiC power semiconductor fab in Malaysia",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2024/infxx202408-133",
+      "type": "company_announcement",
+      "published": "2024-08-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Infineon delays Kulim fab expansion",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/infineon-delays-kulim-fab-expansion",
+      "type": "trade_press",
+      "published": "2024-11-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Annual Report 2025",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/annual-reports/2025/2025-annual-report-v01-00-en.pdf",
+      "type": "company_report",
+      "published": "2025-11",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": null,
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the first-wafer target for the second half of 2024 from the 2022 announcement and clarified the fiscal-year span of the volume ramp; other statements matched their sources and no newer reporting changes the status."
+  }
+}

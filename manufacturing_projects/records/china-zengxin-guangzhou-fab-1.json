@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "id": "china-zengxin-guangzhou-fab-1",
+  "name": "Zengxin FAB1, Guangzhou",
+  "aliases": [
+    "广州增芯科技 FAB1"
+  ],
+  "company": "Zengxin Technology",
+  "operator": "Guangzhou Zengxin Technology (广州增芯科技)",
+  "parties": [
+    {
+      "name": "Guangzhou Zengxin Technology (广州增芯科技)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "mems_sensors",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "130-55nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Mature processes, mainly for MEMS force sensors, with analog and ASIC platforms planned."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "The first of two planned fabs in Zengxin Technology's 300 mm MEMS and mature-node project in Guangzhou's Zengcheng district. The company plans CNY 37 billion over five years for 120,000 wafers a month across both fabs; the first phase of FAB1, at CNY 7 billion and 20,000 wafers a month, began line connection and production on 28 June 2024, and its first product wafer came off the line on 10 August 2024.",
+  "location": {
+    "country": "CN",
+    "admin1": "Guangdong",
+    "locality": "Guangzhou",
+    "site": "Zengcheng Economic and Technological Development Zone, Zengcheng District",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2025-01-02",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 37000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned over five years for the whole two-fab project."
+    },
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "FAB1 Phase 1",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 120000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total 300 mm wafers per month planned across FAB1 and FAB2."
+    },
+    {
+      "metric": "capacity",
+      "value": 20000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "FAB1 Phase 1",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm wafers per month for FAB1 Phase 1."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "FAB1 Phase 2",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional 300 mm wafers per month planned for FAB1 Phase 2."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2024-06-28",
+      "planned": false,
+      "phase_label": "FAB1 Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Start of line connection and production; the first product wafer came off the line on 10 August 2024."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-12",
+      "planned": true,
+      "phase_label": "FAB1 Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target for reaching 20,000 wafers a month by the end of 2025; no later report on whether it was met was found."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "多条12英寸晶圆产线，正式投产！",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20250102-37755.html",
+      "type": "trade_press",
+      "published": "2025-01-02",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The cited source splits the 120,000-wafer plan into FAB1 Phase 1 (20,000), FAB1 Phase 2 (40,000) and a second fab (60,000); only FAB1 Phase 1 is reported as producing. The record rests on one trade-press report; no operator or government source could be opened for it, and ownership is not stated there.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the summary (the first product wafer came off the line, it was not reported shipped), named the development zone, added the FAB1 Phase 2 capacity and the end-2025 output target, and noted that the project comprises two fabs. No newer reporting was found."
+  }
+}

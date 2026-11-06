@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "id": "sony-koshi-image-sensor-fab",
+  "name": "Sony Koshi image sensor fab (Advanced Vision Semiconductor Manufacturing)",
+  "aliases": [
+    "Advanced Vision Semiconductor Manufacturing Corporation",
+    "Sony Koshi fab"
+  ],
+  "company": "Sony",
+  "operator": "Advanced Vision Semiconductor Manufacturing Corporation",
+  "parties": [
+    {
+      "name": "Sony Semiconductor Solutions",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Built the Koshi fab and plans to be the sole controlling shareholder of the venture, which is to be consolidated by Sony Group."
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company (TSMC)",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Minority partner contributing cash and its process technology and manufacturing expertise."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "image_sensor"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A fab that Sony has newly built in Koshi, Kumamoto Prefecture, which Sony and TSMC plan to turn into a joint venture for development and volume production of smartphone image sensors with advanced process technology. A non-binding memorandum was signed in May 2026 and a binding agreement in August 2026 to set up Advanced Vision Semiconductor Manufacturing Corporation, with Sony in control. Sony plans to contribute about ¥465 billion, partly by transferring the fab, and TSMC about ¥282 billion in cash, in phases tied to demand; the venture expects volume production in 2029, subject to approvals and Japanese government support for further investment.",
+  "location": {
+    "country": "JP",
+    "admin1": "Kumamoto",
+    "locality": "Koshi",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-11",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 465000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-08-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Sony's planned contribution in cash and assets, including the Koshi fab, to be made in phases."
+    },
+    {
+      "metric": "investment",
+      "value": 282000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-08-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TSMC's planned cash contribution, to be made in phases."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "building_complete",
+      "date": "2026-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Completion date not stated; Sony described the Koshi fab as newly constructed when the venture was first announced in May 2026, with development and production lines still to be set up."
+    },
+    {
+      "event": "announced",
+      "date": "2026-05-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Non-binding memorandum of understanding for the joint venture."
+    },
+    {
+      "event": "volume_production",
+      "date": "2029",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Expected start of volume production by the joint venture."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sony Semiconductor Solutions and TSMC Enter Preliminary Agreement for Next-Generation Image Sensor Strategic Partnership",
+      "publisher": "Sony Semiconductor Solutions",
+      "url": "https://www.sony-semicon.com/en/news/2026/2026050801.html",
+      "type": "company_announcement",
+      "published": "2026-05-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Sony Semiconductor Solutions and TSMC Agreed to Establish Joint Venture for Next-Generation Image Sensors",
+      "publisher": "Sony Semiconductor Solutions",
+      "url": "https://www.sony-semicon.com/en/news/2026/2026081101.html",
+      "type": "company_announcement",
+      "published": "2026-08-11",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The joint venture's establishment depends on regulatory approvals and closing conditions. Sony said in May 2026 that it was also considering new investment at its existing Nagasaki plant; that is not part of this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

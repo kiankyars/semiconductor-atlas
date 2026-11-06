@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-arizona-advanced-packaging",
+  "name": "TSMC Arizona advanced packaging facilities, Phoenix",
+  "aliases": [
+    "TSMC Arizona advanced packaging fabs"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Named as the company building and planning to run the packaging facilities; the sources do not name TSMC Arizona Corporation for them."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "project",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "CoWoS",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Packaging capability TSMC plans to install before 2029."
+    },
+    {
+      "label": "3D-IC",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Packaging capability TSMC plans to install before 2029."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "TSMC's planned advanced packaging plants at its Phoenix, Arizona site. Two packaging facilities were part of the March 2025 expansion of its U.S. plans. In January 2026 TSMC said it was applying for permits for the first packaging fab, and its Arizona site reports that initial construction began in early 2026; the company aims to have CoWoS and 3D-IC capability there before 2029. The further US$100 billion Arizona plan announced in July 2026 includes more packaging fabs. TSMC has not named the individual facilities or given their capacity or a separate investment figure.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Phoenix",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Planned at TSMC's existing Arizona site in Phoenix."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-23",
+  "status_source_ids": [
+    "s2",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 165000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-03-04",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total planned U.S. investment covering six fabs, two advanced packaging facilities and an R&D centre; no separate packaging figure was given."
+    },
+    {
+      "metric": "investment",
+      "value": 265000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-16",
+      "source_ids": [
+        "s2",
+        "s7"
+      ],
+      "note": "Planned Arizona total covering fabs, packaging facilities and an R&D centre after the July 2026 addition."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-03-04",
+      "planned": false,
+      "phase_label": "First and second packaging facilities",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2026-H1",
+      "planned": false,
+      "phase_label": "First packaging facility",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "TSMC reported permit applications in January 2026; its Arizona site page says initial construction started in early 2026."
+    },
+    {
+      "event": "announced",
+      "date": "2026-07-16",
+      "planned": false,
+      "phase_label": "Additional packaging fabs (2026 plan)",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Additional packaging fabs were included in a further US$100 billion Arizona investment, without a timetable."
+    },
+    {
+      "event": "first_production",
+      "date": "2029",
+      "planned": true,
+      "phase_label": "First packaging facility",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "The operator's deputy co-chief operating officer said CoWoS and 3D-IC capability would be in place before 2029; one report describes operation starting in 2029."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC Intends to Expand Its Investment in the United States to US$165 Billion to Power the Future of AI",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3210",
+      "type": "company_announcement",
+      "published": "2025-03-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "TSMC Arizona - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/static/abouttsmcaz/index.htm",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "TSMC plans chip packaging plant in Arizona by 2029",
+      "publisher": "Taiwan News",
+      "url": "https://www.taiwannews.com.tw/en/news/6346300",
+      "type": "news",
+      "published": "2026-04-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "TSMC Starts Work On Arizona Packaging Plant",
+      "publisher": "Silicon UK",
+      "url": "https://www.silicon.co.uk/workspace/tsmc-arizona-packaging-629579",
+      "type": "trade_press",
+      "published": "2026-04-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Q2 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-07-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "TSMC announces additional US$100 billion investment in Arizona",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202607160019",
+      "type": "news",
+      "published": "2026-07-16",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "tsmc-arizona-fab-21",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The operator is TSMC rather than its subsidiary TSMC Arizona Corporation, which runs the wafer fabs: TSMC's Arizona page attributes the packaging construction start to the company without naming the subsidiary, and the April 2026 reports name TSMC as the builder and operator.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the unsupported claims that this is TSMC's first U.S. packaging investment and that the site is in north Phoenix, and reworded the permit and construction-start statements to match what TSMC said in January 2026 and on its Arizona page. Audit fixes (2026-11-07): checked the operator against tsmc-arizona-fab-21 and kept TSMC, because the cited sources name TSMC, not TSMC Arizona Corporation, as building and running the packaging facilities; added a note and party note saying so."
+  }
+}

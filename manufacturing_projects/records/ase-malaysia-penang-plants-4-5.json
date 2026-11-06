@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0",
+  "id": "ase-malaysia-penang-plants-4-5",
+  "name": "ASE Malaysia Plants 4 and 5, Penang",
+  "aliases": [
+    "ASEM Plant 4",
+    "ASEM Plant 5"
+  ],
+  "company": "ASE",
+  "operator": "ASE Malaysia (ASEM)",
+  "parties": [
+    {
+      "name": "ASE Malaysia (ASEM)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Malaysian subsidiary of ASE; a Penang news report of April 2026 calls it ASE Electronics Malaysia."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "campus",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test",
+    "image_sensor"
+  ],
+  "process_nodes": [
+    {
+      "label": "Copper clip packaging",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named in 2022 as a focus product type for the new buildings."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Two new assembly and test buildings, Plants 4 and 5, at ASE Malaysia in the Bayan Lepas Free Industrial Zone, Penang. ASE broke ground in November 2022 on a five-year, USD 300 million expansion with about 982,000 square feet of built-up space, first aimed at copper clip and image sensor packages. ASE launched Plant 5 in February 2025, presenting it as added advanced packaging and test capacity amid rising AI chip demand. The Edge later put the outlay for the two plants at about RM3 billion and reported that they should be fully operational within three to five years. No opening date has been reported for Plant 4, where the state's chief minister led an official visit in April 2026.",
+  "location": {
+    "country": "MY",
+    "admin1": "Penang",
+    "locality": "Bayan Lepas",
+    "site": "Bayan Lepas Free Industrial Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-04-21",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 300000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-11-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Five-year plan covering added floor space, equipment and engineering staff for the expansion."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "MYR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Combined outlay for Plants 4 and 5 as reported by The Edge."
+    },
+    {
+      "metric": "jobs",
+      "value": 2700,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-11-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional local jobs expected from the expansion announced in 2022."
+    },
+    {
+      "metric": "jobs",
+      "value": 1500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-02-18",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Additional employees expected over the following few years, stated at the Plant 5 launch for the wider Malaysian expansion."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2022-11-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "The 2022 release scheduled completion of both buildings for 2025. No completion date was reported for either: Plant 5 was launched in February 2025, and Plant 4 hosted an official visit in April 2026."
+    },
+    {
+      "event": "opening",
+      "date": "2025-02-18",
+      "planned": false,
+      "phase_label": "Plant 5",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "ASE officially launched Plant 5."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ASE Breaks Ground on New Chip Assembly and Testing Facility in Penang, Malaysia",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/asem-groundbreaking",
+      "type": "company_announcement",
+      "published": "2022-11-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "ASE Expands its Chip Packaging and Testing Facility to Enable Next-Gen Applications",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/asem-launch-p5",
+      "type": "company_announcement",
+      "published": "2025-02-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Taiwanese OSAT giant ASE doubles down on Malaysia amid US-China trade war",
+      "publisher": "The Edge Malaysia",
+      "url": "https://theedgemalaysia.com/node/754128",
+      "type": "news",
+      "published": "2025-05",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "CM Chow holds strategic discussion with Taiwan representatives at ASE Plant 4",
+      "publisher": "Buletin Mutiara",
+      "url": "https://www.buletinmutiara.com/cm-chow-holds-strategic-discussion-with-taiwan-representatives-at-ase-plant-4/",
+      "type": "news",
+      "published": "2026-04-21",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "No opening or production date for Plant 4 was found. The status rests on the February 2025 launch of Plant 5 and on an April 2026 Penang report of an official visit held at Plant 4, which does not say when that plant began production. The sources describe the two plants together, with one investment, schedule and ramp, so they are kept in one record. The 2022 release said the expansion would double ASE Malaysia's floor space to about 2 million square feet. The 2025 figures cover the whole Malaysian operation: The Edge reports about 1 million square feet existing, about 1 million added by Plants 4 and 5 and a later 1.4 million square foot phase, for about 3.4 million in total. The later phase is outside this record. The Edge article first appeared in its weekly edition of 5 to 11 May 2025.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added The Edge Malaysia report with the RM3 billion outlay for Plants 4 and 5 and the three-to-five-year ramp, set the operator to ASE Malaysia, re-scoped the 1,500-job figure to the wider expansion, explained the 3.4 million square foot total in the notes and updated status_as_of. Audit fixes (2026-11-07): kept the two plants in one record because no source gives Plant 4 its own status or dates; added an April 2026 Penang report of an official visit held at Plant 4 as status evidence and refreshed the status date; noted that the 2025 completion target passed without a reported completion date for either building; and recorded the operator's other published name."
+  }
+}

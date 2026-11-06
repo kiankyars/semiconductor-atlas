@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "id": "globalfoundries-dresden-sprint-expansion",
+  "name": "Dresden SPRINT expansion",
+  "aliases": [
+    "SPRINT"
+  ],
+  "company": "GlobalFoundries",
+  "operator": "GlobalFoundries",
+  "parties": [
+    {
+      "name": "GlobalFoundries",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Federal Government of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Expected in October 2025 to support the project under the European Chips Act, with EU approval then pending; GlobalFoundries described the project as supported by the EU, the federal government and Saxony in October 2026."
+    },
+    {
+      "name": "Free State of Saxony",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Supports the project alongside the federal government under the European Chips Act."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A €1.1 billion expansion of cleanroom and manufacturing infrastructure at GlobalFoundries' Dresden site in Germany, announced in October 2025 with expected German federal and Saxon support under the European Chips Act. The aim is to lift the site's output above one million 300 mm wafers a year by the end of 2028. In October 2026 GlobalFoundries held a topping-out ceremony marking the end of this construction phase, on schedule and budget, while the existing fab kept running.",
+  "location": {
+    "country": "DE",
+    "admin1": "Saxony",
+    "locality": "Dresden",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1100000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 1000000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Output target for the whole Dresden site by end of 2028, in 300 mm wafers per year; the site had up to about 950,000 before the expansion."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-28",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2026-10-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Topping-out ceremony marking completion of the construction phase."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target to exceed one million wafers a year at the site by end of 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "GlobalFoundries Plans Billion-Euro Investment to Expand Chip Manufacturing in Germany",
+      "publisher": "GlobalFoundries",
+      "url": "https://gf.com/gf-press-release/globalfoundries-plans-billion-euro-investment-to-expand-chip-manufacturing-in-germany/",
+      "type": "company_announcement",
+      "published": "2025-10-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "GlobalFoundries marks Dresden expansion milestone, announces next-generation platform for Physical AI",
+      "publisher": "GlobalFoundries",
+      "url": "https://gf.com/news-and-events/news/globalfoundries-marks-dresden-expansion-milestone-announces-next-generation-platform-for-physical-ai/",
+      "type": "company_announcement",
+      "published": "2026-10-09",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The capacity figure describes the whole site after the expansion, not the added capacity alone; the sources do not give the increment.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Updated the government party notes to reflect GlobalFoundries' October 2026 description of the public support; all other statements were confirmed."
+  }
+}

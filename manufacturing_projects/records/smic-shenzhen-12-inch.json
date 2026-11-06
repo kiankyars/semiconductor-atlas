@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "id": "smic-shenzhen-12-inch",
+  "name": "SMIC Shenzhen 12-inch Fab",
+  "aliases": [
+    "Semiconductor Manufacturing International (Shenzhen) Corporation 12-inch line",
+    "SMIZ 12-inch fab"
+  ],
+  "company": "SMIC",
+  "operator": "Semiconductor Manufacturing International (Shenzhen) Corporation",
+  "parties": [
+    {
+      "name": "Semiconductor Manufacturing International Corporation",
+      "role": "owner",
+      "share_pct": 55.05,
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6"
+      ],
+      "note": "Planned about 55% after the 2021 capital contribution; its 2025 annual results and first-half 2026 report show 55.05% of a registered capital of USD 2,415 million."
+    },
+    {
+      "name": "Shenzhen Major Industry Investment Group",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Shenzhen state-owned investor planned to hold no more than 23%."
+    },
+    {
+      "name": "Shenzhen Municipal People's Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Counterparty to the March 2021 cooperation framework agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm and above",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "A 2021 Pingshan district project notice listed display-driver and power-management chips."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "A 300 mm foundry line in Shenzhen's Pingshan District run by SMIC's Shenzhen subsidiary. Under a March 2021 framework agreement with the Shenzhen government, SMIC planned USD 2.35 billion of new investment for about 40,000 wafers a month on 28nm and older processes, aimed at display-driver and power-management chips. SMIC reported that the line entered production by the end of 2022.",
+  "location": {
+    "country": "CN",
+    "admin1": "Guangdong",
+    "locality": "Shenzhen",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "The fab is in Pingshan District, according to a 2021 district project notice reported by trade press."
+  },
+  "status": "operating",
+  "status_as_of": "2023-02-09",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2350000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-03-17",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Estimated new investment, subject to a definitive agreement."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-03-17",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Eventual 300 mm wafers per month."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-03-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cooperation framework agreement with the Shenzhen government disclosed."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Production start expected at the time of the 2021 agreement."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "SMIC said the fab entered production by the end of 2022; Jiemian later called Runpeng's line the second 300 mm line to start production in Shenzhen, after SMIC's."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Inside Information: Entering into of Cooperation Framework Agreement in relation to the Development of 12-inch Wafer Production Facilities in Shenzhen",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2021/0317/2021031701278.pdf",
+      "type": "company_filing",
+      "published": "2021-03-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SMIC Reports 2022 Fourth Quarter Results",
+      "publisher": "Semiconductor Manufacturing International Corporation (via PR Newswire Asia)",
+      "url": "https://en.prnasia.com/releases/apac/smic-reports-2022-fourth-quarter-results-392648.shtml",
+      "type": "company_announcement",
+      "published": "2023-02-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "深圳加速补齐芯片制造短板，第二条12英寸项目通线投产",
+      "publisher": "Jiemian News",
+      "url": "https://m.jiemian.com/article/12203409.html",
+      "type": "news",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Announcement of 2025 Annual Results",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032601294.pdf",
+      "type": "company_filing",
+      "published": "2026-03-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "中芯深圳扩产背后：电源管理 IC 转 12 英寸疑云再起",
+      "publisher": "Ijiwei (via IT Home)",
+      "url": "https://www.ithome.com/0/583/155.htm",
+      "type": "trade_press",
+      "published": "2021-10-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "中芯国际集成电路制造有限公司2026年半年度报告",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225520297.PDF",
+      "type": "company_filing",
+      "published": "2026-08-28",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The operating status rests on SMIC's report that the line entered production by the end of 2022; SMIC's later results releases no longer report progress by fab, and no newer dated source read for this record confirms production on this line, so the status is unconfirmed since February 2023. Jiemian's undated report on the Runpeng line, which started on 31 December 2024, still called SMIC's the first 300 mm line producing in Shenzhen. SMIC's 2025 annual results and first-half 2026 report list SMIC Shenzhen among the subsidiaries on the mandatory environmental disclosure list, and the first-half 2026 report carries a Shenzhen plant expansion project at 98% of its budget without saying which line it covers.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a 2021 trade report of the Pingshan district project notice for the site and the display-driver and power-management focus, added the analog segment, and reworded the Jiemian note; no newer reporting was found. Audit fixes (2026-11-07): checked SMIC's first-half 2026 report, the newest SMIC filing, which does not report on this line, so the status and its February 2023 date are kept with a note that they are unconfirmed since then; added that report for the 55.05% stake, and relabelled the IT Home copy of the Ijiwei report as Ijiwei trade press read via IT Home."
+  }
+}

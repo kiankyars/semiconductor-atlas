@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-jasm-kumamoto-fab-2",
+  "name": "JASM Kumamoto Fab 2",
+  "aliases": [
+    "JASM second fab",
+    "TSMC Kumamoto second fab"
+  ],
+  "company": "TSMC",
+  "operator": "Japan Advanced Semiconductor Manufacturing, Inc. (JASM)",
+  "parties": [
+    {
+      "name": "Japan Advanced Semiconductor Manufacturing, Inc. (JASM)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "owner",
+      "share_pct": 86.5,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Majority owner; stakes as planned in February 2024 after the second-fab investment."
+    },
+    {
+      "name": "Sony Semiconductor Solutions Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": 6.0,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "DENSO Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": 5.5,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Toyota Motor Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": 2.0,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Japan",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Announced 732 billion yen in subsidies for the second fab in February 2024; in October 2025 the economy ministry's support was described as up to about 730 billion yen."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "6nm",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Node reported for the fab when construction began in 2025."
+    },
+    {
+      "label": "3nm",
+      "source_ids": [
+        "s6",
+        "s7",
+        "s8",
+        "s9"
+      ],
+      "note": "TSMC switched the fab's plan to 3nm in 2026."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "The second fab of JASM, TSMC's majority-owned Kumamoto venture with Sony Semiconductor Solutions, DENSO and Toyota, built directly east of the first fab in Kikuyo. Announced in February 2024 with operation targeted by the end of 2027, it was backed by about 732 billion yen in Japanese subsidies. Construction was set for late 2024 but the main works began in October 2025, when about US$13.9 billion was reported for a 6nm fab. In 2026 TSMC changed the plan to 3nm, approved by Taiwan's government in March 2026, and now schedules volume production for 2028.",
+  "location": {
+    "country": "JP",
+    "admin1": "Kumamoto",
+    "locality": "Kikuyo",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s4"
+    ],
+    "note": "Directly east of JASM's first fab."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-15",
+  "status_source_ids": [
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 13900000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-10-24",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported when the main works began, under the 6nm plan; the source gives the amount in dollars, with about 2.125 trillion yen alongside."
+    },
+    {
+      "metric": "investment",
+      "value": 2125000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-10-24",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The same amount as the US$13.9 billion figure, stated in yen by the source."
+    },
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-02-06",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total investment in JASM across both Kumamoto fabs."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 732000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-02-24",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Subsidy announced by Japan's economy minister for the second fab; a later report describes it as a ceiling of about 730 billion yen."
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-02-06",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "12-inch (300 mm) wafers per month for both JASM fabs combined."
+    },
+    {
+      "metric": "jobs",
+      "value": 3400,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-02-06",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Direct high-tech jobs expected across both fabs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-02-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Original target to start construction by the end of 2024."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Main works were due to begin in October 2025 after a siting agreement with Kikuyo town and Kumamoto Prefecture on 24 October; TSMC said in January 2026 that construction had started."
+    },
+    {
+      "event": "first_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Operation by the end of 2027 was the target in the 2024 plan and again in October 2025."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s6",
+        "s8",
+        "s9"
+      ],
+      "note": "Schedule under the 3nm plan."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "JASM Set to Expand in Kumamoto Japan",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3105",
+      "type": "company_announcement",
+      "published": "2024-02-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "TSMC Celebrates the Opening of JASM in Kumamoto, Japan",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3113",
+      "type": "company_announcement",
+      "published": "2024-02-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Japan announces subsidies for second chip fab by Taiwan's TSMC",
+      "publisher": "Taiwan News",
+      "url": "https://www.taiwannews.com.tw/en/news/5101825",
+      "type": "news",
+      "published": "2024-02-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "ＴＳＭＣ、第２工場を月内着工＝２７年末稼働へ、熊本県菊陽町と協定",
+      "publisher": "Jiji Press via Business+IT",
+      "url": "https://www.sbbit.jp/article/refers/173982",
+      "type": "news",
+      "published": "2025-10-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Q1 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-04/3cef85204275f94fd111485cfdf4adb3c0263c45/TSMC%201Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-04-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Taiwan government approves TSMC's 3nm upgrade for second Japan fab",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202603310027",
+      "type": "news",
+      "published": "2026-03-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Q2 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-07-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "Q3 2026 Taiwan Semiconductor Manufacturing Company Limited Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-10-15",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "tsmc-jasm-kumamoto-fab-1",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The 2026 earnings calls (April, July and October) describe the second fab's 3nm plan as progressing toward volume production in 2028 without describing the construction work itself; construction evidence comes from the October 2025 Jiji report and TSMC's January 2026 call.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Cited the October 2025 Jiji report for the subsidy ceiling alongside Taiwan News, and corrected milestone notes: the siting agreement also involved Kumamoto Prefecture, and the end-2027 target was not tied to a 6/7nm plan in the cited sources. Audit fixes (2026-11-07): cited the April, July and October 2026 earnings calls, which show the fab still progressing toward 2028 volume production, for the status and moved status_as_of to 2026-10-15; added the about 2.125 trillion yen figure the Jiji report gives alongside its US$13.9 billion, keeping the dollar figure because the source states it."
+  }
+}

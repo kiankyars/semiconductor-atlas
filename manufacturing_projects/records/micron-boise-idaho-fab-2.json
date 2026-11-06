@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-boise-idaho-fab-2",
+  "name": "Micron Idaho Fab 2, Boise",
+  "aliases": [
+    "ID2",
+    "Second Idaho fab"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The June 2025 amendment of Micron's CHIPS Act agreements brought this fab under the existing award."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A second leading-edge DRAM fab on Micron's Boise campus, announced in June 2025 as part of an expanded U.S. investment plan and placed under the company's existing CHIPS Act funding. Micron says construction began in 2026 and expects initial wafer output by late calendar 2028, ahead of the first New York fab.",
+  "location": {
+    "country": "US",
+    "admin1": "Idaho",
+    "locality": "Boise",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "government_incentive",
+      "value": 6100000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-06",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "CHIPS Act direct funding agreements signed in December 2024 for one Boise fab and two Clay, New York fabs; amended in June 2025 to add the second Boise fab without raising the total."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 600000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Per-fab cleanroom stated on the undated federal award page for each Idaho fab."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-06-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2026",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Initial wafer output expected by late calendar 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron Technology, Inc. Form 10-K for the fiscal year ended September 3, 2026",
+      "publisher": "Micron Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm",
+      "type": "company_filing",
+      "published": "2026-10-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Micron and Trump Administration Announce Expanded U.S. Investments in Leading-Edge DRAM Manufacturing and R&D",
+      "publisher": "Micron Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465925058741/tm2517778d1_ex99-1.htm",
+      "type": "company_announcement",
+      "published": "2025-06-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Micron (Idaho)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/micron-idaho-boise",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Micron Accelerates U.S. Investments, Pours First Concrete at New York Fab",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Accelerates-U-S--Investments-Pours-First-Concrete-at-New-York-Fab/default.aspx",
+      "type": "company_announcement",
+      "published": "2026-07-09",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "micron-boise-idaho-fab-1",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Micron has said that once this fab is complete it intends to bring HBM advanced packaging to the United States; no site or amount for that step is recorded here.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:79584eab-7866-51de-8797-40f71a428ed3",
+      "relation": "award_page",
+      "note": "The award covers two high-volume fabs at Boise together."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

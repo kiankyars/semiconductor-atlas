@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0",
+  "id": "kioxia-yokkaichi-fab7",
+  "name": "Kioxia Yokkaichi Fab7",
+  "aliases": [
+    "Y7"
+  ],
+  "company": "Kioxia",
+  "operator": "Kioxia Corporation",
+  "parties": [
+    {
+      "name": "Kioxia Corporation",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "Western Digital",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Formally agreed in April 2022 to invest jointly in the first phase."
+    },
+    {
+      "name": "Sandisk",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Named in 2026 as Kioxia's joint venture partner at the Yokkaichi Plant; the two extended their joint venture framework there through December 2034."
+    },
+    {
+      "name": "Government of Japan",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Approved a subsidy for the joint venture's Fab7 investment."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [
+    {
+      "label": "6th-generation 162-layer 3D flash memory",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "label": "112-layer 3D flash memory",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "The sixth flash memory fab at Kioxia's Yokkaichi Plant in Mie Prefecture, Japan, built as a joint venture with Western Digital; Kioxia's 2026 releases name Sandisk as its Yokkaichi partner. Announced in October 2020, it broke ground in February 2021 and opened in October 2022 after its first construction phase, with a Japanese government subsidy covering part of the cost. It was built for 112-layer and 162-layer flash, with output ramping in stages. Kioxia's 2025 integrated report says Fab7 started operation in October 2022, and a December 2025 Kioxia release describes wafer processing in the fab.",
+  "location": {
+    "country": "JP",
+    "admin1": "Mie",
+    "locality": "Yokkaichi",
+    "site": "Yokkaichi Plant",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s5",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2025-12-18",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s9",
+    "s10"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-10-26",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Expected total for the first phase."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 92900000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-07-26",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2020-10-29",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2021-02-25",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2022",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target of spring 2022 for the first phase."
+    },
+    {
+      "event": "building_complete",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "The April and July 2022 releases report the first construction phase as finished."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Initial output targeted for fall 2022."
+    },
+    {
+      "event": "opening",
+      "date": "2022-10-26",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s10"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Kioxia Corporation to Expand 3D Flash Memory Production Capacity by Building New Fabrication Facility at Yokkaichi Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2020/20201029-1.html",
+      "type": "company_announcement",
+      "published": "2020-10-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Kioxia Commences Construction of New Fabrication Facility at Yokkaichi Plant to Support Sixth-Generation 3D Flash Memory Production",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2021/20210225-1.html",
+      "type": "company_announcement",
+      "published": "2021-02-25",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Kioxia and Western Digital Jointly Invest in New Flash Memory Manufacturing Facility in Yokkaichi Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2022/20220415-1.html",
+      "type": "company_announcement",
+      "published": "2022-04-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Kioxia and Western Digital's Joint Venture To Receive Up To 92.9 Billion Yen Government Subsidy for Yokkaichi Fab 7",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2022/20220726-1.html",
+      "type": "company_announcement",
+      "published": "2022-07-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Kioxia and Western Digital Celebrate the Opening of Fab7 at Yokkaichi, Japan",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2022/20221026-1.html",
+      "type": "company_announcement",
+      "published": "2022-10-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Yokkaichi Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/yokkaichi.html",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "History of Yokkaichi Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/yokkaichi/history.html",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Kioxia and Sandisk to Invest Over $31 Billion in Japan, Extending Leadership in Memory Industry",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html",
+      "type": "company_announcement",
+      "published": "2026-08-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "Kioxia Collaborates with Linus Media Group for In-depth Flash Memory Fab Video",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2025/20251218-1.html",
+      "type": "company_announcement",
+      "published": "2025-12-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s10",
+      "title": "4.Management Capital - Integrated Report 2025",
+      "publisher": "Kioxia Holdings",
+      "url": "https://www.kioxia-holdings.com/content/dam/kioxia-hd/en-jp/ir/library/integrated-report/2025/asset/Integrated-Report-2025-04-en.pdf",
+      "type": "company_report",
+      "published": "2025",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Kioxia planned Fab7 in two construction phases so production could continue during the work. The cited sources describe only the first phase; none, including Kioxia's 2025 integrated report, its December 2025 release and the August 2026 Kioxia and Sandisk investment release, reports the start or completion of a second phase. No investment figure covering the whole fab, including a second phase, has been published. The integrated report gives no publication date beyond its fiscal 2024 reporting year; it mentions events of September 2025, so it is dated 2025.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 2026 Kioxia and Sandisk release to record Sandisk as the current Yokkaichi joint venture partner, and cited the April and July 2022 releases for the completed first construction phase. Audit fixes (2026-11-07): added Kioxia's December 2025 release on a filmed tour of Fab7's production lines and the Kioxia Holdings 2025 integrated report, which says Fab7 started operation in October 2022, to support the operating status (status_as_of moved from 2022-10-26 to 2025-12-18); neither reports a second construction phase."
+  }
+}

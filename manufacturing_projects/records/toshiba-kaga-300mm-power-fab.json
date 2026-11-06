@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "id": "toshiba-kaga-300mm-power-fab",
+  "name": "Kaga Toshiba 300 mm power semiconductor fab",
+  "aliases": [
+    "Kaga Toshiba new 300 mm fab"
+  ],
+  "company": "Toshiba",
+  "operator": "Kaga Toshiba Electronics",
+  "parties": [
+    {
+      "name": "Kaga Toshiba Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Toshiba's main discrete semiconductor production subsidiary."
+    },
+    {
+      "name": "Toshiba Electronic Devices & Storage Corporation",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Parent company that announced and is investing in the fab."
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Recognized the ROHM and Toshiba power device plan in December 2023 with a subsidy of up to one third of the joint investment; Toshiba expects the grant to cover part of its equipment spending."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "A new 300 mm wafer fab for silicon power semiconductors, mainly MOSFETs and IGBTs, at Kaga Toshiba Electronics in Nomi, Ishikawa Prefecture. Toshiba announced it in February 2022 as a building to be built in two phases, began construction in April 2023 and held the completion ceremony for the first-phase building in May 2024. Mass production began in February 2025. At full first-phase operation Toshiba expects 2.5 times its fiscal 2021 power semiconductor capacity, measured in 200 mm equivalents; the timing of the second phase depends on market conditions. The fab is part of a joint ROHM and Toshiba plan certified for subsidy by Japan's industry ministry.",
+  "location": {
+    "country": "JP",
+    "admin1": "Ishikawa",
+    "locality": "Nomi",
+    "site": "Kaga Toshiba Electronics",
+    "address": "1-1 Iwauchi-machi, Nomi-shi, Ishikawa, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2025-06-17",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 99100000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-12-08",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Toshiba Electronic Devices & Storage and Kaga Toshiba's share of the joint plan with ROHM, for silicon power devices at Kaga Toshiba."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 129400000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2023-12-08",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Maximum METI subsidy, one third of the ¥388.3 billion joint plan that covers this fab and the LAPIS Semiconductor Miyazaki Plant No. 2 silicon carbide site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-02-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2023",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "At announcement, construction was planned to start in spring 2023 and finish in spring 2024."
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-04",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2024-05-23",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Completion ceremony for the fab and an office building; equipment installation followed."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-02",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Toshiba to Expand Power Semiconductor Production Capacity with 300-millimeter Wafer Fabrication Facility",
+      "publisher": "Toshiba Electronic Devices & Storage Corporation",
+      "url": "https://toshiba.semicon-storage.com/ap-en/company/news/news-topics/2022/02/corporate-20220204-1.html",
+      "type": "company_announcement",
+      "published": "2022-02-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Toshiba Starts Construction of 300-milimeter Wafer Fabrication Facility for Power Semiconductors",
+      "publisher": "Toshiba Electronic Devices & Storage Corporation",
+      "url": "https://toshiba.semicon-storage.com/ap-en/company/news/news-topics/2023/04/corporate-20230424-1.html",
+      "type": "company_announcement",
+      "published": "2023-04-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "ROHM and Toshiba Agree to Collaborate in Manufacturing Power Devices",
+      "publisher": "Toshiba Electronic Devices & Storage Corporation",
+      "url": "https://toshiba.semicon-storage.com/eu/company/news/2023/12/corporate-20231208-1.html",
+      "type": "company_announcement",
+      "published": "2023-12-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Toshiba Completes New 300-Millimeter Wafer Fabrication Facility for Power Semiconductors",
+      "publisher": "Toshiba Electronic Devices & Storage Corporation",
+      "url": "https://toshiba.semicon-storage.com/ap-en/company/news/news-topics/2024/05/corporate-20240523-1.html",
+      "type": "company_announcement",
+      "published": "2024-05-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Kaga Toshiba and Himeji Semiconductor Introduce Off-site PPA Model",
+      "publisher": "Toshiba Electronic Devices & Storage Corporation",
+      "url": "https://toshiba.semicon-storage.com/ap-en/company/news/news-topics/2025/06/corporate-20250617-1.html",
+      "type": "company_announcement",
+      "published": "2025-06-17",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Toshiba says construction and start-up of the second phase will be decided according to market trends; no date has been given, so the record is partly operating. Toshiba had already begun 300 mm power production on a line in Kaga Toshiba's existing buildings in the second half of fiscal 2022; that line is not part of this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the METI web page, which now refuses automated access, and the certification dates only it supported; changed status from operating to partially operating because the announced second phase is unbuilt, and added the spring 2023 construction target."
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "infineon-dresden-smart-power-fab",
+  "name": "Infineon Smart Power Fab Dresden",
+  "aliases": [
+    "Smart Power Fab",
+    "MEGAFAB-DD"
+  ],
+  "company": "Infineon",
+  "operator": "Infineon Technologies",
+  "parties": [
+    {
+      "name": "Infineon Technologies",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "name": "Federal Government of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Granted the direct subsidy cleared by the European Commission; the federal economy ministry issued the final funding approval in May 2025."
+    },
+    {
+      "name": "European Commission",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approved the German aid measure under EU State aid rules and the Chips Act framework."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A new front-end fab at Infineon's existing Dresden site for discrete power semiconductors and analog/mixed-signal chips on 300 mm wafers, run together with Villach as one virtual fab. Construction began with a groundbreaking in May 2023. The European Commission cleared up to €920 million of German grant aid in February 2025 and the final national approval followed in May 2025. Infineon opened the plant on 2 July 2026, months earlier than planned; the Commission expects it to reach full capacity in 2031.",
+  "location": {
+    "country": "DE",
+    "admin1": "Saxony",
+    "locality": "Dresden",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Built as an expansion of Infineon's existing Dresden manufacturing site."
+  },
+  "status": "operating",
+  "status_as_of": "2026-07-02",
+  "status_source_ids": [
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-02",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Infineon's own investment, which Infineon calls the largest single investment in its history; approximately €5 billion when first announced."
+    },
+    {
+      "metric": "investment",
+      "value": 3500000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-02-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Investment amount the Commission names as supported by the German aid measure."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 920000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-05-08",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Direct grant approved by the Commission in February 2025, with final German funding approval in May 2025. Infineon puts total public funding for the site from the Chips Act and IPCEI ME/CT at about €1 billion."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-02",
+      "source_ids": [
+        "s1",
+        "s4",
+        "s5"
+      ],
+      "note": "New direct jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-02-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Infineon's boards approved the Dresden site and the company announced the start of the project, with about €5 billion of investment planned."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2023-05-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Construction began early after Germany allowed a project start ahead of the state aid decision."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "At the groundbreaking Infineon targeted the start of manufacturing for autumn 2026."
+    },
+    {
+      "event": "opening",
+      "date": "2026-07-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Opened several months ahead of schedule."
+    },
+    {
+      "event": "volume_production",
+      "date": "2031",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Commission states the plant will reach full capacity in 2031."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Infineon breaks ground for new plant in Dresden together with EU Commission President Ursula von der Leyen, German Federal Chancellor Olaf Scholz, Saxony's Prime Minister Michael Kretschmer and Dresden’s Mayor Dirk Hilbert",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2023/infxx202305-098",
+      "type": "company_announcement",
+      "published": "2023-05-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Commission approves €920 million German State aid measure to support Infineon in setting up a new semiconductor manufacturing facility",
+      "publisher": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_557/IP_25_557_EN.pdf",
+      "type": "government",
+      "published": "2025-02-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "German government issues final funding approval for new Infineon fab in Dresden",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2025/INFXX202505-100",
+      "type": "company_announcement",
+      "published": "2025-05-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "An impulse for Germany, Europe and the world: Infineon opens the world's largest fab for power semiconductors and analog/mixed-signal technologies in Dresden",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2026/ifxpr202607-117",
+      "type": "company_announcement",
+      "published": "2026-07-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Infineon kicks off new Fab in Dresden; Completion planned for 2026; Smart Power Fab will generate 1,000 new jobs",
+      "publisher": "Infineon Technologies",
+      "url": "https://www.infineon.com/press-release/2023/infxx202302-058",
+      "type": "company_announcement",
+      "published": "2023-02-16",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Infineon also invests in Dresden through its stake in the separate ESMC foundry joint venture, which is not part of this record. The building shell was topped out in April 2025.",
+  "registry_records": [
+    {
+      "record_id": "eea-industrial-reporting:eea_t_ied-eprtr_p_2007-2024_v16_r00:production-facility:https://registry.gdi-de.org/id/de.sn.sax4inspire.pf/70015932",
+      "relation": "same_site",
+      "note": "EU industrial-emissions reporting record for Infineon's Dresden site; its latest reporting year predates the new fab's opening."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Infineon's February 2023 announcement as a source and an announced milestone, and moved the investment figure's date to the July 2026 opening release; other statements matched their sources. Audit fixes (2026-11-07): Attributed the largest-single-investment claim in the investment note to Infineon, which makes it in its 2023 and 2026 releases."
+  }
+}

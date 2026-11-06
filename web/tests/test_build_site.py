@@ -8,6 +8,7 @@ import tempfile
 import unittest
 from urllib.parse import parse_qs, urlsplit
 
+from semiconductor_atlas import manufacturing_projects
 from web import build_site
 
 
@@ -429,6 +430,182 @@ class PublicSiteTests(unittest.TestCase):
             build_site.safe_url('javascript:alert(1)')
         with self.assertRaises(ValueError):
             build_site.safe_url('https://example.org/?unsafe="')
+
+
+def fixture_record(**changes) -> dict:
+    record = {
+        "schema_version": "1.0", "id": "example-fab-one", "name": "Example <Fab> One",
+        "aliases": [], "company": "Example & Co", "operator": "Example & Co Fab LLC", "parties": [],
+        "facility_type": "wafer_fab", "identity_scope": "named_facility", "segments": ["logic"],
+        "process_nodes": [], "wafer_sizes": [],
+        "summary": "A planned fab <script>alert(1)</script>.",
+        "location": {"country": "US", "admin1": "Texas", "locality": "Example City", "site": None,
+                     "address": None, "lat": None, "lon": None, "coordinate_source_ids": [],
+                     "precision": "locality", "source_ids": ["s1"], "note": None},
+        "status": "announced", "status_as_of": "2023-03-01", "status_source_ids": ["s1"],
+        "metrics": [{"metric": "investment", "value": 1650000000000, "value_max": None, "unit": "JPY",
+                     "qualifier": "approximately", "basis": "planned", "applies_to": "project",
+                     "phase_label": None, "as_of": "2023-03-01", "source_ids": ["s1"], "note": None}],
+        "milestones": [{"event": "volume_production", "date": "2027-H2", "planned": True,
+                        "phase_label": None, "source_ids": ["s1"], "note": None}],
+        "sources": [{"id": "s1", "title": "Announcement", "publisher": "Example & Co",
+                     "url": "https://example.com/a?b=1&c=2", "type": "company_announcement",
+                     "published": "2023-03-01", "accessed": "2026-11-06"}],
+        "related": [], "notes": None,
+    }
+    record.update(changes)
+    return record
+
+
+class ManufacturingPageTests(unittest.TestCase):
+    def test_tracked_records_publish_pages_downloads_and_working_links(self):
+        records = manufacturing_projects.load_records(build_site.MANUFACTURING)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "site"
+            result = build_site.build(output)
+            self.assertEqual(result["manufacturing_projects"], len(records))
+            listing = (output / "manufacturing/index.html").read_text()
+            self.assertEqual(listing.count("<tr data-mp "), len(records))
+            self.assertIn("Fab and packaging projects since 2020", listing)
+            self.assertIn("AI-assisted research (Claude)", listing)
+            dataset = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',
+                                           listing).group(1))
+            self.assertEqual(dataset["name"], "Semiconductor manufacturing projects")
+            bundle = manufacturing_projects.build_bundle(records)
+            download = output / build_site.MANUFACTURING_DOWNLOAD_PATH
+            self.assertEqual({x.name for x in download.iterdir()}, set(bundle))
+            for name, data in bundle.items():
+                self.assertEqual((download / name).read_bytes(), data)
+            sitemap = (output / "sitemap.xml").read_text()
+            index = (output / "index.html").read_text()
+            self.assertIn('href="' + build_site.BASE_URL + 'manufacturing/">Manufacturing projects</a>', index)
+            self.assertIn(f"<strong>{len(records):,}</strong>", index)
+            pages = [output / "manufacturing/index.html"]
+            for record in records:
+                path = output / "manufacturing" / record["id"] / "index.html"
+                pages.append(path)
+                self.assertIn(build_site.BASE_URL + "manufacturing/" + record["id"] + "/", sitemap)
+                contents = path.read_text()
+                self.assertIn(build_site.e(record["summary"]), contents)
+                self.assertEqual(contents.count('<li id="src-'), len(record["sources"]))
+                for target in set(re.findall(r'href="#(src-s\d+)"', contents)):
+                    self.assertIn(f'id="{target}"', contents)
+                for source in record["sources"]:
+                    self.assertIn('href="' + build_site.e(source["url"]) + '"', contents)
+                if record.get("archived_record"):
+                    archived = (output / "facilities" / build_site.slug(record["archived_record"]) / "index.html").read_text()
+                    self.assertIn(build_site.BASE_URL + "manufacturing/" + record["id"] + "/", archived)
+            for path in pages:
+                parser = Links()
+                parser.feed(path.read_text())
+                for link in parser.links:
+                    if not link.startswith(build_site.BASE_URL):
+                        continue
+                    relative = urlsplit(link).path.removeprefix(urlsplit(build_site.BASE_URL).path)
+                    target = output / relative
+                    if target.is_dir():
+                        target /= "index.html"
+                    self.assertTrue(target.is_file(), f"broken {link} from {path}")
+
+    def test_record_content_is_escaped_and_formatted(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "records").mkdir()
+            (root / "records/example-fab-one.json").write_text(json.dumps(fixture_record()))
+            output = root / "site"
+            build_site.build(output, manufacturing=root / "records")
+            page = (output / "manufacturing/example-fab-one/index.html").read_text()
+            self.assertNotIn("<script>alert(1)", page)
+            self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", page)
+            self.assertIn("<h1>Example &lt;Fab&gt; One</h1>", page)
+            self.assertIn("about JPY 1.65 trillion", page)
+            self.assertIn("H2 2027", page)
+            self.assertIn('href="https://example.com/a?b=1&amp;c=2"', page)
+            self.assertIn("None published: no cited source gives a facility point.", page)
+            self.assertIn("<dd>1 primary · 0 news or trade press</dd>", page)
+            listing = (output / "manufacturing/index.html").read_text()
+            self.assertIn("Target H2 2027", listing)
+            self.assertIn("0 records cite no company, government or regulatory source", listing)
+            self.assertEqual(build_site.amount({"unit": "wafers_per_month", "value": 40000, "value_max": None,
+                                                "qualifier": "up_to"}), "up to 40,000 wafers a month")
+            self.assertEqual(build_site.amount({"unit": "USD", "value": 500000000, "value_max": 750000000,
+                                                "qualifier": "range"}), "USD 500–750 million")
+
+    def test_related_labels_read_from_this_record_and_passed_targets_are_marked(self):
+        old = fixture_record(id="example-fab-old", name="Old Fab", status="transferred",
+                             related=[{"id": "example-fab-one", "relation": "predecessor_of"}])
+        old["milestones"] = [{"event": "sold", "date": "2024-01", "planned": False, "phase_label": None,
+                              "source_ids": ["s1"], "note": None},
+                             {"event": "volume_production", "date": "2025", "planned": True,
+                              "phase_label": None, "source_ids": ["s1"], "note": None}]
+        new = fixture_record(related=[{"id": "example-fab-old", "relation": "successor_of"}])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "records").mkdir()
+            for record in (old, new):
+                (root / f"records/{record['id']}.json").write_text(json.dumps(record))
+            output = root / "site"
+            build_site.build(output, manufacturing=root / "records")
+            page = (output / "manufacturing/example-fab-one/index.html").read_text()
+            self.assertRegex(page, r'Successor of <a href="[^"]+example-fab-old/">Old Fab</a>')
+            page = (output / "manufacturing/example-fab-old/index.html").read_text()
+            self.assertRegex(page, r'Predecessor of <a href="[^"]+example-fab-one/">Example &lt;Fab&gt; One</a>')
+            listing = (output / "manufacturing/index.html").read_text()
+            self.assertIn("Target 2025 (date passed)", listing)
+            self.assertIn("Target H2 2027<", listing)
+            self.assertIn('data-stage="transferred">Transferred', listing)
+
+    def test_press_only_records_are_flagged(self):
+        record = fixture_record()
+        record["sources"][0]["type"] = "news"
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "records").mkdir()
+            (root / "records/example-fab-one.json").write_text(json.dumps(record))
+            output = root / "site"
+            build_site.build(output, manufacturing=root / "records")
+            page = (output / "manufacturing/example-fab-one/index.html").read_text()
+            self.assertIn('<dd class="press-only">No company, government or regulatory source is cited (1 news or trade press)', page)
+            listing = (output / "manufacturing/index.html").read_text()
+            self.assertIn("1 record cites no company, government or regulatory source and is flagged on its page", listing)
+
+    def test_registry_links_render_in_both_directions(self):
+        sherman = "nist:project:96cca1f6-4b83-50b2-aaef-a6961be05bd7"
+        record = fixture_record(registry_records=[{"record_id": sherman, "relation": "award_page",
+                                                   "note": "Covers <two> fabs."}])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "records").mkdir()
+            (root / "records/example-fab-one.json").write_text(json.dumps(record))
+            output = root / "site"
+            build_site.build(output, manufacturing=root / "records")
+            page = (output / "manufacturing/example-fab-one/index.html").read_text()
+            target = build_site.anchor({"record_id": sherman})
+            self.assertIn(f'href="{build_site.BASE_URL}registry/#{target}">Texas Instruments (Texas)</a>', page)
+            self.assertIn("CHIPS award page covering this project", page)
+            self.assertIn("Covers &lt;two&gt; fabs.", page)
+            registry = (output / "registry/index.html").read_text()
+            self.assertEqual(registry.count("Manufacturing project record: "), 1)
+            self.assertIn(f'Manufacturing project record: <a href="{build_site.BASE_URL}manufacturing/example-fab-one/">'
+                          "Example &lt;Fab&gt; One</a>", registry)
+            self.assertIn(f'id="{target}"', registry)
+
+    def test_invalid_or_unlinkable_records_stop_the_build(self):
+        cases = [(fixture_record(archived_record="nope:missing"), "unknown archived record"),
+                 (fixture_record(location={**fixture_record()["location"], "country": "ZZ"}),
+                  "no display name for country code ZZ"),
+                 (fixture_record(status="operating"), "operating needs"),
+                 (fixture_record(registry_records=[{"record_id": "nist:project:missing",
+                                                    "relation": "award_page", "note": None}]),
+                  "unknown registry record nist:project:missing")]
+        for record, message in cases:
+            with self.subTest(message=message), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                (root / "records").mkdir()
+                (root / "records/example-fab-one.json").write_text(json.dumps(record))
+                with self.assertRaisesRegex(ValueError, message):
+                    build_site.build(root / "site", manufacturing=root / "records")
+                self.assertFalse((root / "site").exists())
 
 
 if __name__ == "__main__":

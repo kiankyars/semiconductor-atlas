@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.0",
+  "id": "bosch-roseville-sic-fab",
+  "name": "Bosch Roseville silicon carbide fab",
+  "aliases": [
+    "Robert Bosch Semiconductor LLC Roseville",
+    "former TSI Semiconductors fab"
+  ],
+  "company": "Bosch",
+  "operator": "Bosch",
+  "parties": [
+    {
+      "name": "Robert Bosch Semiconductor LLC",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "U.S. subsidiary of Robert Bosch GmbH formed from the TSI Semiconductors assets; it holds the CHIPS award."
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s8"
+      ],
+      "note": "Preliminary CHIPS terms in December 2024, followed by a direct funding agreement in July 2026."
+    },
+    {
+      "name": "California Governor's Office of Business and Economic Development",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s7",
+        "s9"
+      ],
+      "note": "Approved a California Competes tax credit for the site."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s7",
+        "s8"
+      ]
+    }
+  ],
+  "summary": "Bosch is converting the Roseville, California fab it bought from TSI Semiconductors, previously a 200 mm silicon ASIC foundry, into a 200 mm silicon carbide power chip plant. The purchase was announced in April 2023 and closed on 31 August 2023. Bosch was still equipping the fab in 2026 as part of an investment of about USD 2 billion, and a CHIPS award of up to USD 225 million was finalized in July 2026. Sample production had started by then, with commercial production expected later in 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "California",
+    "locality": "Roseville",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s7"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-11-03",
+  "status_source_ids": [
+    "s3",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-04-26",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Planned spending over the following years, stated with the acquisition; Bosch said the full scope depended on federal funding."
+    },
+    {
+      "metric": "investment",
+      "value": 1900000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-13",
+      "source_ids": [
+        "s8",
+        "s5"
+      ],
+      "note": "Bosch gave up to USD 1.9 billion in December 2024 and in April 2026 described USD 1.9 billion of additional investment in the plant."
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6",
+        "s9"
+      ],
+      "note": "Total investment the final CHIPS award supports to convert the facility."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 225000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-13",
+      "source_ids": [
+        "s2",
+        "s8"
+      ],
+      "note": "Proposed direct funding in the non-binding December 2024 preliminary terms."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 225000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s9"
+      ],
+      "note": "Direct funding agreement signed in July 2026."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 350000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "preliminary_award",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-13",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Proposed CHIPS loans in the December 2024 preliminary terms; the July 2026 sources read here mention only direct funding."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 25000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-09-01",
+      "source_ids": [
+        "s7",
+        "s9"
+      ],
+      "note": "California Competes tax credit approved by the state economic development office."
+    },
+    {
+      "metric": "jobs",
+      "value": 700,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Manufacturing, engineering and R&D jobs; the project was also expected to create up to 1,000 construction jobs."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 10000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-04-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Existing cleanroom when Bosch announced the acquisition."
+    },
+    {
+      "metric": "jobs",
+      "value": 300,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Site headcount in July 2026; about 250 staff transferred from TSI in 2023."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-04-26",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bosch announced its plan to acquire the assets of TSI Semiconductors."
+    },
+    {
+      "event": "acquired",
+      "date": "2023-08-31",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Bosch closed the purchase of the TSI Semiconductors assets; its April 2026 release dates the acquisition to September 2023, when the closing was announced."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "The operator described the fab as being equipped with new production facilities in April 2026; the start date of installation was not given."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s7",
+        "s9"
+      ],
+      "note": "First SiC chips on 200 mm wafers were targeted for 2026; in July 2026 sample production had started and commercial production was still expected that year."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Rising demand for SiC chips: Bosch plans to acquire U.S. chipmaker TSI Semiconductors",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/rising-demand-for-sic-chips-bosch-plans-to-acquire-u-s-chipmaker-tsi-semiconductors-253824.html",
+      "type": "company_announcement",
+      "published": "2023-04-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Bosch (California)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/bosch-california-roseville",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Department of Commerce Announces Direct Funding Agreement with Bosch for a $225 Million CHIPS Program Award to Support Domestic Production of Silicon Carbide Semiconductors",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million",
+      "type": "government",
+      "published": "2026-07-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Robert Bosch Semiconductor LLC (California)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/robert-bosch-semiconductor-llc-california-roseville",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "A leap in semiconductor efficiency: Bosch introduces third generation of SiC chips",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/a-leap-in-semiconductor-efficiency-bosch-introduces-third-generation-of-sic-chips-282432.html",
+      "type": "company_announcement",
+      "published": "2026-04-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Focus on promising markets: Bosch is strengthening its semiconductor business with a dedicated division",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/focus-on-promising-markets-bosch-is-strengthening-its-semiconductor-business-with-a-dedicated-division-286784.html",
+      "type": "company_announcement",
+      "published": "2026-11-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Bosch completes acquisition of assets of TSI Semiconductors",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/us/en/press-release-21952.html",
+      "type": "company_announcement",
+      "published": "2023-09-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Bosch announces preliminary terms with U.S. Department of Commerce for CHIPS Incentives",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/us/en/press-release-26048.html",
+      "type": "company_announcement",
+      "published": "2024-12-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Bosch announces $225 million direct funding agreement with the U.S. Department of Commerce as part of a $2 billion investment in Roseville",
+      "publisher": "City of Roseville",
+      "url": "https://www.roseville.ca.gov/articles/Bosch-announces-225-million-direct-funding-agreement-with-the-US-Department-of-Commerce-as-part-of-a-2-billion-investment-in-Roseville-859.php",
+      "type": "government",
+      "published": "2026-07-13",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Sample production, which began by July 2026, is not entered as first production because the sources describe it as samples for customer trials ahead of commercial output. The December 2024 preliminary CHIPS page says the site will also handle back-end testing, sorting and dicing. The investment figures are the operator's and the government's descriptions at different dates and overlap rather than add up.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the acquisition date to the 31 August 2023 closing and added Bosch's closing and December 2024 releases and the City of Roseville's July 2026 notice, with the California tax credit, proposed CHIPS loans and site headcount; set the undated CHIPS project pages' publication dates to null."
+  }
+}

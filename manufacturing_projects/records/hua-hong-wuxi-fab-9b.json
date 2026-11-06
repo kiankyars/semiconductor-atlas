@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "id": "hua-hong-wuxi-fab-9b",
+  "name": "Hua Hong Fab 9B, Wuxi",
+  "aliases": [
+    "FAB9B",
+    "Hua Hong Grace Wuxi Phase III",
+    "Wuxi JV III Investment Project"
+  ],
+  "company": "Hua Hong",
+  "operator": "Wuxi Huahong Grace Semiconductor (Phase III) Manufacturing Co., Ltd.",
+  "parties": [
+    {
+      "name": "Wuxi Huahong Grace Semiconductor (Phase III) Manufacturing Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Project company (无锡华虹宏力三期半导体有限公司) incorporated on 30 October 2025 and wholly owned by Shanghai Huahong Grace until the 2026 capital increase, which lifts its registered capital to USD 4.17 billion."
+    },
+    {
+      "name": "Hua Hong Grace Semiconductor Limited",
+      "role": "owner",
+      "share_pct": 25,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed parent; invests USD 1,042.5 million directly and, with its subsidiary's 26%, holds about 51%."
+    },
+    {
+      "name": "Shanghai Huahong Grace Semiconductor Manufacturing Corporation",
+      "role": "owner",
+      "share_pct": 26,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Wholly owned subsidiary of the listed parent; invests USD 1,084.2 million, including the initial capital."
+    },
+    {
+      "name": "Wuxi Xi Hong Guo Xin (Phase II) Investment Co., Ltd.",
+      "role": "government",
+      "share_pct": 20,
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Investment company jointly controlled by Wuxi municipal and district state-owned enterprises; invests USD 834 million."
+    },
+    {
+      "name": "Hua Xin Ding Xin (Beijing) Equity Investment Fund (Limited Partnership)",
+      "role": "owner",
+      "share_pct": 15,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Fund formed by Sino IC Capital and China Integrated Circuit Industry Investment Fund Phase III; invests USD 625.5 million."
+    },
+    {
+      "name": "China Development Bank New Policy-Oriented Financial Instruments Co., Ltd.",
+      "role": "owner",
+      "share_pct": 14,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Wholly owned by China Development Bank; invests USD 583.8 million, and Shanghai Huahong Grace must buy back its stake on request under the shareholders agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "rf",
+    "image_sensor",
+    "other_memory"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "Hua Hong's third 300 mm specialty foundry line in Wuxi, called the FAB9B project or Wuxi Phase III in its filings, to be run by the joint venture Wuxi Huahong Grace Semiconductor (Phase III) Manufacturing. Planned at USD 6.95 billion for about 55,000 wafers a month, it reuses existing production and utility buildings on Hua Hong's Wuxi base, adding cleanrooms and tools for logic, RF, image-sensor and non-volatile memory platforms. Construction was reported to have started in March 2026, the joint-venture agreements were signed and approved by shareholders in September 2026, and Hua Hong targets completing the line and starting production by December 2027.",
+  "location": {
+    "country": "CN",
+    "admin1": "Jiangsu",
+    "locality": "Wuxi",
+    "site": null,
+    "address": "No. 30-2 Xinzhou Road, Xinwu District, Wuxi",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2"
+    ],
+    "note": "Project address given in Hua Hong's September 2026 circular, on its existing Wuxi base."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-11-05",
+  "status_source_ids": [
+    "s4",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6950000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-01",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "note": "Total investment under the joint-venture agreements: USD 4.17 billion of equity and USD 2.78 billion of debt."
+    },
+    {
+      "metric": "capacity",
+      "value": 55000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-04",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Planned 300 mm specialty-process wafers per month."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2026-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s3"
+      ],
+      "note": "Start month reported by IT Home; Hua Hong's first-half 2026 report carried the FAB9B project as construction in progress at about 6% of its budget by the end of June 2026."
+    },
+    {
+      "event": "announced",
+      "date": "2026-09-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Joint-venture investment and shareholders agreements signed and disclosed; shareholders approved the investment on 23 September 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2027-12",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "Target for completing the line and starting production."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Discloseable Transaction in relation to the JV Investment Agreement and the JV Shareholders Agreement",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103625.pdf",
+      "type": "company_filing",
+      "published": "2026-09-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "(1) Proposed Change in Use of Proceeds from the RMB Share Issue; (2) Proposed External Investment in Wuxi JV III; and (3) Notice of Extraordinary General Meeting",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090401194.pdf",
+      "type": "company_filing",
+      "published": "2026-09-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "华虹宏力半导体有限公司2026年半年度报告",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514149.PDF",
+      "type": "company_filing",
+      "published": "2026-08-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Hua Hong Grace Semiconductor Limited Reports 2026 Third Quarter Results",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1105/2026110500668.pdf",
+      "type": "company_announcement",
+      "published": "2026-11-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "中国第二大晶圆代工厂：华虹宏力半导体宣布扩建无锡 12 英寸产线，月增 5.5 万片产能",
+      "publisher": "IT Home (via 10jqka)",
+      "url": "https://stock.10jqka.com.cn/20260904/c679589766.shtml",
+      "type": "news",
+      "published": "2026-09-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "60亿元投资平台落地，无锡加码半导体扩产",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2481263",
+      "type": "news",
+      "published": "2026-09-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Poll Results of the Extraordinary General Meeting held on 23 September 2026",
+      "publisher": "Hua Hong Grace Semiconductor Limited",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0923/2026092301759.pdf",
+      "type": "company_filing",
+      "published": "2026-09-23",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "hua-hong-wuxi-fab-9a",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The first-half 2026 report names the project FAB9B and gives it a construction budget of about CNY 49.2 billion. The March 2026 construction start comes only from IT Home, read as republished by 10jqka; the original page was not found. Cailian Press also reported a February 2026 engineering, procurement and construction award of about CNY 3.78 billion for the FAB9B project. The shareholdings recorded here apply once the capital increase is registered with Chinese authorities.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the Fab 9A company's registered name and formation date, added the Phase III project company as an operator party, and reworded the first-production note to match the trade-press report; no newer reporting changed the status. Audit fixes (2026-11-07): split from hua-hong-wuxi-fab-9, which merged the separately named Fab 9A and Fab 9B lines; this record keeps Fab 9B (Wuxi Phase III) with its joint-venture company as operator, takes the shareholders, investment, capacity, site address, platforms and December 2027 target from Hua Hong's September 2026 Hong Kong filings instead of the Securities Daily report hosted by 10jqka, relabels the IT Home report as read via 10jqka, and adds the first-half 2026 report and November 2026 results for construction progress."
+  }
+}

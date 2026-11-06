@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-tongluo-miaoli-fab",
+  "name": "Micron Tongluo fab, Miaoli",
+  "aliases": [
+    "Micron Tongluo P5 site"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "The former PSMC P5 wafer fab in Tongluo, Miaoli County, Taiwan, which Micron agreed in January 2026 to buy for $1.8 billion in cash and took over in March 2026. Micron is refitting its roughly 300,000 square feet of 300 mm cleanroom for leading-edge DRAM, including HBM, as an extension of its Taichung operations about 15 miles away, and has started building a second cleanroom of similar size. Its latest filing expects meaningful shipments from the existing fab from mid-calendar 2027.",
+  "location": {
+    "country": "TW",
+    "admin1": "Miaoli County",
+    "locality": "Tongluo",
+    "site": "Tongluo P5 site",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "About 15 miles from Micron's Taichung campus."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1800000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-03",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Total cash consideration for the existing fab; later spending on tools and the second cleanroom is not included."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 300000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-03-15",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Existing 300 mm cleanroom acquired from PSMC."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 270000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Second cleanroom",
+      "as_of": "2026-03-15",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Cleanroom to be added by a second facility of comparable scale."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-01-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Exclusive letter of intent to buy the site from PSMC."
+    },
+    {
+      "event": "acquired",
+      "date": "2026-03-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2026-03",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Refit of the existing cleanroom was due to begin in March 2026."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "Second cleanroom",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The filing reports construction under way; the March 2026 release had targeted a start by the end of Micron's fiscal 2026."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "January 2026 plan for meaningful DRAM wafer output."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Latest target: meaningful product shipments from the existing fab from mid-calendar 2027 (fiscal 2028 in the March 2026 release)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron Technology, Inc. Form 10-K for the fiscal year ended September 3, 2026",
+      "publisher": "Micron Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm",
+      "type": "company_filing",
+      "published": "2026-10-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+      "type": "company_announcement",
+      "published": "2026-03-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Micron Signs Letter of Intent to Purchase Tongluo Site, Begin Strategic Partnership with PSMC",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Signs-Letter-of-Intent-to-Purchase-Tongluo-Site-Begin-Strategic-Partnership-with-PSMC-01-17-2026/default.aspx",
+      "type": "company_announcement",
+      "published": "2026-01-17",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "psmc-tongluo-p5-fab",
+      "relation": "successor_of"
+    }
+  ],
+  "notes": "Recorded under Micron as the current operator. The fab's earlier history under PSMC, which built and opened it, is in the PSMC Tongluo P5 record. Micron's January 2026 release says PSMC will move its own Tongluo operations out over an agreed period.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:K77A3198",
+      "relation": "same_facility",
+      "note": "Environmental-control registration under Micron's Taiwan memory subsidiary."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:K77A1855",
+      "relation": "same_facility",
+      "note": "Environmental-control registration under the previous owner, PSMC, at the same address."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Micron's January 2026 letter-of-intent and March 2026 completion releases: dated the deal, added the 300 mm wafer size, HBM, both cleanroom figures, the site name and the earlier output target, and linked the record to the PSMC Tongluo P5 record for the same building."
+  }
+}

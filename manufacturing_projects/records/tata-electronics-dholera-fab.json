@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "id": "tata-electronics-dholera-fab",
+  "name": "Tata Electronics Dholera semiconductor fab",
+  "aliases": [
+    "Tata-PSMC Dholera fab"
+  ],
+  "company": "Tata Electronics",
+  "operator": "Tata Electronics",
+  "parties": [
+    {
+      "name": "Tata Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "Powerchip Semiconductor Manufacturing Corporation (PSMC)",
+      "role": "technology_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Licenses its process portfolio, supports fab design and construction and provides engineering help for the technology transfer under a definitive agreement signed in September 2024."
+    },
+    {
+      "name": "Government of India",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "The Union Cabinet approved the fab in February 2024 under the India Semiconductor Mission programme."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Most advanced node in the PSMC licence; Tata says it will follow the initial nodes."
+    },
+    {
+      "label": "40nm",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "label": "55nm",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Tata says production starts with 55nm and 90nm."
+    },
+    {
+      "label": "90nm",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Reported as the main node at launch."
+    },
+    {
+      "label": "110nm",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s4"
+      ]
+    }
+  ],
+  "summary": "A 300 mm wafer fab, which Tata calls India's first semiconductor fab, being built by Tata Electronics at Dholera in Gujarat with technology licensed from Taiwan's PSMC. The Union Cabinet approved the project in February 2024 and the foundation stone was laid in March 2024. Planned output is up to 50,000 wafers a month of power management chips, display drivers, microcontrollers and logic across nodes from 110nm to 28nm. Construction was reported well advanced in mid-2026, when Tata signed a lithography partnership with ASML; commercial production, once aimed for the end of 2026, is now expected around mid-2028, starting mainly on 90nm.",
+  "location": {
+    "country": "IN",
+    "admin1": "Gujarat",
+    "locality": "Dholera",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-20",
+  "status_source_ids": [
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 910000000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-09-26",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Stated as up to Rs 91,000 crore."
+    },
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-05-17",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-09-26",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Wafers per month at full capacity on 300 mm wafers."
+    },
+    {
+      "metric": "jobs",
+      "value": 20000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-03-13",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Direct and indirect skilled jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-02-29",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Union Cabinet approval of the Tata Electronics and PSMC proposal."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2024-03-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Foundation stone laid by the Prime Minister by video link."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Earlier aim of commercial production by the end of 2026, since pushed back."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "The IT minister was reported as expecting commercial operation around mid-2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Cabinet Okays India's First Semiconductor Fab By Tata Group, Taiwan's PSMC",
+      "publisher": "Inc42",
+      "url": "https://inc42.com/buzz/cabinet-okays-indias-first-semiconductor-fab-by-tata-group-taiwans-psmc",
+      "type": "news",
+      "published": "2024-02-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Hon’ble Prime Minister Narendra Modi lays the foundation stones for semiconductor fab in Gujarat and Semiconductor Assembly & Test Centre in Assam",
+      "publisher": "Tata Group",
+      "url": "https://www.tata.com/newsroom/business/prime-minister-modi-foundation-stone-semiconductor-fab-gujarat-test-assam",
+      "type": "company_announcement",
+      "published": "2024-03-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Tata Electronics and Powerchip Semiconductor Manufacturing Corporation (PSMC) Complete Landmark Agreement for Technology Transfer to Build India's First Semiconductor Fab",
+      "publisher": "Tata Electronics (via PR Newswire)",
+      "url": "https://prnewswire.com/in/news-releases/tata-electronics-and-powerchip-semiconductor-manufacturing-corporation-psmc-complete-landmark-agreement-for-technology-transfer-to-build-indias-first-semiconductor-fab-302259945.html",
+      "type": "company_announcement",
+      "published": "2024-09-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Tata Electronics and ASML Announce Strategic Partnership to Advance the Semiconductor Manufacturing Ecosystem in India",
+      "publisher": "Tata Group",
+      "url": "https://www.tata.com/newsroom/business/tata-electronics-asml-semiconductor-ecosystem",
+      "type": "company_announcement",
+      "published": "2026-05-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Six semiconductor projects worth ₹1.24 lakh crore to generate 50,000+ jobs in Gujarat: Govt",
+      "publisher": "DeshGujarat",
+      "url": "https://deshgujarat.com/2026/07/04/six-semiconductor-projects-worth-%e2%82%b91-24-lakh-crore-to-generate-50000-jobs-in-gujarat/",
+      "type": "news",
+      "published": "2026-07-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "[News] Tata's India Fab Reportedly to Launch at 90nm Instead of 28nm; Commercial Production Delayed to Mid-2028",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/07/20/news-tatas-india-fab-reportedly-to-launch-at-90nm-instead-of-28nm-commercial-production-delayed-to-mid-2028/",
+      "type": "trade_press",
+      "published": "2026-07-20",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The Gujarat government release carried by s5 describes the fab as in an advanced stage of construction. The mid-2028 date and the 90nm launch node come from Bloomberg reporting summarised by s6; Tata's spokesperson said the plan was always to start on 55nm and 90nm and add 28nm later. Tata describes a wider multi-fab plan for Dholera (s3); any later fabs are not part of this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the July 2026 TrendForce report, which says commercial production has not started and moved to mid-2028, to the status sources and updated the status date; all other statements matched their sources. Audit fixes (2026-11-07): changed PSMC's role from builder to technology partner, attributed the India's-first description to Tata, and put the PR Newswire label in the standard form."
+  }
+}

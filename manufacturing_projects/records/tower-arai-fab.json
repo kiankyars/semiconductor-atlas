@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "id": "tower-arai-fab",
+  "name": "Tower Arai facility (former Fab 6)",
+  "aliases": [
+    "TPSCo Arai fab",
+    "Arai E factory"
+  ],
+  "company": "Tower Semiconductor",
+  "operator": "Tower Semiconductor",
+  "parties": [
+    {
+      "name": "Tower Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Its Japanese joint venture TPSCo ran the fab until 2022; Tower is now repurposing the building."
+    },
+    {
+      "name": "Nuvoton Technology Corporation Japan (NTCJ)",
+      "role": "customer",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The fab served only NTCJ, formerly Panasonic Semiconductor Systems, which holds the other 49 percent of TPSCo; it closed at Panasonic's request made through NTCJ."
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Supports the two-track Japan expansion that includes this conversion."
+    }
+  ],
+  "facility_type": "wafer_fab_and_packaging",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "image_sensor",
+    "photonics",
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "0.13µm to 0.11µm",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Processes of the original 200 mm fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s4"
+      ]
+    },
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A fab in Myoko City, Niigata Prefecture, that Tower's Japanese venture TPSCo ran on 200 mm wafers for analog chips and image sensors, serving only Nuvoton Technology Corporation Japan. It stopped production in July 2022 at Panasonic's request, made through NTCJ, and its tools were moved to TPSCo's Tonami fab or sold. In July 2026 Tower announced, with METI support, that it would repurpose the building for 300 mm silicon photonics capacity and advanced packaging as the first track of its Japan expansion, aiming for full production readiness in the fourth quarter of 2027; by November 2026 Tower said the buildout was ahead of schedule.",
+  "location": {
+    "country": "JP",
+    "admin1": "Niigata",
+    "locality": "Myoko",
+    "site": null,
+    "address": "4-5-1 Kurihara, Myoko City, Niigata 944-8555",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s4"
+    ],
+    "note": "Address as listed by Tower for the Arai facility."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-11-02",
+  "status_source_ids": [
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Tower's own spending net of grants for both tracks of its Japan expansion: this conversion and a new fab beside Fab 7 in Uozu."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Japanese government grants for both tracks of the expansion."
+    },
+    {
+      "metric": "site_area",
+      "value": 160980,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "closed",
+      "date": "2022-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Operations ceased at Panasonic's request through NTCJ; part of the equipment went to the Tonami fab and the rest was sold."
+    },
+    {
+      "event": "announced",
+      "date": "2026-07-14",
+      "planned": false,
+      "phase_label": "300mm conversion",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Repurposing announced as track one of Tower's Japan expansion."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "300mm conversion",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "In November 2026 Tower reported its track-one Japan 300 mm buildout, which the July 2026 release defines as the Arai conversion, progressing ahead of schedule."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-Q4",
+      "planned": true,
+      "phase_label": "300mm conversion",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target for full production readiness."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Tower Semiconductor Ltd. Annual Report (Form 20-F) for the fiscal year ended December 31, 2025",
+      "publisher": "Tower Semiconductor",
+      "url": "https://www.sec.gov/Archives/edgar/data/928876/000117891326002318/zk2635149.htm",
+      "type": "company_filing",
+      "published": "2026-04-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Tower Semiconductor with METI Support Announces Strategic Capacity Expansion in Japan",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/2026/07/14/07142026/",
+      "type": "company_announcement",
+      "published": "2026-07-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Tower Semiconductor Reports Third Quarter Record Results, Providing Record Fourth Quarter Guidance Resulting in 2026 $2 Billion Annual Revenue",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/2026/11/02/11022026/",
+      "type": "company_announcement",
+      "published": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "TPSCo Manufacturing Facilities",
+      "publisher": "Tower Semiconductor",
+      "url": "https://towersemi.com/tpsco-manufacturing-facilities/",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The record covers both the 2022 closure of the 200 mm fab and the 2026 conversion of the same building. Tower's facilities page still lists Arai with its original 200 mm processes; the site area is from that page as read on the access date. The November 2026 results describe the track-one buildout as progressing without saying which construction or tool steps are complete.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Clarified that the 2022 closure was requested by Panasonic through NTCJ and that the equipment was moved to Tonami or sold, and cited the July 2026 release alongside the November results for the buildout milestone, since only the July release identifies track one as the Arai conversion."
+  }
+}

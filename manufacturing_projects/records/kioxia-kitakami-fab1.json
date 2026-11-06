@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "id": "kioxia-kitakami-fab1",
+  "name": "Kioxia Kitakami Fab1",
+  "aliases": [
+    "K1"
+  ],
+  "company": "Kioxia",
+  "operator": "Kioxia Iwate Corporation",
+  "parties": [
+    {
+      "name": "Kioxia Iwate Corporation",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Western Digital",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Agreed in 2019 to invest jointly in the fab's equipment."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [
+    {
+      "label": "96-layer 3D flash memory",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Product planned for initial production."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "The first 3D flash memory fab at Kioxia's Kitakami Plant in Iwate Prefecture, Japan, built by the company then called Toshiba Memory with equipment co-funded by Western Digital. The building was due for completion in fall 2019 and the fab started operating in 2020, with initial output of 96-layer flash planned for that year.",
+  "location": {
+    "country": "JP",
+    "admin1": "Iwate",
+    "locality": "Kitakami",
+    "site": "Kitakami Plant",
+    "address": "5-29, Kitakogyodanchi, Kitakami City, Iwate",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2025-09",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "building_complete",
+      "date": "2019",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion was expected in fall 2019."
+    },
+    {
+      "event": "first_production",
+      "date": "2020",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Initial production planned for calendar 2020."
+    },
+    {
+      "event": "opening",
+      "date": "2020",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The plant page says Fab1 started operation in 2020."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Kitakami Plant (KIOXIA Iwate Corporation)",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/kitakami.html",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Toshiba Memory and Western Digital to Jointly Invest in Flash Manufacturing Facility in Kitakami, Japan",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2019/20190517-1.html",
+      "type": "company_announcement",
+      "published": "2019-05-17",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "kioxia-kitakami-fab2",
+      "relation": "same_campus"
+    },
+    {
+      "id": "kioxia-kitakami-fab3",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Included because operation began in 2020. The plant page is undated; it reports Fab2's September 2025 start, so its account of Fab1 is dated to that month.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

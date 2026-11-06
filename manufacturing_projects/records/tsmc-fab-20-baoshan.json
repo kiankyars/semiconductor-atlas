@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-fab-20-baoshan",
+  "name": "TSMC Fab 20, Hsinchu (Baoshan)",
+  "aliases": [
+    "Fab 20",
+    "F20",
+    "TSMC Baoshan fab"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "N2",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "In production since late 2025; phases 3 and 4 are reported as production bases for processes below 2nm."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A TSMC 2nm GIGAFAB in the Hsinchu Science Park at Baoshan. Construction began in October 2022, tools moved into phase 1 in March 2024 and N2 entered high-volume production at the Hsinchu site in the fourth quarter of 2025. Supply-chain reporting in February 2026 described the fab as producing, with expected output of 20,000 to 25,000 wafers a month, while civil works were under way on phases 3 and 4 for processes below 2nm. In October 2026 TSMC said N2 was ramping in multiple phases at Hsinchu.",
+  "location": {
+    "country": "TW",
+    "admin1": "Hsinchu County",
+    "locality": "Baoshan",
+    "site": "Hsinchu Science Park",
+    "address": "1, Kehuan Rd., Hsinchu Science Park, Hsinchu 308-001, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-10-15",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "capacity",
+      "value": 20000,
+      "value_max": 25000,
+      "unit": "wafers_per_month",
+      "qualifier": "range",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-23",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Expected monthly output in 12-inch wafers reported for the fab in February 2026, when phases 3 and 4 were still in civil works; the report does not say which phases it covers."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2022-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024-03",
+      "planned": false,
+      "phase_label": "P1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "N2 high-volume production began at the Hsinchu site."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "台積電2奈米來了！估下半年在台量產：高雄晶圓22廠耗資逾1.5兆，佔地46座足球場",
+      "publisher": "Business Next (數位時代)",
+      "url": "https://www.bnext.com.tw/article/82803/tsmc-kaohsiung-f22-p2-ceremony",
+      "type": "news",
+      "published": "2025-03-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "GIGAFAB® Facilities - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/manufacturing/gigafab",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "[News] TSMC Speeds up Expansion in Taiwan: up to 10 Fabs Reportedly under Construction or Starting in 2026",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/02/23/news-tsmc-speeds-up-expansion-in-taiwan-up-to-10-fabs-reportedly-under-construction-or-starting-in-2026/",
+      "type": "trade_press",
+      "published": "2026-02-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Q3 2026 Taiwan Semiconductor Manufacturing Company Limited Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-10-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Fab Locations - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/aboutTSMC/TSMC_Fabs",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": null,
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:J63A4298",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 1 of Fab 20."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:J63A4892",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 2 of Fab 20."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:J63A4307",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 3 of Fab 20."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:J63A5593",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 4 of Fab 20."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "The February 2026 report says the fab is producing but does not say phases 1 and 2, so the capacity figure now applies to the fab and the volume-production milestone no longer carries a phase label; the N2 note was corrected the same way. Added TSMC's fab locations page for the street address."
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "adi-beaverton-fab-expansion",
+  "name": "ADI Beaverton fab expansion",
+  "aliases": [
+    "Analog Devices Beaverton wafer fab expansion"
+  ],
+  "company": "Analog Devices",
+  "operator": "Analog Devices",
+  "parties": [
+    {
+      "name": "Analog Devices",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Preliminary CHIPS terms signed in January 2025 for a package covering three ADI sites."
+    },
+    {
+      "name": "State of Oregon",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Finalized an Oregon CHIPS Act grant contract for the Beaverton expansion in June 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "180 nm and above",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The trade report puts the expansion on 180 nm and larger processes; the CHIPS project page names 180 nm and 350 nm."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Analog Devices plans to spend more than USD 1 billion expanding its Beaverton, Oregon wafer fab, which trade press described as its largest fab by volume. The plan grows cleanroom space by about 25,000 sq ft to roughly 118,000 sq ft and nearly doubles internal output on 180 nm and larger processes. Oregon finalized a USD 12 million state grant for the expansion in June 2024, and in January 2025 the federal CHIPS program signed preliminary terms for up to USD 105 million shared with ADI projects in Camas, Washington and Chelmsford, Massachusetts.",
+  "location": {
+    "country": "US",
+    "admin1": "Oregon",
+    "locality": "Beaverton",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s5",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2025-01-16",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-07-27",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "OPB rounds the figure to USD 1 billion."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 118000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-07-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total cleanroom after the expansion; OPB puts the addition at 25,000 sq ft."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 12000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-06-12",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Oregon CHIPS Act grant; the state reported the contract finalized in June 2024."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 105000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-01-16",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "One preliminary CHIPS package split across the Chelmsford, Beaverton and Camas projects."
+    },
+    {
+      "metric": "jobs",
+      "value": 500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-01-16",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Estimated manufacturing and engineering jobs across all three ADI CHIPS project sites."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "ADI held a ribbon-cutting for the investment in late July 2023; the sources describe the expansion itself as planned."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Analog Devices invests over 1 billion USD to expand Oregon fab",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/analog-devices-invests-over-1-billion-usd-to-expand-oregon-fab",
+      "type": "trade_press",
+      "published": "2023-07-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Semiconductor company announces $1 billion to expand facility in Beaverton",
+      "publisher": "Oregon Public Broadcasting",
+      "url": "https://www.opb.org/article/2023/07/28/oregon-semiconductor-beaverton-analog-devices-incorporated-adi-tech-jobs-manufacturing-chips-act/",
+      "type": "news",
+      "published": "2023-07-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Analog Devices Inc. (Oregon)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/analog-devices-inc-oregon-beaverton",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Department of Commerce Announces Preliminary Terms with Analog Devices, Coherent Corp., Intelligent Epitaxy Technology, Inc. and Sumika Semiconductor Materials Texas Inc., to Strengthen U.S. Semiconductor Leadership",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent",
+      "type": "government",
+      "published": "2025-01-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Analog Devices, Inc. annual report on Form 10-K for the fiscal year ended November 1, 2025",
+      "publisher": "Analog Devices",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628125000153/adi-20251101.htm",
+      "type": "company_filing",
+      "published": "2025-11-25",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Governor Kotek Announces Additional Finalized Oregon CHIPS Contracts",
+      "publisher": "Office of the Governor of Oregon",
+      "url": "https://apps.oregon.gov/oregon-newsroom/OR/GOV/Posts/Post/governor-kotek-announces-additional-finalized-oregon-chips-contracts",
+      "type": "government",
+      "published": "2024-06-12",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The federal CHIPS release also targets about 70% more capacity across the Beaverton and Camas fabs. ADI's FY2025 annual report lists Beaverton as an owned wafer fabrication site of about 458,000 sq ft but does not report on the expansion. No source read here dates construction or completion, and no final federal award notice was found.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the USD 12 million Oregon CHIPS grant finalized in June 2024 with its state source and the 350 nm node named on the CHIPS page; set the undated CHIPS project page's publication date to null. Audit fixes (2026-11-07): attributed the largest-fab-by-volume description to trade press."
+  }
+}

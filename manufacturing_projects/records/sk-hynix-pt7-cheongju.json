@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-pt7-cheongju",
+  "name": "SK hynix P&T7",
+  "aliases": [
+    "Cheongju P&T7"
+  ],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "SK ecoplant",
+      "role": "builder",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Oversees construction of the plant."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "hbm",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "An advanced packaging and test plant for HBM and other AI memory that SK hynix is building in the Cheongju Technopolis industrial complex, near its M15X fab. SK hynix announced it in January 2026 at about KRW 19 trillion and broke ground on 22 April 2026. The plans call for about 150,000 m² of cleanroom on a site of about 230,000 m², split between wafer-level packaging lines on three floors and wafer-test lines on seven, with the test lines due by October 2027, the packaging lines by February 2028 and about 3,000 staff once running. In July 2026 the company set aside KRW 20 trillion for P&T7 and other Cheongju facilities and said the plant should be finished by the end of 2027.",
+  "location": {
+    "country": "KR",
+    "admin1": "North Chungcheong Province",
+    "locality": "Cheongju",
+    "site": "Cheongju Technopolis Industrial Complex",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Oebuk-dong, Heungdeok-gu, Cheongju, near SK hynix's M15X fab."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-02",
+  "status_source_ids": [
+    "s3",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 19000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-01-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total planned for P&T7 when SK hynix announced the investment."
+    },
+    {
+      "metric": "investment",
+      "value": 20000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-02",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Amount for P&T7 together with other unnamed facilities in Cheongju in the July 2026 Chungcheong plan."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 150000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-22",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "About 60,000 m² of wafer-level packaging lines on three floors and about 90,000 m² of wafer-test lines on seven floors."
+    },
+    {
+      "metric": "site_area",
+      "value": 230000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-22",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Land within the Cheongju Technopolis industrial complex on which the plant is to be built."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-22",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "In-house staff expected at the plant once it is complete."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-01-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "SK hynix announced its decision to build P&T7 in Cheongju, with work to start in April 2026."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-04-22",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-10",
+      "planned": true,
+      "phase_label": "Wafer test line",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Completion targeted for the end of 2027."
+    },
+    {
+      "event": "building_complete",
+      "date": "2028-02",
+      "planned": true,
+      "phase_label": "Wafer-level packaging line",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "첨단 패키징 P&T 신규 투자 관련 설명드립니다",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.co.kr/fact-02/",
+      "type": "company_announcement",
+      "published": "2026-01-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SK hynix Announces Investment Plan for the Chungcheong Region",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/fact-07/",
+      "type": "company_announcement",
+      "published": "2026-07-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "What Does P&T7 Mean for Cheongju? A New AI Memory Production Hub and Catalyst for the Local Economy",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/skhynix-chungju-pt7/",
+      "type": "company_announcement",
+      "published": "2026-04-22",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "sk-hynix-m17-cheongju",
+      "relation": "same_campus"
+    },
+    {
+      "id": "sk-hynix-m15x-cheongju",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "SK hynix calls P&T7 its fifth production facility in Cheongju, after M11, M12, M15 and M15X. The KRW 19 trillion figure and the April 2026 start come from a Korean-language newsroom explainer; the KRW 20 trillion in the July 2026 plan also covers other facilities the company did not name.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Moved the status from announced to under construction on SK hynix's report of the 22 April 2026 groundbreaking, and dated the announcement to its 13 January 2026 explainer, which predates the full-year results the record had treated as the first mention. Added the KRW 19 trillion plant budget, cleanroom and site area, staffing, line completion dates, the industrial-complex site and the construction manager; dropped the full-year 2025 results, the June 2026 explainer, the second-quarter 2026 results and the 2024 M15X release, which the new sources replace."
+  }
+}

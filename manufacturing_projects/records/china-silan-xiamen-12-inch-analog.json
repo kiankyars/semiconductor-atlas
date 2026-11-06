@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "id": "china-silan-xiamen-12-inch-analog",
+  "name": "Silan 12-inch High-end Analog IC Line, Xiamen",
+  "aliases": [
+    "士兰微电子12英寸高端模拟集成电路芯片制造生产线项目"
+  ],
+  "company": "Silan",
+  "operator": "Xiamen Silan Jihua Microelectronics Co., Ltd. (厦门士兰集华微电子)",
+  "parties": [
+    {
+      "name": "Xiamen Silan Jihua Microelectronics Co., Ltd. (厦门士兰集华微电子)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Project company; registered capital of CNY 5.11 billion, to rise to CNY 6.01 billion under the October 2026 capital-increase agreement."
+    },
+    {
+      "name": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "role": "owner",
+      "share_pct": 23.46,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Stake after the October 2026 capital increase (27.59% before); its wholly owned Xiamen Silan Microelectronics holds a further 1.66%."
+    },
+    {
+      "name": "Xiamen Haixia Liantou Investment Partnership (厦门海厦联投)",
+      "role": "owner",
+      "share_pct": 24.96,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Largest shareholder after the October 2026 capital increase (29.35% before)."
+    },
+    {
+      "name": "Xiamen Xinyi Xincheng Investment Partnership (厦门信翼芯成)",
+      "role": "owner",
+      "share_pct": 17.47,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Stake after the October 2026 capital increase (20.55% before)."
+    },
+    {
+      "name": "Xiamen Chantou Xinhua Technology Investment Partnership (厦门产投鑫华)",
+      "role": "owner",
+      "share_pct": 17.47,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Stake after the October 2026 capital increase (20.55% before)."
+    },
+    {
+      "name": "Huaxin Dingxin (Beijing) Equity Investment Fund (华芯鼎新)",
+      "role": "owner",
+      "share_pct": 14.98,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Vehicle almost wholly owned by the national chip fund's third phase; agreed on 27 October 2026 to subscribe CNY 900 million of new registered capital, paid in three tranches by the end of 2027."
+    },
+    {
+      "name": "Xiamen Municipal People's Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed a strategic cooperation agreement for the project with the Haicang district government and Silan."
+    },
+    {
+      "name": "Haicang District People's Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Xiamen Semiconductor Investment Group (厦门半导体)",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Signed the October 2025 investment cooperation agreement and the March 2026 supplement; not listed itself among the project company's shareholders."
+    },
+    {
+      "name": "Xiamen Xinyi Technology Industrial (厦门新翼科技)",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Signed the October 2025 investment cooperation agreement and the March 2026 supplement; not listed itself among the project company's shareholders."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A 300 mm analog chip fab in Xiamen's Haicang District that Silan plans to run as an IDM line, held by a project company in which Silan is a minority shareholder alongside Xiamen investment partnerships and the national chip fund. Signed in October 2025 with CNY 20 billion over two equal phases, it broke ground on 4 January 2026. Phase 1 targets 240,000 wafers a year, with first line runs in early Q4 2027 and full output in 2030; both phases together are planned at 540,000 wafers a year.",
+  "location": {
+    "country": "CN",
+    "admin1": "Fujian",
+    "locality": "Xiamen",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "The plant is in Haicang District."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-28",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Two phases of CNY 10 billion each."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Phase 1 project capital is set at CNY 6.01 billion."
+    },
+    {
+      "metric": "capacity",
+      "value": 240000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "300 mm analog IC wafers per year."
+    },
+    {
+      "metric": "capacity",
+      "value": 540000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-01-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "300 mm wafers per year after both phases."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-10-18",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cooperation and investment agreements signed in Xiamen."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-01-04",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2027-Q4",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned initial line connection early in the fourth quarter."
+    },
+    {
+      "event": "volume_production",
+      "date": "2030",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target for reaching design output."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "士兰微电子12英寸高端模拟集成电路芯片制造生产线项目在厦门签约落地",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://www.silan.com.cn/index.php/news/details/269.html",
+      "type": "company_announcement",
+      "published": "2025-10-19",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "士兰微电子迎来双线里程碑：8英寸碳化硅产线通线， 12英寸高端模拟芯片产线同步开工",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://www.silan.com.cn/index.php/news/details/286.html",
+      "type": "company_announcement",
+      "published": "2026-01-05",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "杭州士兰微电子股份有限公司对外投资进展公告（临2026-036）",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-28/1225630806.PDF",
+      "type": "company_filing",
+      "published": "2026-10-28",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "China Development Bank's Xiamen branch signed a separate strategic cooperation agreement with Silan's Xiamen company at the October 2025 signing. Silan's October 2026 filing ties the national fund's capital payments to construction progress. Sources do not state the process nodes.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Replaced a trade-press report that called Silan the controlling shareholder with Silan's October 2026 filing, which shows it holding about 25% of the project company; rebuilt the shareholder list with the stated stakes, corrected the operator's full name and updated the status date."
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-ohio-one",
+  "name": "Ohio One",
+  "aliases": [
+    "Intel Ohio site"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Final CHIPS Act award of direct funding for the New Albany project, part of Intel's multi-state award."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "Intel 18A",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Named in the 2022 announcement among the advanced processes the fabs were designed to support."
+    },
+    {
+      "label": "Intel 14A",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "The CHIPS project description says the fabs will add capacity for Intel 14A and later nodes."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Intel's two-fab leading-edge logic project in New Albany, Licking County, Ohio, announced in January 2022 with an initial investment above $20 billion (later more than $28 billion) and a site that could hold up to eight fabs. Ground was broken in September 2022 and production was first targeted for 2025. In February 2025 Intel slowed construction and moved the first fab (Mod 1) to completion in 2030 with operations in 2030 or 2031, and the second (Mod 2) to 2031 and 2032. In July 2025 it slowed the pace again to match demand. Work continues: in October 2026 Intel reported the first major structural truss set on the first fab.",
+  "location": {
+    "country": "US",
+    "admin1": "Ohio",
+    "locality": "New Albany",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s7",
+      "s4",
+      "s1"
+    ],
+    "note": "The site lies in Licking County, outside Columbus."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-21",
+  "status_source_ids": [
+    "s9",
+    "s10",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-01-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Initial investment for two fabs. Intel said total site investment could reach as much as $100 billion over a decade at full build-out."
+    },
+    {
+      "metric": "investment",
+      "value": 28000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-02-28",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Revised figure for the two fabs."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 1500000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-11-26",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "CHIPS Act direct funding for New Albany within Intel's final award of up to $7.865 billion for four states; the award was finalized on 26 November 2024."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-01-21",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Permanent Intel jobs in the initial phase, alongside about 7,000 construction jobs during the build."
+    },
+    {
+      "metric": "site_area",
+      "value": 1000,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-01-21",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Intel described the site as nearly 1,000 acres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-01-21",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2022-09-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original production target, since missed."
+    },
+    {
+      "event": "building_complete",
+      "date": "2030",
+      "planned": true,
+      "phase_label": "Mod 1",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Revised construction completion target."
+    },
+    {
+      "event": "first_production",
+      "date": "2030",
+      "planned": true,
+      "phase_label": "Mod 1",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Operations expected to begin between 2030 and 2031."
+    },
+    {
+      "event": "building_complete",
+      "date": "2031",
+      "planned": true,
+      "phase_label": "Mod 2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2032",
+      "planned": true,
+      "phase_label": "Mod 2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Announces Next US Site with Landmark Investment in Ohio",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1521/intel-announces-next-us-site-with-landmark-investment-in",
+      "type": "company_announcement",
+      "published": "2022-01-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel Breaks Ground in the Silicon Heartland",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1572/intel-breaks-ground-in-the-silicon-heartland",
+      "type": "company_announcement",
+      "published": "2022-09-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Ohio One Construction Timeline Update",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/corporate/ohio-one-construction-timeline-update.html",
+      "type": "company_announcement",
+      "published": "2025-02-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Intel Reports Second-Quarter 2025 Financial Results",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1745/intel-reports-second-quarter-2025-financial-results",
+      "type": "company_announcement",
+      "published": "2025-07-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Intel Corporation (Ohio)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/intel-corporation-ohio-new-albany",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Intel Breaks Ground in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/resources/press-kit-intel-builds-arizona.html",
+      "type": "company_announcement",
+      "published": "2024-11-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Building America's Capacity to Innovate",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/opinion/building-america-capacity-to-innovate.html",
+      "type": "company_announcement",
+      "published": "2026-10-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s10",
+      "title": "Intel restarts its stalled US factory push as AI chip demand grows",
+      "publisher": "The Next Web",
+      "url": "https://thenextweb.com/news/intel-fab-62-ohio-factory-progress",
+      "type": "news",
+      "published": "2026-10-21",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Intel reported the fab basement level complete and above-ground work under way by early 2025. In its 2025 annual report Intel said it had further slowed the Ohio construction and that it would likely discontinue the Ohio fabs if it could not win a major external customer for Intel 14A. The CHIPS award amount is the New Albany share listed by the CHIPS Program Office.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:c704178c-0964-5566-9eae-4eb727195bb3",
+      "relation": "award_page",
+      "note": null
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the full build-out note to 'as much as $100 billion over a decade' and set the 2025 annual report's filing date to 23 January 2026; other statements were confirmed."
+  }
+}

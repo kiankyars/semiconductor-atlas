@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "jcet-shanghai-lingang-automotive",
+  "name": "JCET automotive chip packaging and test plant, Lingang, Shanghai",
+  "aliases": [
+    "JCET Automotive Electronics (Shanghai)",
+    "JCET Shanghai Automotive (JSAC)"
+  ],
+  "company": "JCET",
+  "operator": "JCET Shanghai Automotive Co., Ltd. (JSAC)",
+  "parties": [
+    {
+      "name": "JCET Shanghai Automotive Co., Ltd. (JSAC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Name used in the December 2025 release; the November 2023 releases call it JCET Automotive Electronics (Shanghai) Co., Ltd."
+    },
+    {
+      "name": "JCET Group",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Parent company; the November 2023 release calls the operating company a controlled subsidiary."
+    },
+    {
+      "name": "Local Shanghai funds",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Unnamed local investment funds that are partners in the venture."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test",
+    "power"
+  ],
+  "process_nodes": [
+    {
+      "label": "FCBGA",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "FCCSP",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "System in Package (SiP)",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "QFN",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "JCET's dedicated plant for automotive-grade chip packaging and test in the Lingang New Area of Shanghai, which the company calls an advanced packaging flagship for electric and intelligent vehicles. JCET announced a RMB 4.4 billion capital increase for the operating company in November 2023, after construction began in August 2023. The first phase includes 50,000 square metres of cleanroom. Production lines were declared ready in December 2025 with customer programmes in qualification and ramp, and JCET reported the capacity online in October 2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Shanghai",
+    "locality": "Shanghai",
+    "site": "Lingang New Area",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Called the Lingang Special Area in the 2023 releases and the Lingang New Area in 2025."
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-22",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 4400000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-11-01",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Capital increase into the operating company, raising its registered capital to RMB 4.8 billion."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 50000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Planned in 2023 and reported as the Phase I cleanroom at production line readiness."
+    },
+    {
+      "metric": "site_area",
+      "value": 130000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-11-01",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The 2023 releases also give a factory floor area of about 200,000 square metres; the 2025 release gives a site of about 35 acres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2023-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "announced",
+      "date": "2023-11-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Capital increase announced."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-H1",
+      "planned": true,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "In November 2023 production of the first phase was scheduled to begin in early 2025."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-12",
+      "planned": false,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Production lines reported ready, with customer programmes in qualification and volume ramp."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "JCET to Build an Automotive Chip Advanced Packaging Flagship Factory in China",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=1936",
+      "type": "company_announcement",
+      "published": "2023-11-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "JCET's Automotive Chip Back-end Manufacturing Base: Establishing an Intelligent and Lean Lighthouse Factory",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=1937",
+      "type": "company_announcement",
+      "published": "2023-11-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "JCET's Shanghai Automotive Semiconductor Packaging and Test Facility Achieves Production Line Readiness",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=2040",
+      "type": "company_announcement",
+      "published": "2025-12-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Building Out Advanced Packaging Portfolio, JCET Delivers Steady Revenue Growth and Improved Profitability in Q3 YTD 2026",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=2087",
+      "type": "company_announcement",
+      "published": "2026-10-22",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The early-2025 production target slipped to production line readiness in December 2025. The 2026 release refers only to JCET's automotive electronics facility in Shanghai, which is taken to be this plant. JCET's separate RMB 7.8 billion high-end advanced packaging plant, also in the Lingang New Area, is recorded as jcet-shanghai-advanced-packaging-facility.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the operator to the operating subsidiary, widened the early-2025 production target to half-year precision, recorded the Phase I cleanroom as reported at line readiness, and corrected the sources for JCET's role as parent. Audit fixes (2026-11-07): gave the operator and the operator party the same English name, JCET Shanghai Automotive Co., Ltd. (JSAC), from the newest release, and noted the name used in 2023."
+  }
+}

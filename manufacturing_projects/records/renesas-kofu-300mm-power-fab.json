@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "id": "renesas-kofu-300mm-power-fab",
+  "name": "Renesas Kofu Factory 300 mm power semiconductor fab",
+  "aliases": [
+    "Kofu Factory"
+  ],
+  "company": "Renesas",
+  "operator": "Renesas Semiconductor Manufacturing",
+  "parties": [
+    {
+      "name": "Renesas Semiconductor Manufacturing",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Wholly owned manufacturing subsidiary of Renesas Electronics."
+    },
+    {
+      "name": "Renesas Electronics",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "A former 150 mm and 200 mm fab in Kai, Yamanashi Prefecture, closed in October 2014, which Renesas decided in May 2022 to bring back in a remaining building as a 300 mm fab for IGBTs, power MOSFETs and other power semiconductors, with ¥90 billion of investment. The fab officially opened in April 2024 with an 18,000 m2 cleanroom, and Renesas planned mass production for 2025 to double its power semiconductor capacity. In October 2024 Renesas said it would push back the start of mass production without giving a new date; in early 2025 the plant was reported to be making only prototypes.",
+  "location": {
+    "country": "JP",
+    "admin1": "Yamanashi",
+    "locality": "Kai",
+    "site": null,
+    "address": "4617 Nishiyahata, Kai City, Yamanashi Prefecture, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "paused",
+  "status_as_of": "2025-02-05",
+  "status_source_ids": [
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 90000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-05-17",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Investment Renesas planned to make within 2022."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 18000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "up_to",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The 2022 release gives 18,000 m2; the 2024 release gives up to 18,000 m2."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-05-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Reopening target given in 2022."
+    },
+    {
+      "event": "opening",
+      "date": "2024-04-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Opening date in the operator's overview; an opening ceremony followed on 11 April 2024."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Planned start of mass production of IGBTs and other products; later postponed."
+    },
+    {
+      "event": "paused",
+      "date": "2024-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "At its third-quarter 2024 earnings briefing Renesas said it would delay the start of mass production, citing the need to judge timing carefully; no new date was given."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Renesas to Invest and Restart Operation of Kofu Factory as 300mm Wafer Fab Dedicated for Power Semiconductors",
+      "publisher": "Renesas Electronics",
+      "url": "https://www.renesas.com/en/about/newsroom/renesas-invest-and-restart-operation-kofu-factory-300mm-wafer-fab-dedicated-power-semiconductors",
+      "type": "company_announcement",
+      "published": "2022-05-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Renesas Commences Operations of Kofu Factory as Dedicated 300-mm Wafer Fab for Power Semiconductors",
+      "publisher": "Renesas Electronics",
+      "url": "https://www.renesas.com/en/about/newsroom/renesas-commences-operations-kofu-factory-dedicated-300-mm-wafer-fab-power-semiconductors",
+      "type": "company_announcement",
+      "published": "2024-04-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "量産見送り・合従連衡も視野に…「パワー半導体」に急ブレーキの背景事情",
+      "publisher": "Nikkan Kogyo Shimbun (Newswitch)",
+      "url": "https://newswitch.jp/p/44551",
+      "type": "news",
+      "published": "2025-02-05",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The plant itself runs: in February 2025 it was reported to be producing prototypes only. The postponement was linked in reporting to slower electric-vehicle growth. No cited source reports that mass production has since begun, so the record is marked paused rather than operating.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Status changed from operating to paused: February 2025 reporting says Renesas postponed mass production in October 2024 and the fab only makes prototypes. Added the street address, the 18,000 m2 cleanroom, the April 2024 opening date and the 2024 reopening target."
+  }
+}

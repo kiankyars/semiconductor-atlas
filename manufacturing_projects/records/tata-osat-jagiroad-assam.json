@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0",
+  "id": "tata-osat-jagiroad-assam",
+  "name": "Tata Electronics semiconductor assembly and test facility, Jagiroad",
+  "aliases": [
+    "Tata Semiconductor Assembly and Test (TSAT)",
+    "Tata Electronics Assam OSAT"
+  ],
+  "company": "Tata Electronics",
+  "operator": "Tata Electronics",
+  "parties": [
+    {
+      "name": "Tata Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of India",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the unit in February 2024 together with two other semiconductor projects."
+    },
+    {
+      "name": "Government of Assam",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "State government represented at the foundation stone ceremony in Jagiroad."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [
+    {
+      "label": "Wire bond",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "Flip chip",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "Integrated Systems Packaging (ISP)",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Tata Electronics' greenfield, high-volume chip assembly and test plant at Jagiroad in Morigaon district, Assam, near Guwahati. The Union Cabinet approved the INR 27,000 crore unit in February 2024 and the foundation stone was laid in March 2024. The plant is to offer wire bond, flip chip and integrated systems packaging for automotive, communications, computing and AI customers. Tata now puts the investment at USD 3 billion (more than USD 3 billion on its facility page) on a 171-acre campus and still described the plant as being built in September 2026. In October 2026 the state's chief minister said the first cleanroom was ready and pilot chips were being made, with a formal inauguration expected around the turn of the year.",
+  "location": {
+    "country": "IN",
+    "admin1": "Assam",
+    "locality": "Jagiroad",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "In Morigaon district, near Guwahati."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 270000000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-03-13",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "INR 27,000 crore, as approved by the Union Cabinet and stated at the foundation stone ceremony."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-18",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Investment given in the September 2026 release; the INR figure of 2024 is a separate statement and is not converted."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The company's undated assembly and test page, read on the date shown, gives more than USD 3 billion."
+    },
+    {
+      "metric": "site_area",
+      "value": 171,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Campus area from the company's undated OSAT page, read on the date shown."
+    },
+    {
+      "metric": "jobs",
+      "value": 27000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-03-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Direct and indirect jobs combined."
+    },
+    {
+      "metric": "capacity",
+      "value": 48000000,
+      "value_max": null,
+      "unit": "units_per_day",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Designed output in semiconductor units per day, as reported by Autocar Professional."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-02-29",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Union Cabinet approval."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2024-03-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Foundation stone laid, with the national ceremony held virtually."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Cabinet Okays India's First Semiconductor Fab By Tata Group, Taiwan's PSMC",
+      "publisher": "Inc42",
+      "url": "https://inc42.com/buzz/cabinet-okays-indias-first-semiconductor-fab-by-tata-group-taiwans-psmc",
+      "type": "news",
+      "published": "2024-02-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Hon’ble Prime Minister Narendra Modi lays the foundation stones for semiconductor fab in Gujarat and Semiconductor Assembly & Test Centre in Assam",
+      "publisher": "Tata Group",
+      "url": "https://www.tata.com/newsroom/business/prime-minister-modi-foundation-stone-semiconductor-fab-gujarat-test-assam",
+      "type": "company_announcement",
+      "published": "2024-03-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Semiconductor Assembly and Test",
+      "publisher": "Tata Electronics",
+      "url": "https://www.tataelectronics.com/semiconductor-assembly-and-test",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Tata Electronics and Enomoto Sign Memorandum of Understanding to Strengthen Semiconductor Packaging Ecosystem in India",
+      "publisher": "Tata Electronics",
+      "url": "https://www.tataelectronics.com/w/tata-electronics%E2%80%AFand%E2%80%AFenomoto-sign-memorandum-of-understanding-to-strengthen-semiconductor-packaging-ecosystem-in-india",
+      "type": "company_announcement",
+      "published": "2026-09-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Tata Electronics Begins Semiconductor Pilot In Assam, Automotive Modules In Focus",
+      "publisher": "Autocar Professional",
+      "url": "https://www.autocarpro.in/news/tata-electronics-begins-semiconductor-pilot-in-assam-automotive-modules-in-focus-135049",
+      "type": "news",
+      "published": "2026-10-05",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Pilot activity reported in October 2026 is not treated as production, so the status stays under construction until commercial output is reported. No production start date was found in the sources read. The investment figures are given in INR and USD by different sources and are kept as stated.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added October 2026 reporting of pilot activity in the first cleanroom and the planned capacity of up to 48 million units a day, refreshed the status date and updated the summary and notes; the status stays under construction. Audit fixes (2026-11-07): replaced an approximate USD 3 billion figure, a precision neither source uses, with the release's USD 3 billion and the facility page's more than USD 3 billion, and confirmed that the INR and USD amounts are each stated by their sources rather than converted."
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "id": "ase-wus-nanzih-advanced-packaging-hub",
+  "name": "ASE K19A advanced packaging plant (with WUS), Nanzih, Kaohsiung",
+  "aliases": [
+    "K19A",
+    "ASE and WUS advanced AI packaging facility"
+  ],
+  "company": "ASE",
+  "operator": "Advanced Semiconductor Engineering, Inc.",
+  "parties": [
+    {
+      "name": "Advanced Semiconductor Engineering, Inc.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Named in the companies' releases as ASE (日月光半導體), a member of ASE Technology Holding; the build-and-share contract was disclosed for this subsidiary."
+    },
+    {
+      "name": "ASE Technology Holding",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Parent group; it disclosed the build-and-share contract on behalf of its subsidiary."
+    },
+    {
+      "name": "WUS Printed Circuit (楠梓電子)",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Printed circuit board maker that co-develops the building with ASE under a joint build-and-share contract, with the building value to be allocated about 97.26% to ASE and 2.74% to WUS; the sources do not say what each side contributes, and no separate venture company is reported."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "FOCoS",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "label": "FCBGA",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A new ASE advanced packaging building, K19A, in the Nanzih Technology Industrial Park, Kaohsiung, developed with printed circuit board maker WUS under a joint build-and-share contract disclosed in March 2026. The companies presented the plan in May 2026, when a groundbreaking ceremony was held. The eight-storey building, with two basement levels and about 113,400 square metres of floor space, is to make FOCoS fan-out and flip chip BGA packages for AI, cloud and autonomous driving chips and will get the park's first 161 kV substation. Total investment is reported at NT$35.2 billion and operations are planned to start in September 2029.",
+  "location": {
+    "country": "TW",
+    "admin1": "Kaohsiung City",
+    "locality": "Kaohsiung",
+    "site": "Nanzih Technology Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-05-08",
+  "status_source_ids": [
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 35235000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-05-08",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total investment reported by United Daily News, citing ASE; the companies' releases give no amount."
+    },
+    {
+      "metric": "site_area",
+      "value": 17637,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-05-08",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 2050,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-05-08",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "The English release rounds this to more than 2,000."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-03-26",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "ASE disclosed the joint build-and-share contract with WUS for the K19A building, to be signed on 31 March 2026."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-05-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2029-09",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2029-09",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ASE and WUS Announce Strategic Collaboration to Build Advanced AI Packaging Hub in Kaohsiung",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/ase-and-wus-announce-strategic-expansion",
+      "type": "company_announcement",
+      "published": "2026-05-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "日月光攜手楠電推動擴廠投資 打造先進封裝新據點 助攻半導體產業升級",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room-ch/ase-and-wus-announce-strategic-expansion",
+      "type": "company_announcement",
+      "published": "2026-05-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "日月光與楠梓電簽約，合建分屋擴大 AI 先進封測產能",
+      "publisher": "Central News Agency (via TechNews)",
+      "url": "https://finance.technews.tw/2026/03/26/ase-wz-wus/",
+      "type": "news",
+      "published": "2026-03-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "日月光看好AI發展 攜手楠電投資352億元興建高階封測新廠房",
+      "publisher": "United Daily News (udn.com)",
+      "url": "https://udn.com/news/story/7240/9490809",
+      "type": "news",
+      "published": "2026-05-08",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "ase-kaohsiung-k18b",
+      "relation": "same_campus"
+    },
+    {
+      "id": "ase-kaohsiung-nanzih-park-iii",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The companies' releases do not use the K19A name or mention a ceremony; the building number and the groundbreaking come from news reports. Total floor area (113,402 square metres in the Chinese release) is a building figure rather than cleanroom or site area, so it is not recorded as a metric.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Identified the project as ASE's K19A building, changed the status from announced to under construction after news reports of a groundbreaking on 8 May 2026, added the NT$35.2 billion investment, site area, March 2026 build-and-share contract and planned September 2029 opening, corrected the jobs figure to about 2,050 and added the Chinese release and two news sources. Audit fixes (2026-11-07): set the operator to Advanced Semiconductor Engineering, Inc., the company named in the releases and the contract disclosure, with ASE Technology Holding as parent owner; kept WUS as joint-venture partner and noted that the sources do not say what each side contributes; labelled the TechNews copy as a Central News Agency report read via TechNews; and linked the record to the two other ASE projects in the Nanzih Technology Industrial Park."
+  }
+}

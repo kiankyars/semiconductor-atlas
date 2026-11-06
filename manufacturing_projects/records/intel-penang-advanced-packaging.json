@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-penang-advanced-packaging",
+  "name": "Intel Penang advanced packaging facility",
+  "aliases": [],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A $7 billion advanced packaging project in Penang, Malaysia, which Intel called its largest facility for 3D packaging technology, announced in late 2021 with a 710,000 square foot cleanroom on two levels. The first cleanroom equipment began arriving in November 2023 and Intel then aimed for operational readiness in 2024. In September 2024 Intel said it would finish construction but time the start-up to market conditions; its 2025 annual report still describes the facility as being built and lists Malaysia among delayed projects. Trade press in September 2026, reporting on Intel's Malaysian operations, said the facility was scheduled to begin operations that year.",
+  "location": {
+    "country": "MY",
+    "admin1": "Penang",
+    "locality": null,
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "admin1",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-24",
+  "status_source_ids": [
+    "s3",
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 710000,
+      "value_max": null,
+      "unit": "sq_ft",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cleanroom across two manufacturing levels."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced in late 2021."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2023-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "First cleanroom equipment arrived."
+    },
+    {
+      "event": "opening",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Operational readiness targeted for later in 2024; start-up later tied to market conditions."
+    },
+    {
+      "event": "opening",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Trade press reported in September 2026 that operations were scheduled to begin that year."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "A message from Intel CEO Pat Gelsinger to employees regarding the next phase of Intel's transformation",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1710/a-message-from-intel-ceo-pat-gelsinger-to-employees",
+      "type": "company_announcement",
+      "published": "2024-09-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Intel Malaysia expands advanced packaging as AI chips grow more complex",
+      "publisher": "Tech Wire Asia",
+      "url": "https://techwireasia.com/2026/09/intel-malaysia-advanced-packaging-ai-chips/",
+      "type": "trade_press",
+      "published": "2026-09-24",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Intel's separate Kulim assembly and test factory is not recorded here.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a September 2026 trade-press report that the facility was scheduled to begin operations in 2026, with a planned 2026 opening milestone; corrected 'key tools' to the first cleanroom equipment and set the 2025 annual report's filing date to 23 January 2026. Audit fixes (2026-11-07): Attributed the largest-3D-packaging-facility description in the summary to Intel, as its April 2024 update (s1) states it."
+  }
+}

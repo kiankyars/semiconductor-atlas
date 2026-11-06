@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-hiroshima-cleanroom-expansion",
+  "name": "Micron Hiroshima cleanroom expansion",
+  "aliases": [],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Ministry of Economy, Trade and Industry (Japan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Decided in September 2025 to subsidize the production expansion at the Hiroshima plant."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "dram",
+    "hbm"
+  ],
+  "process_nodes": [
+    {
+      "label": "1-gamma (1γ) DRAM",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Trade press links the expansion to scaling 1-gamma DRAM output; Micron's filing does not name a node."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A new cleanroom project at Micron's existing DRAM fab in Hiroshima, Japan, aimed at advanced DRAM and HBM for AI systems. Japan's industry ministry agreed in September 2025 to subsidize roughly a third of a planned 1.5 trillion yen investment. Micron broke ground in July 2026; equipment installation is due to begin in the second half of 2028 and the company expects initial output in late calendar 2028.",
+  "location": {
+    "country": "JP",
+    "admin1": "Hiroshima",
+    "locality": null,
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "admin1",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "At Micron's existing Hiroshima manufacturing facility."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-09",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1500000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-07-06",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Planned through the end of fiscal 2029, according to the 2025 subsidy reporting."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 500000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-09",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Capital spending subsidy; the 2025 reporting adds up to 36 billion yen over five years for related R&D, for a total of up to 536 billion yen."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-09",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Peak capacity target for early 2030 in wafers per month; the source does not state the wafer size."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The plan became public when the industry ministry announced its subsidy."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-07-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2028-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Micron expects initial output in late calendar 2028; the 2025 reporting targeted shipments around mid-2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron Technology, Inc. Form 10-K for the fiscal year ended September 3, 2026",
+      "publisher": "Micron Technology",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000023/mu-20260903.htm",
+      "type": "company_filing",
+      "published": "2026-10-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Micron Breaks Ground on Hiroshima Fab Expansion, Scaling 1γ DRAM and HBM Output as Equipment Set for 2H28",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/07/06/news-micron-breaks-ground-on-hiroshima-fab-expansion-scaling-1%CE%B3-dram-and-hbm-output-as-equipment-set-for-2h28/",
+      "type": "trade_press",
+      "published": "2026-07-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Japan grants $3.6 bln to Micron for advanced memory expansion in Hiroshima",
+      "publisher": "SemiMedia",
+      "url": "https://www.semimedia.cc/japan-grants-3-6-bln-to-micron-for-advanced-memory-expansion-in-hiroshima/",
+      "type": "trade_press",
+      "published": "2025-09-17",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Micron has not named the new cleanroom building, so it is recorded as a project at the Hiroshima site. Reported subsidy totals differ between 500 billion yen (capital spending only) and 536 billion yen (including R&D support).",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the investment and capacity qualifiers to exact, as both sources state the figures without approximation, and dated the investment figure to the July 2026 report."
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "id": "st-catania-silicon-carbide-campus",
+  "name": "STMicroelectronics Catania Silicon Carbide Campus",
+  "aliases": [
+    "Catania Campus",
+    "ST Silicon Carbide Campus"
+  ],
+  "company": "STMicroelectronics",
+  "operator": "STMicroelectronics",
+  "parties": [
+    {
+      "name": "STMicroelectronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Italy",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Provides a direct grant of about €2 billion toward the campus investment under the EU Chips Act framework, and earlier aid of up to €292.5 million for the substrate plant."
+    },
+    {
+      "name": "European Commission",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Approved the Italian aid measure under EU State aid rules in May 2024."
+    }
+  ],
+  "facility_type": "wafer_fab_and_packaging",
+  "identity_scope": "campus",
+  "segments": [
+    "power",
+    "silicon_carbide"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "ST's silicon carbide campus in Catania, Sicily, which is to bring every production step onto one site: substrates, epitaxy, a high-volume 200 mm front-end fab for power devices, and module assembly, test and packaging. Announced in May 2024 with a budget of about €5 billion for the campus, supported by about €2 billion of Italian grant aid that the European Commission cleared the same day; the substrate plant had earlier received separate Italian aid. ST later set the start of 200 mm wafer production for the fourth quarter of 2025, and its third-quarter 2026 report says manufacturing began and entered ramp-up in 2026. Full capacity is targeted for 2032 to 2033.",
+  "location": {
+    "country": "IT",
+    "admin1": "Sicily",
+    "locality": "Catania",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-11-04",
+  "status_source_ids": [
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-31",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Multi-year programme for the whole campus; the Commission describes the aided project as one integrated plant covering every step from raw material (including substrates) to finished devices."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-31",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Direct grant from Italy toward the €5 billion campus investment, cleared by the European Commission under EU State aid rules and the Chips Act principles."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 292500000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "phase",
+      "phase_label": "Substrate plant",
+      "as_of": "2022-10-04",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Aid through Italy's Recovery and Resilience Plan for the integrated substrate plant, approved by the European Commission in October 2022, before the May 2024 campus programme."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-31",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "ST announced the project on the day the Commission cleared the Italian aid; ST's 2025 annual report gives 31 May 2024 as the announcement date."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Production start targeted at announcement."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Revised target for the start of 200 mm wafer production given in April 2025."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "ST reports that it started manufacturing at the new 200 mm silicon carbide facility in 2026 and entered the ramp-up phase."
+    },
+    {
+      "event": "volume_production",
+      "date": "2032",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Commission expects the facility to operate at full capacity in 2032."
+    },
+    {
+      "event": "volume_production",
+      "date": "2033",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "ST targets full capacity by 2033, with up to 15,000 wafers per week at full build-out."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "STMicroelectronics to Build the World’s First Fully Integrated Silicon Carbide Facility in Italy",
+      "publisher": "I-Connect007",
+      "url": "https://iconnect007.com/article/141016/stmicroelectronics-to-build-the-worlds-first-fully-integrated-silicon-carbide-facility-in-italy/141013/ein",
+      "type": "trade_press",
+      "published": "2024-06-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Commission approves €2 billion Italian State aid measure to support STMicroelectronics to set up a new semiconductor manufacturing facility",
+      "publisher": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_24_2994/IP_24_2994_EN.pdf",
+      "type": "government",
+      "published": "2024-05-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "STMicroelectronics Details Company-Wide Program to Reshape Manufacturing Footprint and Resize Global Cost Base",
+      "publisher": "I-Connect007",
+      "url": "https://iconnect007.com/article/144901/stmicroelectronics-details-companywide-program-to-reshape-manufacturing-footprint-and-resize-global-cost-base/144898/ein",
+      "type": "trade_press",
+      "published": "2025-04-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "STMicroelectronics N.V. - Form 6-K - FY2026",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000932787/000093278726000094/stm-6k_q3x2026.htm",
+      "type": "company_filing",
+      "published": "2026-11-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2025",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/932787/000093278726000009/stm-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-26",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The record covers the whole campus. The substrate plant makes products outside this dataset's scope, but the European Commission describes the €5 billion project it aided as one integrated plant covering every step from raw material to finished devices, so the €5 billion investment and €2 billion grant here cover the whole campus, including substrate production; ST's announcement presents the substrate plant as being readied on the same site and does not split the amount. ST's 2025 annual report lists the substrate plant as a second Catania site and says the Commission granted the campus Integrated Production Facility status under the Chips Act in October 2025. ST's May 2024 and April 2025 releases were read in I-Connect007's republications (s1, s3) because ST's newsroom refused automated access; they are cited only for the production and capacity targets that ST's filings and the Commission release do not state.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Replaced two ST newsroom releases, which refused automated access, with republications of the same releases (May 2024 announcement and April 2025 footprint plan); checked the remaining statements against the Commission release and the Q3 2026 6-K. Audit fixes (2026-11-07): Set identity_scope to campus and rewrote the summary, notes and figure notes to say the €5 billion investment and €2 billion grant cover the whole campus including substrate production, as the Commission release describes; added ST's 2025 20-F (s5) for the announcement date, the figures and the earlier €292.5 million substrate-plant aid (new figure), and limited the I-Connect007 republications to the targets no primary source states."
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "id": "xfab-erfurt-fab4micro",
+  "name": "X-FAB Fab4Micro cleanroom, Erfurt",
+  "aliases": [
+    "Fab4Micro"
+  ],
+  "company": "X-FAB",
+  "operator": "X-FAB MEMS Foundry GmbH",
+  "parties": [
+    {
+      "name": "X-FAB MEMS Foundry GmbH",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "X-FAB subsidiary that received the grant notification."
+    },
+    {
+      "name": "Federal Government of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Provides about EUR 80.3 million of the grant."
+    },
+    {
+      "name": "Free State of Thuringia",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Provides EUR 47.1 million, more than first planned."
+    },
+    {
+      "name": "European Commission",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Cleared EUR 128 million of German state aid for the project on 11 December 2025 under EU state-aid rules, in line with the European Chips Act."
+    }
+  ],
+  "facility_type": "wafer_fab_and_packaging",
+  "identity_scope": "named_facility",
+  "segments": [
+    "mems_sensors",
+    "photonics",
+    "advanced_packaging"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A new cleanroom at X-FAB's Erfurt site in Thuringia, Germany, meant to bring MEMS, highly integrated microsystems and photonics, combined with new packaging and integration steps such as joint electronic-optical components and wafer-scale assembly, into industrial-scale production. The European Commission cleared the state aid in December 2025, describing the plant as a first-of-its-kind open foundry for fabless firms in Europe, and the German federal government and Thuringia handed over a EUR 127.4 million grant notice in June 2026. Ground was broken on 5 October 2026; X-FAB expects initial production by the end of 2028 and the Commission commercial operation by 2029.",
+  "location": {
+    "country": "DE",
+    "admin1": "Thuringia",
+    "locality": "Erfurt",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "At X-FAB's existing Erfurt site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-05",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "government_incentive",
+      "value": 127400000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-23",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Combined federal and Thuringia funding; about EUR 80.3 million federal and EUR 47.1 million state."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-12-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s1"
+      ],
+      "note": "European Commission approval of the German state aid for the project."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-10-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial production scheduled by the end of 2028."
+    },
+    {
+      "event": "volume_production",
+      "date": "2029",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The Commission expects commercial operation to start by 2029."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Grant notification presented: X-FAB develops Erfurt site into a center for microsystems technology",
+      "publisher": "X-FAB",
+      "url": "https://www.xfab.com/news/details/article/grant-notification-presented-x-fab-develops-erfurt-site-into-a-center-for-microsystems-technology",
+      "type": "company_announcement",
+      "published": "2026-06-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "X-FAB breaks ground on new cleanroom in Erfurt",
+      "publisher": "X-FAB",
+      "url": "https://www.xfab.com/news/details/article/x-fab-breaks-ground-on-new-cleanroom-in-erfurt",
+      "type": "company_announcement",
+      "published": "2026-10-05",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Commission approves €623 million German State aid to support set-up of two first-of-a-kind chips factories in Germany",
+      "publisher": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_25_3020",
+      "type": "government",
+      "published": "2025-12-11",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "X-FAB's releases and the Commission's decision give the public funding but not the total investment, cleanroom size, wafer size or capacity. The Commission rounds the aid to EUR 128 million; X-FAB gives EUR 127.4 million. The same Commission decision also covered a separate aid measure for GlobalFoundries in Dresden, which is not part of this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the European Commission's December 2025 state-aid decision as the announcement and as the source for a 2029 commercial-operation target and the open-foundry role, and changed the facility type and segments to include the packaging and integration processes both X-FAB and the Commission describe."
+  }
+}

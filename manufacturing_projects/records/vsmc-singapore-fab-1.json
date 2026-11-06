@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "id": "vsmc-singapore-fab-1",
+  "name": "VSMC 300mm fab, Singapore",
+  "aliases": [
+    "VisionPower Semiconductor Manufacturing Company fab",
+    "VIS-NXP Singapore fab"
+  ],
+  "company": "VIS",
+  "operator": "VisionPower Semiconductor Manufacturing Company (VSMC)",
+  "parties": [
+    {
+      "name": "VisionPower Semiconductor Manufacturing Company (VSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Vanguard International Semiconductor Corporation (VIS)",
+      "role": "joint_venture_partner",
+      "share_pct": 60,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Majority shareholder; contributes US$2.4 billion of equity for its 60% stake and is to run the fab."
+    },
+    {
+      "name": "NXP Semiconductors",
+      "role": "joint_venture_partner",
+      "share_pct": 40,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Minority shareholder; contributes US$1.6 billion of equity for its 40% stake; both partners also committed capacity deposits and are each allotted a share of the fab's capacity."
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "technology_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Expected at the June 2024 announcement to license and transfer the process technology."
+    },
+    {
+      "name": "Singapore Economic Development Board",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Published the groundbreaking and opening announcements; a cabinet minister took part in the groundbreaking."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "power",
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "130nm to 40nm",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Range of specialty process technologies the fab will offer."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "The first 300 mm fab of VSMC, a specialty foundry joint venture of Vanguard International Semiconductor (60%) and NXP (40%) in Tampines, Singapore, announced in June 2024 at a cost of about US$7.8 billion, later reported as cut to US$6.7 billion. Ground was broken in December 2024, and the fab opened in September 2026 after about 22 months of construction, having entered risk production with first sample lots above 99% yield. VIS runs it, offering 130nm to 40nm processes for mixed-signal, power management, analog and interposer products. Volume production is scheduled for the first quarter of 2027, with full capacity of about 44,000 wafers a month expected by 2029.",
+  "location": {
+    "country": "SG",
+    "admin1": null,
+    "locality": "Singapore",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "In Tampines."
+  },
+  "status": "operating",
+  "status_as_of": "2026-09-28",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7800000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-06-07",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Total cost, funded by the partners' equity, US$1.9 billion of capacity deposits and usage fees, and third-party loans."
+    },
+    {
+      "metric": "investment",
+      "value": 6700000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-05-06",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported reduction from US$7.8 billion, helped by equipment support from TSMC."
+    },
+    {
+      "metric": "capacity",
+      "value": 55000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "300 mm wafers per month expected in 2029, as stated at the groundbreaking."
+    },
+    {
+      "metric": "capacity",
+      "value": 44000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-09-28",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "300 mm wafers per month at full capacity by 2029; lowered from the 2024 figure after silicon interposer products were added."
+    },
+    {
+      "metric": "jobs",
+      "value": 1500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-12-04",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 1600,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-09-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Jobs the fab is expected to create, as stated at the opening."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-06-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "VIS and NXP announced the joint venture, with technology expected to be licensed from TSMC."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2024-12-04",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "More than 200 tools moved in and in use for trial production by May 2026."
+    },
+    {
+      "event": "building_complete",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Construction reported complete by the September 2026 opening."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Risk production under way, with the first sample lot processed, by September 2026."
+    },
+    {
+      "event": "opening",
+      "date": "2026-09-28",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Grand opening ceremony."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-Q1",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "VSMC celebrates breaking ground on 300mm fab in Singapore",
+      "publisher": "Singapore Economic Development Board",
+      "url": "https://www.edb.gov.sg/en/news-and-insights/vsmc-celebrates-breaking-ground-on-300mm-fab-in-singapore",
+      "type": "government",
+      "published": "2024-12-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "VSMC celebrates the grand opening of its first 300mm fab in Singapore",
+      "publisher": "Singapore Economic Development Board",
+      "url": "https://www.edb.gov.sg/en/news-and-insights/vsmc-celebrates-the-grand-opening-of-its-first-300mm-fab-in-singapore",
+      "type": "government",
+      "published": "2026-09-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "[News] VIS, NXP to Build a 12-Inch Fab, Indicating Singapore's Semiconductor Industry Concentration Further Enhances",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2024/06/07/news-vis-nxp-to-build-a-12-inch-fab-indicating-singapores-semiconductor-industry-concentration-further-enhances/",
+      "type": "trade_press",
+      "published": "2024-06-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "[News] TSMC Affiliate VIS Reportedly Weighs Second 12-Inch Fab Amid Tight Capacity, Silicon Interposer Push",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/05/06/news-tsmc-affiliate-vis-reportedly-weighs-second-12-inch-fab-amid-tight-capacity-silicon-interposer-push/",
+      "type": "trade_press",
+      "published": "2026-05-06",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The fab is recorded as operating because it has opened and entered risk production with construction complete; volume production has not yet started. The partners said a second phase would be considered only after the first phase ramps; no second phase has been announced. The joint-venture terms come from trade press (s3) because the partners' own releases could not be read. VIS was also reported in May 2026 to be evaluating a second 12-inch fab without a decided location (s4); it is not part of this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the company to the joint venture's short partner names (VIS and NXP), removed an unsupported September 2024 formation date from the VIS party note, and dropped a 2029 date that the opening release does not attach to the 1,600 jobs. Audit fixes (2026-11-07): set the company to VIS, the 60% majority holder stated by TrendForce, added TSMC as the expected technology licensor (technology_partner), and recorded Tampines in the location note."
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-esmc-dresden",
+  "name": "ESMC Dresden fab",
+  "aliases": [
+    "European Semiconductor Manufacturing Company",
+    "ESMC"
+  ],
+  "company": "TSMC",
+  "operator": "European Semiconductor Manufacturing Company (ESMC) GmbH",
+  "parties": [
+    {
+      "name": "European Semiconductor Manufacturing Company (ESMC) GmbH",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Joint venture; TSMC will run the fab."
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "owner",
+      "share_pct": 70,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Majority shareholder and fab operator, subject to regulatory approvals at announcement."
+    },
+    {
+      "name": "Robert Bosch GmbH",
+      "role": "joint_venture_partner",
+      "share_pct": 10,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Infineon Technologies AG",
+      "role": "joint_venture_partner",
+      "share_pct": 10,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "NXP Semiconductors N.V.",
+      "role": "joint_venture_partner",
+      "share_pct": 10,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Federal Government of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Grants a 5 billion euro State aid measure approved by the European Commission in August 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "28/22nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Planar CMOS."
+    },
+    {
+      "label": "16/12nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "FinFET."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "A 300 mm specialty logic foundry fab in Dresden run by ESMC, a venture 70 percent owned by TSMC with Bosch, Infineon and NXP holding 10 percent each. Announced in August 2023 at more than 10 billion euros, it is planned for 28/22nm and 16/12nm processes and about 40,000 wafers a month, mainly for automotive and industrial chips. The European Commission approved 5 billion euros of German State aid and ground was broken in August 2024. The building was topped out in September 2026; the first process tools are due in the second half of 2027, while the original plan targeted production by the end of 2027 and the Commission cites full capacity in 2029.",
+  "location": {
+    "country": "DE",
+    "admin1": "Saxony",
+    "locality": "Dresden",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Next to Bosch's existing Dresden wafer fab."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-15",
+  "status_source_ids": [
+    "s4",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-08-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Equity, debt and EU and German public support combined."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-08-20",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "German State aid measure approved by the European Commission under EU State aid rules."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-08-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "300 mm wafers per month at full operation."
+    },
+    {
+      "metric": "capacity",
+      "value": 480000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-08-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "300 mm silicon wafers per year, as described by the European Commission."
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-08-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Direct high-tech jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-08-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2024-08-20",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Marked the start of land preparation."
+    },
+    {
+      "event": "building_complete",
+      "date": "2026-09-14",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Topping-out ceremony for the fab building, 25 months after the groundbreaking; cleanroom fit-out and utilities were still to be completed."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2027-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Installation of the first process equipment, named by ESMC's president as the next milestone after the topping-out."
+    },
+    {
+      "event": "first_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original target of production by the end of 2027."
+    },
+    {
+      "event": "volume_production",
+      "date": "2029",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Full capacity planned for 2029."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC, Bosch, Infineon, and NXP Establish Joint Venture to Bring Advanced Semiconductor Manufacturing to Europe",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3049",
+      "type": "company_announcement",
+      "published": "2023-08-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "ESMC Breaks Ground on Dresden Fab",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3169",
+      "type": "company_announcement",
+      "published": "2024-08-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Commission approves €5 billion German State aid measure to support ESMC in setting up a new semiconductor manufacturing facility",
+      "publisher": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-approves-eu5-billion-german-state-aid-measure-support-esmc-setting-new-semiconductor",
+      "type": "government",
+      "published": "2024-08-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Q2 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-07-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Construction of TSMC fab in Germany on track: ESMC president",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202609150007",
+      "type": "news",
+      "published": "2026-09-15",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "TSMC said in July 2026 that it is adding mature-node capacity through ESMC for automotive and industrial uses.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the September 2026 topping-out as a building-completed milestone from the cited Focus Taiwan report. Other statements matched their sources."
+  }
+}

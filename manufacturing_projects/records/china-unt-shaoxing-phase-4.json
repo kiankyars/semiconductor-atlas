@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "id": "china-unt-shaoxing-phase-4",
+  "name": "United Nova Technology Phase 4 12-inch Line, Shaoxing",
+  "aliases": [
+    "芯联12英寸车规级数模混合芯片制造项目",
+    "芯联集成四期项目"
+  ],
+  "company": "United Nova Technology",
+  "operator": "芯联先进集成电路制造(绍兴)有限公司 (United Nova Technology joint venture)",
+  "parties": [
+    {
+      "name": "芯联先进集成电路制造(绍兴)有限公司",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Project company, previously wholly owned by United Nova Technology; registered capital reached CNY 8.483 billion after three funding rounds in 2026."
+    },
+    {
+      "name": "United Nova Technology (芯联集成电路制造股份有限公司)",
+      "role": "owner",
+      "share_pct": 25.1,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Planned stake after the joint venture, down from 100%, after which the project company leaves its consolidated accounts; commits CNY 3.012 billion, had paid in CNY 2.129 billion by September 2026, and is to sell the venture technology appraised at CNY 1.211 billion."
+    },
+    {
+      "name": "浙江绍兴杭绍临空示范区产业发展集团有限公司",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Development group of the Hangzhou-Shaoxing airport economic zone that signed the June 2026 framework agreement; the zone's Shaoxing management committee leads a local fund group committing CNY 3 billion."
+    },
+    {
+      "name": "绍兴柯桥芯合产业基金",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Added CNY 2.004 billion in June 2026."
+    },
+    {
+      "name": "工融金投",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Bank-affiliated investor that added CNY 1.5 billion in September 2026; four other bank-affiliated investors added smaller amounts in the same round."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "analog_mixed_signal",
+    "photonics"
+  ],
+  "process_nodes": [
+    {
+      "label": "40/28nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "MCU and DSP."
+    },
+    {
+      "label": "90/55nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "BCD, DrMOS and other analog."
+    },
+    {
+      "label": "55nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Silicon photonics and laser drivers."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "United Nova Technology's fourth-phase project in Shaoxing, a single 300 mm line for automotive-grade mixed-signal chips planned at about CNY 20 billion and 50,000 wafers a month, run through a joint venture in which the company keeps 25.1%. It covers 40/28nm MCU and DSP, 90/55nm BCD and other analog processes, and 55nm silicon photonics. The framework agreement was signed in June 2026 and the investors had completed their capital subscriptions by September 2026; no construction start has been reported.",
+  "location": {
+    "country": "CN",
+    "admin1": "Zhejiang",
+    "locality": "Shaoxing",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2026-11-06",
+  "status_source_ids": [
+    "s2",
+    "s1",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Planned as CNY 12 billion of registered capital and CNY 8 billion of bank loans."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-24",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "300 mm wafers per month."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-06-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Joint-venture framework agreement signed; the parent said on 21 September 2026 that all capital subscriptions were complete."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "84.8亿！芯联先进，重金入局12英寸",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20260924-41206.html",
+      "type": "trade_press",
+      "published": "2026-09-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "12英寸厂“进账”91亿元，国内晶圆代工按下快进键",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20261106-41410.html",
+      "type": "trade_press",
+      "published": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "芯联集成30亿撬动200亿项目 合资投建12英寸车规级芯片产线|速读公告",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2397838",
+      "type": "news",
+      "published": "2026-06-12",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "No construction or production dates have been cited. Sources describe the company's earlier Phase 3 300 mm line in Shaoxing, run by a different subsidiary, as built and producing; it is not recorded separately here. No operator or government source could be opened for this record.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the operator from a subsidiary to a joint venture after Cailian Press reported United Nova Technology's stake falling to 25.1% and the company leaving its consolidated accounts; added that source, the funding split and the parent's commitment."
+  }
+}

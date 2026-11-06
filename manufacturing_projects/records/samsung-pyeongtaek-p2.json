@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-pyeongtaek-p2",
+  "name": "Samsung Pyeongtaek P2",
+  "aliases": [
+    "Pyeongtaek Line 2"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "nand",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "1z DRAM",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Third-generation 10nm-class DRAM made with EUV; the line's first product was 16Gb LPDDR5 mobile DRAM."
+    },
+    {
+      "label": "5nm",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "The EUV foundry line Samsung began building at Pyeongtaek in May 2020 targets 5nm and finer; Samsung's August 2020 release says Line 2 would add foundry output after DRAM, and Korea JoongAng Daily placed the foundry equipment in P2."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "summary": "Samsung's second production line at its Pyeongtaek campus in Gyeonggi Province, which Samsung described as the largest-scale chip production line to date, saying it spans more than 128,900 m² (about 16 football pitches) without saying whether that is land, floor or cleanroom area. Mass production of 16Gb LPDDR5 mobile DRAM on Samsung's EUV-based 1z process began there in August 2020, and Samsung said the line would go on to make V-NAND and foundry chips. Construction of an EUV foundry line for 5nm-and-finer logic and of a V-NAND facility inside Line 2 began in May 2020, both aimed at the second half of 2021. By September 2022 P2 was making DRAM, NAND flash and EUV-based processors, and Samsung put the amount invested in it at more than KRW 30 trillion.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Pyeongtaek",
+    "site": "Pyeongtaek Campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2022-09-07",
+  "status_source_ids": [
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 30000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-09-07",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Amount Samsung said had gone into P2 alone."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2020-05",
+      "planned": false,
+      "phase_label": "EUV foundry line",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Construction of the EUV foundry line began in May 2020."
+    },
+    {
+      "event": "construction_start",
+      "date": "2020-05",
+      "planned": false,
+      "phase_label": "NAND line",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Cleanroom construction for the NAND line began in May 2020."
+    },
+    {
+      "event": "volume_production",
+      "date": "2020-08",
+      "planned": false,
+      "phase_label": "DRAM",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Samsung announced on 30 August 2020 that mass production of 16Gb LPDDR5 DRAM had begun on the line."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021-H2",
+      "planned": true,
+      "phase_label": "EUV foundry line",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Full operation target for the EUV foundry line."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021-H2",
+      "planned": true,
+      "phase_label": "NAND line",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Mass production target for the V-NAND line."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Samsung Begins Mass Production of 16Gb LPDDR5 DRAM at World’s Largest Semiconductor Line",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-begins-mass-production-of-16gb-lpddr5-dram-at-worlds-largest-semiconductor-line",
+      "type": "company_announcement",
+      "published": "2020-08-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Samsung Electronics Expands its Foundry Capacity with A New Production Line in Pyeongtaek, Korea",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-electronics-expands-its-foundry-capacity-with-a-new-production-line-in-pyeongtaek-korea",
+      "type": "company_announcement",
+      "published": "2020-05-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Samsung Announces New NAND Flash Facility to Address Future Data Center and Mobile Demands",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-announces-new-nand-flash-facility-to-address-future-data-center-and-mobile-demands",
+      "type": "company_announcement",
+      "published": "2020-06-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "P2 NAND line operational in late 2021, Samsung says",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/p2-nand-line-operational-in-late-2021-samsung-says/11686384",
+      "type": "news",
+      "published": "2020-06-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Samsung starts operations at newest chip plant in Pyeongtaek complex",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/samsung-starts-operations-at-newest-chip-plant-in-pyeongtaek-complex/11563785",
+      "type": "news",
+      "published": "2022-09-07",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "samsung-pyeongtaek-p3",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p4",
+      "relation": "same_campus"
+    },
+    {
+      "id": "samsung-pyeongtaek-p5",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Samsung's May 2020 foundry release does not name the line; its August 2020 release says Line 2 would produce foundry chips after DRAM, and its June 2020 NAND release places the new V-NAND facility inside Line 2. The 300 mm wafer size follows from the May 2020 release, which says the new Pyeongtaek line brings Samsung's foundry network to six 12-inch lines and one 8-inch line. The cited sources do not give dates when the foundry and NAND lines reached mass production. The 128,900 m² that Samsung gives for Line 2 is not recorded as a site or cleanroom area because the release does not say which area it measures.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the notes and summary, which said only Korean press placed the foundry and NAND lines in P2; Samsung's own June and August 2020 releases place them in Line 2. Removed a news source from the foundry construction milestone it did not support and reworded the summary. Audit fixes (2026-11-07): Reworded the summary to say Samsung's release gives the 128,900 m² as the area the line spans without saying whether it is land, floor or cleanroom area, and noted why it is not recorded as a figure."
+  }
+}

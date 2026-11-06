@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "id": "st-agrate-300mm-fab",
+  "name": "STMicroelectronics Agrate 300 mm fab",
+  "aliases": [
+    "Agrate Fab 3"
+  ],
+  "company": "STMicroelectronics",
+  "operator": "STMicroelectronics",
+  "parties": [
+    {
+      "name": "STMicroelectronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "ST's 300 mm wafer fab in Agrate Brianza, Italy, which ST intends to become its flagship high-volume site for smart power and mixed-signal technologies. The fab was qualified for production in 2023 with slightly more than 1,000 wafers per week installed, starting with mixed-signal processes. Under its April 2025 footprint plan ST aims to double capacity to 4,000 wafers per week by 2027 and to add modules up to 14,000 wafers per week depending on demand; ST still described the fab as ramping up in November 2026.",
+  "location": {
+    "country": "IT",
+    "admin1": "Lombardy",
+    "locality": "Agrate Brianza",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-11-04",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2023",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Qualified for production in 2023 with slightly more than 1,000 wafers per week of installed capacity."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Report on Form 6-K dated March 21, 2024 (STMicroelectronics 2023 Annual Report)",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/932787/000162828024012620/stm_arxmaster-darsec.htm",
+      "type": "company_filing",
+      "published": "2024-03-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "STMicroelectronics Details Company-Wide Program to Reshape Manufacturing Footprint and Resize Global Cost Base",
+      "publisher": "I-Connect007",
+      "url": "https://iconnect007.com/article/144901/stmicroelectronics-details-companywide-program-to-reshape-manufacturing-footprint-and-resize-global-cost-base/144898/ein",
+      "type": "trade_press",
+      "published": "2025-04-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "STMicroelectronics N.V. - Form 6-K - FY2026",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000932787/000093278726000094/stm-6k_q3x2026.htm",
+      "type": "company_filing",
+      "published": "2026-11-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2025",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/932787/000093278726000009/stm-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-26",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "tower-fab-10-agrate",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The 2023 annual report says smart power and embedded non-volatile memory processes were to be phased in after mixed-signal. ST's 2025 annual report lists the fab as Agrate Fab 3, running analog CMOS, BCD and embedded non-volatile memory processes, says it is currently shared with Tower Semiconductor, and plans 2026 spending on its ramp-up. The April 2025 plan targets 4,000 wafers per week by 2027 and modular growth to 14,000; these are weekly figures and are not converted into a capacity metric. The April 2025 plan was read in I-Connect007's republication of ST's release because ST's newsroom refused automated access; ST's filings read for this record do not restate those targets. Tower Semiconductor's own equipment line in part of the same cleanroom is recorded separately as tower-fab-10-agrate.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Replaced ST's April 2025 newsroom release, which refused automated access, with a republication of the same release; removed unsupported aliases and a 2027 volume-production milestone that actually described a capacity target, and noted the overlap with Tower's Fab 10 line in the same building. Audit fixes (2026-11-07): Added ST's 2025 20-F (s4), which names the fab Agrate Fab 3, lists it as shared with Tower and supports its operating status, and added that alias; re-read the I-Connect007 republication (s2), which is labelled by its publisher, matches its published title and still supports the April 2025 targets, and noted why it is kept."
+  }
+}

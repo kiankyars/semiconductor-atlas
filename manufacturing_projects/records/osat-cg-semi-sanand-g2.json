@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "id": "osat-cg-semi-sanand-g2",
+  "name": "CG Semi G2 OSAT facility, Sanand",
+  "aliases": [
+    "CG Semi G2"
+  ],
+  "company": "CG Power",
+  "operator": "CG Semi",
+  "parties": [
+    {
+      "name": "CG Semi Private Limited",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "CG Power and Industrial Solutions",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": "Parent company of CG Semi, part of the Murugappa Group."
+    },
+    {
+      "name": "Renesas Electronics Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Shareholding not stated in the sources read."
+    },
+    {
+      "name": "Stars Microelectronics",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "note": "Thailand-based partner; shareholding not stated."
+    },
+    {
+      "name": "Government of India",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the CG Power and Renesas assembly and test unit in Sanand in February 2024."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The second and larger of CG Semi's two assembly and test plants in Sanand, Gujarat, about 3 km from the G1 plant. It belongs to the INR 7,600 crore unit approved by the Union Cabinet in February 2024, whose foundation stone was laid in March 2024. When G1 was inaugurated in August 2025 the company said G2 was under construction, due to be finished by the end of 2026 with planned capacity of about 14.5 million units a day. In July 2026 it described G2 as still under development, and its website expects G2 to start operating in 2027.",
+  "location": {
+    "country": "IN",
+    "admin1": "Gujarat",
+    "locality": "Sanand",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4",
+      "s5"
+    ],
+    "note": "About 3 km from the G1 facility in Sanand; no site or address is published for G2 in the sources read."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-07-04",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 76000000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-02-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Estimated cost of INR 7,600 crore at Cabinet approval in February 2024 for the CG Power and Renesas unit, which later releases say covers both the G1 and G2 facilities. CG Semi later described the spending as more than this amount (next figure)."
+    },
+    {
+      "metric": "investment",
+      "value": 76000000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-04",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "CG Semi's releases on the G1 inauguration and the start of commercial production put spending at more than INR 7,600 crore over five years for G1 and G2 together, where the Cabinet approval had given INR 7,600 crore as the estimated cost."
+    },
+    {
+      "metric": "capacity",
+      "value": 14500000,
+      "value_max": null,
+      "unit": "units_per_day",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-08-28",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Planned packaged units per day at the G2 facility."
+    },
+    {
+      "metric": "jobs",
+      "value": 5000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-08-28",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Direct and indirect jobs expected across the G1 and G2 facilities."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-02-29",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Union Cabinet approval of the unit that covers both CG Semi facilities."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2024-03-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Foundation stone laid by video link for CG Power's Sanand assembly and test unit, the approved project later split into the G1 and G2 facilities; the sources do not say which building it was for."
+    },
+    {
+      "event": "building_complete",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Completion expected by the end of 2026, to be followed by customer qualification."
+    },
+    {
+      "event": "first_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The company website expects G2 to be operational in 2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Cabinet Okays India's First Semiconductor Fab By Tata Group, Taiwan's PSMC",
+      "publisher": "Inc42",
+      "url": "https://inc42.com/buzz/cabinet-okays-indias-first-semiconductor-fab-by-tata-group-taiwans-psmc",
+      "type": "news",
+      "published": "2024-02-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "CG Semi unveils one of India's first end-to-end OSAT facilities in Sanand, Gujarat",
+      "publisher": "CG Semi",
+      "url": "https://cgsemi.com/newsroom/cg-semi-unveils-one-of-indias-first-end-to-end-osat-facilities-in-sanand-gujarat",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "CG Semi commences commercial production at its G1 OSAT facility in Sanand, Gujarat",
+      "publisher": "CG Semi",
+      "url": "https://cgsemi.com/newsroom/cg-semi-commences-commercial-production-at-its-g1-osat-facility-in-sanand-gujarat",
+      "type": "company_announcement",
+      "published": "2026-07-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "CG Semi",
+      "publisher": "CG Semi",
+      "url": "https://www.cgsemi.com/",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "CG Semi unveils one of India's first end-to-end OSAT facilities in Gujarat",
+      "publisher": "IANS",
+      "url": "https://ianslive.in/cg-semi-unveils-one-of-indias-first-end-to-end-osat-facilities-in-gujarat--20250828191618",
+      "type": "news",
+      "published": "2025-08-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "India is set to become a global hub in semiconductor manufacturing, says PM Modi",
+      "publisher": "News On AIR (All India Radio)",
+      "url": "https://www.newsonair.gov.in/pm-modi-to-lay-foundation-stone-of-03-semiconductor-projects-worth-1-25-lakh-cr-rupees-through-video-conferencing",
+      "type": "news",
+      "published": "2024-03-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "PM Modi Launches 3 Semiconductor Projects Worth INR 1.25 Lakh Crore",
+      "publisher": "Energetica India",
+      "url": "https://www.energetica-india.net/news/pm-modi-launches-3-semiconductor-projects-worth-inr-125-lakh-crore",
+      "type": "trade_press",
+      "published": "2024-03-13",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Recorded separately from the G1 facility (osat-cg-semi-sanand-g1) because the operator names the two plants separately. G2 was reported under construction in August 2025, but no start date was found. The CG Semi newsroom shows 17 August 2026 on the release about the G1 inauguration, but a news agency report of the same text is dated 28 August 2025, matching the July 2026 release; the newsroom copy is therefore recorded without a publication date.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the company to the parent CG Power; replaced a construction start dated to August 2025, which was only the date G2 was reported as under construction, with the March 2024 foundation stone for the Sanand unit; dated the August 2025 statements with a news agency report and changed the end-2026 completion target to year precision. Audit fixes (2026-11-07): kept both INR 7,600 crore figures because they are different statements, an estimated cost at Cabinet approval in 2024 and more than that amount over five years in CG Semi's later releases, and explained the change in their notes."
+  }
+}

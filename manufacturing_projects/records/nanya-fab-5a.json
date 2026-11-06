@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "nanya-fab-5a",
+  "name": "Nanya Technology Fab 5A",
+  "aliases": [
+    "Nanya new fab"
+  ],
+  "company": "Nanya",
+  "operator": "Nanya Technology",
+  "parties": [
+    {
+      "name": "Nanya Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [
+    {
+      "label": "10nm-class DRAM",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The company says the fab is intended for future 10nm-class technologies."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Nanya Technology's new DRAM fab in Taishan District, New Taipei City, Taiwan, designed with a two-story cleanroom and built in phases. The company held a groundbreaking in June 2022. In August 2026 its board approved a first-phase budget of NT$346.6 billion for about 35,900 wafer starts per month over 2026 to 2029. Nanya plans equipment move-in in the first quarter of 2027, first wafer output in the fourth quarter of 2027 and a ramp to 30,000 wafer starts a month by the end of 2028 and 50,000 by 2030.",
+  "location": {
+    "country": "TW",
+    "admin1": "New Taipei City",
+    "locality": "New Taipei",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s6",
+      "s5"
+    ],
+    "note": "Nanya's headquarters is also in Taishan District, in Nanlin Science Park."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-12",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 346600000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "First-phase capital spending approved by the board for 2026 to 2029."
+    },
+    {
+      "metric": "capacity",
+      "value": 35900,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Wafer starts per month for the first phase; wafer size not stated."
+    },
+    {
+      "metric": "capacity",
+      "value": 30000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Wafer starts per month the fab is to ramp to by the end of 2028; wafer size not stated."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-12",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Full capacity in wafer starts per month targeted by 2030 (by the end of 2030 in the results release); wafer size not stated."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "From the undated company profile."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2022-06-23",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2027-Q1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2027-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "First wafer output from the new fab."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Our Company",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/About/3",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Corporate Milestone",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/About/27/Corporate%20Milestone",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Nanya Technology Reports Results for the Third Quarter 2026",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/IR/16?IRId=14188",
+      "type": "company_announcement",
+      "published": "2026-10-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Nanya Technology Q3 2026 Investor Conference",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/Activity?Action=IR_investorcalendar_FileName&Id=5298&column=Presentation",
+      "type": "company_report",
+      "published": "2026-10-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Contact Us",
+      "publisher": "Nanya Technology",
+      "url": "https://www.nanya.com/en/About/7/Contact%20Us",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Nanya Technology breaks ground on semiconductor fab in New Taipei",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202206230012",
+      "type": "news",
+      "published": "2022-06-23",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Nanya's company profile describes an earlier plan of about NT$300 billion in three phases reaching 45,000 wafers a month; the October 2026 results give the larger first-phase budget and a 50,000 wafer target, and say new capacity is planned around customers' long-term agreements for AI projects.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:F16A5579",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for Fab 5A."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a Focus Taiwan report that places the fab in Taishan District, New Taipei City, and dates the groundbreaking to 23 June 2022; the record previously gave only the country. Audit fixes (2026-11-07): added the planned ramp to 30,000 wafer starts a month by the end of 2028 from the October 2026 investor presentation as a capacity figure, matching the summary."
+  }
+}

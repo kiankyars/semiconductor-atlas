@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "id": "kioxia-kitakami-fab3",
+  "name": "Kioxia Kitakami Fab3",
+  "aliases": [
+    "K3"
+  ],
+  "company": "Kioxia",
+  "operator": "Kioxia Iwate Corporation",
+  "parties": [
+    {
+      "name": "Kioxia Iwate Corporation",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Operator of the Kitakami Plant where Fab3 is planned."
+    },
+    {
+      "name": "Sandisk",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Joint investor in the broader Yokkaichi and Kitakami buildout announced the same day."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned third flash memory fab at Kioxia's Kitakami Plant in Iwate Prefecture, on land south of Fab2, announced in August 2026 alongside a joint Kioxia and Sandisk plan to spend more than $31 billion in Japan through 2032. Kioxia says site preparation has started and targets operation in fiscal 2029, with the schedule and equipment spending to follow market demand and depending on government support.",
+  "location": {
+    "country": "JP",
+    "admin1": "Iwate",
+    "locality": "Kitakami",
+    "site": "Kitakami Plant",
+    "address": "5-29, Kitakogyodanchi, Kitakami City, Iwate",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "On land south of Fab2."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-27",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 31000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-08-27",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Joint Kioxia and Sandisk plan of about 5 trillion yen through 2032 for buildout at the Yokkaichi and Kitakami plants; the release does not split it by fab and makes it contingent on government support."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-08-27",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2029",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Operation targeted for Kioxia's fiscal 2029."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Kioxia to Expand 3D Flash Memory Production Capacity with the New Fab3 at Kitakami Plant",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-2.html",
+      "type": "company_announcement",
+      "published": "2026-08-27",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Kioxia and Sandisk to Invest Over $31 Billion in Japan, Extending Leadership in Memory Industry",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/news/2026/20260827-3.html",
+      "type": "company_announcement",
+      "published": "2026-08-27",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Kitakami Plant (KIOXIA Iwate Corporation)",
+      "publisher": "Kioxia",
+      "url": "https://www.kioxia.com/en-jp/about/kitakami.html",
+      "type": "company_report",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "kioxia-kitakami-fab1",
+      "relation": "same_campus"
+    },
+    {
+      "id": "kioxia-kitakami-fab2",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Kept as announced: the release reports site preparation and related work but no groundbreaking or building construction. The Fab3 release itself does not mention Sandisk.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

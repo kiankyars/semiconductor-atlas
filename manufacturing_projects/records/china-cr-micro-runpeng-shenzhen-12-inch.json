@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "id": "china-cr-micro-runpeng-shenzhen-12-inch",
+  "name": "Runpeng Semiconductor 12-inch Line, Shenzhen",
+  "aliases": [
+    "润鹏半导体12英寸集成电路生产线",
+    "CR Micro Shenzhen 12-inch fab"
+  ],
+  "company": "CR Micro",
+  "operator": "Runpeng Semiconductor (Shenzhen) Co., Ltd.",
+  "parties": [
+    {
+      "name": "Runpeng Semiconductor (Shenzhen) Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "China Resources Microelectronics Limited",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Holds its interest through its controlled subsidiary CR Micro Technology (Shenzhen); its 2025 report describes the Shenzhen line as a 300 mm project in which it holds an equity stake."
+    },
+    {
+      "name": "Shenzhen municipal state-owned investors",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Co-founders of the project company; the Shenzhen Major Industry Investment Group is reported to hold 9%."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Joined as an investor after the company was formed."
+    },
+    {
+      "name": "FAW Equity Investment (Tianjin) Co., Ltd.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Joined as an investor after the company was formed."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "40nm and above",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Analog and specialty processes."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "A 300 mm power and analog specialty fab in Shenzhen backed by CR Micro, Shenzhen state investors and the national chip fund. Phase I is budgeted at CNY 22 billion for 480,000 wafers a year. Construction began in October 2022 and the line was commissioned into production on 31 December 2024; CR Micro reported it was still ramping capacity in its 2025 annual report.",
+  "location": {
+    "country": "CN",
+    "admin1": "Guangdong",
+    "locality": "Shenzhen",
+    "site": "Bay Area Chip City, Bao'an District",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-04-25",
+  "status_source_ids": [
+    "s3",
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 22000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2025-01-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Total investment for Phase I."
+    },
+    {
+      "metric": "capacity",
+      "value": 480000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2025-01-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned 300 mm power-chip wafers per year once Phase I is complete."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2022-10",
+      "planned": false,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2024-12-31",
+      "planned": false,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Line-commissioning ceremony; reports describe the line as put into production that day."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "总投资220亿元，华润微深圳12英寸晶圆厂通线投产",
+      "publisher": "ICSmart (via Sina Finance)",
+      "url": "https://finance.sina.cn/2025-01-03/detail-inecryrf5005962.d.html",
+      "type": "trade_press",
+      "published": "2025-01-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "深圳加速补齐芯片制造短板，第二条12英寸项目通线投产",
+      "publisher": "Jiemian News",
+      "url": "https://m.jiemian.com/article/12203409.html",
+      "type": "news",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "华润微电子有限公司2025年年度报告摘要",
+      "publisher": "China Resources Microelectronics Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225190453.PDF",
+      "type": "company_filing",
+      "published": "2026-04-25",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Jiemian described this as the second 300 mm production line to start up in Shenzhen, after SMIC's. CR Micro's 2025 annual report summary said depreciation from the two 300 mm line projects it has stakes in, one in Chongqing and this one in Shenzhen, weighed on its profit while the Shenzhen line was still ramping.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the note on the 2025 annual report, which attributes the depreciation pressure to both of CR Micro's 300 mm line stakes (Chongqing and Shenzhen), and reworded the owner note; no newer reporting changed the status. Audit fixes (2026-11-07): replaced the Eastmoney copy of the 2025 annual report summary with the identical exchange copy on cninfo, dated 25 April 2026 there, and moved the status date to match; kept the ICSmart report labelled as read via Sina Finance because the original page was not found, typed as trade press like other chip-industry outlets."
+  }
+}

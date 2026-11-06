@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "id": "globalfoundries-malta-us-japan-fabs",
+  "name": "Malta U.S.-Japan initiative fabs",
+  "aliases": [],
+  "company": "GlobalFoundries",
+  "operator": "GlobalFoundries",
+  "parties": [
+    {
+      "name": "GlobalFoundries",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Selected as technology provider and operator."
+    },
+    {
+      "name": "Government of Japan",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Provides the investment under a U.S.-Japan initiative."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "Two new 300 mm fabs at GlobalFoundries' Malta, New York site, which GlobalFoundries was selected in October 2026 to operate under a U.S.-Japan initiative. Japan provides the funding, about $10 billion per fab, and GlobalFoundries supplies technology and runs the plants. The first fab is planned to break ground in late 2026, come online in 2029 and reach about 900,000 wafers a year; the second would add similar capacity, with no date given. The site is permitted and reuses existing Malta infrastructure.",
+  "location": {
+    "country": "US",
+    "admin1": "New York",
+    "locality": "Malta",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-14",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 21000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Funding under the U.S.-Japan initiative for both fabs."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First fab",
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Second fab",
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 900000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First fab",
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm wafers per year at full operation."
+    },
+    {
+      "metric": "capacity",
+      "value": 900000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Second fab",
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm wafers per year; GlobalFoundries expects the second fab to add about the same as the first."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Manufacturing jobs, plus about 27,000 construction and ecosystem jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-10-14",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026",
+      "planned": true,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expected later in 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2029",
+      "planned": true,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expected to come online."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "GlobalFoundries selected to operate two new semiconductor fabs in New York under landmark U.S.-Japan initiative",
+      "publisher": "GlobalFoundries",
+      "url": "https://gf.com/news-and-events/news/globalfoundries-selected-to-operate-two-new-semiconductor-fabs-in-new-york-under-landmark-us-japan-initiative/",
+      "type": "company_announcement",
+      "published": "2026-10-14",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The release does not name the process technologies beyond GlobalFoundries' differentiated technologies, and it does not say who will own the fabs. In the same announcement GlobalFoundries agreed to redirect $955 million of its CHIPS award to silicon photonics, SiGe and advanced packaging at Malta and Burlington.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the second fab's planned capacity, which the release gives as roughly equal to the first; all other statements were confirmed and no groundbreaking had been reported by the review date."
+  }
+}

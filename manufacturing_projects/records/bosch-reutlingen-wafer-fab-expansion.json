@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0",
+  "id": "bosch-reutlingen-wafer-fab-expansion",
+  "name": "Bosch Reutlingen wafer fab expansion",
+  "aliases": [
+    "Reutlingen cleanroom extension"
+  ],
+  "company": "Bosch",
+  "operator": "Bosch",
+  "parties": [
+    {
+      "name": "Robert Bosch GmbH",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "silicon_carbide",
+    "power",
+    "mems_sensors"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Bosch is enlarging its wafer fab in Reutlingen, Germany, which has mass-produced silicon carbide chips since late 2021. In February 2022 it committed more than EUR 250 million through 2025 to a new extension with 3,600 square metres of cleanroom, due to start production in 2025, as part of growing the site's cleanroom from about 35,000 to over 44,000 square metres by the end of 2025. In July 2022 it put planned Reutlingen spending through 2025 at about EUR 400 million. Bosch reported cleanroom expansion for 200 mm wafers under way in November 2022 and in April 2023 still gave end-2025 as the target.",
+  "location": {
+    "country": "DE",
+    "admin1": "Baden-Württemberg",
+    "locality": "Reutlingen",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2023-04-26",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 250000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-02-22",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "New production space and cleanroom through 2025, including the new extension."
+    },
+    {
+      "metric": "investment",
+      "value": 400000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-07-13",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned through 2025 for added capacity and converting existing factory space into cleanroom; Bosch said part of it goes to a new development centre."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 3600,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-02-22",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Cleanroom in the new extension building."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 44000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-04-26",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Total cleanroom at the Reutlingen site targeted by the end of 2025, up from about 35,000 square metres."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-02-22",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Bosch reported major expansion of the existing 200 mm cleanroom space under way in November 2022; the start date is not given."
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The new production area was scheduled to go into operation in 2025."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-12",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Cleanroom target of more than 44,000 square metres by the end of 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "More chips: Bosch to invest on extending semiconductor production in Reutlingen",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/more-chips-bosch-to-invest-on-extending-semiconductor-production-in-reutlingen-237952.html",
+      "type": "company_announcement",
+      "published": "2022-02-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "“Invented for life” with semiconductors: Bosch invests further billions in chip business",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/invented-for-life-with-semiconductors-bosch-invests-further-billions-in-chip-business-243715.html",
+      "type": "company_announcement",
+      "published": "2022-07-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Bosch readies itself for rising demand for specialty semiconductors",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/bosch-readies-itself-for-rising-demand-for-specialty-semiconductors-248320.html",
+      "type": "company_announcement",
+      "published": "2022-11-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Rising demand for SiC chips: Bosch plans to acquire U.S. chipmaker TSI Semiconductors",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/rising-demand-for-sic-chips-bosch-plans-to-acquire-u-s-chipmaker-tsi-semiconductors-253824.html",
+      "type": "company_announcement",
+      "published": "2023-04-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "A leap in semiconductor efficiency: Bosch introduces third generation of SiC chips",
+      "publisher": "Bosch",
+      "url": "https://www.bosch-presse.de/pressportal/de/en/a-leap-in-semiconductor-efficiency-bosch-introduces-third-generation-of-sic-chips-282432.html",
+      "type": "company_announcement",
+      "published": "2026-04-22",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "In April 2026 Bosch said the Reutlingen fab develops and makes its third-generation SiC chips on 200 mm wafers, but no source read for this record says whether the new extension and the end-2025 cleanroom target were completed, so the status stays under construction as of the last report of the works.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the construction milestone, which cited an April 2023 release that only restates the end-2025 target, and reworded the summary, which had presented the July 2022 EUR 400 million figure as a growth of the February plan."
+  }
+}

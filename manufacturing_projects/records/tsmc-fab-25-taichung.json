@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-fab-25-taichung",
+  "name": "TSMC Fab 25, Taichung",
+  "aliases": [
+    "Fab 25",
+    "F25",
+    "TSMC Taichung 1.4nm fab"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "1.4nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "A14",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Process name used in media reporting on the fab."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "TSMC's fab for its 1.4nm generation (A14) in the Central Taiwan Science Park, Taichung, planned as four phases. TSMC's website says construction of the Taichung 1.4nm fab is under way; reports put the groundbreaking and start of piling in late 2025. Media reports in October 2025 put the investment at about US$49 billion and the jobs at around 4,500, figures TSMC has not published itself. A September 2026 report citing the science park administration said the schedule had been pulled in by about six months: the first phase's steel structure was finished, with construction due to end in April 2027 and trial production to follow, the second phase was expected to start production before the end of 2027 and all four phases to be complete in 2028. Volume production was earlier reported for the second half of 2028.",
+  "location": {
+    "country": "TW",
+    "admin1": "Taichung City",
+    "locality": "Taichung",
+    "site": "Central Taiwan Science Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-09-10",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 49000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-10-20",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Total investment reported by the media when TSMC filed the construction permit; not a figure TSMC published."
+    },
+    {
+      "metric": "jobs",
+      "value": 4500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-10",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Jobs expected once the fab is complete."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2025-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported in September 2026 as having taken place the previous October."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Piling reported to have begun in late 2025."
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-04",
+      "planned": true,
+      "phase_label": "P1",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Steel structure finished by September 2026; construction due to end in April 2027."
+    },
+    {
+      "event": "first_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": "P1",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Risk production expected by late 2027 (February 2026 report); the September 2026 report says trial production follows P1's completion in April 2027."
+    },
+    {
+      "event": "first_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": "P2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "P2 was at the foundation stage in September 2026, with production expected before the end of 2027."
+    },
+    {
+      "event": "building_complete",
+      "date": "2028",
+      "planned": true,
+      "phase_label": "P1–P4",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2028-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Per supply-chain and media reporting."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "GIGAFAB® Facilities - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/manufacturing/gigafab",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "[News] TSMC Speeds up Expansion in Taiwan: up to 10 Fabs Reportedly under Construction or Starting in 2026",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/02/23/news-tsmc-speeds-up-expansion-in-taiwan-up-to-10-fabs-reportedly-under-construction-or-starting-in-2026/",
+      "type": "trade_press",
+      "published": "2026-02-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "TSMC's new Fab 25 set to produce A14 chips by 2028",
+      "publisher": "TechNode",
+      "url": "https://technode.com/2025/10/20/tsmcs-new-fab-25-set-to-produce-a14-chips-by-2028/",
+      "type": "trade_press",
+      "published": "2025-10-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "TSMC to start 1.4nm chip production 6 months early, in swipe at Samsung",
+      "publisher": "The Herald Business",
+      "url": "https://mbiz.heraldcorp.com/article/10869723",
+      "type": "news",
+      "published": "2026-09-10",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The September 2026 report (s4) is an English machine translation of a Korean article that cites the Central Taiwan Science Park Administration and Taiwanese press. TSMC's own website mentions the Taichung 1.4nm fab without a fab number.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:B9511622",
+      "relation": "same_facility",
+      "note": "Environmental-control registration under the Fab 25 name without a phase number, on a separate land parcel from the phase 1 and phase 3 registrations."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:B9511266",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 1 of Fab 25."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:B9511275",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 3 of Fab 25."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "TSMC's website does not date the construction start, so the summary no longer says TSMC gave 2025. Added an October 2025 TechNode report (A14 name, about US$49 billion, 4,500 jobs) and a September 2026 Herald Business report on phase progress and the earlier schedule, with new milestones and status_as_of moved to 2026-09-10. Audit fixes (2026-11-07): reworded the note on the unnumbered Fab 25 registry record, which sits on a different land parcel from the phase 1 and phase 3 registrations rather than covering the whole fab."
+  }
+}

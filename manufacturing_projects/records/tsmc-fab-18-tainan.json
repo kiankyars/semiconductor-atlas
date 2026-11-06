@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-fab-18-tainan",
+  "name": "TSMC Fab 18, Tainan",
+  "aliases": [
+    "Fab 18",
+    "F18"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "5nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "label": "3nm",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "TSMC's first 3nm production fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2"
+      ]
+    }
+  ],
+  "summary": "TSMC's 5nm and 3nm GIGAFAB in the Southern Taiwan Science Park, Tainan, laid out in its 2022 description as eight phases that each have about 58,000 square metres of cleanroom. At a December 2022 ceremony TSMC reported that 3nm was in volume production at the fab with good yield, topped out phase 8, and put the fab's total investment at more than NT$1.86 trillion with over 11,300 direct jobs. A January 2026 Commercial Times report, citing supply-chain sources, said phases 1 to 8 were all running N5 and N3 close to full utilization and that cleanroom and facility work on a ninth phase had begun in late 2025.",
+  "location": {
+    "country": "TW",
+    "admin1": "Tainan City",
+    "locality": "Tainan",
+    "site": "Southern Taiwan Science Park",
+    "address": "8, Beiyuan Rd. 2, Southern Taiwan Science Park, Tainan 745-093, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-01-20",
+  "status_source_ids": [
+    "s1",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1860000000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-12-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 58000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Each of P1–P8",
+      "as_of": "2022-12-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cleanroom of each of phases 1 to 8, about twice a standard logic fab."
+    },
+    {
+      "metric": "jobs",
+      "value": 11300,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-12-29",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Direct high-tech jobs; more than 23,500 construction jobs were also cited."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "volume_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "3nm",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Reported at the 29 December 2022 ceremony; TSMC dates N3 high-volume production to 2022."
+    },
+    {
+      "event": "building_complete",
+      "date": "2022-12-29",
+      "planned": false,
+      "phase_label": "P8",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Topping-out ceremony for phase 8."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025-Q4",
+      "planned": false,
+      "phase_label": "P9",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Supply-chain sources cited by the Commercial Times said cleanroom and facility work on phase 9 began in the fourth quarter of 2025; the same report says phase 9 might instead become an advanced packaging plant."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC Holds 3nm Volume Production and Capacity Expansion Ceremony, Marking a Key Milestone for Advanced Manufacturing",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/2986",
+      "type": "company_announcement",
+      "published": "2022-12-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "GIGAFAB® Facilities - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/manufacturing/gigafab",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "3nm Technology - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/technology/logic/l_3nm",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Fab Locations - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/aboutTSMC/TSMC_Fabs",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "台積電南科「系統級製造」成形 法人看好二次配業者名單曝光",
+      "publisher": "Commercial Times",
+      "url": "https://www.ctee.com.tw/news/20260120700090-430501",
+      "type": "news",
+      "published": "2026-01-20",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [
+    {
+      "id": "tsmc-tainan-science-park-3nm-fabs",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Status is partly operating: the January 2026 report describes phases 1 to 8 as producing and phase 9 as being fitted out. No TSMC source from 2024 to 2026 describing the later phases was found; TSMC's GIGAFAB page only lists Fab 18 among its six GIGAFABs, so the phase 9 work rests on a press report citing unnamed industry sources. The facility registry lists an environmental-control registration for a ninth phase of Fab 18, while TSMC's cited sources describe eight phases. The new 3nm fabs TSMC announced in 2026 for its GIGAFAB cluster in the same park are kept in their own record; no source says whether phase 9 is one of them.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0401783",
+      "relation": "same_facility",
+      "note": "Environmental-control registration under the Fab 18 name without a phase number, on the same land parcel as the phase 9 registration."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0402208",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 1 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0402431",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 2 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0402904",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 3 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0402833",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 4 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0402824",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 5 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0402815",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 6 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0403492",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 7 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D9008466",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 8 of Fab 18."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0405843",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 9 of Fab 18."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Dated the 3nm volume-production milestone to 2022 instead of the ceremony day, and added TSMC's fab locations page for the street address in Tainan. No newer source on phase 8 was found, so the status is unchanged. Audit fixes (2026-11-07): added a January 2026 Commercial Times report on phases 1 to 8 running and phase 9 work starting in late 2025 (new phase 9 construction milestone, status_as_of moved to 2026-01-20), linked the phase 9 registry record and reworded the unnumbered registration note, noted that the registry lists a ninth phase while TSMC's sources describe eight, and linked the 2026 Tainan 3nm fabs record as the same campus."
+  }
+}

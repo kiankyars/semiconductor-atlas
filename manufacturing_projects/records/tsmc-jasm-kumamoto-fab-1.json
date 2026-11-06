@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-jasm-kumamoto-fab-1",
+  "name": "JASM Kumamoto Fab 1",
+  "aliases": [
+    "JASM first fab",
+    "TSMC Kumamoto first fab"
+  ],
+  "company": "TSMC",
+  "operator": "Japan Advanced Semiconductor Manufacturing, Inc. (JASM)",
+  "parties": [
+    {
+      "name": "Japan Advanced Semiconductor Manufacturing, Inc. (JASM)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "TSMC's majority-owned subsidiary in Kumamoto."
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "owner",
+      "share_pct": 86.5,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Majority owner; stakes as planned in February 2024 after the second-fab investment."
+    },
+    {
+      "name": "Sony Semiconductor Solutions Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": 6.0,
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "DENSO Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": 5.5,
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "Toyota Motor Corporation",
+      "role": "joint_venture_partner",
+      "share_pct": 2.0,
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Japan",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Approved a subsidy of up to 476 billion yen in June 2022."
+    },
+    {
+      "name": "Kajima Corporation",
+      "role": "builder",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "image_sensor"
+  ],
+  "process_nodes": [
+    {
+      "label": "22/28nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "label": "12/16nm",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FinFET process added in February 2022."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "The first fab of JASM, TSMC's majority-owned joint venture with Sony Semiconductor Solutions, DENSO and Toyota, in Kikuyo, Kumamoto Prefecture. Announced in November 2021 as a 22/28nm specialty fab, it gained 12/16nm FinFET capacity and a higher planned output of 55,000 12-inch wafers a month in 2022, at an estimated cost of about US$8.6 billion. Japan approved a subsidy of up to 476 billion yen. Construction began in April 2022, an opening ceremony was held in February 2024 and volume production started in late 2024. In 2026 TSMC said it was adding capacity there for CMOS image sensor customers.",
+  "location": {
+    "country": "JP",
+    "admin1": "Kumamoto",
+    "locality": "Kikuyo",
+    "site": null,
+    "address": "4106-1, Haramizu, Kikuyo-machi, Kikuchi-gun, Kumamoto, 869-1102, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s5",
+      "s7",
+      "s10"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-07-16",
+  "status_source_ids": [
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-11-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial capital expenditure estimate for the 22/28nm plan."
+    },
+    {
+      "metric": "investment",
+      "value": 8600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-02-15",
+      "source_ids": [
+        "s2",
+        "s5",
+        "s6"
+      ],
+      "note": "Capital expenditure estimate after adding 12/16nm capacity."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 476000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-06-17",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Subsidy approved by the Japanese government, about 40 percent of the estimated cost."
+    },
+    {
+      "metric": "capacity",
+      "value": 45000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-11-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "12-inch (300 mm) wafers per month in the original plan."
+    },
+    {
+      "metric": "capacity",
+      "value": 55000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-02-15",
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "12-inch (300 mm) wafers per month after the 2022 expansion of the plan."
+    },
+    {
+      "metric": "jobs",
+      "value": 1700,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-02-15",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Direct high-tech jobs expected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-11-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2022-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target to start production by the end of 2024."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-H2",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Volume production began in late 2024."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC to Build Specialty Technology Fab in Japan with Sony Semiconductor Solutions as Minority Shareholder",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/2880",
+      "type": "company_announcement",
+      "published": "2021-11-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "DENSO to Take Minority Stake in JASM",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/2911",
+      "type": "company_announcement",
+      "published": "2022-02-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "JASM Set to Expand in Kumamoto Japan",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3105",
+      "type": "company_announcement",
+      "published": "2024-02-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "TSMC Celebrates the Opening of JASM in Kumamoto, Japan",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3113",
+      "type": "company_announcement",
+      "published": "2024-02-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Japan to provide 40% subsidy to TSMC, Sony venture",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/japan-to-provide-40-subsidy-to-tsmc-sony-venture",
+      "type": "trade_press",
+      "published": "2022-06-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Japan to allocate about $3.5B for chip facility",
+      "publisher": "Anadolu Agency",
+      "url": "https://aa.com.tr/en/economy/japan-to-allocate-about-35b-for-chip-facility-/2616037",
+      "type": "news",
+      "published": "2022-06-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "ＴＳＭＣ、第２工場を月内着工＝２７年末稼働へ、熊本県菊陽町と協定",
+      "publisher": "Jiji Press via Business+IT",
+      "url": "https://www.sbbit.jp/article/refers/173982",
+      "type": "news",
+      "published": "2025-10-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Q2 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-07-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s10",
+      "title": "Fab Locations - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/aboutTSMC/TSMC_Fabs",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "tsmc-jasm-kumamoto-fab-2",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The February 2024 opening ceremony is not recorded as an opening milestone because production had not yet started then. Ownership stakes are those TSMC reported for JASM as a whole in February 2024.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added JASM's street address in Kikuyo from TSMC's fab locations page. The other statements matched their sources."
+  }
+}

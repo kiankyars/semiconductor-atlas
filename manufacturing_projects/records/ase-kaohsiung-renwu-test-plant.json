@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "id": "ase-kaohsiung-renwu-test-plant",
+  "name": "ASE Renwu semiconductor testing plant, Kaohsiung",
+  "aliases": [
+    "ASE Renwu plant",
+    "仁武先進測試基地"
+  ],
+  "company": "ASE",
+  "operator": "ASE Test (台灣福雷電子)",
+  "parties": [
+    {
+      "name": "ASE Technology Holding",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Parent group; its releases present the plant as ASE's new Renwu facility."
+    },
+    {
+      "name": "ASE Test (台灣福雷電子)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "ASE subsidiary that United Daily News names as the company whose new Renwu plant broke ground; ASE's English release names Advanced Semiconductor Engineering, Inc. as the company breaking ground."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A new ASE testing plant in the Renwu Industrial Park, Kaohsiung, Taiwan, intended as a hub for wafer and chip test services using automated material handling and AI-based visual inspection. ASE broke ground in April 2026 and puts the capital spending above NT$108.3 billion; two Taiwanese component and equipment suppliers, WinWay and HTT, are investing alongside it in the same park. ASE plans to start operating the first phase in April 2027 and the second phase in October 2027.",
+  "location": {
+    "country": "TW",
+    "admin1": "Kaohsiung City",
+    "locality": "Kaohsiung",
+    "site": "Renwu Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-10",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 108300000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-04-10",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "ASE's release gives this as the capital investment for the testing hub it is building with its two partners; BusinessNext reports it as ASE's own spending and puts the three companies' projects at about NT$114.5 billion combined."
+    },
+    {
+      "metric": "site_area",
+      "value": 110000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-04-10",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Total site area of ASE's Renwu base."
+    },
+    {
+      "metric": "site_area",
+      "value": 50000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2026-04-10",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Area developed in the first phase."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-04-10",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2026-04-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2027-04",
+      "planned": true,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned start of operations for the first phase."
+    },
+    {
+      "event": "first_production",
+      "date": "2027-10",
+      "planned": true,
+      "phase_label": "Phase II",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned start of operations for the second-phase expansion."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ASE Breaks Ground on New Renwu Plant to Build Hi-tech Testing Cluster",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/ase-breaks-ground-on-new-renwu-plant-to-build-hi-tech-testing-cluster",
+      "type": "company_announcement",
+      "published": "2026-04-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "日月光仁武產業園區新廠動土 打造高階半導體測試服務產業園區",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room-ch/ase-breaks-ground-on-new-renwu-plant-to-build-hi-tech-testing-cluster",
+      "type": "company_announcement",
+      "published": "2026-04-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "福雷電子仁武新廠動土 吳田玉:砸1,083億元打造高階測試聚落",
+      "publisher": "United Daily News (udn.com)",
+      "url": "https://udn.com/news/story/7253/9433197",
+      "type": "news",
+      "published": "2026-04-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "決標到動土只花10天！日月光高雄仁武衝刺AI封測擴產，6座新廠同步開建",
+      "publisher": "Business Next (數位時代)",
+      "url": "https://www.bnext.com.tw/article/90595/ase-renwu",
+      "type": "news",
+      "published": "2026-04-10",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "ASE's releases call the project a joint investment with WinWay Technology and Horng Terng Automation (HTT) but do not say what the partners contribute. BusinessNext describes three separate projects in the park with a combined NT$114.5 billion, so the two partners are not recorded as owners of this plant. The releases also project roughly NT$177.3 billion of annual output at full operation.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Named ASE's testing subsidiary as operator from news reports, removed WinWay and HTT as joint-venture partners because reporting shows they fund their own projects in the park, explained the NT$108.3 billion figure against the NT$114.5 billion three-company total, added site areas, dropped the unsupported reference to final testing and added the Chinese release and two news sources. Audit fixes (2026-11-07): kept ASE Test as operator because United Daily News reports the groundbreaking of its own Renwu plant, and noted that ASE's English release names Advanced Semiconductor Engineering, Inc. instead."
+  }
+}

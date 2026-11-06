@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0",
+  "id": "polar-bloomington-expansion",
+  "name": "Polar Semiconductor Bloomington fab expansion",
+  "aliases": [],
+  "company": "Polar Semiconductor",
+  "operator": "Polar Semiconductor",
+  "parties": [
+    {
+      "name": "Polar Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s7"
+      ],
+      "note": "Preliminary CHIPS terms in May 2024, then a final award of up to USD 123 million in September 2024, paid out against project milestones."
+    },
+    {
+      "name": "Minnesota Department of Employment and Economic Development",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "State support of USD 75 million for the expansion."
+    },
+    {
+      "name": "Niobrara Capital",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Private equity investor; with Prysm Capital it holds a majority of the company."
+    },
+    {
+      "name": "Prysm Capital",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Private equity investor; with Niobrara Capital it holds a majority of the company."
+    },
+    {
+      "name": "Mortenson",
+      "role": "builder",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Construction partner for the cleanroom renovation and expansion."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "power",
+    "mems_sensors",
+    "gallium_nitride"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Polar Semiconductor is expanding and modernizing its 200 mm fab in Bloomington, Minnesota to roughly double output of power and sensor chips, from about 20,000 to about 40,000 wafer starts a month, while moving from majority foreign ownership to a majority U.S.-owned open foundry. The project, more than USD 525 million in all, won preliminary CHIPS terms in May 2024 and in September 2024 received what the Commerce Department called the first final CHIPS award for a commercial fab, of up to USD 123 million. Cleanroom renovation and expansion next to the working fab was still in progress in 2025 and 2026, with the builder estimating completion in August 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Minnesota",
+    "locality": "Bloomington",
+    "site": null,
+    "address": "2800 E Old Shakopee Rd, Bloomington, MN 55425",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-12",
+  "status_source_ids": [
+    "s5",
+    "s4",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 525000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-13",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s7"
+      ],
+      "note": "Total from the company, private investors, state and federal sources."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 120000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "government_incentive",
+      "value": 123000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-24",
+      "source_ids": [
+        "s2",
+        "s7"
+      ],
+      "note": "Final CHIPS award; funds are released as Polar completes project milestones."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 75000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-05-13",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Minnesota DEED support."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Wafer starts per month after the expansion, up from roughly 20,000, as stated on the final award page; the source does not state wafer size."
+    },
+    {
+      "metric": "jobs",
+      "value": 98,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Manufacturing jobs counted on the final award page, which also counts 68 construction jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Preliminary CHIPS terms announced."
+    },
+    {
+      "event": "construction_start",
+      "date": "2025-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "By September 2025 the operator described the capacity expansion as under way, and the builder describes cleanroom renovation in progress; neither gives a start date."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Capacity was to nearly double within two years of the 2024 CHIPS announcements."
+    },
+    {
+      "event": "building_complete",
+      "date": "2026-08",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "The builder's estimated completion date for the renovation; no source reports that it was met."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Polar Semiconductor to Establish an Independent American Foundry",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2024/05/biden-harris-administration-announces-preliminary-terms-polar-semiconductor",
+      "type": "government",
+      "published": "2024-05-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Polar Semiconductor (Minnesota)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/polar-semiconductor-minnesota-bloomington",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "About Us",
+      "publisher": "Polar Semiconductor",
+      "url": "https://polarsemi.com/about-us/",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "iDEAL Semiconductor Announces Polar Semiconductor as Manufacturing Partner for SuperQ Power Devices",
+      "publisher": "Polar Semiconductor",
+      "url": "https://polarsemi.com/news/ideal-semiconductor-announces-polar-semiconductor-as-manufacturing-partner-for-superq-power-devices/",
+      "type": "company_announcement",
+      "published": "2025-09-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Polar Collaborates with IC-Link by imec to Manufacture 8-inch GaN Technology",
+      "publisher": "Polar Semiconductor",
+      "url": "https://polarsemi.com/news/polar-ic-link-imec-8-inch-gan-manufacturing/",
+      "type": "company_announcement",
+      "published": "2026-10-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Polar Semiconductor Manufacturing Facility Renovation",
+      "publisher": "Mortenson",
+      "url": "https://www.mortenson.com/projects/polar-semiconductor-manufacturing-facility-renovation",
+      "type": "trade_press",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Biden-Harris Administration Announces First CHIPS Commercial Fabrication Facilities Award with Polar Semiconductor, Establishing Independent American Foundry",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2024/09/biden-harris-administration-announces-first-chips-commercial-fabrication",
+      "type": "government",
+      "published": "2024-09-24",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Polar's own releases of September 2025 and October 2026 say it is expanding capacity; the builder's undated project page is a third-party description. The project expands cleanroom space and upgrades infrastructure within Polar's existing buildings rather than adding a separately named fab; the builder says production continued at full capacity during the works and gives the target as a 75% rise in output, against the near doubling in the CHIPS materials. The CHIPS award page is undated, so its capacity and jobs figures are dated to the final award. In October 2026 Polar announced 8-inch GaN production at the Bloomington foundry under an imec licence, which is why GaN is listed among the segments.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:0b185c29-10db-5dc8-98ab-e7ec564b9522",
+      "relation": "award_page",
+      "note": null
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the final CHIPS award date to September 2024 with the NIST release, which also redates the award page's capacity and jobs figures; added the builder's project page as construction evidence with its August 2026 completion estimate and Mortenson as builder; fixed a source title and added GaN from the operator's October 2026 release; added the operator's published street address. Audit fixes (2026-11-07): typed the builder's undated project page as trade press rather than an operator statement, listed the operator's own September 2025 and October 2026 releases first among the status sources, and attributed the first-final-award description to the Commerce Department."
+  }
+}

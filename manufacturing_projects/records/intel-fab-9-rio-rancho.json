@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-fab-9-rio-rancho",
+  "name": "Fab 9",
+  "aliases": [
+    "Intel Fab 9"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Final CHIPS Act award for Rio Rancho advanced packaging, part of Intel's multi-state award."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "Foveros",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Intel's 3D packaging technology, made at high volume at Fab 9 and the adjoining Fab 11X."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A new advanced packaging factory adjoining Fab 11X at Intel's Rio Rancho campus in New Mexico. It came from a $3.5 billion plan announced in May 2021 to equip the New Mexico operations for Foveros 3D packaging, with construction expected from late 2021. Intel opened Fab 9 on 24 January 2024; with Fab 11X it forms Intel's first co-located high-volume advanced packaging site. Intel later put the Rio Rancho investment above $4 billion and describes New Mexico as its key advanced packaging facility.",
+  "location": {
+    "country": "US",
+    "admin1": "New Mexico",
+    "locality": "Rio Rancho",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": "Adjoins Intel's existing Fab 11X."
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-21",
+  "status_source_ids": [
+    "s2",
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3500000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-05-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Plan to equip Intel's Rio Rancho operations for advanced packaging; covers Fab 9 and work at Fab 11X."
+    },
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Later figure for equipping Rio Rancho for advanced packaging across Fab 9 and Fab 11X."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 500000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-11-26",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "CHIPS Act direct funding for Rio Rancho, described as converting two existing fabs into an advanced packaging facility, within Intel's award finalized on 26 November 2024."
+    },
+    {
+      "metric": "jobs",
+      "value": 700,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "at_least",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-05-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "High-tech jobs from the $3.5 billion plan, plus about 1,000 construction jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-05-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced as the Rio Rancho advanced packaging investment."
+    },
+    {
+      "event": "construction_start",
+      "date": "2021-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction was expected to begin in late 2021."
+    },
+    {
+      "event": "opening",
+      "date": "2024-01-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Intel opened Fab 9 for high-volume advanced packaging."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel to Invest $3.5 Billion to Expand New Mexico Manufacturing Operations",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1464/intel-to-invest-3-5-billion-to-expand-new-mexico",
+      "type": "company_announcement",
+      "published": "2021-05-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel Opens Fab 9 in New Mexico",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1670/intel-opens-fab-9-in-new-mexico",
+      "type": "company_announcement",
+      "published": "2024-01-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Intel Corporation (New Mexico)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/intel-corporation-new-mexico-rio-rancho",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Intel Breaks Ground in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/resources/press-kit-intel-builds-arizona.html",
+      "type": "company_announcement",
+      "published": "2024-11-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Building America's Capacity to Innovate",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/opinion/building-america-capacity-to-innovate.html",
+      "type": "company_announcement",
+      "published": "2026-10-21",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Fab 11X, the existing adjoining fab that also received packaging tools, is not recorded separately because its work was equipment installation inside an existing building. The CHIPS Program Office describes the Rio Rancho project as the modernization of two existing fabs.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:c1b5d8dc-aba8-50bf-aa9b-ffeac821f01c",
+      "relation": "award_page",
+      "note": "The award covers converting two Rio Rancho fabs into an advanced packaging facility."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Intel's October 2026 statement that it makes advanced packaging at scale in New Mexico as a newer status source and set the 2025 annual report's filing date to 23 January 2026."
+  }
+}

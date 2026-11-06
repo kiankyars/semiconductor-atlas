@@ -1,0 +1,639 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-arizona-fab-21",
+  "name": "TSMC Arizona wafer fabs, Phoenix",
+  "aliases": [
+    "TSMC Arizona",
+    "Fab 21"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC Arizona Corporation",
+  "parties": [
+    {
+      "name": "TSMC Arizona Corporation",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "TSMC subsidiary that received the CHIPS award."
+    },
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Parent company of TSMC Arizona."
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Signed a preliminary memorandum of terms in April 2024 and finalised direct funding in November 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "campus",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "5nm",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Process named in the original 2020 plan for a single fab."
+    },
+    {
+      "label": "N4",
+      "source_ids": [
+        "s2",
+        "s6"
+      ],
+      "note": "First fab."
+    },
+    {
+      "label": "N3",
+      "source_ids": [
+        "s2",
+        "s6",
+        "s9",
+        "s12"
+      ],
+      "note": "Second fab."
+    },
+    {
+      "label": "N2",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Planned for the third fab; the April 2024 plan also listed 2nm for the second fab, which now uses 3nm."
+    },
+    {
+      "label": "A16",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Planned for the third fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s13"
+      ]
+    }
+  ],
+  "summary": "TSMC's wafer fab campus in north Phoenix, run by its subsidiary TSMC Arizona. Announced in 2020 as a single 5nm fab worth about US$12 billion, it grew to a planned cluster of several leading-edge fabs. The first fab reached high-volume N4 production in the fourth quarter of 2024. The second fab, for 3nm, was structurally complete in 2025 and was being equipped in late 2026 with volume output due in the third quarter of 2027. The third fab (N2 and A16) broke ground in April 2025 and initial work on a fourth began in early 2026. TSMC announced further fabs in March 2025 and July 2026, raising its planned Arizona spending to US$265 billion across fabs, packaging plants and an R&D centre. The site received a final CHIPS Act award of up to US$6.6 billion in direct funding in November 2024.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Phoenix",
+    "site": null,
+    "address": "5088 W. Innovation Circle, Phoenix, AZ 85083, U.S.A.",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5",
+      "s8",
+      "s14"
+    ],
+    "note": "North Phoenix. The campus covers about 1,100 acres; in January 2026 TSMC bought roughly 900 more acres nearby at a state land auction."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-10-15",
+  "status_source_ids": [
+    "s6",
+    "s7",
+    "s12"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 12000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First fab (2020 plan)",
+      "as_of": "2020-05-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original plan for one fab, spending over 2021 to 2029 including capital expenditure."
+    },
+    {
+      "metric": "investment",
+      "value": 40000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First and second fabs",
+      "as_of": "2022-12-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Combined figure for the first two fabs."
+    },
+    {
+      "metric": "investment",
+      "value": 65000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-04-08",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Capital expenditure for the three fabs planned at the Phoenix site in 2024."
+    },
+    {
+      "metric": "investment",
+      "value": 165000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-03-04",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Total planned U.S. investment after a US$100 billion addition for three more fabs, two advanced packaging facilities and an R&D centre; covers the packaging record as well."
+    },
+    {
+      "metric": "investment",
+      "value": 265000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-16",
+      "source_ids": [
+        "s6",
+        "s11"
+      ],
+      "note": "Planned Arizona total after a further US$100 billion was announced in July 2026 for more fabs and packaging facilities; covers the packaging record as well."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 6600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-04-08",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "CHIPS Act direct funding under a non-binding preliminary memorandum of terms, which also proposed up to US$5 billion in loans."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 6600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-11-15",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Final CHIPS Act direct funding for three fabs, paid out as project milestones are met."
+    },
+    {
+      "metric": "capacity",
+      "value": 20000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First fab (2020 plan)",
+      "as_of": "2020-05-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Wafers per month for the single fab in the 2020 plan; wafer size not stated."
+    },
+    {
+      "metric": "capacity",
+      "value": 600000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First and second fabs",
+      "as_of": "2022-12-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Combined annual wafer output of the first two fabs when complete; wafer size not stated."
+    },
+    {
+      "metric": "site_area",
+      "value": 1100,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-04",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Campus land before the January 2026 purchase."
+    },
+    {
+      "metric": "site_area",
+      "value": 900,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-01-08",
+      "source_ids": [
+        "s8",
+        "s9"
+      ],
+      "note": "Second parcel of about 900 acres that TSMC won at an Arizona State Land Department auction for about US$197 million to expand its north Phoenix campus; TSMC said in April 2026 it bought the land to build more Arizona fabs."
+    },
+    {
+      "metric": "jobs",
+      "value": 6000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-04-08",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Direct high-tech jobs expected from the first three fabs."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-04",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Employees at the Arizona site in March 2025."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2020-05-15",
+      "planned": false,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2022-12-06",
+      "planned": false,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Ceremony marking the arrival of the first production tools."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported as started in the December 2022 update."
+    },
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": true,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Production target in the 2020 announcement."
+    },
+    {
+      "event": "announced",
+      "date": "2024-04-08",
+      "planned": false,
+      "phase_label": "Third fab",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-Q4",
+      "planned": false,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "High-volume N4 production."
+    },
+    {
+      "event": "announced",
+      "date": "2025-03-04",
+      "planned": false,
+      "phase_label": "Fourth to sixth fabs",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Part of a US$100 billion expansion with packaging facilities and an R&D centre."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2025-04",
+      "planned": false,
+      "phase_label": "Third fab",
+      "source_ids": [
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2025",
+      "planned": false,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Fab structure completed."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026-H1",
+      "planned": false,
+      "phase_label": "Fourth fab",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Initial stages of construction began in early 2026."
+    },
+    {
+      "event": "announced",
+      "date": "2026-07-16",
+      "planned": false,
+      "phase_label": "Further fabs (2026 plan)",
+      "source_ids": [
+        "s10",
+        "s11"
+      ],
+      "note": "Part of a further US$100 billion plan for more 2nm-and-below wafer fabs and packaging fabs; news reporting put the new wafer fabs at four, and TSMC said timing depends on demand."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026",
+      "planned": false,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s7",
+        "s12"
+      ],
+      "note": "Tool installation planned for 2026 and under way by October 2026."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Original 3nm target from 2022."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target given in April 2024."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-H2",
+      "planned": true,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s7",
+        "s9"
+      ],
+      "note": "Target pulled forward in January 2026."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-Q3",
+      "planned": true,
+      "phase_label": "Second fab",
+      "source_ids": [
+        "s12"
+      ],
+      "note": "Latest target, slightly ahead of the earlier schedule."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC Announces Intention to Build and Operate an Advanced Semiconductor Fab in the United States",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/2033",
+      "type": "company_announcement",
+      "published": "2020-05-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "TSMC Announces Updates for TSMC Arizona",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/2977",
+      "type": "company_announcement",
+      "published": "2022-12-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "TSMC Arizona and U.S. Department of Commerce Announce up to US$6.6 Billion in Proposed CHIPS Act Direct Funding, the Company Plans Third Leading-Edge Fab in Phoenix",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3122",
+      "type": "company_announcement",
+      "published": "2024-04-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with TSMC Arizona to Secure U.S. Leadership in Advanced Semiconductor Technology",
+      "publisher": "U.S. Department of Commerce",
+      "url": "https://content.govdelivery.com/accounts/USDOC/bulletins/3c22216",
+      "type": "government",
+      "published": "2024-11-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "TSMC Intends to Expand Its Investment in the United States to US$165 Billion to Power the Future of AI",
+      "publisher": "TSMC",
+      "url": "https://pr.tsmc.com/english/news/3210",
+      "type": "company_announcement",
+      "published": "2025-03-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "TSMC Arizona - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/static/abouttsmcaz/index.htm",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Q4 2025 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-01/51d09df96cd89ac19d65af39032b038dc2896a24/TSMC%204Q25%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-01-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "TSMC Wins State Land Auction, Adding to Expansive N. Phoenix Holdings",
+      "publisher": "Connect CRE",
+      "url": "https://www.connectcre.com/stories/tsmc-wins-state-land-auction-adding-to-expansive-n-phoenix-holdings/",
+      "type": "trade_press",
+      "published": "2026-01-08",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "Q1 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-04/3cef85204275f94fd111485cfdf4adb3c0263c45/TSMC%201Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-04-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s10",
+      "title": "Q2 2026 Taiwan Semiconductor Manufacturing Co Ltd Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-08/3e494f0c14dd0890f897aa044415e21d93486cc4/TSMC%202Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-07-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s11",
+      "title": "TSMC announces additional US$100 billion investment in Arizona",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202607160019",
+      "type": "news",
+      "published": "2026-07-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s12",
+      "title": "Q3 2026 Taiwan Semiconductor Manufacturing Company Limited Earnings Call (Chinese, English)",
+      "publisher": "TSMC (transcript by LSEG StreetEvents)",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf",
+      "type": "company_report",
+      "published": "2026-10-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s13",
+      "title": "Fab Capacity - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/manufacturing/fab_capacity",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s14",
+      "title": "Fab Locations - Taiwan Semiconductor Manufacturing Company Limited",
+      "publisher": "TSMC",
+      "url": "https://www.tsmc.com/english/aboutTSMC/TSMC_Fabs",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "tsmc-arizona-advanced-packaging",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Phases are labelled by TSMC's own fab order (first, second, third fab and so on).",
+  "registry_records": [
+    {
+      "record_id": "nist:project:ed47151f-951a-5ce3-a494-31f575b321c4",
+      "relation": "award_page",
+      "note": "The award covers TSMC's first three Phoenix fabs."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the N2/A16 notes (TSMC names them only for the third fab), the July 2026 note (the further fabs include packaging fabs; the count of four comes from news reporting) and the land note (the 2026 parcel is nearby, not stated as adjacent). Added TSMC's fab pages for the 300 mm wafer size and the street address. Audit fixes (2026-11-07): the 900-acre second parcel now applies to the Arizona project rather than the existing facility, citing the April 2026 earnings call where TSMC said the land is for more Arizona fabs."
+  }
+}

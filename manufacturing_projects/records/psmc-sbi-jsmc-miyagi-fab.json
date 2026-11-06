@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "id": "psmc-sbi-jsmc-miyagi-fab",
+  "name": "JSMC Miyagi fab (PSMC and SBI)",
+  "aliases": [
+    "JSMC first fab",
+    "PSMC-SBI Miyagi plant"
+  ],
+  "company": "PSMC and SBI Holdings",
+  "operator": "JSMC",
+  "parties": [
+    {
+      "name": "JSMC",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Company PSMC and SBI Holdings set up in August 2023 to prepare a wafer fab in Japan."
+    },
+    {
+      "name": "Powerchip Semiconductor Manufacturing Corporation (PSMC)",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Withdrew in September 2024, saying it would not carry the project's risks; it describes its role in such projects as licensing and consulting rather than owning or running the fab."
+    },
+    {
+      "name": "SBI Holdings",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Said after the breakup that it would look for new partners."
+    },
+    {
+      "name": "Miyagi Prefecture",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed the October 2023 memorandum confirming the site."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned foundry fab for automotive chips in the Second Northern Sendai Central Industrial Park in Ohira village, Miyagi Prefecture, to be built by JSMC, a company formed in August 2023 by Taiwan's PSMC and Japan's SBI Holdings. The partners and the prefecture confirmed the site on 31 October 2023, and reports put the planned investment at about 800 billion yen with mass production by 2027. In late September 2024 PSMC told SBI it would not take on the project's risks and the two agreed to end the partnership; SBI said it would look for new partners.",
+  "location": {
+    "country": "JP",
+    "admin1": "Miyagi",
+    "locality": "Ohira",
+    "site": "Second Northern Sendai Central Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "cancelled",
+  "status_as_of": "2024-09-30",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 800000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned total reported by Nikkei and cited by TrendForce."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "PSMC and SBI announced the partnership and set up JSMC."
+    },
+    {
+      "event": "site_selected",
+      "date": "2023-10-31",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Memorandum among PSMC, SBI, JSMC and Miyagi Prefecture confirming the Ohira site."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Original mass production target."
+    },
+    {
+      "event": "cancelled",
+      "date": "2024-09-27",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "PSMC informed SBI it was pulling out and the two agreed to dissolve the partnership."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "[News] PSMC Announces First Plant in Miyagi Prefecture in Collaboration with SBI",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2023/10/31/news-psmc-announces-first-plant-in-miyagi-prefecture-in-collaboration-with-sbi/",
+      "type": "trade_press",
+      "published": "2023-10-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Taiwan's PSMC Denies Rumors that Financial Troubles Caused the End of Partnership with Japan's SBI",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2024/09/30/news-taiwan-chipmaker-psmc-denies-rumors-that-financial-troubles-caused-the-end-of-partnership-with-japans-sbi/",
+      "type": "trade_press",
+      "published": "2024-09-30",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The cancellation date is the Friday before the 30 September 2024 report. Nikkei linked the withdrawal to PSMC's losses on mature nodes; PSMC denied that its finances were the cause. No source read for this record reports a revived plan with new partners. PSMC's and SBI's own releases could not be read, so both sources are trade press. Sources describe the planned output only as automotive semiconductors without naming products or nodes, so the segment is a broad approximation.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Dated the site memorandum to 31 October 2023 and removed an unsupported claim that the partnership ended before construction began."
+  }
+}

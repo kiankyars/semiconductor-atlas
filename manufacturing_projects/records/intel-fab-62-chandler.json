@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-fab-62-chandler",
+  "name": "Fab 62",
+  "aliases": [
+    "Intel Fab 62"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": 51,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Funds 51% of the cost of the two new Ocotillo fabs under the 2022 co-investment program and keeps operating control."
+    },
+    {
+      "name": "Brookfield",
+      "role": "owner",
+      "share_pct": 49,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Co-investment partner funding 49% of the cost of the two new Ocotillo fabs (Fab 52 and Fab 62)."
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Final CHIPS Act award for the Chandler site covering two new fabs and the modernization of an existing fab."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "Intel 20A",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Named at the 2021 groundbreaking as the planned technology for Fab 52 and Fab 62."
+    },
+    {
+      "label": "Intel 18A",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s9"
+      ],
+      "note": "Intel's Arizona press kit and the CHIPS project description say the two new Chandler fabs will make Intel 18A; trade press notes Intel has not confirmed which nodes Fab 62 will run."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "The second of two leading-edge logic fabs announced in March 2021 for Intel's Ocotillo campus in Chandler, Arizona, and named at the September 2021 groundbreaking alongside Fab 52. Both were first meant to be fully operational in 2024. The final roof truss was set in January 2024, but the fab then lagged its neighbour. In October 2026 Intel said construction and tool installation were fully under way and that it expects operations to start by the end of 2028.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Chandler",
+    "site": "Ocotillo campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s7"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-22",
+  "status_source_ids": [
+    "s7",
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2021-03-23",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Covers both new Ocotillo fabs, Fab 52 and Fab 62."
+    },
+    {
+      "metric": "investment",
+      "value": 30000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "committed",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2022-08-23",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Joint Intel and Brookfield funding for the two new Ocotillo fabs, split 51% and 49%."
+    },
+    {
+      "metric": "investment",
+      "value": 32000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Covers Fab 52, Fab 62 and the modernization of an existing Ocotillo fab."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 3940000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-11-26",
+      "source_ids": [
+        "s6",
+        "s5"
+      ],
+      "note": "CHIPS Act direct funding for Chandler covering two new fabs and one modernized fab, within Intel's final award finalized on 26 November 2024."
+    },
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2021-09-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Permanent Intel jobs for the two new fabs together, plus about 3,000 construction jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-03-23",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Announced as two unnamed new fabs at Ocotillo; the names Fab 52 and Fab 62 were given at the groundbreaking."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2021-09-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Original target for both new fabs to be fully operational."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s8",
+        "s9"
+      ],
+      "note": "Intel reported production tool installation under way."
+    },
+    {
+      "event": "first_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s8",
+        "s9"
+      ],
+      "note": "Intel expects operations to begin by the end of 2028; press reports differ on early versus late 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Announces Major Expansion in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1452/intel-announces-major-expansion-in-arizona",
+      "type": "company_announcement",
+      "published": "2021-03-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel Breaks Ground on Two New Leading-Edge Chip Factories in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1501/intel-breaks-ground-on-two-new-leading-edge-chip-factories",
+      "type": "company_announcement",
+      "published": "2021-09-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Intel Advances Smart Capital, Introduces First-of-its-Kind Semiconductor Co-Investment Program for Manufacturing Build-Outs",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1568/intel-advances-smart-capital-introduces-first-of-its-kind",
+      "type": "company_announcement",
+      "published": "2022-08-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Intel Breaks Ground in Arizona",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/resources/press-kit-intel-builds-arizona.html",
+      "type": "company_announcement",
+      "published": "2024-11-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Intel Corporation (Arizona)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/intel-corporation-arizona-chandler",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Building America's Capacity to Innovate",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/opinion/building-america-capacity-to-innovate.html",
+      "type": "company_announcement",
+      "published": "2026-10-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Intel restarts its stalled US factory push as AI chip demand grows",
+      "publisher": "The Next Web",
+      "url": "https://thenextweb.com/news/intel-fab-62-ohio-factory-progress",
+      "type": "news",
+      "published": "2026-10-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "[News] Intel Begins Equipment Installation at Arizona Fab 62, Targeting 2028 Operations; Ohio One Advances",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026-10-22/news-intel-begins-equipment-installation-at-arizona-fab-62-targeting-2028-operations-ohio-one-advances/",
+      "type": "trade_press",
+      "published": "2026-10-22",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "intel-fab-52-chandler",
+      "relation": "same_campus"
+    },
+    {
+      "id": "intel-fab-42-chandler",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "Investment and incentive figures cover Fab 62 together with Fab 52 (and, for the later figures, an existing fab). Intel's January 2024 roof-truss milestone is described in its Arizona press kit.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:66ac4754-b4a2-5c82-94a6-342ad0ff7a24",
+      "relation": "award_page",
+      "note": "The Arizona award covers two new fabs and the modernization of an existing one."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the Arizona press kit and trade-press sources to the Intel 18A node, and recorded the original 2024 'fully operational' target as an opening target; other statements were confirmed."
+  }
+}

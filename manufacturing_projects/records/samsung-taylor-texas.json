@@ -1,0 +1,419 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-taylor-texas",
+  "name": "Samsung Taylor, Texas fab project",
+  "aliases": [
+    "Samsung Taylor fab"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Austin Semiconductor",
+  "parties": [
+    {
+      "name": "Samsung Austin Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Samsung Electronics subsidiary that, according to Samsung's Taylor page, will run the site once it operates; NIST names it as the CHIPS award recipient."
+    },
+    {
+      "name": "Samsung Electronics",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Parent company that announced the project."
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Agreed non-binding preliminary CHIPS terms in April 2024 and a final CHIPS incentive award in December 2024, both covering Taylor and an expansion of Samsung's Austin plant."
+    },
+    {
+      "name": "Tesla",
+      "role": "customer",
+      "share_pct": null,
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Signed a chip supply contract with Samsung running to the end of 2033; Tesla's chief executive said the new Texas fab would be dedicated to Tesla's AI6 chip."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "2nm",
+      "source_ids": [
+        "s5",
+        "s8"
+      ],
+      "note": "NIST describes the two Taylor logic fabs as focused on 2nm mass production; in July 2026 Samsung said it would build up 2nm capacity once the first fab starts."
+    },
+    {
+      "label": "4nm",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Listed with 2nm in the April 2024 preliminary terms; the final award page names only 2nm."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Samsung Electronics' leading-edge logic foundry project in Taylor, Texas, announced in November 2021 as an estimated USD 17 billion fab near its Austin plant. The 2024 CHIPS award describes two logic fabs and an R&D fab in Taylor plus an Austin expansion. Construction began in 2022. The original second-half 2024 start slipped; Tesla signed a supply contract tied to the fab in 2025; and in October 2026 Samsung placed the start of operations at its first Taylor fab in its 2027 outlook. A second fab is planned, with construction from late 2026 and production targeted for 2030.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Taylor",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "In Williamson County, roughly 25 km northeast of Samsung's existing Austin site, with which it shares infrastructure."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-29",
+  "status_source_ids": [
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 17000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-11-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Estimate at announcement; Samsung's Taylor page calls it the initial minimum, split into about USD 6 billion for buildings and USD 11 billion for equipment."
+    },
+    {
+      "metric": "investment",
+      "value": 40000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Regional investment in the preliminary terms, covering the Taylor fabs, R&D fab and packaging plan and the Austin expansion."
+    },
+    {
+      "metric": "investment",
+      "value": 37000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-12-20",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Expected capital spending under the final award, covering two logic fabs and an R&D fab in Taylor and the Austin expansion."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 6400000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-04-15",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Proposed CHIPS direct funding for Taylor and Austin under non-binding preliminary terms."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 4745000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-12-20",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Final CHIPS direct funding for Taylor and Austin, paid as project milestones are met; NIST names Samsung Austin Semiconductor as recipient."
+    },
+    {
+      "metric": "site_area",
+      "value": 5000000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-11-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Site size given at the 2021 announcement."
+    },
+    {
+      "metric": "site_area",
+      "value": 1268,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-02-06",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Size of the Taylor campus as reported in February 2026."
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-11-24",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Direct jobs expected at full operation of the Taylor fab."
+    },
+    {
+      "metric": "jobs",
+      "value": 3500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2024-12-20",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Manufacturing jobs within five years across Taylor and Austin; about 12,000 construction jobs were also projected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-11-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Samsung's Taylor page dates the groundbreaking to 2022; the 2021 announcement had aimed for the first half of 2022."
+    },
+    {
+      "event": "opening",
+      "date": "2024-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target given at the 2021 announcement; later postponed."
+    },
+    {
+      "event": "opening",
+      "date": "2026",
+      "planned": true,
+      "phase_label": "Fab 1",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Samsung said on its July 2026 earnings call that construction was on plan and operations were expected to begin in 2026."
+    },
+    {
+      "event": "opening",
+      "date": "2027",
+      "planned": true,
+      "phase_label": "Fab 1",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Samsung's third-quarter 2026 results list the start of operations at the Taylor fab under the 2027 outlook."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026",
+      "planned": true,
+      "phase_label": "Fab 2",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Construction planned to begin at the end of 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2030",
+      "planned": true,
+      "phase_label": "Fab 2",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Production target for the second fab."
+    },
+    {
+      "event": "opening",
+      "date": "2030",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "NIST expects all facilities covered by the award, in Taylor and Austin, to be operating by 2030."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Samsung Electronics Announces New Advanced Semiconductor Fab Site in Taylor, Texas",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-new-advanced-semiconductor-fab-site-in-taylor-texas",
+      "type": "company_announcement",
+      "published": "2021-11-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Taylor | US Fab | Samsung Semiconductor Global",
+      "publisher": "Samsung Electronics",
+      "url": "https://semiconductor.samsung.com/sas/company/taylor",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Biden-Harris Administration Announces Preliminary Terms with Samsung Electronics to Establish Leading-Edge Semiconductor Ecosystem in Central Texas",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2024/04/biden-harris-administration-announces-preliminary-terms-samsung-electronics",
+      "type": "government",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with Samsung Electronics to Solidify U.S. Leadership in Leading-Edge Semiconductor Production",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-samsung",
+      "type": "government",
+      "published": "2024-12-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Samsung Electronics (Texas)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/samsung-electronics-texas-taylor",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Samsung foundry wins $16.5 bil. chip order from Tesla",
+      "publisher": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/amp/business/tech-science/20250728/samsung-foundry-wins-165-bil-chip-order-from-tesla",
+      "type": "news",
+      "published": "2025-07-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Exclusive: Samsung secures key operation approval for $37B Taylor factory",
+      "publisher": "Korea JoongAng Daily",
+      "url": "https://www.koreajoongangdaily.com/business/exclusive-samsung-secures-key-operation-approval-for-37b-taylor-factory/11942522",
+      "type": "news",
+      "published": "2026-02-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Samsung to begin construction of 2nd chip fab in Texas at end of 2026",
+      "publisher": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/amp/business/companies/20260730/samsung-to-begin-construction-of-2nd-chip-fab-in-texas-at-end-of-2026",
+      "type": "news",
+      "published": "2026-07-30",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Samsung Electronics Announces Third Quarter 2026 Results",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-third-quarter-2026-results",
+      "type": "company_announcement",
+      "published": "2026-10-29",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The April 2024 preliminary terms also included an advanced packaging plant in Taylor for 3D HBM and 2.5D packaging. The December 2024 final award release and the NIST project page list only the two logic fabs, the R&D fab and the Austin expansion, so packaging is not recorded as a segment here. In February 2026 Taylor city officials had issued temporary certificates of occupancy for about 88,000 sq ft of Fab 1, and the same report said EUV tool testing was expected to start the following month. The Austin FD-SOI expansion covered by the same award is not part of this record.",
+  "archived_record": "samsung:taylor-leading-edge-project",
+  "registry_records": [
+    {
+      "record_id": "nist:project:10fcc4ca-ded1-5fef-b663-3741cfe1514b",
+      "relation": "award_page",
+      "note": "The registry row is filed under Austin; the award covers the new Taylor fabs and the Austin expansion."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the operator to Samsung Austin Semiconductor, the subsidiary that Samsung's Taylor page says will run the site and that NIST names as award recipient, with Samsung Electronics as owner; marked the 2021 site size as planned and added the reported 1,268-acre campus size; replaced the Belgian newsroom copy of the third-quarter 2026 results with the global release."
+  }
+}

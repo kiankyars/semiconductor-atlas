@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0",
+  "id": "ase-kaohsiung-nanzih-park-iii",
+  "name": "ASE advanced packaging and test buildings, Nanzih Technology Industrial Park III, Kaohsiung",
+  "aliases": [],
+  "company": "ASE",
+  "operator": "Advanced Semiconductor Engineering, Inc.",
+  "parties": [
+    {
+      "name": "Advanced Semiconductor Engineering, Inc.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Named in ASE's release as the company breaking ground. United Daily News reports that it (日月光半導體) provides about 7,534 ping (a Taiwanese area unit) of leased land in the park for the first phase."
+    },
+    {
+      "name": "ASE Technology Holding",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Parent group; the release calls Advanced Semiconductor Engineering, Inc. a member of it, and it made the November 2025 disclosure for that subsidiary."
+    },
+    {
+      "name": "Hung Ching Development (宏璟建設)",
+      "role": "builder",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Developer that funds and builds the first-phase plant and logistics building with ASE's subsidiary under a joint build-and-share arrangement; the agreed split of the joint-construction value is 97% to the developer and 3% to ASE."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "project",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Two new ASE buildings in the Park III area of the Nanzih Technology Industrial Park in Kaohsiung, Taiwan: a test building for high-end packaging and test work, including lead frame and BGA products and module system testing, and an automated logistics centre. ASE disclosed the first-phase plan with developer Hung Ching in November 2025 and broke ground in March 2026 on a total investment of NT$17.8 billion aimed at AI and HPC demand. Completion is targeted for the second quarter of 2028.",
+  "location": {
+    "country": "TW",
+    "admin1": "Kaohsiung City",
+    "locality": "Kaohsiung",
+    "site": "Nanzih Technology Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "ASE's release names the site Nanzih Technology Industrial Park III; United Daily News places it in the park's third zone (第三園區) in Nanzih District."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-03-11",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 17800000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Given as the total investment for the two-building development."
+    },
+    {
+      "metric": "jobs",
+      "value": 1470,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-03-11",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Jobs expected once the buildings are in use."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "ASE and Hung Ching disclosed the start of the first phase, a plant and a smart logistics building, under a joint build-and-share arrangement."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-03-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2028-Q2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ASE Breaks Ground on New High-Tech Facility in Kaohsiung, Investing NT$ 17.8 Billion to Meet AI Chip Demand",
+      "publisher": "ASE Technology Holding",
+      "url": "https://www.aseglobal.com/press-room/ase-breaks-ground-on-new-high-tech-facility-in-kaohsiung",
+      "type": "company_announcement",
+      "published": "2026-03-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "日月光斥資42億與宏璟合建中壢新廠 高雄廠採合建分屋加快產能布建",
+      "publisher": "United Daily News (udn.com)",
+      "url": "https://udn.com/news/story/7241/9160107",
+      "type": "news",
+      "published": "2025-11-24",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "ase-kaohsiung-k18b",
+      "relation": "same_campus"
+    },
+    {
+      "id": "ase-wus-nanzih-advanced-packaging-hub",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "The release does not give a building number for either structure. United Daily News reports that the Park III site was approved for development in two phases; the two buildings in this record make up the first phase, and no timing for a second phase was found.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a United Daily News report identifying the two buildings as the first phase of a joint build-and-share development with Hung Ching Development, with that developer as a party and the November 2025 disclosure as a milestone; described the test building's scope from the release and reworded the summary and figure notes. Audit fixes (2026-11-07): set the operator to Advanced Semiconductor Engineering, Inc., the company named in ASE's release and in the build-and-share disclosure, with ASE Technology Holding as parent owner; kept Hung Ching as builder and reworded its note as the developer that funds and builds the first phase; normalised the site to the Nanzih Technology Industrial Park with Park III and the district in the location note; replaced the summary's description of Park III as a third phase; linked the record to the two other ASE projects in the park and dropped a stale note about the locality."
+  }
+}

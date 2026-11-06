@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "amkor-korea-gwangju-expansion",
+  "name": "Amkor Technology Korea Gwangju campus expansion",
+  "aliases": [],
+  "company": "Amkor",
+  "operator": "Amkor Technology Korea",
+  "parties": [
+    {
+      "name": "Amkor Technology Korea",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Korean subsidiary that held the groundbreaking at its Gwangju site."
+    },
+    {
+      "name": "Amkor Technology, Inc.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "project",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [
+    {
+      "label": "Flip Chip BGA (FCBGA)",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed among the services of the Gwangju campus; the source does not say which will run in the new building."
+    },
+    {
+      "label": "Wafer bumping",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed among the services of the Gwangju campus."
+    },
+    {
+      "label": "Wafer-level packaging",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed among the services of the Gwangju campus."
+    },
+    {
+      "label": "System in Package (SiP)",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Listed among the services of the Gwangju campus."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "An expansion of Amkor's Gwangju packaging and test campus in South Korea, a site the company has run since the 1990s, to add capacity for advanced packaging used in AI and high-performance computing. Construction began with a groundbreaking on 19 October 2026. According to the Korean industry ministry, Amkor plans to spend KRW 3 trillion from 2026 to 2031 and hire about 2,000 people, finishing two buildings in the second half of 2027 and two more in the first half of 2028 before producing there.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gwangju",
+    "locality": "Gwangju",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Expansion of an existing campus that has been part of Amkor's Korean operations since the 1990s."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-29",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-10-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned spending from 2026 to 2031 announced at the groundbreaking; the ministry says it is KRW 2 trillion more than Amkor first planned."
+    },
+    {
+      "metric": "jobs",
+      "value": 2000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-10-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned hiring, about 1,000 more than in the original plan according to the ministry."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2026-10-19",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Ceremony held at the Gwangju site."
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-H2",
+      "planned": true,
+      "phase_label": "First two buildings",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Production of advanced packaging products is to follow completion."
+    },
+    {
+      "event": "building_complete",
+      "date": "2028-H1",
+      "planned": true,
+      "phase_label": "Second two buildings",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Amkor Breaks Ground on Expansion in Gwangju",
+      "publisher": "Amkor Technology",
+      "url": "https://amkor.com/blog/amkor-breaks-ground-on-expansion-in-gwangju/",
+      "type": "company_announcement",
+      "published": "2026-10-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "앰코, 광주에 3조원 투자…첨단 패키징 제품 생산",
+      "publisher": "Ministry of Trade, Industry and Resources (Republic of Korea)",
+      "url": "https://www.motir.go.kr/kor/article/ATCL8764a1224/155119241/view",
+      "type": "government",
+      "published": "2026-10-19",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Amkor's own release refers to a new building, while the industry ministry describes four buildings finished in two stages; the ministry's schedule is recorded. The existing campus has about 152,000 square metres of manufacturing space. Amkor's release also mentions multi-year customer agreements worth more than USD 3 billion across Arizona and South Korea, which are not tied to this project and are not recorded as a figure.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the Korean industry ministry's report of the 19 October 2026 groundbreaking with the KRW 3 trillion 2026-2031 investment, about 2,000 planned jobs and the two-stage building schedule; set the operator to Amkor Technology Korea and rewrote the summary and notes."
+  }
+}

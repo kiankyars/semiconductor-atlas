@@ -1,0 +1,234 @@
+{
+  "schema_version": "1.0",
+  "id": "intel-fab-34-leixlip",
+  "name": "Fab 34",
+  "aliases": [
+    "Intel Fab 34"
+  ],
+  "company": "Intel",
+  "operator": "Intel",
+  "parties": [
+    {
+      "name": "Intel",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "name": "Apollo-managed funds",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s6",
+        "s7"
+      ],
+      "note": "Apollo-managed funds held a 49% equity interest in a joint venture entity tied to Fab 34 from 2024, while Intel kept ownership and operating control of the fab itself; Intel agreed in April 2026 to buy the stake back and reported the repurchase completed."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "Intel 4",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "label": "Intel 3",
+      "source_ids": [
+        "s4",
+        "s6",
+        "s9"
+      ],
+      "note": "An Intel executive said in July 2026 that no other Intel factory runs Intel 3."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Intel's EUV logic fab at its Leixlip campus in County Kildare, Ireland, part of a 2022 plan to add €12 billion and double manufacturing space in Ireland. The first module began high-volume Intel 4 production in September 2023, the first EUV volume manufacturing in Europe, and the fab also makes Intel 3 products. Apollo-managed funds bought a 49% stake in a Fab 34 joint venture in 2024, which Intel repurchased in 2026 for $14.2 billion. Intel expects to complete construction of Fab 34, and in July 2026 it announced a €5 billion programme, under way since earlier that year, to upgrade the existing Leixlip fabs and install new equipment, with Fab 34 at its centre.",
+  "location": {
+    "country": "IE",
+    "admin1": "County Kildare",
+    "locality": "Leixlip",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s8"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-07-13",
+  "status_source_ids": [
+    "s5",
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 12000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2022-03-15",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional investment in Intel's Irish operations, including Fab 34, to double manufacturing space."
+    },
+    {
+      "metric": "investment",
+      "value": 18400000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-06-04",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Amount Intel had invested in Fab 34 at the time of the Apollo agreement."
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-07-13",
+      "source_ids": [
+        "s8",
+        "s9"
+      ],
+      "note": "Leixlip campus programme to upgrade existing fabs and install equipment; press coverage names Fab 34 as its focus."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "volume_production",
+      "date": "2023-09-29",
+      "planned": false,
+      "phase_label": "Mod 1",
+      "source_ids": [
+        "s2",
+        "s4",
+        "s3"
+      ],
+      "note": "High-volume production of Intel 4 began."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Intel Announces Initial Investment of More Than €33 Billion for Semiconductor R&D and Manufacturing in EU",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1532/intel-announces-initial-investment-of-more-than-33",
+      "type": "company_announcement",
+      "published": "2022-03-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Intel’s New Fab in Ireland Begins High-Volume Production of Intel 4 Technology",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1652/intels-new-fab-in-ireland-begins-high-volume-production",
+      "type": "company_announcement",
+      "published": "2023-09-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Updates: Intel’s 10 Largest Construction Projects",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/updates-intel-10-largest-construction-projects.html",
+      "type": "company_announcement",
+      "published": "2024-04-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Intel and Apollo Agree to Joint Venture Related to Intel’s Fab 34 in Ireland",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1698/intel-and-apollo-agree-to-joint-venture-related-to",
+      "type": "company_announcement",
+      "published": "2024-06-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Form 10-K for the fiscal year ended December 27, 2025",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+      "type": "company_filing",
+      "published": "2026-01-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Intel to Repurchase 49% Equity Interest in Ireland Fab Joint Venture",
+      "publisher": "Intel",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1764/intel-to-repurchase-49-equity-interest-in-ireland-fab",
+      "type": "company_announcement",
+      "published": "2026-04-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Intel Reports First-Quarter 2026 Financial Results",
+      "publisher": "Intel",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000050863/000005086326000077/q126earningsrelease.htm",
+      "type": "company_announcement",
+      "published": "2026-04-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s8",
+      "title": "Intel Invests €5 Billion to Expand Manufacturing in Europe",
+      "publisher": "Intel",
+      "url": "https://www.intel.com/content/www/us/en/newsroom/news/artificial-intelligence/intel-invests-5-billion-euro-to-expand-manufacturing-in-europe.html",
+      "type": "company_announcement",
+      "published": "2026-07-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s9",
+      "title": "Intel to invest €5bn in Leixlip campus on next-generation chips to power AI",
+      "publisher": "The Irish Times",
+      "url": "https://www.irishtimes.com/business/2026/07/13/intel-to-invest-5bn-in-leixlip-campus/",
+      "type": "news",
+      "published": "2026-07-13",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "Intel's April 2024 construction update said the next cleanroom, Mod 2, was being brought up after Mod 1 entered production. The Apollo stake was sold for about $11 billion in 2024 and bought back for $14.2 billion in 2026.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the €5 billion programme's timing (announced in July 2026, under way since earlier that year), changed Apollo's role from owner to joint-venture partner because Intel kept ownership of the fab, and set the 2025 annual report's filing date to 23 January 2026."
+  }
+}

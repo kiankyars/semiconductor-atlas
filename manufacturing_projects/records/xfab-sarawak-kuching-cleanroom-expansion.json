@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "id": "xfab-sarawak-kuching-cleanroom-expansion",
+  "name": "X-FAB Sarawak fab, Kuching (2025 cleanroom expansion)",
+  "aliases": [
+    "X-FAB Sarawak",
+    "X-FAB Malaysia cleanroom expansion"
+  ],
+  "company": "X-FAB",
+  "operator": "X-FAB",
+  "parties": [
+    {
+      "name": "X-FAB",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "power"
+  ],
+  "process_nodes": [
+    {
+      "label": "180nm BCD-on-SOI (XT018)",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The expansion more than doubles capacity for this platform, which supports 10 V to 375 V devices."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "X-FAB's wafer fab in Kuching, Sarawak, which gained 6,000 square metres of cleanroom in an expansion opened in September 2025 by Malaysia's Prime Minister and the Sarawak Premier. X-FAB put the expansion at $600 million and Malaysia's investment agency at RM3 billion; it took about two years from groundbreaking to the first production lots. The new line more than doubles capacity for X-FAB's 180nm BCD-on-SOI platform, used for motor and LED drivers, battery management and medical ultrasound chips, and raised the fab's monthly wafer starts from 30,000 to 40,000.",
+  "location": {
+    "country": "MY",
+    "admin1": "Sarawak",
+    "locality": "Kuching",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2025-09-12",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "2025 cleanroom expansion",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Stated with a dollar sign only; X-FAB reports in US dollars."
+    },
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "MYR",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "2025 cleanroom expansion",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The Malaysian investment agency's figure for the same expansion."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Monthly wafer starts for the whole Sarawak fab after the expansion, up from 30,000; wafer size not stated."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 6000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "2025 cleanroom expansion",
+      "as_of": "2025-09-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Cleanroom added by the expansion."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "opening",
+      "date": "2025-09-12",
+      "planned": false,
+      "phase_label": "2025 cleanroom expansion",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Opening ceremony for the new manufacturing line, which had already run its first production lots."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "X-FAB Opens New Cleanroom at its Malaysian Site",
+      "publisher": "X-FAB",
+      "url": "https://www.xfab.com/news/details/article/x-fab-opens-new-cleanroom-at-its-malaysian-site",
+      "type": "company_announcement",
+      "published": "2025-09-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "X-FAB's RM3 Billion State-of-the-Art Expansion in Sarawak Strengthens Malaysia's Position as Global Semiconductor Hub",
+      "publisher": "Malaysian Investment Development Authority (MIDA)",
+      "url": "https://www.mida.gov.my/media-release/x-fabs-rm3-billion-state-of-the-art-expansion-in-sarawak-strengthens-malaysias-position-as-global-semiconductor-hub/",
+      "type": "government",
+      "published": "2025-09-12",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The record covers the whole Sarawak fab, with the 2025 cleanroom as a phase: the investment and cleanroom area apply to the expansion, while the 40,000 wafer-start figure covers the whole fab. The release does not give the groundbreaking date or the wafer size.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Rescoped the record to the Sarawak fab with the 2025 cleanroom as a phase, so the site-wide 40,000 wafer-start capacity applies to the facility instead of being marked multi-site, and the investment, cleanroom area and opening apply to the expansion phase; added the Malaysian Investment Development Authority release with its RM3 billion figure."
+  }
+}

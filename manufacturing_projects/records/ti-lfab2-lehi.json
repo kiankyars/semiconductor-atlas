@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "id": "ti-lfab2-lehi",
+  "name": "TI LFAB2 Lehi 300 mm fab",
+  "aliases": [
+    "LFAB2"
+  ],
+  "company": "Texas Instruments",
+  "operator": "Texas Instruments",
+  "parties": [
+    {
+      "name": "Texas Instruments",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Final CHIPS Act direct-funding award for the new Lehi fab."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm to 65nm",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Range stated in the CHIPS award for the new Lehi fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "LFAB2 is Texas Instruments' second 300 mm wafer fab in Lehi, Utah, built next to and connected with LFAB1 so the two can run as one fab for analog and embedded processing chips. TI picked Lehi in February 2023 for an investment of USD 11 billion, broke ground in November 2023 and aimed for first output as early as 2026. A final CHIPS award including USD 700 million for the Lehi fab followed in December 2024; TI described construction as well under way in June 2025, and its Lehi page reports the final truss placed in 2026.",
+  "location": {
+    "country": "US",
+    "admin1": "Utah",
+    "locality": "Lehi",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-06-18",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-02-15",
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Investment TI announced with the Lehi site selection."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 700000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-20",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Lehi share of TI's final CHIPS award of up to USD 1.61 billion."
+    },
+    {
+      "metric": "jobs",
+      "value": 800,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-11-02",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Additional direct TI jobs."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-02-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Construction start expected at the announcement."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2023-11-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Target of first production as early as 2026, given in 2023."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Texas Instruments selects Lehi, Utah, for its next 300-millimeter semiconductor wafer fab",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2023/2023-02-15-texas-instruments-selects-lehi-utah-for-its-next-300-millimeter-semiconductor-wafer-fab",
+      "type": "company_announcement",
+      "published": "2023-02-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Texas Instruments breaks ground on new 300-mm semiconductor wafer fabrication plant in Utah",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2023/2023-11-02-texas-instruments-breaks-ground-on-new-300-mm-semiconductor-wafer-fabrication-plant-in-utah.html",
+      "type": "company_announcement",
+      "published": "2023-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Texas Instruments (Utah)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/node/1857346",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the US",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+      "type": "company_announcement",
+      "published": "2025-06-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Lehi, Utah: 300mm wafer fabs",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/about-ti/manufacturing/lehi.html",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Texas Instruments Gets $1.6 Billion for Semiconductors",
+      "publisher": "Transport Topics",
+      "url": "https://www.ttnews.com/articles/texas-instruments-chips",
+      "type": "news",
+      "published": "2024-12-23",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "ti-lfab1-lehi",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "TI's Lehi page carries no publication date; it reports the foundation poured in 2025 and the final truss placed in 2026. The status date is therefore that of TI's June 2025 release, the newest dated source describing LFAB2 construction as under way; no dated 2026 report of construction progress was found. No source reports production at LFAB2 as of the access date, so the 2026 production target remains a planned milestone.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:3d9e6d53-6831-575b-82d4-163c6b03b783",
+      "relation": "award_page",
+      "note": "The award covers the new Lehi fab."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Replaced the broken link to TI's February 2023 site-selection release with its current address; reworded the summary to state the CHIPS amount as the Lehi share of the joint award. Audit fixes (2026-11-07): replaced the bare-year status date taken from the undated Lehi page with 18 June 2025, the date of TI's newest dated release describing LFAB2 construction."
+  }
+}

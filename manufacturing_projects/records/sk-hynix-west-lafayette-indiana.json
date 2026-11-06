@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-west-lafayette-indiana",
+  "name": "SK hynix Indiana advanced packaging fab",
+  "aliases": [
+    "SK hynix West Lafayette HBM packaging plant"
+  ],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "State of Indiana",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed the April 2024 investment agreement with SK hynix."
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Agreed preliminary CHIPS terms in August 2024 and made a final award in December 2024."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "hbm",
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "An HBM advanced packaging and test plant with an advanced packaging R&D line that SK hynix is building at the Purdue Research Park in West Lafayette, Indiana. Announced in April 2024 at about USD 3.87 billion with mass production planned for the second half of 2028, it received a final CHIPS Act award of up to USD 458 million in December 2024. Site work began in April 2026, and at the August 2026 groundbreaking ceremony the company put the cost at over USD 4 billion, set the cleanroom to open by October 2028 and moved next-generation HBM mass production to the second half of 2029. Wafers made in Korea are to be packaged and tested at the plant.",
+  "location": {
+    "country": "US",
+    "admin1": "Indiana",
+    "locality": "West Lafayette",
+    "site": "Purdue Research Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "NIST places the site in the Purdue University Research Park on the Purdue campus."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-28",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3870000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-03",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Estimated investment at announcement, repeated in the CHIPS award."
+    },
+    {
+      "metric": "investment",
+      "value": 4000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-28",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Expected total investment given at the groundbreaking."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 450000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-08-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Proposed CHIPS direct funding under non-binding preliminary terms, with access to USD 500 million in proposed loans."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 458000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-19",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Final CHIPS direct funding, disbursed as project milestones are met; up to USD 500 million in CHIPS loans was also offered."
+    },
+    {
+      "metric": "site_area",
+      "value": 539600,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-28",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Whole site, including the packaging plant, R&D centre, offices and utility buildings."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-04-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "New jobs expected at the plant."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-04-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Investment agreement signed at Purdue University."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Mass-production target at announcement and in the CHIPS award."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026-04-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Site work began on 15 April 2026; by late August the project was reported about 7% complete overall, with the building about 15% complete."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-08-27",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Ceremonial groundbreaking held at Purdue University in West Lafayette, after site work had started."
+    },
+    {
+      "event": "building_complete",
+      "date": "2028-10",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Cleanroom to open by October 2028."
+    },
+    {
+      "event": "volume_production",
+      "date": "2029-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Target for next-generation HBM mass production given at the groundbreaking."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SK hynix Signs Investment Agreement of Advanced Chip Packaging with Indiana",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-signs-investment-agreement-of-advanced-chip-packaging-with-indiana/",
+      "type": "company_announcement",
+      "published": "2024-04-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SK hynix Signs Preliminary Memorandum of Terms with U.S. Department of Commerce for Advanced Packaging Facility in Indiana",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/preliminary-mou-terms-signed-with-us-doc-for-advanced-packaging-facility-in-indiana/",
+      "type": "company_announcement",
+      "published": "2024-08-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Biden-Harris Administration Announces CHIPS Incentives Award with SK hynix to Advance U.S. Technological Leadership and Expand Capacity of Chips Crucial to the AI Supply Chain",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-sk-hynix",
+      "type": "government",
+      "published": "2024-12-19",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "SK hynix (Indiana)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/sk-hynix-indiana-west-lafayette",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "SK hynix Holds Groundbreaking Ceremony for HBM Production Base in Indiana, “Beginning a New Future for US-Korea AI”",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/",
+      "type": "company_announcement",
+      "published": "2026-08-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "Inside SK hynix’s First HBM Plant in the US... Mass Production Begins in 2029 [Reportage]",
+      "publisher": "The Asia Business Daily",
+      "url": "https://view.asiae.co.kr/en/article/2026082719533740198",
+      "type": "news",
+      "published": "2026-08-28",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The CHIPS award also covers an advanced packaging R&D facility with a full test bed on the same site, and SK hynix plans joint research with Purdue University. The company was also to seek the federal investment tax credit of up to 25% of qualified capital spending.",
+  "registry_records": [
+    {
+      "record_id": "nist:project:5bd14e97-967b-58dd-b35a-c70826bb676a",
+      "relation": "award_page",
+      "note": null
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 15 April 2026 start of site work and the reported 539,600 m² site area from an August 2026 on-site report, and noted that the August groundbreaking was ceremonial; the rest of the record matched its sources."
+  }
+}

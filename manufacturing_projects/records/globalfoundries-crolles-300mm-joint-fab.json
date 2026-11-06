@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "id": "globalfoundries-crolles-300mm-joint-fab",
+  "name": "Crolles 300 mm joint fab (STMicroelectronics and GlobalFoundries)",
+  "aliases": [
+    "ST–GF Crolles fab"
+  ],
+  "company": "STMicroelectronics and GlobalFoundries",
+  "operator": "STMicroelectronics and GlobalFoundries (jointly operated)",
+  "parties": [
+    {
+      "name": "STMicroelectronics",
+      "role": "joint_venture_partner",
+      "share_pct": 42,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "Joint operator with about 42% of the planned production at full build-out, per ST's July 2022 announcement; GlobalFoundries' annual reports say ST will own the fab building, which adjoins ST's existing 300 mm Crolles fab."
+    },
+    {
+      "name": "GlobalFoundries",
+      "role": "joint_venture_partner",
+      "share_pct": 58,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s7"
+      ],
+      "note": "Joint operator with about 58% of the planned production at full build-out, per ST's July 2022 announcement; trade press described it as the lead investor with 58%. Its dedicated capacity was to be managed by its own staff on site."
+    },
+    {
+      "name": "Government of France",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Aid of up to roughly €2.9 billion, approved by the European Commission on 28 April 2023; GlobalFoundries says the amounts allocated to each partner are confidential."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "22FDX",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "GlobalFoundries' FD-SOI platform, one of the technologies the facility was to support."
+    },
+    {
+      "label": "18nm",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "ST's FD-SOI technology roadmap down to 18nm was also to be supported."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s7"
+      ]
+    }
+  ],
+  "summary": "A jointly operated 300 mm fab planned in Crolles, France, by STMicroelectronics and GlobalFoundries, announced in July 2022 and set out in agreements in August 2022 and June 2023. It was to reach full capacity in 2026, with up to 620,000 wafers a year at full build-out split about 58% to GlobalFoundries and 42% to ST, at a projected cost of €7.5 billion including capital spending, maintenance and ancillary costs; the European Commission approved French aid of up to about €2.9 billion in April 2023. GlobalFoundries' annual reports filed in 2024 and 2025 described the partners as building and fitting out the fab, but in January 2025 trade press, citing unnamed reports, said the project had been put on hold; GlobalFoundries said its pace in Crolles would follow customer demand and market conditions. Trade press still described the fab as stalled in January 2026.",
+  "location": {
+    "country": "FR",
+    "admin1": "Auvergne-Rhône-Alpes",
+    "locality": "Crolles",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s7"
+    ],
+    "note": null
+  },
+  "status": "paused",
+  "status_as_of": "2026-01-29",
+  "status_source_ids": [
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7500000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-02-26",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Projected cost including capital expenditure, maintenance and ancillary costs."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 2900000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "up_to",
+      "basis": "awarded",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-04-28",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "French aid approved by the European Commission; sources give it as up to roughly €2.9 billion."
+    },
+    {
+      "metric": "capacity",
+      "value": 620000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-03-20",
+      "source_ids": [
+        "s2",
+        "s1",
+        "s7"
+      ],
+      "note": "300 mm wafers per year at full build-out, about 42% for ST and 58% for GlobalFoundries."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-07-11",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Additional staff at ST's Crolles site for the new facility."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-07-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s1",
+        "s2"
+      ],
+      "note": "ST and GlobalFoundries signed a memorandum of understanding; the commercial and cooperation agreement followed in August 2022 and the definitive agreement in June 2023."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s4"
+      ],
+      "note": "Original target, given at the July 2022 announcement, for the fab to ramp to full capacity."
+    },
+    {
+      "event": "paused",
+      "date": "2025-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Trade press, citing unnamed reports, said the partners had put the project on hold; neither company announced a halt."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2023",
+      "publisher": "GlobalFoundries",
+      "url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904824000013/gfs-20231231.htm",
+      "type": "company_filing",
+      "published": "2024-04-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2024",
+      "publisher": "GlobalFoundries",
+      "url": "https://www.sec.gov/Archives/edgar/data/1709048/000170904825000024/gfs-20241231.htm",
+      "type": "company_filing",
+      "published": "2025-03-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Annual Report on Form 20-F for the fiscal year ended December 31, 2025",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/932787/000093278726000009/stm-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "ST, GloFo suspend plan for joint wafer fab, say reports",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/st-glofo-suspend-plan-for-joint-wafer-fab-say-reports",
+      "type": "trade_press",
+      "published": "2025-01-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "ST-GF FDSOI fab paused among market headwinds",
+      "publisher": "Bits&Chips",
+      "url": "https://bits-chips.com/article/st-gf-fdsoi-fab-paused-among-market-headwinds/",
+      "type": "trade_press",
+      "published": "2025-01-22",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "GlobalFoundries stalls France fab as US manufacturing push sidelines Europe's chip ambitions",
+      "publisher": "DIGITIMES",
+      "url": "https://www.digitimes.com/news/a20260129PD225.html",
+      "type": "trade_press",
+      "published": "2026-01-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "Report on Form 6-K dated July 11, 2022 (STMicroelectronics and GlobalFoundries to advance FD-SOI ecosystem with new 300mm manufacturing facility in France)",
+      "publisher": "STMicroelectronics",
+      "url": "https://www.sec.gov/Archives/edgar/data/932787/000094787122000762/ss1153343_6k.htm",
+      "type": "company_filing",
+      "published": "2022-07-11",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "ST reported receiving about €126 million in cash and recognizing €72 million of grants from the Crolles programme in 2025, and its 2025 annual report still gives the projected cost and French support. The January 2025 reports said little progress had been made since the 2023 agreement; the cited sources contain no cancellation by either company. ST's July 2022 announcement splits the planned production about 58% to GlobalFoundries and 42% to ST, and trade press described GlobalFoundries as the lead investor with 58%, so the company field names GlobalFoundries as the majority holder; GlobalFoundries' filings say ST will own the fab building, and neither company's filings state ownership shares. Only the headline and opening of the January 2026 DIGITIMES article are publicly readable.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the status from under construction to paused, citing January 2025 trade-press reports that the project was put on hold and a January 2026 report that it remained stalled; removed the unsupported 2024 construction-start milestone, added the original 2026 full-capacity target, and corrected the source support for ST's ownership of the building and the confidential aid split. Audit fixes (2026-11-07): Checked the shares: ST's July 2022 6-K (added as s7) gives about 58% of planned production to GlobalFoundries and 42% to ST, and eeNews (s4) calls GlobalFoundries the lead investor with 58%, which are shares of planned output rather than ownership, so company stays both partners and the output shares are recorded on the parties; dated the announcement to the July 2022 memorandum, and added the 2026 target source, the 22FDX and 18nm technologies and the planned 1,000 jobs from that release."
+  }
+}

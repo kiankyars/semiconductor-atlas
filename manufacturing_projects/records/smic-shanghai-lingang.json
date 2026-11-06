@@ -1,0 +1,264 @@
+{
+  "schema_version": "1.0",
+  "id": "smic-shanghai-lingang",
+  "name": "SMIC Lingang 12-inch Fab, Shanghai",
+  "aliases": [
+    "SMOC",
+    "Semiconductor Manufacturing Oriental Corporation",
+    "中芯东方"
+  ],
+  "company": "SMIC",
+  "operator": "Semiconductor Manufacturing Oriental Corporation (SMIC Lingang)",
+  "parties": [
+    {
+      "name": "Semiconductor Manufacturing International Corporation",
+      "role": "owner",
+      "share_pct": 69.97,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "70.35% of a USD 3,733 million registered capital at the end of 2022; 69.97% of USD 5,500 million in the 2025 annual results."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Injected capital into SMOC, together with the Shenzhen and Beijing joint ventures, during 2022."
+    },
+    {
+      "name": "China (Shanghai) Pilot Free Trade Zone Lingang Special Area Administration",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Counterparty to the September 2021 cooperation agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "28nm and above",
+      "source_ids": [
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A 300 mm foundry fab built by SMIC's majority-owned Lingang subsidiary in Shanghai. SMIC planned it in 2021 at about USD 8.87 billion for 100,000 wafers a month at 28nm and above; trade press later described that line as the first phase of a CNY 100 billion project. Construction began in January 2022 and the Phase 1 shell was topped out that December; production started in 2023, and in November 2026 Phase 1 was described as ramping while the first section of Phase 2 passed its pre-construction check in October 2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Shanghai",
+    "locality": "Shanghai",
+    "site": "Lingang Special Area, China (Shanghai) Pilot Free Trade Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s7",
+      "s5"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-11-06",
+  "status_source_ids": [
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 8870000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s7",
+        "s5"
+      ],
+      "note": "SMIC's 2021 plan for the 100,000-wafer line, with USD 5.5 billion of registered capital; trade press citing Xinhua Finance described it as the first phase."
+    },
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Whole-project total that trade press attributed to Xinhua Finance, of which CNY 57.6 billion for the first phase."
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-01-02",
+      "source_ids": [
+        "s7",
+        "s5"
+      ],
+      "note": "Planned 300 mm wafers per month, built in three stages of 20,000, 30,000 and 50,000."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "SMIC disclosed the cooperation agreement with the Lingang administration in an exchange filing in early September 2021."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022-01-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s1"
+      ],
+      "note": "Formal start of construction; SMIC described the Shanghai 12-inch fab as under construction in August 2022."
+    },
+    {
+      "event": "building_complete",
+      "date": "2022-12-29",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5",
+        "s2"
+      ],
+      "note": "Phase 1 structure topped out; SMIC said the main fab shell was complete by the end of 2022."
+    },
+    {
+      "event": "first_production",
+      "date": "2023",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Trade press gave 2023 as the production year; the month is not reported. Phase 1 was described as ramping in November 2026."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027-12",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reported target for reaching full output by the end of 2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Voluntary Announcement: Entering into the Cooperation Framework Agreement in relation to a Project in Tianjin",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2022/0826/2022082601080.pdf",
+      "type": "company_filing",
+      "published": "2022-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "SMIC Reports 2022 Fourth Quarter Results",
+      "publisher": "Semiconductor Manufacturing International Corporation (via PR Newswire Asia)",
+      "url": "https://en.prnasia.com/releases/apac/smic-reports-2022-fourth-quarter-results-392648.shtml",
+      "type": "company_announcement",
+      "published": "2023-02-09",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Announcement of 2022 Annual Results",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/0328/2023032801249.pdf",
+      "type": "company_filing",
+      "published": "2023-03-28",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Announcement of 2025 Annual Results",
+      "publisher": "Semiconductor Manufacturing International Corporation",
+      "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032601294.pdf",
+      "type": "company_filing",
+      "published": "2026-03-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "多条12英寸晶圆产线，正式投产！",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20250102-37755.html",
+      "type": "trade_press",
+      "published": "2025-01-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s6",
+      "title": "12英寸厂“进账”91亿元，国内晶圆代工按下快进键",
+      "publisher": "DRAMeXchange (TrendForce)",
+      "url": "https://www.dramx.com/News/made-sealing/20261106-41410.html",
+      "type": "trade_press",
+      "published": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s7",
+      "title": "SMIC unveils $8.87 billion capacity plan, eyes opportunities amid global shortage",
+      "publisher": "Global Times",
+      "url": "https://globaltimes.cn/page/202109/1233301.shtml",
+      "type": "news",
+      "published": "2021-09-04",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "SMIC's September 2021 filing itself was not opened for this record; its figures come from news and trade-press reports. The 2025 annual results list SMOC among the subsidiaries on the mandatory environmental disclosure list. Phase 2 is recorded only through the October 2026 pre-construction check; no budget, capacity or start date for it has been cited.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Re-scoped the USD 8.87 billion and 100,000-wafer figures to Phase 1 and added the CNY 100 billion project total, dated construction start and topping out from the cited trade report, added a 2021 news source for the announcement and the Lingang Special Area site."
+  }
+}

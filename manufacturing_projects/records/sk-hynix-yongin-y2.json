@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-yongin-y2",
+  "name": "SK hynix Yongin Semiconductor Cluster Fab 2",
+  "aliases": [
+    "Yongin Y2"
+  ],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The second of four fabs SK hynix plans in sequence at its Yongin Semiconductor Cluster in Gyeonggi Province. In August 2026 the board approved about KRW 35.2 trillion through October 2031 for Y2, a business support building and an integrated R&D centre. Groundbreaking is planned for July 2027 and the first cleanroom for June 2029. Y2 is to produce HBM and other next-generation DRAM, with about 1.13 million m² of floor area.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Yongin",
+    "site": "Yongin Semiconductor Cluster",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Wonsam-myeon, Cheoin-gu, Yongin."
+  },
+  "status": "announced",
+  "status_as_of": "2026-08-07",
+  "status_source_ids": [
+    "s1"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 35200000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-08-07",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Board-approved for Y2 with a business support building, an integrated R&D centre and auxiliary infrastructure, through October 2031."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-08-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Board approval of the Y2 investment."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2027-07",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2029-06",
+      "planned": true,
+      "phase_label": "First cleanroom",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Opening of the first cleanroom."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SK hynix Invests 54 Trillion Won in Yongin Y2 and Cheongju M17 to Secure Mid-to-Long-Term Production Base for AI Memory Demand",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/fab-facility-investment-2026/",
+      "type": "company_announcement",
+      "published": "2026-08-07",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [
+    {
+      "id": "sk-hynix-yongin-y1",
+      "relation": "same_campus"
+    }
+  ],
+  "notes": "SK hynix describes the Yongin cluster as four fabs built in sequence on about 4.16 million m² under a KRW 600 trillion master plan, and now aims to finish building all four fabs by 2033 instead of 2045, with cleanroom expansions and equipment added in step with demand. Only the first two fabs have board-approved investments in the sources cited, so the third and fourth fabs are not recorded separately.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Reworded the notes on the 2033 target to match the cited August 2026 release, which gives 2033 as the date for finishing construction of all four fabs; the notes had described it as the fourth fab's first-cleanroom date set in 2026, which no cited source states. Changed the board-approved KRW 35.2 trillion from approximate to exact as stated."
+  }
+}

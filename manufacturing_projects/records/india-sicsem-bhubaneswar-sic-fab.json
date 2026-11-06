@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "id": "india-sicsem-bhubaneswar-sic-fab",
+  "name": "SiCSem silicon carbide fab, Bhubaneswar",
+  "aliases": [
+    "SiCSem Odisha SiC fab"
+  ],
+  "company": "Archean Chemical Industries",
+  "operator": "SiCSem",
+  "parties": [
+    {
+      "name": "SiCSem",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Builds the plant with the UK silicon carbide foundry Clas-SiC Wafer Fab, in which Archean holds a minority stake that gives access to its technology in India."
+    },
+    {
+      "name": "Archean Chemical Industries",
+      "role": "owner",
+      "share_pct": 70,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Holds SiCSem as a step-down subsidiary through its wholly owned unit Neun Infra."
+    },
+    {
+      "name": "Government of India",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Approved the project under the India Semiconductor Mission in August 2025; SiCSem signed the fiscal support agreement with the Mission on 11 May 2026."
+    },
+    {
+      "name": "Government of Odisha",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Approved the project under the state's 2023 semiconductor and fabless policy."
+    }
+  ],
+  "facility_type": "wafer_fab_and_packaging",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A combined silicon carbide wafer fab and assembly, test and packaging unit that SiCSem, a 70 percent subsidiary of Archean Chemical Industries, is building in the Info Valley area on the edge of Bhubaneswar, Odisha, with technology access through the UK firm Clas-SiC. Cleared under the India Semiconductor Mission in August 2025, and described by Archean as India's first approved commercial compound semiconductor fab, it is planned to process 60,000 SiC wafers and package 96 million devices a year, mainly MOSFETs and diodes for electric vehicles, chargers, railways, renewable energy and defence. Ground was broken on 1 November 2025, the fiscal support agreement with the Mission was signed in May 2026, and Archean reported construction under way at the site in November 2026. Trade press expects full operation to begin between 2027 and 2028.",
+  "location": {
+    "country": "IN",
+    "admin1": "Odisha",
+    "locality": "Bhubaneswar",
+    "site": "Info Valley-II",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "Sources call the site Info Valley or Info Valley-II; the special economic zone approval report places it in the electronics manufacturing park at Info Valley-II on the outskirts of Bhubaneswar."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-11-02",
+  "status_source_ids": [
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 220000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-11-03",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 34060000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-09-18",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Total cost in the proposal cleared by the Falta Special Economic Zone approval committee, of which about INR 30.06 billion is plant and machinery."
+    },
+    {
+      "metric": "capacity",
+      "value": 60000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "SiC wafers processed per year; wafer size not stated."
+    },
+    {
+      "metric": "capacity",
+      "value": 96000000,
+      "value_max": null,
+      "unit": "units_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Packaged SiC devices per year from the assembly and test unit; the special economic zone approval report splits this into about 4.8 million diodes and 91.2 million MOSFETs."
+    },
+    {
+      "metric": "jobs",
+      "value": 5000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-11-03",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Direct and indirect jobs expected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Approval under the India Semiconductor Mission, one of four projects cleared together."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2025-11-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Trade press expects full-scale operation to begin between 2027 and 2028 (s2) or the plant to be operational by 2027-28 (s3); the start of that window is recorded."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "[News] India's First Compound Semiconductor Wafer Fab Gets Approval",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/08/20/news-indias-first-compound-semiconductor-wafer-fab-gets-approval/",
+      "type": "trade_press",
+      "published": "2025-08-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Two New SiC Wafer Fabs Announced New Construction Phase",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/11/07/news-two-new-sic-wafer-fabs-announced-new-construction-phase/",
+      "type": "trade_press",
+      "published": "2025-11-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "SiCSem breaks ground on India's first SiC fab",
+      "publisher": "Compound Semiconductor",
+      "url": "https://compoundsemiconductor.net/article/122859/SiCSem_breaks_ground_on_Indiaand_s_first_SiC_fab",
+      "type": "trade_press",
+      "published": "2025-11-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Presentation of the earnings call for the quarter and half year ended September 30, 2026",
+      "publisher": "Archean Chemical Industries",
+      "url": "https://www.archeanchemicals.com/wp-content/uploads/2026/11/Investor-Presentation_Sd.pdf",
+      "type": "company_filing",
+      "published": "2026-11-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Odisha government approves building silicon carbide semiconductor plant worth Rs 34.06 billion near Bhubaneswar",
+      "publisher": "Indian Infrastructure",
+      "url": "https://indianinfrastructure.com/2026/09/18/odisha-government-approves-building-silicon-carbide-semiconductor-plant-worth-rs-34-06-billion-near-bhubaneswar/",
+      "type": "trade_press",
+      "published": "2026-09-18",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "No India Semiconductor Mission or Press Information Bureau release was read for this record; the approval is taken from trade press and from Archean's stock-exchange presentation (s4), which also reports that construction has begun. The investment figures disagree: s3 gives about USD 220 million at the groundbreaking, while the special economic zone approval reported in September 2026 (s5) gives INR 34.06 billion. s2 states about INR 206.7 billion, roughly ten times the other reports and more than s1's total of about INR 46 billion for all four projects approved in August 2025, so that figure is not recorded.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the company to Archean Chemical Industries (70 percent owner) and the facility type to fab plus packaging, added Archean's November 2026 filing for the construction status and fiscal support agreement, and added trade-press sources for the site, the USD 220 million and INR 34.06 billion investment figures and 5,000 jobs. Removed Bhubaneswar and Info Valley from s2, which names only Odisha. Audit fixes (2026-11-07): aligned the summary and the planned production milestone with the sources, which give a 2027 to 2028 window, and attributed the claim of India's first approved commercial compound semiconductor fab to Archean."
+  }
+}

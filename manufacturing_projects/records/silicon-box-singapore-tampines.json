@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "id": "silicon-box-singapore-tampines",
+  "name": "Silicon Box advanced packaging factory, Tampines, Singapore",
+  "aliases": [
+    "Silicon Box Singapore foundry"
+  ],
+  "company": "Silicon Box",
+  "operator": "Silicon Box",
+  "parties": [
+    {
+      "name": "Silicon Box",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Singapore Economic Development Board",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Supports the company's hiring and training of staff for the factory."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "Panel-level packaging",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Chiplet integration on large-format panels rather than wafers."
+    },
+    {
+      "label": "SiPlet",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Silicon Box's own name for its production line technology."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Silicon Box's first factory, an SGD 2 billion panel-level advanced packaging plant for chiplet-based devices in the Tampines Wafer Fab Park in eastern Singapore. The 73,000 square metre building opened in July 2023 after about 11 months of construction, and mass production for early customers began in October 2023. Shipments passed 1 billion units by October 2026, and a USD 300 million capacity expansion inside the site began in May 2026, with full installation expected by 2028.",
+  "location": {
+    "country": "SG",
+    "admin1": null,
+    "locality": "Singapore",
+    "site": "Tampines Wafer Fab Park",
+    "address": "20 Tampines Industrial Avenue 3, Singapore 529580",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-02",
+  "status_source_ids": [
+    "s2",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "SGD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-07-22",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 300000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "2026 capacity expansion",
+      "as_of": "2026-10-02",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Expansion of production capacity at the existing site, begun in May 2026."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "building_complete",
+      "date": "2023-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The company says the building was completed in about 11 months; grand opening held in July 2023."
+    },
+    {
+      "event": "opening",
+      "date": "2023-07-20",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Grand opening of the factory."
+    },
+    {
+      "event": "volume_production",
+      "date": "2023-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Mass production for early customers."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2028",
+      "planned": true,
+      "phase_label": "2026 capacity expansion",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Full installation of the expanded capacity is expected by 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Silicon Box launches $2 billion, state-of-the-art advanced semiconductor packaging fab in Singapore to accelerate the future of computing and the AI era",
+      "publisher": "Silicon Box",
+      "url": "https://www.silicon-box.com/silicon-box-launches-2-billion-state-of-the-art-advanced-semiconductor-packaging-fab-in-singapore-to-accelerate-the-future-of-computing-and-the-ai-era",
+      "type": "company_announcement",
+      "published": "2023-07-22",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s2",
+      "title": "Silicon Box Accelerates Industry Leadership With Production Commencement at its World Leading Advanced Packaging Facility and Series B Fundraising",
+      "publisher": "Silicon Box",
+      "url": "https://www.silicon-box.com/production-commencement-series-b",
+      "type": "company_announcement",
+      "published": "2024-01-08",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s3",
+      "title": "Silicon Box Celebrates Fourth Anniversary with Rapid Growth, New Milestones",
+      "publisher": "Silicon Box",
+      "url": "https://www.silicon-box.com/silicon-box-celebrates-fourth-anniversary-with-rapid-growth-new-milestones",
+      "type": "company_announcement",
+      "published": "2025-07-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s4",
+      "title": "Silicon Box Ships 500M Units at High Yield, Expands Production Capacity for Panel-Level Packaging",
+      "publisher": "Silicon Box",
+      "url": "https://www.silicon-box.com/silicon-box-ships-500m-units-at-high-yield-expands-production-capacity-for-panel-level-packaging",
+      "type": "company_announcement",
+      "published": "2026-08-05",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "s5",
+      "title": "Silicon Box Ships 1 Billion Units, 2 Billion Year-End Production Target",
+      "publisher": "Silicon Box",
+      "url": "https://www.silicon-box.com/silicon-box-ships-1-billion-units-2-billion-year-end-production-target",
+      "type": "company_announcement",
+      "published": "2026-10-02",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "related": [],
+  "notes": "The status is operating because the 2026 expansion adds capacity inside the existing factory rather than a new building. Cumulative shipments reported by the company: 100 million units by October 2025, 500 million by August 2026 and more than 1 billion by October 2026.",
+  "review": {
+    "reviewed_on": "2026-11-06",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}
