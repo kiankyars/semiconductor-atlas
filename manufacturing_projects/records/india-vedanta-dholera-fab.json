@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "id": "india-vedanta-dholera-fab",
+  "name": "Vedanta Semiconductor Fab, Dholera",
+  "aliases": [
+    "Vedanta–Foxconn semiconductor fab",
+    "Vedanta Foxconn Semiconductors fab"
+  ],
+  "company": "Vedanta",
+  "operator": "Vedanta Semiconductors",
+  "parties": [
+    {
+      "name": "Vedanta Semiconductors",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Project company first set up as the Vedanta–Foxconn joint venture."
+    },
+    {
+      "name": "Vedanta Limited",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Took over the semiconductor and display project companies from Twin Star Technologies, a company under its ultimate parent, in July 2023."
+    },
+    {
+      "name": "Foxconn (Hon Hai Technology Group)",
+      "role": "joint_venture_partner",
+      "share_pct": 40,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Was to hold 40 percent of the joint venture; said on 10 July 2023 that it would not move forward with it."
+    },
+    {
+      "name": "Government of Gujarat",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Signed memoranda of understanding for the semiconductor and display fabs in September 2022 and allotted land at Dholera."
+    },
+    {
+      "name": "India Semiconductor Mission",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Told Vedanta in July 2023 that its February 2022 incentive application had not been approved; a new application under the modified scheme was then under consideration."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "40nm",
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Planned first-phase CMOS process; Vedanta said in July 2023 that it held a licence for 40nm production technology from an integrated device maker."
+    },
+    {
+      "label": "28nm",
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Named for the fab in 2022; the company now plans it for a second phase after 40nm reaches volume."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s6"
+      ]
+    }
+  ],
+  "summary": "A planned 300 mm CMOS logic fab in the Dholera Special Investment Region, Gujarat, first announced in September 2022 as part of a Vedanta–Foxconn semiconductor and display project put at USD 20 billion, or about INR 1.54 lakh crore, with Vedanta holding 60 percent. The site at Dholera was chosen in February 2023. Foxconn withdrew from the joint venture in July 2023 and Vedanta Limited took full ownership; the national incentive body turned down the original 2022 application, and Vedanta said it would start construction once its new application under the modified scheme was approved. Vedanta describes a fab of 40,000 wafer starts a month, starting on 40nm and moving to 28nm, but no approval, technology partner or construction has been reported.",
+  "location": {
+    "country": "IN",
+    "admin1": "Gujarat",
+    "locality": "Dholera",
+    "site": "Dholera Special Investment Region",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s5"
+    ],
+    "note": "In Ahmedabad district, roughly 100 km from Ahmedabad."
+  },
+  "status": "announced",
+  "status_as_of": "2023-07-25",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2022-09-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Covers the semiconductor fab, a display fab and an assembly and test unit together."
+    },
+    {
+      "metric": "investment",
+      "value": 1540000000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2023-02-21",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "INR 1.54 lakh crore under the September 2022 agreements with Gujarat, covering both the semiconductor and the display plants."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-07",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "300 mm wafer starts a month as described on Vedanta's undated business page."
+    },
+    {
+      "metric": "jobs",
+      "value": 100000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2022-09-19",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Jobs potential claimed for the whole semiconductor and display project."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Memoranda of understanding signed with the Gujarat government."
+    },
+    {
+      "event": "site_selected",
+      "date": "2023-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Vedanta to set up semiconductors and display fab units in Gujarat, India",
+      "publisher": "Vedanta (via PR Newswire and Kyodo News PR Wire)",
+      "url": "https://kyodonewsprwire.jp/release/202209206837",
+      "type": "company_announcement",
+      "published": "2022-09-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Vedanta-Foxconn Selects Dholera SIR For First Semiconductor Facility In India",
+      "publisher": "Outlook Business",
+      "url": "https://www.outlookbusiness.com/news/vedanta-foxconn-selects-dholera-sir-for-first-semiconductor-facility-in-india-news-263872",
+      "type": "news",
+      "published": "2023-02-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Vedanta Limited adds Semiconductors and Display Glass ventures to its portfolio",
+      "publisher": "Vedanta Limited",
+      "url": "https://www.vedantalimited.com/img/media_mentions/press_release/2023/Vedanta-Limited-adds-Semiconductors.pdf",
+      "type": "company_announcement",
+      "published": "2023-07-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Foxconn says it will not move forward on chip JV with Vedanta",
+      "publisher": "Business Today",
+      "url": "https://www.businesstoday.in/latest/corporate/story/foxconn-says-it-will-not-move-forward-on-chip-jv-with-vedanta-389028-2023-07-10",
+      "type": "news",
+      "published": "2023-07-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Committed to building Semiconductor & display fabs at Dholera in Gujarat: Vedanta",
+      "publisher": "DeshGujarat",
+      "url": "https://deshgujarat.com/2023/07/18/committed-to-build-semiconductor-display-fabs-at-dholera-in-gujarat-vedanta",
+      "type": "news",
+      "published": "2023-07-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Business Overview | Semiconductors & Glass | Vedanta",
+      "publisher": "Vedanta Resources",
+      "url": "https://www.vedantaresources.com/businesses-semiconductors-glass.php",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Proceeding With Filing Fresh Application Under Modified Display-Scheme; Semiconductor Application Under Govt Consideration: Vedanta",
+      "publisher": "PTI (via Outlook Business)",
+      "url": "https://www.outlookbusiness.com/news/proceeding-with-filing-fresh-application-under-modified-display-scheme-semiconductor-application-under-govt-consideration-vedanta-news-305608",
+      "type": "news",
+      "published": "2023-07-25",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The record covers the semiconductor fab only; the display fab announced with it is out of scope. Foxconn's exit is not a cancellation by the operator: Vedanta kept the project company and still describes the fab on its business page (s6), which is undated, so the status date is taken from Vedanta's July 2023 statements (s5, s7). In July 2023 Vedanta said the state had allotted the land and site preparation was under way, but that building would wait for national approval. No source from 2024 to 2026 reporting an approval, construction, a new technology partner or a withdrawal could be found. The Tata Electronics fab at Dholera (tata-electronics-dholera-fab) is a separate project.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a July 2023 PTI report that the India Semiconductor Mission had not approved the 2022 application and that a new one was under consideration, with the mission as a party, and moved the status date to it; noted Vedanta's statement that site preparation had begun."
+  }
+}

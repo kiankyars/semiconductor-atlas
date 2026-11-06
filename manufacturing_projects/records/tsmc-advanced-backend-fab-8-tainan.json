@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-advanced-backend-fab-8-tainan",
+  "name": "TSMC Advanced Backend Fab 8, Tainan",
+  "aliases": [
+    "AP8"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "CoWoS",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "The plant was fitted out to add CoWoS capacity."
+    },
+    {
+      "label": "CoWoS-L",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "label": "CoWoS-R",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "An advanced packaging plant in the Tainan part of the Southern Taiwan Science Park, converted from Innolux's fourth Tainan LCD panel factory. TSMC announced in August 2024 that it would buy the plant and its facilities from Innolux for NT$17.14 billion. It held an equipment move-in ceremony there on 2 April 2025; Commercial Times called the plant TSMC's largest packaging fab, with close to 100,000 square metres of cleanroom, and it was set up to add CoWoS capacity including the CoWoS-L and CoWoS-R variants. A February 2026 report said the first phase reached mass production at the end of 2025, and TSMC's 2025 annual report lists the plant as Advanced Backend Fab 8 and says it is expanding packaging capacity in Tainan.",
+  "location": {
+    "country": "TW",
+    "admin1": "Tainan City",
+    "locality": "Tainan",
+    "site": "Southern Taiwan Science Park (Tainan)",
+    "address": "168, Fenghua, Xinshi Dist., Tainan City, 744-010, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "In Xinshi District; the address is the one TSMC lists for Advanced Backend Fab 8 in its 2025 annual report."
+  },
+  "status": "operating",
+  "status_as_of": "2026-02-13",
+  "status_source_ids": [
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 17140000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-08-16",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Price TSMC agreed to pay Innolux for the plant and its facilities; it does not include the later fit-out and packaging equipment."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 100000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-04-02",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported as close to 100,000 square metres, about four times the cleanroom of TSMC's Taichung packaging plant."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-08-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "TSMC announced the purchase of the Innolux plant and said it would be used for its own operations and production."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025-04-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Equipment move-in ceremony; one English-language report described the event as the plant's inauguration."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-Q4",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Reported as having started at the end of 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC 2025 Annual Report",
+      "publisher": "TSMC",
+      "url": "https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf",
+      "type": "company_report",
+      "published": "2026",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "TSMC Acquires Innolux's Plant in Southern Taiwan to Expand Advanced Packaging Capacity",
+      "publisher": "TrendForce",
+      "url": "https://trendforce.com/news/2024/08/16/news-tsmc-acquires-innoluxs-plant-in-southern-taiwan-to-expand-advanced-packaging-capacity",
+      "type": "trade_press",
+      "published": "2024-08-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "全球CoWoS產能今年再增 台積南科廠進機 迅得等供應鏈吃香",
+      "publisher": "Commercial Times",
+      "url": "https://www.ctee.com.tw/news/20250402700185-439901",
+      "type": "news",
+      "published": "2025-04-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Taiwan chip giant expands CoWoS capacity with AP8 facility",
+      "publisher": "TVBS",
+      "url": "https://t.media/2827781",
+      "type": "news",
+      "published": "2025-04-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "群創南科5廠 市場點名買家是日月光",
+      "publisher": "Liberty Times",
+      "url": "https://ec.ltn.com.tw/article/paper/1743692/print",
+      "type": "news",
+      "published": "2026-02-13",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "TSMC has not published capacity or a total investment for this plant; the only figure on record is the purchase price for the building and facilities. Innolux, the former owner, is not listed as a party because it no longer holds the plant. Production at the plant rests on a single February 2026 newspaper report; no TSMC statement on production there was found. No cited source describes a second phase of the plant, so the record is kept as operating rather than partly operating.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:D0311515",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 2 of Advanced Backend Fab 8; the cited sources do not describe a second phase."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed Innolux as a party because it sold the plant, set the locality to Tainan with the district in the note, dropped the annual report from the status sources because it does not report production, and attributed the largest-plant claim to the newspaper that made it. Audit fixes (2026-11-07): noted that production rests on one newspaper report and that no cited source describes the second phase named in the linked environmental registration."
+  }
+}

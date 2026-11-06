@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "id": "india-adani-tower-panvel-fab",
+  "name": "Adani–Tower Semiconductor Fab, Panvel",
+  "aliases": [
+    "Tower–Adani fab, Taloja",
+    "Adani Tower Maharashtra chip plant"
+  ],
+  "company": "Adani Group and Tower Semiconductor",
+  "operator": "Adani Group and Tower Semiconductor (proposed joint venture)",
+  "parties": [
+    {
+      "name": "Adani Enterprises",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Told the stock exchanges in September 2024 that the group was evaluating the plant and had signed no binding documents."
+    },
+    {
+      "name": "Tower Semiconductor",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Was to provide the process technology; its chief executive later said no formal agreement was ever signed."
+    },
+    {
+      "name": "Government of Maharashtra",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Approved the project in September 2024; national incentives would have needed separate India Semiconductor Mission approval."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A proposed two-phase wafer fab at Taloja near Panvel in Raigad district, Maharashtra, that the state government approved in September 2024 as a joint project of the Adani Group and Israel's Tower Semiconductor. It was put at INR 83,947 crore, about USD 10 billion, for 40,000 wafer starts a month in the first phase rising to 80,000 in the second, with more than 5,000 jobs. Adani said it was only evaluating the plant and had signed nothing binding. In 2025 Reuters reported that Adani had paused talks, Tower's chief executive said Tower had stopped the project months earlier and that no formal agreement had existed, and by September 2025 Adani was reported to be looking for a display fab partner instead. No construction was reported.",
+  "location": {
+    "country": "IN",
+    "admin1": "Maharashtra",
+    "locality": "Panvel",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "Sources place the plant at Taloja near Panvel, in Raigad district on the edge of the Navi Mumbai area."
+  },
+  "status": "cancelled",
+  "status_as_of": "2025-09-12",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 839470000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "INR 83,947 crore as stated by the state government; s2 also rounds it to INR 83,950 crore."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 587630000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "INR 58,763 crore."
+    },
+    {
+      "metric": "investment",
+      "value": 251840000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "INR 25,184 crore."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Wafer starts a month in the first phase; wafer size not stated."
+    },
+    {
+      "metric": "capacity",
+      "value": 80000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-06",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Wafer starts a month after the second phase doubles capacity; wafer size not stated."
+    },
+    {
+      "metric": "jobs",
+      "value": 5000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-09-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Jobs in the region as stated by the state's deputy chief minister."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Approved by the Maharashtra government."
+    },
+    {
+      "event": "cancelled",
+      "date": "2024-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Tower's chief executive said in May 2025 that Tower had stopped the project at its own request about five to six months earlier."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Gautam Adani makes a $10 billion chip gamble in Maharashtra: Here's what you need to know",
+      "publisher": "Business Today",
+      "url": "https://businesstoday.in/technology/news/story/gautam-adanis-makes-a-10-billion-chip-gamble-in-maharashtra-heres-what-you-need-to-know-444714-2024-09-06",
+      "type": "news",
+      "published": "2024-09-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Adani Group confirms plans for a mega semiconductor plant in Maharashtra",
+      "publisher": "Business Today",
+      "url": "https://businesstoday.in/latest/corporate/story/adani-group-confirms-plans-for-a-mega-semiconductor-plant-in-maharashtra-445377-2024-09-11",
+      "type": "news",
+      "published": "2024-09-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Indian billionaire Adani pauses US$10b chip venture with Israel's Tower, sources reveal",
+      "publisher": "Reuters (via Malay Mail)",
+      "url": "https://www.malaymail.com/news/money/2025/05/01/indian-billionaire-adani-pauses-us10b-chip-venture-with-israels-tower-sources-reveal/175145",
+      "type": "news",
+      "published": "2025-05-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Tower ends collaboration with Adani on Indian fab",
+      "publisher": "Globes",
+      "url": "https://en.globes.co.il/en/article-tower-ends-collaboration-with-adani-on-indian-fab-1001510631",
+      "type": "news",
+      "published": "2025-05-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Adani in Search of Display Fab Partner After Ending Chip Ties with Tower",
+      "publisher": "Outlook Business",
+      "url": "https://www.outlookbusiness.com/corporate/adani-in-search-of-display-fab-partner-after-ending-chip-ties-with-tower",
+      "type": "news",
+      "published": "2025-09-12",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The two companies give different accounts: Reuters reported at the start of May 2025, citing two people familiar with the matter, that Adani had paused talks over doubts about demand and Tower's financial commitment and might resume them later, while Tower said it had ended the project itself months earlier. With Tower out, no agreement signed and Adani reported in September 2025 to be seeking an LCD display partner, possibly for the same land, the planned venture is recorded as cancelled; the display plan is out of scope. Sources do not state the fab's process technology or products; the segment reflects Tower's analog and mixed-signal foundry business. No Maharashtra government release or company filing could be opened, so the approval and Adani's exchange clarification are taken from news reports.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a September 2025 Outlook Business report that the Tower partnership had collapsed and Adani was seeking a display fab partner instead, and moved the status date to it; set the locality to Panvel with Taloja in the note."
+  }
+}

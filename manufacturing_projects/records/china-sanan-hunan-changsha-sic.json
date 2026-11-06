@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "id": "china-sanan-hunan-changsha-sic",
+  "name": "Hunan Sanan SiC Semiconductor Industrial Park, Changsha",
+  "aliases": [
+    "Hunan Sanan Semiconductor Industrial Park",
+    "Sanan Changsha silicon carbide base"
+  ],
+  "company": "Sanan Optoelectronics",
+  "operator": "Hunan Sanan Semiconductor",
+  "parties": [
+    {
+      "name": "Hunan Sanan Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Runs the vertically integrated chain at the site, from crystal growth and substrates to epitaxy and device processing."
+    },
+    {
+      "name": "Sanan Optoelectronics",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Hunan Sanan is a wholly owned subsidiary of the Shanghai-listed group."
+    },
+    {
+      "name": "Changsha High-tech Industrial Development Zone Management Committee",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Signed the project investment and construction contract with Sanan, which Sanan disclosed in June 2020."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "gallium_nitride",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "mm": 200,
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "Sanan Optoelectronics' compound semiconductor base in the Changsha High-tech Zone, Hunan, run by its wholly owned subsidiary Hunan Sanan as a vertically integrated silicon carbide line covering crystal growth, substrates, epitaxy and SiC diode and MOSFET processing, plus a gallium nitride on silicon line. Sanan announced the CNY 16 billion project contract with the zone in June 2020 and broke ground that July; the first phase began production in June 2021 and a second phase started construction in July 2022. In its 2025 and mid-2026 reports the company gave matched capacity of 16,000 150 mm and 1,000 200 mm SiC wafers a month, against a planned output of about 360,000 wafers a year, and cumulative spending above the original budget.",
+  "location": {
+    "country": "CN",
+    "admin1": "Hunan",
+    "locality": "Changsha",
+    "site": "Changsha High-tech Industrial Development Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-08-26",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 16000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2020-06-16",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Budget stated when the contract was signed; the company's reports say it includes land-use rights and working capital."
+    },
+    {
+      "metric": "investment",
+      "value": 8000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2023-10-24",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Reported for the second phase when construction began; the source does not say whether this amount is part of the CNY 16 billion project budget."
+    },
+    {
+      "metric": "investment",
+      "value": 21163000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Cumulative amount invested in the project by the end of June 2026, about 132 percent of its budget; the 2025 annual report gave CNY 20.437 billion at the end of 2025."
+    },
+    {
+      "metric": "capacity",
+      "value": 16000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "150 mm SiC wafers a month of matched capacity across the substrate, epitaxy and device steps."
+    },
+    {
+      "metric": "capacity",
+      "value": 1000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "200 mm SiC wafers a month of matched capacity."
+    },
+    {
+      "metric": "capacity",
+      "value": 2000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Gallium nitride on silicon wafers a month; wafer size not stated."
+    },
+    {
+      "metric": "capacity",
+      "value": 360000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Matched wafer capacity a year once the project reaches full output; the wafer size mix is not stated."
+    },
+    {
+      "metric": "jobs",
+      "value": 1289,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Employees of Hunan Sanan at the end of June 2026 as given in the project disclosure, down from 1,494 at the end of 2025."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2020-06-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Sanan disclosed its investment and construction contract with the Changsha High-tech Zone."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2020-07-20",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2021-06",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The first phase was switched on and entered production."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022-07",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "160亿！三安光电造“芯”动作不小，第三代半导体项目长沙开干",
+      "publisher": "Cailian Press (via Jiemian News)",
+      "url": "https://www.jiemian.com/article/4705101.html",
+      "type": "news",
+      "published": "2020-07-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "国产8英寸碳化硅量产加速！行业龙头频频联手国际功率半导巨头 制造设备亦迎突破",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/1493654",
+      "type": "news",
+      "published": "2023-10-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "三安光电股份有限公司2025年年度报告",
+      "publisher": "Sanan Optoelectronics (Shanghai Stock Exchange filing, copy hosted by Eastmoney)",
+      "url": "https://pdf.dfcfw.com/pdf/H2_AN202604241821565429_1.pdf",
+      "type": "company_filing",
+      "published": "2026-04-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "三安光电股份有限公司2026年半年度报告",
+      "publisher": "Sanan Optoelectronics (Shanghai Stock Exchange filing, copy hosted by Eastmoney)",
+      "url": "https://pdf.dfcfw.com/pdf/H2_AN202608251828407113_1.pdf",
+      "type": "company_filing",
+      "published": "2026-08-26",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Sanan's 2020 announcement set targets of finishing the second phase and starting production there within 48 months and reaching full output within 72 months; no source read for this record reports the second phase as complete. The 2025 annual report says 394,000 square metres of buildings were finished and in use out of more than 500,000 square metres planned, and Hunan Sanan still carried construction in progress on its books at the end of 2025 and in mid-2026, when the half-year report described the project as gradually entering operation with parts still being built; no 2026 report of the second phase's completion was found. Sanan's reports give the capacity and staff figures for Hunan Sanan as a company, and Hunan Sanan also owns Chongqing Sanan, which makes SiC substrates in Chongqing. Sanan's SiC joint venture with STMicroelectronics in Chongqing is a separate record (st-sanan-chongqing-sic-fab).",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Dated the second-phase CNY 8 billion figure to its October 2023 source instead of the construction start, and noted that the capacity and staff figures are reported for Hunan Sanan as a company, which also owns a substrate subsidiary in Chongqing. Audit fixes (2026-11-07): said the June 2020 contract was announced rather than signed, as the source reports, and noted the mid-2026 report's description of the project as partly in operation with work still under way."
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": "1.0",
+  "id": "ymtc-wuhan-phase-3",
+  "name": "YMTC Wuhan Phase 3 fab",
+  "aliases": [
+    "YMTC Fab 3",
+    "Wuhan Fab 3"
+  ],
+  "company": "YMTC",
+  "operator": "Yangtze Memory Technologies",
+  "parties": [
+    {
+      "name": "Yangtze Memory Technologies",
+      "role": "operator",
+      "share_pct": 50.19,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "Share is its holding in the phase 3 project company according to the August 2026 prospectus."
+    },
+    {
+      "name": "长存三期（武汉）集成电路有限责任公司",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s7"
+      ],
+      "note": "Project company for the third phase, set up on 5 September 2025 with registered capital of CNY 20.72 billion and owned by Yangtze Memory Technologies and 湖北长晟三期投资发展有限责任公司."
+    },
+    {
+      "name": "湖北长晟三期投资发展有限责任公司",
+      "role": "owner",
+      "share_pct": 49.81,
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Share is its holding in the phase 3 project company."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand",
+    "dram"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The third Wuhan memory fab of Yangtze Memory Technologies (YMTC), built by a project company set up in September 2025 and 50.19 percent owned by YMTC. Trade press dates the groundbreaking to September 2025; YMTC fast-tracked the build and began moving tools in by January 2026, before the main building was finished, with more than half of the equipment reported to come from Chinese suppliers. Reuters reported the building complete in April 2026 and operations due late in 2026, reaching 50,000 wafers a month in 2027 and 100,000 at full capacity, with part of the capacity going to DRAM as well as 3D NAND. In June 2026 trade press still described production as a second-half 2026 plan, and in August 2026 YMTC's listing prospectus showed the phase 3 line under construction while a news report said equipment installation had begun. No report found by November 2026 says production has started.",
+  "location": {
+    "country": "CN",
+    "admin1": "Hubei",
+    "locality": "Wuhan",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "A district government in Wuhan (Xinzhou) promoted the project, but the sources do not give the fab's exact site."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-08-23",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-14",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Wafers per month targeted for 2027; the sources do not state the wafer size."
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-14",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Wafers per month at full capacity; the sources do not state the wafer size."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2025-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "In January 2026 trade press reported that some tools were already being moved in before the main building was finished; installation was still under way in February, April and August 2026."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Original target for large-scale production before the schedule was brought forward."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Accelerated target reported in January and June 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Start of operations expected late in 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion and start of production within 2026 as stated by a Wuhan district government in February 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "搶 2026 年NAND Flash 市場商機，中國長江存儲武漢三期將提早在下半年量產",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://technews.tw/2026/01/30/china-yangtze-memory-technologies-co-ltd-s-wuhan-phase-iii-project-will-begin-mass-production-ahead-of-schedule-in-the-second-half-of-the-year/",
+      "type": "trade_press",
+      "published": "2026-01-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "正安装设备，长江存储三期今年投产",
+      "publisher": "Guancha (via Wallstreetcn)",
+      "url": "https://wallstreetcn.com/articles/3764956",
+      "type": "news",
+      "published": "2026-02-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "长江存储全新晶圆厂曝光！产能提升超100% 国产设备采用率首次超过50%",
+      "publisher": "MyDrivers (via Sina)",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-04-15/doc-inhupvfe0971242.shtml?cref=cj",
+      "type": "trade_press",
+      "published": "2026-04-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Chinese chipmaker YMTC plans new factories amid heightened US-Sino trade tensions, sources say",
+      "publisher": "Reuters (via The Standard)",
+      "url": "https://www.thestandard.com.hk/finance/article/329250/Chinese-chipmaker-YMTC-plans-new-factories-amid-heightened-US-Sino-trade-tensions-sources-say",
+      "type": "news",
+      "published": "2026-04-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "国产存储崛起！长江存储收入同比飙升445% 产能加速扩充将超SK海力士、美光",
+      "publisher": "MyDrivers (via Tencent News)",
+      "url": "https://news.qq.com/rain/a/20260603A05WKD00",
+      "type": "trade_press",
+      "published": "2026-06-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "长江存储冲刺IPO：一个季度赚334亿",
+      "publisher": "The Economic Observer (via PEdaily)",
+      "url": "https://news.pedaily.cn/202608/567994.shtml",
+      "type": "news",
+      "published": "2026-08-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "长江存储控股股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "CCSH Corporation",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202608/002251_20260821_7075.pdf",
+      "type": "company_filing",
+      "published": "2026-08-21",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "No YMTC release on this fab was found; capacity and timing come from news and trade press citing unnamed sources and a district government notice. The August 2026 prospectus of YMTC's holding company gives the project company's ownership and shows phase 3 construction in progress of about CNY 10.2 billion on 31 March 2026, after about CNY 3.7 billion had been moved into fixed assets; it records spending on a phase 3 line from 2023, earlier than the September 2025 start reported by trade press, and gives no capacity, budget, site or production date for the phase. Reuters also reported plans for two further fabs of 100,000 wafers a month each, without dates or locations; they are not recorded. The project company's registered capital is not an investment figure and is not recorded as a metric. The record is not linked to the phase 2 fab as the same campus because no source gives the phase 3 site.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Moved the equipment move-in date from April to January 2026, as the January trade press report describes tools already arriving, and added an August 2026 report on YMTC's listing application that confirms installation was still under way. Audit fixes (2026-11-07): added the August 2026 STAR Market prospectus from the Shanghai Stock Exchange for the project company's 50.19 and 49.81 percent ownership and the phase 3 construction in progress, listed both shareholders, and noted that no source found by November 2026 reports production."
+  }
+}

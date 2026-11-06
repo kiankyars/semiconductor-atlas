@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "id": "hana-micron-vina-bac-giang",
+  "name": "Hana Micron Vina packaging and test plants, Van Trung Industrial Park",
+  "aliases": [
+    "Hana Micron Vina"
+  ],
+  "company": "Hana Micron",
+  "operator": "Hana Micron Vina Co., Ltd.",
+  "parties": [
+    {
+      "name": "Hana Micron Vina Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "name": "Hana Micron Inc.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "South Korean chip packaging and test group that owns the Vietnamese operation."
+    },
+    {
+      "name": "SK hynix",
+      "role": "customer",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Korean reporting in November 2025 said the plant handles SK hynix work, under a relationship that began in 2021 and a contract running to 2029."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "campus",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Hana Micron's chip assembly and test operation at Van Trung Industrial Park in northern Vietnam, described at its 2023 inauguration as the region's first semiconductor plant. Reports from 2023 place the park in Bac Giang province and reports since 2025 in Bac Ninh province. A first factory began operating in 2022 and a second was inaugurated on 16 September 2023, bringing investment to about USD 600 million. The company then aimed to lift its Vietnam investment above USD 1 billion by 2025, a goal restated in 2025 as USD 1 billion by 2027. Korean reporting in November 2025 said the plant served SK hynix and was being expanded, with monthly output due to rise from 150 million to 200 million chips when the work ends between late 2026 and 2027. In October 2026 the company was reported to be raising production, with total investment of USD 669 million.",
+  "location": {
+    "country": "VN",
+    "admin1": "Bac Ninh",
+    "locality": "Viet Yen",
+    "site": "Van Trung Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s5",
+      "s7"
+    ],
+    "note": "2023 reports place Van Trung Industrial Park in Viet Yen district, Bac Giang province; reports from August 2025 onward place it in Bac Ninh province, and an August 2026 report in Nenh Ward."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-10-02",
+  "status_source_ids": [
+    "s4",
+    "s7",
+    "s8"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 600000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-12-23",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Investment in Bac Giang after the second factory opened."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2023-12-23",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Target for the company's total investment in Vietnam by 2025, stated in 2023; one 2023 report also mentions a plant in Bac Ninh province, and sources do not split the figure by site."
+    },
+    {
+      "metric": "capacity",
+      "value": 150000000,
+      "value_max": null,
+      "unit": "units_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Packaged chips per month before the current expansion."
+    },
+    {
+      "metric": "capacity",
+      "value": 200000000,
+      "value_max": null,
+      "unit": "units_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-11-12",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Packaged chips per month after the expansion is completed."
+    },
+    {
+      "metric": "jobs",
+      "value": 4000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-12-23",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Employment target stated in 2023."
+    },
+    {
+      "metric": "investment",
+      "value": 669000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-02",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Hana Micron Vina's total investment in Bac Ninh province, reported alongside a rise in production."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2025-08-15",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Hana Micron Vina's target for its total investment by 2027, restated in August 2025 in place of the earlier 2025 goal; not split by site."
+    },
+    {
+      "metric": "jobs",
+      "value": 2200,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-03-27",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Workers employed at the company's two factories in Bac Ninh province in March 2026."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "Plant 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The first Bac Giang factory began operating."
+    },
+    {
+      "event": "opening",
+      "date": "2023-09-16",
+      "planned": false,
+      "phase_label": "Plant 2",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Inauguration of the second factory; equipment was still being moved into it in October 2023."
+    },
+    {
+      "event": "building_complete",
+      "date": "2027",
+      "planned": true,
+      "phase_label": "Expansion",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The expansion under way in November 2025 was expected to finish between late 2026 and 2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "South Korea's Hana Micron to invest US$1bn in Viet Nam chip production",
+      "publisher": "Viet Nam Government News (VGP)",
+      "url": "https://en.baochinhphu.vn/south-koreas-hana-micron-to-invest-us1bn-in-viet-nam-chip-production-111231005100656848.htm",
+      "type": "government",
+      "published": "2023-10-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "First semiconductor plant in northern Vietnam inaugurated",
+      "publisher": "The Investor",
+      "url": "https://theinvestor.vn/first-semiconductor-plant-in-northern-vietnam-inaugurated-d6653.html",
+      "type": "news",
+      "published": "2023-09-17",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "PM visits northern region's first semiconductor chip factory in Bac Giang",
+      "publisher": "VietNamNet",
+      "url": "https://vietnamnet.vn/en/pm-visits-northern-region-s-first-semiconductor-chip-factory-in-bac-giang-2230655.html",
+      "type": "news",
+      "published": "2023-12-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "하이닉스 일감 쏟아진다…하나마이크론 \"내년 공장 증설\"",
+      "publisher": "Korea Economic TV (via Daum)",
+      "url": "https://v.daum.net/v/20251112142426070",
+      "type": "news",
+      "published": "2025-11-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Permanent Deputy PM visits Hana Micron Vina in Bac Ninh",
+      "publisher": "Bac Ninh Newspaper and Radio-Television",
+      "url": "https://en.baobacninhtv.vn/permanent-deputy-pm-visits-hana-micron-vina-in-bac-ninh-postid424280.bbg",
+      "type": "news",
+      "published": "2025-08-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Bac Ninh pledges continued support for businesses and workers",
+      "publisher": "Bac Ninh Newspaper and Radio-Television",
+      "url": "https://en.baobacninhtv.vn/bac-ninh-pledges-continued-support-for-businesses-and-workers-postid442074.bbg",
+      "type": "news",
+      "published": "2026-03-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Bac Ninh works to address obstacles, support Hana Micro Vina's semiconductor expansion",
+      "publisher": "Bac Ninh Newspaper and Radio-Television",
+      "url": "https://en.baobacninhtv.vn/bac-ninh-works-to-address-obstacles-support-hana-micro-vina-s-semiconductor-expansion.bbg",
+      "type": "news",
+      "published": "2026-08-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "Bac Ninh targets higher value of semiconductor supply chain",
+      "publisher": "Viet Nam News (via The Star)",
+      "url": "https://www.thestar.com.my/business/business-news/2026/10/02/bac-ninh-targets-higher-value-of-semiconductor-supply-chain",
+      "type": "news",
+      "published": "2026-10-02",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "No company announcement or filing was found giving the plant's capacity or confirming the investment figures; the expansion and capacity details come from one Korean news report and the USD 669 million figure from one Vietnamese report, while a March 2026 provincial report still put the investment at nearly USD 600 million. The record id keeps the name of Bac Giang province, where the park lay when the plants opened; Bac Giang was merged into Bac Ninh province in Vietnam's 2025 reorganisation of provinces, which is why reports from August 2025 onward place the same park in Bac Ninh.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Moved the location to Bac Ninh province, where 2025 and 2026 reports place the park, and added those reports for the newer USD 669 million investment, the target moved to 2027 and the current workforce; updated the status date, renamed the record after the park, corrected the SK hynix note and fixed the Korean source's publisher label. Audit fixes (2026-11-07): Explained in the notes why the id keeps the Bac Giang name after the 2025 provincial merger and noted that a March 2026 report still gave an investment of nearly USD 600 million."
+  }
+}

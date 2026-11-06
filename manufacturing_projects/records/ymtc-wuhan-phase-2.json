@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "id": "ymtc-wuhan-phase-2",
+  "name": "YMTC Wuhan Phase 2 fab",
+  "aliases": [
+    "National Memory Base Phase 2",
+    "YMTC Fab 2"
+  ],
+  "company": "YMTC",
+  "operator": "Yangtze Memory Technologies",
+  "parties": [
+    {
+      "name": "Yangtze Memory Technologies",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "长江存储科技有限责任公司, which absorbed the phase 2 project company in December 2023."
+    },
+    {
+      "name": "CCSH Corporation",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "长江存储控股股份有限公司, YMTC's holding company, which owns all of Yangtze Memory Technologies and applied for a STAR Market listing in August 2026."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "The second 3D NAND fab of the National Memory Base run by Yangtze Memory Technologies (YMTC) in the East Lake High-tech Zone of Wuhan, China. Construction began on 20 June 2020 with a planned capacity of 200,000 wafers a month, double the first phase. Reports in 2022 expected it to start by the end of that year, but YMTC was placed on the U.S. Entity List in December 2022; trade press in June 2026 said the line formally entered production in 2024 and reached full output of about 60,000 wafers a month within two years. The August 2026 listing prospectus of YMTC's holding company says the main phase 2 line was completed and moved into fixed assets from 2024 and ran at full output in 2025 and early 2026. In April 2026 YMTC's two Wuhan fabs were reported to have a combined capacity of about 200,000 wafers a month.",
+  "location": {
+    "country": "CN",
+    "admin1": "Hubei",
+    "locality": "Wuhan",
+    "site": "National Memory Base",
+    "address": "武汉东湖新技术开发区未来三路88号",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s5"
+    ],
+    "note": "Future Science City in the Wuhan East Lake High-tech Zone; the address is Yangtze Memory Technologies' registered and principal operating address in the prospectus, where its 12-inch memory production buildings 1, 2a and 2b are registered. The prospectus does not say which building belongs to which phase."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-21",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "capacity",
+      "value": 200000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-06-20",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned wafer starts per month for the second phase; the sources do not state the wafer size."
+    },
+    {
+      "metric": "capacity",
+      "value": 60000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-03",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Monthly wafer output reported for the second phase at full production; the source does not state the wafer size."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2020-06-20",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Start by the end of 2022 reported by Nikkei and relayed by trade press; later reporting puts production in 2024."
+    },
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported formal start of production; the source gives the year only."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The prospectus says the phase 2 line ran at full output in 2025 and the first quarter of 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "国家存储器基地项目二期开工！概念股全名单来了",
+      "publisher": "Cailian Press (via Sina)",
+      "url": "https://finance.sina.cn/2020-06-21/detail-iirczymk8170917.d.html?from=wap",
+      "type": "news",
+      "published": "2020-06-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "YMTC preps second Wuhan wafer fab for NAND flash",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/ymtc-preps-second-wuhan-wafer-fab-for-nand-flash/",
+      "type": "trade_press",
+      "published": "2022-06-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "国产存储崛起！长江存储收入同比飙升445% 产能加速扩充将超SK海力士、美光",
+      "publisher": "MyDrivers (via Tencent News)",
+      "url": "https://news.qq.com/rain/a/20260603A05WKD00",
+      "type": "trade_press",
+      "published": "2026-06-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Chinese chipmaker YMTC plans new factories amid heightened US-Sino trade tensions, sources say",
+      "publisher": "Reuters (via The Standard)",
+      "url": "https://www.thestandard.com.hk/finance/article/329250/Chinese-chipmaker-YMTC-plans-new-factories-amid-heightened-US-Sino-trade-tensions-sources-say",
+      "type": "news",
+      "published": "2026-04-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "长江存储控股股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "CCSH Corporation",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202608/002251_20260821_7075.pdf",
+      "type": "company_filing",
+      "published": "2026-08-21",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The prospectus of YMTC's holding company, CCSH Corporation, filed with the Shanghai Stock Exchange in August 2026, is the only primary source found; it reports the phase 2 line's completion, full output and remaining construction in progress (about CNY 2.7 billion on 31 March 2026, with 98.61 percent of the planned project input made) but gives no per-phase capacity, investment, start date or site. A project company for the second phase, set up in December 2021 and owned 70 percent by Hubei Changsheng and 30 percent by China's second national chip fund, was bought by YMTC's holding company in 2023 and merged into Yangtze Memory Technologies in December 2023, so it is not listed as a party. The National Memory Base as a whole was reported in 2020 at a total investment of USD 24 billion; that figure is not recorded because it is not specific to this fab. The phase 3 fab (ymtc-wuhan-phase-3) is not linked as the same campus because no source gives its site. The Entity List date comes from Reuters reporting (s4).",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed Tsinghua Unigroup as an owner because it rested on a 2020 report and is outdated, recorded the 2024 production start as first production rather than volume production, widened the 2022 target to the year the source gives, and reworded the 60,000 wafers-a-month figure to match the source. Audit fixes (2026-11-07): added the August 2026 STAR Market prospectus from the Shanghai Stock Exchange as a primary source, replaced the phase 2 project company, which the prospectus says was merged into YMTC in December 2023, with the holding company as owner, added the published address and a 2025 full-output milestone, and moved the status date to the prospectus."
+  }
+}

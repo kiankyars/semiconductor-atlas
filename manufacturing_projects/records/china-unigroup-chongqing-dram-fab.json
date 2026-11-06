@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "id": "china-unigroup-chongqing-dram-fab",
+  "name": "Tsinghua Unigroup DRAM Fab, Chongqing",
+  "aliases": [
+    "Unigroup Chongqing DRAM project"
+  ],
+  "company": "Tsinghua Unigroup",
+  "operator": "Tsinghua Unigroup",
+  "parties": [
+    {
+      "name": "Tsinghua Unigroup",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Planned to base its new DRAM business group and its DRAM technology development in Chongqing, and to hold its memory plants through a new project company and chip fund."
+    },
+    {
+      "name": "Chongqing Municipal Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Agreed the project contract with Unigroup, which the city's Liangjiang New Area announced on 27 August 2019."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "A 300 mm DRAM fab that the state-backed Tsinghua Unigroup agreed with the Chongqing government in August 2019 to build in the city's Liangjiang New Area, alongside headquarters for its new DRAM business group and a DRAM research centre. Construction was meant to start at the end of 2019 with small-volume output in 2021, although industry analysts noted that Unigroup had no outside partner for DRAM process technology. As the group missed debt payments and a creditor sought bankruptcy proceedings against it, reports from late 2020 said the project was badly delayed, and in January and February 2022 the group was reported to have dropped its memory plant plans in Chongqing and Chengdu. No investment or capacity figure was disclosed.",
+  "location": {
+    "country": "CN",
+    "admin1": "Chongqing",
+    "locality": "Chongqing",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "In the Liangjiang New Area."
+  },
+  "status": "cancelled",
+  "status_as_of": "2022-02-07",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2019-08-27",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Project contract with the Chongqing government announced by the Liangjiang New Area."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2019-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Construction was planned to begin around the end of 2019; no source read reports that it began."
+    },
+    {
+      "event": "first_production",
+      "date": "2021",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Small-volume production target; missed."
+    },
+    {
+      "event": "cancelled",
+      "date": "2022-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Reported, citing Nikkei and the Financial Times, that Unigroup had dropped its memory plant plans in Chongqing and Chengdu."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Tsinghua Unigroup to Build DRAM Memory Chip Plant in Chongqing",
+      "publisher": "Yicai Global",
+      "url": "https://yicaiglobal.com/news/tsinghua-unigroup-to-build-dram-memory-chip-plant-in-chongqing",
+      "type": "news",
+      "published": "2019-08-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Tsinghua Unigroup's DRAM Fab Is Scheduled for Completion in 2021 but Technology Remains the Biggest Challenge to Production, Reports TrendForce",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/presscenter/news/20190905-10183.html",
+      "type": "trade_press",
+      "published": "2019-09-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Troubled Tsinghua Unigroup cuts chip projects",
+      "publisher": "China Economic Review",
+      "url": "https://chinaeconomicreview.com/troubled-tsinghua-unigroup-cuts-chip-projects/",
+      "type": "news",
+      "published": "2022-02-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "日经：紫光集团撤销重庆、成都存储厂计划，阪本幸雄已离职",
+      "publisher": "Ijiwei (via IT Home)",
+      "url": "https://www.ithome.com/0/600/709.htm",
+      "type": "trade_press",
+      "published": "2022-01-26",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The project was announced before 2020 and is included for its cancellation. The cancellation rests on reports citing Nikkei and the Financial Times (s3, s4); no Unigroup or Chongqing government statement could be found, and the sources read do not say whether any construction took place. The Chengdu 3D NAND fab that the same reports say was dropped is not recorded here.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a January 2022 IT Home report citing Nikkei and moved the cancellation to that month, set the locality to Chongqing with the Liangjiang New Area in the note, and corrected the government's role to announcing (not signing on a stated date) the contract. Audit fixes (2026-11-07): added the January 2022 report relaying Nikkei to the status sources."
+  }
+}

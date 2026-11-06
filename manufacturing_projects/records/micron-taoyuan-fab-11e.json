@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-taoyuan-fab-11e",
+  "name": "Micron Fab 11E, Taoyuan",
+  "aliases": [
+    "Fab 11E"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram",
+    "hbm"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A new fab building at Micron's Taoyuan memory site in northern Taiwan, designed to carry EUV lithography tools and, later, High-NA EUV systems that the older Taoyuan buildings cannot support because of floor load and service-space limits. Micron broke ground on 30 July 2026, presenting it as the first EUV facility in northern Taiwan, with operations expected around 2028 and DRAM and HBM output planned. In November 2026 Bloomberg reported, citing unnamed people, that Micron had all but halted construction amid a labor dispute with its Taoyuan union, with only safety-related work continuing and no date to resume; Micron did not comment on the plant.",
+  "location": {
+    "country": "TW",
+    "admin1": "Taoyuan City",
+    "locality": "Taoyuan",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Built at Micron's existing Taoyuan site."
+  },
+  "status": "paused",
+  "status_as_of": "2026-11-06",
+  "status_source_ids": [
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": 4500000000,
+      "unit": "USD",
+      "qualifier": "range",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Bloomberg, citing a person familiar with the matter, said Micron had budgeted this range, including ASML equipment, for its Taoyuan complex; the headline puts the plant at US$4.5 billion and the report does not say whether the range covers only the new building."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2026-07-30",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "opening",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Expected start of operations before the pause; trade press says around 2028."
+    },
+    {
+      "event": "paused",
+      "date": "2026-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported on 6 November 2026 as all but halted, with only minor safety work continuing before construction freezes; the report gives no exact date and Micron did not confirm it."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "累計投資逾台幣 1.6 兆元！美光深耕台灣四大廠區持續擴建因應市場需求",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://finance.technews.tw/2026/10/01/micron-continues-to-expand-its-four-major-manufacturing-facilities-in-taiwan-to-meet-market-demand/",
+      "type": "trade_press",
+      "published": "2026-10-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Micron Taiwan Investment Tops NT$1.6T as Four-Site Expansion Accelerates; Nanya Adds Pingtung Project",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026-10-02/news-micron-taiwan-investment-tops-nt1-6t-as-four-site-expansion-accelerates-nanya-adds-pingtung-project",
+      "type": "trade_press",
+      "published": "2026-10-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Micron pauses work on US$4.5bn Taiwan plant after labor spat",
+      "publisher": "Bloomberg (via Taipei Times)",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/06/2003867231",
+      "type": "news",
+      "published": "2026-11-06",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The groundbreaking details come from Micron Taiwan's October 2026 media briefing as reported by trade press; no Micron release on the groundbreaking was found. The pause rests on a single Bloomberg report citing unnamed people; Micron said its Taiwan operations continue as normal without addressing the plant, and the Taoyuan city government said it had not been told of a suspension. Sources do not state the capacity or DRAM node for the building; trade press notes Micron is bringing its EUV-based 1-gamma DRAM to Taiwan without tying it to this fab. No statement from Micron or its Taoyuan union addressing the plant was found between the report and 7 November 2026.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the status from under_construction to paused after a 6 November 2026 Bloomberg report that Micron had all but halted construction amid a labor dispute, and added that report's USD 3 billion to 4.5 billion budget and planned HBM output. Audit fixes (2026-11-07): clarified that Bloomberg tied the US$3 billion to US$4.5 billion budget to the Taoyuan complex and recorded that no Micron or union statement on the plant followed the report by 7 November 2026."
+  }
+}

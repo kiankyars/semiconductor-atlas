@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-taichung-aatt2",
+  "name": "Micron Advanced Assembly and Test Taiwan 2, Taichung",
+  "aliases": [
+    "AATT2",
+    "Micron Taichung second advanced packaging plant"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "hbm",
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Micron's second advanced packaging and test plant in Taiwan, set up in Taichung to add HBM capacity because its existing advanced packaging space was running short. Micron began converting an existing building at its Central Taiwan Science Park Houli site in 2025, with conversion work reported to have started in September 2025, and held the opening ceremony on 15 October 2026. Micron said the plant's planned 2027 output was already sold out; capacity and investment were not disclosed.",
+  "location": {
+    "country": "TW",
+    "admin1": "Taichung City",
+    "locality": "Taichung",
+    "site": "Central Taiwan Science Park, Houli Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s4"
+    ],
+    "note": "Houli District."
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-16",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2025-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "Conversion of an existing building; trade press dates the start to 2025 and a news report to September 2025."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-10",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "HBM production expected from mid-October 2026, as stated by Micron Taiwan at its October 2026 media briefing."
+    },
+    {
+      "event": "opening",
+      "date": "2026-10-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Opening ceremony attended by the President of Taiwan and the economics minister."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "累計投資逾台幣 1.6 兆元！美光深耕台灣四大廠區持續擴建因應市場需求",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://finance.technews.tw/2026/10/01/micron-continues-to-expand-its-four-major-manufacturing-facilities-in-taiwan-to-meet-market-demand/",
+      "type": "trade_press",
+      "published": "2026-10-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Micron Taiwan Investment Tops NT$1.6T as Four-Site Expansion Accelerates; Nanya Adds Pingtung Project",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026-10-02/news-micron-taiwan-investment-tops-nt1-6t-as-four-site-expansion-accelerates-nanya-adds-pingtung-project",
+      "type": "trade_press",
+      "published": "2026-10-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Micron's Taiwan investment exceeds NT$1.6 trillion: Top executive",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202610010013",
+      "type": "news",
+      "published": "2026-10-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "台灣美光先進封裝與測試二廠啟用，深化 AI 時代高頻寬記憶體布局",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://finance.technews.tw/2026/10/15/micron-taiwans-advanced-packaging-and-testing-plant-2-commences-operation/",
+      "type": "trade_press",
+      "published": "2026-10-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "美光封測二廠1》彈簧工廠變HBM基地　明年產能提早賣光",
+      "publisher": "People News",
+      "url": "https://www.peoplenews.tw/?p=61737",
+      "type": "news",
+      "published": "2026-10-16",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Reports differ on what the building was before conversion: one trade press report calls it a former warehouse at the Houli site, another news report a former spring factory. The first Taichung advanced packaging plant is the separate record micron-taichung-aatt-fab-4. Reports of the 15 October 2026 opening describe the plant as ready for HBM volume production but do not confirm that output had begun; the operating status rests on the opening ceremony.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Audit fixes (2026-11-07): noted that the opening reports do not confirm HBM output had begun."
+  }
+}

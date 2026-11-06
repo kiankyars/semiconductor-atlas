@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "id": "adi-milpitas-hillview-fab",
+  "name": "ADI Hillview wafer fab",
+  "aliases": [
+    "Analog Devices Milpitas Hillview fab",
+    "Linear Technology Hillview fab"
+  ],
+  "company": "Analog Devices",
+  "operator": "Analog Devices",
+  "parties": [
+    {
+      "name": "Analog Devices",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Gained the fab with its March 2017 acquisition of Linear Technology and sold the facility in 2022."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Analog Devices closed its Hillview wafer fab in Milpitas, California, the smallest of its four fabs at the time and one it took over with Linear Technology in 2017. ADI disclosed the plan in January 2018, expecting the closure in about three years and saying its remaining fabs, including Camas, Washington, together with its supply chain had enough capacity. ADI still listed Milpitas among its internal production sites in its fiscal 2020 annual report, then reported that Hillview stopped producing in the third quarter of fiscal 2021 and classified the facility as held for sale. It sold the facility and some equipment in the third quarter of fiscal 2022 for about USD 31.8 million.",
+  "location": {
+    "country": "US",
+    "admin1": "California",
+    "locality": "Milpitas",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "The trade report places the fab on Hillview Drive."
+  },
+  "status": "closed",
+  "status_as_of": "2022-08-17",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s5"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "closed",
+      "date": "2021-02",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "When the plan was disclosed in January 2018, closure was expected in about three years, which the trade report equated to February 2021."
+    },
+    {
+      "event": "closed",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Production ceased in the third quarter of ADI's fiscal 2021, which ran from May to July 2021; the facility was then classed as held for sale."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The Week In Review: Manufacturing",
+      "publisher": "Semiconductor Engineering",
+      "url": "https://semiengineering.com/the-week-in-review-manufacturing-195",
+      "type": "trade_press",
+      "published": "2018-02-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Analog Devices, Inc. quarterly report on Form 10-Q for the quarter ended July 31, 2021",
+      "publisher": "Analog Devices",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628121000197/adi-20210731.htm",
+      "type": "company_filing",
+      "published": "2021-08-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Analog Devices, Inc. quarterly report on Form 10-Q for the quarter ended January 29, 2022",
+      "publisher": "Analog Devices",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628122000020/adi-20220129.htm",
+      "type": "company_filing",
+      "published": "2022-02-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Analog Devices, Inc. annual report on Form 10-K for the fiscal year ended October 31, 2020",
+      "publisher": "Analog Devices",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628120000156/adi-20201031.htm",
+      "type": "company_filing",
+      "published": "2020-11-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Analog Devices, Inc. quarterly report on Form 10-Q for the quarter ended July 30, 2022",
+      "publisher": "Analog Devices",
+      "url": "https://www.sec.gov/Archives/edgar/data/6281/000000628122000224/adi-20220730.htm",
+      "type": "company_filing",
+      "published": "2022-08-17",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The trade report dates ADI's 8-K disclosure of the plan to 30 January 2018. The sale, completed in ADI's fiscal quarter ending July 2022, was of the building and some equipment; no source read here says the buyer runs it as a wafer fab, so the record stays closed rather than transferred.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added ADI's July 2022 quarterly report, which records the sale of the Hillview facility, and moved the status date to it; gave the planned closure the February 2021 month the trade report states and corrected the capacity wording."
+  }
+}

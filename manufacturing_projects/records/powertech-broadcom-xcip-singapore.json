@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "id": "powertech-broadcom-xcip-singapore",
+  "name": "XCIP Technologies panel-level packaging plant, Singapore",
+  "aliases": [
+    "Powertech–Broadcom Singapore joint venture"
+  ],
+  "company": "Broadcom",
+  "operator": "XCIP Technologies Pte. Ltd.",
+  "parties": [
+    {
+      "name": "XCIP Technologies Pte. Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Newly formed joint venture company."
+    },
+    {
+      "name": "Powertech Technology Inc.",
+      "role": "joint_venture_partner",
+      "share_pct": 30,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Responsible for running the plant and its volume production; the 30% stake is from one report, while earlier reporting said only that Powertech would hold no more than half."
+    },
+    {
+      "name": "Broadcom Inc.",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "TechNews reported that Broadcom was expected to lead the plant with more than half of the venture; its own investment has not been disclosed."
+    },
+    {
+      "name": "Ministry of Economic Affairs (Taiwan)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s6"
+      ],
+      "note": "Its investment review department had to clear Powertech's outbound investment; the ministry approved it in October 2026."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "Fan-out panel-level packaging (FOPLP)",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "label": "Additive finer-geometry redistribution layer (RDL)",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Powertech named this as the venture's technology focus."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A planned panel-level advanced packaging plant in Singapore to be built by a joint venture of Broadcom and the Taiwanese packaging firm Powertech. Powertech's board approved a US$400 million investment in the venture on 16 July 2026; the plant is to use fan-out panel-level packaging with additive fine-line redistribution layers, aimed at AI chips and co-packaged optics. Broadcom is expected to hold the majority and Powertech to run production. Reporting at the time said construction could start as early as the end of 2026, with volume production targeted for 2028. The venture company was later named as XCIP Technologies, and Taiwan's economy ministry approved Powertech's investment in October 2026.",
+  "location": {
+    "country": "SG",
+    "admin1": null,
+    "locality": "Singapore",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "Powertech said the site principle had been agreed but no site was published."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-28",
+  "status_source_ids": [
+    "s2",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 400000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Powertech's own contribution, approved by its board and by Taiwan's economy ministry and to be paid in stages from its own funds; Broadcom's contribution is not disclosed, so the plant's total cost is higher."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-16",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Powertech's board approved the joint venture investment."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Construction could begin as early as the end of 2026."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Powertech plans joint venture with Broadcom in Singapore",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/sci-tech/202607180003",
+      "type": "news",
+      "published": "2026-07-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "力成攜手博通於新加坡設合資公司，投資 4 億美元力拚 CPO 計畫 2028 年量產",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://technews.tw/?p=1589114",
+      "type": "trade_press",
+      "published": "2026-07-17",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Powertech to invest in venture with Broadcom",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/07/18/2003860928",
+      "type": "news",
+      "published": "2026-07-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Taiwan's Powertech invests $400M in Singapore AI chip packaging venture, AMD as first client for 2027 shipment",
+      "publisher": "TechNode Global",
+      "url": "https://technode.global/2026/08/10/taiwans-powertech-invests-400m-in-singapore-ai-chip-packaging-venture-amd-first-client-for-2027-shipment/",
+      "type": "news",
+      "published": "2026-08-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Powertech Bets NT$70B on World's First Panel-Level AI Chip Packaging in 2027, Potentially Ahead of TSMC",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/08/31/news-powertech-plans-nt70b-push-for-worlds-first-panel-level-ai-chip-packaging-in-2027-potentially-ahead-of-tsmc/",
+      "type": "trade_press",
+      "published": "2026-08-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "BRIEF-Taiwan Economy Ministry Approves Powertech To Invest $400 Million To Set Up Singapore JV XCIP Technologies With Broadcom",
+      "publisher": "Reuters (via The Daily Guardian)",
+      "url": "https://thedailyguardian.com/world/brief-taiwan-economy-ministry-approves-powertech-to-invest-400-million-to-set-up-singapore-jv-xcip-technologies-with-broadcom-769755/",
+      "type": "news",
+      "published": "2026-10-28",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The company is given as Broadcom because TechNews (s2) reported that Broadcom was expected to hold more than half of the venture, which fits the single report of a 30% Powertech stake. Reports disagree on the venture's first customer: one says AMD would receive panel-packaged chips from the Singapore plant in the second half of 2027, while TechNews's account of the board announcement said Powertech's Taiwan panel-level capacity serves AMD and the Singapore plant would support Broadcom. The report that named AMD also put the venture's total projected investment at US$5.66 billion; no other source gives a total, so it is not recorded as a figure. Powertech's board announcement on the Taiwan Stock Exchange could not be opened, so the record relies on news reports of it.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the October 2026 approval of Powertech's investment by Taiwan's economy ministry and moved the status date, narrowed the groundbreaking target to late 2026, noted the single report of a US$5.66 billion total and fixed the TechNews publisher label. Audit fixes (2026-11-07): Set the company to Broadcom, which TechNews reported was expected to hold more than half of the venture, as the dataset's joint-venture convention requires."
+  }
+}

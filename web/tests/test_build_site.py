@@ -539,10 +539,14 @@ class ManufacturingPageTests(unittest.TestCase):
                              {"event": "volume_production", "date": "2025", "planned": True,
                               "phase_label": None, "source_ids": ["s1"], "note": None}]
         new = fixture_record(related=[{"id": "example-fab-old", "relation": "successor_of"}])
+        late = fixture_record(id="example-fab-late", name="Late Fab")
+        late["milestones"] = [m for m in late["milestones"] if not m["planned"]] + [
+            {"event": "volume_production", "date": "2025", "planned": True, "phase_label": None,
+             "source_ids": ["s1"], "note": None}]
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "records").mkdir()
-            for record in (old, new):
+            for record in (old, new, late):
                 (root / f"records/{record['id']}.json").write_text(json.dumps(record))
             output = root / "site"
             build_site.build(output, manufacturing=root / "records")
@@ -551,7 +555,8 @@ class ManufacturingPageTests(unittest.TestCase):
             page = (output / "manufacturing/example-fab-old/index.html").read_text()
             self.assertRegex(page, r'Predecessor of <a href="[^"]+example-fab-one/">Example &lt;Fab&gt; One</a>')
             listing = (output / "manufacturing/index.html").read_text()
-            self.assertIn("Target 2025 (date passed)", listing)
+            self.assertEqual(listing.count("Target 2025 (date passed)"), 1)
+            self.assertIn("Was targeted for 2025<", listing)
             self.assertIn("Target H2 2027<", listing)
             self.assertIn('data-stage="transferred">Transferred', listing)
 

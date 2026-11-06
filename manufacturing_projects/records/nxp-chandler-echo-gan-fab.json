@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "id": "nxp-chandler-echo-gan-fab",
+  "name": "NXP Chandler ECHO GaN fab",
+  "aliases": [
+    "NXP Chandler RF fab",
+    "ECHO fab"
+  ],
+  "company": "NXP",
+  "operator": "NXP Semiconductors",
+  "parties": [
+    {
+      "name": "NXP Semiconductors",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "gallium_nitride",
+    "rf"
+  ],
+  "process_nodes": [
+    {
+      "label": "0.25-0.40 µm GaN",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Feature-size range NXP's FY2025 annual report lists for the Chandler RF fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "NXP opened a 150 mm gallium nitride RF fab, later known as ECHO, on its Chandler, Arizona campus in September 2020 to make power amplifiers for 5G base stations. A trade report described it as a retrofit of existing space connected to the campus silicon fab, with about USD 100 million spent over the preceding three years. In December 2025 NXP said it would wind down its radio power product line and close the fab, with the last GaN wafers expected in the first quarter of 2027. In July 2026 Nokia disclosed an agreement to buy NXP's Chandler fab campus, leasing part of it from early 2027 to make indium phosphide optical chips and taking ownership at a closing expected in the first quarter of 2029.",
+  "location": {
+    "country": "US",
+    "admin1": "Arizona",
+    "locality": "Chandler",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s5",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-07",
+  "status_source_ids": [
+    "s3",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 100000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-11-09",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Spending on the fab over the three years before it opened."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "opening",
+      "date": "2020-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "NXP announced the opening at the end of September 2020; a November 2020 report expected full capacity by the end of 2020 or early 2021."
+    },
+    {
+      "event": "closed",
+      "date": "2027-Q1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "NXP announced the closure in December 2025; the last GaN wafers are expected in the first quarter of 2027, with a transition period for customers."
+    },
+    {
+      "event": "sold",
+      "date": "2029-Q1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Expected closing of Nokia's purchase of the Chandler fab campus, disclosed in Nokia's half-year report of July 2026; Nokia is to lease part of the site from early 2027, subject to regulatory approvals."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "NXP advances 5G with new GaN fab in Arizona",
+      "publisher": "Power Electronics News",
+      "url": "https://www.powerelectronicsnews.com/nxp-advances-5g-with-new-gan-fab-in-arizona",
+      "type": "trade_press",
+      "published": "2020-09-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "NXP Opens New 150-mm GaN Fab in Arizona to Support 5G Growth",
+      "publisher": "Power Electronics News",
+      "url": "https://www.powerelectronicsnews.com/nxp-opens-new-150-mm-gan-fab-in-arizona-to-support-5g-growth",
+      "type": "trade_press",
+      "published": "2020-11-09",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "NXP exits 5G radio power market, shutters Arizona GaN fab",
+      "publisher": "Bits&Chips",
+      "url": "https://bits-chips.com/article/nxp-exits-5g-radio-power-market-shutters-arizona-gan-fab/",
+      "type": "trade_press",
+      "published": "2025-12-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "NXP to exit radio power market and shutter Arizona manufacturing facility",
+      "publisher": "Phoenix Business Journal (via KTAR News)",
+      "url": "https://ktar.com/arizona-business/nxp-semiconductors-chandler-fab",
+      "type": "news",
+      "published": "2025-12-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "NXP Semiconductors N.V. annual report on Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "NXP Semiconductors",
+      "url": "https://www.sec.gov/Archives/edgar/data/1413447/000141344726000008/nxpi-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Nokia acquires NXP's fab in Chandler, Arizona, for conversion to InP optical comms",
+      "publisher": "Semiconductor Today",
+      "url": "https://www.semiconductor-today.com/news_items/2026/aug/nokia-nxp-070826.shtml",
+      "type": "trade_press",
+      "published": "2026-08-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Nokia Corporation report on Form 6-K dated July 23, 2026 (Report for Q2 and Half Year 2026)",
+      "publisher": "Nokia",
+      "url": "https://www.sec.gov/Archives/edgar/data/924613/000110465926086081/tm2621179d1_6k.htm",
+      "type": "company_filing",
+      "published": "2026-07-23",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "NXP's FY2025 annual report lists a wholly owned Chandler RF fab running GaN on 6-inch wafers alongside its 8-inch Chandler silicon fab. NXP said the closure covers only the RF power line and that the rest of the Chandler site keeps making other products. The Nokia agreement covers the Chandler fab campus as a whole; neither Nokia's report nor the trade report says which building Nokia will lease first. The 2020 reports do not use the ECHO name, which appears in the 2025 closure reports.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the unsupported claim that the fab was qualified with initial products at opening and the Nokia report from the opening milestone, corrected the fab's position (connected to, not beside, the silicon fab) and added the 0.25-0.40 µm GaN range from NXP's annual report. Audit fixes (2026-11-07): Dated Nokia's agreement to its July 2026 disclosure rather than August and added Nokia's half-year report filing as the source for it."
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "id": "cxmt-hefei-back-end-test-base-phase-2",
+  "name": "CXMT back-end test base phase 2, Hefei",
+  "aliases": [
+    "后道测试基地二期项目"
+  ],
+  "company": "CXMT",
+  "operator": "ChangXin Memory Products (Hefei)",
+  "parties": [
+    {
+      "name": "ChangXin Memory Products (Hefei)",
+      "role": "operator",
+      "share_pct": 100,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "长鑫存储产品（合肥）有限公司, wholly owned by CXMT, which already carries out part of the company's own DRAM testing according to the prospectus."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "project",
+  "segments": [
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned DRAM test factory for CXMT, the second phase of its back-end test base, to test memory chips and assemble modules in Feixi County, Hefei. CXMT's board approved the project on 28 September 2026 and its shareholders on 19 October 2026, with a total investment of CNY 10.8 billion and a 37-month construction period; CNY 5 billion is to come from surplus proceeds of its STAR Market listing, provided to its wholly owned subsidiary ChangXin Memory Products (Hefei) through capital injection and loans. The company said the plant would keep test capacity from holding back production, secure its supply chain and lower DRAM test costs.",
+  "location": {
+    "country": "CN",
+    "admin1": "Anhui",
+    "locality": "Hefei",
+    "site": null,
+    "address": "合肥市肥西县创新大道与皋城路交叉口西南侧",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s5"
+    ],
+    "note": "Feixi County, Hefei: the announcement places the project south-west of the junction of Chuangxin Avenue and Gaocheng Road and says the new projects are inside the company's existing plant areas; the implementing subsidiary is registered in the Feixi County Economic Development Zone."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-20",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s1",
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10800000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-09-28",
+      "source_ids": [
+        "s5",
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Total planned investment, including about CNY 8.2 billion for equipment and installation and CNY 1.7 billion for buildings; CNY 5 billion of it is to be funded from surplus listing proceeds."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-09-28",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Approved by the board on this date and announced the next day, together with a separate CNY 24.1 billion research and development project; shareholders approved both on 19 October 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "拟合计斥资349亿元！长鑫科技官宣投建两大新项目",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2494562",
+      "type": "news",
+      "published": "2026-09-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "A股市值“一哥”，349亿元大手笔",
+      "publisher": "China Securities Journal (via 10jqka)",
+      "url": "https://stock.10jqka.com.cn/20260928/c680335399.shtml",
+      "type": "news",
+      "published": "2026-09-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "长鑫科技集团股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202512/002170_20251230_B8QS.pdf",
+      "type": "company_filing",
+      "published": "2025-12-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "A股市值“一哥”，拟大手笔加码存储项目",
+      "publisher": "Shanghai Securities News (via 10jqka)",
+      "url": "https://stock.10jqka.com.cn/20260929/c680354078.shtml",
+      "type": "news",
+      "published": "2026-09-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "长鑫科技集团股份有限公司关于使用部分超募资金投资建设新项目的公告",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-29/1225586345.PDF",
+      "type": "company_filing",
+      "published": "2026-09-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "长鑫科技集团股份有限公司2026年第二次临时股东会决议公告",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-20/1225611371.PDF",
+      "type": "company_filing",
+      "published": "2026-10-20",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The record follows CXMT's exchange announcement and the shareholder meeting resolution, both read on cninfo, with news reports of the announcement; the prospectus gives the subsidiary's existing role in testing and its registration. Shareholder approval is not a construction event, and no report found by November 2026 says construction has begun. The first phase of the test base is not recorded because no source describing it was found. The research and development project announced the same day is out of scope.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a third report giving the 37-month construction period, the 28 September 2026 board approval and the pending shareholder vote, and updated the status date and summary to match. Audit fixes (2026-11-07): added CXMT's own announcement of 29 September 2026 and the 20 October 2026 shareholder meeting resolution from cninfo, recorded the shareholder approval and the announced site in Feixi County, and moved the status date to the resolution."
+  }
+}

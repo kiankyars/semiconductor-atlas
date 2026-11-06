@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "id": "adi-limerick-fanfare-facility",
+  "name": "ADI Limerick R&D and manufacturing facility",
+  "aliases": [
+    "Project FANFARE",
+    "Analog Devices Limerick EUR 630 million fab"
+  ],
+  "company": "Analog Devices",
+  "operator": "Analog Devices",
+  "parties": [
+    {
+      "name": "Analog Devices",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "name": "Government of Ireland (IDA Ireland)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Supported the project as Ireland's first IPCEI participation through IDA Ireland; the European Commission approved the State support in June 2023 without a published amount."
+    },
+    {
+      "name": "John Sisk & Son",
+      "role": "builder",
+      "share_pct": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Named in the June 2024 award reports as the contractor for the project, from design through tool installation and commissioning."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "60nm",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "The June 2024 construction-award reports say more than 200 tools for 60-nanometre chips were installed, and an April 2026 newspaper column repeats the figure; the company sources read here do not name a node."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "Analog Devices announced in May 2023 a EUR 630 million research, development and manufacturing facility of about 45,000 sq ft on its European headquarters campus in Raheen Business Park, Limerick, expected to roughly triple its European wafer output and add about 600 jobs. Ireland put the project, named FANFARE, forward under the EU microelectronics IPCEI, and the European Commission cleared the Irish State support in June 2023. In June 2024 the build-out won an Irish construction industry award; reports then described cleanrooms fitted out in unused and office space, upgraded plant and more than 200 newly installed tools. An April 2026 newspaper column said the project had reached unspecified milestones, but no source read here reports its completion or a production start.",
+  "location": {
+    "country": "IE",
+    "admin1": "County Limerick",
+    "locality": "Limerick",
+    "site": "Raheen Business Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-04-19",
+  "status_source_ids": [
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 630000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-05-15",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 600,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-06-09",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "New roles expected over about five years; the Department of Enterprise also cites 520 jobs during construction."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-05-15",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Reported in June 2024 as already carried out, along with the cleanroom fit-out; the reports give no dates and say the work spanned the previous couple of years."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Analog Devices invests €630 million in Limerick facility",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/analog-devices-invests-e630-million-in-limerick-facility/",
+      "type": "trade_press",
+      "published": "2023-05-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "600 jobs set for Limerick as tech firm to invest €630m",
+      "publisher": "RTÉ News",
+      "url": "https://www.rte.ie/news/business/2023/0515/1383597-analog-limerick",
+      "type": "news",
+      "published": "2023-05-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Minister Coveney welcomes the European Commission's approval of Government supported semiconductor investment",
+      "publisher": "Department of Enterprise, Trade and Employment (Ireland)",
+      "url": "https://enterprise.gov.ie/en/news-and-events/department-news/2023/june/202306091.html",
+      "type": "government",
+      "published": "2023-06-09",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "John Whelan: Analog Devices bolstering Europe's chips ambition",
+      "publisher": "Irish Examiner",
+      "url": "https://www.irishexaminer.com/business-columnists/arid-41830004.html",
+      "type": "news",
+      "published": "2026-04-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Analog Devices campus wins top prize at Construction Excellence Awards",
+      "publisher": "Limerick Post",
+      "url": "https://limerickpost.ie/2024/06/20/analog-devices-campus-wins-top-prize-at-construction-excellence-awards",
+      "type": "news",
+      "published": "2024-06-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Analog Devices Expansion Project Wins Prestigious Project of the Year at ICE Awards",
+      "publisher": "Building Ireland",
+      "url": "https://buildingirelandmagazine.com/analog-devices-expansion-project-wins-prestigious-project-of-the-year-award-at-ice-awards/",
+      "type": "trade_press",
+      "published": "2024-06-19",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "RTÉ put the building at 40,000 sq ft, while the trade report and the Irish Department of Enterprise give 45,000 sq ft. The amount of Irish State aid was not published. The June 2024 award reports tie the work to the EUR 630 million investment and describe about 1,400 m² of unused space and 1,000 m² of offices fitted out as cleanrooms, 650 m² of existing cleanroom upgraded, new water-treatment and cooling plant, and a goal of raising wafer output by 350 per cent; they still describe the capacity gain as expected. No source read here dates the start or end of the work or a production start, so the record is under construction; the company's own release page could not be opened.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 60nm process the April 2026 column names, corrected how that column is described (it reports progress without dates rather than planned terms only) and dropped the unsupported word permanent from the jobs note. Audit fixes (2026-11-07): Changed the status from announced to under construction on June 2024 reports of cleanroom fit-out and installation of more than 200 tools for the project, adding those reports, a tool installation milestone and the contractor, and corrected the RTÉ headline to its published form."
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "id": "gta-lingang-specialty-process-fab",
+  "name": "GTA Semiconductor Lingang Specialty Process Fab, Shanghai",
+  "aliases": [
+    "Shanghai GTA Semiconductor Lingang plant",
+    "Jita Semiconductor Lingang fab",
+    "积塔半导体特色工艺生产线"
+  ],
+  "company": "Huada Semiconductor",
+  "operator": "Shanghai GTA Semiconductor",
+  "parties": [
+    {
+      "name": "Shanghai GTA Semiconductor",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Specialty-process foundry founded in 2017 for analog circuits and power devices, mainly for automotive and industrial customers."
+    },
+    {
+      "name": "Huada Semiconductor",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Owned all of GTA in 2020 and is part of the state-owned China Electronics group; GTA has since raised outside capital from national, local and industry funds, and a 2026 Huada post still describes GTA as its subsidiary, without a current shareholding."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal",
+    "power",
+    "silicon_carbide"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1"
+      ]
+    },
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "GTA Semiconductor's specialty-process fab in Shanghai's Lingang area, a two-phase municipal major project for analog and power chips with a total budget of CNY 35.9 billion set in 2018. The first phase, costing CNY 8.9 billion, was completed in March 2020 and began production at the end of June 2020; by 2022 it could make about 60,000 200 mm and 3,000 300 mm wafers a month. In 2022 the company planned a second phase of more than CNY 26 billion which, according to media reports, would lift 300 mm capacity to about 50,000 wafers a month. GTA is part of the state-owned China Electronics group through Huada Semiconductor.",
+  "location": {
+    "country": "CN",
+    "admin1": "Shanghai",
+    "locality": "Shanghai",
+    "site": "Lingang Equipment Industrial Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "In Shanghai's Lingang Special Area; GTA's older plant in Shanghai's Caohejing area is not part of this record."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2023-09-05",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 35900000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2018-08",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Total for both phases as committed in August 2018."
+    },
+    {
+      "metric": "investment",
+      "value": 8900000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-05-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Cost of the completed first phase."
+    },
+    {
+      "metric": "investment",
+      "value": 26000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2022-05-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "To be funded as new fixed-asset investment."
+    },
+    {
+      "metric": "capacity",
+      "value": 60000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-05-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "200 mm wafers a month from the first phase."
+    },
+    {
+      "metric": "capacity",
+      "value": 3000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-05-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "300 mm wafers a month from the first phase."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-05-06",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Total 300 mm wafers a month once the second phase is complete, as reported by media cited in the source."
+    },
+    {
+      "metric": "capacity",
+      "value": 5000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-07-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "150 mm silicon carbide wafers a month in the capacity plan reported in 2020; no later source confirms this line at Lingang."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2018-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Investment commitment for the Lingang specialty-process line."
+    },
+    {
+      "event": "building_complete",
+      "date": "2020-03",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2020-06-30",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "announced",
+      "date": "2022-05",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Investment plan for the second phase; no construction schedule was disclosed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Jita Semiconductor Shanghai Lingang New Factory put into production",
+      "publisher": "Shanghai Metals Market (SMM)",
+      "url": "https://news.metal.com/newscontent/101186770/jita-semiconductor-shanghai-lingang-new-factory-put-into-production",
+      "type": "trade_press",
+      "published": "2020-07-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Chipmaker GTA to Invest Over USD3.9 Billion in Next Phase of Shanghai Wafer Plant",
+      "publisher": "Yicai Global",
+      "url": "https://yicaiglobal.com/news/china-gta-to-invest-over-usd39-billion-for-second-phase-of-wafer-plant-in-shanghai-lingang-ftz",
+      "type": "news",
+      "published": "2022-05-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "积塔半导体完成135亿元融资，已建和在建产能28万片/月",
+      "publisher": "The Paper (via ifeng.com)",
+      "url": "https://news.ifeng.com/c/8Sq6HFOQhSd",
+      "type": "news",
+      "published": "2023-09-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "积塔半导体荣获“上海市制造业单项冠军”称号",
+      "publisher": "Huada Semiconductor (via 10jqka)",
+      "url": "https://stock.10jqka.com.cn/20260819/c679082355.shtml",
+      "type": "company_announcement",
+      "published": "2026-08-19",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The status rests on 2022 and 2023 reporting: no source from 2024 to 2026 describing construction or output of the second phase could be found, and no GTA or government page could be opened. The September 2023 report (s3) says GTA's 300 mm automotive pilot line was connected on 2 June 2023 for 90-40nm automotive MCUs, analog ICs and image sensors, and gives company-wide built and under-construction capacity of 280,000 wafers a month in 200 mm equivalents including 50,000 300 mm wafers, but it does not say which of GTA's Shanghai sites hosts the pilot line, so neither is recorded as a Lingang figure. A 2020 report (s1) had targeted the 300 mm second phase for 2023. A Huada Semiconductor post of August 2026, republished by 10jqka (s4), still presents GTA as a Huada company and cites its SiC power device foundry work, without naming a site.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Set the locality to Shanghai with Lingang in the note, as the dataset does for province-level cities, dated the first phase's 200 mm and 300 mm capacity to its 2022 source rather than the 2020 start, and noted that Huada owned all of GTA in 2020. Audit fixes (2026-11-07): set the company to Huada Semiconductor, the chip group that the sources name as GTA's parent (in line with how the dataset names other state-backed groups' chip units), and relabelled the August 2026 item as a Huada post republished by 10jqka."
+  }
+}

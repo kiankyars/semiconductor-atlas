@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.0",
+  "id": "china-changfei-advanced-wuhan-sic",
+  "name": "Changfei Advanced Semiconductor Wuhan SiC Base",
+  "aliases": [
+    "Changfei Advanced Wuhan base",
+    "长飞先进武汉基地"
+  ],
+  "company": "Changfei Advanced Semiconductor",
+  "operator": "Changfei Advanced Semiconductor (Wuhan)",
+  "parties": [
+    {
+      "name": "Changfei Advanced Semiconductor (Wuhan)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Wuhan company of Changfei Advanced Semiconductor, named in YOFC's 2025 annual report; Changfei Advanced began with a base in Wuhu, Anhui."
+    },
+    {
+      "name": "YOFC (Yangtze Optical Fibre and Cable)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Holds more than 22 percent of Changfei Advanced and is its largest shareholder; YOFC accounts for it as an associate."
+    },
+    {
+      "name": "Wuhan East Lake High-tech Development Zone",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Signed the cooperation agreement for the power device research and production base in August 2023."
+    }
+  ],
+  "facility_type": "wafer_fab_and_packaging",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A silicon carbide power device base in Wuhan's Optics Valley built by Changfei Advanced Semiconductor, whose largest shareholder is the optical fibre maker YOFC. It combines epitaxy, 150 mm SiC wafer processing and power module packaging. The base was described in June 2023 coverage of a funding round, the agreement with the East Lake High-tech Zone was signed that August, and building began in September 2023. The first phase, budgeted at more than CNY 6 billion within a CNY 20 billion plan, had its main building topped out and its first automated handling equipment moved in by October 2024, and produced its first wafer in May 2025. At full output the first phase is planned to make 360,000 SiC wafers and 61 million power modules a year; in October 2026 it was still ramping up. Land is reserved for a second phase, which is to be built once the first reaches full output.",
+  "location": {
+    "country": "CN",
+    "admin1": "Hubei",
+    "locality": "Wuhan",
+    "site": "Wuhan East Lake High-tech Development Zone (Optics Valley)",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-10-10",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 20000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-02-06",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Total planned for the base; the 2023 and 2024 reports (s1, s2) describe it as more than CNY 20 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 6000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2023-06-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 360000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-02-06",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "150 mm SiC device wafers a year at full output of the first phase, alongside a matching 360,000 epitaxial wafers."
+    },
+    {
+      "metric": "capacity",
+      "value": 61000000,
+      "value_max": null,
+      "unit": "units_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2026-02-06",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "SiC power modules a year at full output of the first phase."
+    },
+    {
+      "metric": "capacity",
+      "value": 3500,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2025-05-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "150 mm wafer output a month that site management expected to reach by the end of 2025 during the ramp."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Described in coverage of Changfei Advanced's A-round financing; the cooperation agreement with the East Lake High-tech Zone followed in August 2023."
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-09",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2024-10",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The first automated material handling equipment was moved in after the main building was topped out."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Completion target stated in June 2023."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-05",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "The line was connected for volume production and the first 150 mm SiC wafer came off it."
+    },
+    {
+      "event": "announced",
+      "date": "2025-05",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported that 154 mu of the base is reserved for a second phase, to be built once the first phase reaches full output; no date or budget was given."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "长飞先进半导体完成超38亿元A轮融资，VC/PE阵容豪华",
+      "publisher": "PEdaily",
+      "url": "https://news.pedaily.cn/202306/516372.shtml",
+      "type": "news",
+      "published": "2023-06-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "【项目动态】道达与长飞先进AMHS项目设备成功Move In",
+      "publisher": "PEdaily",
+      "url": "https://news.pedaily.cn/20241023/95802.shtml",
+      "type": "news",
+      "published": "2024-10-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "总投资200亿元！长飞先进碳化硅晶圆量产通线 满产可供应144万台新能源汽车",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2044716",
+      "type": "news",
+      "published": "2025-05-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "长飞光纤光缆股份有限公司2025年年度报告",
+      "publisher": "Yangtze Optical Fibre and Cable",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-28/1225048080.PDF",
+      "type": "company_filing",
+      "published": "2026-03-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "湖北国资重仓押注 长飞先进获超10亿融资 加速碳化硅布局",
+      "publisher": "Cailian Press",
+      "url": "https://www.cls.cn/detail/2283393",
+      "type": "news",
+      "published": "2026-02-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "迈入上市筹备关键阶段，长飞先进召开IPO项目启动会",
+      "publisher": "The Economic Observer (via Stockstar)",
+      "url": "https://wap.stockstar.com/detail/IG2026101500029731",
+      "type": "news",
+      "published": "2026-10-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "长飞先进启动IPO筹备",
+      "publisher": "Cailian Press (via Eastmoney)",
+      "url": "https://finance.eastmoney.com/a/202610103891953553.html",
+      "type": "news",
+      "published": "2026-10-10",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The base covers 498 mu, of which 344 mu is used by the first phase and 154 mu is held for a second phase; the May 2025 report (s3) says that phase will be built after the first reaches full output but gives no date, and the record is partly operating because of that stated plan. The June 2023 financing report (s1) already described construction of the Wuhan base as launched, while the May 2025 report (s3) dates the agreement to August 2023 and the start of building to September 2023. YOFC's 2025 annual report confirms only the first wafer in May 2025; the planned figures come from news reports. In October 2026 Changfei Advanced was reported to have held an IPO kickoff meeting, and its website was quoted as giving 420,000 wafers a year of wafer and epitaxy capacity across its Wuhu and Wuhan bases together.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the status to partially operating (the CNY 20 billion plan includes a reserved second phase) and dated it to an October 2026 report that the first phase was still ramping, moved the announcement to the June 2023 financing report, labelled both PEdaily items as news, and removed an unsupported claim that the Wuhu plant makes SiC MOSFET wafers. Audit fixes (2026-11-07): recorded the second phase as announced from the May 2025 report, which says it will be built once the first phase reaches full output, and reworded the summary and notes to match."
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "id": "india-silectric-mysuru-compound-fab",
+  "name": "Silectric Compound Semiconductor Fab, Mysuru",
+  "aliases": [
+    "Zoho compound semiconductor fab",
+    "Silectric Semiconductor Manufacturing Mysuru project"
+  ],
+  "company": "Zoho",
+  "operator": "Silectric Semiconductor Manufacturing",
+  "parties": [
+    {
+      "name": "Silectric Semiconductor Manufacturing",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Company set up by Zoho to carry the fab project and its application for national semiconductor incentives."
+    },
+    {
+      "name": "Zoho",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Chennai-based software company behind the project; its board shelved the plan in May 2025."
+    },
+    {
+      "name": "Government of Karnataka",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the project in December 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "gallium_nitride",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A compound semiconductor wafer fab for silicon carbide and gallium nitride power devices that Zoho proposed through its company Silectric Semiconductor Manufacturing at Kochanahalli near Mysuru, Karnataka. Pitched in May 2024 under the national fab incentive scheme and approved by the Karnataka government in December 2024 at INR 3,425.60 crore with 460 jobs, it was put at about USD 700 million in trade press. In May 2025 Zoho's founder said the board had shelved the plan for the time being because the company lacked confidence in the technology and the business needs heavy capital and government backing. No construction was reported.",
+  "location": {
+    "country": "IN",
+    "admin1": "Karnataka",
+    "locality": "Mysuru",
+    "site": "Kochanahalli",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "paused",
+  "status_as_of": "2025-05-05",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 34256000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "INR 3,425.60 crore as approved by the state government."
+    },
+    {
+      "metric": "investment",
+      "value": 700000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-05-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "jobs",
+      "value": 460,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Proposal first put forward for national incentives."
+    },
+    {
+      "event": "paused",
+      "date": "2025-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Zoho's founder said the board had shelved the plan until a better technology approach is found."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Zoho pauses semicon plans, cites lack of confidence in tech",
+      "publisher": "PTI (via The Week)",
+      "url": "https://www.theweek.in/wire-updates/business/2025/05/02/dcm53-biz-zoho.html",
+      "type": "news",
+      "published": "2025-05-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "India's Zoho shelves plan to make compound semiconductors",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/indias-zoho-shelves-plan-to-make-compound-semiconductors",
+      "type": "trade_press",
+      "published": "2025-05-05",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Recorded as paused rather than cancelled because Zoho described the decision as shelving the plan for now and left open a return with a different technology approach; no revival has been reported since. Zoho was reported to have identified a technology partner when it pitched the plan in 2024, but the partner was never named, and no national incentive approval was reported. The planned ISMC analog fab (india-ismc-mysuru-analog-fab) was proposed for the same Kochanahalli area. No Zoho, Karnataka government or India Semiconductor Mission document could be opened.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Audit fixes (2026-11-07): Reworded the technology partner statement to match the trade report, which says Zoho was reported to have identified a partner rather than that Zoho said so; a new search found no revival of the plan in 2025 or 2026."
+  }
+}

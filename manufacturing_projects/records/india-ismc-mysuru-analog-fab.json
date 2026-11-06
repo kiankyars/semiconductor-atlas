@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "id": "india-ismc-mysuru-analog-fab",
+  "name": "ISMC 65nm Analog Fab, Mysuru",
+  "aliases": [
+    "ISMC Analog Fab",
+    "International Semiconductor Consortium Mysuru fab"
+  ],
+  "company": "Next Orbit Ventures and Tower Semiconductor",
+  "operator": "ISMC Analog Fab",
+  "parties": [
+    {
+      "name": "ISMC Analog Fab",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Project company of the ISMC consortium, which applied for support under India's semiconductor fab incentive scheme."
+    },
+    {
+      "name": "Next Orbit Ventures",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Abu Dhabi-based lead partner; reported in April 2023 to have agreed to sell its stake to the B C Jindal Group after the India Semiconductor Mission asked for a strategic investor."
+    },
+    {
+      "name": "Tower Semiconductor",
+      "role": "joint_venture_partner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Technology partner; ended its agreement with the consortium after Intel's planned purchase of Tower collapsed in August 2023, by one report with a letter in September 2023."
+    },
+    {
+      "name": "Government of Karnataka",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Signed a memorandum of understanding with ISMC in 2022 and, by a 2023 account, committed land, subsidies, water and power."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "65nm",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Analog-focused silicon process."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A 65nm analog wafer fab proposed for the Kochanahalli industrial area near Mysuru, Karnataka, by ISMC, a consortium of Abu Dhabi's Next Orbit Ventures and Israel's Tower Semiconductor. ISMC signed a memorandum with the Karnataka government in 2022 for an investment of about USD 3 billion, or INR 22,900 crore, and applied for national fab incentives. The project stalled while Tower awaited its takeover by Intel; Next Orbit was reported in 2023 to have agreed to sell its stake, and after the Intel deal failed in August 2023 Tower ended its agreement with the consortium, by one report in September 2023. ISMC called the termination unlawful and in March 2024 asked the India Semiconductor Mission to reject a new application Tower had made without it. No approval or construction was reported.",
+  "location": {
+    "country": "IN",
+    "admin1": "Karnataka",
+    "locality": "Mysuru",
+    "site": "Kochanahalli Industrial Area",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "A 2023 report places the site near Kochanahalli in the Kadakola industrial area at Nanjangud."
+  },
+  "status": "cancelled",
+  "status_as_of": "2024-03-13",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-05-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 229000000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-08-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "INR 22,900 crore."
+    },
+    {
+      "metric": "site_area",
+      "value": 150,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-05-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Land ISMC requested in 2022; a 2023 report said 234 acres had been reserved, of which the state industrial development board had acquired 189."
+    },
+    {
+      "metric": "jobs",
+      "value": 1500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-05-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Direct jobs, with about 10,000 more indirect jobs expected."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-05",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Memorandum of understanding signed with the Karnataka government."
+    },
+    {
+      "event": "cancelled",
+      "date": "2023-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Tower's termination of its agreement with ISMC. Only Circuit Digest dates it, to a letter Tower sent in September 2023; ISMC and Next Orbit said in early 2024 that the termination was unlawful and that they would challenge it."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Tower JV signs agreement to build Indian wafer fab",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/tower-jv-signs-agreement-to-build-indian-wafer-fab",
+      "type": "trade_press",
+      "published": "2022-05-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Semiconductor plant in Mysuru unlikely",
+      "publisher": "Star of Mysore",
+      "url": "https://starofmysore.com/semiconductor-plant-in-mysuru-unlikely/",
+      "type": "news",
+      "published": "2023-08-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Next Orbit Ventures, ISMC give Israel's Tower Semiconductor legal ultimatum",
+      "publisher": "Business Standard (via Venture Intelligence)",
+      "url": "https://news.ventureintelligence.com/others/next-orbit-ventures,-ismc-give-israel’s-tower-semiconductor-legal-ultimatum",
+      "type": "news",
+      "published": "2024-02-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Report: Next Orbit to sell stake in Indian wafer fab",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/report-next-orbit-to-sell-stake-in-indian-wafer-fab",
+      "type": "trade_press",
+      "published": "2023-04-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "ISM Again Shelves Tower Semiconductor’s Application: ISMC to Seek Legal Action Against Tower",
+      "publisher": "Circuit Digest",
+      "url": "https://circuitdigest.com/news/ism-again-shelves-tower-semiconductor%E2%80%99s-application-ismc-to-seek-legal-action-against-tower",
+      "type": "trade_press",
+      "published": "2024-03-13",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Recorded as cancelled because Tower, the consortium's technology partner, terminated its agreement and the lead investor had agreed to sell out; ISMC disputed the termination, and no source reports a formal withdrawal of the application or a revival. The September 2023 date of the termination and the 300 mm wafer size come from one trade report (s5), which describes the fab agreed in December 2020 as a 300 mm analog and mixed-signal fab. No Karnataka government or India Semiconductor Mission document could be opened; all sources are news and trade press. The Star of Mysore report (s2) also says ISMC Analog Fab had been acquired by Intel, which conflicts with the other reports and is not recorded.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed a taluk and district from the site note that the cited report does not state, and marked Next Orbit's stake sale as reported rather than confirmed; no newer reporting on the project was found. Audit fixes (2026-11-07): Dated the termination to September 2023 from a March 2024 Circuit Digest report (previously given as February 2024, the date of a later report that did not date it), added that report for the 300 mm wafer size and ISMC's March 2024 request to the India Semiconductor Mission, and moved the status date to it."
+  }
+}

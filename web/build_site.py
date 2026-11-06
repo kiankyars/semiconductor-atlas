@@ -705,11 +705,19 @@ def manufacturing_location(record: dict, *, with_country: bool = True) -> str:
     return ", ".join(dict.fromkeys(x for x in parts if x))
 
 
+ENDED_STATUSES = {"cancelled", "closed", "transferred"}
+
+
 def production_text(record: dict, as_of: str | None = None) -> str:
-    """Production start, or the current target; a target whose period ended before ``as_of`` is marked."""
+    """Production start, or the current target; a target whose period ended before ``as_of`` is marked.
+
+    A cancelled, closed or transferred project keeps its last target only as history.
+    """
     started, planned = manufacturing_projects.production_dates(record)
     if started:
         return "Production since " + period(started)
+    if planned and record.get("status") in ENDED_STATUSES:
+        return "Was targeted for " + period(planned)
     if planned:
         passed = as_of and manufacturing_projects.parse_date(planned)[1].isoformat() < as_of
         return "Target " + period(planned) + (" (date passed)" if passed else "")

@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-taichung-aatt-fab-4",
+  "name": "Micron Advanced Assembly and Test Taiwan (Taichung Fab 4)",
+  "aliases": [
+    "AATT",
+    "Taichung Fab 4"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "hbm",
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A five-storey back-end plant in Taichung, Taiwan, that combines advanced probe, 3D packaging and test. Micron opened it on 6 November 2023 with the President of Taiwan attending, to handle packaging, test and volume output of its HBM3E memory, which it expected to start mass-producing in early 2024. At opening it was assembling and testing 1-beta DRAM made at Micron's Hiroshima fab.",
+  "location": {
+    "country": "TW",
+    "admin1": "Taichung City",
+    "locality": "Taichung",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2023-11-07",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "opening",
+      "date": "2023-11-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Expected start of HBM3E mass production in early calendar 2024, with this plant handling packaging, test and volume output."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "台灣美光全新先進封裝測試廠（台中四廠） 支援 HBM3E 產能、DRAM 技術部署",
+      "publisher": "Micron Technology",
+      "url": "https://tw.micron.com/about/blog/company/events/taiwan-new-facility-supports-hbm3e-ramp-dram-tech-deployment",
+      "type": "company_announcement",
+      "published": "2023-11-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Micron opens Taichung facility",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2023/11/07/2003808781",
+      "type": "news",
+      "published": "2023-11-07",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "A November 2026 search found no later source naming this plant, including Micron's fiscal 2026 annual report and the October 2026 reports on the second Taichung plant, so the status rests on the 2023 opening reports. Micron said its local investment would create hundreds of jobs at the company, but gave no figure specific to this plant. The second Taichung plant (AATT2) is a separate record, micron-taichung-aatt2.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:B9206975",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for Taichung Fab 4 of Micron's Taiwan memory subsidiary, in the Houli district."
+    },
+    {
+      "record_id": "taiwan-ida-factory:registered-factories:93D00095",
+      "relation": "same_facility",
+      "note": "Registered factory entry for Taichung Fab 4 of Micron's Taiwan memory subsidiary."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Audit fixes (2026-11-07): changed \"advanced wafer probe\" to \"advanced probe\" as the cited sources word it, and recorded that no newer source naming the plant was found."
+  }
+}

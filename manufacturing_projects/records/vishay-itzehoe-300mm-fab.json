@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "id": "vishay-itzehoe-300mm-fab",
+  "name": "Vishay Itzehoe 300 mm wafer fab",
+  "aliases": [
+    "Vishay Siliconix Itzehoe 12-inch fab"
+  ],
+  "company": "Vishay",
+  "operator": "Vishay Siliconix Itzehoe GmbH",
+  "parties": [
+    {
+      "name": "Vishay Siliconix Itzehoe GmbH",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "German subsidiary of Vishay Intertechnology."
+    },
+    {
+      "name": "Federal Republic of Germany",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Provides about EUR 172 million of the grant, which falls under the European Chips Act State aid framework."
+    },
+    {
+      "name": "State of Schleswig-Holstein",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Contributes about EUR 43 million of the grant; the funding notice was handed over on 30 October 2026."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Vishay is building a 300 mm fab for automotive and industrial silicon power MOSFETs beside its existing 200 mm fab in Itzehoe, Schleswig-Holstein. The company announced an investment of about EUR 300 million in July 2022 and broke ground in March 2023, when production was planned from 2025. Vishay's annual report for 2025 and its quarterly report of November 2026 still describe the 12-inch fab as being built. The European Commission cleared EUR 214 million of German aid in July 2026, and a federal and state grant of about EUR 215 million was handed over on 30 October 2026, with the site's capacity expected to more than double.",
+  "location": {
+    "country": "DE",
+    "admin1": "Schleswig-Holstein",
+    "locality": "Itzehoe",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-11-04",
+  "status_source_ids": [
+    "s3",
+    "s5",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 300000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-07-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial expansion plan for the Itzehoe site; ComputerBase cited USD 350 million for the plant at the groundbreaking."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 215000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-10-30",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Funding notice handed over on 30 October 2026: about EUR 172 million federal and EUR 43 million from Schleswig-Holstein. The European Commission had cleared EUR 214 million for the project in July 2026."
+    },
+    {
+      "metric": "jobs",
+      "value": 150,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "at_least",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "First phase",
+      "as_of": "2023-03-21",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "New roles in the first expansion phase on top of roughly 470 to 500 existing staff at the site; eeNews Europe reported 150 and ComputerBase at least 150."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Vishay said it had bought a 3-hectare plot and planned to start construction in 2023."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2023-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Production was planned from 2025 at the groundbreaking; later sources still describe the fab as under construction."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Vishay invests €300m in fab expansion",
+      "publisher": "eeNews Europe",
+      "url": "https://cdn.eenewseurope.com/en/vishay-invests-e300m-in-fab-expansion/",
+      "type": "trade_press",
+      "published": "2022-07-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Chip-Hersteller Vishay: Itzehoe bekommt eine 300-mm-Wafer-Fabrik",
+      "publisher": "ComputerBase",
+      "url": "https://www.computerbase.de/2023-03/chip-hersteller-vishay-itzehoe-bekommt-eine-300-mm-wafer-fabrik/",
+      "type": "news",
+      "published": "2023-03-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Vishay Intertechnology, Inc. annual report on Form 10-K for the fiscal year 2025",
+      "publisher": "Vishay Intertechnology",
+      "url": "https://www.sec.gov/Archives/edgar/data/103730/000010373026000019/form10k.htm",
+      "type": "company_filing",
+      "published": "2026-02-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Vishay Siliconix baut in Itzehoe Chips für E-Autos und Co.",
+      "publisher": "electrive.net",
+      "url": "https://www.electrive.net/2026/11/02/vishay-siliconix-baut-in-itzehoe-chips-fuer-e-autos-und-co/",
+      "type": "trade_press",
+      "published": "2026-11-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "215 Millionen Euro für Chipfertigung in Itzehoe: Was größere Wafer bringen",
+      "publisher": "techzeitgeist",
+      "url": "https://www.techzeitgeist.de/vishay-itzehoe-chipfertigung-300-millimeter-wafer/",
+      "type": "news",
+      "published": "2026-11-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "EU approves €659m for German semiconductor projects",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/eu-approves-e659m-for-german-semiconductor-projects/",
+      "type": "trade_press",
+      "published": "2026-07-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Vishay Intertechnology, Inc. quarterly report on Form 10-Q for the fiscal quarter ended October 3, 2026",
+      "publisher": "Vishay Intertechnology",
+      "url": "https://www.sec.gov/Archives/edgar/data/103730/000010373026000080/form10q.htm",
+      "type": "company_filing",
+      "published": "2026-11-04",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The federal economics ministry's own release on the funding notice sits behind a browser check and was not read. A November 2026 report says Vishay planned to spend roughly half of its 2026 group capital budget on the Itzehoe 300 mm fab and, citing a broadcaster, that output is meant to double in the following year; neither is recorded as a figure here. No source read gives a new production start date.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed unsupported details (that the 2022 plot adjoins the site, that the state minister handed over the notice, and a 2027 date for doubling output) and set the jobs figure to at least 150 as the groundbreaking report states. Audit fixes (2026-11-07): Added Vishay's quarterly report of November 2026, which still describes the 12-inch fab as being built, and moved the status date to it; dropped the unsupported attribution of the state's EUR 43 million share to the state ministry."
+  }
+}

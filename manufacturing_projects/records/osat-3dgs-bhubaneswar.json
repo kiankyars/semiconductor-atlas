@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "id": "osat-3dgs-bhubaneswar",
+  "name": "3D Glass Solutions advanced packaging and glass substrate unit, Info Valley",
+  "aliases": [],
+  "company": "3D Glass Solutions",
+  "operator": "Heterogeneous Integration Packaging Solutions Pvt. Ltd.",
+  "parties": [
+    {
+      "name": "Heterogeneous Integration Packaging Solutions Pvt. Ltd. (HIPSPL)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Indian subsidiary implementing the project."
+    },
+    {
+      "name": "3D Glass Solutions Inc. (3DGS)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "US parent company; the Indian subsidiary is reported as wholly owned."
+    },
+    {
+      "name": "Government of India (India Semiconductor Mission)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "The Union Cabinet approved the unit under the India Semiconductor Mission in August 2025."
+    },
+    {
+      "name": "Government of Odisha",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s5"
+      ],
+      "note": "The state's chief minister laid the foundation stone with the Union minister; in May 2026 the state also signed a memorandum with Intel and 3DGS on substrate manufacturing, a separate effort."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [
+    {
+      "label": "3D heterogeneous integration (3DHI)",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "label": "Glass substrate packaging",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Described as a vertically integrated advanced packaging unit that also makes embedded glass substrates."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "An advanced chip packaging plant planned by US firm 3D Glass Solutions at Info Valley near Bhubaneswar, Odisha, combining glass panel substrate production, package assembly and 3D heterogeneous integration modules for AI, high-performance computing, defence and other electronics. The Union Cabinet approved it under the India Semiconductor Mission in August 2025, and the government lists the investment as INR 1,943 crore. The state's chief minister and the Union electronics and IT minister laid its foundation stone on 19 April 2026. Trade press reports that the Indian subsidiary running the project aims for commercial production by August 2028 and full volume by August 2030.",
+  "location": {
+    "country": "IN",
+    "admin1": "Odisha",
+    "locality": "Bhubaneswar",
+    "site": "Info Valley",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "The state government places the site at Info Valley in Khordha district; the same location hosts SiCSem's approved compound semiconductor fab."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-05-29",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 19430000000,
+      "value_max": null,
+      "unit": "INR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-07",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "INR 1,943 crore; the state government rounds it to about INR 2,000 crore."
+    },
+    {
+      "metric": "capacity",
+      "value": 5800,
+      "value_max": null,
+      "unit": "units_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-07",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Glass panel substrates per month, about 69,600 a year."
+    },
+    {
+      "metric": "capacity",
+      "value": 4200000,
+      "value_max": null,
+      "unit": "units_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-07",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Assembled package units per month, given elsewhere as 50 million a year."
+    },
+    {
+      "metric": "capacity",
+      "value": 1100,
+      "value_max": null,
+      "unit": "units_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-07",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "3D heterogeneous integration modules per month, about 13,200 a year."
+    },
+    {
+      "metric": "jobs",
+      "value": 2500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Employment the state government expects in Odisha."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-08-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Union Cabinet approval, one of four semiconductor units approved that day."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-04-19",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Foundation stone laid."
+    },
+    {
+      "event": "first_production",
+      "date": "2028-08",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target for commercial production."
+    },
+    {
+      "event": "volume_production",
+      "date": "2030-08",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Target for full-scale volume production."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "India Semiconductor Mission 2.0",
+      "publisher": "Press Information Bureau, Government of India",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc202627782101.pdf",
+      "type": "government",
+      "published": "2026-02-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Hon’ble Chief Minister Shri Mohan Charan Majhi along with Hon’ble Union Minister Shri Ashwini Vaishnaw, laid the foundation stone for 3D Glass Solutions’ advanced Glass Substrate Packaging Unit at Info Valley, Khordha.",
+      "publisher": "Chief Minister's Office, Government of Odisha",
+      "url": "https://cm.odisha.gov.in/en/node/984",
+      "type": "government",
+      "published": "2026-04-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "3DGS breaks ground on chip packaging unit in India",
+      "publisher": "Evertiq",
+      "url": "https://evertiq.com/news/2026-04-20-3dgs-breaks-ground-on-chip-packaging-unit-in-india",
+      "type": "trade_press",
+      "published": "2026-04-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "India's semiconductor leap: Cabinet clears 4 new plants in Odisha, Punjab, Andhra",
+      "publisher": "Business Today",
+      "url": "https://www.businesstoday.in/industry/story/indias-semiconductor-leap-cabinet-clears-rs-4600-cr-for-4-new-plants-in-odisha-punjab-andhra-489075-2025-08-12",
+      "type": "news",
+      "published": "2025-08-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Odisha govt signs semiconductor substrate manufacturing pact with Intel, 3DGS: Ashwini Vaishnaw",
+      "publisher": "IANS",
+      "url": "https://ianslive.in/odisha-govt-signs-semiconductor-substrate-manufacturing-pact-with-intel-3dgs-ashwini-vaishnaw--20260529124218",
+      "type": "news",
+      "published": "2026-05-29",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The investment is below USD 500 million; the unit is included because the government's approval and announcements describe it as advanced packaging with 3D heterogeneous integration on glass substrates. A May 2026 memorandum between the Odisha government, Intel and 3DGS on bringing substrate manufacturing to India is a separate effort and is not part of this record, since substrate plants fall outside the dataset. Reports after the groundbreaking give no construction progress.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Cited the state government page for the rounded investment mentioned in the note, reworded the glass-substrate description, and added a May 2026 report that restates the project after the groundbreaking and records a separate substrate memorandum with Intel; the status date moved to that report."
+  }
+}

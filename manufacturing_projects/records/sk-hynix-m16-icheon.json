@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "id": "sk-hynix-m16-icheon",
+  "name": "SK hynix M16, Icheon",
+  "aliases": [
+    "M16"
+  ],
+  "company": "SK hynix",
+  "operator": "SK hynix",
+  "parties": [
+    {
+      "name": "SK hynix",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [
+    {
+      "label": "1a nm DRAM",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "At completion SK hynix said it would start making this generation at M16 with EUV lithography in the second half of 2021; a July 2021 trade report said the first 1a nm mobile DRAM was being made there."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A DRAM fab at SK hynix's headquarters campus in Icheon, South Korea, which SK hynix called the largest of its production sites. Construction began in November 2018, the cleanroom opened in December 2020 and a completion ceremony was held on 1 February 2021 after about KRW 3.5 trillion of investment. It was the first SK hynix fab to bring in EUV lithography; SK hynix began mass-producing 1a nm DRAM in July 2021, and Korean trade press reported that the chips were made at M16. SK hynix later described it as its newest Icheon fab, built mainly for DRAM, and in September 2025 it assembled its first High NA EUV system for mass production there.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Icheon",
+    "site": "SK hynix Icheon Campus",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "SK hynix headquarters site; one of three SK hynix fabs there, alongside M10 and M14."
+  },
+  "status": "operating",
+  "status_as_of": "2025-09-03",
+  "status_source_ids": [
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 3500000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-02-01",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total SK hynix reported investing by completion; the release does not say whether production equipment is included."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2018-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2018-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2018-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2021-02-01",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Completion ceremony, 25 months after construction began; the cleanroom had opened in December 2020. The release gave no production start date beyond the 1a nm DRAM plan for the second half of 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2021-H2",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target at completion for 1a nm DRAM made with EUV equipment."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "SK hynix said it began mass-producing 1a nm 8Gb LPDDR4 mobile DRAM in early July 2021; Digital Daily reported that the chips are made at M16."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "SK hynix Announces the Completion of M16 Plant Construction",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/sk-hynix-announces-the-completion-of-m16-plant-construction/",
+      "type": "company_announcement",
+      "published": "2021-02-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "[Semiconductor 101] “Where” in the World Are Semiconductors Made and Applied? SK hynix Reveals All",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/semiconductor-101-sk-hynix-on-where-chips-are-made-and-used/",
+      "type": "company_announcement",
+      "published": "2024-09-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "SK hynix Introduces Industry’s First Commercial High NA EUV",
+      "publisher": "SK hynix",
+      "url": "https://news.skhynix.com/en/sk-hynix-introduces-industrys-first-commercial-high-na-euv/",
+      "type": "company_announcement",
+      "published": "2025-09-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "\"마이크론보다 2년 빨라\"…SK하이닉스, EUV D램 양산(종합)",
+      "publisher": "Digital Daily (디지털데일리)",
+      "url": "https://www.ddaily.co.kr/page/view/2021071210443981193",
+      "type": "trade_press",
+      "published": "2021-07-12",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "SK hynix gives the building area as about 57,000 square metres; this is not a cleanroom or site area figure, so it is not recorded as a metric. SK hynix's July 2021 announcement of 1a nm DRAM mass production does not name the fab, so it is not cited directly; the production date comes from a Korean trade report of that announcement that places the output at M16.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the fourth-generation label, which the cited SK hynix release does not use, gave the November 2018 construction start, clarified that the 1 February 2021 opening was a completion ceremony with no stated production date, and reworded the notes. Audit fixes (2026-11-07): added a July 2021 Digital Daily report placing SK hynix's first 1a nm DRAM mass production at M16 as the reported production event, and removed the opening milestone, which repeated the February 2021 completion ceremony."
+  }
+}

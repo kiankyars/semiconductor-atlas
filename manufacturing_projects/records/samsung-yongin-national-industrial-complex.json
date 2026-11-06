@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-yongin-national-industrial-complex",
+  "name": "Samsung fabs at the Yongin Semiconductor National Industrial Complex",
+  "aliases": [
+    "Yongin Advanced System Semiconductor National Industrial Complex",
+    "Yongin semiconductor national industrial complex"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Tenant company for the fabs."
+    },
+    {
+      "name": "Ministry of Land, Infrastructure and Transport",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Approved the complex plan and designated the national industrial complex in December 2024."
+    },
+    {
+      "name": "Korea Land and Housing Corporation (LH)",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "State-owned developer of the complex; sold the land to Samsung and runs compensation and site preparation."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A planned cluster of six Samsung Electronics fabs on a national industrial complex in I-dong-eup and Namsa-eup, Cheoin-gu, Yongin, Gyeonggi Province, South Korea. Samsung's plan grew from five fabs and KRW 300 trillion to six fabs and up to KRW 360 trillion by January 2024. The land ministry approved the complex plan and designated the site on 26 December 2024, targeting the first fab in 2030, and Samsung signed to buy about 7.77 million square metres of land from LH in December 2025. In October 2026 LH was preparing to start site development on the first section, reported for October or November 2026, and aimed to have the first fab site ready for Samsung to start building by 2028. The complex is designated for system semiconductors; a 2026 report says it will host foundry and memory fabs.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Yongin",
+    "site": "Yongin Semiconductor National Industrial Complex",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "I-dong-eup and Namsa-eup, Cheoin-gu."
+  },
+  "status": "announced",
+  "status_as_of": "2026-10-01",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 360000000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-12-26",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Private investment expected by full build-out; the ministry gives it for the complex and the city and press attribute it to Samsung's six fabs."
+    },
+    {
+      "metric": "site_area",
+      "value": 7773656,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-12-19",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Land covered by the purchase agreement signed with LH."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_selected",
+      "date": "2024-12-26",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Complex plan approved and site designated as a national industrial complex, three months ahead of schedule; implementation agreements signed at Samsung's Giheung campus the same day."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Start of site development for the complex by LH, targeted for 2026 since 2024; in October 2026 reports put it in October or November."
+    },
+    {
+      "event": "construction_start",
+      "date": "2028",
+      "planned": true,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "LH aims to finish site preparation so that Samsung can begin building its first fab by 2028."
+    },
+    {
+      "event": "first_production",
+      "date": "2030",
+      "planned": true,
+      "phase_label": "First fab",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "First fab to begin operating."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "‘용인 반도체 국가산단’ 승인…착공 시기 2026년으로 앞당겨",
+      "publisher": "Ministry of Land, Infrastructure and Transport (Korea Policy Briefing)",
+      "url": "https://m.korea.kr/news/policyNewsView.do?newsId=148937933&call_from=rsslink",
+      "type": "government",
+      "published": "2024-12-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Yongin Advanced System Semiconductor Industrial Complex Investment Expanded from 300 Trillion to 360 Trillion",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2024011620383816911",
+      "type": "news",
+      "published": "2024-01-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Yongin Semiconductor National Industrial Complex Gains Momentum as LH and Samsung Sign Land Purchase Agreement",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2025122916095963254",
+      "type": "news",
+      "published": "2025-12-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Yongin national chip cluster construction begins this month amid compensation, fast-track risks",
+      "publisher": "The Korea Times",
+      "url": "https://www.koreatimes.co.kr/path/A2026093019430000609",
+      "type": "news",
+      "published": "2026-10-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Yongin Semiconductor Complex Section 1 to Begin Site Construction Next Month... Accelerated Push for Fab 1 Groundbreaking by 2028",
+      "publisher": "The Asia Business Daily",
+      "url": "https://view.asiae.co.kr/en/article/2026100110180441362",
+      "type": "news",
+      "published": "2026-10-01",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Status stays announced because the work cited by October 2026 is LH's site development of the complex, which had not been reported as started, not construction of a Samsung fab. Samsung has not named the individual fabs, so the six fabs are kept in one project record. Sources give the complex area variously as 7.1, 7.28 and 7.78 million square metres; the land purchase figure is recorded. SK hynix's Yongin fabs are in a separate general industrial complex nearby and are recorded separately. No report that LH's site work had actually begun was found by 7 November 2026. Segments list logic because the complex is designated for system semiconductors and the land sale was described as for six system semiconductor fabs; the 2026 report that also mentions memory fabs does not say which kind, so no memory segment is recorded.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the summary, which stated LH had begun site development in October 2026, to the planned October or November start that the 1 October 2026 reports describe, and added a second report of that plan. Audit fixes (2026-11-07): recorded that no start of site work was found by 7 November 2026 and explained why the segments list only logic although one report mentions memory fabs."
+  }
+}

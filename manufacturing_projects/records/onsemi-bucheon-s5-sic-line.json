@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "id": "onsemi-bucheon-s5-sic-line",
+  "name": "onsemi Bucheon S5 silicon carbide line",
+  "aliases": [
+    "onsemi Bucheon SiC fab expansion"
+  ],
+  "company": "onsemi",
+  "operator": "onsemi",
+  "parties": [
+    {
+      "name": "onsemi",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "name": "Gyeonggi Province and Bucheon City",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The provincial governor signed the July 2022 investment MOU with the Bucheon mayor and onsemi executives; the provincial vice governor and the mayor attended the October 2023 completion event."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "The S5 line is a silicon carbide epitaxy and wafer fab expansion at onsemi's existing Bucheon site in Gyeonggi Province, made up of a new fab building and a utility building linked to the older S1 to S4 lines. onsemi signed a KRW 1.4 trillion investment MOU and broke ground in July 2022, finished construction in September 2023 and held a completion ceremony in October 2023. The line began on 150 mm wafers with a plan to switch to 200 mm after qualification in 2025, and is sized for more than one million 200 mm SiC wafers a year at full output. A trade report in April 2025 said onsemi had stopped a planned SiC power management IC line in Bucheon and recalled most of the site's engineers to the U.S.; onsemi's FY2025 annual report still lists Bucheon among its front-end fabs.",
+  "location": {
+    "country": "KR",
+    "admin1": "Gyeonggi Province",
+    "locality": "Bucheon",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-02-09",
+  "status_source_ids": [
+    "s4",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1400000000000,
+      "value_max": null,
+      "unit": "KRW",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2022-07-07",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Planned through 2025 for a SiC research centre and manufacturing expansion in Bucheon."
+    },
+    {
+      "metric": "capacity",
+      "value": 1000000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-10-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "200 mm SiC wafers per year at full capacity."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2023-10-24",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Local hires planned over three years, on top of about 2,300 existing staff in Korea."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-07-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Investment MOU signed at the Bucheon site."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2022-07-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Held at the MOU event; onsemi dates the start of construction to mid-2022."
+    },
+    {
+      "event": "building_complete",
+      "date": "2023-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2023-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "onsemi said at the October 2023 completion that production was starting on 150 mm wafers; a January 2024 report on onsemi's supplier awards said the line's ramp-up had been achieved."
+    },
+    {
+      "event": "paused",
+      "date": "2025-04",
+      "planned": false,
+      "phase_label": "Planned SiC power management IC line",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "A trade report citing unnamed sources said onsemi stopped its planned investment in a SiC power management IC line in Bucheon and recalled most engineers to the U.S.; it does not say the S5 line itself stopped, and onsemi did not confirm the report in sources read here."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "onsemi Completes Expansion of Silicon Carbide Production Facility in Bucheon, South Korea",
+      "publisher": "onsemi",
+      "url": "https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-completes-expansion-of-silicon-carbide-production-facility-in-bucheon-south-korea",
+      "type": "company_announcement",
+      "published": "2023-10-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "US Onsemi Completes 1.4 Trillion KRW Investment in Bucheon Power Semiconductor Expansion... World's Largest Scale",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2023102411062247707",
+      "type": "news",
+      "published": "2023-10-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "반도체 기업 온세미, 부천에 1조4000억원 투자 연구소·공장 설립",
+      "publisher": "Seoul Shinmun",
+      "url": "https://m.go.seoul.co.kr/news/2022/07/07/20220707500085",
+      "type": "news",
+      "published": "2022-07-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Aixtron receives supplier award from onsemi",
+      "publisher": "Semiconductor Today",
+      "url": "https://www.semiconductor-today.com/news_items/2024/jan/aixtron-090124.shtml",
+      "type": "trade_press",
+      "published": "2024-01-09",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "onsemi shifts global SiC strategy, halts Korea investment to focus on Czech fab",
+      "publisher": "SemiMedia",
+      "url": "https://semimedia.cc/18924.html",
+      "type": "trade_press",
+      "published": "2025-04-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "ON Semiconductor Corporation annual report on Form 10-K for the fiscal year ended December 31, 2025",
+      "publisher": "onsemi",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000109786426000006/on-20251231.htm",
+      "type": "company_filing",
+      "published": "2026-02-09",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "onsemi's FY2025 annual report lists Bucheon among its front-end fabs, with about 1.11 million sq ft of space, and says the site makes silicon and SiC wafers; it does not say whether the 200 mm switch has happened. No source read here confirms the 200 mm conversion planned for 2025 or the line's current output.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Narrowed the April 2025 pause to the planned SiC power management IC line the trade report names (it had been described as all further Bucheon SiC investment), corrected the government party note and set the KRW 1.4 trillion figure to exact as stated."
+  }
+}

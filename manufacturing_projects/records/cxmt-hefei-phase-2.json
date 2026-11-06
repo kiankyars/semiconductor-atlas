@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "id": "cxmt-hefei-phase-2",
+  "name": "CXMT Hefei Phase 2 fab (Changxin Xinqiao)",
+  "aliases": [
+    "CXMT Hefei Fab 2",
+    "合肥二期生产线"
+  ],
+  "company": "CXMT",
+  "operator": "Changxin Xinqiao Memory Technologies",
+  "parties": [
+    {
+      "name": "Changxin Xinqiao Memory Technologies",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "长鑫新桥存储技术有限公司, a CXMT subsidiary set up in January 2021 that designs, makes and sells DRAM."
+    },
+    {
+      "name": "长鑫芯安（合肥）企业管理合伙企业（有限合伙）",
+      "role": "owner",
+      "share_pct": 27.33,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "CXMT-controlled partnership; through a concert agreement with two other holders CXMT controls more than half of the votes."
+    },
+    {
+      "name": "合肥鑫益合升科技合伙企业（有限合伙）",
+      "role": "owner",
+      "share_pct": 27.09,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": 26.99,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "State-backed fund known as Big Fund II."
+    },
+    {
+      "name": "Hefei Industry Investment Holding (Group)",
+      "role": "owner",
+      "share_pct": 15.24,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Hefei municipal investment group."
+    },
+    {
+      "name": "CXMT Corporation",
+      "role": "owner",
+      "share_pct": 3.35,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Direct holding of the listed parent, in addition to its control through the partnership above."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [
+    {
+      "label": "17nm",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Trade press reports DDR5 production on this process at the second Hefei fab."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "CXMT's second 12-inch DRAM production line in Hefei, Anhui, run by its subsidiary Changxin Xinqiao, which was set up in January 2021 and is co-owned with China's national chip fund and Hefei city investors. CXMT's December 2025 STAR Market prospectus lists three CXMT 12-inch DRAM fabs and shows heavy construction spending on the Hefei phase 2 line from 2022, most of it moved into fixed assets in 2024, a year in which a new CXMT line entered production. Trade press reported the second Hefei fab making DDR5 on a 17nm process at about 50,000 wafers a month at the end of 2024, with another 50,000 expected in 2025. In July 2026 a reporter found further phase 2 construction, including work tied to a FAB A2B building, still under way, and CXMT's 2026 half-year report put the line's budget at about CNY 94 billion, 97 percent spent.",
+  "location": {
+    "country": "CN",
+    "admin1": "Anhui",
+    "locality": "Hefei",
+    "site": "Hefei Economic and Technological Development Area",
+    "address": "安徽省合肥市经济技术开发区新淮大道2788号",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Registered and principal operating address of Changxin Xinqiao in the prospectus; a July 2026 report places the phase 2 site in the Xinqiao area of Hefei."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-08-29",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 93971000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Budget for the Hefei phase 2 production line in CXMT's 2026 half-year report, about 97 percent of it spent by 30 June 2026."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-30",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Monthly wafer capacity reported for the second Hefei fab at the end of 2024, with a further 50,000 expected in 2025; the prospectus says all CXMT capacity is on 12-inch lines."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Derived, not stated per fab: the prospectus says new CXMT lines started up in 2022 and 2024 without naming them; 2024 is the year most of this line's construction moved into fixed assets and Changxin Xinqiao reported about CNY 3.2 billion of revenue, and trade press reported the fab in production by December 2024. No source gives the exact start date."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "长鑫科技集团股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202512/002170_20251230_B8QS.pdf",
+      "type": "company_filing",
+      "published": "2025-12-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "[News] Chinese DRAM Giant CXMT Reportedly Achieves 80% DDR5 Yield, Targeting 90% by 2025",
+      "publisher": "TrendForce",
+      "url": "https://trendforce.com/news/?p=30798",
+      "type": "trade_press",
+      "published": "2024-12-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "合肥新桥“长”出DRAM龙头：打新前夜，长鑫科技12英寸存储器晶圆制造基地二期项目正在建设，有员工不知公司将上市",
+      "publisher": "National Business Daily",
+      "url": "https://www.nbd.com.cn/articles/2026-07-17/4475296.html",
+      "type": "news",
+      "published": "2026-07-17",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "长鑫科技集团股份有限公司2026年半年度报告",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225529543.PDF",
+      "type": "company_filing",
+      "published": "2026-08-29",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Status is partly operating because the line produced from 2024 while a July 2026 report found more phase 2 construction still in progress and the 2026 half-year report still lists construction in progress on the line; the report links the FAB A2B building to Changxin Xinqiao through a 2023 engineering contract. The 2024 production start is derived, not stated per fab: the prospectus says new lines started up in 2022 and 2024 without naming them, and this line moved no assets into service in 2022. The prospectus does not give per-fab capacity or start dates. It reports the Hefei phase 2 line's construction in progress at about CNY 13.8 billion on 30 June 2025, after transfers to fixed assets of about CNY 9.2 billion in 2023, CNY 46.6 billion in 2024 and CNY 16.1 billion in the first half of 2025; the half-year report gives about CNY 5.1 billion on 30 June 2026. These accounting figures are not recorded as investment. The 2026 listing proceeds are earmarked for upgrading existing lines and DRAM technology and for research, not for new fabs.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the status from operating to partially_operating after a July 2026 report of continuing phase 2 construction, added that source, removed a 100,000 wafers-a-month figure that no source states, and rewrote the summary and notes. Audit fixes (2026-11-07): added CXMT's 2026 half-year report, recorded the line's CNY 93.971 billion budget, moved the status date to that report, and stated in the milestone and notes that the 2024 production year is inferred from the prospectus rather than stated for this line."
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "id": "tsmc-advanced-backend-fab-7-chiayi",
+  "name": "TSMC Advanced Backend Fab 7, Chiayi",
+  "aliases": [
+    "AP7",
+    "Chiayi Advanced Packaging Fab 7"
+  ],
+  "company": "TSMC",
+  "operator": "TSMC",
+  "parties": [
+    {
+      "name": "Taiwan Semiconductor Manufacturing Company Limited (TSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "name": "Southern Taiwan Science Park Bureau, National Science and Technology Council",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s7"
+      ],
+      "note": "Runs the Chiayi Science Park; said in 2024 it would help TSMC adjust its plans after the construction halt, and held the groundbreaking for the park's second-phase site in July 2026."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "CoWoS",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "The first two Chiayi plants were announced in 2024 as CoWoS packaging fabs."
+    },
+    {
+      "label": "SoIC",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Trade press reports that the first and third AP7 plants will give priority to SoIC, and that SoIC will be rolled out in Chiayi."
+    },
+    {
+      "label": "WMCM",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Trade press reports the second Chiayi plant will first run wafer-level multi-chip module packaging."
+    },
+    {
+      "label": "CoPoS",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Planned panel-based packaging; trade press puts large-scale Chiayi output around the end of 2028."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "TSMC's advanced packaging site in the Chiayi Science Park at Taibao, Chiayi County, which the company aims to make its largest packaging fab. In March 2024 the government announced two TSMC packaging plants there, the first for CoWoS, and TSMC confirmed the plan. Work on the first plant began in May 2024 but stopped in June after suspected archaeological remains turned up, so the second plant went ahead first. Equipment installation began in the second half of 2025, and at a July 2026 ceremony officials said mass production had started in June 2026. At the same event, the groundbreaking of the park's second-phase site, officials said TSMC would build more packaging plants there (Reuters reported two, the Central News Agency three). Trade press ties the site to SoIC, WMCM and, later, CoPoS packaging.",
+  "location": {
+    "country": "TW",
+    "admin1": "Chiayi County",
+    "locality": "Taibao",
+    "site": "Chiayi Science Park (Southern Taiwan Science Park)",
+    "address": "68, Jiake 5st Rd., Taibao City, Chiayi County 612-013, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "The address is the one TSMC lists for Advanced Backend Fab 7 in its 2025 annual report."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-07-13",
+  "status_source_ids": [
+    "s7",
+    "s8",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "jobs",
+      "value": 3000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2024-03-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Jobs the vice premier said the first two Chiayi packaging plants would create."
+    },
+    {
+      "metric": "site_area",
+      "value": 12,
+      "value_max": null,
+      "unit": "hectares",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase I",
+      "as_of": "2024-03-19",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Plot TSMC leased from the science park in March 2024 for the first two plants."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-03",
+      "planned": false,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The vice premier announced two TSMC packaging plants for the Chiayi Science Park, and TSMC confirmed it planned packaging capacity there."
+    },
+    {
+      "event": "construction_start",
+      "date": "2024-05",
+      "planned": false,
+      "phase_label": "Plant 1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "paused",
+      "date": "2024-06-17",
+      "planned": false,
+      "phase_label": "Plant 1",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Local authorities said on 17 June 2024 that work on the first plant had stopped after a suspected archaeological site was found; trade press later said the delay let the second plant start first."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2025-H2",
+      "planned": false,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "TVBS, reporting from a January 2026 TSMC media tour, said equipment installation began at the Phase 1 plant in December; trade press says the second plant (P2) took equipment first, in the second half of 2025, because of the first plant's delay."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2026",
+      "planned": true,
+      "phase_label": "Plant 1",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Trade press target for equipment move-in at the delayed first plant, with mass production there in 2027."
+    },
+    {
+      "event": "volume_production",
+      "date": "2026-06",
+      "planned": false,
+      "phase_label": "Phase I",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "Reports differ on whether one or both Phase I plants were producing; Reuters said the second plant was expected to follow soon."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-07-12",
+      "planned": false,
+      "phase_label": "Phase II",
+      "source_ids": [
+        "s7",
+        "s8",
+        "s9"
+      ],
+      "note": "Groundbreaking for the second-phase site of the Chiayi Science Park, about 90 hectares, where officials said TSMC would add packaging plants; TechNews reported a second-phase packaging plant already under construction."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "TSMC 2025 Annual Report",
+      "publisher": "TSMC",
+      "url": "https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf",
+      "type": "company_report",
+      "published": "2026",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "TSMC to build two chip packaging fabs in Chiayi",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/front/archives/2024/03/19/2003815137",
+      "type": "news",
+      "published": "2024-03-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "TSMC plant halted over possible archeological find",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2024/06/19/2003819546",
+      "type": "news",
+      "published": "2024-06-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "TSMC opens doors to Chiayi fab amid booming AI chip demand",
+      "publisher": "TVBS",
+      "url": "https://t.media/3108472",
+      "type": "news",
+      "published": "2026-01-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "TSMC Speeds Advanced Packaging: AP7 Targets 2026 Output; Arizona P6 Eyed for U.S. Packaging Hub",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2025/12/04/news-tsmc-speeds-advanced-packaging-ap7-targets-2026-output-arizona-p6-eyed-for-u-s-packaging-hub/",
+      "type": "trade_press",
+      "published": "2025-12-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "TSMC Advanced Packaging CapEx Projected to Grow 24% CAGR in 2025–27; AP7 Eyes WMCM, CoPoS",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/01/21/news-tsmc-advanced-packaging-capex-projected-to-grow-24-cagr-in-2025-27-chiayi-ap7-targets-wmcm-and-copos/",
+      "type": "trade_press",
+      "published": "2026-01-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "嘉義科學園區二期基地正式動土，台積電先進封裝擴產進入新里程",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://technews.tw/2026/07/12/the-groundbreaking-ceremony-for-the-second-phase-of-the-chiayi-science-park-was-officially-held/",
+      "type": "trade_press",
+      "published": "2026-07-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "TSMC to build 3 more advanced packaging fabs in Chiayi Science Park",
+      "publisher": "Focus Taiwan (Central News Agency)",
+      "url": "https://focustaiwan.tw/business/202607120005",
+      "type": "news",
+      "published": "2026-07-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "TSMC to add 2 advanced chip packaging plants in Chiayi, Taiwan minister says",
+      "publisher": "Reuters (via The Star)",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/07/13/tsmc-to-add-2-advanced-chip-packaging-plants-in-chiayi-taiwan-minister-says",
+      "type": "news",
+      "published": "2026-07-13",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Two counts of the second-phase plants circulate: Reuters quoted the science minister describing a third and fourth plant, while the Central News Agency reported three more facilities. Reports also differ on whether one or both first-phase plants were producing by July 2026 and on which of them took equipment first. Trade press numbers the Chiayi build-out in up to eight plants (P1 to P8), which do not match the science park's Phase I and Phase II sites; phase labels in this record follow the science park's phases except where a source names a specific plant. TSMC itself has not said which Chiayi plants are producing; the July 2026 production reports rest on statements by officials at the park ceremony.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:Q76A6913",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for Advanced Backend Fab 7 at the address TSMC lists for it."
+    },
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:Q76A8276",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for phase 3 of Advanced Backend Fab 7."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected who announced the 2024 plan, the SoIC note and the science park bureau's role, set out the conflicting reports on which plant took equipment first, set the jobs figure to exact and fixed two publisher labels. Audit fixes (2026-11-07): noted that the June 2026 production start comes from officials at the park ceremony, with no TSMC statement on which plants are producing."
+  }
+}

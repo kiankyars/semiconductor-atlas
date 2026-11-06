@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "id": "us-coherent-sherman-inp-fab",
+  "name": "Coherent Sherman 6-inch InP fab",
+  "aliases": [
+    "Coherent Sherman indium phosphide fab"
+  ],
+  "company": "Coherent",
+  "operator": "Coherent Corp.",
+  "parties": [
+    {
+      "name": "Coherent Corp.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s9",
+        "s10",
+        "s11"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5",
+        "s8",
+        "s9",
+        "s10"
+      ],
+      "note": "Signed non-binding preliminary terms for up to USD 33 million in December 2024 and announced a letter of intent for up to USD 50 million in June 2026, which Coherent's annual report calls a USD 50 million preliminary memorandum of terms; no final CHIPS award was found."
+    },
+    {
+      "name": "State of Texas",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Texas Semiconductor Innovation Fund grant announced in February 2026; Coherent puts state and Sherman Economic Development Corporation support at about USD 20 million in total."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "photonics"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5",
+        "s8",
+        "s9"
+      ]
+    }
+  ],
+  "summary": "Coherent makes indium phosphide optoelectronic devices on 150 mm wafers at its existing 700,000 sq ft site in Sherman, Texas, a line that Coherent and Texas officials call the first 6-inch InP wafer fab. Coherent announced 6-inch capability there in March 2024, the federal CHIPS program signed preliminary terms for up to USD 33 million in December 2024 to modernize and expand a cleanroom for the line, and a trade report said 6-inch wafers reached full production in December 2025. Texas awarded a state grant in February 2026 against more than USD 154 million of investment. In June 2026 Coherent broke ground on an expansion meant to double production space and quadruple wafer output, backed by a CHIPS letter of intent for up to USD 50 million; Coherent said in November 2026 that the Sherman expansion was continuing.",
+  "location": {
+    "country": "US",
+    "admin1": "Texas",
+    "locality": "Sherman",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s4",
+      "s5",
+      "s6",
+      "s8"
+    ],
+    "note": null
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-11-04",
+  "status_source_ids": [
+    "s3",
+    "s6",
+    "s7",
+    "s10",
+    "s11"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 154000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-06",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Capital investment cited with the state grant for scaling 6-inch InP wafer production in Sherman."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 33000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-06",
+      "source_ids": [
+        "s1",
+        "s9"
+      ],
+      "note": "Proposed CHIPS direct funding under the December 2024 non-binding preliminary memorandum of terms, as announced by Coherent and a U.S. senator's office; later sources give the preliminary terms as up to USD 50 million without saying whether that amount replaces or adds to this one."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 14076031,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "awarded",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-06",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Texas Semiconductor Innovation Fund grant."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 50000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "phase",
+      "phase_label": "2026 expansion",
+      "as_of": "2026-06-16",
+      "source_ids": [
+        "s5",
+        "s6",
+        "s8",
+        "s10"
+      ],
+      "note": "CHIPS letter of intent for the expansion; Coherent's FY2026 annual report calls it a USD 50 million preliminary memorandum of terms, and the NIST project page shows this amount under the preliminary terms dated December 2024."
+    },
+    {
+      "metric": "jobs",
+      "value": 70,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-12-06",
+      "source_ids": [
+        "s1",
+        "s8",
+        "s9"
+      ],
+      "note": "Jobs tied to setting up the 150 mm InP line."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "2026 expansion",
+      "as_of": "2026-06-16",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "Expected at project completion, including more than 550 direct manufacturing, engineering and technical roles."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-03-25",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Coherent said it had set up 6-inch InP wafer fabrication in Sherman and in Järfälla, Sweden, and was qualifying products on it."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "A December 2025 trade report said 6-inch InP wafers had moved into full production a year ahead of Coherent's internal schedule, with Fremont and Sherman teams running the transfer and ramp."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-06-16",
+      "planned": false,
+      "phase_label": "2026 expansion",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Senator Cornyn Announces $33 Million in Funding for Coherent to Boost Semiconductor Manufacturing in Sherman",
+      "publisher": "Greenville Chronicle",
+      "url": "https://greenvillechronicle.com/s/3299/Senator-Cornyn-Announces-$33-Million-in-Funding-for-Coherent-to-Boost-Semiconductor-Manufacturing-in-Sherman",
+      "type": "news",
+      "published": "2024-12-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "6-inch InP Scalable Wafer Fabs for AI Transceivers & 6G Networks",
+      "publisher": "Coherent",
+      "url": "https://www.coherent.com/news/press-releases/worlds-first-6-inch-inp-scalable-wafer-fabs-paving-the-way-for-the-next-generation-of-lasers-for-ai-transceivers-and-6g-wireless-networks",
+      "type": "company_announcement",
+      "published": "2024-03-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Coherent Moves 6-Inch Indium Phosphide Wafers into Full Production",
+      "publisher": "Converge Digest",
+      "url": "https://convergedigest.com/coherent-moves-6-inch-indium-phosphide-wafers-into-full-production/",
+      "type": "trade_press",
+      "published": "2025-12-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Governor Abbott Announces Texas Semiconductor Innovation Fund Grant To Coherent",
+      "publisher": "Office of the Texas Governor",
+      "url": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-coherent",
+      "type": "government",
+      "published": "2026-02-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "The Department of Commerce's CHIPS Program Announces a Letter of Intent with Coherent for up to $50 Million to Expand Indium Phosphide Production",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/document/coherent-chips-release",
+      "type": "government",
+      "published": "2026-06-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Coherent Announces a CHIPS Letter of Intent for $50 Million to Expand World-Leading Manufacturing Facility for AI Infrastructure",
+      "publisher": "Coherent",
+      "url": "https://www.coherent.com/news/press-releases/a-chip-letter-of-intent-for-50m-to-expand-world-leading-manufacturing-facility-for-ai-infrastructure",
+      "type": "company_announcement",
+      "published": "2026-06-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Coherent to receive $50m US CHIPS Act funding to expand Sherman 6-inch InP fab",
+      "publisher": "Semiconductor Today",
+      "url": "https://semiconductor-today.com/news_items/2026/jun/coherent-170626.shtml",
+      "type": "trade_press",
+      "published": "2026-06-17",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "Coherent (Texas)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/coherent-texas-sherman",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "Coherent Signs Preliminary Memorandum of Terms With the U.S. Department of Commerce to Expand the World’s First 150 mm Indium Phosphide Manufacturing Line",
+      "publisher": "Coherent",
+      "url": "https://coherent.com/news/press-releases/pmt-for-expansion-of-worlds-first-150mm-indium-phosphide-mfg-line",
+      "type": "company_announcement",
+      "published": "2024-12-09",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s10",
+      "title": "Coherent Corp. annual report on Form 10-K for the fiscal year ended June 30, 2026",
+      "publisher": "Coherent",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+      "type": "company_filing",
+      "published": "2026-08-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s11",
+      "title": "Coherent Corp. quarterly report on Form 10-Q for the quarter ended September 30, 2026",
+      "publisher": "Coherent",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000023/iivi-20260930.htm",
+      "type": "company_filing",
+      "published": "2026-11-04",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Coherent's and the senator's December 2024 announcements gave up to USD 33 million under the preliminary terms. The NIST project page still dates those terms to 6 December 2024 but now shows up to USD 50 million, the June 2026 CHIPS release calls the USD 50 million a letter of intent, and Coherent's FY2026 annual report calls it a preliminary memorandum of terms for the Sherman expansion. Both amounts are recorded because no source says whether the later one replaces the earlier. The 2024 terms covered modernizing and expanding a cleanroom in the existing building. Coherent's FY2026 annual report lists the 700,000 sq ft Sherman site as owned manufacturing space. No source read here gives a completion date for the 2026 expansion or a wafer capacity figure.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Stopped describing the June 2026 letter of intent itself as non-binding, which its sources do not say, and clarified the CHIPS party and production notes. Audit fixes (2026-11-07): Added Coherent's December 2024 release as the primary source for the USD 33 million preliminary terms and its FY2026 annual and September 2026 quarterly reports, which call the USD 50 million a preliminary memorandum of terms and report the expansion continuing, moving the status date to November 2026 and explaining how the two CHIPS amounts relate."
+  }
+}

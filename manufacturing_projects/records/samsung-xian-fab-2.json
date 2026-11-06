@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "id": "samsung-xian-fab-2",
+  "name": "Samsung Xi'an Fab 2",
+  "aliases": [
+    "X2",
+    "Samsung Xi'an Phase 2"
+  ],
+  "company": "Samsung",
+  "operator": "Samsung Electronics",
+  "parties": [
+    {
+      "name": "Samsung Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": null
+    },
+    {
+      "name": "Shaanxi Provincial Government",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Signed a cooperation agreement with Samsung in August 2017 covering the investment in the second plant; the cited report spells the province Shanxi."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "nand"
+  ],
+  "process_nodes": [
+    {
+      "label": "Fifth-generation V-NAND",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Generation Samsung said it began producing in volume on the new X2 line in March 2020."
+    },
+    {
+      "label": "V9 (286-layer) NAND",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Trade press reported in March 2026 that the second Xi'an fab was set to move to this generation, with the Xi'an conversion expected to finish in 2026."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "Samsung Electronics' second NAND flash fab in Xi'an, Shaanxi, China (X2), built in two stages after a 2017 agreement with the provincial government. The first stage, about USD 7 billion, was completed in March 2020, when Samsung said volume production of fifth-generation V-NAND began on the new line; the second, about USD 8 billion, started construction in December 2019, received equipment from March 2021 and was reported running at full capacity from early March 2022, later than the mid-2021 target. The fab was reported at 130,000 12-inch wafers a month in 2022, and the two Xi'an fabs together at about 250,000. In 2026 trade press reported it moving to newer V-NAND generations.",
+  "location": {
+    "country": "CN",
+    "admin1": "Shaanxi",
+    "locality": "Xi'an",
+    "site": "Xi'an High-tech Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": "A 2022 report places the second-phase project in the Xi'an High-tech Zone. Samsung's first Xi'an fab predates 2020 and is outside the scope of this dataset."
+  },
+  "status": "operating",
+  "status_as_of": "2026-03-30",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 15000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2019-12-25",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Total for both stages of the second Xi'an fab."
+    },
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "phase",
+      "phase_label": "Stage 1",
+      "as_of": "2017-08-30",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Announced in August 2017 and completed by March 2020."
+    },
+    {
+      "metric": "investment",
+      "value": 8000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "phase",
+      "phase_label": "Stage 2",
+      "as_of": "2019-12",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Additional investment decided in December 2019."
+    },
+    {
+      "metric": "capacity",
+      "value": 130000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-04-05",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "12-inch wafers per month once the second stage reached full output; planned in 2021 and reported in 2022."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2017-08-30",
+      "planned": false,
+      "phase_label": "Stage 1",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "construction_start",
+      "date": "2018",
+      "planned": false,
+      "phase_label": "Stage 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2020-03",
+      "planned": true,
+      "phase_label": "Stage 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target for completion and start of production."
+    },
+    {
+      "event": "volume_production",
+      "date": "2020-03",
+      "planned": false,
+      "phase_label": "Stage 1",
+      "source_ids": [
+        "s6",
+        "s2"
+      ],
+      "note": "Samsung said it began volume production of fifth-generation V-NAND on the new Xi'an line (X2) in March 2020; a 2021 report says the plant began operating in 2020 after the first-stage investment was completed in March."
+    },
+    {
+      "event": "construction_start",
+      "date": "2019-12",
+      "planned": false,
+      "phase_label": "Stage 2",
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2021-H2",
+      "planned": true,
+      "phase_label": "Stage 2",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Completion target when construction started."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2021-03-11",
+      "planned": false,
+      "phase_label": "Stage 2",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "volume_production",
+      "date": "2021",
+      "planned": true,
+      "phase_label": "Stage 2",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Full operation was targeted for mid-2021."
+    },
+    {
+      "event": "volume_production",
+      "date": "2022-03",
+      "planned": false,
+      "phase_label": "Stage 2",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Trade press reported the expanded fab running at full capacity from early March 2022; other reports at the end of March said the expansion was complete and in production."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "三星西安二阶段项目开工，中国战略地位升级！",
+      "publisher": "CFM Flash Market",
+      "url": "https://chinaflashmarket.com/a/169007",
+      "type": "trade_press",
+      "published": "2019-12-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Samsung Electronics Begins Equipment Installation for Phase 2 of Xi'an Plant 2 in China... Operation to Start Mid-Year",
+      "publisher": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2021031211061401491",
+      "type": "news",
+      "published": "2021-03-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "消息称三星西安闪存二厂完成扩建并已投产，NAND 产量超全球 10%",
+      "publisher": "IT Home",
+      "url": "https://www.ithome.com/0/610/692.htm",
+      "type": "news",
+      "published": "2022-03-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Samsung's second NAND flash fab in Xi'an completes expansion",
+      "publisher": "SemiMedia",
+      "url": "https://www.semimedia.cc/samsungs-second-nand-flash-fab-in-xian-completes-expansion/",
+      "type": "trade_press",
+      "published": "2022-04-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "[News] Samsung Reportedly Advances Xi'an to 236-Layer NAND; SK hynix Eyes Dalian Upgrade Amid Tight Supply",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/03/30/news-samsung-reportedly-advances-xian-to-236-layer-nand-sk-hynix-eyes-dalian-upgrade-amid-tight-supply/",
+      "type": "trade_press",
+      "published": "2026-03-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Samsung Begins Mass Production of the Fastest Storage for Flagship Smartphones",
+      "publisher": "Samsung Electronics",
+      "url": "https://news.samsung.com/global/samsung-begins-mass-production-of-the-fastest-storage-for-flagship-smartphones",
+      "type": "company_announcement",
+      "published": "2020-03-17",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Samsung's own March 2020 release confirms volume production on the X2 line but gives no capacity or investment; no Samsung release on the second stage was found, so the rest of the record relies on news and trade press. The 2019 report says the project would add 130,000 wafers a month in a sentence that can be read as covering either the second stage alone or the whole second fab; 2021 and 2022 reports give 130,000 for the whole second fab once expanded, which is the figure recorded. Reports in 2022 put Samsung's monthly NAND output across both Xi'an fabs at about 250,000 or 265,000 wafers. The 2026 move to newer NAND generations is a process conversion inside the existing fab, not a new phase.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added the 2018 start of first-stage construction, made the 2026 process-conversion note match the trade press report, and clarified which source supports the March 2022 full-capacity date. Audit fixes (2026-11-07): added Samsung's March 2020 release confirming volume production on the X2 line and used it to date the first stage's production start, added the Xi'an High-tech Zone site from the cited 2022 report, and reworded the capacity note because the 2019 report's 130,000 figure is ambiguous rather than conflicting."
+  }
+}

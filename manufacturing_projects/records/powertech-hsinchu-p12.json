@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "id": "powertech-hsinchu-p12",
+  "name": "Powertech P12 advanced packaging plant, Hsinchu Science Park",
+  "aliases": [
+    "P12"
+  ],
+  "company": "Powertech",
+  "operator": "Powertech Technology Inc.",
+  "parties": [
+    {
+      "name": "Powertech Technology Inc.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging"
+  ],
+  "process_nodes": [
+    {
+      "label": "Fan-out panel-level packaging (FOPLP)",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Powertech said the purchase would speed up volume production of its FOPLP technology for AI, high-performance computing and automotive chips."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A former AUO LCD panel factory in the Hsinchu Science Park, codenamed L3C, that the Taiwanese chip packaging and test company Powertech is converting into an advanced packaging plant. Its board approved the NT$6.898 billion purchase, equipment included, in November 2025 to add capacity for fan-out panel-level packaging, for which it said orders far exceeded what it could supply, and said it would renovate, equip and staff the plant in stages. Later reporting calls the site P12 and says it will add AI chip packaging on ABF substrates plus research space. In April 2026 Powertech raised its 2026 capital budget by NT$10 billion, mainly for this facility. No production date specific to the plant has been published.",
+  "location": {
+    "country": "TW",
+    "admin1": "Hsinchu City",
+    "locality": "Hsinchu",
+    "site": "Hsinchu Science Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s5"
+    ],
+    "note": "Powertech's announcement, as reported by the Central News Agency, places the L3C building on Lixing Road in the science park in Hsinchu City; no street number was given."
+  },
+  "status": "announced",
+  "status_as_of": "2026-04-29",
+  "status_source_ids": [
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 6898000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-11-14",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Purchase price for the plant and its equipment, reported rounded as NT$6.9 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2026-04-29",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Addition to Powertech's company-wide 2026 capital budget, which it said would go mainly to the facility bought from AUO."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2025-11-14",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ],
+      "note": "Powertech's board approved buying the plant from AUO."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Powertech to acquire a facility from AUO Corp",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2025/11/15/2003847225",
+      "type": "news",
+      "published": "2025-11-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "力成斥68.98億元買友達廠房 擴充先進製程產能需求",
+      "publisher": "Anue (via UAnalyze)",
+      "url": "https://uanalyze.com.tw/articles/7553238896",
+      "type": "news",
+      "published": "2025-11-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Powertech's PiFO Gambit: A Second Source for AI Packaging",
+      "publisher": "TVBS",
+      "url": "https://t.media/3177481",
+      "type": "news",
+      "published": "2026-04-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Powertech raises capital spending 25%",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/04/29/2003856406",
+      "type": "news",
+      "published": "2026-04-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "力成擴 FOPLP 先進封裝，砸近 69 億元購友達竹科廠房",
+      "publisher": "Central News Agency (via TechNews)",
+      "url": "https://finance.technews.tw/2025/11/14/pti-buy-auo-plant/",
+      "type": "news",
+      "published": "2025-11-14",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Powertech's main fan-out panel-level production base is reported to be a separate Hsinchu plant (P11), which is not part of this record. AUO, the seller, is not listed as a party because it no longer holds the plant. Powertech's own filing on the purchase could not be opened, so the record relies on news reports of it. No report of renovation or equipment installation at this plant was found by November 2026, so it stays announced.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed AUO as a party because it sold the plant, moved the plant's codename into the summary, recorded the NT$10 billion capital budget increase as an exact company-wide figure, and labelled the purchase report as Anue's. Audit fixes (2026-11-07): set the region to Hsinchu City from a Central News Agency report of Powertech's announcement, added that report as a source, and recorded that no renovation start was found."
+  }
+}

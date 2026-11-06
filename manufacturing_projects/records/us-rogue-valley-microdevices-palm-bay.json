@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "id": "us-rogue-valley-microdevices-palm-bay",
+  "name": "Rogue Valley Microdevices Palm Bay MEMS fab",
+  "aliases": [
+    "RVM Palm Bay foundry"
+  ],
+  "company": "Rogue Valley Microdevices",
+  "operator": "Rogue Valley Microdevices",
+  "parties": [
+    {
+      "name": "Rogue Valley Microdevices",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": null
+    },
+    {
+      "name": "U.S. Department of Commerce",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Signed a non-binding preliminary memorandum of terms in July 2024; no final CHIPS award was found."
+    },
+    {
+      "name": "State of Florida",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "A USD 5 million Florida Department of Commerce loan and USD 3.2 million in other state incentives and grants, as listed in the CHIPS announcement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "mems_sensors"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s2",
+        "s5"
+      ]
+    },
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Rogue Valley Microdevices, a MEMS and sensor foundry based in Medford, Oregon, is fitting out a 50,000 sq ft commercial building in Palm Bay, Florida as its second wafer fab, with cleanroom space for 200 mm and 300 mm wafers. The site was announced in June 2023 with first production targeted for 2024 and then 2025. In July 2024 the federal CHIPS program signed preliminary terms for up to USD 6.7 million to help renovate the cleanroom and install tools, which it said would nearly triple the company's capacity. By February 2026 the company had completed a tool purchase, said its total investment had passed USD 70 million and expected to start taking orders during 2026, while build-out was still under way.",
+  "location": {
+    "country": "US",
+    "admin1": "Florida",
+    "locality": "Palm Bay",
+    "site": null,
+    "address": "2301 Commerce Drive, Palm Bay, Florida",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-02-26",
+  "status_source_ids": [
+    "s4",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 25000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-06-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Capital investment announced at site selection; eeNews Europe reported a USD 30 million capital budget."
+    },
+    {
+      "metric": "investment",
+      "value": 70000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-02-26",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Total investment as described by the company in February 2026."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 6700000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "preliminary_award",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-07-01",
+      "source_ids": [
+        "s3",
+        "s6"
+      ],
+      "note": "Proposed CHIPS direct funding under a non-binding preliminary memorandum of terms."
+    },
+    {
+      "metric": "capacity",
+      "value": 21000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-06-29",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned wafer starts per month, reported at site selection without a split between 200 mm and 300 mm."
+    },
+    {
+      "metric": "jobs",
+      "value": 75,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-07-01",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Expected over about five years; the CHIPS announcement says more than 75."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "site_selected",
+      "date": "2023-06-28",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The company had bought the Palm Bay building for conversion to cleanroom and offices."
+    },
+    {
+      "event": "construction_start",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Reported as under construction by May 2024; no start date was given."
+    },
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Initial target set at site selection."
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Trade reports in 2023 and 2024 put the production start in 2025; the CHIPS announcement expected first wafer shipments in early 2025 and completion by mid-2025."
+    },
+    {
+      "event": "first_production",
+      "date": "2026-04",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "In February 2026 the company expected to open orders for dielectric and conductive film work in April and for full MEMS devices in the third quarter of 2026."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "EDC announces Oregon-based Rogue Valley Microdevices, Inc. to open microfabrication facility in Palm Bay",
+      "publisher": "Economic Development Commission of Florida's Space Coast",
+      "url": "https://spacecoastedc.org/roguevalley/",
+      "type": "government",
+      "published": "2023-06-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Rogue Valley selects Florida for MEMS wafer fab",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/rogue-valley-selects-florida-for-mems-wafer-fab",
+      "type": "trade_press",
+      "published": "2023-06-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "U.S. Department of Commerce Announces Preliminary Terms with Rogue Valley Microdevices to Support the Construction of New Foundry",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/news-events/news/2024/07/us-department-commerce-announces-preliminary-terms-rogue-valley",
+      "type": "government",
+      "published": "2024-07-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Rogue Valley Microdevices confirms 300mm MEMS fab in Florida",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/rogue-valley-microdevices-confirms-300mm-mems-fab-in-florida",
+      "type": "trade_press",
+      "published": "2024-05-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Rogue Valley Microdevices Closes Equipment Deal, Positions Palm Bay as America's MEMS Supply Chain Answer",
+      "publisher": "The Palm Bayer",
+      "url": "https://www.thepalmbayer.com/p/palm-bay-mems-foundry-rvm-300mm",
+      "type": "news",
+      "published": "2026-02-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Rogue Valley Microdevices (Florida)",
+      "publisher": "National Institute of Standards and Technology (CHIPS for America)",
+      "url": "https://www.nist.gov/chips/rogue-valley-microdevices-florida-palm-bay",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The February 2026 local report gives the street as Commerce Park Drive without a number; the address here follows the economic development commission's release. No source read here reports the fab opening or shipping its first wafers.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the early-2025 production target from 2025-Q1 to 2025, since the sources give only early 2025 or 2025, and added the two trade reports that state that target. Audit fixes (2026-11-07): Removed the word about from the USD 3.2 million in Florida incentives, which the CHIPS announcement states as an exact figure."
+  }
+}

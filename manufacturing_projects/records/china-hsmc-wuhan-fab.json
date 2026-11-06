@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "id": "china-hsmc-wuhan-fab",
+  "name": "HSMC Wafer Fab, Wuhan",
+  "aliases": [
+    "Wuhan Hongxin Semiconductor Manufacturing fab",
+    "Hongxin Semiconductor project"
+  ],
+  "company": "HSMC",
+  "operator": "Wuhan Hongxin Semiconductor Manufacturing (HSMC)",
+  "parties": [
+    {
+      "name": "Wuhan Hongxin Semiconductor Manufacturing (HSMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Founded in Wuhan in November 2017 to build and run the fab."
+    },
+    {
+      "name": "Beijing Guangliang Lantu Technology",
+      "role": "owner",
+      "share_pct": 90,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Private company that held 90 percent before the 2020 takeover."
+    },
+    {
+      "name": "Dongxihu District Government, Wuhan",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Held the remaining 10 percent through an industrial investment company of the Wuhan Linkonggang economic development zone; in November 2020 the district's state-assets body took full control of HSMC."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "14nm",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Planned logic process; never reached production."
+    },
+    {
+      "label": "7nm",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Promised later line; never reached production."
+    }
+  ],
+  "wafer_sizes": [],
+  "summary": "A planned leading-edge logic foundry in Wuhan, Hubei, run by Wuhan Hongxin Semiconductor Manufacturing (HSMC), a company founded in 2017 and 90 percent owned by a private Beijing firm, with the rest held through a company of Wuhan's Dongxihu district. It set out to build 14nm and then 7nm lines in two phases totalling CNY 128 billion. Work on the first phase began in early 2018 but had stopped by December 2019 as contractors went unpaid; in a subcontractor's lawsuit its account was frozen and land sealed, and in August 2020 the district confirmed that the project was paused for lack of funds. The district's state-assets body took full control in November 2020, and in February 2021 HSMC told all staff to resign and said it had no plan to resume. It never produced chips.",
+  "location": {
+    "country": "CN",
+    "admin1": "Hubei",
+    "locality": "Wuhan",
+    "site": "National Cybersecurity Talent and Innovation Base, Wuhan Linkonggang Economic and Technological Development Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1"
+    ],
+    "note": null
+  },
+  "status": "cancelled",
+  "status_as_of": "2021-02-28",
+  "status_source_ids": [
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 128000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2020-09-14",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned total for both phases as listed in Wuhan's 2020 major-project plan; s1 reports CNY 15.3 billion invested by the end of 2019."
+    },
+    {
+      "metric": "investment",
+      "value": 52000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2020-09-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "investment",
+      "value": 76000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2020-09-14",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "metric": "capacity",
+      "value": 30000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2021-02-28",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Wafers a month planned for each of the 14nm and 7nm lines, as given on the company's website; wafer size not stated."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2017-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "HSMC was founded in Wuhan."
+    },
+    {
+      "event": "construction_start",
+      "date": "2018",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Work on the first phase began early in the year."
+    },
+    {
+      "event": "paused",
+      "date": "2019-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Work on the plant and dormitories had stopped by December 2019. In a subcontractor's suit over unpaid fees, a court sealed more than 300 mu of land in November 2019 (s1) and the company's account was frozen, the land being released later (s2); in August 2020 the district said the project was paused over funding."
+    },
+    {
+      "event": "acquired",
+      "date": "2020-11",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "Taken over by the Dongxihu district's state-assets body."
+    },
+    {
+      "event": "cancelled",
+      "date": "2021-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Staff were told to resign by 28 February 2021, and the company said there was no plan to resume business."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "烂尾了？斥资1280亿的武汉半导体项目，如今出现资金问题，厂区荒草丛生",
+      "publisher": "National Business Daily",
+      "url": "https://www.nbd.com.cn/articles/2020-09-04/1499113.html",
+      "type": "news",
+      "published": "2020-09-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "【深度】千亿投资的芯片项目陷入停摆，武汉弘芯有多少疑问待解？",
+      "publisher": "Jiemian News",
+      "url": "https://www.jiemian.com/article/4970607.html",
+      "type": "news",
+      "published": "2020-09-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Debt-Ridden China HSMC Faces Restructuring",
+      "publisher": "EE Times Asia",
+      "url": "https://www.eetasia.com/debt-ridden-china-hsmc-faces-restructuring/",
+      "type": "trade_press",
+      "published": "2020-11-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Controversial Wuhan semiconductor maker dismisses all staff in sign of a total failure",
+      "publisher": "Global Times",
+      "url": "https://globaltimes.cn/page/202102/1216772.shtml?id=11",
+      "type": "news",
+      "published": "2021-02-28",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The project was announced before 2020 and is included for its collapse in 2020 and 2021. A July 2020 district government report, later deleted, warned of a large funding gap (s1). HSMC pledged an ASML lithography scanner as collateral for bank loans of about CNY 580 million (s1, s4). The 30,000-wafer monthly figure comes from the company's website as quoted by the sources. No HSMC or government document could be opened; the record rests on news and trade press. A Caixin Global report used earlier was dropped because it is behind a subscriber paywall. Searches in November 2026 found no later report of a sale, reuse or new owner for the site beyond the district's 2020 takeover of the company.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Replaced an undated Jiemian English piece and a paywalled Caixin article with dated National Business Daily, Jiemian and Global Times reports; dropped the registered capital, the CNY 112.3 billion shortfall and the named district company that only Caixin supported; set the pause to December 2019, the company to HSMC and the site to the cybersecurity base in the Linkonggang zone; added the planned 30,000 wafers a month per line. Audit fixes (2026-11-07): cited the Jiemian report for the frozen account (the National Business Daily report says only that a freeze was requested), noted the later release of the land, corrected the stoppage to by December 2019, and recorded that no later report on the site was found."
+  }
+}

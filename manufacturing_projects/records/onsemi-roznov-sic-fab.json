@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "id": "onsemi-roznov-sic-fab",
+  "name": "onsemi Rožnov silicon carbide fab",
+  "aliases": [
+    "onsemi Czech end-to-end silicon carbide facility"
+  ],
+  "company": "onsemi",
+  "operator": "onsemi",
+  "parties": [
+    {
+      "name": "onsemi",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": null
+    },
+    {
+      "name": "Czech Republic",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "Notified a direct grant that the European Commission cleared in November 2025; the Czech government still had to approve paying it. In August 2026 the industry ministry said it was negotiating changes to the plan with onsemi, and in November 2026 the ministry and onsemi agreed to end the project."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "onsemi planned a vertically integrated silicon carbide power device fab at its Rožnov pod Radhoštěm site, which already grows silicon crystals, makes silicon and SiC wafers and runs a silicon wafer fab. Announced in June 2024 as a multi-year brownfield investment of up to USD 2 billion, the project was cleared by the European Commission in November 2025 for a Czech direct grant of about EUR 450 million against EUR 1.64 billion of investment, with commercial output targeted for 2027. By August 2026 the Czech government had not publicly approved the grant, and the industry ministry said talks on changing the plan were under way. On 6 November 2026 onsemi and the ministry agreed not to proceed with the expansion, which onsemi tied to conditions in the global SiC market; existing production at Rožnov continues. No construction start was reported.",
+  "location": {
+    "country": "CZ",
+    "admin1": "Zlín Region",
+    "locality": "Rožnov pod Radhoštěm",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "cancelled",
+  "status_as_of": "2026-11-06",
+  "status_source_ids": [
+    "s7",
+    "s8"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-06-19",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Multi-year brownfield plan; CzechInvest put it at more than CZK 44 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 1640000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-11-21",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Investment the Czech grant was assessed against when the European Commission cleared it."
+    },
+    {
+      "metric": "government_incentive",
+      "value": 450000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-11-21",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "Direct grant of about CZK 12 billion cleared under EU State aid rules (case SA.117291); the Czech government had not publicly approved it by August 2026, and the November 2026 release does not mention it."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-06-20",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-06-19",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Announced subject to Czech incentive approval and European Commission notification."
+    },
+    {
+      "event": "volume_production",
+      "date": "2027",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Start of commercial output targeted by 2027 at the State aid clearance."
+    },
+    {
+      "event": "cancelled",
+      "date": "2026-11-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "onsemi and the Czech Ministry of Industry and Trade agreed not to go ahead with the expansion; onsemi cited changes in the global SiC market and said current Rožnov output is unaffected."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "onsemi selects Czech Republic to establish $2bn end-to-end silicon carbide production for power semiconductors",
+      "publisher": "Semiconductor Today",
+      "url": "https://semiconductor-today.com/news_items/2024/jun/onsemi-190624.shtml",
+      "type": "trade_press",
+      "published": "2024-06-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "American chip manufacturer onsemi has announced an investment of more than CZK 40 billion in the expansion of its factory in Rožnov pod Radhoštěm",
+      "publisher": "CzechInvest",
+      "url": "https://czechinvest.gov.cz/en/Homepage/News/June-2024/American-chip-manufacturer-onsemi-has-announced-an-investment-of-more-than-CZK-40-billion-in-the-exp",
+      "type": "government",
+      "published": "2024-06-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "European Commission approves Czech state aid for semiconductor manufacturer onsemi",
+      "publisher": "CzechInvest",
+      "url": "https://czechinvest.gov.cz/en/Homepage/Novinky/Listopad-2025-(1)/European-Commission-approves-Czech-state-aid-for-s",
+      "type": "government",
+      "published": "2025-11-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "EU approves €450M boost for Onsemi's SiC power chip plant",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/eu-approves-e450m-boost-for-onsemis-sic-power-chip-plant",
+      "type": "trade_press",
+      "published": "2025-11-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Onsemi mění plány. Může to zasáhnout i miliardové investice v Rožnově",
+      "publisher": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/312327",
+      "type": "news",
+      "published": "2026-08-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Commission approves €450 million Czech State aid for Onsemi's new semiconductor manufacturing facility",
+      "publisher": "Kurzy.cz",
+      "url": "https://zpravy.kurzy.cz/838063-commission-approves-450-million-czech-state-aid-for-onsemis-new-semiconductor-manufacturing/",
+      "type": "news",
+      "published": "2025-11-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "onsemi and Czech Ministry of Industry and Trade Agree to Conclude SiC Expansion Project, Reaffirm Partnership",
+      "publisher": "onsemi",
+      "url": "https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-and-czech-ministry-of-industry-and-trade-agree-to-conclude-sic-expansion-project-reaffirm-partnership",
+      "type": "company_announcement",
+      "published": "2026-11-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "Výrobce polovodičů onsemi zrušil plány na rozšíření výroby v ČR za 43,5 miliardy",
+      "publisher": "ČTK (via Seznam Zprávy)",
+      "url": "https://www.seznamzpravy.cz/clanek/ekonomika-firmy-vyrobce-polovodicu-onsemi-zrusil-plany-na-rozsireni-vyroby-v-cr-za-435-mld-319922",
+      "type": "news",
+      "published": "2026-11-06",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The Commission's clearance, read in a reprint, describes an integrated plant covering every step from SiC crystal growth to finished devices, and onsemi committed to help develop 200 mm SiC technology in Europe; no source gives the fab's own wafer size or capacity. The August 2026 report also covers job cuts at the existing Rožnov plant in 2025 and 2026. The November 2026 release does not say what happens to the cleared State aid; onsemi said it still expects to invest and hire at its Rožnov and Brno sites. No separate statement from the industry ministry was found; the minister's comments on the decision appear in onsemi's release and the ČTK report.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the status from announced to cancelled after onsemi and the Czech industry ministry agreed on 6 November 2026 not to proceed, adding onsemi's release and a ČTK report as sources and a cancelled milestone; updated the summary, grant and party notes accordingly. Audit fixes (2026-11-07): Limited the claim that the Czech government never approved the grant to what the August 2026 report states, corrected the CzechInvest headline to its published form and noted that the ministry's view is read through onsemi's release and ČTK."
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "id": "cxmt-beijing-fab",
+  "name": "CXMT Beijing fab (Changxin Jidian)",
+  "aliases": [
+    "CXMT Beijing factory",
+    "北京生产线"
+  ],
+  "company": "CXMT",
+  "operator": "Changxin Jidian (Beijing) Memory Technologies",
+  "parties": [
+    {
+      "name": "Changxin Jidian (Beijing) Memory Technologies",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "长鑫集电（北京）存储技术有限公司, which designs, makes and sells DRAM; consolidated by CXMT from 2022."
+    },
+    {
+      "name": "CXMT Corporation",
+      "role": "owner",
+      "share_pct": 31.72,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Controls more than half of the votes through a concert agreement with Beijing E-Town International Investment and Development, Beijing E-Town Technology and 北京屹唐科技有限公司."
+    },
+    {
+      "name": "Beijing E-Town International Investment and Development",
+      "role": "owner",
+      "share_pct": 31.72,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Investment arm of the Beijing Economic-Technological Development Area."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": 24.67,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "State-backed fund known as Big Fund II."
+    },
+    {
+      "name": "Beijing E-Town Technology",
+      "role": "owner",
+      "share_pct": 6.79,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "北京屹唐科技有限公司",
+      "role": "owner",
+      "share_pct": 5.09,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "CXMT's 12-inch DRAM fab in the Beijing Economic-Technological Development Area (Yizhuang), run by Changxin Jidian, which is co-owned by CXMT, Beijing E-Town investment vehicles and China's national chip fund. CXMT's December 2025 prospectus lists three CXMT 12-inch DRAM fabs; read with its accounts, it points to the Beijing line starting production in 2022, the year CXMT consolidated it. An account credited to Beijing's integrated-circuit major projects office reported in July 2026 more than 100,000 wafers a month of installed capacity, more than CNY 100 billion of investment and over 3,300 staff, and CXMT's 2026 half-year report gives the line a budget of about CNY 100.8 billion, about 96 percent spent. In August 2026 trade press reported that CXMT was planning a second Beijing fab in the same zone.",
+  "location": {
+    "country": "CN",
+    "admin1": "Beijing",
+    "locality": "Beijing",
+    "site": "Beijing Economic-Technological Development Area",
+    "address": "北京市北京经济技术开发区经海三路51号院1号楼",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Yizhuang area of Beijing; the address is the registered and principal operating address of Changxin Jidian in the prospectus."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-04",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 100849000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-06-30",
+      "source_ids": [
+        "s4",
+        "s2"
+      ],
+      "note": "Budget for the Beijing production line in CXMT's 2026 half-year report, about 96 percent of it spent by 30 June 2026; a July 2026 account gave the project's investment as more than CNY 100 billion."
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Installed capacity in wafers per month; the prospectus states all CXMT capacity is on 12-inch lines."
+    },
+    {
+      "metric": "jobs",
+      "value": 3300,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "more_than",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-07-28",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Employees at the Beijing factory, about 80 percent in research and technical roles."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Derived, not stated per fab: the prospectus says new lines started up in 2022 and 2024 without naming them. The Beijing line, consolidated by CXMT in 2022, moved about CNY 19 billion of construction into fixed assets that year while the Hefei phase 2 line moved none, so the 2022 start-up is attributed to Beijing; the prospectus does not rule out a new line inside Hefei phase 1."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "长鑫科技集团股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202512/002170_20251230_B8QS.pdf",
+      "type": "company_filing",
+      "published": "2025-12-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "长鑫科技正式登陆科创板！早在10年前布局北京亦庄",
+      "publisher": "The Paper",
+      "url": "https://www.thepaper.cn/newsDetail_forward_33671343",
+      "type": "news",
+      "published": "2026-07-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "IPO 成功獲得資金，長鑫存儲預定北京興建第二座 12 吋 DRAM 晶圓廠",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://finance.technews.tw/2026/08/04/cxmt-plans-to-build-its-second-12-inch-dram-wafer-fab-in-beijing/",
+      "type": "trade_press",
+      "published": "2026-08-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "长鑫科技集团股份有限公司2026年半年度报告",
+      "publisher": "CXMT Corporation",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225529543.PDF",
+      "type": "company_filing",
+      "published": "2026-08-29",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The 2022 production start is derived from the prospectus, which does not date each line: it says new lines started up in 2022 and 2024, and 2022 is the year the Beijing line was consolidated and moved construction into fixed assets while the Hefei phase 2 line did not. The 2026 half-year report still shows construction in progress on the Beijing line (about CNY 14.2 billion on 30 June 2026, with about CNY 8.4 billion added in the first half); no source describes a new building, so this is treated as continuing build-out of an operating line. The July 2026 item was posted on The Paper's government-affairs channel and credits Beijing's integrated-circuit major projects office; it gives the site as about 500 mu, which is not converted into a site area metric. The second Beijing fab reported in August 2026 was at an early planning stage with no capacity, investment or timetable, and would be a separate facility; it is not recorded.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Changed the CNY 100 billion investment basis from reported to planned because the source does not say it was spent, named all parties to CXMT's concert agreement, and added an August 2026 report of a planned second Beijing fab, which also confirms the existing fab. Audit fixes (2026-11-07): added CXMT's 2026 half-year report and replaced the more-than-CNY-100-billion investment with the line's stated budget of CNY 100.849 billion, and reworded the milestone, summary and notes to say plainly that the 2022 production year is inferred from the prospectus and not stated for the Beijing line."
+  }
+}

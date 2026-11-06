@@ -1,0 +1,519 @@
+{
+  "schema_version": "1.0",
+  "id": "winbond-kaohsiung-fab",
+  "name": "Winbond Kaohsiung Fab",
+  "aliases": [
+    "Winbond Kaohsiung 12-inch fab"
+  ],
+  "company": "Winbond",
+  "operator": "Winbond Electronics",
+  "parties": [
+    {
+      "name": "Winbond Electronics",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s7"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "dram"
+  ],
+  "process_nodes": [
+    {
+      "label": "25nm",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "In-house DRAM process named for the fab at groundbreaking; the 2021 annual report planned to move 25nm production there in 2022."
+    },
+    {
+      "label": "20nm",
+      "source_ids": [
+        "s3",
+        "s8"
+      ],
+      "note": "DRAM process the 2021 annual report said would be used at the fab; trade press in November 2026 said Module B will also use it."
+    },
+    {
+      "label": "16nm",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "DRAM process reported in November 2026 for Module B, whose design was said to be largely complete."
+    },
+    {
+      "label": "14nm",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Next-generation DRAM process reported for Module B with EUV lithography in August 2026; November 2026 reports name 16nm and 20nm instead."
+    },
+    {
+      "label": "12nm",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Next-generation DRAM process reported for Module B with EUV lithography in August 2026; November 2026 reports name 16nm and 20nm instead."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "Winbond's second 12-inch wafer fab, in the Kaohsiung Science Park at Luzhu, Kaohsiung, making specialty DRAM. Construction began in October 2018 and finished in 2021; the board approved about NT$13.1 billion of capital spending in March 2021, and the fab began mass production in 2022, later than the 2021 target set at groundbreaking. The first module, Module A, ran about 16,000 wafers a month in the third quarter of 2026 with a target of about 24,000 by the end of that year. Winbond plans a second module, Module B, for 50,000 to 60,000 wafers a month; in November 2026 its board approved about NT$73.2 billion for the building, facilities and long-lead tools, with a groundbreaking planned for 29 December 2026, first shipments in the second half of 2029 and full output in 2030.",
+  "location": {
+    "country": "TW",
+    "admin1": "Kaohsiung City",
+    "locality": "Kaohsiung",
+    "site": "Kaohsiung Science Park",
+    "address": "No. 35, Luke 5th Rd., Kaohsiung Science Park, Luzhu Dist., Kaohsiung City 821011, Taiwan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4"
+    ],
+    "note": "Luzhu District; the park is part of the Southern Taiwan Science Park."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-11-03",
+  "status_source_ids": [
+    "s5",
+    "s6",
+    "s7",
+    "s8"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 13127000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "approximately",
+      "basis": "committed",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-03-16",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Capital expenditure approved by the board for capacity, laboratory and test equipment and fab facility systems; not a total project cost."
+    },
+    {
+      "metric": "investment",
+      "value": 73163000000,
+      "value_max": null,
+      "unit": "TWD",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "phase",
+      "phase_label": "Module B",
+      "as_of": "2026-11-03",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "Capital spending approved by the board for Module B's building works, electrical and mechanical facilities and some long-lead equipment; further spending is to be evaluated by the board later."
+    },
+    {
+      "metric": "capacity",
+      "value": 10000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Module A",
+      "as_of": "2022-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "12-inch wafers per month in the initial phase, targeted for the fourth quarter of 2022. The annual report does not use the Module A name; later reporting does."
+    },
+    {
+      "metric": "capacity",
+      "value": 20000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "committed",
+      "applies_to": "phase",
+      "phase_label": "Module A",
+      "as_of": "2022-02",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "12-inch wafers per month; the board approved the capital spending for this expansion in February 2022, to be carried out as market conditions allow."
+    },
+    {
+      "metric": "capacity",
+      "value": 15000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Module A",
+      "as_of": "2026-08-07",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Current 12-inch wafers per month reported for Module A."
+    },
+    {
+      "metric": "capacity",
+      "value": 16000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Module A",
+      "as_of": "2026-11-03",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "12-inch wafers per month reported for Module A in the third quarter of 2026."
+    },
+    {
+      "metric": "capacity",
+      "value": 24000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Module A",
+      "as_of": "2026-11-03",
+      "source_ids": [
+        "s5",
+        "s7",
+        "s8"
+      ],
+      "note": "12-inch wafers per month targeted for Module A by the end of 2026, to be held at full load in 2027 and 2028."
+    },
+    {
+      "metric": "capacity",
+      "value": 10000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Module B",
+      "as_of": "2026-08-07",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Initial installed 12-inch wafers per month for Module B."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Module B",
+      "as_of": "2026-08-07",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Total 12-inch wafers per month for Module B when fully equipped, as reported in August 2026."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": 60000,
+      "unit": "wafers_per_month",
+      "qualifier": "range",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Module B",
+      "as_of": "2026-11-03",
+      "source_ids": [
+        "s6",
+        "s7",
+        "s8"
+      ],
+      "note": "Total 12-inch wafers per month planned for Module B, about twice Module A."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 30000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Module B",
+      "as_of": "2026-08-14",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Reported as about twice the size of the first fab's cleanroom."
+    },
+    {
+      "metric": "site_area",
+      "value": 25,
+      "value_max": null,
+      "unit": "hectares",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2018-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Site area given at groundbreaking."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2018-10",
+      "planned": false,
+      "phase_label": "Module A",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "The groundbreaking release is undated; the 2021 annual report dates the start of construction to October 2018."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021",
+      "planned": true,
+      "phase_label": "Module A",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Target at groundbreaking, which was missed."
+    },
+    {
+      "event": "building_complete",
+      "date": "2021",
+      "planned": false,
+      "phase_label": "Module A",
+      "source_ids": [
+        "s3"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": true,
+      "phase_label": "Module A",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Pilot run planned when the board approved capital spending in March 2021."
+    },
+    {
+      "event": "volume_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": "Module A",
+      "source_ids": [
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "announced",
+      "date": "2026-08",
+      "planned": false,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Expansion plan described by Winbond in August 2026; capital spending was approved in November 2026."
+    },
+    {
+      "event": "construction_start",
+      "date": "2027-01",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "Construction start given in August 2026."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2026-12-29",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Groundbreaking ceremony planned internally, as reported in November 2026."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2029",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Equipment to be installed from early 2029, in stages according to demand."
+    },
+    {
+      "event": "first_production",
+      "date": "2029-Q4",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Pilot production targeted for the end of 2029 in August 2026."
+    },
+    {
+      "event": "first_production",
+      "date": "2029-H2",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s7",
+        "s8"
+      ],
+      "note": "Small-volume shipments expected from the second half of 2029."
+    },
+    {
+      "event": "volume_production",
+      "date": "2029-Q4",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Trade press timing; the company president was reported elsewhere as expecting volume output from 2030."
+    },
+    {
+      "event": "volume_production",
+      "date": "2030",
+      "planned": true,
+      "phase_label": "Module B",
+      "source_ids": [
+        "s5",
+        "s7",
+        "s8"
+      ],
+      "note": "Volume output from 2030 attributed to the company president in August 2026; November 2026 reports expect full capacity in 2030."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Winbond Holds Groundbreaking Ceremony for New Fab at Kaohsiung Science Park of Southern Taiwan Science Park",
+      "publisher": "Winbond Electronics",
+      "url": "https://www.winbond.com/hq/about-winbond/news-and-events/news/news00469.html",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Winbond Electronics Corporation announced the capital expenditure for the 12-inch fab had obtained approval from the board of directors",
+      "publisher": "Winbond Electronics",
+      "url": "https://www.winbond.com/hq/about-winbond/news-and-events/news/news00542.html",
+      "type": "company_announcement",
+      "published": "2021-03-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Winbond Electronics Corporation 2021 Annual Report",
+      "publisher": "Winbond Electronics",
+      "url": "https://www.winbond.com/export/sites/winbond/about-winbond/investor/financial-information/annual-report/report/2021-Winbond-Electronics-Corporation-Annual-Report_Final.pdf",
+      "type": "company_report",
+      "published": "2022-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Winbond Electronics Corporation Corporate Sustainability Report 2022",
+      "publisher": "Winbond Electronics",
+      "url": "https://esg.winbond.com/files/2022_WINBOND_ESG_REPORT_EN.pdf",
+      "type": "company_report",
+      "published": "2023",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Winbond to expand Kaohsiung fab",
+      "publisher": "Taipei Times",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/08/07/2003862057",
+      "type": "news",
+      "published": "2026-08-07",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "[News] Nanya Tech Reportedly Eyes Yunlin, Pingtung Fabs for 1d DRAM, Custom Memory, Investment to Top NT$300B",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2026/08/14/news-nanya-tech-reportedly-eyes-new-yunlin-pingtung-fabs-for-1d-dram-custom-memory-investment-to-top-nt300b/",
+      "type": "trade_press",
+      "published": "2026-08-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "華邦電再砸731億元資本支出 擴建高雄12吋廠",
+      "publisher": "Liberty Times",
+      "url": "https://ec.ltn.com.tw/article/breakingnews/5628056",
+      "type": "news",
+      "published": "2026-11-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "華邦電通過 731 億元資本支出案，高雄廠第二期預計 12 月底動工",
+      "publisher": "TechNews (科技新報)",
+      "url": "https://finance.technews.tw/2026/11/03/winbond-electronics-approves-nt73-1-billion-capital-expenditure-plan/",
+      "type": "trade_press",
+      "published": "2026-11-03",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Trade press calls Module B the P2 fab or the second phase (KH9B, with Module A as KH9A); this record keeps it as a phase of the Kaohsiung fab because Winbond presented it as an expansion of that fab. The Module B plans come from news and trade press reports of company statements and of the November 2026 board decision; no Winbond release or board filing for Module B was read. Reports differ on Module B's process: August 2026 reports named 14nm and 12nm with EUV, November 2026 reports 16nm and 20nm.",
+  "registry_records": [
+    {
+      "record_id": "taiwan-moenv-ems:ems_s_01:E2903416",
+      "relation": "same_facility",
+      "note": "Environmental-control registration for the Kaohsiung fab at the address Winbond gives."
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added November 2026 reports of the board's NT$73.2 billion Module B capital spending, the planned 29 December 2026 groundbreaking, 16nm process, the 50,000 to 60,000 wafer plan and Module A's third-quarter capacity, updated the status date and summary, and loosened the early-2029 tool move-in date to the year."
+  }
+}
