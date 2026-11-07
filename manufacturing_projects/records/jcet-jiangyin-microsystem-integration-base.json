@@ -1,0 +1,241 @@
+{
+  "schema_version": "1.0",
+  "id": "jcet-jiangyin-microsystem-integration-base",
+  "name": "JCET Microelectronics microsystem integration manufacturing base, Jiangyin",
+  "aliases": [
+    "JCET Microelectronics Wafer-level Microsystems Integration High-end Manufacturing Project",
+    "JCET Microelectronics Microsystem Integration High-End Manufacturing Base"
+  ],
+  "company": "JCET",
+  "operator": "JCET Microelectronics (Jiangyin) Co., Ltd.",
+  "parties": [
+    {
+      "name": "JCET Microelectronics (Jiangyin) Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "JCET subsidiary that runs the base; JCET's 2024 annual results call it JCET Microelectronics."
+    },
+    {
+      "name": "JCET Group",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Parent company; announced the project and reports its progress."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "assembly_test"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "JCET's packaging and test base in Jiangyin, Jiangsu, run by its subsidiary JCET Microelectronics (Jiangyin), for microsystem integration combining high-density wafer-level and flip-chip packaging, including 2.5D and 3D wafer-level packaging. Construction began on 29 July 2022, when JCET's chief executive called it the largest single investment in the history of China's chip packaging and manufacturing industry; trade press puts the total at CNY 10 billion, with a first phase sized for 6 billion packaged chips a year. The roof was sealed by June 2023. JCET's 2024 annual results said the base was in operation and its 2025 interim results dated commissioning to 2024; in 2026 JCET reported stable volume production and added capacity, and in September it proposed a CNY 2.351 billion expansion of high-performance computing packaging capacity there as part of a share placement.",
+  "location": {
+    "country": "CN",
+    "admin1": "Jiangsu",
+    "locality": "Jiangyin",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "Trade press places the plant in the eastern part of Jiangyin City."
+  },
+  "status": "operating",
+  "status_as_of": "2026-10-22",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 10000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-07-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Total project investment as reported by trade press; the JCET releases read here do not state an amount."
+    },
+    {
+      "metric": "capacity",
+      "value": 6000000000,
+      "value_max": null,
+      "unit": "units_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2024-07-29",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Advanced-packaged chips per year once the first phase is in operation."
+    },
+    {
+      "metric": "investment",
+      "value": 2351000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "2026 capacity expansion",
+      "as_of": "2026-09-05",
+      "source_ids": [
+        "s8",
+        "s9"
+      ],
+      "note": "Planned total for the high-performance computing advanced packaging capacity expansion in JCET's September 2026 share placement proposal, CNY 1.5 billion of it from the placement; financial press gives a 20-month build period at a Jiangyin address."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "groundbreaking",
+      "date": "2022-07-29",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Construction start with a foundation-stone ceremony attended by Wuxi and Jiangyin officials."
+    },
+    {
+      "event": "first_production",
+      "date": "2024-H1",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "In June 2023 JCET targeted completion and operational readiness of the first phase for early 2024; trade press in late July 2024 still expected completion and production around June to July 2024."
+    },
+    {
+      "event": "first_production",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "JCET's 2024 annual results said the base had been put into operation, and its 2025 interim results date the commissioning to 2024."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "JCET Begins Construction of a New High-End Manufacturing Base in Jiangyin",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=1914",
+      "type": "company_announcement",
+      "published": "2022-07-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "JCET’s New High-end Manufacturing Facility in Jiangyin Completes Roof Sealing Stage on Schedule",
+      "publisher": "JCET Group",
+      "url": "https://jcetglobal.com/en/site/news-detail?id=1929",
+      "type": "company_announcement",
+      "published": "2023-06-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "[News] JCET's New High-End Packaging Plant in China Reportedly to Start Production Soon",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2024/07/29/news-jcets-new-high-end-packaging-plant-in-china-reportedly-to-start-production-soon/",
+      "type": "trade_press",
+      "published": "2024-07-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "JCET Releases 2024 Annual Report, Achieves Record-High Revenue",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=1952",
+      "type": "company_announcement",
+      "published": "2025-04-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "JCET Releases 2025 Interim Report: Accelerates Investment in Advanced Packaging, Achieves Record-High Revenue in Q2 and H1",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=1997",
+      "type": "company_announcement",
+      "published": "2025-08-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "JCET Reports 42.7% YoY Surge in Q1 2026 Net Profit Attributable to Shareholders",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=2055",
+      "type": "company_announcement",
+      "published": "2026-04-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "Building Out Advanced Packaging Portfolio, JCET Delivers Steady Revenue Growth and Improved Profitability in Q3 YTD 2026",
+      "publisher": "JCET Group",
+      "url": "https://www.jcetglobal.com/en/site/news-detail?id=2087",
+      "type": "company_announcement",
+      "published": "2026-10-22",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "长电科技拟定增募资65亿元 投向先进封装项目扩产升级",
+      "publisher": "Securities Times (via 10jqka)",
+      "url": "https://stock.10jqka.com.cn/20260904/c679581370.shtml",
+      "type": "news",
+      "published": "2026-09-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "长电科技抛65亿元定增预案 拟投向4个工厂并补流偿债",
+      "publisher": "Dazhong Securities News (via 10jqka)",
+      "url": "https://news.10jqka.com.cn/20260905/c679625691.shtml",
+      "type": "news",
+      "published": "2026-09-05",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Trade press relays the CNY 10 billion investment and the first-phase capacity from UDN and DRAMeXchange reports; JCET's own releases describe the project without these figures. The sources do not name an industrial park or give an address. The 2026 releases describe capacity being added but name no new building. The September 2026 expansion is a proposal reported by financial press, which does not say whether it adds a building, and no construction start is reported, so the status stays operating.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Attributed the largest-investment claim to JCET's chief executive and reworded the operation dates to match the 2024 annual and 2025 interim results; other statements were confirmed, and 2026 reporting on JCET's share placement and new Shanghai plant names no new building at Jiangyin. Audit fixes (2026-11-07): added the CNY 2.351 billion Jiangyin capacity expansion that JCET proposed in its September 2026 share placement, run by JCET Microelectronics, and corrected the trade press attribution of the CNY 10 billion figure to UDN and DRAMeXchange."
+  }
+}

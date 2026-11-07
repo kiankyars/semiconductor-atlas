@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "id": "china-xmc-wuhan-fab-c",
+  "name": "XMC Fab C (12-inch Line Phase 3), Wuhan",
+  "aliases": [
+    "武汉新芯12英寸集成电路制造生产线三期项目",
+    "武汉新芯三期Fab C",
+    "Wuhan Xinxin Fab C"
+  ],
+  "company": "YMTC",
+  "operator": "Wuhan Xinxin Semiconductor Manufacturing Co., Ltd. (XMC)",
+  "parties": [
+    {
+      "name": "Wuhan Xinxin Semiconductor Manufacturing Co., Ltd. (XMC)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Builds and will run the line itself. Its STAR Market listing application, which earmarked CNY 4.3 billion of proceeds for this project, was accepted in September 2024 and withdrawn, the exchange ending its review on 19 May 2026."
+    },
+    {
+      "name": "CCSH Corporation (长江存储控股股份有限公司)",
+      "role": "owner",
+      "share_pct": 68.19,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "YMTC's holding company, called Yangtze Memory Technologies Holdings (长江存储科技控股) in the 2024 prospectus; controlling shareholder of XMC, with no actual controller of its own according to the prospectus."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "advanced_packaging",
+    "rf",
+    "logic"
+  ],
+  "process_nodes": [
+    {
+      "label": "RF-SOI",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned for 10,000 of the 50,000 wafers a month."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "The third 300 mm fab of XMC (Wuhan Xinxin), a specialty foundry controlled by YMTC's holding company, on reserved land at its existing campus in Wuhan's East Lake High-tech Zone. XMC disclosed the project in its September 2024 listing prospectus: about CNY 28 billion for 50,000 wafers a month, 40,000 of them for 3D integration (two- and multi-wafer stacking, chip-to-wafer heterogeneous integration, 2.5D and supporting logic) and 10,000 for RF-SOI. Construction began in 2024 and the project's environmental assessment was approved in July 2025. XMC withdrew its listing application, and the exchange ended its review in May 2026; no production date has been reported.",
+  "location": {
+    "country": "CN",
+    "admin1": "Hubei",
+    "locality": "Wuhan",
+    "site": "XMC campus, Wuhan East Lake High-tech Development Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "Built on reserved land within XMC's existing site; XMC's registered address is 18 Gaoxin 4th Road in the zone."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-10-21",
+  "status_source_ids": [
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 28000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-09-29",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Estimated total investment, about 75% of it for production equipment."
+    },
+    {
+      "metric": "capacity",
+      "value": 50000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-09-29",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "300 mm wafers per month at full output: 40,000 for 3D integration and 10,000 for RF-SOI."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-09-30",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Disclosed as the main use of proceeds in XMC's STAR Market prospectus."
+    },
+    {
+      "event": "construction_start",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "Hubei Daily dates the start of Fab C construction to 2024; XMC first booked construction in progress for the project in 2024, about CNY 141 million by year-end and CNY 399 million by June 2025."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "武汉新芯集成电路股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "Wuhan Xinxin Semiconductor Manufacturing Co., Ltd. (Shanghai Stock Exchange filing, copy hosted by Eastmoney)",
+      "url": "https://pdf.dfcfw.com/pdf/H2_AN202409301640106404_1.PDF",
+      "type": "company_filing",
+      "published": "2024-09-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "武汉新芯集成电路股份有限公司首次公开发行股票并在科创板上市招股说明书（申报稿）",
+      "publisher": "Wuhan Xinxin Semiconductor Manufacturing Co., Ltd.",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202509/002044_20250929_SM99.pdf",
+      "type": "company_filing",
+      "published": "2025-09-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "关于终止对武汉新芯集成电路股份有限公司首次公开发行股票并在科创板上市审核的决定",
+      "publisher": "Shanghai Stock Exchange",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002044_20260519_HGEB.pdf",
+      "type": "regulatory_filing",
+      "published": "2026-05-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "武汉芯片：这个憋了20年的大招，出手有多狠？",
+      "publisher": "Hubei Daily (via Jimu News)",
+      "url": "https://www.ctdsb.net/c1676_202610/2885106.html",
+      "type": "news",
+      "published": "2026-10-21",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "XMC's prospectus plans a two-year build: plant and cleanroom in the year after the start, a first pilot line the year after that and full capacity in the fourth year, without calendar dates. The September 2025 prospectus records the project's filing with the East Lake zone and the zone's approval of its environmental impact report on 10 July 2025. XMC runs two earlier 300 mm fabs on the campus; Hubei Daily says Fab B, the second phase, began production in 2019, and it is not recorded here. The withdrawal of the listing does not in itself mean the project stopped; no source read here reports a pause. YMTC's own Wuhan fabs are separate records (ymtc-wuhan-phase-2, ymtc-wuhan-phase-3) and are not linked.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Renamed the controlling shareholder to its current name, CCSH Corporation, as the 2025 prospectus gives it, set the company to YMTC to match the existing records for that group, and corrected chip-to-wafer hybrid integration to heterogeneous integration as the prospectus describes it; all other statements matched their sources. Audit fixes (2026-11-07): Gave the Eastmoney copy of the 2024 prospectus the same issuer name as the exchange copy; the investment, capacity split, environmental approval, construction-in-progress figures, listing withdrawal and Hubei Daily construction date were re-checked and matched."
+  }
+}

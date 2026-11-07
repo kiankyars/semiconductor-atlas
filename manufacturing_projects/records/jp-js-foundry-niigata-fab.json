@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "id": "jp-js-foundry-niigata-fab",
+  "name": "JS Foundry Niigata fab",
+  "aliases": [
+    "onsemi Niigata fab",
+    "ON Semiconductor Niigata plant"
+  ],
+  "company": "JS Foundry",
+  "operator": "JS Foundry",
+  "parties": [
+    {
+      "name": "JS Foundry",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s7"
+      ],
+      "note": "Contract chipmaker set up in 2021 with investors including the DBJ-backed fund manager Mercuria Investment; it bought the plant from onsemi in 2022 and ran it as its only production site, doing front-end processing of analog and power chips for other companies."
+    },
+    {
+      "name": "onsemi",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Its Japanese unit bought the plant's operating company, then Niigata Sanyo Electronic, in 2011; onsemi sold the plant to JS Foundry in 2022 for about USD 90.3 million."
+    },
+    {
+      "name": "onsemi",
+      "role": "customer",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Signed a wafer supply agreement with the buyer; its contract orders made up most of JS Foundry's sales until the contract ended in 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A wafer fab in Ojiya, Niigata, set up in 1984 as a large-scale integrated circuit plant of the Sanyo Electric group and owned by onsemi from 2011. onsemi announced its sale in August 2020 and in 2022 sold it for about USD 90.3 million to JS Foundry, a new Japanese foundry backed by domestic investors, together with a wafer supply agreement. JS Foundry processed analog and power semiconductor wafers for other companies, but most of its sales came from onsemi, whose contract ended in 2024, and amid low-priced Chinese competition plant utilization reportedly fell below half. It filed for bankruptcy in Tokyo on 14 July 2025 with debts of about JPY 16.1 billion, and its workforce of more than 500 was dismissed. TDK has since acquired the former factory site and plans to open a sensor plant there in the first half of 2029.",
+  "location": {
+    "country": "JP",
+    "admin1": "Niigata",
+    "locality": "Ojiya",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s5",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "closed",
+  "status_as_of": "2026-06-03",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "jobs",
+      "value": 531,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-07-14",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "JS Foundry's headcount when it filed for bankruptcy; the Niigata plant was the company's only production site."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "sold",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "onsemi sold the fab to JS Foundry for about USD 90.3 million with a wafer supply agreement, having announced the planned sale in August 2020."
+    },
+    {
+      "event": "closed",
+      "date": "2025-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ],
+      "note": "JS Foundry filed for bankruptcy on 14 July 2025 and proceedings began the same day; more than 500 employees were dismissed, and by June 2026 the grounds were described as a former factory site."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ON Semiconductor Corporation annual report on Form 10-K for the fiscal year ended December 31, 2022",
+      "publisher": "onsemi",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000162828023002350/on-20221231.htm",
+      "type": "company_filing",
+      "published": "2023-02-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "JSファンダリが破産申請､パワー半導体不振で負債総額161憶円…中国攻勢で成熟世代品に逆風",
+      "publisher": "Nikkan Kogyo Shimbun (Newswitch)",
+      "url": "https://newswitch.jp/p/46338",
+      "type": "news",
+      "published": "2025-07-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "半導体受託製造のJSファンダリ破たん1カ月…行政、地元再就職に全力",
+      "publisher": "Nikkan Kogyo Shimbun (Newswitch)",
+      "url": "https://newswitch.jp/p/46816",
+      "type": "news",
+      "published": "2025-09-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "パワー半導体製造のJSファンダリが破産　～ 事業性の見極めとファイナンサーの流儀 ～",
+      "publisher": "Tokyo Shoko Research",
+      "url": "https://www.tsr-net.co.jp/data/detail/1201621_1527.html",
+      "type": "news",
+      "published": "2025-08-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "「ＴＤＫ信濃川テクノ工場」新設についての知事コメント",
+      "publisher": "Niigata Prefecture",
+      "url": "https://www.pref.niigata.lg.jp/sec/sangyoritchi/kigyoyuchi-gcomment.html",
+      "type": "government",
+      "published": "2026-06-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "TDK、新潟にセンサー新工場　JSファンダリ跡地取得",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2606/03/news048.html",
+      "type": "trade_press",
+      "published": "2026-06-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "JSファンダリの倒産劇、甘かった半導体市場の見立て",
+      "publisher": "Nikkan Kogyo Shimbun (Newswitch)",
+      "url": "https://newswitch.jp/p/47405",
+      "type": "news",
+      "published": "2025-11-01",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "TDK announced on 1 June 2026 that it would build its Shinanogawa Techno Plant for sensor products on the former JS Foundry site, with operation planned for the first half of 2029; the sources do not say whether TDK will process wafers there, so that plant is not linked as a successor fab. Tokyo Shoko Research reported net losses of about JPY 4.0 billion for the year to August 2023 and JPY 6.7 billion for the period to December 2024, after a change of financial year-end, and said a USD 20 million loan agreed with a Hong Kong lender in May 2025 was not paid out as planned. Sources differ on when JS Foundry was set up: March 2021 in a Nikkan Kogyo Shimbun article and April 2021 according to Tokyo Shoko Research. Niigata Prefecture, Ojiya, Nagaoka and the local public employment office formed an emergency employment task force after the bankruptcy.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the note on the 2024 loss, which covered a changed financial period rather than a year, and softened the claim about the Hong Kong loan to what Tokyo Shoko Research reports; other statements were confirmed against their sources."
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "id": "eu-belgan-oudenaarde-fab",
+  "name": "BelGaN Oudenaarde fab",
+  "aliases": [
+    "onsemi Oudenaarde fab",
+    "Mietec Oudenaarde fab"
+  ],
+  "company": "BelGaN",
+  "operator": "BelGaN",
+  "parties": [
+    {
+      "name": "BelGaN",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Bought the fab from onsemi in 2022 as BelGaN Group BV, a company formed in September 2021 by two Hong Kong firms, to convert it into a gallium nitride foundry."
+    },
+    {
+      "name": "onsemi",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "Owned the fab from 2008 and sold it to BelGaN Group BV in 2022 for about USD 19.9 million, with a wafer supply agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "gallium_nitride",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "A wafer fab in Oudenaarde, East Flanders, founded as Mietec in the 1980s and later owned by Alcatel, AMI and, from 2008, onsemi. Having found no buyer for the silicon power fab, onsemi sold it in 2022 for about USD 19.9 million to BelGaN Group, formed by two Hong Kong companies to turn the plant into a gallium nitride foundry for automotive power chips; BelGaN launched a 650 V GaN process in June 2023. Short of cash because its GaN technology was not selling fast enough, BelGaN filed for bankruptcy in July 2024, production stopped and about 440 jobs were lost. The equipment was auctioned for more than EUR 23 million, with Chinese companies among the buyers, and in 2025 Thema Foundries, through its subsidiary Bellaser, bought the empty fab shell and cleanrooms for a planned integrated photonics plant.",
+  "location": {
+    "country": "BE",
+    "admin1": "Flanders",
+    "locality": "Oudenaarde",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s5",
+      "s6"
+    ],
+    "note": "Oudenaarde lies in the province of East Flanders."
+  },
+  "status": "closed",
+  "status_as_of": "2025-08-21",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "jobs",
+      "value": 440,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2024-08",
+      "source_ids": [
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "note": "Staff at the time of the July 2024 bankruptcy filing."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "sold",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": "onsemi sold the fab to BelGaN Group BV for about USD 19.9 million with a wafer supply agreement."
+    },
+    {
+      "event": "closed",
+      "date": "2024-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s6"
+      ],
+      "note": "BelGaN filed for bankruptcy in July 2024 and production stopped while administrators sought a buyer; no buyer took over the business and the equipment was auctioned off."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ON Semiconductor Corporation annual report on Form 10-K for the fiscal year ended December 31, 2022",
+      "publisher": "onsemi",
+      "url": "https://www.sec.gov/Archives/edgar/data/1097864/000162828023002350/on-20221231.htm",
+      "type": "company_filing",
+      "published": "2023-02-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Onsemi’s Belgian GaN spinout bankrupt",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/onsemis-belgian-gan-spinout-bankrupt/",
+      "type": "trade_press",
+      "published": "2024-08-02",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Bankrupt Belgian semi-conductor maker plans to accept takeover bid this week",
+      "publisher": "The Brussels Times",
+      "url": "https://www.brusselstimes.com/1184095/bankrupt-belgian-semi-conductor-maker-plans-to-accept-takeover-bid-this-week",
+      "type": "news",
+      "published": "2024-08-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Chinese buyers swoop on BelGaN equipment assets",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/chinese-buyers-swoop-on-belgan-equipment-assets/",
+      "type": "trade_press",
+      "published": "2025-01-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Bankrupt Belgian fab pivots toward photonic IC production",
+      "publisher": "eeNews Europe",
+      "url": "https://www.eenewseurope.com/en/bankrupt-belgian-fab-pivots-toward-photonic-ic-production/",
+      "type": "trade_press",
+      "published": "2025-04-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Pioneering photonics business to be built on site of former BelGaN factory",
+      "publisher": "VRT NWS",
+      "url": "https://www.vrt.be/vrtnws/en/2025/08/21/pioneering-photonics-business-to-be-built-on-site-of-former-belg/",
+      "type": "news",
+      "published": "2025-08-21",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "In April 2025 the bankruptcy administrators agreed to sell the fab shell, with two large cleanrooms but no machinery, for EUR 20.35 million to a European investor that was not then named; in August 2025 the buyer was identified as Thema Foundries BV, acting through its subsidiary Bellaser BV, which plans to invest more than EUR 200 million in an integrated photonics production and service centre with about 500 jobs. That plant was not yet producing and would be a new facility, so this record stays closed. onsemi's filing gives the sale price as about USD 19.9 million, while eeNews Europe valued the fab and IP deal at USD 13.6 million and later put the job losses at 400. Sources also differ on whether Mietec was founded in 1983 or 1984.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": null
+  }
+}

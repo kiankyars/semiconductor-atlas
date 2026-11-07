@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "id": "jp-hamamatsu-photonics-main-factory-building-5",
+  "name": "Hamamatsu Photonics Main Factory Building No. 5",
+  "aliases": [
+    "Hamamatsu Photonics Ichino Factory front-end building",
+    "本社工場5棟"
+  ],
+  "company": "Hamamatsu Photonics",
+  "operator": "Hamamatsu Photonics K.K.",
+  "parties": [
+    {
+      "name": "Hamamatsu Photonics K.K.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "photonics"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "summary": "A new four-storey building, with a basement, for front-end opto-semiconductor wafer processing at Hamamatsu Photonics' main factory in Ichino-cho, Hamamatsu, Shizuoka Prefecture, connected by cleanroom to the existing front-end building. Hamamatsu first said in February 2023 that it planned such a building for 8-inch wafers and gave details in June 2023: it adds an 8-inch line alongside the plant's existing 6-inch silicon lines and roughly doubles front-end production space, with automated transport. Construction began in July 2023 and the building was completed in June 2025, with about 10,961 m² of floor space. Hamamatsu puts the total cost, including production equipment, at about ¥37 billion and the capacity at about 8,000 wafers a month in 8-inch equivalent, and scheduled operations to begin in December 2025.",
+  "location": {
+    "country": "JP",
+    "admin1": "Shizuoka",
+    "locality": "Hamamatsu",
+    "site": "Hamamatsu Photonics Main Factory",
+    "address": "1126-1 Ichino-cho, Chuo-ku, Hamamatsu, Shizuoka, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": "The 2025 release names the same lot in Chuo-ku that the 2023 release gave in Higashi-ku; the 2025 release title calls the site the Ichino Factory."
+  },
+  "status": "under_construction",
+  "status_as_of": "2025-07-03",
+  "status_source_ids": [
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 37000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-06-17",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Total construction cost including production equipment, unchanged from the 2023 announcement."
+    },
+    {
+      "metric": "capacity",
+      "value": 8000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-06-17",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Wafers per month converted to 8-inch (200 mm) wafers."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-02-24",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "A release about a new Shingai Factory building said Hamamatsu planned a front-end building for 8-inch wafers at its main factory within three years."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2023-06-30",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Ceremony date set in the June 2023 release that detailed the building."
+    },
+    {
+      "event": "construction_start",
+      "date": "2023-07",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-06",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Completion target in the 2023 announcement."
+    },
+    {
+      "event": "building_complete",
+      "date": "2025-06",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Completion announced on 17 June 2025, with a completion ceremony scheduled for 20 June 2025."
+    },
+    {
+      "event": "first_production",
+      "date": "2025-12",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Scheduled start of operations."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Hamamatsu Photonics will construct a new factory building at its main factory site to boost production capacity in the opto-semiconductor device market",
+      "publisher": "Hamamatsu Photonics",
+      "url": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2023/2023_06_23_en.pdf",
+      "type": "company_announcement",
+      "published": "2023-06-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Hamamatsu Photonics completes a new building at the Ichino Factory to enhance the production capacity of optical semiconductor devices.",
+      "publisher": "Hamamatsu Photonics",
+      "url": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2025/2025_06_17_en.pdf",
+      "type": "company_announcement",
+      "published": "2025-06-17",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "浜松ホトニクスが光半導体製造前工程の新棟、8インチウエハー対応ラインも",
+      "publisher": "MONOist",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2507/03/news043.html",
+      "type": "trade_press",
+      "published": "2025-07-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Hamamatsu Photonics will start the construction of a new factory building to meet the growing demand of the opto-semiconductor device market",
+      "publisher": "Hamamatsu Photonics",
+      "url": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2023/2023_02_24_en.pdf",
+      "type": "company_announcement",
+      "published": "2023-02-24",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "No source found in November 2026 reports that operations began in December 2025 as scheduled, so the status stays under construction as of the newest report on the completed building. The 6-inch lines are in the existing building; this record covers the new building only. Hamamatsu also built a separate back-end building at its Shingai Factory, which is outside the scope of this dataset.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Dated the announcement to Hamamatsu's February 2023 release, which first named the planned 8-inch front-end building, and recorded the June 2023 groundbreaking date as scheduled; no report of the December 2025 start of operations was found, so the status stays under construction."
+  }
+}

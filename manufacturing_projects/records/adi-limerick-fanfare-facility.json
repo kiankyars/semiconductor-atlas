@@ -201,6 +201,13 @@
   ],
   "related": [],
   "notes": "RTÉ put the building at 40,000 sq ft, while the trade report and the Irish Department of Enterprise give 45,000 sq ft. The amount of Irish State aid was not published. The June 2024 award reports tie the work to the EUR 630 million investment and describe about 1,400 m² of unused space and 1,000 m² of offices fitted out as cleanrooms, 650 m² of existing cleanroom upgraded, new water-treatment and cooling plant, and a goal of raising wafer output by 350 per cent; they still describe the capacity gain as expected. No source read here dates the start or end of the work or a production start, so the record is under construction; the company's own release page could not be opened.",
+  "registry_records": [
+    {
+      "record_id": "eea-industrial-reporting:eea_t_ied-eprtr_p_2007-2024_v16_r00:production-facility:IE.CAED/P0224.FACILITY",
+      "relation": "same_site",
+      "note": "EU industrial-emissions reporting record for Analog Devices' Raheen site in Limerick, where the new facility is being fitted out."
+    }
+  ],
   "review": {
     "reviewed_on": "2026-11-07",
     "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",

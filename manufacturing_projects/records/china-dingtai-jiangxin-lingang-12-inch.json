@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "id": "china-dingtai-jiangxin-lingang-12-inch",
+  "name": "Dingtai Jiangxin 12-inch Automotive Power Wafer Fab, Shanghai Lingang",
+  "aliases": [
+    "12英寸功率半导体自动化晶圆制造中心项目",
+    "上海临港12英寸车规级晶圆厂",
+    "Wingskysemi Lingang fab",
+    "Wingtech Lingang 12-inch fab"
+  ],
+  "company": "Wentianxia",
+  "operator": "Shanghai Dingtai Jiangxin Technology Co., Ltd. (上海鼎泰匠芯科技)",
+  "parties": [
+    {
+      "name": "Shanghai Dingtai Jiangxin Technology Co., Ltd. (上海鼎泰匠芯科技)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s8"
+      ],
+      "note": "Project company founded on 30 October 2020 with registered capital of CNY 3 billion; it is the related party from which Wingtech buys the line's 300 mm foundry wafers."
+    },
+    {
+      "name": "Shanghai Wentianxia Enterprise Development Co., Ltd. (上海闻天下企业发展)",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Sole shareholder of the operator as of December 2025."
+    },
+    {
+      "name": "Wentianxia Technology Group (闻天下科技集团)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4",
+        "s9"
+      ],
+      "note": "Controlling shareholder of Wingtech; its subsidiary runs the fab. The 2020 announcement named Lhasa Economic and Technological Development Zone Wentianxia Investment as the investor that would fund and build the fab instead of the listed company."
+    },
+    {
+      "name": "Wingtech Technology Co., Ltd. (闻泰科技)",
+      "role": "customer",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4",
+        "s6",
+        "s8",
+        "s10",
+        "s11"
+      ],
+      "note": "Buys foundry wafers for its semiconductor business under a 2023 to 2026 framework agreement capped at CNY 6.8 billion; it holds a right to buy the project company and its controlling shareholder undertook to sell once the fab met profit and output conditions."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s4",
+        "s7"
+      ]
+    }
+  ],
+  "summary": "A 300 mm automotive-grade power semiconductor foundry in Shanghai's Lingang Special Area, built and owned by Wentianxia, the controlling shareholder of Wingtech, rather than by the listed company. Announced in October 2020 at about CNY 12 billion for 360,000 wafers a year, it went into full construction in 2021 and was topped out in early 2022. Trial production had started and the line was connected by April 2023; automotive-grade volume production, which Wingtech had expected in 2023, began at the end of 2024 according to Wingtech. Wingtech's semiconductor business buys MOSFET and other power wafers from it, and those related-party purchases continued in 2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Shanghai",
+    "locality": "Shanghai",
+    "site": "Lingang Special Area, China (Shanghai) Pilot Free Trade Zone",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s8"
+    ],
+    "note": "The operator's registered address is 600 Hongyin Road in the Lingang Special Area; the filings do not state that the fab stands at that address."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-15",
+  "status_source_ids": [
+    "s7",
+    "s11",
+    "s10",
+    "s9"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 12000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-10-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Expected total investment when the controlling shareholder announced the project."
+    },
+    {
+      "metric": "capacity",
+      "value": 360000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-10-31",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm wafers per year once the fab reaches design output."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2020-10-30",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Wingtech's board agreed that its controlling shareholder would invest in and build the fab first."
+    },
+    {
+      "event": "construction_start",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Wingtech's 2021 annual report said full construction had been under way since 2021."
+    },
+    {
+      "event": "building_complete",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "The building was topped out early in 2022; in April 2022 Wingtech said mechanical and electrical systems were being installed."
+    },
+    {
+      "event": "volume_production",
+      "date": "2023",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Wingtech's 2021 annual report expected batch capacity to be released in 2023."
+    },
+    {
+      "event": "first_production",
+      "date": "2023-04",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Wingtech's 2022 annual report, published on 29 April 2023, said trial production had begun and the line was connected by then; it does not give the date of the first wafers."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s7",
+        "s11"
+      ],
+      "note": "Automotive-grade wafer volume production began at the end of 2024 after customer quality audits that year."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "闻泰科技股份有限公司关于控股股东拟先行投资建设12英寸功率半导体自动化晶圆制造中心项目暨控股股东补充承诺的公告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2020-10-31/1208664610.PDF",
+      "type": "company_filing",
+      "published": "2020-10-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "闻泰科技股份有限公司2021年年度报告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2022-04-26/1213109227.PDF",
+      "type": "company_filing",
+      "published": "2022-04-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "闻泰科技：上海临港 12 英寸车规级晶圆项目正在推进中",
+      "publisher": "IT Home",
+      "url": "https://www.ithome.com/0/624/412.htm",
+      "type": "news",
+      "published": "2022-06-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "闻泰科技股份有限公司关于日常关联交易的公告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2022-12-10/1215316144.PDF",
+      "type": "company_filing",
+      "published": "2022-12-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "闻泰科技股份有限公司2022年年度报告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-04-29/1216690884.PDF",
+      "type": "company_filing",
+      "published": "2023-04-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "闻泰科技股份有限公司2023年年度报告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219742251.PDF",
+      "type": "company_filing",
+      "published": "2024-04-23",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "闻泰科技股份有限公司2024年年度报告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-04-26/1223328102.PDF",
+      "type": "company_filing",
+      "published": "2025-04-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "闻泰科技股份有限公司关于预计2026年度日常关联交易的公告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-12-11/1224864993.PDF",
+      "type": "company_filing",
+      "published": "2025-12-11",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "闻泰科技股份有限公司2026年半年度报告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474432.PDF",
+      "type": "company_filing",
+      "published": "2026-08-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s10",
+      "title": "闻泰科技股份有限公司关于增加2026年度日常关联交易预计额度的公告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-01/1225451089.PDF",
+      "type": "company_filing",
+      "published": "2026-08-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s11",
+      "title": "闻泰科技股份有限公司2025年年度报告",
+      "publisher": "Wingtech Technology Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225266523.PDF",
+      "type": "company_filing",
+      "published": "2026-04-30",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Wingtech's filings describe the plant as the only domestic wafer supplier to its semiconductor business with automotive qualification. It bought mainly trench MOSFET wafers from the fab in 2025, began taking shielded-gate MOSFET wafers in the fourth quarter of 2025, and planned to add logic, IGBT and bipolar wafers. Its purchases from the operator and its subsidiaries came to about CNY 962 million in January to September 2025 and CNY 782 million in the first half of 2026, when it raised its 2026 cap from CNY 2.2 billion to CNY 2.8 billion; its 2025 annual report lists about CNY 459 million of direct purchases from the operator for the year. Wingtech's 2024 annual report lists MOS, logic IC, BCD and IGBT process platforms being introduced. The operator reported revenue of about CNY 616 million in 2024 and CNY 1.54 billion in 2025, with net losses in both years. Process nodes are not stated in the sources read here.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the milestones: the construction, topping-out and 2023 volume target come from the 2021 annual report, the unsupported second-half 2022 production target was removed, and first production moved to April 2023, when the 2022 annual report said trial production had started (the 2023 report cited before says nothing on it); volume production dated to the fourth quarter of 2024. Corrected the operator note and the 2025 purchase figures and added 2025 operator results. Audit fixes (2026-11-07): Renamed the site to the Lingang Special Area, the English form the existing Lingang records use for the same zone; every other statement was re-checked against the Wingtech filings and IT Home and matched."
+  }
+}

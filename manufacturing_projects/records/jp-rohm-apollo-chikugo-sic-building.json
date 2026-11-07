@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "id": "jp-rohm-apollo-chikugo-sic-building",
+  "name": "ROHM Chikugo Plant SiC power device building",
+  "aliases": [
+    "ROHM Apollo Chikugo Plant SiC power device building",
+    "ROHM Apollo Chikugo new building"
+  ],
+  "company": "ROHM",
+  "operator": "ROHM Device Manufacturing Co., Ltd.",
+  "parties": [
+    {
+      "name": "ROHM Device Manufacturing Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s3",
+        "s6",
+        "s7",
+        "s9"
+      ],
+      "note": "Formerly ROHM Apollo Co., Ltd., which ran the Chikugo Plant; ROHM Apollo is the surviving company of ROHM's front-end manufacturing company under this name, which ROHM set to start on 1 April 2026."
+    },
+    {
+      "name": "ROHM",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Parent company; announced the building and reports its production."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "silicon_carbide"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s3",
+        "s8"
+      ]
+    },
+    {
+      "mm": 200,
+      "source_ids": [
+        "s9"
+      ]
+    }
+  ],
+  "summary": "A new production building for silicon carbide power devices such as SiC Schottky barrier diodes and MOSFETs at the Chikugo Plant in Fukuoka Prefecture of ROHM Apollo, now ROHM Device Manufacturing; ROHM has mass-produced SiC devices since 2010. Announced in 2018 as a three-storey building adding about 11,000 m² of production area, it was built from February 2019 and completed in December 2020, with equipment installation from January 2021; ROHM says it runs entirely on renewable electricity. At an opening ceremony in June 2022 ROHM said all its equipment could handle 8-inch wafers and set mass production for December 2022. ROHM reported that production started at the end of 2022 on 6-inch wafers and said in May 2025 that its Chikugo device lines would run at full capacity. In April 2026 NEDO said ROHM had built an 8-inch SiC device line in a dedicated building at the plant.",
+  "location": {
+    "country": "JP",
+    "admin1": "Fukuoka",
+    "locality": "Chikugo",
+    "site": "Chikugo Plant",
+    "address": "883, Kamikitajima, Chikugo, Fukuoka, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s9"
+    ],
+    "note": "Address of the Chikugo plant as given in ROHM's 2021 release; earlier sources name the site as ROHM Apollo's Chikugo Plant, and NEDO's April 2026 release calls it ROHM Device Manufacturing's Chikugo Plant."
+  },
+  "status": "operating",
+  "status_as_of": "2026-04-02",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s9"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2018",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "ROHM's announcement page is undated; trade press reported the plan on 4 June 2018."
+    },
+    {
+      "event": "construction_start",
+      "date": "2019-02",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Schedule in ROHM's original announcement."
+    },
+    {
+      "event": "building_complete",
+      "date": "2020-12",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "The original announcement aimed to finish construction by the end of 2020."
+    },
+    {
+      "event": "construction_start",
+      "date": "2019-02",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2020-12",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "ROHM's January 2021 release said it had recently held a ceremony marking the completion."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2021-01",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "ROHM said it would begin installing production equipment from January 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Scheduled start of operation in the 2021 completion release."
+    },
+    {
+      "event": "volume_production",
+      "date": "2022-12",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Start of mass production set out at the opening ceremony for the new building on 8 June 2022."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-Q4",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "ROHM's 2023 integrated report says production in the new building started at the end of 2022, in its fiscal 2022."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "ROHM plans new building for more SiC production capacity",
+      "publisher": "ROHM",
+      "url": "https://www.rohm.com/news-detail?news-title=rohm-to-construct-new-building-at-its-apollo-plant&defaultGroupId=false",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "ROHM Completes Construction of a New Environmentally Friendly Building at its Apollo Chikugo to Expand Production Capacity of SiC Power Devices",
+      "publisher": "ROHM",
+      "url": "https://www.rohm.com/news-detail?news-title=rohm-apollo-chikugo-plant&defaultGroupId=false",
+      "type": "company_announcement",
+      "published": "2021-01-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "ROHM Integrated Report 2023",
+      "publisher": "ROHM",
+      "url": "https://fscdn.rohm.com/en/financial/integrated-report/rohm_group_integrated_report_2023_en_view.pdf",
+      "type": "company_report",
+      "published": "2023-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "FY2024 Year-End Presentation Q&A",
+      "publisher": "ROHM",
+      "url": "https://micro.rohm.com/en/financial/account/2503_41811104_QA_en",
+      "type": "company_report",
+      "published": "2025-05-14",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Rohm plans to expand SiC production",
+      "publisher": "Compound Semiconductor",
+      "url": "https://www.compoundsemiconductor.net/article/104510/Rohm_plans_to_expand_SiC_production",
+      "type": "trade_press",
+      "published": "2018-06-04",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "国内グループ会社（製造関連）の新社名を決定",
+      "publisher": "ROHM",
+      "url": "https://fscdn.rohm.com/jp/financial/ir-news-releases/20251106_news4-jp.pdf",
+      "type": "company_announcement",
+      "published": "2025-11-06",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "ローム、半導体後工程の外部委託を拡大　製造戦略を変革：インド2社と提携",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/15/news050_2.html",
+      "type": "trade_press",
+      "published": "2026-10-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "ローム筑後工場のSiC製造、2024年をメドに8インチに：2025年度にシェア30％を目指す",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2206/13/news153.html",
+      "type": "trade_press",
+      "published": "2022-06-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "ロームがグリーンイノベーション基金事業の技術目標を2年前倒しで達成しました",
+      "publisher": "New Energy and Industrial Technology Development Organization (NEDO)",
+      "url": "https://www.nedo.go.jp/news/press/AA5_101925.html",
+      "type": "government",
+      "published": "2026-04-02",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "ROHM's original announcement, an undated page, described a three-storey building of about 11,000 m², while its 2021 completion release lists five floors above ground. In June 2022 ROHM aimed to move Chikugo's SiC production to 8-inch wafers around 2024, and its 2023 integrated report says the building was equipped in advance for 8-inch wafers. NEDO said in April 2026 that ROHM had built an 8-inch SiC device line in a dedicated building at the Chikugo Plant under a Green Innovation Fund project and tested 8-inch MOSFETs made on it; NEDO does not name the building or report volume production on 8-inch wafers. The May 2025 statement refers to the Chikugo Plant's device lines as a whole rather than to this building alone. ROHM decided in October 2025 to merge its domestic manufacturing subsidiaries into front-end and back-end companies, named the front-end company ROHM Device Manufacturing with ROHM Apollo as the surviving company, and trade press reported in October 2026 that the reorganization took effect on 1 April 2026. No investment figure for the building was found.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Updated the operator to ROHM Device Manufacturing after ROHM's April 2026 reorganization, added the 2018 announcement, the June 2022 opening ceremony and December 2022 mass-production target, refined dates, and corrected the completion-ceremony note, which the 2021 release does not date to January 2021. Audit fixes (2026-11-07): added NEDO's April 2026 report of an 8-inch SiC device line in a dedicated building at the Chikugo Plant, which also names the plant under ROHM Device Manufacturing, adding 200 mm wafers, renaming the record and site without the former company name and updating the status date."
+  }
+}

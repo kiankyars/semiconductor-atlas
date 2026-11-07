@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "id": "sony-nagasaki-fab-5",
+  "name": "Sony Nagasaki Technology Center Fab 5",
+  "aliases": [
+    "Nagasaki TEC Fab 5"
+  ],
+  "company": "Sony",
+  "operator": "Sony Semiconductor Manufacturing Corporation",
+  "parties": [
+    {
+      "name": "Sony Semiconductor Manufacturing Corporation",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Owns and runs the Nagasaki Technology Center."
+    },
+    {
+      "name": "Sony Semiconductor Solutions",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Parent of the operator, which it fully funds; announced the new fab."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "image_sensor"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Fab 5 is an additional production building at Sony Semiconductor Manufacturing's Nagasaki Technology Center in Isahaya, Nagasaki Prefecture, the group's production centre for smartphone CMOS image sensors. In October 2019 German tech news site ComputerBase, citing Nikkei, reported that Sony was budgeting ¥100 billion for a new image sensor fab beside the existing plant, to be ready by April 2021. Sony Semiconductor Solutions announced on 20 April 2021 that the building, with about 48,000 m² of floor area and 10,000 m² of cleanroom on two floors, was complete and that its production lines had started operating that month. Sony later described Fab 5 in three steps: an expansion (STEP2) began operating in July 2022, and the final expansion (STEP3), under construction from May 2022, started cleanroom operation in October 2023, with a completion ceremony on 22 December 2023.",
+  "location": {
+    "country": "JP",
+    "admin1": "Nagasaki",
+    "locality": "Isahaya",
+    "site": "Nagasaki Technology Center",
+    "address": "1883-43 Tsukuba-machi, Isahaya-shi, Nagasaki, Japan",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s5"
+    ],
+    "note": "Address of the Nagasaki Technology Center as given in Sony's release; Fab 5 stands on its premises."
+  },
+  "status": "operating",
+  "status_as_of": "2023-12-22",
+  "status_source_ids": [
+    "s1",
+    "s3",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 100000000000,
+      "value_max": null,
+      "unit": "JPY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2019-10-29",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Budget for the fiscal year from April 2020 for the new fab, as reported by ComputerBase citing Nikkei; Sony's 2021 release gives no amount."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 10000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "STEP1",
+      "as_of": "2021-04-20",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "5,000 m² on each of two floors, in the first part of Fab 5."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 13000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "STEP2",
+      "as_of": "2023-12-22",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "6,500 m² on each of two floors, in an expansion of about 54,000 m² of floor area."
+    },
+    {
+      "metric": "cleanroom_area",
+      "value": 13800,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "STEP3",
+      "as_of": "2023-12-22",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "About 6,900 m² on each of two floors, in the final expansion of about 53,000 m² of floor area."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2021-04",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target reported in October 2019 for the new fab to be ready at the start of Sony's fiscal year in April 2021."
+    },
+    {
+      "event": "building_complete",
+      "date": "2021-04",
+      "planned": false,
+      "phase_label": "STEP1",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Completion of the additional building announced on 20 April 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2021-04",
+      "planned": false,
+      "phase_label": "STEP1",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Production lines began operating in April 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-07",
+      "planned": true,
+      "phase_label": "STEP2",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Start of operation of an added production area in Fab 5, as scheduled in May 2022."
+    },
+    {
+      "event": "construction_start",
+      "date": "2022-05",
+      "planned": false,
+      "phase_label": "STEP3",
+      "source_ids": [
+        "s4",
+        "s5"
+      ],
+      "note": "Construction of the final expansion of Fab 5 began in May 2022."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-07",
+      "planned": false,
+      "phase_label": "STEP2",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Sony dates the start of operation of the STEP2 expansion to July 2022."
+    },
+    {
+      "event": "opening",
+      "date": "2023-10",
+      "planned": false,
+      "phase_label": "STEP3",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "The STEP3 cleanroom began operating in October 2023; Sony said it would add production equipment in Fab 5 as market demand warrants."
+    },
+    {
+      "event": "building_complete",
+      "date": "2023-12-22",
+      "planned": false,
+      "phase_label": "STEP3",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Completion ceremony for the final expansion of Fab 5."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "New Fab Expansion at Sony Semiconductor Manufacturing Corporation's Nagasaki Technology Center",
+      "publisher": "Sony Semiconductor Solutions",
+      "url": "https://www.sony-semicon.com/en/news/2021/2021042001.html",
+      "type": "company_announcement",
+      "published": "2021-04-20",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Neue Fabrik: Sony investiert über 800 Millionen Euro in Bildsensoren",
+      "publisher": "ComputerBase",
+      "url": "https://www.computerbase.de/2019-10/sony-neue-bildsensor-fabrik-japan/",
+      "type": "news",
+      "published": "2019-10-29",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "ソニー、CMOSイメージセンサーの新生産ラインが稼働：長崎テックでスマホ向け製品を増産",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2104/22/news027.html",
+      "type": "trade_press",
+      "published": "2021-04-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "ソニーのイメージセンサー事業、課題はロジックの調達：収益ではモバイル向けがけん引も",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2205/31/news078_3.html",
+      "type": "trade_press",
+      "published": "2022-05-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "ソニーセミコンダクタマニュファクチャリング（株）長崎テクノロジーセンター「Fab 5」における最終拡張部分（STEP3）の竣工について",
+      "publisher": "Sony Semiconductor Solutions",
+      "url": "https://www.sony-semicon.com/ja/info/2023/2023122201.html",
+      "type": "company_announcement",
+      "published": "2023-12-22",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The October 2019 report described a building of about 75,000 m² of usable floor space next to the existing plant, while Sony's 2021 release gives about 48,000 m² of floor area and its December 2023 notice about 48,300 m² for the first step, about 54,000 m² for STEP2 and about 53,000 m² for STEP3. The sources read do not state the wafer size or the start of construction of the original building. The May 2022 report, on page 3 of the cited article, comes from a Sony business briefing. Sony's December 2023 notice calls STEP3 the final expansion of Fab 5 and gives no further construction, so the status is operating as of that notice.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added a May 2022 EE Times Japan report that an added area of Fab 5 was due to start in July 2022 and that construction for a further expansion began in May 2022, and changed the status from operating to partly operating as of that report. Audit fixes (2026-11-07): added Sony's December 2023 notice that the STEP2 expansion began operating in July 2022 and the final STEP3 expansion was completed, with its cleanroom operating from October 2023, so changed the status to operating, split the cleanroom figures by step and renamed the phases to Sony's STEP labels."
+  }
+}

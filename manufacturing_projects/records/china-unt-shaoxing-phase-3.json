@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.0",
+  "id": "china-unt-shaoxing-phase-3",
+  "name": "United Nova Technology Phase 3 12-inch Line, Shaoxing",
+  "aliases": [
+    "中芯绍兴三期12英寸数模混合集成电路芯片制造项目",
+    "三期12英寸集成电路数模混合芯片制造项目",
+    "中芯绍兴三期12英寸特色工艺晶圆制造中试线项目"
+  ],
+  "company": "United Nova Technology",
+  "operator": "芯联先锋集成电路制造(绍兴)有限公司 (United Nova Technology subsidiary)",
+  "parties": [
+    {
+      "name": "芯联先锋集成电路制造(绍兴)有限公司 (United Nova Technology subsidiary)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4",
+        "s5"
+      ],
+      "note": "Project company, called 中芯先锋 before the parent's 2023 renaming; it carries out both the pilot line and the volume-production project."
+    },
+    {
+      "name": "United Nova Technology (芯联集成电路制造)",
+      "role": "owner",
+      "share_pct": 50.85,
+      "source_ids": [
+        "s2",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Held 75% of the project company in 2023 and after the first-stage capital increase of early 2024. Government funds, bank-affiliated investment firms, asset-management companies and other funds then joined; equity financing for the project totalled about CNY 13.29 billion by the end of 2025, and a CNY 1.8 billion capital increase completed in late 2025 left the parent with 50.85%."
+    },
+    {
+      "name": "Shaoxing Binhai New Area Management Committee",
+      "role": "government",
+      "share_pct": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Signed the May 2023 siting agreement and undertook to support the project with land, talent and fiscal policies and, through local government funds, up to 25% of its registered capital."
+    },
+    {
+      "name": "Shaoxing Binhai New Area Xinrui Venture Capital Fund (芯瑞基金)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s2",
+        "s4",
+        "s6"
+      ],
+      "note": "Local government industry fund; held 25% of the project company in 2023 and 10.95% after the first-stage capital increase in early 2024."
+    },
+    {
+      "name": "Shaoxing Fuzhe Yuexin Integrated Circuit Industry Equity Investment Fund (富浙越芯)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s4",
+        "s6"
+      ],
+      "note": "Government industry fund; took 14.05% in the first-stage capital increase agreed in January 2024."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A 300 mm fab of United Nova Technology (named 绍兴中芯集成 until 2023) in the Shaoxing Binhai New Area, run by a majority-owned subsidiary. A CNY 4.2 billion pilot line of 10,000 wafers a month, approved in January 2023, had its tools installed and its process line connected in 2023, and by early 2024 its IGBT, superjunction, HVIC and BCD platforms were in volume production. A May 2023 siting agreement with the Binhai New Area extended it into a CNY 22.2 billion, 100,000-wafer-a-month mixed-signal project, and in January 2024 the company set its volume-production stage at CNY 18 billion and 90,000 wafers a month, with production due to start in 2025. In October 2025 the company said initial construction was complete and all process platforms were in volume production; civil works were still in progress in mid-2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Zhejiang",
+    "locality": "Shaoxing",
+    "site": "Shaoxing Binhai New Area",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s3",
+      "s5"
+    ],
+    "note": "The filings place the project in Shaoxing and its expansion in the Binhai New Area under the siting agreement. The project company's registered address is 518-17 Linjiang Road, Gaobu Subdistrict, Yuecheng District; no address is given for the fab itself."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-08-11",
+  "status_source_ids": [
+    "s5",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 22200000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-17",
+      "source_ids": [
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Expected total for the pilot line and the volume-production stage together."
+    },
+    {
+      "metric": "investment",
+      "value": 4200000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Pilot line",
+      "as_of": "2023-06-01",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Includes CNY 2.21 billion of the parent's IPO proceeds; registered capital of CNY 3 billion."
+    },
+    {
+      "metric": "investment",
+      "value": 18000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Volume production",
+      "as_of": "2024-01-10",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Includes CNY 2.79 billion of IPO proceeds redirected to this stage."
+    },
+    {
+      "metric": "capacity",
+      "value": 100000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2025-10-17",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "300 mm wafers per month for the whole project."
+    },
+    {
+      "metric": "capacity",
+      "value": 90000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Volume production",
+      "as_of": "2024-01-10",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "300 mm silicon wafers per month."
+    },
+    {
+      "metric": "capacity",
+      "value": 10000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Pilot line",
+      "as_of": "2024-03-26",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm design capacity completed in 2023, which the company equates to 22,500 200 mm wafers a month."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2023-01-17",
+      "planned": false,
+      "phase_label": "Pilot line",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The board approved the investment in the phase 3 pilot line."
+    },
+    {
+      "event": "announced",
+      "date": "2023-05-31",
+      "planned": false,
+      "phase_label": "Volume production",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Siting agreement with the Binhai New Area for a volume-production project built on the pilot line."
+    },
+    {
+      "event": "tool_move_in",
+      "date": "2023",
+      "planned": false,
+      "phase_label": "Pilot line",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Installation and commissioning of the pilot line's tools were completed in 2023."
+    },
+    {
+      "event": "first_production",
+      "date": "2023",
+      "planned": true,
+      "phase_label": "Pilot line",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Normal production expected in 2023."
+    },
+    {
+      "event": "first_production",
+      "date": "2023",
+      "planned": false,
+      "phase_label": "Pilot line",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Process line connected in 2023; the parent's proceeds report gives 30 September 2023 as the date the pilot line reached its intended usable state, and by March 2024 the company said its IGBT, superjunction, HVIC and BCD platforms had entered volume production."
+    },
+    {
+      "event": "first_production",
+      "date": "2025",
+      "planned": true,
+      "phase_label": "Volume production",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The overall project was planned to begin production in 2025; sources read here do not separate output from this stage."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "芯联集成电路制造股份有限公司2023年年度报告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-03-26/1219404048.PDF",
+      "type": "company_filing",
+      "published": "2024-03-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "绍兴中芯集成电路制造股份有限公司关于新增募投项目、调整募投项目投资金额并使用部分募集资金向新增募投项目的实施主体增资的公告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-06-01/1216957837.PDF",
+      "type": "company_filing",
+      "published": "2023-06-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "绍兴中芯集成电路制造股份有限公司关于公司子公司与绍兴滨海新区管委会签订《落户协议》的公告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-06-01/1216957843.PDF",
+      "type": "company_filing",
+      "published": "2023-06-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "芯联集成电路制造股份有限公司关于对外投资暨向控股子公司增资的公告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-01-10/1218837540.PDF",
+      "type": "company_filing",
+      "published": "2024-01-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "芯联集成电路制造股份有限公司关于公司向控股子公司增资的公告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-10-17/1224715721.PDF",
+      "type": "company_filing",
+      "published": "2025-10-17",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "芯联集成电路制造股份有限公司2025年年度报告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225128269.PDF",
+      "type": "company_filing",
+      "published": "2026-04-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "芯联集成电路制造股份有限公司2026年半年度报告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466534.PDF",
+      "type": "company_filing",
+      "published": "2026-08-11",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The parent's 2026 interim report shows the volume-production stage, partly funded from IPO proceeds, scheduled to reach its intended usable condition by 31 December 2027, with about 90% of those proceeds spent, and civil works of the project company in progress at about CNY 450 million on 30 June 2026. In 2025 a policy-finance arm of China Development Bank provided the parent CNY 1.8 billion for five years, which it injected into the project company as capital. The project company had revenue of about CNY 1.33 billion and a net loss of about CNY 1.19 billion in 2025, and revenue of about CNY 838 million and a net loss of about CNY 150 million in the first half of 2026. The company's 2025 annual report says the 300 mm silicon line will focus on BCD, MCU and other high-end mixed-signal and control products. The Phase 4 line run by a separate joint venture is the existing record china-unt-shaoxing-phase-4; in 2026 the parent and its subsidiaries agreed to transfer and license related patents and know-how to that venture for about CNY 1.21 billion. Process nodes are not stated for this line; the 2023 annual report mentions company-wide BCD research at 90nm and 55nm.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Corrected the parent's ownership note (CNY 13.29 billion is the project's total equity financing, not outside investment), removed an unsupported product mix from the 90,000-wafer capacity note, renamed the May 2023 agreement a siting agreement, and added the pilot line's September 2023 usable-state date and the project company's 2025 and 2026 results. Audit fixes (2026-11-07): Reworded the summary so the CNY 18 billion, 90,000-wafer volume-production stage is dated to the January 2024 announcement rather than the May 2023 siting agreement; ownership, financing, capacity, proceeds dates and the project company's results were re-checked and matched."
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "id": "renesas-shiga-factory",
+  "name": "Renesas Shiga Factory",
+  "aliases": [
+    "Renesas Semiconductor Manufacturing Shiga Factory"
+  ],
+  "company": "Renesas",
+  "operator": "Renesas Semiconductor Manufacturing",
+  "parties": [
+    {
+      "name": "Renesas Semiconductor Manufacturing",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "Wholly owned manufacturing subsidiary of Renesas Electronics."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "photonics"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Renesas' Shiga Factory in Otsu, run by its subsidiary Renesas Semiconductor Manufacturing, had a silicon wafer line and a compound semiconductor line making laser diodes and photodiodes for communications equipment. In June 2018, after reviewing its 6-inch lines, Renesas decided to close the silicon line within about two to three years and keep the compound line. In May 2020 it chose to leave the laser diode and photodiode business, citing tougher competition, lost market share and delays in products for next-generation communications, and to shut the whole factory; about 350 staff were to move to other sites. The silicon line stopped at the end of March 2021 and the compound line at the end of August 2021, completing the closure on 31 August 2021. Products were to move to other group plants or be discontinued, and the land was sold to Ark Real Estate.",
+  "location": {
+    "country": "JP",
+    "admin1": "Shiga",
+    "locality": "Otsu",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3",
+      "s4",
+      "s5",
+      "s6",
+      "s7"
+    ],
+    "note": null
+  },
+  "status": "closed",
+  "status_as_of": "2022-03-30",
+  "status_source_ids": [
+    "s3",
+    "s4",
+    "s5",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "jobs",
+      "value": 350,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2020-05-18",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Employees at the factory when Renesas decided to close it; they were to be reassigned to other plants."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "closed",
+      "date": "2021-03",
+      "planned": false,
+      "phase_label": "Silicon production line",
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "note": "The silicon line stopped at the end of March 2021, under the June 2018 plan to close it within about two to three years."
+    },
+    {
+      "event": "closed",
+      "date": "2021-08-31",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s7"
+      ],
+      "note": "The remaining compound semiconductor line stopped at the end of August 2021 after the May 2020 decision to close every line; Renesas' securities report for 2021 says the consolidation of the factory was completed on 31 August 2021."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Renesas Electronics Announces Closure of Yamaguchi Factory and Partial Consolidation of Shiga Factory (Silicon Production Line)",
+      "publisher": "Renesas Electronics",
+      "url": "https://www.renesas.com/en/about/press-room/renesas-electronics-announces-closure-yamaguchi-factory-and-partial-consolidation-shiga-factory",
+      "type": "company_announcement",
+      "published": "2018-06-01",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "Renesas Electronics to Withdraw from LD/PD Business and Close Production",
+      "publisher": "Renesas Electronics",
+      "url": "https://www.renesas.com/en/about/press-room/renesas-electronics-withdraw-ldpd-business-and-close-production",
+      "type": "company_announcement",
+      "published": "2020-05-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Renesas to Consolidate Shiga Factory and Transfer its Lands",
+      "publisher": "Renesas Electronics",
+      "url": "https://www.renesas.com/en/about/press-room/renesas-consolidate-shiga-factory-and-transfer-its-lands",
+      "type": "company_announcement",
+      "published": "2021-08-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "ルネサス、滋賀工場を2021年8月末に閉鎖",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2108/27/news129.html",
+      "type": "trade_press",
+      "published": "2021-08-27",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "ルネサス、滋賀工場の生産を停止し不動産会社に売却",
+      "publisher": "MONOist",
+      "url": "https://monoist.itmedia.co.jp/mn/articles/2108/31/news071.html",
+      "type": "trade_press",
+      "published": "2021-08-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "滋賀工場を閉鎖するルネサス、残る国内の生産拠点はどれだけ？",
+      "publisher": "Nikkan Kogyo Shimbun (Newswitch)",
+      "url": "https://newswitch.jp/p/22287",
+      "type": "news",
+      "published": "2020-05-18",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "有価証券報告書 第20期（2021年1月1日－2021年12月31日）",
+      "publisher": "Renesas Electronics",
+      "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100NRVN.pdf",
+      "type": "company_filing",
+      "published": "2022-03-30",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Renesas' securities report for 2021 attributes a gain on the sale of fixed assets that year in part to the sale of the Shiga Factory, which places the land sale to Ark Real Estate, scheduled for completion by the end of October 2021, within 2021. The same report says an 8-inch wafer line at the Shiga Factory had already been transferred to ROHM's Shiga unit in February 2016, before the period this record covers.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Renesas' 2021 securities report, which confirms the factory consolidation was completed on 31 August 2021, so the final closure is now recorded as having happened rather than planned, with the status date, summary and notes updated to match."
+  }
+}

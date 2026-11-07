@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "id": "china-unt-shaoxing-phase-2",
+  "name": "United Nova Technology Phase 2 8-inch Line, Shaoxing",
+  "aliases": [
+    "二期晶圆制造项目",
+    "中芯绍兴二期晶圆制造项目"
+  ],
+  "company": "United Nova Technology",
+  "operator": "芯联越州集成电路制造(绍兴)有限公司 (United Nova Technology subsidiary)",
+  "parties": [
+    {
+      "name": "芯联越州集成电路制造(绍兴)有限公司 (United Nova Technology subsidiary)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Project company founded on 31 December 2021 to carry out the phase 2 project; its founding shareholders paid CNY 6 billion for CNY 3 billion of registered capital. It was called 中芯越州 before the parent's 2023 renaming."
+    },
+    {
+      "name": "United Nova Technology (芯联集成电路制造)",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "Held 27.67% at founding and controlled the company through concert agreements covering 51.67% of votes and two of three board seats; in 2025 it bought the other 72.33% from 15 investors, led by a Shaoxing Binhai New Area fund with 25%, for about CNY 5.90 billion in shares and cash, valuing the whole company at CNY 8.152 billion."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "silicon_carbide",
+    "mems_sensors"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "The second 200 mm silicon wafer line of United Nova Technology (named 绍兴中芯集成 until 2023) in Shaoxing, Zhejiang, built as its phase 2 wafer project by a project company set up at the end of 2021 with 15 outside investors. Planned at CNY 11 billion for 70,000 wafers a month, it was built from 2021, began mass production in October 2022 and moved to scale production in 2023, making IGBTs and silicon MOSFETs aimed mainly at automotive and industrial uses. UNT's 2025 deal report called the project company the group's only SiC producer and planned to convert part of the silicon line to 200 mm SiC, which UNT reported in volume shipment in 2025. UNT bought out the minority investors in 2025 and now runs this line together with its first 100,000-wafer-a-month 200 mm line.",
+  "location": {
+    "country": "CN",
+    "admin1": "Zhejiang",
+    "locality": "Shaoxing",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": "The fab stands on a parcel in Gaobu (block 2), Yuecheng District, that UNT agreed to transfer to the operator; the project was filed with the Shaoxing Binhai New Area authorities. The operator's registered address is 508 Linjiang Road, Gaobu Subdistrict; the parent's is 518 Linjiang Road."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-11",
+  "status_source_ids": [
+    "s3",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 11000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-05-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned total for the phase 2 wafer project, including CNY 6.5 billion for production equipment; CNY 6.66 billion was to come from the parent's IPO proceeds."
+    },
+    {
+      "metric": "capacity",
+      "value": 70000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-05-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "200 mm silicon wafers per month once the line is complete."
+    },
+    {
+      "metric": "capacity",
+      "value": 70000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-21",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "200 mm silicon wafers per month for IGBTs and MOSFETs; the 2025 transaction report planned to shift 10,000 a month of this to 200 mm SiC."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The project company's research and capacity build for 200 mm silicon wafers began in 2021."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The prospectus dates the start of mass production to October 2022; the 2025 transaction report describes initial volume capability in the fourth quarter of 2022."
+    },
+    {
+      "event": "volume_production",
+      "date": "2023",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Scale production began in 2023."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025-Q3",
+      "planned": true,
+      "phase_label": "200 mm SiC line",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "After a first 200 mm SiC MOSFET engineering lot in April 2024, risk production was expected in the first half of 2025 and scale production in the third quarter."
+    },
+    {
+      "event": "volume_production",
+      "date": "2025",
+      "planned": false,
+      "phase_label": "200 mm SiC line",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "UNT reported its 200 mm SiC MOSFET platform in scale production with volume shipments in 2025; the 2025 transaction report places the group's 200 mm SiC line at this company."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "绍兴中芯集成电路制造股份有限公司首次公开发行股票并在科创板上市招股说明书",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-05-05/1216748225.PDF",
+      "type": "company_filing",
+      "published": "2023-05-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "芯联集成电路制造股份有限公司发行股份及支付现金购买资产暨关联交易报告书",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-07-19/1224216592.PDF",
+      "type": "company_filing",
+      "published": "2025-07-19",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "芯联集成电路制造股份有限公司2025年年度报告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225128269.PDF",
+      "type": "company_filing",
+      "published": "2026-04-21",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "芯联集成电路制造股份有限公司2026年半年度报告",
+      "publisher": "United Nova Technology",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466534.PDF",
+      "type": "company_filing",
+      "published": "2026-08-11",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The 2023 prospectus expected the line to reach full output in 2023 and to break even in October 2025; the 2025 transaction report put silicon-line utilization at 66.5% for January to October 2024. The same report gave the operator 6-inch SiC MOSFET capacity of 8,000 wafers a month, run in space leased from the parent under a separate SiC project, and planned to convert that line and 10,000 wafers a month of silicon capacity to 200 mm SiC, leaving 60,000 silicon, 5,000 150 mm SiC and 15,000 200 mm SiC wafers a month by the end of 2026. The operator also built VCSEL (GaAs) capacity, which UNT moved onto a shared group platform in 2025 while merging the operator's 70,000 wafers a month of 200 mm silicon capacity with its own 100,000 under one management. The operator reported 2025 net profit of about CNY 476 million and first-half 2026 revenue of about CNY 3.35 billion. UNT's 300 mm phase 3 line is the separate record china-unt-shaoxing-phase-3, and its phase 4 joint venture is the existing record china-unt-shaoxing-phase-4; neither is linked. Process nodes are not stated.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Removed the district description from the site field (Gaobu and Yuecheng District stay in the location note), reworded the 200 mm SiC conversion as a 2025 plan, and noted the 2025 consolidation of the 200 mm silicon lines and the VCSEL capacity."
+  }
+}

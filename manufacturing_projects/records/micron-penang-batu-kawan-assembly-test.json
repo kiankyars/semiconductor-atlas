@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "id": "micron-penang-batu-kawan-assembly-test",
+  "name": "Micron Batu Kawan assembly and test facility, Penang",
+  "aliases": [
+    "Micron Penang second assembly and test facility"
+  ],
+  "company": "Micron",
+  "operator": "Micron Technology",
+  "parties": [
+    {
+      "name": "Micron Technology",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ],
+      "note": "Runs the site through its Malaysian subsidiary Micron Memory Malaysia Sdn. Bhd., incorporated in October 2018."
+    }
+  ],
+  "facility_type": "packaging_test",
+  "identity_scope": "named_facility",
+  "segments": [
+    "assembly_test",
+    "dram",
+    "nand"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Micron's assembly and test site in Batu Kawan Industrial Park, Penang, built to supply NAND, PC DRAM and SSD modules. Micron announced it in November 2018 as a greenfield SSD assembly and test site with a planned RM1.5 billion over five years and 1,000 local jobs, aiming to break ground in the first half of 2019. On 13 October 2023 Micron inaugurated a new assembly and test facility there, which Penang's chief minister called an expansion of the Batu Kawan site; Micron said it would add up to another USD 1 billion for construction and full equipping, on top of USD 1 billion already invested in Penang, raising factory space to 1.5 million square feet. The law firm that advised on the first two phases puts the development's indicative cost at about USD 2 billion on about 52.6 acres. Micron says the facility uses smart manufacturing and follows the LEED green building rating system.",
+  "location": {
+    "country": "MY",
+    "admin1": "Penang",
+    "locality": "Batu Kawan",
+    "site": "Batu Kawan Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s6"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2023-10-16",
+  "status_source_ids": [
+    "s1",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 1500000000,
+      "value_max": null,
+      "unit": "MYR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2018-11-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Planned investment over five years for the new SSD assembly and test site, given in the 2018 release as USD 357 million."
+    },
+    {
+      "metric": "investment",
+      "value": 1000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "up_to",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2023-10-13",
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "Additional investment over the next few years, including construction and full equipping of the new facility, on top of USD 1 billion Micron said it had previously invested in Penang."
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "approximately",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-07-25",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "Indicative cost of the Batu Kawan development (about RM8.8 billion) given by the law firm that advised on its first and second phases."
+    },
+    {
+      "metric": "jobs",
+      "value": 1000,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2018-11-30",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Local jobs planned in the 2018 announcement."
+    },
+    {
+      "metric": "jobs",
+      "value": 4500,
+      "value_max": null,
+      "unit": "jobs",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "multi_site",
+      "phase_label": null,
+      "as_of": "2023-10-13",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Estimated jobs created across Micron's two Penang plants, this one and the earlier plant in the Perai industrial area."
+    },
+    {
+      "metric": "site_area",
+      "value": 52.6,
+      "value_max": null,
+      "unit": "acres",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2025-07-25",
+      "source_ids": [
+        "s6"
+      ],
+      "note": null
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2018-11-30",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Announced as a greenfield centre of excellence for SSD assembly and test."
+    },
+    {
+      "event": "groundbreaking",
+      "date": "2019-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target in the 2018 announcement, which also aimed for full ramp-up within two years."
+    },
+    {
+      "event": "building_complete",
+      "date": "2021-H1",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "A March 2021 business weekly report said construction was expected to finish early that year; no source read here confirms when it finished."
+    },
+    {
+      "event": "opening",
+      "date": "2023-10-13",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": "Inauguration of the new assembly and test facility, officiated by the Chief Minister of Penang and held with Micron's 45th anniversary celebration."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Micron Commemorates 45 Years of Innovation with the Inauguration of its State-of-the-Art Assembly & Test Facility in Malaysia",
+      "publisher": "Micron Technology",
+      "url": "https://investors.micron.com/news/press-release/2023/Micron-Commemorates-45-Years-of-Innovation-with-the-Inauguration-of-its-State-of-the-Art-Assembly-Test-Facility-in-Malaysia-10-13-2023/default.aspx",
+      "type": "company_announcement",
+      "published": "2023-10-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "[Press Release] Micron Technology, Inc. Expands its Asian Foothold in Penang, Malaysia",
+      "publisher": "InvestPenang",
+      "url": "https://investpenang.gov.my/press-release-micron-technology-inc-expands-its-asian-foothold-in-penang-malaysia/",
+      "type": "government",
+      "published": "2018-11-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Micron opens second assembly and test facility in Malaysia",
+      "publisher": "Evertiq",
+      "url": "https://evertiq.com/news/54516",
+      "type": "trade_press",
+      "published": "2023-10-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "[News] Micron Opens Second Smart Manufacturing Fab in Malaysia",
+      "publisher": "TrendForce",
+      "url": "https://www.trendforce.com/news/2023/10/16/news-micron-opens-second-smart-manufacturing-fab-in-malaysia/",
+      "type": "trade_press",
+      "published": "2023-10-16",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "Tech: Memory gain for Micron Malaysia",
+      "publisher": "The Edge Malaysia",
+      "url": "https://theedgemalaysia.com/article/tech-memory-gain-micron-malaysia",
+      "type": "news",
+      "published": "2021-03-15",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "Development and construction of state-of-the-art assembly & test facility in Penang",
+      "publisher": "Rahmat Lim & Partners",
+      "url": "https://www.rahmatlim.com/perspectives/articles/30935/and-construction-of-state-of-the-art-assembly-test-facility-in-penang",
+      "type": "news",
+      "published": "2025-07-25",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "Micron's 2023 release quotes Penang's chief minister calling the new facility an expansion of Micron's Batu Kawan site, and a law firm describes the development in two phases, so this record covers the whole Batu Kawan site; no source read here dates the start of construction or of production in the first phase, so the status rests on the 2023 opening. Trade press calls the 2023 facility Micron's second Penang plant, after one in the Perai industrial area that it says opened in 2015, and estimates USD 2 billion invested and 4,500 jobs across the two sites, while the law firm gives about USD 2 billion for the Batu Kawan development alone; the sources do not reconcile these figures with each other or with the 2018 ringgit budget. The Edge Malaysia article first appeared in its weekly edition of 15 to 21 March 2021. A November 2026 search found no newer source specific to this site.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Reframed the record as the two-phase Batu Kawan site after Micron's release described the 2023 facility as an expansion of that site, adding a law firm's note on both phases (USD 2 billion, 52.6 acres) and a 2021 report on the subsidiary and construction timing; marked the 4,500 jobs estimate as approximate. Audit fixes (2026-11-07): removed the word initial from the 2018 RM1.5 billion plan, which the 2018 release does not use, and dropped an unsupported attribution of the trade press report to Bernama."
+  }
+}

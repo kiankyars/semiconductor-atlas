@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "id": "china-runxi-chongqing-12-inch",
+  "name": "Runxi Microelectronics 12-inch Power Semiconductor Wafer Line, Chongqing",
+  "aliases": [
+    "润西微电子12吋功率半导体晶圆生产线",
+    "CR Micro Chongqing 12-inch fab"
+  ],
+  "company": "CR Micro",
+  "operator": "Runxi Microelectronics (Chongqing) Co., Ltd. (润西微电子(重庆))",
+  "parties": [
+    {
+      "name": "Runxi Microelectronics (Chongqing) Co., Ltd. (润西微电子(重庆))",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Project company with registered capital of CNY 5 billion, formed to build and run the line."
+    },
+    {
+      "name": "China Resources Microelectronics Limited (华润微电子)",
+      "role": "owner",
+      "share_pct": 19,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s5"
+      ],
+      "note": "Holds its stake through its wholly owned CR Micro Holdings and accounts for the company as an associate; it appoints the project company's chairman, which it cites as giving it significant influence."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": 33,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Stake agreed at formation in 2021 (CNY 1.65 billion of registered capital)."
+    },
+    {
+      "name": "Chongqing Xiyong Microelectronics Industrial Park Development Co., Ltd. (重庆西永微电子产业园区开发)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "State-owned park developer, held by Chongqing's Shapingba district and high-tech zone authorities; subscribed 48% at formation and agreed to transfer 15% of the project company to a China Resources unit."
+    },
+    {
+      "name": "China Resources Co., Ltd. (中国华润)",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "CR Micro's ultimate controller; it states that its other units invested in the project company only as a financial investment and do not seek to manage or control it."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s5"
+      ]
+    }
+  ],
+  "summary": "A 300 mm power semiconductor wafer line built next to CR Micro's 200 mm line on its Chongqing campus in the Xiyong Microelectronics Industrial Park. CR Micro, the national chip fund's second phase and the state-owned park developer set up the project company in 2021 with a planned investment of CNY 7.55 billion for 30,000 wafers a month, plus epitaxy and thin-wafer capability; CR Micro holds 19% and accounts for it as an associate. After about a year of construction the line was connected by the end of 2022, ramped up from 2023 and reached about 30,000 wafers a month in 2025, making superjunction and shielded-gate MOSFETs and IGBTs.",
+  "location": {
+    "country": "CN",
+    "admin1": "Chongqing",
+    "locality": "Chongqing",
+    "site": "CR Micro Chongqing campus, Xiyong Microelectronics Industrial Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2"
+    ],
+    "note": "The line is separated from CR Micro's 200 mm line on the same campus by a visitor corridor."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-25",
+  "status_source_ids": [
+    "s5",
+    "s6"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7550000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-06-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned total investment; registered capital of the project company is CNY 5 billion, of which CR Micro Holdings contributed CNY 950 million."
+    },
+    {
+      "metric": "capacity",
+      "value": 30000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-06-08",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Planned 300 mm mid- to high-end power semiconductor wafers per month once built."
+    },
+    {
+      "metric": "capacity",
+      "value": 30000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "approximately",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "300 mm wafers per month; CR Micro said the line reached this capacity in 2025 and planned further expansion in line with its investment plan."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-06-08",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "CR Micro disclosed the investment agreement to set up the project company."
+    },
+    {
+      "event": "construction_start",
+      "date": "2021",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "In August 2022 the campus said the project had been under construction for about a year."
+    },
+    {
+      "event": "first_production",
+      "date": "2022-Q4",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Completion and start of production expected in the fourth quarter of 2022."
+    },
+    {
+      "event": "first_production",
+      "date": "2022",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "The line was connected before the end of 2022, with product introduction and ramp-up to follow."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "华润微电子有限公司关于对外投资暨关联交易的公告（公告编号：2021-028）",
+      "publisher": "China Resources Microelectronics Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2021-06-08/1210182580.PDF",
+      "type": "company_filing",
+      "published": "2021-06-08",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "积跬步以至千里 微电子科创智核加速形成",
+      "publisher": "Chongqing Daily",
+      "url": "https://epaper.cqrb.cn/cqrb/2022-08/05/081/cqrb20220805081.pdf",
+      "type": "news",
+      "published": "2022-08-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "华润微电子有限公司2022年年度报告",
+      "publisher": "China Resources Microelectronics Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-04-28/1216672203.PDF",
+      "type": "company_filing",
+      "published": "2023-04-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "华润微电子有限公司2023年年度报告",
+      "publisher": "China Resources Microelectronics Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-26/1219838603.PDF",
+      "type": "company_filing",
+      "published": "2024-04-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "华润微电子有限公司2025年年度报告",
+      "publisher": "China Resources Microelectronics Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225190439.PDF",
+      "type": "company_filing",
+      "published": "2026-04-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "华润微电子有限公司2026年半年度报告",
+      "publisher": "China Resources Microelectronics Limited",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497330.PDF",
+      "type": "company_filing",
+      "published": "2026-08-25",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "CR Micro's 2023 annual report said the line was still ramping, with its 300 mm superjunction G4 platform yielding 90%. Its 2025 annual report showed the project company with 2025 revenue of about CNY 701 million and a net loss of about CNY 603 million, and said depreciation at the two 300 mm lines it holds stakes in, this one and Shenzhen, weighed on its profit; the Shenzhen line is the existing record china-cr-micro-runpeng-shenzhen-12-inch, a separate site and not linked. CR Micro's 2026 interim report credited the Chongqing line for 40% growth in its shielded-gate MOSFET revenue. Process nodes are not stated.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "All statements matched their sources; added the project company's 2025 revenue to the notes."
+  }
+}

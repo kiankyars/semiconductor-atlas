@@ -16,8 +16,8 @@ unknown values stay blank. The site uses a searchable list because these records
 verified map coordinates.
 
 [Manufacturing projects](https://kiankyars.github.io/semiconductor-atlas/manufacturing/) records
-164 new wafer fabs, fab expansions and packaging plants announced, built, opened, paused,
-cancelled or closed since 2020, from 72 companies in 17 countries. Each record gives the
+180 new wafer fabs, fab expansions and packaging plants announced, built, opened, paused,
+cancelled or closed since 2020, from 79 companies in 18 countries. Each record gives the
 status the sources support, process technology, investment, government incentives, capacity, dated
 milestones (targets kept separate from reported events) and the sources behind every statement.
 These records link to live sources rather than archiving them, all text is written in our own words,

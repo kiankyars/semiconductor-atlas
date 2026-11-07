@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0",
+  "id": "china-silan-jike-xiamen-12-inch",
+  "name": "Silan Jike First 12-inch Line, Xiamen",
+  "aliases": [
+    "士兰集科12吋芯片生产线",
+    "厦门士兰集科12吋特色工艺半导体芯片制造生产线",
+    "Xiamen Silan Jike 12-inch fab"
+  ],
+  "company": "Xiamen Semiconductor Investment Group",
+  "operator": "Xiamen Silan Jike Microelectronics Co., Ltd. (厦门士兰集科微电子)",
+  "parties": [
+    {
+      "name": "Xiamen Silan Jike Microelectronics Co., Ltd. (厦门士兰集科微电子)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s5",
+        "s8"
+      ],
+      "note": "Project company set up in Xiamen's Haicang District on 1 February 2018; registered capital CNY 5.31 billion after the 2024 capital increase."
+    },
+    {
+      "name": "Xiamen Semiconductor Investment Group (厦门半导体投资集团)",
+      "role": "owner",
+      "share_pct": 61.987,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Co-founder with Silan under the December 2017 investment agreement; held 85% at founding and 61.987% after the 2024 capital increase. It is state-controlled through Haicang district investment groups."
+    },
+    {
+      "name": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "role": "owner",
+      "share_pct": 27.447,
+      "source_ids": [
+        "s1",
+        "s5",
+        "s8"
+      ],
+      "note": "Industrial partner whose power devices and circuits the line makes; held 15% at founding, 18.719% after 2022 and 27.447% after it put in CNY 800 million in 2024. Silan nominates directors and guarantees loans in proportion to its stake."
+    },
+    {
+      "name": "China Integrated Circuit Industry Investment Fund Phase II",
+      "role": "owner",
+      "share_pct": 10.566,
+      "source_ids": [
+        "s1",
+        "s5"
+      ],
+      "note": "Invested CNY 600 million with Silan in 2022 (14.655%), diluted when it did not join the 2024 increase."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "90nm",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Line width set for the first 300 mm line in the 2017 agreement."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s6"
+      ]
+    }
+  ],
+  "summary": "The first 300 mm line built under a December 2017 agreement between Silan and Xiamen Semiconductor Investment Group in Xiamen's Haicang District, run by a joint project company in which the state-owned Xiamen group holds the majority and Silan about 27%. Planned at CNY 7 billion and 80,000 wafers a month at 90nm over two phases, it was connected in 2020 and entered formal production in December 2020. It reached its Phase 1 target of 40,000 wafers a month by the end of 2021, when Phase 2 was already under way, and it makes trench, shielded-gate and superjunction MOSFETs, IGBTs and high-voltage ICs. Silan reported the line running at full load in 2025 and the first half of 2026, with output of 637,400 wafers in 2025.",
+  "location": {
+    "country": "CN",
+    "admin1": "Fujian",
+    "locality": "Xiamen",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s5",
+      "s8",
+      "s9"
+    ],
+    "note": "The line is in Haicang District; the operator's registered address is 89 Lanying Road, Haicang District."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-25",
+  "status_source_ids": [
+    "s6",
+    "s7",
+    "s4",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 7000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2022-03-10",
+      "source_ids": [
+        "s1",
+        "s9"
+      ],
+      "note": "Total for the first 300 mm line across both phases."
+    },
+    {
+      "metric": "investment",
+      "value": 5000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-03-10",
+      "source_ids": [
+        "s1",
+        "s9"
+      ],
+      "note": "CNY 2 billion of equity and CNY 3 billion of bank loans under the 2017 plan."
+    },
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2022-03-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Budget of the Phase 2 upgrade and expansion project launched in 2021."
+    },
+    {
+      "metric": "capacity",
+      "value": 80000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2017-12-19",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "300 mm wafers per month at full output of the first line, 40,000 from each phase in the 2017 plan."
+    },
+    {
+      "metric": "capacity",
+      "value": 40000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Phase 1",
+      "as_of": "2022-03-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "300 mm Phase 1 capacity built by the end of 2021; December 2021 output was 36,000 wafers."
+    },
+    {
+      "metric": "capacity",
+      "value": 240000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "Phase 2",
+      "as_of": "2022-03-10",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional 300 mm high-voltage IC and power device wafers per year from the Phase 2 project, planned over two years."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "first_production",
+      "date": "2020-12",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The line was connected during 2020 and began formal production in December."
+    },
+    {
+      "event": "construction_start",
+      "date": "2021-H1",
+      "planned": false,
+      "phase_label": "Phase 2",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Phase 2 project launched in the first half of 2021 with a two-year implementation period."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021-Q4",
+      "planned": true,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Target of 30,000 wafers a month by the fourth quarter of 2021, stated in early 2021."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021",
+      "planned": false,
+      "phase_label": "Phase 1",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Phase 1 capacity of 40,000 wafers a month was in place by the end of 2021, with more than 200,000 wafers produced that year."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "杭州士兰微电子股份有限公司关于士兰集科12吋芯片生产线投资进展公告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2022-03-10/1212534138.PDF",
+      "type": "company_filing",
+      "published": "2022-03-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "杭州士兰微电子股份有限公司2020年年度报告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2021-03-13/1209378700.PDF",
+      "type": "company_filing",
+      "published": "2021-03-13",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "杭州士兰微电子股份有限公司2022年年度报告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-03-31/1216272874.PDF",
+      "type": "company_filing",
+      "published": "2023-03-31",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "杭州士兰微电子股份有限公司2023年年度报告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-09/1219536759.PDF",
+      "type": "company_filing",
+      "published": "2024-04-09",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "杭州士兰微电子股份有限公司关于向士兰集科增资暨关联交易的公告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-09-12/1221203208.PDF",
+      "type": "company_filing",
+      "published": "2024-09-12",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "杭州士兰微电子股份有限公司2025年年度报告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225189603.PDF",
+      "type": "company_filing",
+      "published": "2026-04-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "杭州士兰微电子股份有限公司2026年半年度报告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497134.PDF",
+      "type": "company_filing",
+      "published": "2026-08-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s8",
+      "title": "杭州士兰微电子股份有限公司关于向士兰集科提供担保暨关联交易的公告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225001238.PDF",
+      "type": "company_filing",
+      "published": "2026-03-10",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s9",
+      "title": "关于与厦门半导体投资集团有限公司签署《关于12吋集成电路制造生产线项目之投资合作协议》的公告",
+      "publisher": "Hangzhou Silan Microelectronics Co., Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2017-12-19/1204237145.PDF",
+      "type": "company_filing",
+      "published": "2017-12-19",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The 2017 agreement also foresaw a second 300 mm line as a third phase (65nm to 90nm, about CNY 10 billion, details to be agreed). Silan's 2025 annual report and 2026 interim report list a Silan Jike 300 mm power-chip line phase 3 project under way to add automotive analog, IGBT and MOSFET capacity, but give no investment, capacity, site or dates and do not say whether it is that second line; it is not part of this record, and the 2026 interim report lists it as a separate project from Silan Jihua's 300 mm analog line (existing record china-silan-xiamen-12-inch-analog). Silan reported annual output of 470,000 wafers in 2022 and 464,000 in 2023, IGBT capacity of 25,000 wafers a month by the end of 2023, and 394,500 wafers in the first half of 2026. The project company had revenue of about CNY 3.19 billion in 2025 and reported net losses for 2023, 2024 and 2025 (about CNY 57 million in 2025) before a net profit of about CNY 93 million in the first half of 2026. Sources read here do not report a completion date for Phase 2. In March 2026 the company sought a 12-year CNY 300 million project loan from China Development Bank's Xiamen branch.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Updated the notes with the full-year 2025 loss and the first-half 2026 profit, and added the Silan Jike phase 3 project that Silan's 2025 and 2026 reports describe as under way; all other statements matched their sources. Audit fixes (2026-11-07): Noted that Silan's 2026 interim report lists the Silan Jike phase 3 project separately from the Silan Jihua analog line, which rules out an overlap with that existing record; ownership, plan, output and financial figures were re-checked and matched."
+  }
+}

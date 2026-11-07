@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "id": "jp-akm-nobeoka-fab",
+  "name": "AKM Nobeoka LSI plant",
+  "aliases": [
+    "Asahi Kasei Microdevices Nobeoka plant"
+  ],
+  "company": "Asahi Kasei",
+  "operator": "Asahi Kasei Microdevices",
+  "parties": [
+    {
+      "name": "Asahi Kasei Microdevices",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "Owned the plant building and its ancillary facilities. Reports on the 2020 fire describe the plant as belonging to a wholly owned AKM subsidiary and as the only wafer fab in the AKM group."
+    },
+    {
+      "name": "Asahi Kasei",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Parent of AKM; owns the land under the plant, which was left out of the 2025 transfer agreement."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [],
+  "summary": "Asahi Kasei Microdevices (AKM) made large-scale integrated circuits, including chips for audio equipment, at this plant in Nobeoka, Miyazaki, which a 2020 trade report called the only wafer fab in the AKM group. A fire that broke out on 20 October 2020 took about three days to put out, part of the building reportedly collapsed, and production stopped; AKM said it would outsource more of its output. The plant never restarted. After weighing its reuse as a development site or as a group plant for products other than LSIs, or a sale, AKM agreed on 24 December 2025 to transfer the building and ancillary facilities to Asahi Yukizai, an Asahi Kasei affiliate that plans to make valves and flow controllers for chipmaking equipment there; the buyer's annual report for the year to March 2026 records the acquisition as done. The land stays with Asahi Kasei.",
+  "location": {
+    "country": "JP",
+    "admin1": "Miyazaki",
+    "locality": "Nobeoka",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5"
+    ],
+    "note": "The operator's notice and the buyer's annual report place the plant in the Nakagawara-machi area of Nobeoka."
+  },
+  "status": "closed",
+  "status_as_of": "2026-06-17",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s5"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "closed",
+      "date": "2020-10-20",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "note": "A fire that began late in the afternoon of 20 October 2020 halted production; AKM said in December 2025 that the plant had not produced since."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "宮崎県延岡市の工場施設の譲渡について",
+      "publisher": "Asahi Kasei",
+      "url": "https://www.asahi-kasei.com/jp/news/2025/el251224.html",
+      "type": "company_announcement",
+      "published": "2025-12-24",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "AKM、2020年火災で停止中の延岡LSI工場を譲渡　旭有機材の新拠点に",
+      "publisher": "EE Times Japan",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2512/25/news060.html",
+      "type": "trade_press",
+      "published": "2025-12-25",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "Semiconductor fab ravished by fire for more than three days",
+      "publisher": "Evertiq",
+      "url": "https://evertiq.com/design/49056",
+      "type": "trade_press",
+      "published": "2020-11-05",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "Fire broke out at AKM factory in Japan",
+      "publisher": "SemiMedia",
+      "url": "https://www.semimedia.cc/fire-broke-out-at-akm-factory-in-japan/",
+      "type": "trade_press",
+      "published": "2020-10-28",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "有価証券報告書 第105期（2025年4月1日－2026年3月31日）",
+      "publisher": "Asahi Yukizai",
+      "url": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100YDDN.pdf",
+      "type": "company_filing",
+      "published": "2026-06-17",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The Japanese notices call the operator Asahi Kasei Electronics; it trades in English as Asahi Kasei Microdevices (AKM). The transfer was scheduled for 2 February 2026; Asahi Yukizai's annual securities report for the year to 31 March 2026 lists the factory acquisition from AKM at about JPY 1.54 billion, booked as construction in progress, without giving the handover date. AKM said the transfer would not affect its product supply. Asahi Yukizai plans a second piping-systems plant on the site for small precision valves and flow controllers, with a planned investment of JPY 17.5 billion, construction from December 2026 and completion in October 2028, roughly tripling its capacity for these parts. The building will not make semiconductors under the new owner, so the record stays closed rather than transferred, and the sale of the idle building is kept here rather than as a milestone.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Added Asahi Yukizai's annual securities report, which shows the building transfer went through in the year to March 2026, so the planned February 2026 sale milestone was removed and the completed sale of the idle building is described in the summary and notes; the status date and the wording on the plant's 2020 subsidiary were also corrected. Audit fixes (2026-11-07): attributed the only-fab description to the single 2020 trade report that makes it and pointed the EE Times Japan citation at the article's standard URL instead of its mobile copy."
+  }
+}

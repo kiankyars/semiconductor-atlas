@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "id": "china-starpower-jiaxing-sic-power-chip-fab",
+  "name": "StarPower 6-inch SiC and High-voltage Power Chip Fab, Jiaxing",
+  "aliases": [
+    "高压特色工艺功率芯片和SiC芯片研发及产业化项目",
+    "斯达半导自建6英寸SiC芯片产线"
+  ],
+  "company": "StarPower",
+  "operator": "Jiaxing StarPower Microelectronics Co., Ltd. (嘉兴斯达微电子)",
+  "parties": [
+    {
+      "name": "Jiaxing StarPower Microelectronics Co., Ltd. (嘉兴斯达微电子)",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Subsidiary that carries out both chip projects."
+    },
+    {
+      "name": "StarPower Semiconductor Ltd. (斯达半导体)",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s6"
+      ],
+      "note": "Listed power-module maker and sole owner of the operator, known as Jiaxing StarPower Semiconductor until its renaming; it otherwise relies on foundries such as Hua Hong and GTA for chips."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "silicon_carbide",
+    "power"
+  ],
+  "process_nodes": [],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s5",
+        "s6",
+        "s7"
+      ]
+    }
+  ],
+  "summary": "StarPower's own chip fab in Jiaxing, Zhejiang, built by a wholly owned subsidiary with proceeds of a 2021 private share placement. The March 2021 plan called for a new plant making high-voltage specialty power chips and SiC chips, CNY 2 billion in total for 360,000 wafers a year. The projects were completed in late 2024; SiC MOSFET chips from the 150 mm SiC line went into volume vehicle use in 2024, and the company reports capacity of 60,000 SiC MOSFET wafers and 300,000 high-voltage (3,300 V and above) power-chip wafers a year, all 150 mm, with utilization still rising in 2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Zhejiang",
+    "locality": "Jiaxing",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "The sources name the Jiaxing subsidiary as the implementing entity but give no plant address; the parent's registered address is in Jiaxing's Nanhu District."
+  },
+  "status": "operating",
+  "status_as_of": "2026-08-25",
+  "status_source_ids": [
+    "s6",
+    "s7"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 2000000000,
+      "value_max": null,
+      "unit": "CNY",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-03-03",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Combined budget for the high-voltage power chip project (CNY 1.5 billion) and the SiC chip project (CNY 500 million), all from placement proceeds; about CNY 2.09 billion of proceeds had been spent when they were closed in October 2024."
+    },
+    {
+      "metric": "capacity",
+      "value": 360000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2021-03-03",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Planned power semiconductor chip wafers per year at full output, without a stated wafer size."
+    },
+    {
+      "metric": "capacity",
+      "value": 60000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "150 mm automotive-grade SiC MOSFET chip wafers per year."
+    },
+    {
+      "metric": "capacity",
+      "value": 300000,
+      "value_max": null,
+      "unit": "wafers_per_year",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-08-25",
+      "source_ids": [
+        "s6",
+        "s7"
+      ],
+      "note": "150 mm high-voltage specialty power chip wafers (3,300 V and above) per year."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2021-03-03",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Disclosed as the main use of a planned private placement."
+    },
+    {
+      "event": "building_complete",
+      "date": "2024-11",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Date by which both chip projects were to reach intended usable condition."
+    },
+    {
+      "event": "building_complete",
+      "date": "2024-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "In an announcement dated 29 October 2024 and published the next day, StarPower said both chip projects had been fully built and reached intended usable condition, and closed them."
+    },
+    {
+      "event": "volume_production",
+      "date": "2024",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Automotive-grade SiC MOSFET chips made on the company's own 150 mm SiC line began volume use in vehicles in 2024; the lines were then ramping."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "嘉兴斯达半导体股份有限公司2021年度非公开发行A股股票募集资金使用的可行性分析报告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2021-03-03/1209324527.PDF",
+      "type": "company_filing",
+      "published": "2021-03-03",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s2",
+      "title": "斯达半导体股份有限公司关于2021年非公开发行募投项目结项并将节余募集资金永久补充流动资金的公告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-10-30/1221553882.PDF",
+      "type": "company_filing",
+      "published": "2024-10-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s3",
+      "title": "嘉兴斯达半导体股份有限公司2022年年度报告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2023-04-08/1216354932.PDF",
+      "type": "company_filing",
+      "published": "2023-04-08",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s4",
+      "title": "斯达半导体股份有限公司2023年年度报告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-08/1219528578.PDF",
+      "type": "company_filing",
+      "published": "2024-04-08",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s5",
+      "title": "斯达半导体股份有限公司2024年年度报告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-04-26/1223325294.PDF",
+      "type": "company_filing",
+      "published": "2025-04-26",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s6",
+      "title": "斯达半导体股份有限公司2025年年度报告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225264305.PDF",
+      "type": "company_filing",
+      "published": "2026-04-30",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": "s7",
+      "title": "斯达半导体股份有限公司2026年半年度报告",
+      "publisher": "StarPower Semiconductor Ltd.",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225496801.PDF",
+      "type": "company_filing",
+      "published": "2026-08-25",
+      "accessed": "2026-11-07"
+    }
+  ],
+  "related": [],
+  "notes": "The 2021 plan treated the high-voltage and SiC chip lines as one project in a new plant; the company later split it into two fund-raising projects and reports them together as its self-built 150 mm lines. Its 2022 annual report shows both still in progress at the end of 2022. StarPower's 2024 annual report blamed high fixed costs, including depreciation, on the two lines while they ramped. In 2025 the company said its own SiC chip line was ramping quickly. Process nodes are not stated.",
+  "review": {
+    "reviewed_on": "2026-11-07",
+    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
+    "changes": "Clarified the date of the project-closure announcement; all other statements matched their sources."
+  }
+}
