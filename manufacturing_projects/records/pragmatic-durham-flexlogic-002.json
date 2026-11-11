@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "id": "pragmatic-durham-flexlogic-002",
+  "name": "Pragmatic Park FlexLogic-002 fab",
+  "aliases": [
+    "FlexLogic-002",
+    "Pragmatic Park 300mm fab"
+  ],
+  "company": "Pragmatic Semiconductor",
+  "operator": "Pragmatic Semiconductor Ltd.",
+  "parties": [
+    {
+      "name": "Pragmatic Semiconductor Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "logic",
+    "analog_mixed_signal"
+  ],
+  "process_nodes": [
+    {
+      "label": "FlexIC Platform Gen 3",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Metal-oxide thin-film transistor technology for flexible mixed-signal ASICs. The platform was announced with manufacturing at Pragmatic Park in March 2025; the technology brief specifies a 600 nm minimum channel dimension, not a silicon CMOS node designation."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 300,
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "Pragmatic announced FlexLogic-002 at its new Durham site in March 2022 and opened the 300 mm fab at Pragmatic Park in March 2024. The foundry makes flexible integrated circuits using metal-oxide thin-film transistors. Its Gen 3 platform launched in March 2025 with manufacturing at this site. A September 2026 company update reported that high-volume manufacturing had ramped and that the company was expanding capacity. The record covers the named fab, with the broader park kept separate from its production scope.",
+  "location": {
+    "country": "GB",
+    "admin1": "England",
+    "locality": "Durham",
+    "site": "Pragmatic Park",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-09-08",
+  "status_source_ids": [
+    "s2",
+    "s4"
+  ],
+  "metrics": [
+    {
+      "metric": "site_area",
+      "value": 60000,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2024-03-27",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Area of the Pragmatic Park brownfield site, including room for future lines; not the cleanroom area of FlexLogic-002."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2022-03-22",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FlexLogic-002 was announced for the new Pragmatic Park site."
+    },
+    {
+      "event": "opening",
+      "date": "2024-03-27",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Opening of the 300 mm fab at Pragmatic Park."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Pragmatic Semiconductor unveils plans for new UK site",
+      "publisher": "Pragmatic Semiconductor",
+      "url": "https://www.pragmaticsemi.com/pragmatic-semiconductor-unveils-plans-for-new-uk-site/",
+      "type": "company_announcement",
+      "published": "2022-03-22",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s2",
+      "title": "Pragmatic welcomes HRH The Princess Royal to Pragmatic Park for the opening of the UK’s first 300mm semiconductor wafer manufacturing facility",
+      "publisher": "Pragmatic Semiconductor",
+      "url": "https://www.pragmaticsemi.com/pragmatic-welcomes-hrh-the-princess-royal-to-pragmatic-park-for-the-opening-of-the-uks-first-300mm-semiconductor-wafer-manufacturing-facility/",
+      "type": "company_announcement",
+      "published": "2024-03-27",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s3",
+      "title": "Pragmatic Semiconductor launches next-generation platform for mixed-signal flexible ASIC design with early-access programme",
+      "publisher": "Pragmatic Semiconductor",
+      "url": "https://www.pragmaticsemi.com/pragmatic-semiconductor-launches-next-generation-platform-for-mixed-signal-flexible-asic-design-with-early-access-programme/",
+      "type": "company_announcement",
+      "published": "2025-03-04",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s4",
+      "title": "Pragmatic Semiconductor appoints Dr Paul James as Executive Vice President Manufacturing & Operations",
+      "publisher": "Pragmatic Semiconductor",
+      "url": "https://www.pragmaticsemi.com/pragmatic-semiconductor-appoints-dr-paul-james-as-executive-vice-president-manufacturing-operations/",
+      "type": "company_announcement",
+      "published": "2026-09-08",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s5",
+      "title": "FlexIC Platform Gen 3: Technology brief",
+      "publisher": "Pragmatic Semiconductor",
+      "url": "https://www.pragmaticsemi.com/wp-content/uploads/2025/03/Pragmatic-FlexIC-Platform-Gen-3-Technology-Brief.pdf",
+      "type": "company_report",
+      "published": "2025-03",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "related": [],
+  "notes": "The operator reports room for additional lines at Pragmatic Park; this is not evidence that all planned lines are installed or producing.",
+  "review": {
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review: a second agent reopened all five cited sources and checked facility identity, process technology, dates, figures and status against them.",
+    "changes": "Confirmed the named FlexLogic-002 announcement, the 300 mm line opening and the Gen 3 platform at Pragmatic Park. Kept the 60,000 square metre park area at project scope and left room for future lines separate from achieved production."
+  }
+}

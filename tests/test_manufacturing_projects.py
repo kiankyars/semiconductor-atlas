@@ -105,6 +105,17 @@ class ValidatorTests(unittest.TestCase):
         self.assertIn("record: missing 'summary'", problems(record))
         self.assertIn("record: unknown field 'extra'", problems(example(extra=1)))
 
+    def test_construction_progress_supports_construction_but_not_production(self):
+        record = example()
+        record["milestones"][1].update(event="construction_progress", date="2024-05-02",
+                                       note="Physical construction reported underway; start date unknown.")
+        self.assertEqual(problems(record), [])
+        record["milestones"][1]["planned"] = True
+        self.assertTrue(any("under_construction needs" in p for p in problems(record)))
+        record["milestones"][1]["planned"] = False
+        record["status"] = "operating"
+        self.assertTrue(any("operating needs" in p for p in problems(record)))
+
     def test_id_must_match_file(self):
         self.assertIn("id: 'example-fab-one' does not match the file name 'other'",
                       mp.validate_record(example(), stem="other"))

@@ -27,7 +27,29 @@
     "analog_mixed_signal",
     "power"
   ],
-  "process_nodes": [],
+  "process_nodes": [
+    {
+      "label": "Analog CMOS",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Listed for Agrate Fab 3 in the 2025 annual report."
+    },
+    {
+      "label": "BCD",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Listed for the 300 mm Fab 3; the site’s separate 200 mm fabs are outside this record."
+    },
+    {
+      "label": "Embedded non-volatile memories",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Listed as a Fab 3 process technology in the 2025 annual report."
+    }
+  ],
   "wafer_sizes": [
     {
       "mm": 300,
@@ -84,16 +106,16 @@
       "url": "https://www.sec.gov/Archives/edgar/data/932787/000162828024012620/stm_arxmaster-darsec.htm",
       "type": "company_filing",
       "published": "2024-03-21",
-      "accessed": "2026-11-06"
+      "accessed": "2026-11-11"
     },
     {
       "id": "s2",
-      "title": "STMicroelectronics Details Company-Wide Program to Reshape Manufacturing Footprint and Resize Global Cost Base",
-      "publisher": "I-Connect007",
-      "url": "https://iconnect007.com/article/144901/stmicroelectronics-details-companywide-program-to-reshape-manufacturing-footprint-and-resize-global-cost-base/144898/ein",
-      "type": "trade_press",
-      "published": "2025-04-14",
-      "accessed": "2026-11-07"
+      "title": "STMicroelectronics details company-wide program to reshape manufacturing footprint and resize global cost base",
+      "publisher": "STMicroelectronics (via GlobeNewswire)",
+      "url": "https://www.globenewswire.com/news-release/2025/04/10/3059167/0/en/stmicroelectronics-details-company-wide-program-to-reshape-manufacturing-footprint-and-resize-global-cost-base.html",
+      "type": "company_announcement",
+      "published": "2025-04-10",
+      "accessed": "2026-11-11"
     },
     {
       "id": "s3",
@@ -102,7 +124,7 @@
       "url": "https://www.sec.gov/Archives/edgar/data/0000932787/000093278726000094/stm-6k_q3x2026.htm",
       "type": "company_filing",
       "published": "2026-11-04",
-      "accessed": "2026-11-06"
+      "accessed": "2026-11-11"
     },
     {
       "id": "s4",
@@ -111,7 +133,7 @@
       "url": "https://www.sec.gov/Archives/edgar/data/932787/000093278726000009/stm-20251231.htm",
       "type": "company_filing",
       "published": "2026-02-26",
-      "accessed": "2026-11-07"
+      "accessed": "2026-11-11"
     }
   ],
   "related": [
@@ -120,10 +142,10 @@
       "relation": "same_campus"
     }
   ],
-  "notes": "The 2023 annual report says smart power and embedded non-volatile memory processes were to be phased in after mixed-signal. ST's 2025 annual report lists the fab as Agrate Fab 3, running analog CMOS, BCD and embedded non-volatile memory processes, says it is currently shared with Tower Semiconductor, and plans 2026 spending on its ramp-up. The April 2025 plan targets 4,000 wafers per week by 2027 and modular growth to 14,000; these are weekly figures and are not converted into a capacity metric. The April 2025 plan was read in I-Connect007's republication of ST's release because ST's newsroom refused automated access; ST's filings read for this record do not restate those targets. Tower Semiconductor's own equipment line in part of the same cleanroom is recorded separately as tower-fab-10-agrate.",
+  "notes": "The 2023 annual report says smart power and embedded non-volatile memory processes were to be phased in after mixed-signal. ST's 2025 annual report lists the fab as Agrate Fab 3, running analog CMOS, BCD and embedded non-volatile memory processes, says it is currently shared with Tower Semiconductor, and plans 2026 spending on its ramp-up. The April 2025 plan targets 4,000 wafers per week by 2027 and modular growth to 14,000; these are weekly figures and are not converted into a capacity metric. The April 2025 plan is cited from ST's release distributed through GlobeNewswire; the previously cited I-Connect007 copy could not be read during the November 2026 technology update. Tower Semiconductor's own equipment line in part of the same cleanroom is recorded separately as tower-fab-10-agrate.",
   "review": {
-    "reviewed_on": "2026-11-06",
-    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
-    "changes": "Replaced ST's April 2025 newsroom release, which refused automated access, with a republication of the same release; removed unsupported aliases and a 2027 volume-production milestone that actually described a capacity target, and noted the overlap with Tower's Fab 10 line in the same building. Audit fixes (2026-11-07): Added ST's 2025 20-F (s4), which names the fab Agrate Fab 3, lists it as shared with Tower and supports its operating status, and added that alias; re-read the I-Connect007 republication (s2), which is labelled by its publisher, matches its published title and still supports the April 2025 targets, and noted why it is kept."
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review (Codex): a second agent reopened every cited source and checked the record and technology additions against them.",
+    "changes": "Added the three processes explicitly listed for Agrate Fab 3 in the 2025 annual report; replaced the inaccessible I-Connect007 copy with the same ST release via GlobeNewswire and retained separate scope for Tower’s line."
   }
 }

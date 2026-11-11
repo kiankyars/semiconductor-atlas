@@ -33,7 +33,15 @@
   "segments": [
     "power"
   ],
-  "process_nodes": [],
+  "process_nodes": [
+    {
+      "label": "300 mm thin-wafer technology",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The September 2021 opening release describes power-chip manufacturing on wafers thinned to 40 micrometres. This is wafer thickness, not a lithographic node."
+    }
+  ],
   "wafer_sizes": [
     {
       "mm": 300,
@@ -138,7 +146,7 @@
       "url": "https://www.infineon.com/regional/austria/press-release/2021/mission-future",
       "type": "company_announcement",
       "published": "2021-09-17",
-      "accessed": "2026-11-06"
+      "accessed": "2026-11-11"
     },
     {
       "id": "s2",
@@ -147,7 +155,7 @@
       "url": "https://www.infineon.com/assets/row/public/documents/regions/austria/jb-2025-e.pdf",
       "type": "company_report",
       "published": "2025-11",
-      "accessed": "2026-11-06"
+      "accessed": "2026-11-11"
     }
   ],
   "related": [],
@@ -160,8 +168,8 @@
     }
   ],
   "review": {
-    "reviewed_on": "2026-11-06",
-    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
-    "changes": "Corrected the Infineon Austria report's publication date to November 2025 (and status_as_of with it), made the 400-jobs figure exact, and added the 2018 announcement milestone and the planned four-to-five-year ramp."
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review (Codex): a second agent reopened every cited source and checked the record and technology additions against them.",
+    "changes": "Added the 300 mm thin-wafer process from the opening release, explicitly distinguishing wafer thickness from a lithographic node; confirmed operating status and the historical ramp plan against both cited sources."
   }
 }

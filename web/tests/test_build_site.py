@@ -467,7 +467,7 @@ class ManufacturingPageTests(unittest.TestCase):
             listing = (output / "manufacturing/index.html").read_text()
             self.assertEqual(listing.count("<tr data-mp "), len(records))
             self.assertIn("Fab and packaging projects since 2020", listing)
-            self.assertIn("AI-assisted research (Claude)", listing)
+            self.assertIn("AI-assisted research and checked in a separate AI-assisted review", listing)
             dataset = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',
                                            listing).group(1))
             self.assertEqual(dataset["name"], "Semiconductor manufacturing projects")

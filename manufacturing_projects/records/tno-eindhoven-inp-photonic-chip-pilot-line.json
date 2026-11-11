@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "id": "tno-eindhoven-inp-photonic-chip-pilot-line",
+  "name": "TNO Eindhoven Photonic Chip Pilot Line",
+  "aliases": [
+    "Eindhoven 6-inch InP fab"
+  ],
+  "company": "TNO",
+  "operator": "TNO",
+  "parties": [
+    {
+      "name": "TNO",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2",
+        "s4"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "photonics"
+  ],
+  "process_nodes": [
+    {
+      "label": "Indium phosphide (InP) photonic integrated circuits",
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "note": "An industrial pilot line intended to support subsequent volume manufacturing."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "TNO began building a 6-inch indium phosphide photonic-chip fab at High Tech Campus Eindhoven in March 2026 and confirmed construction was continuing in June. The facility combines process development with manufacturing. TNO expects the building to be completed in March 2027; SMART Photonics plans commercial use of the new 6-inch production capacity in 2028. Its undated manufacturing page targets more than 12,000 wafers per year once that capacity is fully activated.",
+  "location": {
+    "country": "NL",
+    "admin1": null,
+    "locality": "Eindhoven",
+    "site": "High Tech Campus Eindhoven",
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s2",
+      "s4"
+    ],
+    "note": "TNO locates the new building behind the existing SMART Photonics building."
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-06-24",
+  "status_source_ids": [
+    "s1",
+    "s2"
+  ],
+  "metrics": [
+    {
+      "metric": "investment",
+      "value": 150000000,
+      "value_max": null,
+      "unit": "EUR",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "project",
+      "phase_label": null,
+      "as_of": "2026-03-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Investment amount stated at the construction launch."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "construction_start",
+      "date": "2026-03-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": null
+    },
+    {
+      "event": "building_complete",
+      "date": "2027-03",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Building completion target on TNO’s undated recruitment page."
+    },
+    {
+      "event": "volume_production",
+      "date": "2028",
+      "planned": true,
+      "phase_label": null,
+      "source_ids": [
+        "s3"
+      ],
+      "note": "SMART Photonics’ undated manufacturing page schedules its new 6-inch production capacity in partnership with TNO for 2028."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Industrial photonic chip factory in Eindhoven launched",
+      "publisher": "TNO",
+      "url": "https://www.tno.nl/en/newsroom/2026/03/industrial-photonic-chip-factory/",
+      "type": "government",
+      "published": "2026-03-09",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s2",
+      "title": "TNO and ASML join forces to scale European photonic chip manufacturing",
+      "publisher": "TNO",
+      "url": "https://www.tno.nl/en/newsroom/2026/06/european-photonic-chip-manufacturing/",
+      "type": "government",
+      "published": "2026-06-24",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s3",
+      "title": "Start Production",
+      "publisher": "SMART Photonics",
+      "url": "https://www.smartphotonics.nl/start-production",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s4",
+      "title": "Ready to shape the future of photonic chips?",
+      "publisher": "TNO",
+      "url": "https://www.tno.nl/en/careers/photonic-chip-pilot-line/",
+      "type": "government",
+      "published": null,
+      "accessed": "2026-11-11"
+    }
+  ],
+  "related": [],
+  "notes": "The record covers the new TNO facility, not SMART Photonics’ existing 4-inch fab. Inclusion is based on the explicitly planned volume-manufacturing use described by SMART Photonics, alongside TNO’s pilot-line activity. The 12,000-wafer target is kept in prose because its source has no publication date; it is not measured output. TNO remains the operator in this record; its recruitment page describes a future transfer to industry as an ambition. SMART Photonics provides manufacturing training and plans to use the new capacity; no process-licensing or ownership role is established by these sources.",
+  "review": {
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review: a second agent reopened all four cited sources and checked project scope, operator roles, process technology, investment, construction and planned production dates.",
+    "changes": "Confirmed inclusion from SMART Photonics’ explicit planned volume-manufacturing use while preserving TNO’s pilot-line scope and operator role. Removed the technology-partner party classification because the sources do not establish process licensing. Kept the undated capacity target in prose and future milestones marked planned."
+  }
+}

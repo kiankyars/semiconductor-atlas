@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "id": "silex-jarfalla-cleanroom-expansion",
+  "name": "Silex Järfälla cleanroom expansion",
+  "aliases": [
+    "Silex Sweden cleanroom expansion"
+  ],
+  "company": "Silex Microsystems",
+  "operator": "Silex Microsystems AB",
+  "parties": [
+    {
+      "name": "Silex Microsystems AB",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": null
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "project",
+  "segments": [
+    "mems_sensors"
+  ],
+  "process_nodes": [
+    {
+      "label": "MEMS",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Expansion of the Swedish MEMS foundry; no numerical process node is disclosed."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "summary": "Silex is adding cleanroom space at its existing MEMS foundry in Järfälla, Sweden. Its July 2026 interim report described an expected capacity increase of approximately 35%. The November report states that physical expansion of the cleanroom began during the third quarter of 2026. This record covers the additional cleanroom, while the existing 200 mm foundry continues producing.",
+  "location": {
+    "country": "SE",
+    "admin1": null,
+    "locality": "Järfälla",
+    "site": null,
+    "address": null,
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "locality",
+    "source_ids": [
+      "s1",
+      "s2"
+    ],
+    "note": null
+  },
+  "status": "under_construction",
+  "status_as_of": "2026-11-04",
+  "status_source_ids": [
+    "s2"
+  ],
+  "metrics": [],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2026-07-17",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The second-quarter report described the cleanroom expansion and expected capacity increase."
+    },
+    {
+      "event": "construction_start",
+      "date": "2026-Q3",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s2"
+      ],
+      "note": "The third-quarter report says cleanroom expansion began during the quarter."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Interim report January-June 2026",
+      "publisher": "Silex Microsystems",
+      "url": "https://attachment.news.eu.nasdaq.com/aa26eaf6eb62aba1327e219888cfdf70d",
+      "type": "company_report",
+      "published": "2026-07-17",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s2",
+      "title": "Silex Q3 2026 Interim Report",
+      "publisher": "Silex Microsystems (via Modular Finance)",
+      "url": "https://storage.mfn.se/b94f2722-95c2-42ca-baf5-c90dd6c9b7d0/silex-q3-2026-interim-report.pdf",
+      "type": "company_report",
+      "published": "2026-11-04",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "related": [],
+  "notes": "Status applies to the new cleanroom space, not to the already operating foundry. The reports do not give an absolute wafer capacity or an achieved production date for the expansion.",
+  "review": {
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review: a second agent reopened both cited reports and checked facility identity, cleanroom expansion, wafer size, dates and status against them.",
+    "changes": "Confirmed the July capacity-growth target and the November report of physical cleanroom expansion beginning during the third quarter. Retained construction status for the added cleanroom separately from the operating foundry."
+  }
+}

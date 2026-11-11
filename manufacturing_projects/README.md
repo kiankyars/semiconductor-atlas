@@ -91,6 +91,10 @@ A groundbreaking does not make a facility operating, and an announced production
 planned milestone, not an achievement. A missed target stays in the record as a planned
 milestone with its source.
 
+Use `construction_progress` when a dated source reports physical construction underway but
+does not establish when it started. Its date is the report date, not an inferred start date.
+Capacity-growth targets belong in metrics or notes, not production-start milestones.
+
 ### Figures
 
 Amounts keep the source's currency and are never converted. `basis` says what the figure is:

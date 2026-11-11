@@ -43,7 +43,15 @@
   "segments": [
     "logic"
   ],
-  "process_nodes": [],
+  "process_nodes": [
+    {
+      "label": "FDX Fusion (FD-SOI)",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Announced alongside SPRINT in October 2026 for future development and manufacturing at Dresden. The start of development depends on German approval under IPCEI AST; the source does not report production or identify a lithographic node."
+    }
+  ],
   "wafer_sizes": [
     {
       "mm": 300,
@@ -128,17 +136,6 @@
         "s2"
       ],
       "note": "Topping-out ceremony marking completion of the construction phase."
-    },
-    {
-      "event": "volume_production",
-      "date": "2028",
-      "planned": true,
-      "phase_label": null,
-      "source_ids": [
-        "s1",
-        "s2"
-      ],
-      "note": "Target to exceed one million wafers a year at the site by end of 2028."
     }
   ],
   "sources": [
@@ -149,7 +146,7 @@
       "url": "https://gf.com/gf-press-release/globalfoundries-plans-billion-euro-investment-to-expand-chip-manufacturing-in-germany/",
       "type": "company_announcement",
       "published": "2025-10-28",
-      "accessed": "2026-11-06"
+      "accessed": "2026-11-11"
     },
     {
       "id": "s2",
@@ -158,14 +155,14 @@
       "url": "https://gf.com/news-and-events/news/globalfoundries-marks-dresden-expansion-milestone-announces-next-generation-platform-for-physical-ai/",
       "type": "company_announcement",
       "published": "2026-10-09",
-      "accessed": "2026-11-06"
+      "accessed": "2026-11-11"
     }
   ],
   "related": [],
   "notes": "The capacity figure describes the whole site after the expansion, not the added capacity alone; the sources do not give the increment.",
   "review": {
-    "reviewed_on": "2026-11-06",
-    "method": "Independent AI-assisted review (Claude): re-opened every cited source, checked each statement against it and searched for newer reporting.",
-    "changes": "Updated the government party notes to reflect GlobalFoundries' October 2026 description of the public support; all other statements were confirmed."
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review (Codex): a second agent reopened every cited source and checked the record and technology additions against them.",
+    "changes": "Added the FDX Fusion FD-SOI platform announced for Dresden, retaining approval and development conditions and the distinction between whole-site capacity and expansion capacity. Removed a capacity-growth target from production-start milestones; the target remains in metrics and prose."
   }
 }

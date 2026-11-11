@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "id": "sai-microelectronics-beijing-fab3",
+  "name": "Sai Microelectronics Beijing FAB3",
+  "aliases": [
+    "北京FAB3",
+    "Beijing 8-inch MEMS international foundry line",
+    "Silex Beijing FAB3"
+  ],
+  "company": "Sai Microelectronics",
+  "operator": "Silex Microsystems Technology (Beijing) Co., Ltd.",
+  "parties": [
+    {
+      "name": "Silex Microsystems Technology (Beijing) Co., Ltd.",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1",
+        "s4"
+      ],
+      "note": "赛莱克斯微系统科技（北京）有限公司; the English name is a translation of the legal name in the cited filings."
+    },
+    {
+      "name": "Sai Microelectronics",
+      "role": "owner",
+      "share_pct": 100,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "The September 2026 filing identifies the Beijing operator as a wholly owned subsidiary."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "mems_sensors",
+    "rf"
+  ],
+  "process_nodes": [
+    {
+      "label": "MEMS",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "The February 2026 filing reports volume-production ramping of silicon microphones, BAW filters, micromirrors and high-frequency devices. MEMS optical circuit switches were in risk trial production at that date."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 200,
+      "source_ids": [
+        "s1"
+      ]
+    }
+  ],
+  "summary": "The Beijing FAB3 MEMS foundry completed its production line in September 2020 and began volume production in June 2021. By February 2026 it was mass-producing microphones, BAW filters, micromirrors and high-frequency devices, with other device families still in development or trial production. An April 2026 investor update reported monthly capacity of 15,000 wafers and a staged plan to reach 30,000. The Beijing operator was wholly owned by Sai Microelectronics in September 2026.",
+  "location": {
+    "country": "CN",
+    "admin1": "Beijing",
+    "locality": "Beijing",
+    "site": "Beijing Economic-Technological Development Area",
+    "address": "Building 1, No. 21 Kechuang 8th Street, Beijing Economic-Technological Development Area, Beijing, China",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s2",
+      "s4"
+    ],
+    "note": null
+  },
+  "status": "operating",
+  "status_as_of": "2026-04-02",
+  "status_source_ids": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "metrics": [
+    {
+      "metric": "capacity",
+      "value": 15000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-02",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Reported monthly capacity of the Beijing 200 mm MEMS line; not actual monthly output."
+    },
+    {
+      "metric": "capacity",
+      "value": 30000,
+      "value_max": null,
+      "unit": "wafers_per_month",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "facility",
+      "phase_label": null,
+      "as_of": "2026-04-02",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Staged capacity-expansion objective for the Beijing 200 mm MEMS line; no completion date is stated."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "building_complete",
+      "date": "2020-09",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "The company reports that the line was completed and connected in September 2020."
+    },
+    {
+      "event": "volume_production",
+      "date": "2021-06-10",
+      "planned": false,
+      "phase_label": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Volume production started with MEMS microphone chips."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "赛微电子北京8英寸MEMS国际代工线启动量产！",
+      "publisher": "Sai Microelectronics",
+      "url": "https://www.smeiic.com/News_2/55.html",
+      "type": "company_announcement",
+      "published": "2021-06-11",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s2",
+      "title": "北京赛微电子股份有限公司 投资者关系活动记录表（2026-001）",
+      "publisher": "Sai Microelectronics",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-02-25/1224984762.PDF",
+      "type": "company_filing",
+      "published": "2026-02-25",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s3",
+      "title": "北京赛微电子股份有限公司 投资者关系活动记录表（2026-002）",
+      "publisher": "Sai Microelectronics",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-02/1225078367.PDF",
+      "type": "company_filing",
+      "published": "2026-04-02",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s4",
+      "title": "关于为全资子公司开展融资租赁业务提供担保的公告",
+      "publisher": "Sai Microelectronics",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-09-18/1225570758.PDF",
+      "type": "company_filing",
+      "published": "2026-09-18",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "related": [],
+  "notes": "Beijing FAB3 is distinct from Silex Microsystems in Sweden. The September 2026 filing establishes the Beijing operator ownership; it is not evidence of a newer production milestone or capacity increase.",
+  "review": {
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review: a second agent reopened all four cited sources and checked facility identity, technology, production milestones, capacity, ownership and location against them.",
+    "changes": "Changed the February 2026 technology note to distinguish volume-production ramping from risk trial production. Confirmed the 2020 line completion, 2021 volume-production launch, April 2026 capacity figures and September 2026 ownership disclosure."
+  }
+}

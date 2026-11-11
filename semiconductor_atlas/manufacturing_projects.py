@@ -69,6 +69,7 @@ MILESTONE_EVENTS = {
     "site_selected": "Site selected",
     "groundbreaking": "Groundbreaking",
     "construction_start": "Construction started",
+    "construction_progress": "Construction reported underway",
     "building_complete": "Building completed",
     "tool_move_in": "Equipment move-in",
     "first_production": "First production",
@@ -83,7 +84,7 @@ MILESTONE_EVENTS = {
 }
 PRODUCTION_EVENTS = {"first_production", "volume_production", "opening"}
 TERMINAL_EVENTS = {"paused", "cancelled", "closed"}
-CONSTRUCTION_EVENTS = {"groundbreaking", "construction_start", "building_complete", "tool_move_in"}
+CONSTRUCTION_EVENTS = {"groundbreaking", "construction_start", "construction_progress", "building_complete", "tool_move_in"}
 CURRENCIES = {"USD", "EUR", "JPY", "KRW", "TWD", "CNY", "INR", "SGD", "GBP", "ILS", "MYR",
               "VND", "PHP", "THB", "CHF", "CZK", "PLN", "HUF", "CAD", "MXN"}
 METRIC_UNITS = {
@@ -839,7 +840,7 @@ on {as_of}. Status counts: {statuses}.
 
 Every statement cites the public sources that support it. All text is written by the
 maintainers; sources are linked, not copied, so check each statement against its linked source.
-Records were compiled with AI-assisted research (Claude) and checked in a separate AI-assisted
+Records were compiled with AI-assisted research and checked in a separate AI-assisted
 review that re-opened every cited source. Coverage is a selection, not a census.
 
 | File | Contents |

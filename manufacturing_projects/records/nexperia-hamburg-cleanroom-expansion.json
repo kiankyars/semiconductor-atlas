@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "id": "nexperia-hamburg-cleanroom-expansion",
+  "name": "Nexperia Hamburg wafer fab expansion",
+  "aliases": [
+    "Hamburg-Lokstedt fab"
+  ],
+  "company": "Nexperia",
+  "operator": "Nexperia Germany GmbH",
+  "parties": [
+    {
+      "name": "Nexperia Germany GmbH",
+      "role": "operator",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": null
+    },
+    {
+      "name": "Caverion",
+      "role": "builder",
+      "share_pct": null,
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Delivered the 700 m² cleanroom extension."
+    },
+    {
+      "name": "Wingtech Technology Co., Ltd.",
+      "role": "owner",
+      "share_pct": null,
+      "source_ids": [
+        "s4"
+      ],
+      "note": "Nexperia reported in November 2025 that it was wholly owned by Wingtech but that substantially all voting rights had been put under an independent court-appointed administrator."
+    }
+  ],
+  "facility_type": "wafer_fab",
+  "identity_scope": "named_facility",
+  "segments": [
+    "power",
+    "silicon_carbide",
+    "gallium_nitride"
+  ],
+  "process_nodes": [
+    {
+      "label": "GaN D-mode transistors",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Initial high-voltage production lines started in June 2024."
+    },
+    {
+      "label": "SiC diodes",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Initial production lines started in June 2024."
+    },
+    {
+      "label": "SiC MOSFETs",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "200 mm production lines were planned for establishment within two years of June 2024."
+    },
+    {
+      "label": "GaN HEMTs",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "200 mm production lines were planned for establishment within two years of June 2024."
+    }
+  ],
+  "wafer_sizes": [
+    {
+      "mm": 150,
+      "source_ids": [
+        "s3"
+      ]
+    },
+    {
+      "mm": 200,
+      "source_ids": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "summary": "Nexperia expanded its Hamburg wafer-fab cleanroom by 700 m², with handover reported in March 2023. In June 2024 it announced USD 200 million for silicon capacity and wide-bandgap development and production. Initial GaN D-mode transistor and SiC diode lines had started that month, while 200 mm SiC MOSFET and GaN HEMT lines remained planned. In a July 2026 interview reported by dts, the interim CEO said Hamburg had idle machines because replacement capacity for downstream processing in China was still insufficient.",
+  "location": {
+    "country": "DE",
+    "admin1": "Hamburg",
+    "locality": "Hamburg",
+    "site": null,
+    "address": "Stresemannallee 101, 22529 Hamburg, Germany",
+    "lat": null,
+    "lon": null,
+    "coordinate_source_ids": [],
+    "precision": "site",
+    "source_ids": [
+      "s1",
+      "s3"
+    ],
+    "note": "Lokstedt district."
+  },
+  "status": "partially_operating",
+  "status_as_of": "2026-07-20",
+  "status_source_ids": [
+    "s2",
+    "s5"
+  ],
+  "metrics": [
+    {
+      "metric": "cleanroom_area",
+      "value": 700,
+      "value_max": null,
+      "unit": "m2",
+      "qualifier": "exact",
+      "basis": "reported",
+      "applies_to": "phase",
+      "phase_label": "Cleanroom extension reported in 2023",
+      "as_of": "2023-03-09",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Additional cleanroom area, not the total fab area."
+    },
+    {
+      "metric": "investment",
+      "value": 200000000,
+      "value_max": null,
+      "unit": "USD",
+      "qualifier": "exact",
+      "basis": "planned",
+      "applies_to": "phase",
+      "phase_label": "2024 expansion program",
+      "as_of": "2024-06-27",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Program covers wide-bandgap development and production plus additional silicon capacity."
+    }
+  ],
+  "milestones": [
+    {
+      "event": "announced",
+      "date": "2024-06-27",
+      "planned": false,
+      "phase_label": "2024 expansion program",
+      "source_ids": [
+        "s2"
+      ],
+      "note": null
+    },
+    {
+      "event": "first_production",
+      "date": "2024-06",
+      "planned": false,
+      "phase_label": "Initial GaN and SiC lines",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Initial GaN D-mode transistor and SiC diode lines started."
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Caverion delivered cleanroom space to Nexperia in Germany",
+      "publisher": "Caverion",
+      "url": "https://www.caverion.com/newsroom/releases/2023/caverion-delivered-cleanroom-space-to-nexperia-in-germany/",
+      "type": "company_announcement",
+      "published": "2023-03-09",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s2",
+      "title": "Nexperia investiert 200 Millionen US-Dollar in Hamburg",
+      "publisher": "Nexperia",
+      "url": "https://www.nexperia.com/about/news-events/press-releases-translated/nexperia-investiert-200-millionen-us-dollar-in-hamburg",
+      "type": "company_announcement",
+      "published": "2024-06-27",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s3",
+      "title": "Manufacturing",
+      "publisher": "Nexperia",
+      "url": "https://www.nexperia.com/about/worldwide-locations/manufacturing",
+      "type": "company_announcement",
+      "published": null,
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s4",
+      "title": "Update on company developments",
+      "publisher": "Nexperia",
+      "url": "https://www.nexperia.com/about/news-events/press-releases/update-on-company-developments-2",
+      "type": "company_announcement",
+      "published": "2025-11-05",
+      "accessed": "2026-11-11"
+    },
+    {
+      "id": "s5",
+      "title": "Nexperia fährt Chip-Produktion wieder hoch",
+      "publisher": "dts Nachrichtenagentur (via FinanzNachrichten.de)",
+      "url": "https://www.finanznachrichten.de/nachrichten-2026-07/69066287-nexperia-faehrt-chip-produktion-wieder-hoch-003.htm",
+      "type": "news",
+      "published": "2026-07-20",
+      "accessed": "2026-11-11"
+    }
+  ],
+  "related": [],
+  "notes": "The 700 m² cleanroom extension establishes inclusion beyond equipment upgrades. The sources do not establish that this extension and the later USD 200 million program are the same investment. The handover report does not establish its precise date or year, so no completion milestone is entered. Completion of the planned 200 mm SiC MOSFET and GaN HEMT lines is not established here. The partially operating status reflects producing and planned phases, rather than utilization; the July 2026 report describes idle machines, not a site closure. Company is Nexperia because the November 2025 governance statement separates its management control from Wingtech’s share ownership.",
+  "review": {
+    "reviewed_on": "2026-11-11",
+    "method": "Independent AI-assisted review: a second agent reopened every cited source, checked project scope, process technologies, figures, dates and ownership, and searched for newer operational evidence.",
+    "changes": "Added the July 2026 Hamburg-specific operating report and updated the status date while preserving uncertainty about the planned 200 mm lines. Removed an inferred 2023 completion milestone because the contractor only said the extension had recently been handed over. Kept the physical cleanroom extension distinct from the later investment program."
+  }
+}

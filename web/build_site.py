@@ -641,7 +641,7 @@ RELATION_LABELS = {"same_campus": "Same campus as", "phase_of": "A phase of", "h
 PARTY_LABELS = {"operator": "Operator", "owner": "Owner", "joint_venture_partner": "Joint-venture partner",
                 "technology_partner": "Technology partner", "government": "Government", "customer": "Customer",
                 "builder": "Builder"}
-REVIEW_NOTE = ("Compiled with AI-assisted research (Claude) and checked in a separate AI-assisted review "
+REVIEW_NOTE = ("Compiled with AI-assisted research and checked in a separate AI-assisted review "
                "that re-opened every cited source. Text is written in our own words; check each "
                "statement against its linked source.")
 
